@@ -1,0 +1,293 @@
+///////////////
+S/W Version
+///////////////
+2018/8/6 배포
+초기 H/W Version 10.00.01
+초기 S/W Version 10.00.05
+
+2018/8/16 배포 (Rev 23)
+1. MLink Control 미 테스트
+2. 화면보호 미구현
+H/W Version 01.00.04
+S/W Version 01.00.01
+
+2018/8/27 배포 (Rev 26)
+1. Ver5 Board
+H/W Version 01.00.05
+S/W Version 01.00.02
+
+2018/9/10 배포 (Rev 27)
+1. Ver6 Board
+H/W Version 01.00.06
+S/W Version 01.00.03
+
+2018/9/27 배포 (Rev 30)
+1. ACB/MCCB CB 제어 추가
+H/W Version 01.00.06
+S/W Version 01.00.04
+
+2018/9/28 배포 (Rev 32)
+1. ACB/MCCB CB 제어 추가
+H/W Version 01.00.06
+S/W Version 01.00.05
+
+2018/10/01 배포 (Rev 33)
+1. MODBUS_TIMEOUT 400->600
+H/W Version 01.00.06
+S/W Version 01.00.06
+
+2018/10/05 배포 (Rev 34)
+1. Gateway Test용 버젼(MODBUS_TIMEOUT 600->400)
+H/W Version 01.00.06
+S/W Version 01.00.07
+
+2018/10/29 source 배포(Rev 63)
+- SQA 코드인스펙션 관련
+
+2018/10/30 source 배포(Rev 69)
+- SQA 코드인스펙션 관련
+H/W   Version 01.00.06
+S/W   Version 01.00.07
+Comm. Version 01.00.10
+"1. ACB		01.00.11(20180910)\n"
+"2. MCCB 	01.00.10(20180814)\n"
+"3. MLINK	01.00.18(20180717)\n"
+
+
+2019/1/3 중국어적용등(Rev 78)
+- 차단기 APS 적용
+- Device Type 관련 수정
+- 중국어 적용
+- 차단기 RelaySet/Measurement 반올림/소숫점버림/자리수 등 수정
+H/W   Version 01.00.06
+S/W   Version 01.00.08
+Comm. Version 01.00.11
+"1. ACB		01.00.15(20181221)\n"
+"2. MCCB 	01.00.14(20181228)\n"
+"3. MLINK	01.00.20(20181227)\n"
+화면보호기능 처리안함
+
+
+2019/1/14 LCD Test용 배포(Rec 80)
+- LCD 수명 관련 이슈
+S/W   Version 01.00.09
+화면보호기능 처리함
+
+
+2019/1/22 저온기동 시험용 배포(Rev 81)
+- LCD 화면 흔들리는 문제 처리
+- MCCB HW SET Pole -> Wiring 변경
+S/W   Version 01.00.10
+
+
+2019/1/29 저온기동 시험용 배포(Rev 82)
+- Overview 및 Relay Set lnr관련 처리
+
+2019/1/29 저온기동 시험용 배포(Rev 82)
+- MCCB HW SET Wiring-> Pole로 변경
+
+2019/1/31 MLinkControl
+1. int mLinkMode -> int mLinkMode[DEVICE_MAX] 수정
+2. uint8_t doStatus[MLINK_DO_MAX] -> uint8_t doStatus[DEVICE_MAX][MLINK_DO_MAX] 수정
+3. uint8_t diStatus[MLINK_DI_MAX] -> uint8_t diStatus[DEVICE_MAX][MLINK_DI_MAX] 수정
+4. M-Link 제어후 화면업데이트 문제 ->MLinkControlValueDisp(nPointPos); 추가
+5. 
+
+2019/2/8 통신 에러시 처리
+1. 통신 에러시 다음 스텝으로 넘어감
+2. 통신 5회연속 에러시 상태바 및 Overview 화면 초기화
+3. M-Link IO SET에서 DI  표시추가
+   - Contact NO(AX), Contact NO(AL), Contact, Contact NC(AX)(4), Contact NC(AL)(5), 
+
+
+2019/2/12 기능시험용 최종(Rev 86)
+H/W   Version 01.00.06
+S/W   Version 01.00.10
+Comm. Version 01.00.12
+"1. ACB		01.00.15(20190104A)\n"
+"2. MCCB 	01.00.16(20190125)\n"
+"3. MLINK	01.00.20(20181227)\n"
+
+2019/2/13 Rev 87
+1. 최종 Fault가 0가 아닐경우 OFF-LINE 시 클리어 됐을경우 문제
+2. 통신 에러시 화면 클리러
+2. MCCB No protection일경우 그래프 컬러 문제
+
+
+2019/2/14 Rev 88
+1. ACB/MCCB Measurement 위상 그대로 표시
+2. ACB Control시 TRIO경우 TRIO Local/Remote 상태로 확인
+3. 위상표시 좌표값 변경
+4. Measurement 에서 통신 Error시 3상/최고급형으로 표현(9)
+5. UART2 RTS 신호제어(PB4, PIN14)(11)
+6. Measurement PQ PF 는 최고급형 경우만 표시(12)
+7. Measurement PQ IB IC   표시(13)
+8. ACB/MCCB Fault 상정보 없을경우 표시안함(14)
+9. ACB/MCCB Device Info에서 serialNo등을 global변수로 이동(15)
+10. ACB/MCCB Operation Info M/E 바뀜(16)
+
+2019/2/15
+1. Overview 장한시를 fastupdate로 변경(19)
+2. 모드버스 타임아웃 400-> 1000 변경(20)
+3.  M-Link IO Status 통신 에러시 처리 (22)
+3. Event Max 읽어서 처리(23)
+
+2019/2/20 Rev90(IHM8(200220-6).dfu
+H/W   Version 01.00.06
+S/W   Version 01.00.11
+Comm. Version 01.00.12
+1. Product Name 은 0x2b로 읽음
+2. Fast Update 영역이 아닐경우 처리(
+3. RTS 신호 타이밍 및 다른 곳에서 제어하는지 확인(중요)
+4. 간혹 시간이 이상하게 표시되는 경우 있음
+5. 날짜 입력 유효 체크
+
+LS산전 청주 3층 게이트웨이 테스트 완료  Rev91
+1. 가변형 데이터 리드에서 일부읽고 나머지 타임아웃시 문제
+2. M-Link IO Set 데이터 못읽음
+
+
+2019/02/21 Rev91(IHM8(200221-1).dfu
+S/W   Version 01.00.13
+
+1. M-Link Control 통신 Timeout시 처리
+2. ACB Measurement Energy 자리수
+테스트 완료(Exception 및 Key입력보완 제외)
+
+2019/02/21 Rev92(IHM8(200221-5).dfu
+S/W   Version 01.00.13
+
+
+2019/02/22 Rev94(IHM8(200222-1).dfu
+S/W   Version 01.00.14
+
+
+2019/02/26 Rev94(IHM8(200226-1).dfu
+S/W   Version 01.00.15
+1. ACB/MCCB Device Info 에서 Serial No 잘못읽는 문제
+
+
+2019/03/05 Rev95(IHM8(20190305-1).dfu
+S/W   Version 01.00.16
+1. Gateway 연결시 PollingTime을 10초, 아니면 1초
+
+ Rev96(IHM8(20190305-2).dfu
+S/W   Version 01.00.17
+1. M-Link Menu에서 Overview 돌아올때 화면처리
+
+
+2019/03/06 Rev97(IHM8(20190306-1).dfu
+S/W   Version 01.00.18
+1. M-Link HW SET 화면 업데이트 안되는 문제
+
+2019/03/06 Rev98(IHM8(20190306-2).dfu
+S/W   Version 01.00.19
+1. EVENT 간혹 못읽는 문제
+
+2019/03/21 
+한길배포 IHM8_010019_010007(20190320).dfu
+
+2019/03/22 Rev100
+S/W   Version 01.00.20
+1. Modbus TimeOut : Gateway No 시 100mS로 변경
+2. Factory Reset 추가
+
+2019/3/28 Rev 101
+S/W Version 01.00.21
+1. Factory Reset 시 기존 gDeviceCount 초기화 안되는 문제
+2. Factory Reset 시 통신속도 초기화 문제 
+
+
+2019/3/29 Rev 102
+S/W Version 01.00.21
+1. 코드인스펙션 관련 코드정리
+
+2019/3/29 Rev 103
+S/W Version 01.00.21
+1. 컴파일 후 코드정리
+
+2019/3/29 Rev 104
+S/W Version 01.00.21
+1. 코드인스펙션 관련 코드정리
+
+2019/3/29 Rev 105
+S/W Version 01.00.21
+1. ModbusControl 에서 g_functionCode 변수 문제
+
+2019/4/9 Rev 111
+S/W Version 01.00.22
+1. 코드인스펙션 정리-fix
+
+2019/4/24 Rev 112
+S/W Version 01.00.22
+1. Gateway 사용 여부에 따른 timeout시간 동일하게 변경
+
+2019/4/25 Rev 113
+S/W Version 01.00.23
+1. FactoryReset시 LCD 밝기 100% 적용
+
+2019/5/10 Rev 114
+S/W Version 01.00.24
+1. MCCB Overview
+   - 4(OSN): Ir < 0.63In 인 경우에는 Inr = 1.6*Ir, 
+   - Ir > 0.63In 인 경우에는 Inr = In
+     Inr을 Ir로 잘못대입 
+
+2019/5/10 Rev 115
+S/W Version 01.00.25
+1. default 시간을 2018/1/1 1:1:1 로 변경
+
+2019/5/10 Rev 116
+S/W Version 01.00.26
+1. System Info / Serial번호 표시오류
+
+2019/5/13 Rev 117
+S/W Version 01.00.27
+1. ACB Operation Info 
+   1) Number fo On/Off E/M 바뀜 
+   2) M = E+M => M=M, E=E
+
+2019/5/15 Rev 118
+S/W Version 01.00.28
+1. ACB/MCCB HW SET 에서 화면표시 겹치는 문제 
+2. M-LINK HW SET 에서 화면표시 겹치는 문제 
+3. ACB/MCCB Measurement Energy 표시문제
+
+2019/5/17 Rev 119
+S/W Version 01.00.29
+1. BOR Reset threshold levels for 1.62V - 2.10V VDD power supply 
+  => BOR Reset threshold levels for 2.40V - 2.70V VDD power supply 
+  
+2019/10/17 Rev121
+S/W Version 01.00.30
+1. Product Code IHM8(5277 1172 570) 로 fix
+
+2019/11/29 Rev122
+S/W Version 01.00.31
+1. ACB OCR용 LCD 호환문제-LCD 초기화 코드 변경
+
+
+=================================================================================
+
+Battery Test
+
+Under 2.6V
+전원 On : 0.03uA
+전원 Off : 2.0uA
+
+Battery 용량 1200mAH
+off시: 1200*1000/2 = 600,0/00시간 = 25,000일 = 68년
+on시: 1200*1000/0.03 = 40,000,000시간 = 1,666,666일 = 4566년
+
+소비전류 : 0.05A@24V
+    전력 : 1.2W
+
+=================================================================================
+
+Flash Memory Map
+
+0x0800 0000	: Bootloader
+0x0800 c000 : 사용자 Code
+0x080c 0000 : Parameter 저장 영역
+0x080e 0000 : 최종 Fault Index 저장 영역  
+0x080e 0030 : HW Version 정보  
