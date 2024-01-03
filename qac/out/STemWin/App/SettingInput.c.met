@@ -1,0 +1,810 @@
+<DEFINE> EXTERN C:/CodeInspection/DisplayUnit/STemWin/App/SettingInput.c 24 N DF OM - - - O
+<RDEF> I Includes
+<R>I C:/CodeInspection/DisplayUnit/STemWin/App/SettingInput.c C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h 25
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h 46
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Inc/main.h 43
+<R>I C:/CodeInspection/DisplayUnit/Inc/main.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI.h 58
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_ConfDefaults.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_ConfDefaults.h C:/CodeInspection/DisplayUnit/STemWin/Target/GUIConf.h 60
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_Type.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_Type.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/LCD.h 60
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/LCD.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_ConfDefaults.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/LCD.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/Global.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_Type.h C:/CodeInspection/DisplayUnit/STemWin/Target/GUIConf.h 61
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_Version.h 58
+<R>I C:/CodeInspection/DisplayUnit/Inc/main.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h 59
+<R>I C:/CodeInspection/DisplayUnit/Inc/main.h C:/PRQA/QAC-8.1.2-R/include/ansi/time.h 60
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h 244
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h 46
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h 149
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cm4.h 183
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cm4.h C:/CodeInspection/DisplayUnit/qac/lib/stdint.h 44
+<R>I C:/CodeInspection/DisplayUnit/qac/lib/stdint.h C:/CodeInspection/DisplayUnit/qac/lib/ycheck.h 10
+<R>I C:/CodeInspection/DisplayUnit/qac/lib/stdint.h C:/CodeInspection/DisplayUnit/qac/lib/yvals.h 11
+<R>I C:/CodeInspection/DisplayUnit/qac/lib/yvals.h C:/CodeInspection/DisplayUnit/qac/lib/DLib_Defaults.h 42
+<R>I C:/CodeInspection/DisplayUnit/qac/lib/DLib_Defaults.h C:/CodeInspection/DisplayUnit/qac/lib/DLib_Product.h 50
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cm4.h C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cmInstr.h 210
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cmInstr.h C:/CodeInspection/DisplayUnit/qac/lib/cmsis_iar.h 65
+<R>I C:/CodeInspection/DisplayUnit/qac/lib/cmsis_iar.h C:/CodeInspection/DisplayUnit/qac/lib/intrinsics.h 22
+<R>I C:/CodeInspection/DisplayUnit/qac/lib/intrinsics.h C:/CodeInspection/DisplayUnit/qac/lib/yvals.h 14
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cm4.h C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cmFunc.h 211
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cmFunc.h C:/CodeInspection/DisplayUnit/qac/lib/cmsis_iar.h 65
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cm4.h C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cmSimd.h 212
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cmSimd.h C:/CodeInspection/DisplayUnit/qac/lib/cmsis_iar.h 69
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h 184
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h C:/CodeInspection/DisplayUnit/qac/lib/stdint.h 185
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h 250
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h 47
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h C:/PRQA/QAC-8.1.2-R/include/ansi/stdio.h 48
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h 49
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h 248
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h 230
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h 252
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h 656
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h 256
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_crc.h 268
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_crc.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h 292
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h 313
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h 314
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_sram.h 296
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_sram.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_fsmc.h 47
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_fsmc.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h 320
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c_ex.h 473
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_iwdg.h 328
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_iwdg.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h 336
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h 290
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc.h 344
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc_ex.h 634
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc_ex.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h 360
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h 364
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h 1289
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h 368
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h 388
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h 49
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 49
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h 121
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 49
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_hcd.h 392
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_hcd.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h 49
+<R>I C:/CodeInspection/DisplayUnit/STemWin/App/SettingInput.c C:/CodeInspection/DisplayUnit/Inc/main.h 26
+<R>I C:/CodeInspection/DisplayUnit/STemWin/App/SettingInput.c C:/CodeInspection/DisplayUnit/STemWin/App/GuiData.h 27
+<R>I C:/CodeInspection/DisplayUnit/STemWin/App/GuiData.h C:/PRQA/QAC-8.1.2-R/include/ansi/stdlib.h 4
+<R>I C:/CodeInspection/DisplayUnit/STemWin/App/GuiData.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h 5
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_ConfDefaults.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_Type.h 58
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM_GUI.h 59
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI.h 60
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/BUTTON.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/BUTTON.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/BUTTON.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG_Intern.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG_Intern.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/BUTTON.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WIDGET.h 58
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WIDGET.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM_Intern.h 60
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM_Intern.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM_Intern.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_Private.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_Private.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_Private.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/LCD_Protected.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/LCD_Protected.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/LCD.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_Private.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_Debug.h 58
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_Debug.h C:/PRQA/QAC-8.1.2-R/include/ansi/stddef.h 59
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_Debug.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI.h 61
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_Private.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM_GUI.h 60
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WIDGET.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/SCROLLBAR.h 96
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/SCROLLBAR.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/SCROLLBAR.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG_Intern.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/SCROLLBAR.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WIDGET.h 58
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/CALENDAR.h 58
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/CALENDAR.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/CHECKBOX.h 59
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/CHECKBOX.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/CHECKBOX.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG_Intern.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/CHECKBOX.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WIDGET.h 58
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/CHOOSECOLOR.h 60
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/CHOOSECOLOR.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/CHOOSEFILE.h 61
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/CHOOSEFILE.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DROPDOWN.h 62
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DROPDOWN.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DROPDOWN.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG_Intern.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DROPDOWN.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/LISTBOX.h 58
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/LISTBOX.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/LISTBOX.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WIDGET.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/LISTBOX.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG_Intern.h 58
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/EDIT.h 63
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/EDIT.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/EDIT.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG_Intern.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/FRAMEWIN.h 64
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/FRAMEWIN.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/FRAMEWIN.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WIDGET.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/FRAMEWIN.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG_Intern.h 59
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GRAPH.h 65
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GRAPH.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GRAPH.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG_Intern.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GRAPH.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WIDGET.h 58
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/HEADER.h 66
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/HEADER.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/HEADER.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG_Intern.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/HEADER.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WIDGET.h 58
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/ICONVIEW.h 67
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/ICONVIEW.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/ICONVIEW.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG_Intern.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/ICONVIEW.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WIDGET.h 58
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/IMAGE.h 68
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/IMAGE.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/IMAGE.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG_Intern.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/IMAGE.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WIDGET.h 58
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/LISTBOX.h 69
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/LISTVIEW.h 70
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/LISTVIEW.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/LISTVIEW.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG_Intern.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/LISTVIEW.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/ICONVIEW.h 58
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/LISTVIEW.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/HEADER.h 59
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/LISTWHEEL.h 71
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/LISTWHEEL.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/LISTWHEEL.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG_Intern.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/LISTWHEEL.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WIDGET.h 58
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/MENU.h 72
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/MENU.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/MENU.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WIDGET.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/MENU.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG_Intern.h 58
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/MULTIEDIT.h 73
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/MULTIEDIT.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/MULTIEDIT.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG_Intern.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/MULTIPAGE.h 74
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/MULTIPAGE.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/MULTIPAGE.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/PROGBAR.h 75
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/PROGBAR.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/PROGBAR.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG_Intern.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/PROGBAR.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WIDGET.h 58
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/RADIO.h 76
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/RADIO.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/RADIO.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG_Intern.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/RADIO.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WIDGET.h 58
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/SCROLLBAR.h 77
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/SLIDER.h 78
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/SLIDER.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/SLIDER.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG_Intern.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/SLIDER.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WIDGET.h 58
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/SPINBOX.h 79
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/SPINBOX.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/SPINBOX.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG_Intern.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/SPINBOX.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WIDGET.h 58
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/SPINBOX.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_Debug.h 59
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/SPINBOX.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/EDIT.h 60
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/SWIPELIST.h 80
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/SWIPELIST.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 37
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/SWIPELIST.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG_Intern.h 38
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/SWIPELIST.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WIDGET.h 39
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/SWIPELIST.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_Debug.h 40
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/TEXT.h 81
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/TEXT.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/TEXT.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG_Intern.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/TEXT.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WIDGET.h 58
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/TEXT.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_Debug.h 59
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/TREEVIEW.h 82
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/TREEVIEW.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/TREEVIEW.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG_Intern.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/TREEVIEW.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WIDGET.h 58
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/KNOB.h 83
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/KNOB.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/KNOB.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG_Intern.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/KNOB.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WIDGET.h 58
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/KNOB.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_Debug.h 59
+<R>I C:/CodeInspection/DisplayUnit/STemWin/App/GuiData.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI.h 6
+<R>I C:/CodeInspection/DisplayUnit/STemWin/App/GuiData.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h 7
+<R>I C:/CodeInspection/DisplayUnit/STemWin/App/GuiData.h C:/CodeInspection/DisplayUnit/STemWin/App/modbus.h 8
+<R>I C:/CodeInspection/DisplayUnit/STemWin/App/modbus.h C:/CodeInspection/DisplayUnit/embOS_CortexM_IAR_V6_Src_V438/Start/Inc/RTOS.H 4
+<R>I C:/CodeInspection/DisplayUnit/embOS_CortexM_IAR_V6_Src_V438/Start/Inc/RTOS.H C:/PRQA/QAC-8.1.2-R/include/ansi/string.h 65
+<R>I C:/CodeInspection/DisplayUnit/embOS_CortexM_IAR_V6_Src_V438/Start/Inc/RTOS.H C:/CodeInspection/DisplayUnit/qac/lib/intrinsics.h 66
+<DEFINE> value C:/CodeInspection/DisplayUnit/STemWin/App/SettingInput.c 29 N DC OV P N ni R
+<DEFINE> pos C:/CodeInspection/DisplayUnit/STemWin/App/SettingInput.c 29 N DC OV P N ni R
+<DEFINE> not_used C:/CodeInspection/DisplayUnit/STemWin/App/SettingInput.c 29 N DC OV P N ni R
+<DEFINE> InputDisp C:/CodeInspection/DisplayUnit/STemWin/App/SettingInput.c 29 N DC OF F I (.,ni,ni,ni) -
+<DEFINE> value C:/CodeInspection/DisplayUnit/STemWin/App/SettingInput.c 30 N DC OV P N =ni R
+<DEFINE> pos C:/CodeInspection/DisplayUnit/STemWin/App/SettingInput.c 30 N DC OV P N =ni R
+<DEFINE> text C:/CodeInspection/DisplayUnit/STemWin/App/SettingInput.c 30 N DC OV P N p=p=_c R
+<DEFINE> muti_lan C:/CodeInspection/DisplayUnit/STemWin/App/SettingInput.c 30 N DC OV P N ni R
+<DEFINE> InputDispString C:/CodeInspection/DisplayUnit/STemWin/App/SettingInput.c 30 N DC OF F I (.,=ni,=ni,p=p=_c,ni) -
+<DEFINE> value C:/CodeInspection/DisplayUnit/STemWin/App/SettingInput.c 32 N DC OV B N ni R
+<DEFINE> pos C:/CodeInspection/DisplayUnit/STemWin/App/SettingInput.c 32 N DC OV B N ni R
+<DEFINE> not_used C:/CodeInspection/DisplayUnit/STemWin/App/SettingInput.c 32 N DC OV B N ni R
+<DEFINE> InputDisp C:/CodeInspection/DisplayUnit/STemWin/App/SettingInput.c 32 N DR OF F I (.,ni,ni,ni) -
+<DEFINE> InputDisp C:/CodeInspection/DisplayUnit/STemWin/App/SettingInput.c 32 N DF OF F I (.,ni,ni,ni) -
+<DEFINE> rect C:/CodeInspection/DisplayUnit/STemWin/App/SettingInput.c 35 N DC OV B N {sLCD_RECT} -
+<DEFINE> rect C:/CodeInspection/DisplayUnit/STemWin/App/SettingInput.c 35 N DF OV B N {sLCD_RECT} -
+<RDEF> C Calls
+<R>C InputDisp GUI_SetBkColor 36
+<RDEF> X Refers-to
+<R>X InputDisp GUI_SetBkColor 36 R
+<R>C InputDisp GUI_ClearRect 37
+<R>X InputDisp GUI_ClearRect 37 R
+<R>C InputDisp LanguageSelect 39
+<R>X InputDisp LanguageSelect 39 R
+<DEFINE> buf C:/CodeInspection/DisplayUnit/STemWin/App/SettingInput.c 46 N DC OV B N [60,_c] -
+<DEFINE> buf C:/CodeInspection/DisplayUnit/STemWin/App/SettingInput.c 46 N DF OV B N [60,_c] -
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/SettingInput.c 50 25 N DN ni B X
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/SettingInput.c 50 41 N ON ni B X
+<R>C InputDisp sprintf 52
+<R>X InputDisp sprintf 52 R
+<R>X InputDisp SettingValue 52 R
+<R>X InputDisp _acNotUsed 52 R
+<LIT> "%s" - - C:/CodeInspection/DisplayUnit/STemWin/App/SettingInput.c 52 32 N SN [3,_c] B X
+<R>C InputDisp sprintf 56
+<R>X InputDisp sprintf 56 R
+<LIT> "%d" - - C:/CodeInspection/DisplayUnit/STemWin/App/SettingInput.c 56 32 N SN [3,_c] B X
+<R>C InputDisp GUI_DispStringInRect 58
+<R>X InputDisp GUI_DispStringInRect 58 R
+<R>C InputDisp GUI_SetColor 62
+<R>X InputDisp GUI_SetColor 62 R
+<R>C InputDisp GUI_SetBkColor 63
+<R>X InputDisp GUI_SetBkColor 63 R
+<R>C InputDisp GUI_ClearRect 64
+<R>X InputDisp GUI_ClearRect 64 R
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/SettingInput.c 66 21 N DN ni B X
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/SettingInput.c 66 37 N ON ni B X
+<R>C InputDisp sprintf 68
+<R>X InputDisp sprintf 68 R
+<R>X InputDisp SettingValue 68 R
+<R>X InputDisp _acNotUsed 68 R
+<LIT> "%s" - - C:/CodeInspection/DisplayUnit/STemWin/App/SettingInput.c 68 28 N SN [3,_c] B X
+<R>C InputDisp sprintf 72
+<R>X InputDisp sprintf 72 R
+<LIT> "%d" - - C:/CodeInspection/DisplayUnit/STemWin/App/SettingInput.c 72 28 N SN [3,_c] B X
+<R>C InputDisp GUI_DispStringInRect 75
+<R>X InputDisp GUI_DispStringInRect 75 R
+<R>C InputDisp GUI_BMP_Draw 77
+<R>X InputDisp GUI_BMP_Draw 77 R
+<R>X InputDisp _acUp 77 R
+<R>C InputDisp GUI_BMP_Draw 78
+<R>X InputDisp GUI_BMP_Draw 78 R
+<R>X InputDisp _acDown 78 R
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/SettingInput.c 78 73 N DN ni B X
+<CTLG> InputDisp 1
+<CTLG> 1 2
+<CTLG> 2 3
+<CTLG> 2 9
+<CTLG> 3 4
+<CTLG> 3 5
+<CTLG> 4 6
+<CTLG> 5 6
+<CTLG> 6 7
+<CTLG> 7 16
+<CTLG> 9 10
+<CTLG> 10 11
+<CTLG> 10 12
+<CTLG> 11 13
+<CTLG> 12 13
+<CTLG> 13 14
+<CTLG> 14 16
+<CTLGN> 33 48 48 50 50 54 59 59 48 66 66 66 70 79 79 59 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/STemWin/App/SettingInput.c
+<S>STNAM  InputDisp
+<S>STCYC  4
+<S>STMCC  2 (4:6)
+<S>STMIF  2
+<S>STSUB  14
+<S>STAKI  18
+<S>STLIN  45
+<S>STXLN  24
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  1
+<S>STKDN  0.04   
+<S>STUNV  0
+<S>STLCT  2
+<S>STPTH  6
+<S>STPDN  0.25   
+<S>STPBG  1
+<S>STLOP  2
+<S>STM07  1
+<S>STM19  1
+<S>STAV1  8
+<S>STAV2  10
+<S>STAV3  11
+<S>STST1  29
+<S>STST2  24
+<S>STST3  22
+<S>STPAR  3
+<S>STCAL  7
+<S>STFN1  161
+<S>STFN2  90
+
+<EXTD> SettingInput C:/CodeInspection/DisplayUnit/STemWin/App/SettingInput.c 82
+<DEFINE> orgValue C:/CodeInspection/DisplayUnit/STemWin/App/SettingInput.c 82 N DC OV B N pus R
+<DEFINE> min C:/CodeInspection/DisplayUnit/STemWin/App/SettingInput.c 82 N DC OV B N =ni R
+<DEFINE> max C:/CodeInspection/DisplayUnit/STemWin/App/SettingInput.c 82 N DC OV B N =ni R
+<DEFINE> not_used C:/CodeInspection/DisplayUnit/STemWin/App/SettingInput.c 82 N DC OV B N =ni R
+<DEFINE> SettingInput C:/CodeInspection/DisplayUnit/STemWin/App/SettingInput.c 82 N DR OF F X (ni,pus,=ni,=ni,=ni) -
+<DEFINE> SettingInput C:/CodeInspection/DisplayUnit/STemWin/App/SettingInput.c 82 N DF OF F X (ni,pus,=ni,=ni,=ni) -
+<DEFINE> flagBreak C:/CodeInspection/DisplayUnit/STemWin/App/SettingInput.c 84 N DC OV B N ni -
+<DEFINE> flagBreak C:/CodeInspection/DisplayUnit/STemWin/App/SettingInput.c 84 N DF OV B N ni -
+<DEFINE> nPos C:/CodeInspection/DisplayUnit/STemWin/App/SettingInput.c 85 N DC OV B N ni -
+<DEFINE> nPos C:/CodeInspection/DisplayUnit/STemWin/App/SettingInput.c 85 N DF OV B N ni -
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/SettingInput.c 85 16 N ON ni B O
+<DEFINE> ret C:/CodeInspection/DisplayUnit/STemWin/App/SettingInput.c 86 N DC OV B N ni -
+<DEFINE> ret C:/CodeInspection/DisplayUnit/STemWin/App/SettingInput.c 86 N DF OV B N ni -
+<DEFINE> value C:/CodeInspection/DisplayUnit/STemWin/App/SettingInput.c 87 N DC OV B N us -
+<DEFINE> value C:/CodeInspection/DisplayUnit/STemWin/App/SettingInput.c 87 N DF OV B N us -
+<R>C SettingInput GUI_SetBkColor 89
+<R>X SettingInput GUI_SetBkColor 89 R
+<R>C SettingInput GUI_SetPenSize 91
+<R>X SettingInput GUI_SetPenSize 91 R
+<R>C SettingInput GUI_SetColor 92
+<R>X SettingInput GUI_SetColor 92 R
+<R>C SettingInput GUI_ClearRect 94
+<R>X SettingInput GUI_ClearRect 94 R
+<R>C SettingInput GUI_DrawRect 95
+<R>X SettingInput GUI_DrawRect 95 R
+<R>C SettingInput InputDisp 97
+<R>C SettingInput ButtonDisp 98
+<R>X SettingInput ButtonDisp 98 R
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/SettingInput.c 100 12 N DN ni B X
+<DEFINE> key C:/CodeInspection/DisplayUnit/STemWin/App/SettingInput.c 102 N DC OV B N {ee_key} -
+<DEFINE> key C:/CodeInspection/DisplayUnit/STemWin/App/SettingInput.c 102 N DF OV B N {ee_key} -
+<R>C SettingInput GetKey 102
+<R>X SettingInput GetKey 102 R
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/SettingInput.c 110 36 N DN ni B X
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/SettingInput.c 112 37 N ON ni B X
+<R>C SettingInput InputDisp 125
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/SettingInput.c 129 36 N DN ni B X
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/SettingInput.c 131 33 N ON ni B X
+<R>C SettingInput InputDisp 137
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/SettingInput.c 141 45 N DN ni B X
+<R>C SettingInput ButtonDisp 143
+<R>X SettingInput ButtonDisp 143 R
+<R>C SettingInput InputDisp 156
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/SettingInput.c 160 36 N DN ni B X
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/SettingInput.c 162 37 N ON ni B X
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/SettingInput.c 168 37 N ON ni B X
+<R>C SettingInput InputDisp 175
+<R>C SettingInput ButtonDisp 181
+<R>X SettingInput ButtonDisp 181 R
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/SettingInput.c 182 44 N DN ni B X
+<R>C SettingInput InputDisp 192
+<R>C SettingInput ButtonDisp 193
+<R>X SettingInput ButtonDisp 193 R
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/SettingInput.c 203 45 N DN ni B X
+<CTLG> SettingInput 1
+<CTLG> 1 2
+<CTLG> 2 3
+<CTLG> 2 61
+<CTLG> 3 4
+<CTLG> 3 23
+<CTLG> 4 5
+<CTLG> 4 18
+<CTLG> 5 6
+<CTLG> 5 13
+<CTLG> 6 7
+<CTLG> 6 11
+<CTLG> 7 8
+<CTLG> 7 9
+<CTLG> 8 10
+<CTLG> 9 10
+<CTLG> 10 12
+<CTLG> 11 12
+<CTLG> 12 17
+<CTLG> 13 14
+<CTLG> 13 15
+<CTLG> 14 16
+<CTLG> 15 16
+<CTLG> 16 17
+<CTLG> 17 22
+<CTLG> 18 19
+<CTLG> 18 20
+<CTLG> 19 21
+<CTLG> 20 21
+<CTLG> 21 22
+<CTLG> 22 57
+<CTLG> 23 24
+<CTLG> 23 40
+<CTLG> 24 25
+<CTLG> 24 35
+<CTLG> 25 26
+<CTLG> 25 27
+<CTLG> 26 34
+<CTLG> 27 28
+<CTLG> 27 32
+<CTLG> 28 29
+<CTLG> 28 30
+<CTLG> 29 31
+<CTLG> 30 31
+<CTLG> 31 33
+<CTLG> 32 33
+<CTLG> 33 34
+<CTLG> 34 39
+<CTLG> 35 36
+<CTLG> 35 37
+<CTLG> 36 38
+<CTLG> 37 38
+<CTLG> 38 39
+<CTLG> 39 56
+<CTLG> 40 41
+<CTLG> 40 51
+<CTLG> 41 42
+<CTLG> 41 43
+<CTLG> 42 50
+<CTLG> 43 44
+<CTLG> 43 45
+<CTLG> 44 49
+<CTLG> 45 46
+<CTLG> 45 47
+<CTLG> 46 48
+<CTLG> 47 48
+<CTLG> 48 49
+<CTLG> 49 50
+<CTLG> 50 55
+<CTLG> 51 52
+<CTLG> 51 53
+<CTLG> 52 54
+<CTLG> 53 54
+<CTLG> 54 55
+<CTLG> 55 56
+<CTLG> 56 57
+<CTLG> 57 58
+<CTLG> 57 60
+<CTLG> 58 61
+<CTLG> 60 2
+<CTLG> 61 63
+<CTLGN> 83 100 100 104 106 108 110 112 112 116 110 121 108 129 129 133 127 106 141 141 146 140 104 149 151 153 153 160 162 162 166 160 171 158 151 179 179 184 178 149 187 189 189 196 196 203 203 207 202 195 187 210 210 214 209 186 148 215 217 215 100 220 220 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/STemWin/App/SettingInput.c
+<S>STNAM  SettingInput
+<S>STCYC  21
+<S>STMCC  0 (21:21)
+<S>STMIF  7
+<S>STSUB  16
+<S>STAKI  37
+<S>STLIN  137
+<S>STXLN  77
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  1
+<S>STKDN  0.01   
+<S>STUNV  0
+<S>STLCT  5
+<S>STPTH  39
+<S>STPDN  0.51   
+<S>STPBG  2
+<S>STLOP  0
+<S>STM07  3
+<S>STM19  1
+<S>STAV1  4
+<S>STAV2  7
+<S>STAV3  7
+<S>STST1  90
+<S>STST2  59
+<S>STST3  54
+<S>STPAR  4
+<S>STCAL  8
+<S>STFN1  289
+<S>STFN2  133
+
+<DEFINE> value C:/CodeInspection/DisplayUnit/STemWin/App/SettingInput.c 223 N DC OV B N =ni R
+<DEFINE> pos C:/CodeInspection/DisplayUnit/STemWin/App/SettingInput.c 223 N DC OV B N =ni R
+<DEFINE> text C:/CodeInspection/DisplayUnit/STemWin/App/SettingInput.c 223 N DC OV B N p=p=_c R
+<DEFINE> muti_lan C:/CodeInspection/DisplayUnit/STemWin/App/SettingInput.c 223 N DC OV B N ni R
+<DEFINE> InputDispString C:/CodeInspection/DisplayUnit/STemWin/App/SettingInput.c 223 N DR OF F I (.,=ni,=ni,p=p=_c,ni) -
+<DEFINE> InputDispString C:/CodeInspection/DisplayUnit/STemWin/App/SettingInput.c 223 N DF OF F I (.,=ni,=ni,p=p=_c,ni) -
+<DEFINE> rect C:/CodeInspection/DisplayUnit/STemWin/App/SettingInput.c 226 N DC OV B N {sLCD_RECT} -
+<DEFINE> rect C:/CodeInspection/DisplayUnit/STemWin/App/SettingInput.c 226 N DF OV B N {sLCD_RECT} -
+<R>C InputDispString GUI_SetBkColor 227
+<R>X InputDispString GUI_SetBkColor 227 R
+<R>C InputDispString GUI_ClearRect 228
+<R>X InputDispString GUI_ClearRect 228 R
+<R>C InputDispString LanguageSelect 231
+<R>X InputDispString LanguageSelect 231 R
+<R>C InputDispString GUI_SetFont 243
+<R>X InputDispString GUI_SetFont 243 R
+<R>X InputDispString GUI_FontLSfont_24x24 243 R
+<R>C InputDispString GUI_SetFont 248
+<R>X InputDispString GUI_SetFont 248 R
+<R>X InputDispString GUI_Fontcyrillic_24x24 248 R
+<R>C InputDispString GUI_SetFont 252
+<R>X InputDispString GUI_SetFont 252 R
+<R>X InputDispString GUI_Font32B_ASCII 252 R
+<R>C InputDispString GUI_DispStringInRect 255
+<R>X InputDispString GUI_DispStringInRect 255 R
+<R>C InputDispString GUI_SetColor 258
+<R>X InputDispString GUI_SetColor 258 R
+<R>C InputDispString GUI_SetBkColor 259
+<R>X InputDispString GUI_SetBkColor 259 R
+<R>C InputDispString GUI_ClearRect 260
+<R>X InputDispString GUI_ClearRect 260 R
+<R>C InputDispString GUI_SetFont 266
+<R>X InputDispString GUI_SetFont 266 R
+<R>X InputDispString GUI_FontLSfont_24x24 266 R
+<R>C InputDispString GUI_SetFont 271
+<R>X InputDispString GUI_SetFont 271 R
+<R>X InputDispString GUI_Fontcyrillic_24x24 271 R
+<R>C InputDispString GUI_SetFont 275
+<R>X InputDispString GUI_SetFont 275 R
+<R>X InputDispString GUI_Font32B_ASCII 275 R
+<R>C InputDispString GUI_DispStringInRect 278
+<R>X InputDispString GUI_DispStringInRect 278 R
+<R>C InputDispString GUI_BMP_Draw 280
+<R>X InputDispString GUI_BMP_Draw 280 R
+<R>X InputDispString _acUp 280 R
+<R>C InputDispString GUI_BMP_Draw 281
+<R>X InputDispString GUI_BMP_Draw 281 R
+<R>X InputDispString _acDown 281 R
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/SettingInput.c 281 73 N DN ni B X
+<CTLG> InputDispString 1
+<CTLG> 1 2
+<CTLG> 2 3
+<CTLG> 2 14
+<CTLG> 3 4
+<CTLG> 3 11
+<CTLG> 4 5
+<CTLG> 4 6
+<CTLG> 5 10
+<CTLG> 6 7
+<CTLG> 6 8
+<CTLG> 7 9
+<CTLG> 8 9
+<CTLG> 9 10
+<CTLG> 10 11
+<CTLG> 11 12
+<CTLG> 12 26
+<CTLG> 14 15
+<CTLG> 15 16
+<CTLG> 15 23
+<CTLG> 16 17
+<CTLG> 16 18
+<CTLG> 17 22
+<CTLG> 18 19
+<CTLG> 18 20
+<CTLG> 19 21
+<CTLG> 20 21
+<CTLG> 21 22
+<CTLG> 22 23
+<CTLG> 23 24
+<CTLG> 24 26
+<CTLGN> 224 237 237 239 241 241 246 246 250 245 239 256 256 237 262 262 264 264 269 269 273 268 262 282 282 256 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/STemWin/App/SettingInput.c
+<S>STNAM  InputDispString
+<S>STCYC  8
+<S>STMCC  0 (8:8)
+<S>STMIF  4
+<S>STSUB  16
+<S>STAKI  24
+<S>STLIN  57
+<S>STXLN  32
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  1
+<S>STKDN  0.03   
+<S>STUNV  0
+<S>STLCT  1
+<S>STPTH  20
+<S>STPDN  0.63   
+<S>STPBG  1
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  1
+<S>STAV1  6
+<S>STAV2  9
+<S>STAV3  9
+<S>STST1  38
+<S>STST2  29
+<S>STST3  28
+<S>STPAR  4
+<S>STCAL  7
+<S>STFN1  175
+<S>STFN2  86
+
+<EXTD> SettingInputString C:/CodeInspection/DisplayUnit/STemWin/App/SettingInput.c 285
+<DEFINE> orgValue C:/CodeInspection/DisplayUnit/STemWin/App/SettingInput.c 285 N DC OV B N pus R
+<DEFINE> max C:/CodeInspection/DisplayUnit/STemWin/App/SettingInput.c 285 N DC OV B N =ni R
+<DEFINE> text C:/CodeInspection/DisplayUnit/STemWin/App/SettingInput.c 285 N DC OV B N p=p=_c R
+<DEFINE> multi_lan C:/CodeInspection/DisplayUnit/STemWin/App/SettingInput.c 285 N DC OV B N ni R
+<DEFINE> SettingInputString C:/CodeInspection/DisplayUnit/STemWin/App/SettingInput.c 285 N DR OF F X (ni,pus,=ni,p=p=_c,ni) -
+<DEFINE> SettingInputString C:/CodeInspection/DisplayUnit/STemWin/App/SettingInput.c 285 N DF OF F X (ni,pus,=ni,p=p=_c,ni) -
+<DEFINE> flagBreak C:/CodeInspection/DisplayUnit/STemWin/App/SettingInput.c 287 N DC OV B N ni -
+<DEFINE> flagBreak C:/CodeInspection/DisplayUnit/STemWin/App/SettingInput.c 287 N DF OV B N ni -
+<DEFINE> nPos C:/CodeInspection/DisplayUnit/STemWin/App/SettingInput.c 288 N DC OV B N ni -
+<DEFINE> nPos C:/CodeInspection/DisplayUnit/STemWin/App/SettingInput.c 288 N DF OV B N ni -
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/SettingInput.c 288 16 N ON ni B O
+<DEFINE> ret C:/CodeInspection/DisplayUnit/STemWin/App/SettingInput.c 289 N DC OV B N ni -
+<DEFINE> ret C:/CodeInspection/DisplayUnit/STemWin/App/SettingInput.c 289 N DF OV B N ni -
+<DEFINE> value C:/CodeInspection/DisplayUnit/STemWin/App/SettingInput.c 290 N DC OV B N us -
+<DEFINE> value C:/CodeInspection/DisplayUnit/STemWin/App/SettingInput.c 290 N DF OV B N us -
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/SettingInput.c 294 17 N ON ni B X
+<R>C SettingInputString GUI_SetBkColor 296
+<R>X SettingInputString GUI_SetBkColor 296 R
+<R>C SettingInputString GUI_SetPenSize 298
+<R>X SettingInputString GUI_SetPenSize 298 R
+<R>C SettingInputString GUI_SetColor 299
+<R>X SettingInputString GUI_SetColor 299 R
+<R>C SettingInputString GUI_ClearRect 301
+<R>X SettingInputString GUI_ClearRect 301 R
+<R>C SettingInputString GUI_DrawRect 302
+<R>X SettingInputString GUI_DrawRect 302 R
+<R>C SettingInputString InputDispString 304
+<R>C SettingInputString ButtonDisp 305
+<R>X SettingInputString ButtonDisp 305 R
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/SettingInput.c 306 12 N DN ni B X
+<DEFINE> key C:/CodeInspection/DisplayUnit/STemWin/App/SettingInput.c 308 N DC OV B N {ee_key} -
+<DEFINE> key C:/CodeInspection/DisplayUnit/STemWin/App/SettingInput.c 308 N DF OV B N {ee_key} -
+<R>C SettingInputString GetKey 308
+<R>X SettingInputString GetKey 308 R
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/SettingInput.c 314 35 N DN ni B X
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/SettingInput.c 320 29 N ON ni B X
+<R>C SettingInputString InputDispString 322
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/SettingInput.c 325 45 N DN ni B X
+<R>C SettingInputString ButtonDisp 327
+<R>X SettingInputString ButtonDisp 327 R
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/SettingInput.c 337 28 N ON ni B X
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/SettingInput.c 343 35 N DN ni B X
+<R>C SettingInputString InputDispString 345
+<R>C SettingInputString ButtonDisp 350
+<R>X SettingInputString ButtonDisp 350 R
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/SettingInput.c 351 44 N DN ni B X
+<R>C SettingInputString InputDispString 361
+<R>C SettingInputString ButtonDisp 362
+<R>X SettingInputString ButtonDisp 362 R
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/SettingInput.c 372 45 N DN ni B X
+<CTLG> SettingInputString 1
+<CTLG> 1 2
+<CTLG> 1 3
+<CTLG> 2 3
+<CTLG> 3 4
+<CTLG> 4 5
+<CTLG> 4 48
+<CTLG> 5 6
+<CTLG> 5 16
+<CTLG> 6 7
+<CTLG> 6 11
+<CTLG> 7 8
+<CTLG> 7 9
+<CTLG> 8 10
+<CTLG> 9 10
+<CTLG> 10 15
+<CTLG> 11 12
+<CTLG> 11 13
+<CTLG> 12 14
+<CTLG> 13 14
+<CTLG> 14 15
+<CTLG> 15 44
+<CTLG> 16 17
+<CTLG> 16 27
+<CTLG> 17 18
+<CTLG> 17 22
+<CTLG> 18 19
+<CTLG> 18 20
+<CTLG> 19 21
+<CTLG> 20 21
+<CTLG> 21 26
+<CTLG> 22 23
+<CTLG> 22 24
+<CTLG> 23 25
+<CTLG> 24 25
+<CTLG> 25 26
+<CTLG> 26 43
+<CTLG> 27 28
+<CTLG> 27 38
+<CTLG> 28 29
+<CTLG> 28 30
+<CTLG> 29 37
+<CTLG> 30 31
+<CTLG> 30 32
+<CTLG> 31 36
+<CTLG> 32 33
+<CTLG> 32 34
+<CTLG> 33 35
+<CTLG> 34 35
+<CTLG> 35 36
+<CTLG> 36 37
+<CTLG> 37 42
+<CTLG> 38 39
+<CTLG> 38 40
+<CTLG> 39 41
+<CTLG> 40 41
+<CTLG> 41 42
+<CTLG> 42 43
+<CTLG> 43 44
+<CTLG> 44 45
+<CTLG> 44 47
+<CTLG> 45 48
+<CTLG> 47 4
+<CTLG> 48 50
+<CTLGN> 286 292 292 306 306 310 312 314 314 318 312 325 325 330 324 310 333 335 337 337 341 335 348 348 353 347 333 356 358 358 365 365 372 372 376 371 364 356 379 379 383 378 355 332 384 386 384 306 389 389 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/STemWin/App/SettingInput.c
+<S>STNAM  SettingInputString
+<S>STCYC  17
+<S>STMCC  0 (17:17)
+<S>STMIF  7
+<S>STSUB  14
+<S>STAKI  31
+<S>STLIN  103
+<S>STXLN  62
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  1
+<S>STKDN  0.02   
+<S>STUNV  0
+<S>STLCT  5
+<S>STPTH  58
+<S>STPDN  0.94   
+<S>STPBG  2
+<S>STLOP  0
+<S>STM07  3
+<S>STM19  1
+<S>STAV1  5
+<S>STAV2  7
+<S>STAV3  8
+<S>STST1  71
+<S>STST2  49
+<S>STST3  44
+<S>STPAR  4
+<S>STCAL  8
+<S>STFN1  240
+<S>STFN2  116
+
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/STemWin/App/SettingInput.c
+<S>STNAM  C:/CodeInspection/DisplayUnit/STemWin/App/SettingInput.c
+<S>STNTB  NON-TOKEN BASED STATISTICS...
+<S>STSCT  2
+<S>STECT  7
+<S>STFNC  4
+<S>STFCO  63
+<S>STTKB  TOKEN BASED STATISTICS...
+<S>STVAR  80
+<S>STOPT  37
+<S>STOPN  112
+<S>STTOT  1962
+<S>STZIP  832
+<S>STHAL  955
+<S>STSHN  3416
+<S>STDIF  27.17  
+<S>STEFF  384830
+<S>STVOL  14164
+<S>STDEV  64.14  
+<S>STBUG  5
+<S>STTPP  392
+<S>STTLN  330
+<S>STM20  456
+<S>STM21  1505
+<S>STM22  117
+<S>STM28  8
+<S>STM33  5
+<S>STBCS  BASIC COCOMO STATISTICS...
+<S>STBMO  0.898  
+<S>STBMS  1.051  
+<S>STBME  1.170  
+<S>STTDO  2.400  
+<S>STTDS  2.544  
+<S>STTDE  2.629  
+<S>STCOM  COMMENT BASED STATISTICS...
+<S>STCDN  0.143  
+

@@ -1,0 +1,408 @@
+<RDEF> I Includes
+<R>I C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c C:/CodeInspection/DisplayUnit/Inc/usbd_custom_hid_if.h 50
+<R>I C:/CodeInspection/DisplayUnit/Inc/usbd_custom_hid_if.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc/usbd_customhid.h 58
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc/usbd_customhid.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h 37
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h 37
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h C:/CodeInspection/DisplayUnit/Inc/usbd_conf.h 37
+<R>I C:/CodeInspection/DisplayUnit/Inc/usbd_conf.h C:/PRQA/QAC-8.1.2-R/include/ansi/stdio.h 56
+<R>I C:/CodeInspection/DisplayUnit/Inc/usbd_conf.h C:/PRQA/QAC-8.1.2-R/include/ansi/stdlib.h 57
+<R>I C:/CodeInspection/DisplayUnit/Inc/usbd_conf.h C:/PRQA/QAC-8.1.2-R/include/ansi/string.h 58
+<R>I C:/CodeInspection/DisplayUnit/Inc/usbd_conf.h C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h 59
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h 149
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cm4.h 183
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cm4.h C:/CodeInspection/DisplayUnit/qac/lib/stdint.h 44
+<R>I C:/CodeInspection/DisplayUnit/qac/lib/stdint.h C:/CodeInspection/DisplayUnit/qac/lib/ycheck.h 10
+<R>I C:/CodeInspection/DisplayUnit/qac/lib/stdint.h C:/CodeInspection/DisplayUnit/qac/lib/yvals.h 11
+<R>I C:/CodeInspection/DisplayUnit/qac/lib/yvals.h C:/CodeInspection/DisplayUnit/qac/lib/DLib_Defaults.h 42
+<R>I C:/CodeInspection/DisplayUnit/qac/lib/DLib_Defaults.h C:/CodeInspection/DisplayUnit/qac/lib/DLib_Product.h 50
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cm4.h C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cmInstr.h 210
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cmInstr.h C:/CodeInspection/DisplayUnit/qac/lib/cmsis_iar.h 65
+<R>I C:/CodeInspection/DisplayUnit/qac/lib/cmsis_iar.h C:/CodeInspection/DisplayUnit/qac/lib/intrinsics.h 22
+<R>I C:/CodeInspection/DisplayUnit/qac/lib/intrinsics.h C:/CodeInspection/DisplayUnit/qac/lib/yvals.h 14
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cm4.h C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cmFunc.h 211
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cmFunc.h C:/CodeInspection/DisplayUnit/qac/lib/cmsis_iar.h 65
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cm4.h C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cmSimd.h 212
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cmSimd.h C:/CodeInspection/DisplayUnit/qac/lib/cmsis_iar.h 69
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h 184
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h C:/CodeInspection/DisplayUnit/qac/lib/stdint.h 185
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h 250
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h 46
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Inc/main.h 43
+<R>I C:/CodeInspection/DisplayUnit/Inc/main.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI.h 55
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_ConfDefaults.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_ConfDefaults.h C:/CodeInspection/DisplayUnit/STemWin/Target/GUIConf.h 60
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_Type.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_Type.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/LCD.h 60
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/LCD.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_ConfDefaults.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/LCD.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/Global.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_Type.h C:/CodeInspection/DisplayUnit/STemWin/Target/GUIConf.h 61
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_Version.h 58
+<R>I C:/CodeInspection/DisplayUnit/Inc/main.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h 56
+<R>I C:/CodeInspection/DisplayUnit/Inc/main.h C:/PRQA/QAC-8.1.2-R/include/ansi/time.h 57
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h 244
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h 46
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h 47
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h C:/PRQA/QAC-8.1.2-R/include/ansi/stdio.h 48
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h 49
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h 248
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h 230
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h 252
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h 656
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h 256
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_crc.h 268
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_crc.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h 292
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h 313
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h 314
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_sram.h 296
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_sram.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_fsmc.h 47
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_fsmc.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h 320
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c_ex.h 473
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h 336
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h 290
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc.h 344
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc_ex.h 634
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc_ex.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h 360
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h 364
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h 1289
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h 368
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h 388
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h 49
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 49
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h 121
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 49
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_hcd.h 392
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_hcd.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h 49
+<R>I C:/CodeInspection/DisplayUnit/Inc/usbd_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h 60
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h 38
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h C:/CodeInspection/DisplayUnit/Inc/usbd_conf.h 37
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h 38
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h 39
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h 40
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h 37
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 94 5 N ON - F P
+<LIT> 76 - P C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 97 55 N DN ni F D
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 100 5 N ON - F P
+<LIT> 0x06 - P C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 121 9 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 122 9 N HN ni F A
+<LIT> 0xFF - P C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 123 9 N HN ni F A
+<LIT> 0x09 - P C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 124 9 N HN ni F A
+<LIT> 0x01 - P C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 124 15 N HN ni F A
+<LIT> 0xA1 - P C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 125 9 N HN ni F A
+<LIT> 0x01 - P C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 125 15 N HN ni F A
+<LIT> 0x85 - P C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 127 9 N HN ni F A
+<LIT> 0x01 - P C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 127 15 N HN ni F A
+<LIT> 0x19 - P C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 128 9 N HN ni F A
+<LIT> 0x01 - P C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 128 15 N HN ni F A
+<LIT> 0x29 - P C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 129 9 N HN ni F A
+<LIT> 0x01 - P C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 129 15 N HN ni F A
+<LIT> 0x15 - P C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 130 9 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 130 15 N HN ni F A
+<LIT> 0x26 - P C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 131 9 N HN ni F A
+<LIT> 0xFF - P C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 131 15 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 131 21 N HN ni F A
+<LIT> 0x75 - P C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 132 9 N HN ni F A
+<LIT> 0x08 - P C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 132 15 N HN ni F A
+<LIT> 0x95 - P C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 133 9 N HN ni F A
+<LIT> 0x23 - P C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 133 15 N HN ni F A
+<LIT> 0x91 - P C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 134 9 N HN ni F A
+<LIT> 0x02 - P C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 134 15 N HN ni F A
+<LIT> 0x85 - P C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 136 9 N HN ni F A
+<LIT> 0x02 - P C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 136 15 N HN ni F A
+<LIT> 0x19 - P C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 137 9 N HN ni F A
+<LIT> 0x01 - P C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 137 15 N HN ni F A
+<LIT> 0x29 - P C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 138 9 N HN ni F A
+<LIT> 0x01 - P C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 138 15 N HN ni F A
+<LIT> 0x15 - P C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 139 9 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 139 15 N HN ni F A
+<LIT> 0x26 - P C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 140 9 N HN ni F A
+<LIT> 0xFF - P C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 140 15 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 140 21 N HN ni F A
+<LIT> 0x75 - P C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 141 9 N HN ni F A
+<LIT> 0x08 - P C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 141 15 N HN ni F A
+<LIT> 0x95 - P C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 142 9 N HN ni F A
+<LIT> 0x23 - P C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 142 15 N HN ni F A
+<LIT> 0x91 - P C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 143 9 N HN ni F A
+<LIT> 0x02 - P C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 143 15 N HN ni F A
+<LIT> 0x85 - P C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 145 9 N HN ni F A
+<LIT> 0x03 - P C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 145 15 N HN ni F A
+<LIT> 0x19 - P C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 146 9 N HN ni F A
+<LIT> 0x01 - P C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 146 15 N HN ni F A
+<LIT> 0x29 - P C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 147 9 N HN ni F A
+<LIT> 0x01 - P C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 147 15 N HN ni F A
+<LIT> 0x15 - P C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 148 9 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 148 15 N HN ni F A
+<LIT> 0x26 - P C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 149 9 N HN ni F A
+<LIT> 0xFF - P C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 149 15 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 149 21 N HN ni F A
+<LIT> 0x75 - P C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 150 9 N HN ni F A
+<LIT> 0x08 - P C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 150 15 N HN ni F A
+<LIT> 0x95 - P C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 151 9 N HN ni F A
+<LIT> 0x23 - P C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 151 15 N HN ni F A
+<LIT> 0x81 - P C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 152 9 N HN ni F A
+<LIT> 0x02 - P C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 152 15 N HN ni F A
+<LIT> 0x85 - P C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 154 9 N HN ni F A
+<LIT> 0x04 - P C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 154 15 N HN ni F A
+<LIT> 0x19 - P C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 155 9 N HN ni F A
+<LIT> 0x01 - P C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 155 15 N HN ni F A
+<LIT> 0x29 - P C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 156 9 N HN ni F A
+<LIT> 0x01 - P C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 156 15 N HN ni F A
+<LIT> 0x15 - P C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 157 9 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 157 15 N HN ni F A
+<LIT> 0x26 - P C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 158 9 N HN ni F A
+<LIT> 0xFF - P C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 158 15 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 158 21 N HN ni F A
+<LIT> 0x75 - P C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 159 9 N HN ni F A
+<LIT> 0x08 - P C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 159 15 N HN ni F A
+<LIT> 0x95 - P C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 160 9 N HN ni F A
+<LIT> 0x23 - P C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 160 15 N HN ni F A
+<LIT> 0x81 - P C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 161 9 N HN ni F A
+<LIT> 0x02 - P C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 161 15 N HN ni F A
+<LIT> 0xC0 - P C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 163 9 N HN ni F A
+<DEFINE> CUSTOM_HID_ReportDesc_FS C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 97 N DC OV F I [76,uc] S
+<DEFINE> CUSTOM_HID_ReportDesc_FS C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 97 N DF OV F I [76,uc] S
+<EXTN> hUsbDevice_0 C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 171
+<EXTT> hUsbDevice_0 C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 171
+<DEFINE> hUsbDevice_0 C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 171 N DC OV F X p{s_USBD_HandleTypeDef} S
+<EXTN> hUsbDeviceFS C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 173
+<DEFINE> hUsbDeviceFS C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 173 N DC OV F X {s_USBD_HandleTypeDef} S
+<DEFINE> CUSTOM_HID_Init_FS C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 182 N DC OF F I (nc,.) -
+<DEFINE> CUSTOM_HID_DeInit_FS C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 183 N DC OF F I (nc,.) -
+<DEFINE> event_idx C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 184 N DC OV P N uc R
+<DEFINE> state C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 184 N DC OV P N uc R
+<DEFINE> CUSTOM_HID_OutEvent_FS C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 184 N DC OF F I (nc,uc,uc) -
+<EXTD> USBD_CustomHID_fops_FS C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 187
+<DEFINE> USBD_CustomHID_fops_FS C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 187 N DR OV F X {s_USBD_CUSTOM_HID_Itf} S
+<DEFINE> USBD_CustomHID_fops_FS C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 187 N DF OV F X {s_USBD_CUSTOM_HID_Itf} S
+<DEFINE> CUSTOM_HID_Init_FS C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 202 N DR OF F I (nc,.) -
+<DEFINE> CUSTOM_HID_Init_FS C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 202 N DF OF F I (nc,.) -
+<RDEF> X Refers-to
+<R>X CUSTOM_HID_Init_FS hUsbDeviceFS 204 R
+<R>X CUSTOM_HID_Init_FS hUsbDeviceFS 204 W
+<R>X CUSTOM_HID_Init_FS hUsbDevice_0 204 W
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 206 11 N ON ni B X
+<CTLG> CUSTOM_HID_Init_FS 1
+<CTLG> 1 2
+<CTLG> 2 4
+<CTLGN> 203 206 206 206 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c
+<S>STNAM  CUSTOM_HID_Init_FS
+<S>STCYC  1
+<S>STMCC  0 (1:1)
+<S>STMIF  0
+<S>STSUB  0
+<S>STAKI  1
+<S>STLIN  4
+<S>STXLN  2
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  0
+<S>STPTH  1
+<S>STPDN  0.50   
+<S>STPBG  0
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  1
+<S>STAV1  6
+<S>STAV2  6
+<S>STAV3  6
+<S>STST1  2
+<S>STST2  2
+<S>STST3  2
+<S>STPAR  0
+<S>STCAL  0
+<S>STFN1  9
+<S>STFN2  3
+
+<DEFINE> CUSTOM_HID_DeInit_FS C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 216 N DR OF F I (nc,.) -
+<DEFINE> CUSTOM_HID_DeInit_FS C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 216 N DF OF F I (nc,.) -
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 219 11 N ON ni B X
+<CTLG> CUSTOM_HID_DeInit_FS 1
+<CTLG> 1 3
+<CTLGN> 217 219 219 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c
+<S>STNAM  CUSTOM_HID_DeInit_FS
+<S>STCYC  1
+<S>STMCC  0 (1:1)
+<S>STMIF  0
+<S>STSUB  0
+<S>STAKI  1
+<S>STLIN  3
+<S>STXLN  1
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  0
+<S>STPTH  1
+<S>STPDN  1.00   
+<S>STPBG  0
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  1
+<S>STAV1  7
+<S>STAV2  7
+<S>STAV3  7
+<S>STST1  1
+<S>STST2  1
+<S>STST3  1
+<S>STPAR  0
+<S>STCAL  0
+<S>STFN1  6
+<S>STFN2  1
+
+<DEFINE> event_idx C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 230 N DC OV B N uc R
+<DEFINE> state C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 230 N DC OV B N uc R
+<DEFINE> CUSTOM_HID_OutEvent_FS C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 230 N DR OF F I (nc,uc,uc) -
+<DEFINE> CUSTOM_HID_OutEvent_FS C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 230 N DF OF F I (nc,uc,uc) -
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 233 11 N ON ni B X
+<CTLG> CUSTOM_HID_OutEvent_FS 1
+<CTLG> 1 3
+<CTLGN> 231 233 233 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c
+<S>STNAM  CUSTOM_HID_OutEvent_FS
+<S>STCYC  1
+<S>STMCC  0 (1:1)
+<S>STMIF  0
+<S>STSUB  0
+<S>STAKI  1
+<S>STLIN  3
+<S>STXLN  1
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  2
+<S>STLCT  0
+<S>STPTH  1
+<S>STPDN  1.00   
+<S>STPBG  0
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  1
+<S>STAV1  7
+<S>STAV2  7
+<S>STAV3  7
+<S>STST1  1
+<S>STST2  1
+<S>STST3  1
+<S>STPAR  2
+<S>STCAL  0
+<S>STFN1  6
+<S>STFN2  1
+
+<EXTD> USBD_CUSTOM_HID_SendReport_FS C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 246
+<DEFINE> report C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 246 N DC OV B N puc R
+<DEFINE> len C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 246 N DC OV B N us R
+<DEFINE> USBD_CUSTOM_HID_SendReport_FS C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 246 N DC OF F X (nc,puc,us) -
+<DEFINE> USBD_CUSTOM_HID_SendReport_FS C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 246 N DF OF F X (nc,puc,us) -
+<RDEF> C Calls
+<R>C USBD_CUSTOM_HID_SendReport_FS USBD_CUSTOM_HID_SendReport 248
+<R>X USBD_CUSTOM_HID_SendReport_FS USBD_CUSTOM_HID_SendReport 248 R
+<R>X USBD_CUSTOM_HID_SendReport_FS hUsbDevice_0 248 R
+<CTLG> USBD_CUSTOM_HID_SendReport_FS 1
+<CTLG> 1 3
+<CTLGN> 247 248 248 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c
+<S>STNAM  USBD_CUSTOM_HID_SendReport_FS
+<S>STCYC  1
+<S>STMCC  0 (1:1)
+<S>STMIF  0
+<S>STSUB  1
+<S>STAKI  2
+<S>STLIN  1
+<S>STXLN  1
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  0
+<S>STPTH  1
+<S>STPDN  1.00   
+<S>STPBG  0
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  1
+<S>STAV1  12
+<S>STAV2  12
+<S>STAV3  12
+<S>STST1  1
+<S>STST2  1
+<S>STST3  1
+<S>STPAR  2
+<S>STCAL  1
+<S>STFN1  8
+<S>STFN2  4
+
+<EXTD> hUsbDevice_0 C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 171
+<DEFINE> hUsbDevice_0 C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c 171 N DI OV F X p{s_USBD_HandleTypeDef} S
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c
+<S>STNAM  C:/CodeInspection/DisplayUnit/Src/usbd_custom_hid_if.c
+<S>STNTB  NON-TOKEN BASED STATISTICS...
+<S>STSCT  4
+<S>STECT  3
+<S>STFNC  4
+<S>STFCO  4
+<S>STTKB  TOKEN BASED STATISTICS...
+<S>STVAR  20
+<S>STOPT  20
+<S>STOPN  101
+<S>STTOT  693
+<S>STZIP  650
+<S>STHAL  759
+<S>STSHN  2588
+<S>STDIF  48.87  
+<S>STEFF  234333
+<S>STVOL  4795
+<S>STDEV  39.06  
+<S>STBUG  4
+<S>STTPP  262
+<S>STTLN  70
+<S>STM20  127
+<S>STM21  565
+<S>STM22  12
+<S>STM28  63
+<S>STM33  28
+<S>STBCS  BASIC COCOMO STATISTICS...
+<S>STBMO  0.588  
+<S>STBMS  0.669  
+<S>STBME  0.722  
+<S>STTDO  2.043  
+<S>STTDS  2.172  
+<S>STTDE  2.252  
+<S>STCOM  COMMENT BASED STATISTICS...
+<S>STCDN  3.021  
+

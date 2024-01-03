@@ -1,0 +1,2416 @@
+<DEFINE> EXTERN C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 24 N DF OM - - - O
+<RDEF> I Includes
+<R>I C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h 25
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h 46
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Inc/main.h 43
+<R>I C:/CodeInspection/DisplayUnit/Inc/main.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI.h 58
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_ConfDefaults.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_ConfDefaults.h C:/CodeInspection/DisplayUnit/STemWin/Target/GUIConf.h 60
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_Type.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_Type.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/LCD.h 60
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/LCD.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_ConfDefaults.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/LCD.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/Global.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_Type.h C:/CodeInspection/DisplayUnit/STemWin/Target/GUIConf.h 61
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_Version.h 58
+<R>I C:/CodeInspection/DisplayUnit/Inc/main.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h 59
+<R>I C:/CodeInspection/DisplayUnit/Inc/main.h C:/PRQA/QAC-8.1.2-R/include/ansi/time.h 60
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h 244
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h 46
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h 149
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cm4.h 183
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cm4.h C:/CodeInspection/DisplayUnit/qac/lib/stdint.h 44
+<R>I C:/CodeInspection/DisplayUnit/qac/lib/stdint.h C:/CodeInspection/DisplayUnit/qac/lib/ycheck.h 10
+<R>I C:/CodeInspection/DisplayUnit/qac/lib/stdint.h C:/CodeInspection/DisplayUnit/qac/lib/yvals.h 11
+<R>I C:/CodeInspection/DisplayUnit/qac/lib/yvals.h C:/CodeInspection/DisplayUnit/qac/lib/DLib_Defaults.h 42
+<R>I C:/CodeInspection/DisplayUnit/qac/lib/DLib_Defaults.h C:/CodeInspection/DisplayUnit/qac/lib/DLib_Product.h 50
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cm4.h C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cmInstr.h 210
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cmInstr.h C:/CodeInspection/DisplayUnit/qac/lib/cmsis_iar.h 65
+<R>I C:/CodeInspection/DisplayUnit/qac/lib/cmsis_iar.h C:/CodeInspection/DisplayUnit/qac/lib/intrinsics.h 22
+<R>I C:/CodeInspection/DisplayUnit/qac/lib/intrinsics.h C:/CodeInspection/DisplayUnit/qac/lib/yvals.h 14
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cm4.h C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cmFunc.h 211
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cmFunc.h C:/CodeInspection/DisplayUnit/qac/lib/cmsis_iar.h 65
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cm4.h C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cmSimd.h 212
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cmSimd.h C:/CodeInspection/DisplayUnit/qac/lib/cmsis_iar.h 69
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h 184
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h C:/CodeInspection/DisplayUnit/qac/lib/stdint.h 185
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h 250
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h 47
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h C:/PRQA/QAC-8.1.2-R/include/ansi/stdio.h 48
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h 49
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h 248
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h 230
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h 252
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h 656
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h 256
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_crc.h 268
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_crc.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h 292
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h 313
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h 314
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_sram.h 296
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_sram.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_fsmc.h 47
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_fsmc.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h 320
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c_ex.h 473
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_iwdg.h 328
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_iwdg.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h 336
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h 290
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc.h 344
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc_ex.h 634
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc_ex.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h 360
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h 364
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h 1289
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h 368
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h 388
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h 49
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 49
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h 121
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 49
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_hcd.h 392
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_hcd.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h 49
+<R>I C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c C:/CodeInspection/DisplayUnit/Inc/main.h 26
+<R>I C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c C:/CodeInspection/DisplayUnit/STemWin/App/GuiData.h 27
+<R>I C:/CodeInspection/DisplayUnit/STemWin/App/GuiData.h C:/PRQA/QAC-8.1.2-R/include/ansi/stdlib.h 4
+<R>I C:/CodeInspection/DisplayUnit/STemWin/App/GuiData.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h 5
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_ConfDefaults.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_Type.h 58
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM_GUI.h 59
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI.h 60
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/BUTTON.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/BUTTON.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/BUTTON.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG_Intern.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG_Intern.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/BUTTON.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WIDGET.h 58
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WIDGET.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM_Intern.h 60
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM_Intern.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM_Intern.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_Private.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_Private.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_Private.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/LCD_Protected.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/LCD_Protected.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/LCD.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_Private.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_Debug.h 58
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_Debug.h C:/PRQA/QAC-8.1.2-R/include/ansi/stddef.h 59
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_Debug.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI.h 61
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_Private.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM_GUI.h 60
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WIDGET.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/SCROLLBAR.h 96
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/SCROLLBAR.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/SCROLLBAR.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG_Intern.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/SCROLLBAR.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WIDGET.h 58
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/CALENDAR.h 58
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/CALENDAR.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/CHECKBOX.h 59
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/CHECKBOX.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/CHECKBOX.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG_Intern.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/CHECKBOX.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WIDGET.h 58
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/CHOOSECOLOR.h 60
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/CHOOSECOLOR.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/CHOOSEFILE.h 61
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/CHOOSEFILE.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DROPDOWN.h 62
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DROPDOWN.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DROPDOWN.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG_Intern.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DROPDOWN.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/LISTBOX.h 58
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/LISTBOX.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/LISTBOX.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WIDGET.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/LISTBOX.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG_Intern.h 58
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/EDIT.h 63
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/EDIT.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/EDIT.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG_Intern.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/FRAMEWIN.h 64
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/FRAMEWIN.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/FRAMEWIN.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WIDGET.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/FRAMEWIN.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG_Intern.h 59
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GRAPH.h 65
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GRAPH.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GRAPH.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG_Intern.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GRAPH.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WIDGET.h 58
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/HEADER.h 66
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/HEADER.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/HEADER.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG_Intern.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/HEADER.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WIDGET.h 58
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/ICONVIEW.h 67
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/ICONVIEW.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/ICONVIEW.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG_Intern.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/ICONVIEW.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WIDGET.h 58
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/IMAGE.h 68
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/IMAGE.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/IMAGE.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG_Intern.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/IMAGE.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WIDGET.h 58
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/LISTBOX.h 69
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/LISTVIEW.h 70
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/LISTVIEW.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/LISTVIEW.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG_Intern.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/LISTVIEW.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/ICONVIEW.h 58
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/LISTVIEW.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/HEADER.h 59
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/LISTWHEEL.h 71
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/LISTWHEEL.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/LISTWHEEL.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG_Intern.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/LISTWHEEL.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WIDGET.h 58
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/MENU.h 72
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/MENU.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/MENU.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WIDGET.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/MENU.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG_Intern.h 58
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/MULTIEDIT.h 73
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/MULTIEDIT.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/MULTIEDIT.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG_Intern.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/MULTIPAGE.h 74
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/MULTIPAGE.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/MULTIPAGE.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/PROGBAR.h 75
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/PROGBAR.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/PROGBAR.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG_Intern.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/PROGBAR.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WIDGET.h 58
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/RADIO.h 76
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/RADIO.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/RADIO.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG_Intern.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/RADIO.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WIDGET.h 58
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/SCROLLBAR.h 77
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/SLIDER.h 78
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/SLIDER.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/SLIDER.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG_Intern.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/SLIDER.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WIDGET.h 58
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/SPINBOX.h 79
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/SPINBOX.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/SPINBOX.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG_Intern.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/SPINBOX.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WIDGET.h 58
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/SPINBOX.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_Debug.h 59
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/SPINBOX.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/EDIT.h 60
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/SWIPELIST.h 80
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/SWIPELIST.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 37
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/SWIPELIST.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG_Intern.h 38
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/SWIPELIST.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WIDGET.h 39
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/SWIPELIST.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_Debug.h 40
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/TEXT.h 81
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/TEXT.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/TEXT.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG_Intern.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/TEXT.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WIDGET.h 58
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/TEXT.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_Debug.h 59
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/TREEVIEW.h 82
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/TREEVIEW.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/TREEVIEW.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG_Intern.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/TREEVIEW.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WIDGET.h 58
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/KNOB.h 83
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/KNOB.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/KNOB.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG_Intern.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/KNOB.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WIDGET.h 58
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/KNOB.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_Debug.h 59
+<R>I C:/CodeInspection/DisplayUnit/STemWin/App/GuiData.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI.h 6
+<R>I C:/CodeInspection/DisplayUnit/STemWin/App/GuiData.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h 7
+<R>I C:/CodeInspection/DisplayUnit/STemWin/App/GuiData.h C:/CodeInspection/DisplayUnit/STemWin/App/modbus.h 8
+<R>I C:/CodeInspection/DisplayUnit/STemWin/App/modbus.h C:/CodeInspection/DisplayUnit/embOS_CortexM_IAR_V6_Src_V438/Start/Inc/RTOS.H 4
+<R>I C:/CodeInspection/DisplayUnit/embOS_CortexM_IAR_V6_Src_V438/Start/Inc/RTOS.H C:/PRQA/QAC-8.1.2-R/include/ansi/string.h 65
+<R>I C:/CodeInspection/DisplayUnit/embOS_CortexM_IAR_V6_Src_V438/Start/Inc/RTOS.H C:/CodeInspection/DisplayUnit/qac/lib/intrinsics.h 66
+<R>I C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c C:/PRQA/QAC-8.1.2-R/include/ansi/math.h 28
+<R>I C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c C:/PRQA/QAC-8.1.2-R/include/ansi/string.h 29
+<DEFINE> AcbMccbMeasurementSend C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 31 N DC OF F I (.,.) -
+<DEFINE> index C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 32 N DC OV P N us R
+<DEFINE> pos C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 32 N DC OV P N ni R
+<DEFINE> baseUnit C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 32 N DC OV P N p=_c R
+<DEFINE> DemandMakeString C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 32 N DC OF F I (.,us,ni,p=_c) -
+<DEFINE> AcbMccbValueDispDemand C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 33 N DC OF F I (.,.) -
+<DEFINE> AcbMccbMeasurementRecv C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 34 N DC OF F I (.,.) -
+<DEFINE> pos C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 35 N DC OV P N ni R
+<DEFINE> AcbMccbMeasurementMenu C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 35 N DC OF F I (.,ni) -
+<DEFINE> AcbMccbValueDispVIP C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 36 N DC OF F I (.,.) -
+<DEFINE> AcbMccbMeasurementDispVIP C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 37 N DC OF F I (.,.) -
+<DEFINE> AcbMccbValueDispEnergy C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 38 N DC OF F I (.,.) -
+<DEFINE> AcbMccbMeasurementDispEnergy C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 39 N DC OF F I (.,.) -
+<DEFINE> AcbMccbValueDispPQ C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 40 N DC OF F I (.,.) -
+<DEFINE> AcbMccbMeasurementDispPQ C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 41 N DC OF F I (.,.) -
+<DEFINE> AcbMccbMeasurementDispDemand C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 42 N DC OF F I (.,.) -
+<DEFINE> pos C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 43 N DC OV P N ni R
+<DEFINE> clear C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 43 N DC OV P N ni R
+<DEFINE> AcbMccbMeasurementDisp C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 43 N DC OF F I (.,ni,ni) -
+<DEFINE> pos C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 44 N DC OV P N ni R
+<DEFINE> AcbMccbValueDisp C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 44 N DC OF F I (.,ni) -
+<DEFINE> value C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 45 N DC OV P N ff R
+<DEFINE> localFloor C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 45 N DC OF F I (ff,ff) -
+<DEFINE> value C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 46 N DC OV P N ff R
+<DEFINE> mks C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 46 N DC OV P N p_c R
+<DEFINE> baseUnit C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 46 N DC OV P N p=_c R
+<DEFINE> unit C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 46 N DC OV P N p_c R
+<DEFINE> result C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 46 N DC OV P N p_c R
+<DEFINE> BaseDisp3 C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 46 N DC OF F I (.,ff,p_c,p=_c,p_c,p_c) -
+<DEFINE> value C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 47 N DC OV P N ff R
+<DEFINE> baseUnit C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 47 N DC OV P N p=_c R
+<DEFINE> unit C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 47 N DC OV P N p_c R
+<DEFINE> result C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 47 N DC OV P N p_c R
+<DEFINE> DispFormat3 C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 47 N DC OF F I (.,ff,p=_c,p_c,p_c) -
+<EXTT> VI C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 49
+<DEFINE> VI C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 49 N DC OV F I [2,[4,fs]] S
+<EXTT> P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 50
+<DEFINE> P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 50 N DC OV F I [5,fs] S
+<EXTT> Energy C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 51
+<DEFINE> Energy C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 51 N DC OV F I [5,ff] S
+<EXTT> PQ1 C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 52
+<DEFINE> PQ1 C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 52 N DC OV F I [2,fs] S
+<EXTT> PQ2 C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 53
+<DEFINE> PQ2 C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 53 N DC OV F I [3,[3,fs]] S
+<EXTT> Angle C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 54
+<DEFINE> Angle C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 54 N DC OV F I [2,[4,fs]] S
+<EXTT> nPfDisplay C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 56
+<DEFINE> nPfDisplay C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 56 N DC OV F I us S
+<EXTT> gLocalPols C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 57
+<DEFINE> gLocalPols C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 57 N DC OV F I ni S
+<DEFINE> value C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 60 N DC OV B N ff R
+<DEFINE> mks C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 60 N DC OV B N p_c R
+<DEFINE> baseUnit C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 60 N DC OV B N p=_c R
+<DEFINE> unit C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 60 N DC OV B N p_c R
+<DEFINE> result C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 60 N DC OV B N p_c R
+<DEFINE> BaseDisp3 C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 60 N DR OF F I (.,ff,p_c,p=_c,p_c,p_c) -
+<DEFINE> BaseDisp3 C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 60 N DF OF F I (.,ff,p_c,p=_c,p_c,p_c) -
+<RDEF> C Calls
+<R>C BaseDisp3 sprintf 62
+<RDEF> X Refers-to
+<R>X BaseDisp3 sprintf 62 R
+<LIT> "%s%s" - - C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 62 25 N SN [5,_c] B X
+<R>C BaseDisp3 sprintf 63
+<R>X BaseDisp3 sprintf 63 R
+<LIT> "%6.3f" - - C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 63 27 N SN [6,_c] B X
+<CTLG> BaseDisp3 1
+<CTLG> 1 2
+<CTLG> 2 4
+<CTLGN> 61 64 64 64 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c
+<S>STNAM  BaseDisp3
+<S>STCYC  1
+<S>STMCC  0 (1:1)
+<S>STMIF  0
+<S>STSUB  2
+<S>STAKI  3
+<S>STLIN  2
+<S>STXLN  2
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  0
+<S>STPTH  1
+<S>STPDN  0.50   
+<S>STPBG  0
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  0
+<S>STAV1  14
+<S>STAV2  14
+<S>STAV3  14
+<S>STST1  2
+<S>STST2  2
+<S>STST3  2
+<S>STPAR  5
+<S>STCAL  1
+<S>STFN1  19
+<S>STFN2  9
+
+<DEFINE> value C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 66 N DC OV B N ff R
+<DEFINE> localFloor C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 66 N DR OF F I (ff,ff) -
+<DEFINE> localFloor C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 66 N DF OF F I (ff,ff) -
+<R>C localFloor floor 68
+<R>X localFloor floor 68 R
+<CTLG> localFloor 1
+<CTLG> 1 2
+<CTLG> 2 4
+<CTLGN> 67 70 70 70 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c
+<S>STNAM  localFloor
+<S>STCYC  1
+<S>STMCC  0 (1:1)
+<S>STMIF  0
+<S>STSUB  1
+<S>STAKI  2
+<S>STLIN  3
+<S>STXLN  3
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  0
+<S>STPTH  1
+<S>STPDN  0.33   
+<S>STPBG  0
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  1
+<S>STAV1  6
+<S>STAV2  6
+<S>STAV3  6
+<S>STST1  3
+<S>STST2  3
+<S>STST3  3
+<S>STPAR  1
+<S>STCAL  1
+<S>STFN1  12
+<S>STFN2  8
+
+<DEFINE> value C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 73 N DC OV B N ff R
+<DEFINE> baseUnit C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 73 N DC OV B N p=_c R
+<DEFINE> unit C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 73 N DC OV B N p_c R
+<DEFINE> result C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 73 N DC OV B N p_c R
+<DEFINE> DispFormat3 C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 73 N DR OF F I (.,ff,p=_c,p_c,p_c) -
+<DEFINE> DispFormat3 C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 73 N DF OF F I (.,ff,p=_c,p_c,p_c) -
+<DEFINE> v C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 75 N DC OV B N ff -
+<DEFINE> v C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 75 N DF OV B N ff -
+<R>C DispFormat3 fabs 75
+<R>X DispFormat3 fabs 75 R
+<R>C DispFormat3 localFloor 77
+<R>C DispFormat3 BaseDisp3 80
+<LIT> "" - - C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 80 22 N SN [1,_c] B X
+<R>C DispFormat3 localFloor 84
+<R>C DispFormat3 BaseDisp3 87
+<LIT> "k" - - C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 87 22 N SN [2,_c] B X
+<R>C DispFormat3 localFloor 91
+<R>C DispFormat3 BaseDisp3 92
+<LIT> "M" - - C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 92 18 N SN [2,_c] B X
+<CTLG> DispFormat3 1
+<CTLG> 1 2
+<CTLG> 2 3
+<CTLG> 2 6
+<CTLG> 3 4
+<CTLG> 4 14
+<CTLG> 6 7
+<CTLG> 7 8
+<CTLG> 7 11
+<CTLG> 8 9
+<CTLG> 9 14
+<CTLG> 11 12
+<CTLG> 12 14
+<CTLGN> 74 78 78 81 81 78 85 85 88 88 85 93 93 81 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c
+<S>STNAM  DispFormat3
+<S>STCYC  3
+<S>STMCC  0 (3:3)
+<S>STMIF  1
+<S>STSUB  7
+<S>STAKI  10
+<S>STLIN  18
+<S>STXLN  13
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  2
+<S>STKDN  0.15   
+<S>STUNV  0
+<S>STLCT  1
+<S>STPTH  4
+<S>STPDN  0.31   
+<S>STPBG  1
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  2
+<S>STAV1  7
+<S>STAV2  8
+<S>STAV3  8
+<S>STST1  15
+<S>STST2  13
+<S>STST3  12
+<S>STPAR  4
+<S>STCAL  3
+<S>STFN1  66
+<S>STFN2  40
+
+<DEFINE> AcbMccbMeasurementSend C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 95 N DR OF F I (.,.) -
+<DEFINE> AcbMccbMeasurementSend C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 95 N DF OF F I (.,.) -
+<R>C AcbMccbMeasurementSend printf 97
+<R>X AcbMccbMeasurementSend printf 97 R
+<R>X AcbMccbMeasurementSend nSendStep 97 R
+<LIT> "AcbMccbMeasurementSend nSendStep = %d\n" - - C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 97 18 N SN [39,_c] B X
+<R>C AcbMccbMeasurementSend StatusSend 98
+<R>X AcbMccbMeasurementSend StatusSend 98 R
+<R>X AcbMccbMeasurementSend nMenuPos 102 R
+<R>X AcbMccbMeasurementSend gDeviceIndex 104 R
+<R>X AcbMccbMeasurementSend ConnectSetting 104 R
+<R>C AcbMccbMeasurementSend ModbusSendFrame 106
+<R>X AcbMccbMeasurementSend ModbusSendFrame 106 R
+<R>X AcbMccbMeasurementSend gDeviceIndex 106 R
+<R>X AcbMccbMeasurementSend ConnectSetting 106 R
+<R>C AcbMccbMeasurementSend ModbusSendFrame 110
+<R>X AcbMccbMeasurementSend ModbusSendFrame 110 R
+<R>X AcbMccbMeasurementSend gDeviceIndex 110 R
+<R>X AcbMccbMeasurementSend ConnectSetting 110 R
+<R>X AcbMccbMeasurementSend nSendStep 114 R
+<R>X AcbMccbMeasurementSend gDeviceIndex 116 R
+<R>X AcbMccbMeasurementSend ConnectSetting 116 R
+<R>C AcbMccbMeasurementSend ModbusSendFrame 118
+<R>X AcbMccbMeasurementSend ModbusSendFrame 118 R
+<R>X AcbMccbMeasurementSend gDeviceIndex 118 R
+<R>X AcbMccbMeasurementSend ConnectSetting 118 R
+<R>C AcbMccbMeasurementSend ModbusSendFrame 122
+<R>X AcbMccbMeasurementSend ModbusSendFrame 122 R
+<R>X AcbMccbMeasurementSend gDeviceIndex 122 R
+<R>X AcbMccbMeasurementSend ConnectSetting 122 R
+<R>X AcbMccbMeasurementSend nSendStep 126 R
+<R>C AcbMccbMeasurementSend ModbusSendFrame 128
+<R>X AcbMccbMeasurementSend ModbusSendFrame 128 R
+<R>X AcbMccbMeasurementSend gDeviceIndex 128 R
+<R>X AcbMccbMeasurementSend ConnectSetting 128 R
+<R>X AcbMccbMeasurementSend nSendStep 131 R
+<R>C AcbMccbMeasurementSend ModbusSendFrame 133
+<R>X AcbMccbMeasurementSend ModbusSendFrame 133 R
+<R>X AcbMccbMeasurementSend gDeviceIndex 133 R
+<R>X AcbMccbMeasurementSend ConnectSetting 133 R
+<CTLG> AcbMccbMeasurementSend 1
+<CTLG> 1 2
+<CTLG> 2 3
+<CTLG> 2 5
+<CTLG> 3 25
+<CTLG> 5 6
+<CTLG> 5 11
+<CTLG> 6 7
+<CTLG> 6 8
+<CTLG> 7 9
+<CTLG> 8 9
+<CTLG> 9 25
+<CTLG> 11 12
+<CTLG> 11 16
+<CTLG> 12 13
+<CTLG> 12 14
+<CTLG> 13 15
+<CTLG> 14 15
+<CTLG> 15 23
+<CTLG> 16 17
+<CTLG> 16 18
+<CTLG> 17 22
+<CTLG> 18 19
+<CTLG> 18 20
+<CTLG> 19 21
+<CTLG> 20 21
+<CTLG> 21 22
+<CTLG> 22 23
+<CTLG> 23 25
+<CTLGN> 96 98 98 100 98 102 104 104 108 112 102 114 116 116 120 114 126 126 131 131 135 130 125 136 100 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c
+<S>STNAM  AcbMccbMeasurementSend
+<S>STCYC  8
+<S>STMCC  0 (8:8)
+<S>STMIF  3
+<S>STSUB  8
+<S>STAKI  16
+<S>STLIN  39
+<S>STXLN  21
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  2
+<S>STKDN  0.10   
+<S>STUNV  0
+<S>STLCT  0
+<S>STPTH  30
+<S>STPDN  1.43   
+<S>STPBG  1
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  2
+<S>STAV1  7
+<S>STAV2  11
+<S>STAV3  11
+<S>STST1  26
+<S>STST2  16
+<S>STST3  16
+<S>STPAR  0
+<S>STCAL  3
+<S>STFN1  128
+<S>STFN2  63
+
+<DEFINE> index C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 138 N DC OV B N us R
+<DEFINE> pos C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 138 N DC OV B N ni R
+<DEFINE> baseUnit C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 138 N DC OV B N p=_c R
+<DEFINE> DemandMakeString C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 138 N DR OF F I (.,us,ni,p=_c) -
+<DEFINE> DemandMakeString C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 138 N DF OF F I (.,us,ni,p=_c) -
+<DEFINE> value C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 140 N DC OV B N [30,_c] -
+<DEFINE> value C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 140 N DF OV B N [30,_c] -
+<DEFINE> unit C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 141 N DC OV B N [10,_c] -
+<DEFINE> unit C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 141 N DF OV B N [10,_c] -
+<R>C DemandMakeString DispFormat 142
+<R>X DemandMakeString DispFormat 142 R
+<R>C DemandMakeString ModbusGetFloat 142
+<R>X DemandMakeString ModbusGetFloat 142 R
+<DEFINE> year C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 144 N DC OV B N uc -
+<DEFINE> year C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 144 N DF OV B N uc -
+<R>C DemandMakeString ModbusGetUint8_L 144
+<R>X DemandMakeString ModbusGetUint8_L 144 R
+<DEFINE> mon C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 146 N DC OV B N uc -
+<DEFINE> mon C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 146 N DF OV B N uc -
+<R>C DemandMakeString ModbusGetUint8_U 146
+<R>X DemandMakeString ModbusGetUint8_U 146 R
+<DEFINE> day C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 147 N DC OV B N uc -
+<DEFINE> day C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 147 N DF OV B N uc -
+<R>C DemandMakeString ModbusGetUint8_L 147
+<R>X DemandMakeString ModbusGetUint8_L 147 R
+<DEFINE> hour C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 149 N DC OV B N uc -
+<DEFINE> hour C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 149 N DF OV B N uc -
+<R>C DemandMakeString ModbusGetUint8_U 149
+<R>X DemandMakeString ModbusGetUint8_U 149 R
+<DEFINE> min C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 150 N DC OV B N uc -
+<DEFINE> min C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 150 N DF OV B N uc -
+<R>C DemandMakeString ModbusGetUint8_L 150
+<R>X DemandMakeString ModbusGetUint8_L 150 R
+<DEFINE> rect C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 152 N DC OV B N {sLCD_RECT} -
+<DEFINE> rect C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 152 N DF OV B N {sLCD_RECT} -
+<DEFINE> rectUnit C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 153 N DC OV B N {sLCD_RECT} -
+<DEFINE> rectUnit C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 153 N DF OV B N {sLCD_RECT} -
+<DEFINE> rectDateLocal C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 154 N DC OV B N {sLCD_RECT} -
+<DEFINE> rectDateLocal C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 154 N DF OV B N {sLCD_RECT} -
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 156 65 N DN ni B X
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 158 64 N DN ni B X
+<R>C DemandMakeString GUI_ClearRect 170
+<R>X DemandMakeString GUI_ClearRect 170 R
+<R>C DemandMakeString GUI_DispStringInRect 171
+<R>X DemandMakeString GUI_DispStringInRect 171 R
+<R>C DemandMakeString GUI_ClearRect 173
+<R>X DemandMakeString GUI_ClearRect 173 R
+<R>C DemandMakeString GUI_DispStringInRect 174
+<R>X DemandMakeString GUI_DispStringInRect 174 R
+<R>C DemandMakeString sprintf 176
+<R>X DemandMakeString sprintf 176 R
+<LIT> "%02d-%02d-%02d %02d:%02d" - - C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 176 26 N SN [25,_c] B X
+<R>C DemandMakeString GUI_ClearRect 178
+<R>X DemandMakeString GUI_ClearRect 178 R
+<R>C DemandMakeString GUI_DispStringInRect 179
+<R>X DemandMakeString GUI_DispStringInRect 179 R
+<CTLG> DemandMakeString 1
+<CTLG> 1 2
+<CTLG> 2 4
+<CTLGN> 139 180 180 180 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c
+<S>STNAM  DemandMakeString
+<S>STCYC  1
+<S>STMCC  0 (1:1)
+<S>STMIF  0
+<S>STSUB  14
+<S>STAKI  15
+<S>STLIN  40
+<S>STXLN  28
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  10
+<S>STPTH  1
+<S>STPDN  0.04   
+<S>STPBG  0
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  0
+<S>STAV1  9
+<S>STAV2  9
+<S>STAV3  13
+<S>STST1  33
+<S>STST2  33
+<S>STST3  23
+<S>STPAR  3
+<S>STCAL  7
+<S>STFN1  165
+<S>STFN2  137
+
+<DEFINE> AcbMccbValueDispDemand C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 182 N DR OF F I (.,.) -
+<DEFINE> AcbMccbValueDispDemand C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 182 N DF OF F I (.,.) -
+<DEFINE> cnt C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 184 N DC OV B N ni -
+<DEFINE> cnt C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 184 N DF OV B N ni -
+<DEFINE> index C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 185 N DC OV B N us -
+<DEFINE> index C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 185 N DF OV B N us -
+<R>X AcbMccbValueDispDemand gDeviceIndex 187 R
+<R>X AcbMccbValueDispDemand ConnectSetting 187 R
+<R>C AcbMccbValueDispDemand GUI_SetColor 192
+<R>X AcbMccbValueDispDemand GUI_SetColor 192 R
+<R>C AcbMccbValueDispDemand GUI_SetFont 193
+<R>X AcbMccbValueDispDemand GUI_SetFont 193 R
+<R>X AcbMccbValueDispDemand GUI_Font20B_ASCII 193 R
+<R>C AcbMccbValueDispDemand GUI_SetBkColor 194
+<R>X AcbMccbValueDispDemand GUI_SetBkColor 194 R
+<R>X AcbMccbValueDispDemand gDeviceIndex 196 R
+<R>X AcbMccbValueDispDemand gDeviceTypeAll 196 R
+<DEFINE> i C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 201 N DC OV B N ni -
+<DEFINE> i C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 201 N DF OV B N ni -
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 201 17 N ON ni B O
+<R>C AcbMccbValueDispDemand DemandMakeString 203
+<R>X AcbMccbValueDispDemand _acmeasurementDemand_unit 203 R
+<CTLG> AcbMccbValueDispDemand 1
+<CTLG> 1 2
+<CTLG> 1 3
+<CTLG> 2 3
+<CTLG> 3 4
+<CTLG> 4 5
+<CTLG> 4 6
+<CTLG> 5 6
+<CTLG> 6 7
+<CTLG> 7 8
+<CTLG> 7 10
+<CTLG> 8 9
+<CTLG> 9 7
+<CTLG> 10 12
+<CTLGN> 183 187 187 196 196 196 201 201 201 201 206 206 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c
+<S>STNAM  AcbMccbValueDispDemand
+<S>STCYC  4
+<S>STMCC  0 (4:4)
+<S>STMIF  1
+<S>STSUB  4
+<S>STAKI  8
+<S>STLIN  22
+<S>STXLN  12
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  3
+<S>STPTH  8
+<S>STPDN  0.67   
+<S>STPBG  1
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  0
+<S>STAV1  6
+<S>STAV2  7
+<S>STAV3  9
+<S>STST1  15
+<S>STST2  12
+<S>STST3  10
+<S>STPAR  0
+<S>STCAL  4
+<S>STFN1  61
+<S>STFN2  34
+
+<DEFINE> AcbMccbMeasurementRecv C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 208 N DR OF F I (.,.) -
+<DEFINE> AcbMccbMeasurementRecv C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 208 N DF OF F I (.,.) -
+<DEFINE> index C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 210 N DC OV B N us -
+<DEFINE> index C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 210 N DF OV B N us -
+<R>C AcbMccbMeasurementRecv printf 212
+<R>X AcbMccbMeasurementRecv printf 212 R
+<R>X AcbMccbMeasurementRecv nSendStep 212 R
+<LIT> "\n\n\n AcbMccbMeasurementRecv(%d)\n" - - C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 212 18 N SN [32,_c] B X
+<R>X AcbMccbMeasurementRecv nMenuPos 213 R
+<R>C AcbMccbMeasurementRecv AcbMccbValueDispDemand 215
+<R>X AcbMccbMeasurementRecv nSendStep 216 W
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 216 21 N ON ni B X
+<R>X AcbMccbMeasurementRecv gStatusSendEnd 217 W
+<R>X AcbMccbMeasurementRecv nSendStep 221 R
+<R>X AcbMccbMeasurementRecv gDeviceIndex 223 R
+<R>X AcbMccbMeasurementRecv ConnectSetting 223 R
+<R>C AcbMccbMeasurementRecv ModbusGetUint16 231
+<R>X AcbMccbMeasurementRecv ModbusGetUint16 231 R
+<R>C AcbMccbMeasurementRecv printf 232
+<R>X AcbMccbMeasurementRecv printf 232 R
+<LIT> "\n\n\n\nPfDisplay = %d\n\n\n\n\n" - - C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 232 22 N SN [24,_c] B X
+<R>X AcbMccbMeasurementRecv nSendStep 233 W
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 233 21 N DN ni B X
+<R>X AcbMccbMeasurementRecv nSendStep 236 R
+<R>X AcbMccbMeasurementRecv gDeviceIndex 238 R
+<R>X AcbMccbMeasurementRecv gPols 238 R
+<DEFINE> i C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 246 N DC OV B N ni -
+<DEFINE> i C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 246 N DF OV B N ni -
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 246 21 N ON ni B O
+<R>C AcbMccbMeasurementRecv ModbusGetFloat 248
+<R>X AcbMccbMeasurementRecv ModbusGetFloat 248 R
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 248 16 N ON ni B X
+<DEFINE> i C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 252 N DC OV B N ni -
+<DEFINE> i C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 252 N DF OV B N ni -
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 252 21 N ON ni B O
+<R>C AcbMccbMeasurementRecv ModbusGetFloat 254
+<R>X AcbMccbMeasurementRecv ModbusGetFloat 254 R
+<DEFINE> i C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 259 N DC OV B N ni -
+<DEFINE> i C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 259 N DF OV B N ni -
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 259 21 N ON ni B O
+<R>C AcbMccbMeasurementRecv ModbusGetFloat 261
+<R>X AcbMccbMeasurementRecv ModbusGetFloat 261 R
+<R>C AcbMccbMeasurementRecv printf 264
+<R>X AcbMccbMeasurementRecv printf 264 R
+<R>C AcbMccbMeasurementRecv ModbusGetFloat 264
+<R>X AcbMccbMeasurementRecv ModbusGetFloat 264 R
+<LIT> "[va] = %f\n" - - C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 264 14 N SN [11,_c] B X
+<R>C AcbMccbMeasurementRecv ModbusGetUint32 265
+<R>X AcbMccbMeasurementRecv ModbusGetUint32 265 R
+<R>C AcbMccbMeasurementRecv ModbusGetFloat 265
+<R>X AcbMccbMeasurementRecv ModbusGetFloat 265 R
+<R>C AcbMccbMeasurementRecv ModbusGetUint32 266
+<R>X AcbMccbMeasurementRecv ModbusGetUint32 266 R
+<R>C AcbMccbMeasurementRecv ModbusGetFloat 266
+<R>X AcbMccbMeasurementRecv ModbusGetFloat 266 R
+<R>C AcbMccbMeasurementRecv ModbusGetUint32 267
+<R>X AcbMccbMeasurementRecv ModbusGetUint32 267 R
+<R>C AcbMccbMeasurementRecv ModbusGetFloat 267
+<R>X AcbMccbMeasurementRecv ModbusGetFloat 267 R
+<R>C AcbMccbMeasurementRecv ModbusGetUint32 268
+<R>X AcbMccbMeasurementRecv ModbusGetUint32 268 R
+<R>C AcbMccbMeasurementRecv ModbusGetFloat 268
+<R>X AcbMccbMeasurementRecv ModbusGetFloat 268 R
+<R>C AcbMccbMeasurementRecv ModbusGetUint32 269
+<R>X AcbMccbMeasurementRecv ModbusGetUint32 269 R
+<R>C AcbMccbMeasurementRecv ModbusGetFloat 269
+<R>X AcbMccbMeasurementRecv ModbusGetFloat 269 R
+<R>C AcbMccbMeasurementRecv ModbusGetFloat 271
+<R>X AcbMccbMeasurementRecv ModbusGetFloat 271 R
+<R>C AcbMccbMeasurementRecv ModbusGetFloat 272
+<R>X AcbMccbMeasurementRecv ModbusGetFloat 272 R
+<R>X AcbMccbMeasurementRecv nSendStep 273 W
+<R>X AcbMccbMeasurementRecv nSendStep 276 R
+<R>X AcbMccbMeasurementRecv gDeviceIndex 279 R
+<R>X AcbMccbMeasurementRecv gPols 279 R
+<DEFINE> i C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 287 N DC OV B N ni -
+<DEFINE> i C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 287 N DF OV B N ni -
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 287 21 N ON ni B O
+<R>C AcbMccbMeasurementRecv ModbusGetFloat 289
+<R>X AcbMccbMeasurementRecv ModbusGetFloat 289 R
+<DEFINE> i C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 293 N DC OV B N ni -
+<DEFINE> i C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 293 N DF OV B N ni -
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 293 21 N ON ni B O
+<R>C AcbMccbMeasurementRecv ModbusGetFloat 295
+<R>X AcbMccbMeasurementRecv ModbusGetFloat 295 R
+<R>X AcbMccbMeasurementRecv gDeviceIndex 298 R
+<R>X AcbMccbMeasurementRecv ConnectSetting 298 R
+<DEFINE> i C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 306 N DC OV B N ni -
+<DEFINE> i C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 306 N DF OV B N ni -
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 306 21 N ON ni B O
+<R>C AcbMccbMeasurementRecv ModbusGetFloat 308
+<R>X AcbMccbMeasurementRecv ModbusGetFloat 308 R
+<R>X AcbMccbMeasurementRecv gDeviceIndex 312 R
+<R>X AcbMccbMeasurementRecv ConnectSetting 312 R
+<R>X AcbMccbMeasurementRecv gDeviceIndex 314 R
+<R>X AcbMccbMeasurementRecv gPols 314 R
+<R>X AcbMccbMeasurementRecv gDeviceIndex 325 R
+<R>X AcbMccbMeasurementRecv gPols 325 R
+<DEFINE> i C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 334 N DC OV B N ni -
+<DEFINE> i C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 334 N DF OV B N ni -
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 334 21 N ON ni B O
+<R>C AcbMccbMeasurementRecv ModbusGetFloat 336
+<R>X AcbMccbMeasurementRecv ModbusGetFloat 336 R
+<R>X AcbMccbMeasurementRecv gDeviceIndex 339 R
+<R>X AcbMccbMeasurementRecv ConnectSetting 339 R
+<DEFINE> i C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 347 N DC OV B N ni -
+<DEFINE> i C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 347 N DF OV B N ni -
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 347 21 N ON ni B O
+<R>C AcbMccbMeasurementRecv ModbusGetFloat 349
+<R>X AcbMccbMeasurementRecv ModbusGetFloat 349 R
+<R>X AcbMccbMeasurementRecv nSendStep 377 W
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 377 21 N ON ni B X
+<CTLG> AcbMccbMeasurementRecv 1
+<CTLG> 1 2
+<CTLG> 2 3
+<CTLG> 2 6
+<CTLG> 3 4
+<CTLG> 4 77
+<CTLG> 6 7
+<CTLG> 6 11
+<CTLG> 7 8
+<CTLG> 7 9
+<CTLG> 8 10
+<CTLG> 9 10
+<CTLG> 10 75
+<CTLG> 11 12
+<CTLG> 11 30
+<CTLG> 12 13
+<CTLG> 12 14
+<CTLG> 13 15
+<CTLG> 14 15
+<CTLG> 15 16
+<CTLG> 16 17
+<CTLG> 16 19
+<CTLG> 17 18
+<CTLG> 18 16
+<CTLG> 19 20
+<CTLG> 20 21
+<CTLG> 21 22
+<CTLG> 21 24
+<CTLG> 22 23
+<CTLG> 23 21
+<CTLG> 24 25
+<CTLG> 25 26
+<CTLG> 26 27
+<CTLG> 26 29
+<CTLG> 27 28
+<CTLG> 28 26
+<CTLG> 29 74
+<CTLG> 30 31
+<CTLG> 30 72
+<CTLG> 31 32
+<CTLG> 32 33
+<CTLG> 32 34
+<CTLG> 33 35
+<CTLG> 34 35
+<CTLG> 35 36
+<CTLG> 36 37
+<CTLG> 36 39
+<CTLG> 37 38
+<CTLG> 38 36
+<CTLG> 39 40
+<CTLG> 40 41
+<CTLG> 41 42
+<CTLG> 41 44
+<CTLG> 42 43
+<CTLG> 43 41
+<CTLG> 44 45
+<CTLG> 44 46
+<CTLG> 45 47
+<CTLG> 46 47
+<CTLG> 47 48
+<CTLG> 48 49
+<CTLG> 48 51
+<CTLG> 49 50
+<CTLG> 50 48
+<CTLG> 51 52
+<CTLG> 51 56
+<CTLG> 52 53
+<CTLG> 52 54
+<CTLG> 53 55
+<CTLG> 54 55
+<CTLG> 55 60
+<CTLG> 56 57
+<CTLG> 56 58
+<CTLG> 57 59
+<CTLG> 58 59
+<CTLG> 59 60
+<CTLG> 60 61
+<CTLG> 61 62
+<CTLG> 61 64
+<CTLG> 62 63
+<CTLG> 63 61
+<CTLG> 64 65
+<CTLG> 64 66
+<CTLG> 65 67
+<CTLG> 66 67
+<CTLG> 67 68
+<CTLG> 68 69
+<CTLG> 68 71
+<CTLG> 69 70
+<CTLG> 70 68
+<CTLG> 71 73
+<CTLG> 72 73
+<CTLG> 73 74
+<CTLG> 74 75
+<CTLG> 75 77
+<CTLGN> 209 213 213 218 218 213 221 223 223 227 221 236 238 238 242 246 246 246 246 252 252 252 252 252 259 259 259 259 259 236 276 279 279 279 283 287 287 287 287 293 293 293 293 293 298 298 302 306 306 306 306 312 314 314 318 312 325 325 329 323 334 334 334 334 339 339 343 347 347 347 347 276 379 275 235 380 218 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c
+<S>STNAM  AcbMccbMeasurementRecv
+<S>STCYC  21
+<S>STMCC  0 (21:21)
+<S>STMIF  5
+<S>STSUB  26
+<S>STAKI  47
+<S>STLIN  170
+<S>STXLN  83
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  1
+<S>STKDN  0.01   
+<S>STUNV  0
+<S>STLCT  9
+<S>STPTH  2086
+<S>STPDN  25.13  
+<S>STPBG  3
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  1
+<S>STAV1  6
+<S>STAV2  9
+<S>STAV3  9
+<S>STST1  102
+<S>STST2  73
+<S>STST3  72
+<S>STPAR  0
+<S>STCAL  5
+<S>STFN1  440
+<S>STFN2  236
+
+<DEFINE> pos C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 382 N DC OV B N ni R
+<DEFINE> AcbMccbMeasurementMenu C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 382 N DR OF F I (.,ni) -
+<DEFINE> AcbMccbMeasurementMenu C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 382 N DF OF F I (.,ni) -
+<DEFINE> rect C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 384 N DC OV B N {sLCD_RECT} -
+<DEFINE> rect C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 384 N DF OV B N {sLCD_RECT} -
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 388 64 N DN ni B X
+<DEFINE> y0 C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 390 N DC OV B N ni -
+<DEFINE> y0 C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 390 N DF OV B N ni -
+<DEFINE> i C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 391 N DC OV B N ni -
+<DEFINE> i C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 391 N DF OV B N ni -
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 391 17 N ON ni B O
+<R>C AcbMccbMeasurementMenu GUI_SetColor 395
+<R>X AcbMccbMeasurementMenu GUI_SetColor 395 R
+<R>C AcbMccbMeasurementMenu GUI_SetColor 399
+<R>X AcbMccbMeasurementMenu GUI_SetColor 399 R
+<R>C AcbMccbMeasurementMenu GUI_FillRect 401
+<R>X AcbMccbMeasurementMenu GUI_FillRect 401 R
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 401 91 N DN ni B X
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 401 130 N DN ni B X
+<R>C AcbMccbMeasurementMenu GUI_SetColor 405
+<R>X AcbMccbMeasurementMenu GUI_SetColor 405 R
+<R>C AcbMccbMeasurementMenu GUI_SetBkColor 406
+<R>X AcbMccbMeasurementMenu GUI_SetBkColor 406 R
+<R>C AcbMccbMeasurementMenu LanguageSelect 408
+<R>X AcbMccbMeasurementMenu LanguageSelect 408 R
+<R>C AcbMccbMeasurementMenu GUI_SetColor 412
+<R>X AcbMccbMeasurementMenu GUI_SetColor 412 R
+<R>C AcbMccbMeasurementMenu GUI_SetBkColor 413
+<R>X AcbMccbMeasurementMenu GUI_SetBkColor 413 R
+<R>C AcbMccbMeasurementMenu LanguageSelect 415
+<R>X AcbMccbMeasurementMenu LanguageSelect 415 R
+<R>C AcbMccbMeasurementMenu GUI_DispStringInRect 418
+<R>X AcbMccbMeasurementMenu GUI_DispStringInRect 418 R
+<R>X AcbMccbMeasurementMenu SettingValue 418 R
+<R>X AcbMccbMeasurementMenu _acmeasurement_menu_text 418 R
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 419 49 N DN ni B X
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 420 49 N DN ni B X
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 421 44 N DN ni B X
+<CTLG> AcbMccbMeasurementMenu 1
+<CTLG> 1 2
+<CTLG> 2 3
+<CTLG> 3 4
+<CTLG> 3 13
+<CTLG> 4 5
+<CTLG> 4 6
+<CTLG> 5 7
+<CTLG> 6 7
+<CTLG> 7 8
+<CTLG> 8 9
+<CTLG> 8 10
+<CTLG> 9 11
+<CTLG> 10 11
+<CTLG> 11 12
+<CTLG> 12 3
+<CTLG> 13 15
+<CTLGN> 383 391 391 391 393 393 397 403 403 403 410 391 391 423 423 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c
+<S>STNAM  AcbMccbMeasurementMenu
+<S>STCYC  4
+<S>STMCC  0 (4:4)
+<S>STMIF  2
+<S>STSUB  10
+<S>STAKI  14
+<S>STLIN  39
+<S>STXLN  23
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  3
+<S>STPTH  5
+<S>STPDN  0.22   
+<S>STPBG  1
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  0
+<S>STAV1  6
+<S>STAV2  8
+<S>STAV3  9
+<S>STST1  28
+<S>STST2  22
+<S>STST3  20
+<S>STPAR  1
+<S>STCAL  5
+<S>STFN1  114
+<S>STFN2  71
+
+<DEFINE> AcbMccbValueDispVIP C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 425 N DR OF F I (.,.) -
+<DEFINE> AcbMccbValueDispVIP C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 425 N DF OF F I (.,.) -
+<R>C AcbMccbValueDispVIP printf 427
+<R>X AcbMccbValueDispVIP printf 427 R
+<R>X AcbMccbValueDispVIP gDeviceIndex 427 R
+<R>X AcbMccbValueDispVIP gPols 427 R
+<LIT> "gPols[gDeviceIndex] = %d\n" - - C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 427 18 N SN [26,_c] B X
+<R>X AcbMccbValueDispVIP gDeviceIndex 428 R
+<R>X AcbMccbValueDispVIP gCommStatus 428 R
+<R>X AcbMccbValueDispVIP gDeviceIndex 432 R
+<R>X AcbMccbValueDispVIP gPols 432 R
+<R>C AcbMccbValueDispVIP GUI_SetBkColor 434
+<R>X AcbMccbValueDispVIP GUI_SetBkColor 434 R
+<R>C AcbMccbValueDispVIP GUI_ClearRect 435
+<R>X AcbMccbValueDispVIP GUI_ClearRect 435 R
+<R>C AcbMccbValueDispVIP AcbMccbMeasurementDispVIP 436
+<DEFINE> buf C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 438 N DC OV B N [20,_c] -
+<DEFINE> buf C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 438 N DF OV B N [20,_c] -
+<R>C AcbMccbValueDispVIP GUI_SetColor 439
+<R>X AcbMccbValueDispVIP GUI_SetColor 439 R
+<R>C AcbMccbValueDispVIP GUI_SetFont 440
+<R>X AcbMccbValueDispVIP GUI_SetFont 440 R
+<R>X AcbMccbValueDispVIP GUI_Font20B_ASCII 440 R
+<R>C AcbMccbValueDispVIP GUI_SetBkColor 441
+<R>X AcbMccbValueDispVIP GUI_SetBkColor 441 R
+<DEFINE> rect C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 443 N DC OV B N {sLCD_RECT} -
+<DEFINE> rect C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 443 N DF OV B N {sLCD_RECT} -
+<DEFINE> rectUnit C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 444 N DC OV B N {sLCD_RECT} -
+<DEFINE> rectUnit C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 444 N DF OV B N {sLCD_RECT} -
+<DEFINE> rectAngle C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 445 N DC OV B N {sLCD_RECT} -
+<DEFINE> rectAngle C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 445 N DF OV B N {sLCD_RECT} -
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 447 40 N DN ni B X
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 452 44 N DN ni B X
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 457 45 N DN ni B X
+<DEFINE> x C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 461 N DC OV B N ni -
+<DEFINE> x C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 461 N DF OV B N ni -
+<DEFINE> y C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 462 N DC OV B N ni -
+<DEFINE> y C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 462 N DF OV B N ni -
+<R>X AcbMccbValueDispVIP gDeviceIndex 464 R
+<R>X AcbMccbValueDispVIP gDeviceTypeAll 464 R
+<DEFINE> i C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 466 N DC OV B N ni -
+<DEFINE> i C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 466 N DF OV B N ni -
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 466 19 N ON ni B O
+<DEFINE> value C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 468 N DC OV B N [20,_c] -
+<DEFINE> value C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 468 N DF OV B N [20,_c] -
+<DEFINE> unit C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 469 N DC OV B N [10,_c] -
+<DEFINE> unit C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 469 N DF OV B N [10,_c] -
+<R>C AcbMccbValueDispVIP DispFormat 470
+<R>X AcbMccbValueDispVIP DispFormat 470 R
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 470 23 N ON ni B X
+<LIT> "V" - - C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 470 30 N SN [2,_c] B X
+<R>C AcbMccbValueDispVIP GUI_ClearRect 472
+<R>X AcbMccbValueDispVIP GUI_ClearRect 472 R
+<R>C AcbMccbValueDispVIP GUI_DispStringInRect 473
+<R>X AcbMccbValueDispVIP GUI_DispStringInRect 473 R
+<R>C AcbMccbValueDispVIP GUI_ClearRect 474
+<R>X AcbMccbValueDispVIP GUI_ClearRect 474 R
+<R>C AcbMccbValueDispVIP GUI_DispStringInRect 475
+<R>X AcbMccbValueDispVIP GUI_DispStringInRect 475 R
+<R>C AcbMccbValueDispVIP sprintf 477
+<R>X AcbMccbValueDispVIP sprintf 477 R
+<LIT> "%3.0f" - - C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 477 28 N SN [6,_c] B X
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 477 44 N ON ni B X
+<R>C AcbMccbValueDispVIP GUI_ClearRect 478
+<R>X AcbMccbValueDispVIP GUI_ClearRect 478 R
+<R>C AcbMccbValueDispVIP GUI_DispStringInRect 479
+<R>X AcbMccbValueDispVIP GUI_DispStringInRect 479 R
+<R>C AcbMccbValueDispVIP GUI_SetColor 481
+<R>X AcbMccbValueDispVIP GUI_SetColor 481 R
+<R>C AcbMccbValueDispVIP GUI_DrawPolyLine 482
+<R>X AcbMccbValueDispVIP GUI_DrawPolyLine 482 R
+<R>X AcbMccbValueDispVIP cPtAngle 482 R
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 495 40 N DN ni B X
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 500 44 N DN ni B X
+<R>X AcbMccbValueDispVIP gDeviceIndex 504 R
+<R>X AcbMccbValueDispVIP gDeviceTypeAll 504 R
+<DEFINE> i C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 506 N DC OV B N ni -
+<DEFINE> i C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 506 N DF OV B N ni -
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 506 19 N ON ni B O
+<DEFINE> value C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 508 N DC OV B N [20,_c] -
+<DEFINE> value C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 508 N DF OV B N [20,_c] -
+<DEFINE> unit C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 509 N DC OV B N [10,_c] -
+<DEFINE> unit C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 509 N DF OV B N [10,_c] -
+<R>C AcbMccbValueDispVIP DispFormat 511
+<R>X AcbMccbValueDispVIP DispFormat 511 R
+<R>X AcbMccbValueDispVIP _acPQS_unit 511 R
+<R>C AcbMccbValueDispVIP GUI_ClearRect 513
+<R>X AcbMccbValueDispVIP GUI_ClearRect 513 R
+<R>C AcbMccbValueDispVIP GUI_DispStringInRect 514
+<R>X AcbMccbValueDispVIP GUI_DispStringInRect 514 R
+<R>C AcbMccbValueDispVIP GUI_ClearRect 515
+<R>X AcbMccbValueDispVIP GUI_ClearRect 515 R
+<R>C AcbMccbValueDispVIP GUI_DispStringInRect 516
+<R>X AcbMccbValueDispVIP GUI_DispStringInRect 516 R
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 526 40 N DN ni B X
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 531 44 N DN ni B X
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 536 45 N DN ni B X
+<DEFINE> i C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 543 N DC OV B N ni -
+<DEFINE> i C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 543 N DF OV B N ni -
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 543 17 N ON ni B O
+<R>X AcbMccbValueDispVIP gDeviceIndex 543 R
+<R>X AcbMccbValueDispVIP gPols 543 R
+<DEFINE> value C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 545 N DC OV B N [20,_c] -
+<DEFINE> value C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 545 N DF OV B N [20,_c] -
+<DEFINE> unit C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 546 N DC OV B N [10,_c] -
+<DEFINE> unit C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 546 N DF OV B N [10,_c] -
+<R>C AcbMccbValueDispVIP DispFormat 547
+<R>X AcbMccbValueDispVIP DispFormat 547 R
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 547 23 N DN ni B X
+<LIT> "A" - - C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 547 30 N SN [2,_c] B X
+<R>C AcbMccbValueDispVIP GUI_ClearRect 548
+<R>X AcbMccbValueDispVIP GUI_ClearRect 548 R
+<R>C AcbMccbValueDispVIP GUI_DispStringInRect 549
+<R>X AcbMccbValueDispVIP GUI_DispStringInRect 549 R
+<R>C AcbMccbValueDispVIP GUI_ClearRect 550
+<R>X AcbMccbValueDispVIP GUI_ClearRect 550 R
+<R>C AcbMccbValueDispVIP GUI_DispStringInRect 551
+<R>X AcbMccbValueDispVIP GUI_DispStringInRect 551 R
+<R>C AcbMccbValueDispVIP sprintf 553
+<R>X AcbMccbValueDispVIP sprintf 553 R
+<LIT> "%3.0f" - - C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 553 28 N SN [6,_c] B X
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 553 44 N DN ni B X
+<R>C AcbMccbValueDispVIP GUI_ClearRect 554
+<R>X AcbMccbValueDispVIP GUI_ClearRect 554 R
+<R>C AcbMccbValueDispVIP GUI_DispStringInRect 555
+<R>X AcbMccbValueDispVIP GUI_DispStringInRect 555 R
+<R>C AcbMccbValueDispVIP GUI_DrawPolyLine 557
+<R>X AcbMccbValueDispVIP GUI_DrawPolyLine 557 R
+<R>X AcbMccbValueDispVIP cPtAngle 557 R
+<CTLG> AcbMccbValueDispVIP 1
+<CTLG> 1 2
+<CTLG> 2 3
+<CTLG> 2 5
+<CTLG> 3 28
+<CTLG> 5 6
+<CTLG> 5 7
+<CTLG> 6 7
+<CTLG> 7 8
+<CTLG> 8 9
+<CTLG> 8 14
+<CTLG> 9 10
+<CTLG> 10 11
+<CTLG> 10 13
+<CTLG> 11 12
+<CTLG> 12 10
+<CTLG> 13 14
+<CTLG> 14 15
+<CTLG> 15 16
+<CTLG> 15 21
+<CTLG> 16 17
+<CTLG> 17 18
+<CTLG> 17 20
+<CTLG> 18 19
+<CTLG> 19 17
+<CTLG> 20 21
+<CTLG> 21 22
+<CTLG> 22 23
+<CTLG> 23 24
+<CTLG> 23 26
+<CTLG> 24 25
+<CTLG> 25 23
+<CTLG> 26 28
+<CTLGN> 426 428 428 430 428 432 432 464 464 466 466 466 466 464 504 504 506 506 506 506 504 543 543 543 543 543 567 430 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c
+<S>STNAM  AcbMccbValueDispVIP
+<S>STCYC  8
+<S>STMCC  0 (8:8)
+<S>STMIF  2
+<S>STSUB  31
+<S>STAKI  39
+<S>STLIN  140
+<S>STXLN  95
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  1
+<S>STKDN  0.01   
+<S>STUNV  0
+<S>STLCT  15
+<S>STPTH  72
+<S>STPDN  0.76   
+<S>STPBG  2
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  1
+<S>STAV1  8
+<S>STAV2  9
+<S>STAV3  10
+<S>STST1  111
+<S>STST2  104
+<S>STST3  92
+<S>STPAR  0
+<S>STCAL  10
+<S>STFN1  570
+<S>STFN2  420
+
+<DEFINE> AcbMccbMeasurementDispVIP C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 569 N DR OF F I (.,.) -
+<DEFINE> AcbMccbMeasurementDispVIP C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 569 N DF OF F I (.,.) -
+<R>C AcbMccbMeasurementDispVIP GUI_SetBkColor 571
+<R>X AcbMccbMeasurementDispVIP GUI_SetBkColor 571 R
+<R>C AcbMccbMeasurementDispVIP GUI_SetPenSize 572
+<R>X AcbMccbMeasurementDispVIP GUI_SetPenSize 572 R
+<R>C AcbMccbMeasurementDispVIP GUI_SetColor 573
+<R>X AcbMccbMeasurementDispVIP GUI_SetColor 573 R
+<R>C AcbMccbMeasurementDispVIP GUI_DrawRect 574
+<R>X AcbMccbMeasurementDispVIP GUI_DrawRect 574 R
+<R>X AcbMccbMeasurementDispVIP gDeviceIndex 576 R
+<R>X AcbMccbMeasurementDispVIP gPols 576 R
+<DEFINE> i C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 578 N DC OV B N ni -
+<DEFINE> i C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 578 N DF OV B N ni -
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 578 17 N ON ni B O
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 578 44 N DN ni B X
+<DEFINE> y0 C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 580 N DC OV B N ni -
+<DEFINE> y0 C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 580 N DF OV B N ni -
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 580 51 N DN ni B O
+<R>C AcbMccbMeasurementDispVIP GUI_DrawHLine 581
+<R>X AcbMccbMeasurementDispVIP GUI_DrawHLine 581 R
+<R>C AcbMccbMeasurementDispVIP GUI_DrawVLine 583
+<R>X AcbMccbMeasurementDispVIP GUI_DrawVLine 583 R
+<R>C AcbMccbMeasurementDispVIP GUI_SetFont 585
+<R>X AcbMccbMeasurementDispVIP GUI_SetFont 585 R
+<R>X AcbMccbMeasurementDispVIP GUI_Font20_ASCII 585 R
+<DEFINE> rect C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 587 N DC OV B N {sLCD_RECT} -
+<DEFINE> rect C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 587 N DF OV B N {sLCD_RECT} -
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 589 73 N DN ni B X
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 591 60 N DN ni B X
+<R>X AcbMccbMeasurementDispVIP gDeviceIndex 593 R
+<R>X AcbMccbMeasurementDispVIP gDeviceTypeAll 593 R
+<R>C AcbMccbMeasurementDispVIP GUI_SetColor 595
+<R>X AcbMccbMeasurementDispVIP GUI_SetColor 595 R
+<R>C AcbMccbMeasurementDispVIP GUI_SetColor 599
+<R>X AcbMccbMeasurementDispVIP GUI_SetColor 599 R
+<DEFINE> j C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 601 N DC OV B N ni -
+<DEFINE> j C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 601 N DF OV B N ni -
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 601 16 N ON ni B O
+<R>X AcbMccbMeasurementDispVIP gDeviceIndex 603 R
+<R>X AcbMccbMeasurementDispVIP gPols 603 R
+<R>C AcbMccbMeasurementDispVIP GUI_DispStringInRect 605
+<R>X AcbMccbMeasurementDispVIP GUI_DispStringInRect 605 R
+<R>X AcbMccbMeasurementDispVIP _acmeasurementVI_LNLL_label_text 605 R
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 605 67 N DN ni B X
+<R>C AcbMccbMeasurementDispVIP GUI_DispStringInRect 609
+<R>X AcbMccbMeasurementDispVIP GUI_DispStringInRect 609 R
+<R>X AcbMccbMeasurementDispVIP _acmeasurementVI_LNLL_label_text 609 R
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 609 67 N ON ni B X
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 615 74 N DN ni B X
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 617 60 N DN ni B X
+<R>C AcbMccbMeasurementDispVIP GUI_SetColor 618
+<R>X AcbMccbMeasurementDispVIP GUI_SetColor 618 R
+<DEFINE> j C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 619 N DC OV B N ni -
+<DEFINE> j C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 619 N DF OV B N ni -
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 619 16 N ON ni B O
+<R>X AcbMccbMeasurementDispVIP gDeviceIndex 619 R
+<R>X AcbMccbMeasurementDispVIP gPols 619 R
+<R>C AcbMccbMeasurementDispVIP GUI_DispStringInRect 621
+<R>X AcbMccbMeasurementDispVIP GUI_DispStringInRect 621 R
+<R>X AcbMccbMeasurementDispVIP _acmeasurementVI_A_label_text 621 R
+<CTLG> AcbMccbMeasurementDispVIP 1
+<CTLG> 1 2
+<CTLG> 2 3
+<CTLG> 3 4
+<CTLG> 3 6
+<CTLG> 4 5
+<CTLG> 5 3
+<CTLG> 6 7
+<CTLG> 7 8
+<CTLG> 7 9
+<CTLG> 8 10
+<CTLG> 9 10
+<CTLG> 10 11
+<CTLG> 11 12
+<CTLG> 11 17
+<CTLG> 12 13
+<CTLG> 12 14
+<CTLG> 13 15
+<CTLG> 14 15
+<CTLG> 15 16
+<CTLG> 16 11
+<CTLG> 17 18
+<CTLG> 18 19
+<CTLG> 19 20
+<CTLG> 19 22
+<CTLG> 20 21
+<CTLG> 21 19
+<CTLG> 22 24
+<CTLGN> 570 578 578 578 578 578 593 593 593 597 601 601 603 603 607 601 601 619 619 619 619 619 625 625 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c
+<S>STNAM  AcbMccbMeasurementDispVIP
+<S>STCYC  6
+<S>STMCC  0 (6:6)
+<S>STMIF  2
+<S>STSUB  13
+<S>STAKI  19
+<S>STLIN  54
+<S>STXLN  34
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  5
+<S>STPTH  24
+<S>STPDN  0.71   
+<S>STPBG  1
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  0
+<S>STAV1  8
+<S>STAV2  10
+<S>STAV3  10
+<S>STST1  40
+<S>STST2  33
+<S>STST3  31
+<S>STPAR  0
+<S>STCAL  8
+<S>STFN1  212
+<S>STFN2  128
+
+<DEFINE> AcbMccbValueDispEnergy C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 627 N DR OF F I (.,.) -
+<DEFINE> AcbMccbValueDispEnergy C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 627 N DF OF F I (.,.) -
+<R>X AcbMccbValueDispEnergy gDeviceIndex 629 R
+<R>X AcbMccbValueDispEnergy gCommStatus 629 R
+<R>X AcbMccbValueDispEnergy gDeviceIndex 633 R
+<R>X AcbMccbValueDispEnergy gDeviceTypeAll 633 R
+<R>C AcbMccbValueDispEnergy GUI_SetColor 637
+<R>X AcbMccbValueDispEnergy GUI_SetColor 637 R
+<R>C AcbMccbValueDispEnergy GUI_SetFont 638
+<R>X AcbMccbValueDispEnergy GUI_SetFont 638 R
+<R>X AcbMccbValueDispEnergy GUI_Font20B_ASCII 638 R
+<R>C AcbMccbValueDispEnergy GUI_SetBkColor 639
+<R>X AcbMccbValueDispEnergy GUI_SetBkColor 639 R
+<DEFINE> rect C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 641 N DC OV B N {sLCD_RECT} -
+<DEFINE> rect C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 641 N DF OV B N {sLCD_RECT} -
+<DEFINE> rectUnit C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 642 N DC OV B N {sLCD_RECT} -
+<DEFINE> rectUnit C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 642 N DF OV B N {sLCD_RECT} -
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 645 42 N DN ni B X
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 649 46 N DN ni B X
+<DEFINE> i C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 651 N DC OV B N ni -
+<DEFINE> i C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 651 N DF OV B N ni -
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 651 17 N ON ni B O
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 651 45 N DN ni B X
+<DEFINE> buf C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 653 N DC OV B N [20,_c] -
+<DEFINE> buf C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 653 N DF OV B N [20,_c] -
+<DEFINE> unit C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 654 N DC OV B N [10,_c] -
+<DEFINE> unit C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 654 N DF OV B N [10,_c] -
+<R>C AcbMccbValueDispEnergy DispFormat3 656
+<R>X AcbMccbValueDispEnergy _acmeasurementEnergy_unit 656 R
+<R>C AcbMccbValueDispEnergy GUI_ClearRect 657
+<R>X AcbMccbValueDispEnergy GUI_ClearRect 657 R
+<R>C AcbMccbValueDispEnergy GUI_DispStringInRect 658
+<R>X AcbMccbValueDispEnergy GUI_DispStringInRect 658 R
+<R>C AcbMccbValueDispEnergy GUI_ClearRect 659
+<R>X AcbMccbValueDispEnergy GUI_ClearRect 659 R
+<R>C AcbMccbValueDispEnergy GUI_DispStringInRect 660
+<R>X AcbMccbValueDispEnergy GUI_DispStringInRect 660 R
+<CTLG> AcbMccbValueDispEnergy 1
+<CTLG> 1 2
+<CTLG> 1 4
+<CTLG> 2 14
+<CTLG> 4 5
+<CTLG> 4 7
+<CTLG> 5 14
+<CTLG> 7 8
+<CTLG> 8 9
+<CTLG> 9 10
+<CTLG> 9 12
+<CTLG> 10 11
+<CTLG> 11 9
+<CTLG> 12 14
+<CTLGN> 628 629 631 629 633 635 633 651 651 651 651 651 666 631 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c
+<S>STNAM  AcbMccbValueDispEnergy
+<S>STCYC  4
+<S>STMCC  0 (4:4)
+<S>STMIF  1
+<S>STSUB  8
+<S>STAKI  12
+<S>STLIN  37
+<S>STXLN  25
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  2
+<S>STKDN  0.08   
+<S>STUNV  0
+<S>STLCT  5
+<S>STPTH  8
+<S>STPDN  0.32   
+<S>STPBG  1
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  2
+<S>STAV1  7
+<S>STAV2  8
+<S>STAV3  10
+<S>STST1  32
+<S>STST2  29
+<S>STST3  25
+<S>STPAR  0
+<S>STCAL  6
+<S>STFN1  149
+<S>STFN2  103
+
+<DEFINE> AcbMccbMeasurementDispEnergy C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 668 N DR OF F I (.,.) -
+<DEFINE> AcbMccbMeasurementDispEnergy C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 668 N DF OF F I (.,.) -
+<R>C AcbMccbMeasurementDispEnergy GUI_SetBkColor 670
+<R>X AcbMccbMeasurementDispEnergy GUI_SetBkColor 670 R
+<R>C AcbMccbMeasurementDispEnergy GUI_SetColor 671
+<R>X AcbMccbMeasurementDispEnergy GUI_SetColor 671 R
+<R>C AcbMccbMeasurementDispEnergy GUI_DrawRect 672
+<R>X AcbMccbMeasurementDispEnergy GUI_DrawRect 672 R
+<DEFINE> i C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 674 N DC OV B N ni -
+<DEFINE> i C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 674 N DF OV B N ni -
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 674 17 N ON ni B O
+<DEFINE> y0 C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 676 N DC OV B N ni -
+<DEFINE> y0 C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 676 N DF OV B N ni -
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 676 51 N DN ni B O
+<R>C AcbMccbMeasurementDispEnergy GUI_DrawHLine 677
+<R>X AcbMccbMeasurementDispEnergy GUI_DrawHLine 677 R
+<R>C AcbMccbMeasurementDispEnergy GUI_SetFont 680
+<R>X AcbMccbMeasurementDispEnergy GUI_SetFont 680 R
+<R>X AcbMccbMeasurementDispEnergy GUI_Font20_ASCII 680 R
+<DEFINE> rect C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 682 N DC OV B N {sLCD_RECT} -
+<DEFINE> rect C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 682 N DF OV B N {sLCD_RECT} -
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 686 60 N DN ni B X
+<R>X AcbMccbMeasurementDispEnergy gDeviceIndex 688 R
+<R>X AcbMccbMeasurementDispEnergy gDeviceTypeAll 688 R
+<R>C AcbMccbMeasurementDispEnergy GUI_SetColor 690
+<R>X AcbMccbMeasurementDispEnergy GUI_SetColor 690 R
+<R>C AcbMccbMeasurementDispEnergy GUI_SetColor 694
+<R>X AcbMccbMeasurementDispEnergy GUI_SetColor 694 R
+<DEFINE> j C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 697 N DC OV B N ni -
+<DEFINE> j C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 697 N DF OV B N ni -
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 697 16 N ON ni B O
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 697 44 N DN ni B X
+<R>C AcbMccbMeasurementDispEnergy GUI_DispStringInRect 699
+<R>X AcbMccbMeasurementDispEnergy GUI_DispStringInRect 699 R
+<R>X AcbMccbMeasurementDispEnergy _acmeasurementEnergy_label_text 699 R
+<CTLG> AcbMccbMeasurementDispEnergy 1
+<CTLG> 1 2
+<CTLG> 2 3
+<CTLG> 3 4
+<CTLG> 3 6
+<CTLG> 4 5
+<CTLG> 5 3
+<CTLG> 6 7
+<CTLG> 7 8
+<CTLG> 7 9
+<CTLG> 8 10
+<CTLG> 9 10
+<CTLG> 10 11
+<CTLG> 11 12
+<CTLG> 11 14
+<CTLG> 12 13
+<CTLG> 13 11
+<CTLG> 14 16
+<CTLGN> 669 674 674 674 674 674 688 688 688 692 697 697 697 697 703 703 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c
+<S>STNAM  AcbMccbMeasurementDispEnergy
+<S>STCYC  4
+<S>STMCC  0 (4:4)
+<S>STMIF  1
+<S>STSUB  8
+<S>STAKI  12
+<S>STLIN  33
+<S>STXLN  19
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  4
+<S>STPTH  8
+<S>STPDN  0.42   
+<S>STPBG  1
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  0
+<S>STAV1  8
+<S>STAV2  9
+<S>STAV3  10
+<S>STST1  23
+<S>STST2  19
+<S>STST3  17
+<S>STPAR  0
+<S>STCAL  6
+<S>STFN1  117
+<S>STFN2  69
+
+<DEFINE> AcbMccbValueDispPQ C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 705 N DR OF F I (.,.) -
+<DEFINE> AcbMccbValueDispPQ C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 705 N DF OF F I (.,.) -
+<DEFINE> displayFlag C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 707 N DC OV B N [2,[3,[3,ni]]] S
+<DEFINE> displayFlag C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 707 N DF OV B N [2,[3,[3,ni]]] S
+<R>X AcbMccbValueDispPQ gDeviceIndex 719 R
+<R>X AcbMccbValueDispPQ gCommStatus 719 R
+<R>X AcbMccbValueDispPQ gDeviceIndex 724 R
+<R>X AcbMccbValueDispPQ gPols 724 R
+<R>C AcbMccbValueDispPQ GUI_SetBkColor 726
+<R>X AcbMccbValueDispPQ GUI_SetBkColor 726 R
+<R>C AcbMccbValueDispPQ GUI_ClearRect 727
+<R>X AcbMccbValueDispPQ GUI_ClearRect 727 R
+<R>C AcbMccbValueDispPQ AcbMccbMeasurementDispPQ 728
+<DEFINE> buf C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 731 N DC OV B N [20,_c] -
+<DEFINE> buf C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 731 N DF OV B N [20,_c] -
+<R>C AcbMccbValueDispPQ GUI_SetColor 733
+<R>X AcbMccbValueDispPQ GUI_SetColor 733 R
+<R>C AcbMccbValueDispPQ GUI_SetFont 734
+<R>X AcbMccbValueDispPQ GUI_SetFont 734 R
+<R>X AcbMccbValueDispPQ GUI_Font20B_ASCII 734 R
+<R>C AcbMccbValueDispPQ GUI_SetBkColor 735
+<R>X AcbMccbValueDispPQ GUI_SetBkColor 735 R
+<DEFINE> rect C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 737 N DC OV B N {sLCD_RECT} -
+<DEFINE> rect C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 737 N DF OV B N {sLCD_RECT} -
+<DEFINE> rectUnit C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 738 N DC OV B N {sLCD_RECT} -
+<DEFINE> rectUnit C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 738 N DF OV B N {sLCD_RECT} -
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 741 42 N DN ni B X
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 745 46 N DN ni B X
+<DEFINE> i C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 747 N DC OV B N ni -
+<DEFINE> i C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 747 N DF OV B N ni -
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 747 17 N ON ni B O
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 749 17 N ON ni B X
+<R>C AcbMccbValueDispPQ sprintf 751
+<R>X AcbMccbValueDispPQ sprintf 751 R
+<LIT> "%4.1f" - - C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 751 32 N SN [6,_c] B X
+<R>X AcbMccbValueDispPQ gDeviceIndex 755 R
+<R>X AcbMccbValueDispPQ gDeviceTypeAll 755 R
+<DEFINE> val C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 757 N DC OV B N fs -
+<DEFINE> val C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 757 N DF OV B N fs -
+<R>C AcbMccbValueDispPQ fabs 757
+<R>X AcbMccbValueDispPQ fabs 757 R
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 769 34 N ON ni B X
+<R>C AcbMccbValueDispPQ sprintf 771
+<R>X AcbMccbValueDispPQ sprintf 771 R
+<LIT> "Lag %4.1f" - - C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 771 44 N SN [10,_c] B X
+<R>C AcbMccbValueDispPQ sprintf 775
+<R>X AcbMccbValueDispPQ sprintf 775 R
+<LIT> "Lead %4.1f" - - C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 775 44 N SN [11,_c] B X
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 781 34 N ON ni B X
+<R>C AcbMccbValueDispPQ sprintf 783
+<R>X AcbMccbValueDispPQ sprintf 783 R
+<LIT> "Forward %4.1f" - - C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 783 44 N SN [14,_c] B X
+<R>C AcbMccbValueDispPQ sprintf 787
+<R>X AcbMccbValueDispPQ sprintf 787 R
+<LIT> "Reverse %4.1f" - - C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 787 44 N SN [14,_c] B X
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 793 34 N ON ni B X
+<R>C AcbMccbValueDispPQ sprintf 795
+<R>X AcbMccbValueDispPQ sprintf 795 R
+<LIT> "Lead %4.1f" - - C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 795 44 N SN [11,_c] B X
+<R>C AcbMccbValueDispPQ sprintf 799
+<R>X AcbMccbValueDispPQ sprintf 799 R
+<LIT> "Lag %4.1f" - - C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 799 44 N SN [10,_c] B X
+<R>C AcbMccbValueDispPQ sprintf 804
+<R>X AcbMccbValueDispPQ sprintf 804 R
+<LIT> "%4.1f" - - C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 804 40 N SN [6,_c] B X
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 808 18 N ON ni B X
+<R>X AcbMccbValueDispPQ gDeviceIndex 808 R
+<R>X AcbMccbValueDispPQ gDeviceTypeAll 808 R
+<R>C AcbMccbValueDispPQ GUI_ClearRect 810
+<R>X AcbMccbValueDispPQ GUI_ClearRect 810 R
+<R>C AcbMccbValueDispPQ GUI_DispStringInRect 811
+<R>X AcbMccbValueDispPQ GUI_DispStringInRect 811 R
+<R>C AcbMccbValueDispPQ GUI_ClearRect 812
+<R>X AcbMccbValueDispPQ GUI_ClearRect 812 R
+<R>C AcbMccbValueDispPQ GUI_DispStringInRect 813
+<R>X AcbMccbValueDispPQ GUI_DispStringInRect 813 R
+<R>X AcbMccbValueDispPQ _acmeasurementPQ_unit_text 813 R
+<DEFINE> i C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 820 N DC OV B N ni -
+<DEFINE> i C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 820 N DF OV B N ni -
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 820 17 N ON ni B O
+<DEFINE> j C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 822 N DC OV B N ni -
+<DEFINE> j C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 822 N DF OV B N ni -
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 822 21 N ON ni B O
+<R>X AcbMccbValueDispPQ gDeviceIndex 825 R
+<R>X AcbMccbValueDispPQ gDeviceTypeAll 825 R
+<R>X AcbMccbValueDispPQ PQ_VALUE_X 827 R
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 827 41 N ON ni B X
+<R>X AcbMccbValueDispPQ PQ_VALUE_X 828 R
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 828 41 N DN ni B X
+<R>X AcbMccbValueDispPQ PQ_UNIT_X 829 R
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 829 44 N ON ni B X
+<R>X AcbMccbValueDispPQ PQ_UNIT_X 830 R
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 830 44 N DN ni B X
+<R>C AcbMccbValueDispPQ GUI_ClearRect 831
+<R>X AcbMccbValueDispPQ GUI_ClearRect 831 R
+<R>C AcbMccbValueDispPQ sprintf 832
+<R>X AcbMccbValueDispPQ sprintf 832 R
+<LIT> "%3.0f" - - C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 832 36 N SN [6,_c] B X
+<R>C AcbMccbValueDispPQ GUI_DispStringInRect 833
+<R>X AcbMccbValueDispPQ GUI_DispStringInRect 833 R
+<R>C AcbMccbValueDispPQ GUI_ClearRect 834
+<R>X AcbMccbValueDispPQ GUI_ClearRect 834 R
+<R>C AcbMccbValueDispPQ GUI_DispStringInRect 835
+<R>X AcbMccbValueDispPQ GUI_DispStringInRect 835 R
+<R>X AcbMccbValueDispPQ _acmeasurementPQ_unit_text 835 R
+<CTLG> AcbMccbValueDispPQ 1
+<CTLG> 1 2
+<CTLG> 1 4
+<CTLG> 2 48
+<CTLG> 4 5
+<CTLG> 4 6
+<CTLG> 5 6
+<CTLG> 6 7
+<CTLG> 7 8
+<CTLG> 8 9
+<CTLG> 8 36
+<CTLG> 9 10
+<CTLG> 9 11
+<CTLG> 10 32
+<CTLG> 11 12
+<CTLG> 11 31
+<CTLG> 12 13
+<CTLG> 12 17
+<CTLG> 13 14
+<CTLG> 13 15
+<CTLG> 14 16
+<CTLG> 15 16
+<CTLG> 16 30
+<CTLG> 17 18
+<CTLG> 17 22
+<CTLG> 18 19
+<CTLG> 18 20
+<CTLG> 19 21
+<CTLG> 20 21
+<CTLG> 21 29
+<CTLG> 22 23
+<CTLG> 22 27
+<CTLG> 23 24
+<CTLG> 23 25
+<CTLG> 24 26
+<CTLG> 25 26
+<CTLG> 26 28
+<CTLG> 27 28
+<CTLG> 28 29
+<CTLG> 29 30
+<CTLG> 30 31
+<CTLG> 31 32
+<CTLG> 32 33
+<CTLG> 32 34
+<CTLG> 33 34
+<CTLG> 34 35
+<CTLG> 35 8
+<CTLG> 36 37
+<CTLG> 37 38
+<CTLG> 37 46
+<CTLG> 38 39
+<CTLG> 39 40
+<CTLG> 39 44
+<CTLG> 40 41
+<CTLG> 40 42
+<CTLG> 41 42
+<CTLG> 42 43
+<CTLG> 43 39
+<CTLG> 44 45
+<CTLG> 45 37
+<CTLG> 46 48
+<CTLGN> 706 719 721 719 724 724 747 747 747 749 749 755 767 769 769 773 767 779 781 781 785 779 791 793 793 797 791 802 790 778 755 753 808 808 747 747 820 820 822 822 825 825 822 822 820 820 843 721 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c
+<S>STNAM  AcbMccbValueDispPQ
+<S>STCYC  16
+<S>STMCC  1 (16:17)
+<S>STMIF  7
+<S>STSUB  24
+<S>STAKI  40
+<S>STLIN  136
+<S>STXLN  77
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  1
+<S>STKDN  0.01   
+<S>STUNV  0
+<S>STLCT  8
+<S>STPTH  304
+<S>STPDN  3.95   
+<S>STPBG  2
+<S>STLOP  1
+<S>STM07  1
+<S>STM19  1
+<S>STAV1  8
+<S>STAV2  11
+<S>STAV3  12
+<S>STST1  84
+<S>STST2  64
+<S>STST3  59
+<S>STPAR  0
+<S>STCAL  8
+<S>STFN1  475
+<S>STFN2  270
+
+<DEFINE> AcbMccbMeasurementDispPQ C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 845 N DR OF F I (.,.) -
+<DEFINE> AcbMccbMeasurementDispPQ C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 845 N DF OF F I (.,.) -
+<R>C AcbMccbMeasurementDispPQ GUI_SetColor 847
+<R>X AcbMccbMeasurementDispPQ GUI_SetColor 847 R
+<R>C AcbMccbMeasurementDispPQ GUI_SetBkColor 848
+<R>X AcbMccbMeasurementDispPQ GUI_SetBkColor 848 R
+<R>C AcbMccbMeasurementDispPQ GUI_DrawRect 849
+<R>X AcbMccbMeasurementDispPQ GUI_DrawRect 849 R
+<R>X AcbMccbMeasurementDispPQ gDeviceIndex 851 R
+<R>X AcbMccbMeasurementDispPQ gPols 851 R
+<DEFINE> i C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 853 N DC OV B N ni -
+<DEFINE> i C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 853 N DF OV B N ni -
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 853 17 N ON ni B O
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 853 44 N DN ni B X
+<DEFINE> y0 C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 859 N DC OV B N ni -
+<DEFINE> y0 C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 859 N DF OV B N ni -
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 859 51 N DN ni B O
+<R>C AcbMccbMeasurementDispPQ GUI_DrawHLine 860
+<R>X AcbMccbMeasurementDispPQ GUI_DrawHLine 860 R
+<R>C AcbMccbMeasurementDispPQ GUI_SetColor 863
+<R>X AcbMccbMeasurementDispPQ GUI_SetColor 863 R
+<R>C AcbMccbMeasurementDispPQ GUI_SetFont 864
+<R>X AcbMccbMeasurementDispPQ GUI_SetFont 864 R
+<R>X AcbMccbMeasurementDispPQ GUI_Font20_ASCII 864 R
+<DEFINE> rect C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 866 N DC OV B N {sLCD_RECT} -
+<DEFINE> rect C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 866 N DF OV B N {sLCD_RECT} -
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 870 60 N DN ni B X
+<DEFINE> j C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 872 N DC OV B N ni -
+<DEFINE> j C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 872 N DF OV B N ni -
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 872 17 N ON ni B O
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 872 45 N DN ni B X
+<R>X AcbMccbMeasurementDispPQ gDeviceIndex 874 R
+<R>X AcbMccbMeasurementDispPQ gDeviceTypeAll 874 R
+<R>C AcbMccbMeasurementDispPQ GUI_SetColor 876
+<R>X AcbMccbMeasurementDispPQ GUI_SetColor 876 R
+<R>C AcbMccbMeasurementDispPQ GUI_SetColor 880
+<R>X AcbMccbMeasurementDispPQ GUI_SetColor 880 R
+<R>C AcbMccbMeasurementDispPQ GUI_DispStringInRect 882
+<R>X AcbMccbMeasurementDispPQ GUI_DispStringInRect 882 R
+<R>X AcbMccbMeasurementDispPQ _acmeasurementPQ_label_text 882 R
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 887 72 N DN ni B X
+<R>X AcbMccbMeasurementDispPQ gDeviceIndex 888 R
+<R>X AcbMccbMeasurementDispPQ gDeviceTypeAll 888 R
+<R>C AcbMccbMeasurementDispPQ GUI_SetColor 890
+<R>X AcbMccbMeasurementDispPQ GUI_SetColor 890 R
+<R>C AcbMccbMeasurementDispPQ GUI_SetColor 894
+<R>X AcbMccbMeasurementDispPQ GUI_SetColor 894 R
+<DEFINE> i C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 896 N DC OV B N ni -
+<DEFINE> i C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 896 N DF OV B N ni -
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 896 17 N ON ni B O
+<R>X AcbMccbMeasurementDispPQ PQ_LABEL_X 898 R
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 898 33 N ON ni B X
+<R>X AcbMccbMeasurementDispPQ PQ_LABEL_X 899 R
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 899 33 N DN ni B X
+<DEFINE> pos C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 900 N DC OV B N ni -
+<DEFINE> pos C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 900 N DF OV B N ni -
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 900 19 N ON ni B O
+<R>X AcbMccbMeasurementDispPQ gDeviceIndex 901 R
+<R>X AcbMccbMeasurementDispPQ gPols 901 R
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 903 19 N DN ni B X
+<R>C AcbMccbMeasurementDispPQ GUI_DispStringInRect 905
+<R>X AcbMccbMeasurementDispPQ GUI_DispStringInRect 905 R
+<R>X AcbMccbMeasurementDispPQ _acmeasurementVI_LNLL_label_text 905 R
+<DEFINE> i C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 909 N DC OV B N ni -
+<DEFINE> i C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 909 N DF OV B N ni -
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 909 17 N ON ni B O
+<R>C AcbMccbMeasurementDispPQ GUI_SetColor 914
+<R>X AcbMccbMeasurementDispPQ GUI_SetColor 914 R
+<R>X AcbMccbMeasurementDispPQ PQ_LABEL_X 915 R
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 915 33 N ON ni B X
+<R>X AcbMccbMeasurementDispPQ PQ_LABEL_X 916 R
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 916 33 N DN ni B X
+<R>C AcbMccbMeasurementDispPQ GUI_DispStringInRect 917
+<R>X AcbMccbMeasurementDispPQ GUI_DispStringInRect 917 R
+<R>X AcbMccbMeasurementDispPQ _acmeasurementPQ_I_text 917 R
+<DEFINE> i C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 921 N DC OV B N ni -
+<DEFINE> i C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 921 N DF OV B N ni -
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 921 17 N ON ni B O
+<R>C AcbMccbMeasurementDispPQ GUI_SetColor 926
+<R>X AcbMccbMeasurementDispPQ GUI_SetColor 926 R
+<R>X AcbMccbMeasurementDispPQ PQ_LABEL_X 927 R
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 927 33 N ON ni B X
+<R>X AcbMccbMeasurementDispPQ PQ_LABEL_X 928 R
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 928 33 N DN ni B X
+<R>C AcbMccbMeasurementDispPQ GUI_DispStringInRect 929
+<R>X AcbMccbMeasurementDispPQ GUI_DispStringInRect 929 R
+<R>X AcbMccbMeasurementDispPQ _acmeasurementPQ_I_text 929 R
+<CTLG> AcbMccbMeasurementDispPQ 1
+<CTLG> 1 2
+<CTLG> 2 3
+<CTLG> 3 4
+<CTLG> 3 9
+<CTLG> 4 5
+<CTLG> 4 7
+<CTLG> 5 8
+<CTLG> 7 8
+<CTLG> 8 3
+<CTLG> 9 10
+<CTLG> 10 11
+<CTLG> 11 12
+<CTLG> 11 17
+<CTLG> 12 13
+<CTLG> 12 14
+<CTLG> 13 15
+<CTLG> 14 15
+<CTLG> 15 16
+<CTLG> 16 11
+<CTLG> 17 18
+<CTLG> 18 19
+<CTLG> 18 20
+<CTLG> 19 21
+<CTLG> 20 21
+<CTLG> 21 22
+<CTLG> 22 23
+<CTLG> 22 28
+<CTLG> 23 24
+<CTLG> 24 25
+<CTLG> 24 26
+<CTLG> 25 26
+<CTLG> 26 27
+<CTLG> 27 22
+<CTLG> 28 29
+<CTLG> 29 30
+<CTLG> 30 31
+<CTLG> 30 33
+<CTLG> 31 32
+<CTLG> 32 30
+<CTLG> 33 34
+<CTLG> 34 35
+<CTLG> 35 36
+<CTLG> 35 38
+<CTLG> 36 37
+<CTLG> 37 35
+<CTLG> 38 40
+<CTLGN> 846 853 853 853 855 857 855 853 853 872 872 872 874 874 878 872 872 888 888 888 892 896 896 901 901 901 896 896 909 909 909 909 909 921 921 921 921 921 931 931 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c
+<S>STNAM  AcbMccbMeasurementDispPQ
+<S>STCYC  10
+<S>STMCC  1 (10:11)
+<S>STMIF  2
+<S>STSUB  16
+<S>STAKI  26
+<S>STLIN  84
+<S>STXLN  50
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  1
+<S>STKDN  0.02   
+<S>STUNV  0
+<S>STLCT  8
+<S>STPTH  216
+<S>STPDN  4.32   
+<S>STPBG  2
+<S>STLOP  1
+<S>STM07  1
+<S>STM19  0
+<S>STAV1  8
+<S>STAV2  10
+<S>STAV3  10
+<S>STST1  60
+<S>STST2  49
+<S>STST3  46
+<S>STPAR  0
+<S>STCAL  6
+<S>STFN1  307
+<S>STFN2  183
+
+<DEFINE> AcbMccbMeasurementDispDemand C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 933 N DR OF F I (.,.) -
+<DEFINE> AcbMccbMeasurementDispDemand C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 933 N DF OF F I (.,.) -
+<R>C AcbMccbMeasurementDispDemand GUI_SetColor 935
+<R>X AcbMccbMeasurementDispDemand GUI_SetColor 935 R
+<R>C AcbMccbMeasurementDispDemand GUI_SetBkColor 936
+<R>X AcbMccbMeasurementDispDemand GUI_SetBkColor 936 R
+<R>C AcbMccbMeasurementDispDemand GUI_DrawRect 937
+<R>X AcbMccbMeasurementDispDemand GUI_DrawRect 937 R
+<DEFINE> i C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 939 N DC OV B N ni -
+<DEFINE> i C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 939 N DF OV B N ni -
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 939 17 N ON ni B O
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 939 46 N DN ni B X
+<DEFINE> y0 C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 941 N DC OV B N ni -
+<DEFINE> y0 C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 941 N DF OV B N ni -
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 941 51 N DN ni B O
+<R>C AcbMccbMeasurementDispDemand GUI_DrawHLine 942
+<R>X AcbMccbMeasurementDispDemand GUI_DrawHLine 942 R
+<R>C AcbMccbMeasurementDispDemand GUI_SetColor 945
+<R>X AcbMccbMeasurementDispDemand GUI_SetColor 945 R
+<R>C AcbMccbMeasurementDispDemand GUI_SetFont 946
+<R>X AcbMccbMeasurementDispDemand GUI_SetFont 946 R
+<R>X AcbMccbMeasurementDispDemand GUI_Font20_ASCII 946 R
+<DEFINE> rect C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 948 N DC OV B N {sLCD_RECT} -
+<DEFINE> rect C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 948 N DF OV B N {sLCD_RECT} -
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 952 60 N DN ni B X
+<DEFINE> j C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 954 N DC OV B N ni -
+<DEFINE> j C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 954 N DF OV B N ni -
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 954 17 N ON ni B O
+<R>X AcbMccbMeasurementDispDemand gDeviceIndex 956 R
+<R>X AcbMccbMeasurementDispDemand gDeviceTypeAll 956 R
+<R>C AcbMccbMeasurementDispDemand GUI_SetColor 958
+<R>X AcbMccbMeasurementDispDemand GUI_SetColor 958 R
+<R>C AcbMccbMeasurementDispDemand GUI_DispStringInRect 960
+<R>X AcbMccbMeasurementDispDemand GUI_DispStringInRect 960 R
+<R>X AcbMccbMeasurementDispDemand _acmeasurementDemand_label_text 960 R
+<CTLG> AcbMccbMeasurementDispDemand 1
+<CTLG> 1 2
+<CTLG> 2 3
+<CTLG> 3 4
+<CTLG> 3 6
+<CTLG> 4 5
+<CTLG> 5 3
+<CTLG> 6 7
+<CTLG> 7 8
+<CTLG> 8 9
+<CTLG> 8 13
+<CTLG> 9 10
+<CTLG> 9 11
+<CTLG> 10 11
+<CTLG> 11 12
+<CTLG> 12 8
+<CTLG> 13 15
+<CTLGN> 934 939 939 939 939 939 954 954 954 956 956 954 954 965 965 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c
+<S>STNAM  AcbMccbMeasurementDispDemand
+<S>STCYC  4
+<S>STMCC  1 (4:5)
+<S>STMIF  2
+<S>STSUB  8
+<S>STAKI  12
+<S>STLIN  30
+<S>STXLN  18
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  4
+<S>STPTH  6
+<S>STPDN  0.33   
+<S>STPBG  1
+<S>STLOP  1
+<S>STM07  1
+<S>STM19  0
+<S>STAV1  8
+<S>STAV2  9
+<S>STAV3  11
+<S>STST1  22
+<S>STST2  19
+<S>STST3  17
+<S>STPAR  0
+<S>STCAL  6
+<S>STFN1  117
+<S>STFN2  70
+
+<DEFINE> pos C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 967 N DC OV B N ni R
+<DEFINE> clear C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 967 N DC OV B N ni R
+<DEFINE> AcbMccbMeasurementDisp C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 967 N DR OF F I (.,ni,ni) -
+<DEFINE> AcbMccbMeasurementDisp C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 967 N DF OF F I (.,ni,ni) -
+<R>C AcbMccbMeasurementDisp GUI_SetPenSize 969
+<R>X AcbMccbMeasurementDisp GUI_SetPenSize 969 R
+<R>C AcbMccbMeasurementDisp GUI_SetBkColor 970
+<R>X AcbMccbMeasurementDisp GUI_SetBkColor 970 R
+<R>C AcbMccbMeasurementDisp GUI_SetColor 971
+<R>X AcbMccbMeasurementDisp GUI_SetColor 971 R
+<R>C AcbMccbMeasurementDisp GUI_ClearRect 975
+<R>X AcbMccbMeasurementDisp GUI_ClearRect 975 R
+<R>C AcbMccbMeasurementDisp AcbMccbMeasurementMenu 978
+<R>C AcbMccbMeasurementDisp GUI_SetBkColor 980
+<R>X AcbMccbMeasurementDisp GUI_SetBkColor 980 R
+<R>C AcbMccbMeasurementDisp GUI_ClearRect 981
+<R>X AcbMccbMeasurementDisp GUI_ClearRect 981 R
+<R>C AcbMccbMeasurementDisp AcbMccbMeasurementDispVIP 984
+<R>C AcbMccbMeasurementDisp AcbMccbMeasurementDispEnergy 989
+<R>C AcbMccbMeasurementDisp AcbMccbMeasurementDispPQ 994
+<R>C AcbMccbMeasurementDisp AcbMccbMeasurementDispDemand 999
+<CTLG> AcbMccbMeasurementDisp 1
+<CTLG> 1 2
+<CTLG> 2 3
+<CTLG> 2 4
+<CTLG> 3 4
+<CTLG> 4 5
+<CTLG> 5 6
+<CTLG> 5 7
+<CTLG> 6 17
+<CTLG> 7 8
+<CTLG> 7 9
+<CTLG> 8 16
+<CTLG> 9 10
+<CTLG> 9 11
+<CTLG> 10 15
+<CTLG> 11 12
+<CTLG> 11 13
+<CTLG> 12 14
+<CTLG> 13 14
+<CTLG> 14 15
+<CTLG> 15 16
+<CTLG> 16 17
+<CTLG> 17 19
+<CTLGN> 968 973 973 973 982 982 982 987 987 992 992 997 997 1001 996 991 986 1002 1002 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c
+<S>STNAM  AcbMccbMeasurementDisp
+<S>STCYC  6
+<S>STMCC  0 (6:6)
+<S>STMIF  4
+<S>STSUB  11
+<S>STAKI  17
+<S>STLIN  33
+<S>STXLN  20
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  0
+<S>STPTH  10
+<S>STPDN  0.50   
+<S>STPBG  1
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  0
+<S>STAV1  5
+<S>STAV2  7
+<S>STAV3  7
+<S>STST1  22
+<S>STST2  16
+<S>STST3  16
+<S>STPAR  2
+<S>STCAL  9
+<S>STFN1  79
+<S>STFN2  33
+
+<DEFINE> pos C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 1004 N DC OV B N ni R
+<DEFINE> AcbMccbValueDisp C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 1004 N DR OF F I (.,ni) -
+<DEFINE> AcbMccbValueDisp C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 1004 N DF OF F I (.,ni) -
+<R>C AcbMccbValueDisp AcbMccbValueDispVIP 1008
+<R>C AcbMccbValueDisp AcbMccbValueDispEnergy 1013
+<R>C AcbMccbValueDisp AcbMccbValueDispPQ 1018
+<CTLG> AcbMccbValueDisp 1
+<CTLG> 1 2
+<CTLG> 1 3
+<CTLG> 2 10
+<CTLG> 3 4
+<CTLG> 3 5
+<CTLG> 4 9
+<CTLG> 5 6
+<CTLG> 5 7
+<CTLG> 6 8
+<CTLG> 7 8
+<CTLG> 8 9
+<CTLG> 9 10
+<CTLG> 10 12
+<CTLGN> 1005 1006 1006 1011 1011 1016 1016 1020 1015 1010 1021 1021 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c
+<S>STNAM  AcbMccbValueDisp
+<S>STCYC  4
+<S>STMCC  0 (4:4)
+<S>STMIF  3
+<S>STSUB  3
+<S>STAKI  7
+<S>STLIN  15
+<S>STXLN  9
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  0
+<S>STPTH  4
+<S>STPDN  0.44   
+<S>STPBG  1
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  0
+<S>STAV1  4
+<S>STAV2  7
+<S>STAV3  7
+<S>STST1  10
+<S>STST2  6
+<S>STST3  6
+<S>STPAR  1
+<S>STCAL  3
+<S>STFN1  34
+<S>STFN2  9
+
+<EXTD> AcbMccbMeasurement C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 1034
+<DEFINE> AcbMccbMeasurement C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 1034 N DR OF F X (.,.) -
+<DEFINE> AcbMccbMeasurement C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 1034 N DF OF F X (.,.) -
+<DEFINE> flagBreak C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 1036 N DC OV B N ni -
+<DEFINE> flagBreak C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 1036 N DF OV B N ni -
+<R>X AcbMccbMeasurement nSendStep 1037 W
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 1037 17 N ON ni B X
+<R>X AcbMccbMeasurement nMenuPos 1038 W
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 1038 16 N ON ni B X
+<R>C AcbMccbMeasurement GUI_SetBkColor 1040
+<R>X AcbMccbMeasurement GUI_SetBkColor 1040 R
+<R>C AcbMccbMeasurement GUI_SetFont 1041
+<R>X AcbMccbMeasurement GUI_SetFont 1041 R
+<R>X AcbMccbMeasurement GUI_Font20_ASCII 1041 R
+<R>X AcbMccbMeasurement gDeviceIndex 1043 R
+<R>X AcbMccbMeasurement gCommStatus 1043 R
+<R>X AcbMccbMeasurement gDeviceIndex 1045 R
+<R>X AcbMccbMeasurement gPols 1045 W
+<R>X AcbMccbMeasurement gDeviceIndex 1046 R
+<R>X AcbMccbMeasurement gDeviceTypeAll 1046 W
+<R>C AcbMccbMeasurement AcbMccbMeasurementDisp 1048
+<R>X AcbMccbMeasurement nMenuPos 1048 R
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 1048 38 N DN ni B X
+<R>C AcbMccbMeasurement AcbMccbMeasurementSend 1050
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 1052 12 N DN ni B X
+<DEFINE> key C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 1054 N DC OV B N {ee_key} -
+<DEFINE> key C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 1054 N DF OV B N {ee_key} -
+<R>C AcbMccbMeasurement GetKey 1054
+<R>X AcbMccbMeasurement GetKey 1054 R
+<R>X AcbMccbMeasurement gStatusSendEnd 1058 W
+<R>X AcbMccbMeasurement statusSendStep 1059 W
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 1059 30 N ON ni B X
+<R>X AcbMccbMeasurement nSendStep 1060 W
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 1060 25 N ON ni B X
+<R>C AcbMccbMeasurement AcbMccbMeasurementSend 1061
+<R>C AcbMccbMeasurement Setup 1066
+<R>X AcbMccbMeasurement Setup 1066 R
+<R>C AcbMccbMeasurement GUI_ClearRect 1070
+<R>X AcbMccbMeasurement GUI_ClearRect 1070 R
+<R>C AcbMccbMeasurement AcbMccbMeasurementDisp 1071
+<R>X AcbMccbMeasurement nMenuPos 1071 R
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 1071 46 N DN ni B X
+<R>X AcbMccbMeasurement gDeviceIndex 1072 R
+<R>X AcbMccbMeasurement gCommOldStatus 1072 W
+<LIT> 1 - N C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 1072 45 N DN ni B X
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 1077 27 N ON ni B X
+<R>X AcbMccbMeasurement nMenuPos 1077 R
+<R>X AcbMccbMeasurement nMenuPos 1079 R
+<R>X AcbMccbMeasurement nMenuPos 1079 W
+<R>X AcbMccbMeasurement nMenuPos 1083 W
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 1083 56 N DN ni B X
+<R>C AcbMccbMeasurement AcbMccbMeasurementDisp 1085
+<R>X AcbMccbMeasurement nMenuPos 1085 R
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 1085 46 N ON ni B X
+<R>C AcbMccbMeasurement AcbMccbValueDisp 1086
+<R>X AcbMccbMeasurement nMenuPos 1086 R
+<R>X AcbMccbMeasurement nMenuPos 1087 R
+<R>C AcbMccbMeasurement AcbMccbMeasurementSend 1089
+<R>X AcbMccbMeasurement nSendStep 1090 W
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 1090 29 N ON ni B X
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 1096 54 N DN ni B X
+<R>X AcbMccbMeasurement nMenuPos 1096 R
+<R>X AcbMccbMeasurement nMenuPos 1098 R
+<R>X AcbMccbMeasurement nMenuPos 1098 W
+<R>X AcbMccbMeasurement nMenuPos 1102 W
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 1102 28 N ON ni B X
+<R>C AcbMccbMeasurement AcbMccbMeasurementDisp 1104
+<R>X AcbMccbMeasurement nMenuPos 1104 R
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 1104 46 N ON ni B X
+<R>C AcbMccbMeasurement AcbMccbValueDisp 1105
+<R>X AcbMccbMeasurement nMenuPos 1105 R
+<R>X AcbMccbMeasurement nMenuPos 1106 R
+<R>C AcbMccbMeasurement AcbMccbMeasurementSend 1108
+<R>X AcbMccbMeasurement nSendStep 1109 W
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 1109 29 N ON ni B X
+<R>X AcbMccbMeasurement gStatusSendEnd 1115 R
+<R>C AcbMccbMeasurement StatusRecv 1117
+<R>X AcbMccbMeasurement StatusRecv 1117 R
+<R>C AcbMccbMeasurement AcbMccbMeasurementSend 1118
+<R>C AcbMccbMeasurement AcbMccbMeasurementRecv 1122
+<R>C AcbMccbMeasurement AcbMccbValueDisp 1123
+<R>X AcbMccbMeasurement nMenuPos 1123 R
+<R>C AcbMccbMeasurement printf 1124
+<R>X AcbMccbMeasurement printf 1124 R
+<R>X AcbMccbMeasurement nMenuPos 1124 R
+<R>X AcbMccbMeasurement nSendStep 1124 R
+<LIT> "nMenuPos=%d, nSendStep=%d\n" - - C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 1124 28 N SN [27,_c] B X
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 1125 31 N ON ni B X
+<R>X AcbMccbMeasurement nSendStep 1125 R
+<R>C AcbMccbMeasurement AcbMccbMeasurementSend 1127
+<R>X AcbMccbMeasurement g_bRecvAllDone 1131 W
+<R>X AcbMccbMeasurement nSendStep 1132 W
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 1132 31 N ON ni B X
+<R>X AcbMccbMeasurement statusSendStep 1133 W
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 1133 36 N ON ni B X
+<R>X AcbMccbMeasurement gStatusSendEnd 1134 W
+<R>X AcbMccbMeasurement gStatusSendEnd 1141 R
+<R>X AcbMccbMeasurement nSendStep 1143 R
+<R>X AcbMccbMeasurement nSendStep 1143 W
+<R>C AcbMccbMeasurement printf 1145
+<R>X AcbMccbMeasurement printf 1145 R
+<R>X AcbMccbMeasurement gStatusSendEnd 1145 R
+<R>X AcbMccbMeasurement statusSendStep 1145 R
+<R>X AcbMccbMeasurement nSendStep 1145 R
+<LIT> "COMM Error!!! gStatusSendEnd=%d, statusSendStep=%d, nSendStep=%d\n" - - C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 1145 26 N SN [66,_c] B X
+<R>C AcbMccbMeasurement StatusRecvErrorProcess 1146
+<R>X AcbMccbMeasurement StatusRecvErrorProcess 1146 R
+<R>X AcbMccbMeasurement nSendStep 1148 W
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 1148 29 N ON ni B X
+<R>X AcbMccbMeasurement nSendStep 1152 R
+<R>C AcbMccbMeasurement AcbMccbMeasurementSend 1154
+<R>X AcbMccbMeasurement g_bRecvAllDone 1158 W
+<R>C AcbMccbMeasurement printf 1159
+<R>X AcbMccbMeasurement printf 1159 R
+<LIT> "All done!!!\n" - - C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 1159 34 N SN [13,_c] B X
+<R>X AcbMccbMeasurement gStatusSendEnd 1160 W
+<R>X AcbMccbMeasurement statusSendStep 1161 W
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 1161 38 N ON ni B X
+<R>X AcbMccbMeasurement nSendStep 1162 W
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 1162 33 N ON ni B X
+<R>X AcbMccbMeasurement gDeviceIndex 1174 R
+<R>X AcbMccbMeasurement gPols 1174 W
+<R>X AcbMccbMeasurement gDeviceIndex 1175 R
+<R>X AcbMccbMeasurement gDeviceTypeAll 1175 W
+<R>C AcbMccbMeasurement AcbMccbMeasurementDisp 1176
+<R>X AcbMccbMeasurement nMenuPos 1176 R
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 1176 46 N DN ni B X
+<CTLG> AcbMccbMeasurement 1
+<CTLG> 1 2
+<CTLG> 2 3
+<CTLG> 2 4
+<CTLG> 3 4
+<CTLG> 4 5
+<CTLG> 5 6
+<CTLG> 5 64
+<CTLG> 6 7
+<CTLG> 6 8
+<CTLG> 7 60
+<CTLG> 8 9
+<CTLG> 8 12
+<CTLG> 9 10
+<CTLG> 9 11
+<CTLG> 10 11
+<CTLG> 11 59
+<CTLG> 12 13
+<CTLG> 12 20
+<CTLG> 13 14
+<CTLG> 13 15
+<CTLG> 14 16
+<CTLG> 15 16
+<CTLG> 16 17
+<CTLG> 17 18
+<CTLG> 17 19
+<CTLG> 18 19
+<CTLG> 19 58
+<CTLG> 20 21
+<CTLG> 20 28
+<CTLG> 21 22
+<CTLG> 21 23
+<CTLG> 22 24
+<CTLG> 23 24
+<CTLG> 24 25
+<CTLG> 25 26
+<CTLG> 25 27
+<CTLG> 26 27
+<CTLG> 27 57
+<CTLG> 28 29
+<CTLG> 28 37
+<CTLG> 29 30
+<CTLG> 29 31
+<CTLG> 30 36
+<CTLG> 31 32
+<CTLG> 32 33
+<CTLG> 32 34
+<CTLG> 33 35
+<CTLG> 34 35
+<CTLG> 35 36
+<CTLG> 36 56
+<CTLG> 37 38
+<CTLG> 37 48
+<CTLG> 38 39
+<CTLG> 38 40
+<CTLG> 39 40
+<CTLG> 40 41
+<CTLG> 41 42
+<CTLG> 41 43
+<CTLG> 42 47
+<CTLG> 43 44
+<CTLG> 43 45
+<CTLG> 44 46
+<CTLG> 45 46
+<CTLG> 46 47
+<CTLG> 47 55
+<CTLG> 48 49
+<CTLG> 48 50
+<CTLG> 49 54
+<CTLG> 50 51
+<CTLG> 50 52
+<CTLG> 51 53
+<CTLG> 52 53
+<CTLG> 53 54
+<CTLG> 54 55
+<CTLG> 55 56
+<CTLG> 56 57
+<CTLG> 57 58
+<CTLG> 58 59
+<CTLG> 59 60
+<CTLG> 60 61
+<CTLG> 60 63
+<CTLG> 61 64
+<CTLG> 63 5
+<CTLG> 64 66
+<CTLGN> 1035 1043 1043 1043 1052 1052 1056 1056 1064 1066 1066 1064 1075 1077 1077 1081 1087 1087 1087 1075 1094 1096 1096 1100 1106 1106 1106 1094 1113 1115 1115 1125 1125 1125 1129 1120 1113 1139 1141 1141 1146 1146 1146 1152 1152 1156 1150 1139 1167 1167 1172 1172 1178 1171 1166 1138 1112 1093 1074 1063 1179 1181 1179 1052 1184 1184 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c
+<S>STNAM  AcbMccbMeasurement
+<S>STCYC  22
+<S>STMCC  0 (22:22)
+<S>STMIF  9
+<S>STSUB  26
+<S>STAKI  48
+<S>STLIN  148
+<S>STXLN  89
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  1
+<S>STKDN  0.01   
+<S>STUNV  0
+<S>STLCT  2
+<S>STPTH  94
+<S>STPDN  1.06   
+<S>STPBG  2
+<S>STLOP  0
+<S>STM07  3
+<S>STM19  0
+<S>STAV1  4
+<S>STAV2  6
+<S>STAV3  6
+<S>STST1  103
+<S>STST2  75
+<S>STST3  73
+<S>STPAR  0
+<S>STCAL  12
+<S>STFN1  336
+<S>STFN2  157
+
+<DEFINE> P C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 50 N DI OV F I [5,fs] S
+<DEFINE> Energy C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 51 N DI OV F I [5,ff] S
+<DEFINE> Angle C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 54 N DI OV F I [2,[4,fs]] S
+<DEFINE> VI C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 49 N DI OV F I [2,[4,fs]] S
+<DEFINE> nPfDisplay C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 56 N DI OV F I us S
+<DEFINE> PQ1 C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 52 N DI OV F I [2,fs] S
+<DEFINE> PQ2 C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 53 N DI OV F I [3,[3,fs]] S
+<DEFINE> gLocalPols C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c 57 N DI OV F I ni S
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c
+<S>STNAM  C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c
+<S>STNTB  NON-TOKEN BASED STATISTICS...
+<S>STSCT  25
+<S>STECT  29
+<S>STFNC  18
+<S>STFCO  209
+<S>STTKB  TOKEN BASED STATISTICS...
+<S>STVAR  271
+<S>STOPT  45
+<S>STOPN  415
+<S>STTOT  6365
+<S>STZIP  3086
+<S>STHAL  3856
+<S>STSHN  14768
+<S>STDIF  25.48  
+<S>STEFF  1434767
+<S>STVOL  56302
+<S>STDEV  239.13 
+<S>STBUG  13
+<S>STTPP  1189
+<S>STTLN  1001
+<S>STM20  2138
+<S>STM21  4224
+<S>STM22  505
+<S>STM28  73
+<S>STM33  65
+<S>STBCS  BASIC COCOMO STATISTICS...
+<S>STBMO  2.878  
+<S>STBMS  3.642  
+<S>STBME  4.431  
+<S>STTDO  3.736  
+<S>STTDS  3.930  
+<S>STTDE  4.026  
+<S>STCOM  COMMENT BASED STATISTICS...
+<S>STCDN  0.085  
+

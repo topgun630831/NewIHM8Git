@@ -1,0 +1,1703 @@
+<RDEF> I Includes
+<R>I C:/CodeInspection/DisplayUnit/Src/usbd_conf.c C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h 50
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h 149
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cm4.h 183
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cm4.h C:/CodeInspection/DisplayUnit/qac/lib/stdint.h 44
+<R>I C:/CodeInspection/DisplayUnit/qac/lib/stdint.h C:/CodeInspection/DisplayUnit/qac/lib/ycheck.h 10
+<R>I C:/CodeInspection/DisplayUnit/qac/lib/stdint.h C:/CodeInspection/DisplayUnit/qac/lib/yvals.h 11
+<R>I C:/CodeInspection/DisplayUnit/qac/lib/yvals.h C:/CodeInspection/DisplayUnit/qac/lib/DLib_Defaults.h 42
+<R>I C:/CodeInspection/DisplayUnit/qac/lib/DLib_Defaults.h C:/CodeInspection/DisplayUnit/qac/lib/DLib_Product.h 50
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cm4.h C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cmInstr.h 210
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cmInstr.h C:/CodeInspection/DisplayUnit/qac/lib/cmsis_iar.h 65
+<R>I C:/CodeInspection/DisplayUnit/qac/lib/cmsis_iar.h C:/CodeInspection/DisplayUnit/qac/lib/intrinsics.h 22
+<R>I C:/CodeInspection/DisplayUnit/qac/lib/intrinsics.h C:/CodeInspection/DisplayUnit/qac/lib/yvals.h 14
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cm4.h C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cmFunc.h 211
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cmFunc.h C:/CodeInspection/DisplayUnit/qac/lib/cmsis_iar.h 65
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cm4.h C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cmSimd.h 212
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cmSimd.h C:/CodeInspection/DisplayUnit/qac/lib/cmsis_iar.h 69
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h 184
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h C:/CodeInspection/DisplayUnit/qac/lib/stdint.h 185
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h 250
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h 46
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Inc/main.h 43
+<R>I C:/CodeInspection/DisplayUnit/Inc/main.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI.h 55
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_ConfDefaults.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_ConfDefaults.h C:/CodeInspection/DisplayUnit/STemWin/Target/GUIConf.h 60
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_Type.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_Type.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/LCD.h 60
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/LCD.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_ConfDefaults.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/LCD.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/Global.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_Type.h C:/CodeInspection/DisplayUnit/STemWin/Target/GUIConf.h 61
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_Version.h 58
+<R>I C:/CodeInspection/DisplayUnit/Inc/main.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h 56
+<R>I C:/CodeInspection/DisplayUnit/Inc/main.h C:/PRQA/QAC-8.1.2-R/include/ansi/time.h 57
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h 244
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h 46
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h 47
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h C:/PRQA/QAC-8.1.2-R/include/ansi/stdio.h 48
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h 49
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h 248
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h 230
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h 252
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h 656
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h 256
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_crc.h 268
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_crc.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h 292
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h 313
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h 314
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_sram.h 296
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_sram.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_fsmc.h 47
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_fsmc.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h 320
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c_ex.h 473
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h 336
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h 290
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc.h 344
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc_ex.h 634
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc_ex.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h 360
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h 364
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h 1289
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h 368
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h 388
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h 49
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 49
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h 121
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 49
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_hcd.h 392
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_hcd.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h 49
+<R>I C:/CodeInspection/DisplayUnit/Src/usbd_conf.c C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h 51
+<R>I C:/CodeInspection/DisplayUnit/Src/usbd_conf.c C:/CodeInspection/DisplayUnit/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h 52
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h C:/CodeInspection/DisplayUnit/Inc/usbd_conf.h 37
+<R>I C:/CodeInspection/DisplayUnit/Inc/usbd_conf.h C:/PRQA/QAC-8.1.2-R/include/ansi/stdio.h 56
+<R>I C:/CodeInspection/DisplayUnit/Inc/usbd_conf.h C:/PRQA/QAC-8.1.2-R/include/ansi/stdlib.h 57
+<R>I C:/CodeInspection/DisplayUnit/Inc/usbd_conf.h C:/PRQA/QAC-8.1.2-R/include/ansi/string.h 58
+<R>I C:/CodeInspection/DisplayUnit/Inc/usbd_conf.h C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h 59
+<R>I C:/CodeInspection/DisplayUnit/Inc/usbd_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h 60
+<R>I C:/CodeInspection/DisplayUnit/Src/usbd_conf.c C:/CodeInspection/DisplayUnit/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h 53
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h C:/CodeInspection/DisplayUnit/Inc/usbd_conf.h 37
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h 38
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h 39
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h 37
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h 38
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h 40
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h 37
+<EXTN> hpcd_USB_OTG_FS C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 55
+<EXTT> hpcd_USB_OTG_FS C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 55
+<DEFINE> hpcd_USB_OTG_FS C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 55 N DC OV F X {sPCD_HandleTypeDef} S
+<DEFINE> file C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 56 N DC OV P N p_c R
+<DEFINE> line C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 56 N DC OV P N ni R
+<DEFINE> _Error_Handler C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 56 N DR OF F X (.,p_c,ni) -
+<EXTN> SystemClock_Config C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 59
+<DEFINE> SystemClock_Config C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 59 N DC OF F X (.,.) -
+<EXTD> HAL_PCD_MspInit C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 74
+<DEFINE> pcdHandle C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 74 N DC OV B N p{sPCD_HandleTypeDef} R
+<DEFINE> HAL_PCD_MspInit C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 74 N DR OF F X (.,p{sPCD_HandleTypeDef}) -
+<DEFINE> HAL_PCD_MspInit C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 74 N DF OF F X (.,p{sPCD_HandleTypeDef}) -
+<DEFINE> GPIO_InitStruct C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 76 N DC OV B N {sGPIO_InitTypeDef} -
+<DEFINE> GPIO_InitStruct C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 76 N DF OV B N {sGPIO_InitTypeDef} -
+<RDEF> C Calls
+<R>C HAL_PCD_MspInit HAL_GPIO_Init 98
+<RDEF> X Refers-to
+<R>X HAL_PCD_MspInit HAL_GPIO_Init 98 R
+<DEFINE> tmpreg C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 101 N DC OV B N ^ui -
+<DEFINE> tmpreg C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 101 N DF OV B N ^ui -
+<R>C HAL_PCD_MspInit HAL_NVIC_SetPriority 104
+<R>X HAL_PCD_MspInit HAL_NVIC_SetPriority 104 R
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 104 39 N ON ni B X
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 104 42 N ON ni B X
+<R>C HAL_PCD_MspInit HAL_NVIC_EnableIRQ 105
+<R>X HAL_PCD_MspInit HAL_NVIC_EnableIRQ 105 R
+<CTLG> HAL_PCD_MspInit 1
+<CTLG> 1 2
+<CTLG> 1 11
+<CTLG> 2 3
+<CTLG> 3 4
+<CTLG> 4 5
+<CTLG> 5 6
+<CTLG> 6 7
+<CTLG> 7 5
+<CTLG> 7 8
+<CTLG> 8 9
+<CTLG> 9 3
+<CTLG> 9 10
+<CTLG> 10 11
+<CTLG> 11 13
+<CTLGN> 75 77 101 101 101 101 101 101 101 101 77 110 110 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/Src/usbd_conf.c
+<S>STNAM  HAL_PCD_MspInit
+<S>STCYC  4
+<S>STMCC  0 (4:4)
+<S>STMIF  3
+<S>STSUB  3
+<S>STAKI  7
+<S>STLIN  34
+<S>STXLN  10
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  2
+<S>STPTH  4
+<S>STPDN  0.40   
+<S>STPBG  1
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  0
+<S>STAV1  3
+<S>STAV2  4
+<S>STAV3  4
+<S>STST1  20
+<S>STST2  17
+<S>STST3  15
+<S>STPAR  1
+<S>STCAL  3
+<S>STFN1  42
+<S>STFN2  31
+
+<EXTD> HAL_PCD_MspDeInit C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 112
+<DEFINE> pcdHandle C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 112 N DC OV B N p{sPCD_HandleTypeDef} R
+<DEFINE> HAL_PCD_MspDeInit C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 112 N DR OF F X (.,p{sPCD_HandleTypeDef}) -
+<DEFINE> HAL_PCD_MspDeInit C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 112 N DF OF F X (.,p{sPCD_HandleTypeDef}) -
+<R>C HAL_PCD_MspDeInit HAL_GPIO_DeInit 127
+<R>X HAL_PCD_MspDeInit HAL_GPIO_DeInit 127 R
+<R>C HAL_PCD_MspDeInit HAL_NVIC_DisableIRQ 131
+<R>X HAL_PCD_MspDeInit HAL_NVIC_DisableIRQ 131 R
+<CTLG> HAL_PCD_MspDeInit 1
+<CTLG> 1 2
+<CTLG> 1 3
+<CTLG> 2 3
+<CTLG> 3 5
+<CTLGN> 113 114 114 137 137 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/Src/usbd_conf.c
+<S>STNAM  HAL_PCD_MspDeInit
+<S>STCYC  2
+<S>STMCC  0 (2:2)
+<S>STMIF  1
+<S>STSUB  2
+<S>STAKI  4
+<S>STLIN  23
+<S>STXLN  4
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  0
+<S>STPTH  2
+<S>STPDN  0.50   
+<S>STPBG  0
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  0
+<S>STAV1  6
+<S>STAV2  7
+<S>STAV3  7
+<S>STST1  5
+<S>STST2  4
+<S>STST3  4
+<S>STPAR  1
+<S>STCAL  2
+<S>STFN1  20
+<S>STFN2  10
+
+<EXTD> HAL_PCD_SetupStageCallback C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 144
+<DEFINE> hpcd C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 144 N DC OV B N p{sPCD_HandleTypeDef} R
+<DEFINE> HAL_PCD_SetupStageCallback C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 144 N DR OF F X (.,p{sPCD_HandleTypeDef}) -
+<DEFINE> HAL_PCD_SetupStageCallback C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 144 N DF OF F X (.,p{sPCD_HandleTypeDef}) -
+<R>C HAL_PCD_SetupStageCallback USBD_LL_SetupStage 146
+<R>X HAL_PCD_SetupStageCallback USBD_LL_SetupStage 146 R
+<CTLG> HAL_PCD_SetupStageCallback 1
+<CTLG> 1 2
+<CTLG> 2 4
+<CTLGN> 145 147 147 147 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/Src/usbd_conf.c
+<S>STNAM  HAL_PCD_SetupStageCallback
+<S>STCYC  1
+<S>STMCC  0 (1:1)
+<S>STMIF  0
+<S>STSUB  1
+<S>STAKI  2
+<S>STLIN  1
+<S>STXLN  1
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  0
+<S>STPTH  1
+<S>STPDN  1.00   
+<S>STPBG  0
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  0
+<S>STAV1  21
+<S>STAV2  21
+<S>STAV3  21
+<S>STST1  1
+<S>STST2  1
+<S>STST3  1
+<S>STPAR  1
+<S>STCAL  1
+<S>STFN1  14
+<S>STFN2  7
+
+<EXTD> HAL_PCD_DataOutStageCallback C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 155
+<DEFINE> hpcd C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 155 N DC OV B N p{sPCD_HandleTypeDef} R
+<DEFINE> epnum C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 155 N DC OV B N uc R
+<DEFINE> HAL_PCD_DataOutStageCallback C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 155 N DR OF F X (.,p{sPCD_HandleTypeDef},uc) -
+<DEFINE> HAL_PCD_DataOutStageCallback C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 155 N DF OF F X (.,p{sPCD_HandleTypeDef},uc) -
+<R>C HAL_PCD_DataOutStageCallback USBD_LL_DataOutStage 157
+<R>X HAL_PCD_DataOutStageCallback USBD_LL_DataOutStage 157 R
+<CTLG> HAL_PCD_DataOutStageCallback 1
+<CTLG> 1 2
+<CTLG> 2 4
+<CTLGN> 156 158 158 158 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/Src/usbd_conf.c
+<S>STNAM  HAL_PCD_DataOutStageCallback
+<S>STCYC  1
+<S>STMCC  0 (1:1)
+<S>STMIF  0
+<S>STSUB  1
+<S>STAKI  2
+<S>STLIN  1
+<S>STXLN  1
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  0
+<S>STPTH  1
+<S>STPDN  1.00   
+<S>STPBG  0
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  0
+<S>STAV1  24
+<S>STAV2  24
+<S>STAV3  24
+<S>STST1  1
+<S>STST2  1
+<S>STST3  1
+<S>STPAR  2
+<S>STCAL  1
+<S>STFN1  15
+<S>STFN2  9
+
+<EXTD> HAL_PCD_DataInStageCallback C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 166
+<DEFINE> hpcd C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 166 N DC OV B N p{sPCD_HandleTypeDef} R
+<DEFINE> epnum C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 166 N DC OV B N uc R
+<DEFINE> HAL_PCD_DataInStageCallback C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 166 N DR OF F X (.,p{sPCD_HandleTypeDef},uc) -
+<DEFINE> HAL_PCD_DataInStageCallback C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 166 N DF OF F X (.,p{sPCD_HandleTypeDef},uc) -
+<R>C HAL_PCD_DataInStageCallback USBD_LL_DataInStage 168
+<R>X HAL_PCD_DataInStageCallback USBD_LL_DataInStage 168 R
+<CTLG> HAL_PCD_DataInStageCallback 1
+<CTLG> 1 2
+<CTLG> 2 4
+<CTLGN> 167 169 169 169 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/Src/usbd_conf.c
+<S>STNAM  HAL_PCD_DataInStageCallback
+<S>STCYC  1
+<S>STMCC  0 (1:1)
+<S>STMIF  0
+<S>STSUB  1
+<S>STAKI  2
+<S>STLIN  1
+<S>STXLN  1
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  0
+<S>STPTH  1
+<S>STPDN  1.00   
+<S>STPBG  0
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  0
+<S>STAV1  24
+<S>STAV2  24
+<S>STAV3  24
+<S>STST1  1
+<S>STST2  1
+<S>STST3  1
+<S>STPAR  2
+<S>STCAL  1
+<S>STFN1  15
+<S>STFN2  9
+
+<EXTD> HAL_PCD_SOFCallback C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 176
+<DEFINE> hpcd C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 176 N DC OV B N p{sPCD_HandleTypeDef} R
+<DEFINE> HAL_PCD_SOFCallback C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 176 N DR OF F X (.,p{sPCD_HandleTypeDef}) -
+<DEFINE> HAL_PCD_SOFCallback C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 176 N DF OF F X (.,p{sPCD_HandleTypeDef}) -
+<R>C HAL_PCD_SOFCallback USBD_LL_SOF 178
+<R>X HAL_PCD_SOFCallback USBD_LL_SOF 178 R
+<CTLG> HAL_PCD_SOFCallback 1
+<CTLG> 1 2
+<CTLG> 2 4
+<CTLGN> 177 179 179 179 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/Src/usbd_conf.c
+<S>STNAM  HAL_PCD_SOFCallback
+<S>STCYC  1
+<S>STMCC  0 (1:1)
+<S>STMIF  0
+<S>STSUB  1
+<S>STAKI  2
+<S>STLIN  1
+<S>STXLN  1
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  0
+<S>STPTH  1
+<S>STPDN  1.00   
+<S>STPBG  0
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  0
+<S>STAV1  13
+<S>STAV2  13
+<S>STAV3  13
+<S>STST1  1
+<S>STST2  1
+<S>STST3  1
+<S>STPAR  1
+<S>STCAL  1
+<S>STFN1  9
+<S>STFN2  4
+
+<EXTD> HAL_PCD_ResetCallback C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 186
+<DEFINE> hpcd C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 186 N DC OV B N p{sPCD_HandleTypeDef} R
+<DEFINE> HAL_PCD_ResetCallback C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 186 N DR OF F X (.,p{sPCD_HandleTypeDef}) -
+<DEFINE> HAL_PCD_ResetCallback C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 186 N DF OF F X (.,p{sPCD_HandleTypeDef}) -
+<DEFINE> speed C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 188 N DC OV B N {eUSBD_SpeedTypeDef} -
+<DEFINE> speed C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 188 N DF OV B N {eUSBD_SpeedTypeDef} -
+<R>C HAL_PCD_ResetCallback USBD_LL_SetSpeed 204
+<R>X HAL_PCD_ResetCallback USBD_LL_SetSpeed 204 R
+<R>C HAL_PCD_ResetCallback USBD_LL_Reset 207
+<R>X HAL_PCD_ResetCallback USBD_LL_Reset 207 R
+<CTLG> HAL_PCD_ResetCallback 1
+<CTLG> 1 2
+<CTLG> 1 4
+<CTLG> 1 6
+<CTLG> 2 3
+<CTLG> 3 9
+<CTLG> 4 5
+<CTLG> 5 9
+<CTLG> 6 7
+<CTLG> 7 9
+<CTLG> 9 10
+<CTLG> 10 12
+<CTLGN> 187 191 195 195 198 198 202 202 191 208 208 208 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/Src/usbd_conf.c
+<S>STNAM  HAL_PCD_ResetCallback
+<S>STCYC  3
+<S>STMCC  0 (3:3)
+<S>STMIF  1
+<S>STSUB  2
+<S>STAKI  5
+<S>STLIN  20
+<S>STXLN  13
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  1
+<S>STPTH  3
+<S>STPDN  0.23   
+<S>STPBG  0
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  0
+<S>STAV1  4
+<S>STAV2  6
+<S>STAV3  7
+<S>STST1  14
+<S>STST2  10
+<S>STST3  9
+<S>STPAR  1
+<S>STCAL  2
+<S>STFN1  44
+<S>STFN2  23
+
+<EXTD> HAL_PCD_SuspendCallback C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 216
+<DEFINE> hpcd C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 216 N DC OV B N p{sPCD_HandleTypeDef} R
+<DEFINE> HAL_PCD_SuspendCallback C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 216 N DR OF F X (.,p{sPCD_HandleTypeDef}) -
+<DEFINE> HAL_PCD_SuspendCallback C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 216 N DF OF F X (.,p{sPCD_HandleTypeDef}) -
+<R>C HAL_PCD_SuspendCallback USBD_LL_Suspend 219
+<R>X HAL_PCD_SuspendCallback USBD_LL_Suspend 219 R
+<CTLG> HAL_PCD_SuspendCallback 1
+<CTLG> 1 2
+<CTLG> 2 3
+<CTLG> 2 4
+<CTLG> 3 4
+<CTLG> 4 6
+<CTLGN> 217 223 223 223 229 229 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/Src/usbd_conf.c
+<S>STNAM  HAL_PCD_SuspendCallback
+<S>STCYC  2
+<S>STMCC  0 (2:2)
+<S>STMIF  1
+<S>STSUB  1
+<S>STAKI  3
+<S>STLIN  11
+<S>STXLN  4
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  0
+<S>STPTH  2
+<S>STPDN  0.50   
+<S>STPBG  0
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  0
+<S>STAV1  9
+<S>STAV2  11
+<S>STAV3  11
+<S>STST1  5
+<S>STST2  4
+<S>STST3  4
+<S>STPAR  1
+<S>STCAL  1
+<S>STFN1  31
+<S>STFN2  15
+
+<EXTD> HAL_PCD_ResumeCallback C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 237
+<DEFINE> hpcd C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 237 N DC OV B N p{sPCD_HandleTypeDef} R
+<DEFINE> HAL_PCD_ResumeCallback C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 237 N DR OF F X (.,p{sPCD_HandleTypeDef}) -
+<DEFINE> HAL_PCD_ResumeCallback C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 237 N DF OF F X (.,p{sPCD_HandleTypeDef}) -
+<R>C HAL_PCD_ResumeCallback USBD_LL_Resume 241
+<R>X HAL_PCD_ResumeCallback USBD_LL_Resume 241 R
+<CTLG> HAL_PCD_ResumeCallback 1
+<CTLG> 1 2
+<CTLG> 2 4
+<CTLGN> 238 243 243 243 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/Src/usbd_conf.c
+<S>STNAM  HAL_PCD_ResumeCallback
+<S>STCYC  1
+<S>STMCC  0 (1:1)
+<S>STMIF  0
+<S>STSUB  1
+<S>STAKI  2
+<S>STLIN  4
+<S>STXLN  1
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  0
+<S>STPTH  1
+<S>STPDN  1.00   
+<S>STPBG  0
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  0
+<S>STAV1  13
+<S>STAV2  13
+<S>STAV3  13
+<S>STST1  1
+<S>STST2  1
+<S>STST3  1
+<S>STPAR  1
+<S>STCAL  1
+<S>STFN1  9
+<S>STFN2  4
+
+<EXTD> HAL_PCD_ISOOUTIncompleteCallback C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 251
+<DEFINE> hpcd C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 251 N DC OV B N p{sPCD_HandleTypeDef} R
+<DEFINE> epnum C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 251 N DC OV B N uc R
+<DEFINE> HAL_PCD_ISOOUTIncompleteCallback C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 251 N DR OF F X (.,p{sPCD_HandleTypeDef},uc) -
+<DEFINE> HAL_PCD_ISOOUTIncompleteCallback C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 251 N DF OF F X (.,p{sPCD_HandleTypeDef},uc) -
+<R>C HAL_PCD_ISOOUTIncompleteCallback USBD_LL_IsoOUTIncomplete 253
+<R>X HAL_PCD_ISOOUTIncompleteCallback USBD_LL_IsoOUTIncomplete 253 R
+<CTLG> HAL_PCD_ISOOUTIncompleteCallback 1
+<CTLG> 1 2
+<CTLG> 2 4
+<CTLGN> 252 254 254 254 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/Src/usbd_conf.c
+<S>STNAM  HAL_PCD_ISOOUTIncompleteCallback
+<S>STCYC  1
+<S>STMCC  0 (1:1)
+<S>STMIF  0
+<S>STSUB  1
+<S>STAKI  2
+<S>STLIN  1
+<S>STXLN  1
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  0
+<S>STPTH  1
+<S>STPDN  1.00   
+<S>STPBG  0
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  0
+<S>STAV1  15
+<S>STAV2  15
+<S>STAV3  15
+<S>STST1  1
+<S>STST2  1
+<S>STST3  1
+<S>STPAR  2
+<S>STCAL  1
+<S>STFN1  10
+<S>STFN2  5
+
+<EXTD> HAL_PCD_ISOINIncompleteCallback C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 262
+<DEFINE> hpcd C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 262 N DC OV B N p{sPCD_HandleTypeDef} R
+<DEFINE> epnum C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 262 N DC OV B N uc R
+<DEFINE> HAL_PCD_ISOINIncompleteCallback C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 262 N DR OF F X (.,p{sPCD_HandleTypeDef},uc) -
+<DEFINE> HAL_PCD_ISOINIncompleteCallback C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 262 N DF OF F X (.,p{sPCD_HandleTypeDef},uc) -
+<R>C HAL_PCD_ISOINIncompleteCallback USBD_LL_IsoINIncomplete 264
+<R>X HAL_PCD_ISOINIncompleteCallback USBD_LL_IsoINIncomplete 264 R
+<CTLG> HAL_PCD_ISOINIncompleteCallback 1
+<CTLG> 1 2
+<CTLG> 2 4
+<CTLGN> 263 265 265 265 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/Src/usbd_conf.c
+<S>STNAM  HAL_PCD_ISOINIncompleteCallback
+<S>STCYC  1
+<S>STMCC  0 (1:1)
+<S>STMIF  0
+<S>STSUB  1
+<S>STAKI  2
+<S>STLIN  1
+<S>STXLN  1
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  0
+<S>STPTH  1
+<S>STPDN  1.00   
+<S>STPBG  0
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  0
+<S>STAV1  15
+<S>STAV2  15
+<S>STAV3  15
+<S>STST1  1
+<S>STST2  1
+<S>STST3  1
+<S>STPAR  2
+<S>STCAL  1
+<S>STFN1  10
+<S>STFN2  5
+
+<EXTD> HAL_PCD_ConnectCallback C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 272
+<DEFINE> hpcd C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 272 N DC OV B N p{sPCD_HandleTypeDef} R
+<DEFINE> HAL_PCD_ConnectCallback C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 272 N DR OF F X (.,p{sPCD_HandleTypeDef}) -
+<DEFINE> HAL_PCD_ConnectCallback C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 272 N DF OF F X (.,p{sPCD_HandleTypeDef}) -
+<R>C HAL_PCD_ConnectCallback USBD_LL_DevConnected 274
+<R>X HAL_PCD_ConnectCallback USBD_LL_DevConnected 274 R
+<CTLG> HAL_PCD_ConnectCallback 1
+<CTLG> 1 2
+<CTLG> 2 4
+<CTLGN> 273 275 275 275 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/Src/usbd_conf.c
+<S>STNAM  HAL_PCD_ConnectCallback
+<S>STCYC  1
+<S>STMCC  0 (1:1)
+<S>STMIF  0
+<S>STSUB  1
+<S>STAKI  2
+<S>STLIN  1
+<S>STXLN  1
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  0
+<S>STPTH  1
+<S>STPDN  1.00   
+<S>STPBG  0
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  0
+<S>STAV1  13
+<S>STAV2  13
+<S>STAV3  13
+<S>STST1  1
+<S>STST2  1
+<S>STST3  1
+<S>STPAR  1
+<S>STCAL  1
+<S>STFN1  9
+<S>STFN2  4
+
+<EXTD> HAL_PCD_DisconnectCallback C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 282
+<DEFINE> hpcd C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 282 N DC OV B N p{sPCD_HandleTypeDef} R
+<DEFINE> HAL_PCD_DisconnectCallback C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 282 N DR OF F X (.,p{sPCD_HandleTypeDef}) -
+<DEFINE> HAL_PCD_DisconnectCallback C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 282 N DF OF F X (.,p{sPCD_HandleTypeDef}) -
+<R>C HAL_PCD_DisconnectCallback USBD_LL_DevDisconnected 284
+<R>X HAL_PCD_DisconnectCallback USBD_LL_DevDisconnected 284 R
+<CTLG> HAL_PCD_DisconnectCallback 1
+<CTLG> 1 2
+<CTLG> 2 4
+<CTLGN> 283 285 285 285 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/Src/usbd_conf.c
+<S>STNAM  HAL_PCD_DisconnectCallback
+<S>STCYC  1
+<S>STMCC  0 (1:1)
+<S>STMIF  0
+<S>STSUB  1
+<S>STAKI  2
+<S>STLIN  1
+<S>STXLN  1
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  0
+<S>STPTH  1
+<S>STPDN  1.00   
+<S>STPBG  0
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  0
+<S>STAV1  13
+<S>STAV2  13
+<S>STAV3  13
+<S>STST1  1
+<S>STST2  1
+<S>STST3  1
+<S>STPAR  1
+<S>STCAL  1
+<S>STFN1  9
+<S>STFN2  4
+
+<EXTD> USBD_LL_Init C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 295
+<DEFINE> pdev C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 295 N DC OV B N p{s_USBD_HandleTypeDef} R
+<DEFINE> USBD_LL_Init C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 295 N DR OF F X ({eUSBD_StatusTypeDef},p{s_USBD_HandleTypeDef}) -
+<DEFINE> USBD_LL_Init C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 295 N DF OF F X ({eUSBD_StatusTypeDef},p{s_USBD_HandleTypeDef}) -
+<R>X USBD_LL_Init hpcd_USB_OTG_FS 300 W
+<R>X USBD_LL_Init hpcd_USB_OTG_FS 301 R
+<R>X USBD_LL_Init hpcd_USB_OTG_FS 301 W
+<R>X USBD_LL_Init hpcd_USB_OTG_FS 303 W
+<R>X USBD_LL_Init hpcd_USB_OTG_FS 304 W
+<LIT> 4 - P C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 304 40 N DN ni B X
+<R>X USBD_LL_Init hpcd_USB_OTG_FS 305 W
+<R>X USBD_LL_Init hpcd_USB_OTG_FS 306 W
+<R>X USBD_LL_Init hpcd_USB_OTG_FS 307 W
+<R>X USBD_LL_Init hpcd_USB_OTG_FS 308 W
+<R>X USBD_LL_Init hpcd_USB_OTG_FS 309 W
+<R>X USBD_LL_Init hpcd_USB_OTG_FS 310 W
+<R>X USBD_LL_Init hpcd_USB_OTG_FS 311 W
+<R>X USBD_LL_Init hpcd_USB_OTG_FS 312 W
+<R>X USBD_LL_Init hpcd_USB_OTG_FS 313 W
+<R>C USBD_LL_Init HAL_PCD_Init 314
+<R>X USBD_LL_Init HAL_PCD_Init 314 R
+<R>X USBD_LL_Init hpcd_USB_OTG_FS 314 R
+<R>X USBD_LL_Init hpcd_USB_OTG_FS 314 W
+<R>C USBD_LL_Init _Error_Handler 316
+<R>X USBD_LL_Init _Error_Handler 316 R
+<R>C USBD_LL_Init HAL_PCDEx_SetRxFiFo 319
+<R>X USBD_LL_Init HAL_PCDEx_SetRxFiFo 319 R
+<R>X USBD_LL_Init hpcd_USB_OTG_FS 319 R
+<R>X USBD_LL_Init hpcd_USB_OTG_FS 319 W
+<LIT> 0x80 - P C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 319 41 N HN ni B X
+<R>C USBD_LL_Init HAL_PCDEx_SetTxFiFo 320
+<R>X USBD_LL_Init HAL_PCDEx_SetTxFiFo 320 R
+<R>X USBD_LL_Init hpcd_USB_OTG_FS 320 R
+<R>X USBD_LL_Init hpcd_USB_OTG_FS 320 W
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 320 41 N ON ni B X
+<LIT> 0x40 - P C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 320 44 N HN ni B X
+<R>C USBD_LL_Init HAL_PCDEx_SetTxFiFo 321
+<R>X USBD_LL_Init HAL_PCDEx_SetTxFiFo 321 R
+<R>X USBD_LL_Init hpcd_USB_OTG_FS 321 R
+<R>X USBD_LL_Init hpcd_USB_OTG_FS 321 W
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 321 41 N DN ni B X
+<LIT> 0x80 - P C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 321 44 N HN ni B X
+<CTLG> USBD_LL_Init 1
+<CTLG> 1 2
+<CTLG> 1 6
+<CTLG> 2 3
+<CTLG> 3 4
+<CTLG> 3 5
+<CTLG> 4 5
+<CTLG> 5 6
+<CTLG> 6 8
+<CTLGN> 296 298 314 314 314 298 323 323 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/Src/usbd_conf.c
+<S>STNAM  USBD_LL_Init
+<S>STCYC  3
+<S>STMCC  0 (3:3)
+<S>STMIF  2
+<S>STSUB  5
+<S>STAKI  8
+<S>STLIN  27
+<S>STXLN  20
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  0
+<S>STPTH  3
+<S>STPDN  0.15   
+<S>STPBG  0
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  1
+<S>STAV1  7
+<S>STAV2  7
+<S>STAV3  7
+<S>STST1  22
+<S>STST2  20
+<S>STST3  20
+<S>STPAR  1
+<S>STCAL  4
+<S>STFN1  91
+<S>STFN2  68
+
+<EXTD> USBD_LL_DeInit C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 331
+<DEFINE> pdev C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 331 N DC OV B N p{s_USBD_HandleTypeDef} R
+<DEFINE> USBD_LL_DeInit C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 331 N DR OF F X ({eUSBD_StatusTypeDef},p{s_USBD_HandleTypeDef}) -
+<DEFINE> USBD_LL_DeInit C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 331 N DF OF F X ({eUSBD_StatusTypeDef},p{s_USBD_HandleTypeDef}) -
+<DEFINE> hal_status C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 333 N DC OV B N {eHAL_StatusTypeDef} -
+<DEFINE> hal_status C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 333 N DF OV B N {eHAL_StatusTypeDef} -
+<DEFINE> usb_status C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 334 N DC OV B N {eUSBD_StatusTypeDef} -
+<DEFINE> usb_status C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 334 N DF OV B N {eUSBD_StatusTypeDef} -
+<R>C USBD_LL_DeInit HAL_PCD_DeInit 336
+<R>X USBD_LL_DeInit HAL_PCD_DeInit 336 R
+<CTLG> USBD_LL_DeInit 1
+<CTLG> 1 2
+<CTLG> 2 3
+<CTLG> 2 5
+<CTLG> 2 7
+<CTLG> 2 9
+<CTLG> 2 11
+<CTLG> 3 4
+<CTLG> 4 14
+<CTLG> 5 6
+<CTLG> 6 14
+<CTLG> 7 8
+<CTLG> 8 14
+<CTLG> 9 10
+<CTLG> 10 14
+<CTLG> 11 12
+<CTLG> 12 14
+<CTLG> 14 16
+<CTLGN> 332 338 338 341 341 344 344 347 347 350 350 353 353 338 355 355 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/Src/usbd_conf.c
+<S>STNAM  USBD_LL_DeInit
+<S>STCYC  5
+<S>STMCC  0 (5:5)
+<S>STMIF  1
+<S>STSUB  1
+<S>STAKI  6
+<S>STLIN  23
+<S>STXLN  20
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  2
+<S>STPTH  5
+<S>STPDN  0.25   
+<S>STPBG  1
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  1
+<S>STAV1  3
+<S>STAV2  4
+<S>STAV3  5
+<S>STST1  21
+<S>STST2  15
+<S>STST3  13
+<S>STPAR  1
+<S>STCAL  1
+<S>STFN1  48
+<S>STFN2  26
+
+<EXTD> USBD_LL_Start C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 363
+<DEFINE> pdev C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 363 N DC OV B N p{s_USBD_HandleTypeDef} R
+<DEFINE> USBD_LL_Start C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 363 N DR OF F X ({eUSBD_StatusTypeDef},p{s_USBD_HandleTypeDef}) -
+<DEFINE> USBD_LL_Start C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 363 N DF OF F X ({eUSBD_StatusTypeDef},p{s_USBD_HandleTypeDef}) -
+<DEFINE> hal_status C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 365 N DC OV B N {eHAL_StatusTypeDef} -
+<DEFINE> hal_status C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 365 N DF OV B N {eHAL_StatusTypeDef} -
+<DEFINE> usb_status C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 366 N DC OV B N {eUSBD_StatusTypeDef} -
+<DEFINE> usb_status C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 366 N DF OV B N {eUSBD_StatusTypeDef} -
+<R>C USBD_LL_Start HAL_PCD_Start 368
+<R>X USBD_LL_Start HAL_PCD_Start 368 R
+<CTLG> USBD_LL_Start 1
+<CTLG> 1 2
+<CTLG> 2 3
+<CTLG> 2 5
+<CTLG> 2 7
+<CTLG> 2 9
+<CTLG> 2 11
+<CTLG> 3 4
+<CTLG> 4 14
+<CTLG> 5 6
+<CTLG> 6 14
+<CTLG> 7 8
+<CTLG> 8 14
+<CTLG> 9 10
+<CTLG> 10 14
+<CTLG> 11 12
+<CTLG> 12 14
+<CTLG> 14 16
+<CTLGN> 364 370 370 373 373 376 376 379 379 382 382 385 385 370 387 387 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/Src/usbd_conf.c
+<S>STNAM  USBD_LL_Start
+<S>STCYC  5
+<S>STMCC  0 (5:5)
+<S>STMIF  1
+<S>STSUB  1
+<S>STAKI  6
+<S>STLIN  23
+<S>STXLN  20
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  2
+<S>STPTH  5
+<S>STPDN  0.25   
+<S>STPBG  1
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  1
+<S>STAV1  3
+<S>STAV2  4
+<S>STAV3  5
+<S>STST1  21
+<S>STST2  15
+<S>STST3  13
+<S>STPAR  1
+<S>STCAL  1
+<S>STFN1  48
+<S>STFN2  26
+
+<EXTD> USBD_LL_Stop C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 395
+<DEFINE> pdev C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 395 N DC OV B N p{s_USBD_HandleTypeDef} R
+<DEFINE> USBD_LL_Stop C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 395 N DR OF F X ({eUSBD_StatusTypeDef},p{s_USBD_HandleTypeDef}) -
+<DEFINE> USBD_LL_Stop C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 395 N DF OF F X ({eUSBD_StatusTypeDef},p{s_USBD_HandleTypeDef}) -
+<DEFINE> hal_status C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 397 N DC OV B N {eHAL_StatusTypeDef} -
+<DEFINE> hal_status C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 397 N DF OV B N {eHAL_StatusTypeDef} -
+<DEFINE> usb_status C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 398 N DC OV B N {eUSBD_StatusTypeDef} -
+<DEFINE> usb_status C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 398 N DF OV B N {eUSBD_StatusTypeDef} -
+<R>C USBD_LL_Stop HAL_PCD_Stop 400
+<R>X USBD_LL_Stop HAL_PCD_Stop 400 R
+<CTLG> USBD_LL_Stop 1
+<CTLG> 1 2
+<CTLG> 2 3
+<CTLG> 2 5
+<CTLG> 2 7
+<CTLG> 2 9
+<CTLG> 2 11
+<CTLG> 3 4
+<CTLG> 4 14
+<CTLG> 5 6
+<CTLG> 6 14
+<CTLG> 7 8
+<CTLG> 8 14
+<CTLG> 9 10
+<CTLG> 10 14
+<CTLG> 11 12
+<CTLG> 12 14
+<CTLG> 14 16
+<CTLGN> 396 402 402 405 405 408 408 411 411 414 414 417 417 402 419 419 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/Src/usbd_conf.c
+<S>STNAM  USBD_LL_Stop
+<S>STCYC  5
+<S>STMCC  0 (5:5)
+<S>STMIF  1
+<S>STSUB  1
+<S>STAKI  6
+<S>STLIN  23
+<S>STXLN  20
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  2
+<S>STPTH  5
+<S>STPDN  0.25   
+<S>STPBG  1
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  1
+<S>STAV1  3
+<S>STAV2  4
+<S>STAV3  5
+<S>STST1  21
+<S>STST2  15
+<S>STST3  13
+<S>STPAR  1
+<S>STCAL  1
+<S>STFN1  48
+<S>STFN2  26
+
+<EXTD> USBD_LL_OpenEP C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 430
+<DEFINE> pdev C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 430 N DC OV B N p{s_USBD_HandleTypeDef} R
+<DEFINE> ep_addr C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 431 N DC OV B N uc R
+<DEFINE> ep_type C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 432 N DC OV B N uc R
+<DEFINE> ep_mps C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 433 N DC OV B N us R
+<DEFINE> USBD_LL_OpenEP C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 430 N DR OF F X ({eUSBD_StatusTypeDef},p{s_USBD_HandleTypeDef},uc,uc,us) -
+<DEFINE> USBD_LL_OpenEP C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 430 N DF OF F X ({eUSBD_StatusTypeDef},p{s_USBD_HandleTypeDef},uc,uc,us) -
+<DEFINE> hal_status C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 435 N DC OV B N {eHAL_StatusTypeDef} -
+<DEFINE> hal_status C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 435 N DF OV B N {eHAL_StatusTypeDef} -
+<DEFINE> usb_status C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 436 N DC OV B N {eUSBD_StatusTypeDef} -
+<DEFINE> usb_status C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 436 N DF OV B N {eUSBD_StatusTypeDef} -
+<R>C USBD_LL_OpenEP HAL_PCD_EP_Open 441
+<R>X USBD_LL_OpenEP HAL_PCD_EP_Open 441 R
+<CTLG> USBD_LL_OpenEP 1
+<CTLG> 1 2
+<CTLG> 2 3
+<CTLG> 2 5
+<CTLG> 2 7
+<CTLG> 2 9
+<CTLG> 2 11
+<CTLG> 3 4
+<CTLG> 4 14
+<CTLG> 5 6
+<CTLG> 6 14
+<CTLG> 7 8
+<CTLG> 8 14
+<CTLG> 9 10
+<CTLG> 10 14
+<CTLG> 11 12
+<CTLG> 12 14
+<CTLG> 14 16
+<CTLGN> 434 444 444 447 447 450 450 453 453 456 456 459 459 444 461 461 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/Src/usbd_conf.c
+<S>STNAM  USBD_LL_OpenEP
+<S>STCYC  5
+<S>STMCC  0 (5:5)
+<S>STMIF  1
+<S>STSUB  1
+<S>STAKI  6
+<S>STLIN  27
+<S>STXLN  23
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  2
+<S>STPTH  5
+<S>STPDN  0.22   
+<S>STPBG  1
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  1
+<S>STAV1  3
+<S>STAV2  5
+<S>STAV3  6
+<S>STST1  21
+<S>STST2  15
+<S>STST3  13
+<S>STPAR  4
+<S>STCAL  1
+<S>STFN1  51
+<S>STFN2  29
+
+<EXTD> USBD_LL_CloseEP C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 470
+<DEFINE> pdev C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 470 N DC OV B N p{s_USBD_HandleTypeDef} R
+<DEFINE> ep_addr C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 470 N DC OV B N uc R
+<DEFINE> USBD_LL_CloseEP C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 470 N DR OF F X ({eUSBD_StatusTypeDef},p{s_USBD_HandleTypeDef},uc) -
+<DEFINE> USBD_LL_CloseEP C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 470 N DF OF F X ({eUSBD_StatusTypeDef},p{s_USBD_HandleTypeDef},uc) -
+<DEFINE> hal_status C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 472 N DC OV B N {eHAL_StatusTypeDef} -
+<DEFINE> hal_status C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 472 N DF OV B N {eHAL_StatusTypeDef} -
+<DEFINE> usb_status C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 473 N DC OV B N {eUSBD_StatusTypeDef} -
+<DEFINE> usb_status C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 473 N DF OV B N {eUSBD_StatusTypeDef} -
+<R>C USBD_LL_CloseEP HAL_PCD_EP_Close 475
+<R>X USBD_LL_CloseEP HAL_PCD_EP_Close 475 R
+<CTLG> USBD_LL_CloseEP 1
+<CTLG> 1 2
+<CTLG> 2 3
+<CTLG> 2 5
+<CTLG> 2 7
+<CTLG> 2 9
+<CTLG> 2 11
+<CTLG> 3 4
+<CTLG> 4 14
+<CTLG> 5 6
+<CTLG> 6 14
+<CTLG> 7 8
+<CTLG> 8 14
+<CTLG> 9 10
+<CTLG> 10 14
+<CTLG> 11 12
+<CTLG> 12 14
+<CTLG> 14 16
+<CTLGN> 471 477 477 480 480 483 483 486 486 489 489 492 492 477 494 494 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/Src/usbd_conf.c
+<S>STNAM  USBD_LL_CloseEP
+<S>STCYC  5
+<S>STMCC  0 (5:5)
+<S>STMIF  1
+<S>STSUB  1
+<S>STAKI  6
+<S>STLIN  23
+<S>STXLN  20
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  2
+<S>STPTH  5
+<S>STPDN  0.25   
+<S>STPBG  1
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  1
+<S>STAV1  3
+<S>STAV2  5
+<S>STAV3  5
+<S>STST1  21
+<S>STST2  15
+<S>STST3  13
+<S>STPAR  2
+<S>STCAL  1
+<S>STFN1  49
+<S>STFN2  27
+
+<EXTD> USBD_LL_FlushEP C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 503
+<DEFINE> pdev C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 503 N DC OV B N p{s_USBD_HandleTypeDef} R
+<DEFINE> ep_addr C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 503 N DC OV B N uc R
+<DEFINE> USBD_LL_FlushEP C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 503 N DR OF F X ({eUSBD_StatusTypeDef},p{s_USBD_HandleTypeDef},uc) -
+<DEFINE> USBD_LL_FlushEP C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 503 N DF OF F X ({eUSBD_StatusTypeDef},p{s_USBD_HandleTypeDef},uc) -
+<DEFINE> hal_status C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 505 N DC OV B N {eHAL_StatusTypeDef} -
+<DEFINE> hal_status C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 505 N DF OV B N {eHAL_StatusTypeDef} -
+<DEFINE> usb_status C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 506 N DC OV B N {eUSBD_StatusTypeDef} -
+<DEFINE> usb_status C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 506 N DF OV B N {eUSBD_StatusTypeDef} -
+<R>C USBD_LL_FlushEP HAL_PCD_EP_Flush 508
+<R>X USBD_LL_FlushEP HAL_PCD_EP_Flush 508 R
+<CTLG> USBD_LL_FlushEP 1
+<CTLG> 1 2
+<CTLG> 2 3
+<CTLG> 2 5
+<CTLG> 2 7
+<CTLG> 2 9
+<CTLG> 2 11
+<CTLG> 3 4
+<CTLG> 4 14
+<CTLG> 5 6
+<CTLG> 6 14
+<CTLG> 7 8
+<CTLG> 8 14
+<CTLG> 9 10
+<CTLG> 10 14
+<CTLG> 11 12
+<CTLG> 12 14
+<CTLG> 14 16
+<CTLGN> 504 510 510 513 513 516 516 519 519 522 522 525 525 510 527 527 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/Src/usbd_conf.c
+<S>STNAM  USBD_LL_FlushEP
+<S>STCYC  5
+<S>STMCC  0 (5:5)
+<S>STMIF  1
+<S>STSUB  1
+<S>STAKI  6
+<S>STLIN  23
+<S>STXLN  20
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  2
+<S>STPTH  5
+<S>STPDN  0.25   
+<S>STPBG  1
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  1
+<S>STAV1  3
+<S>STAV2  5
+<S>STAV3  5
+<S>STST1  21
+<S>STST2  15
+<S>STST3  13
+<S>STPAR  2
+<S>STCAL  1
+<S>STFN1  49
+<S>STFN2  27
+
+<EXTD> USBD_LL_StallEP C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 536
+<DEFINE> pdev C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 536 N DC OV B N p{s_USBD_HandleTypeDef} R
+<DEFINE> ep_addr C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 536 N DC OV B N uc R
+<DEFINE> USBD_LL_StallEP C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 536 N DR OF F X ({eUSBD_StatusTypeDef},p{s_USBD_HandleTypeDef},uc) -
+<DEFINE> USBD_LL_StallEP C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 536 N DF OF F X ({eUSBD_StatusTypeDef},p{s_USBD_HandleTypeDef},uc) -
+<DEFINE> hal_status C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 538 N DC OV B N {eHAL_StatusTypeDef} -
+<DEFINE> hal_status C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 538 N DF OV B N {eHAL_StatusTypeDef} -
+<DEFINE> usb_status C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 539 N DC OV B N {eUSBD_StatusTypeDef} -
+<DEFINE> usb_status C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 539 N DF OV B N {eUSBD_StatusTypeDef} -
+<R>C USBD_LL_StallEP HAL_PCD_EP_SetStall 541
+<R>X USBD_LL_StallEP HAL_PCD_EP_SetStall 541 R
+<CTLG> USBD_LL_StallEP 1
+<CTLG> 1 2
+<CTLG> 2 3
+<CTLG> 2 5
+<CTLG> 2 7
+<CTLG> 2 9
+<CTLG> 2 11
+<CTLG> 3 4
+<CTLG> 4 14
+<CTLG> 5 6
+<CTLG> 6 14
+<CTLG> 7 8
+<CTLG> 8 14
+<CTLG> 9 10
+<CTLG> 10 14
+<CTLG> 11 12
+<CTLG> 12 14
+<CTLG> 14 16
+<CTLGN> 537 543 543 546 546 549 549 552 552 555 555 558 558 543 560 560 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/Src/usbd_conf.c
+<S>STNAM  USBD_LL_StallEP
+<S>STCYC  5
+<S>STMCC  0 (5:5)
+<S>STMIF  1
+<S>STSUB  1
+<S>STAKI  6
+<S>STLIN  23
+<S>STXLN  20
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  2
+<S>STPTH  5
+<S>STPDN  0.25   
+<S>STPBG  1
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  1
+<S>STAV1  3
+<S>STAV2  5
+<S>STAV3  5
+<S>STST1  21
+<S>STST2  15
+<S>STST3  13
+<S>STPAR  2
+<S>STCAL  1
+<S>STFN1  49
+<S>STFN2  27
+
+<EXTD> USBD_LL_ClearStallEP C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 569
+<DEFINE> pdev C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 569 N DC OV B N p{s_USBD_HandleTypeDef} R
+<DEFINE> ep_addr C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 569 N DC OV B N uc R
+<DEFINE> USBD_LL_ClearStallEP C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 569 N DR OF F X ({eUSBD_StatusTypeDef},p{s_USBD_HandleTypeDef},uc) -
+<DEFINE> USBD_LL_ClearStallEP C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 569 N DF OF F X ({eUSBD_StatusTypeDef},p{s_USBD_HandleTypeDef},uc) -
+<DEFINE> hal_status C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 571 N DC OV B N {eHAL_StatusTypeDef} -
+<DEFINE> hal_status C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 571 N DF OV B N {eHAL_StatusTypeDef} -
+<DEFINE> usb_status C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 572 N DC OV B N {eUSBD_StatusTypeDef} -
+<DEFINE> usb_status C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 572 N DF OV B N {eUSBD_StatusTypeDef} -
+<R>C USBD_LL_ClearStallEP HAL_PCD_EP_ClrStall 574
+<R>X USBD_LL_ClearStallEP HAL_PCD_EP_ClrStall 574 R
+<CTLG> USBD_LL_ClearStallEP 1
+<CTLG> 1 2
+<CTLG> 2 3
+<CTLG> 2 5
+<CTLG> 2 7
+<CTLG> 2 9
+<CTLG> 2 11
+<CTLG> 3 4
+<CTLG> 4 14
+<CTLG> 5 6
+<CTLG> 6 14
+<CTLG> 7 8
+<CTLG> 8 14
+<CTLG> 9 10
+<CTLG> 10 14
+<CTLG> 11 12
+<CTLG> 12 14
+<CTLG> 14 16
+<CTLGN> 570 576 576 579 579 582 582 585 585 588 588 591 591 576 593 593 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/Src/usbd_conf.c
+<S>STNAM  USBD_LL_ClearStallEP
+<S>STCYC  5
+<S>STMCC  0 (5:5)
+<S>STMIF  1
+<S>STSUB  1
+<S>STAKI  6
+<S>STLIN  23
+<S>STXLN  20
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  2
+<S>STPTH  5
+<S>STPDN  0.25   
+<S>STPBG  1
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  1
+<S>STAV1  3
+<S>STAV2  5
+<S>STAV3  5
+<S>STST1  21
+<S>STST2  15
+<S>STST3  13
+<S>STPAR  2
+<S>STCAL  1
+<S>STFN1  49
+<S>STFN2  27
+
+<EXTD> USBD_LL_IsStallEP C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 602
+<DEFINE> pdev C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 602 N DC OV B N p{s_USBD_HandleTypeDef} R
+<DEFINE> ep_addr C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 602 N DC OV B N uc R
+<DEFINE> USBD_LL_IsStallEP C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 602 N DR OF F X (uc,p{s_USBD_HandleTypeDef},uc) -
+<DEFINE> USBD_LL_IsStallEP C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 602 N DF OF F X (uc,p{s_USBD_HandleTypeDef},uc) -
+<DEFINE> hpcd C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 604 N DC OV B N p{sPCD_HandleTypeDef} -
+<DEFINE> hpcd C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 604 N DF OV B N p{sPCD_HandleTypeDef} -
+<LIT> 0x80 - P C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 606 17 N HN ni B X
+<LIT> 0x80 - P C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 606 26 N HN ni B X
+<LIT> 0x7F - P C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 608 34 N HN ni B X
+<LIT> 0x7F - P C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 612 35 N HN ni B X
+<CTLG> USBD_LL_IsStallEP 1
+<CTLG> 1 2
+<CTLG> 1 4
+<CTLG> 2 7
+<CTLG> 4 7
+<CTLGN> 603 606 608 606 612 610 608 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/Src/usbd_conf.c
+<S>STNAM  USBD_LL_IsStallEP
+<S>STCYC  2
+<S>STMCC  0 (2:2)
+<S>STMIF  1
+<S>STSUB  0
+<S>STAKI  2
+<S>STLIN  10
+<S>STXLN  5
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  2
+<S>STKDN  0.40   
+<S>STUNV  0
+<S>STLCT  1
+<S>STPTH  2
+<S>STPDN  0.40   
+<S>STPBG  0
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  2
+<S>STAV1  8
+<S>STAV2  13
+<S>STAV3  17
+<S>STST1  6
+<S>STST2  4
+<S>STST3  3
+<S>STPAR  2
+<S>STCAL  0
+<S>STFN1  35
+<S>STFN2  18
+
+<EXTD> USBD_LL_SetUSBAddress C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 621
+<DEFINE> pdev C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 621 N DC OV B N p{s_USBD_HandleTypeDef} R
+<DEFINE> dev_addr C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 621 N DC OV B N uc R
+<DEFINE> USBD_LL_SetUSBAddress C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 621 N DR OF F X ({eUSBD_StatusTypeDef},p{s_USBD_HandleTypeDef},uc) -
+<DEFINE> USBD_LL_SetUSBAddress C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 621 N DF OF F X ({eUSBD_StatusTypeDef},p{s_USBD_HandleTypeDef},uc) -
+<DEFINE> hal_status C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 623 N DC OV B N {eHAL_StatusTypeDef} -
+<DEFINE> hal_status C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 623 N DF OV B N {eHAL_StatusTypeDef} -
+<DEFINE> usb_status C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 624 N DC OV B N {eUSBD_StatusTypeDef} -
+<DEFINE> usb_status C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 624 N DF OV B N {eUSBD_StatusTypeDef} -
+<R>C USBD_LL_SetUSBAddress HAL_PCD_SetAddress 626
+<R>X USBD_LL_SetUSBAddress HAL_PCD_SetAddress 626 R
+<CTLG> USBD_LL_SetUSBAddress 1
+<CTLG> 1 2
+<CTLG> 2 3
+<CTLG> 2 5
+<CTLG> 2 7
+<CTLG> 2 9
+<CTLG> 2 11
+<CTLG> 3 4
+<CTLG> 4 14
+<CTLG> 5 6
+<CTLG> 6 14
+<CTLG> 7 8
+<CTLG> 8 14
+<CTLG> 9 10
+<CTLG> 10 14
+<CTLG> 11 12
+<CTLG> 12 14
+<CTLG> 14 16
+<CTLGN> 622 628 628 631 631 634 634 637 637 640 640 643 643 628 645 645 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/Src/usbd_conf.c
+<S>STNAM  USBD_LL_SetUSBAddress
+<S>STCYC  5
+<S>STMCC  0 (5:5)
+<S>STMIF  1
+<S>STSUB  1
+<S>STAKI  6
+<S>STLIN  23
+<S>STXLN  20
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  2
+<S>STPTH  5
+<S>STPDN  0.25   
+<S>STPBG  1
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  1
+<S>STAV1  3
+<S>STAV2  5
+<S>STAV3  5
+<S>STST1  21
+<S>STST2  15
+<S>STST3  13
+<S>STPAR  2
+<S>STCAL  1
+<S>STFN1  49
+<S>STFN2  27
+
+<EXTD> USBD_LL_Transmit C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 656
+<DEFINE> pdev C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 656 N DC OV B N p{s_USBD_HandleTypeDef} R
+<DEFINE> ep_addr C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 657 N DC OV B N uc R
+<DEFINE> pbuf C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 658 N DC OV B N puc R
+<DEFINE> size C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 659 N DC OV B N us R
+<DEFINE> USBD_LL_Transmit C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 656 N DR OF F X ({eUSBD_StatusTypeDef},p{s_USBD_HandleTypeDef},uc,puc,us) -
+<DEFINE> USBD_LL_Transmit C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 656 N DF OF F X ({eUSBD_StatusTypeDef},p{s_USBD_HandleTypeDef},uc,puc,us) -
+<DEFINE> hal_status C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 661 N DC OV B N {eHAL_StatusTypeDef} -
+<DEFINE> hal_status C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 661 N DF OV B N {eHAL_StatusTypeDef} -
+<DEFINE> usb_status C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 662 N DC OV B N {eUSBD_StatusTypeDef} -
+<DEFINE> usb_status C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 662 N DF OV B N {eUSBD_StatusTypeDef} -
+<R>C USBD_LL_Transmit HAL_PCD_EP_Transmit 664
+<R>X USBD_LL_Transmit HAL_PCD_EP_Transmit 664 R
+<CTLG> USBD_LL_Transmit 1
+<CTLG> 1 2
+<CTLG> 2 3
+<CTLG> 2 5
+<CTLG> 2 7
+<CTLG> 2 9
+<CTLG> 2 11
+<CTLG> 3 4
+<CTLG> 4 14
+<CTLG> 5 6
+<CTLG> 6 14
+<CTLG> 7 8
+<CTLG> 8 14
+<CTLG> 9 10
+<CTLG> 10 14
+<CTLG> 11 12
+<CTLG> 12 14
+<CTLG> 14 16
+<CTLGN> 660 666 666 669 669 672 672 675 675 678 678 681 681 666 683 683 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/Src/usbd_conf.c
+<S>STNAM  USBD_LL_Transmit
+<S>STCYC  5
+<S>STMCC  0 (5:5)
+<S>STMIF  1
+<S>STSUB  1
+<S>STAKI  6
+<S>STLIN  23
+<S>STXLN  20
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  2
+<S>STPTH  5
+<S>STPDN  0.25   
+<S>STPBG  1
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  1
+<S>STAV1  3
+<S>STAV2  5
+<S>STAV3  6
+<S>STST1  21
+<S>STST2  15
+<S>STST3  13
+<S>STPAR  4
+<S>STCAL  1
+<S>STFN1  51
+<S>STFN2  29
+
+<EXTD> USBD_LL_PrepareReceive C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 694
+<DEFINE> pdev C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 694 N DC OV B N p{s_USBD_HandleTypeDef} R
+<DEFINE> ep_addr C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 695 N DC OV B N uc R
+<DEFINE> pbuf C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 696 N DC OV B N puc R
+<DEFINE> size C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 697 N DC OV B N us R
+<DEFINE> USBD_LL_PrepareReceive C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 694 N DR OF F X ({eUSBD_StatusTypeDef},p{s_USBD_HandleTypeDef},uc,puc,us) -
+<DEFINE> USBD_LL_PrepareReceive C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 694 N DF OF F X ({eUSBD_StatusTypeDef},p{s_USBD_HandleTypeDef},uc,puc,us) -
+<DEFINE> hal_status C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 699 N DC OV B N {eHAL_StatusTypeDef} -
+<DEFINE> hal_status C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 699 N DF OV B N {eHAL_StatusTypeDef} -
+<DEFINE> usb_status C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 700 N DC OV B N {eUSBD_StatusTypeDef} -
+<DEFINE> usb_status C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 700 N DF OV B N {eUSBD_StatusTypeDef} -
+<R>C USBD_LL_PrepareReceive HAL_PCD_EP_Receive 702
+<R>X USBD_LL_PrepareReceive HAL_PCD_EP_Receive 702 R
+<CTLG> USBD_LL_PrepareReceive 1
+<CTLG> 1 2
+<CTLG> 2 3
+<CTLG> 2 5
+<CTLG> 2 7
+<CTLG> 2 9
+<CTLG> 2 11
+<CTLG> 3 4
+<CTLG> 4 14
+<CTLG> 5 6
+<CTLG> 6 14
+<CTLG> 7 8
+<CTLG> 8 14
+<CTLG> 9 10
+<CTLG> 10 14
+<CTLG> 11 12
+<CTLG> 12 14
+<CTLG> 14 16
+<CTLGN> 698 704 704 707 707 710 710 713 713 716 716 719 719 704 721 721 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/Src/usbd_conf.c
+<S>STNAM  USBD_LL_PrepareReceive
+<S>STCYC  5
+<S>STMCC  0 (5:5)
+<S>STMIF  1
+<S>STSUB  1
+<S>STAKI  6
+<S>STLIN  23
+<S>STXLN  20
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  2
+<S>STPTH  5
+<S>STPDN  0.25   
+<S>STPBG  1
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  1
+<S>STAV1  3
+<S>STAV2  5
+<S>STAV3  6
+<S>STST1  21
+<S>STST2  15
+<S>STST3  13
+<S>STPAR  4
+<S>STCAL  1
+<S>STFN1  51
+<S>STFN2  29
+
+<EXTD> USBD_LL_GetRxDataSize C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 730
+<DEFINE> pdev C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 730 N DC OV B N p{s_USBD_HandleTypeDef} R
+<DEFINE> ep_addr C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 730 N DC OV B N uc R
+<DEFINE> USBD_LL_GetRxDataSize C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 730 N DR OF F X (ui,p{s_USBD_HandleTypeDef},uc) -
+<DEFINE> USBD_LL_GetRxDataSize C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 730 N DF OF F X (ui,p{s_USBD_HandleTypeDef},uc) -
+<R>C USBD_LL_GetRxDataSize HAL_PCD_EP_GetRxCount 732
+<R>X USBD_LL_GetRxDataSize HAL_PCD_EP_GetRxCount 732 R
+<CTLG> USBD_LL_GetRxDataSize 1
+<CTLG> 1 3
+<CTLGN> 731 732 732 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/Src/usbd_conf.c
+<S>STNAM  USBD_LL_GetRxDataSize
+<S>STCYC  1
+<S>STMCC  0 (1:1)
+<S>STMIF  0
+<S>STSUB  1
+<S>STAKI  2
+<S>STLIN  1
+<S>STXLN  1
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  0
+<S>STPTH  1
+<S>STPDN  1.00   
+<S>STPBG  0
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  1
+<S>STAV1  16
+<S>STAV2  16
+<S>STAV3  16
+<S>STST1  1
+<S>STST2  1
+<S>STST3  1
+<S>STPAR  2
+<S>STCAL  1
+<S>STFN1  11
+<S>STFN2  5
+
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 735 26 N DN - F P
+<EXTD> USBD_LL_Delay C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 777
+<DEFINE> Delay C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 777 N DC OV B N ui R
+<DEFINE> USBD_LL_Delay C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 777 N DR OF F X (.,ui) -
+<DEFINE> USBD_LL_Delay C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 777 N DF OF F X (.,ui) -
+<R>C USBD_LL_Delay HAL_Delay 779
+<R>X USBD_LL_Delay HAL_Delay 779 R
+<CTLG> USBD_LL_Delay 1
+<CTLG> 1 2
+<CTLG> 2 4
+<CTLGN> 778 780 780 780 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/Src/usbd_conf.c
+<S>STNAM  USBD_LL_Delay
+<S>STCYC  1
+<S>STMCC  0 (1:1)
+<S>STMIF  0
+<S>STSUB  1
+<S>STAKI  2
+<S>STLIN  1
+<S>STXLN  1
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  0
+<S>STPTH  1
+<S>STPDN  1.00   
+<S>STPBG  0
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  0
+<S>STAV1  7
+<S>STAV2  7
+<S>STAV3  7
+<S>STST1  1
+<S>STST2  1
+<S>STST3  1
+<S>STPAR  1
+<S>STCAL  1
+<S>STFN1  5
+<S>STFN2  2
+
+<EXTD> hpcd_USB_OTG_FS C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 55
+<DEFINE> hpcd_USB_OTG_FS C:/CodeInspection/DisplayUnit/Src/usbd_conf.c 55 N DI OV F X {sPCD_HandleTypeDef} S
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/Src/usbd_conf.c
+<S>STNAM  C:/CodeInspection/DisplayUnit/Src/usbd_conf.c
+<S>STNTB  NON-TOKEN BASED STATISTICS...
+<S>STSCT  0
+<S>STECT  1
+<S>STFNC  28
+<S>STFCO  14
+<S>STTKB  TOKEN BASED STATISTICS...
+<S>STVAR  146
+<S>STOPT  31
+<S>STOPN  161
+<S>STTOT  2126
+<S>STZIP  1120
+<S>STHAL  1334
+<S>STSHN  4767
+<S>STDIF  15.11  
+<S>STEFF  243708
+<S>STVOL  16126
+<S>STDEV  40.62  
+<S>STBUG  4
+<S>STTPP  781
+<S>STTLN  413
+<S>STM20  670
+<S>STM21  1455
+<S>STM22  214
+<S>STM28  71
+<S>STM33  30
+<S>STBCS  BASIC COCOMO STATISTICS...
+<S>STBMO  1.851  
+<S>STBMS  2.275  
+<S>STBME  2.676  
+<S>STTDO  3.159  
+<S>STTDS  3.333  
+<S>STTDE  3.426  
+<S>STCOM  COMMENT BASED STATISTICS...
+<S>STCDN  0.765  
+

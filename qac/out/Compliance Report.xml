@@ -1,0 +1,2083 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<prdf:report xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg" xmlns:prdf="http://www.programmingresearch.com/todo">
+<prdf:title>Compliance Report</prdf:title>
+<prdf:project_name>DisplayUnit</prdf:project_name>
+<prdf:date>8 April 2019</prdf:date>
+<prdf:front_page>
+<prdf:section xmlns:v="urn:schemas-microsoft-com:vml" created_by="standard.prdf.generator" created_by_version="1.3">
+<prdf:text bold="1">Compliance Summary</prdf:text>
+<prdf:table class="center">
+<prdf:col_width width="75%"/>
+<prdf:col_width width="25%"/>
+<prdf:row>
+<prdf:cell align="left">Number of Files</prdf:cell>
+<prdf:cell align="right">28</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="left">Lines of Code</prdf:cell>
+<prdf:cell align="right">16836</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="left">Total Number of Messages</prdf:cell>
+<prdf:cell align="right">0</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="left">Number of Violated Groups</prdf:cell>
+<prdf:cell align="right">0</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="left">Number of Compliant Groups</prdf:cell>
+<prdf:cell align="right">172</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="left">File Compliance Index</prdf:cell>
+<prdf:cell align="right">100.0%</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="left">Project Compliance Index</prdf:cell>
+<prdf:cell align="right">100.0%</prdf:cell>
+</prdf:row>
+</prdf:table>
+</prdf:section>
+</prdf:front_page>
+<prdf:main>
+<prdf:section xmlns:v="urn:schemas-microsoft-com:vml" created_by="standard.prdf.generator" created_by_version="1.3">
+<prdf:h2>Compliance Matrix:Messages per Level</prdf:h2>
+<prdf:table>
+<prdf:col_width width="20%"/>
+<prdf:col_width width="40%"/>
+<prdf:col_width width="40%"/>
+<prdf:row>
+<prdf:cell heading="1">
+<prdf:nbsp/>
+</prdf:cell>
+<prdf:cell heading="1" align="center" colspan="1">Levels</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell heading="1" align="left">Files</prdf:cell>
+<prdf:cell heading="1" align="right">Total</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell heading="2" align="left">Total</prdf:cell>
+<prdf:cell heading="2" align="right">0</prdf:cell>
+</prdf:row>
+</prdf:table>
+<prdf:text bold="1">The following files have no messages:</prdf:text>
+<prdf:file_list>
+<prdf:filename>C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbControl.c</prdf:filename>
+<prdf:filename>C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbEvent.c</prdf:filename>
+<prdf:filename>C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbHwSet.c</prdf:filename>
+<prdf:filename>C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbInfo.c</prdf:filename>
+<prdf:filename>C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c</prdf:filename>
+<prdf:filename>C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbRelaySet.c</prdf:filename>
+<prdf:filename>C:/CodeInspection/DisplayUnit/STemWin/App/MLinkControl.c</prdf:filename>
+<prdf:filename>C:/CodeInspection/DisplayUnit/STemWin/App/MLinkEvent.c</prdf:filename>
+<prdf:filename>C:/CodeInspection/DisplayUnit/STemWin/App/MLinkHwSet.c</prdf:filename>
+<prdf:filename>C:/CodeInspection/DisplayUnit/STemWin/App/MLinkIOSet.c</prdf:filename>
+<prdf:filename>C:/CodeInspection/DisplayUnit/STemWin/App/MLinkInfo.c</prdf:filename>
+<prdf:filename>C:/CodeInspection/DisplayUnit/STemWin/App/MLinkOverview.c</prdf:filename>
+<prdf:filename>C:/CodeInspection/DisplayUnit/STemWin/App/MainMenu.c</prdf:filename>
+<prdf:filename>C:/CodeInspection/DisplayUnit/STemWin/App/MenuDLG.c</prdf:filename>
+<prdf:filename>C:/CodeInspection/DisplayUnit/STemWin/App/PasswordChange.c</prdf:filename>
+<prdf:filename>C:/CodeInspection/DisplayUnit/STemWin/App/SettingInput.c</prdf:filename>
+<prdf:filename>C:/CodeInspection/DisplayUnit/STemWin/App/SettingTime.c</prdf:filename>
+<prdf:filename>C:/CodeInspection/DisplayUnit/STemWin/App/Setup.c</prdf:filename>
+<prdf:filename>C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c</prdf:filename>
+<prdf:filename>C:/CodeInspection/DisplayUnit/STemWin/Board/backlight/backlight.c</prdf:filename>
+<prdf:filename>C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c</prdf:filename>
+<prdf:filename>C:/CodeInspection/DisplayUnit/STemWin/Target/GUIConf.c</prdf:filename>
+<prdf:filename>C:/CodeInspection/DisplayUnit/STemWin/Target/LCDConf_FlexColor_Hmi.c</prdf:filename>
+<prdf:filename>C:/CodeInspection/DisplayUnit/Src/main.c</prdf:filename>
+<prdf:filename>C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_timebase_TIM.c</prdf:filename>
+<prdf:filename>C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_timebase_TIM.h</prdf:filename>
+<prdf:filename>C:/CodeInspection/DisplayUnit/Src/stm32f4xx_it.c</prdf:filename>
+<prdf:filename>C:/CodeInspection/DisplayUnit/Src/system_stm32f4xx.c</prdf:filename>
+<prdf:filename>CMA Multi-Home</prdf:filename>
+</prdf:file_list>
+<prdf:text bold="1">The following levels have no messages: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9</prdf:text>
+<prdf:h3>Messages per Levels</prdf:h3>
+<svg:svg width="1000" height="400">
+</svg:svg>
+<v:group style="position:relative; left:0; top:0; width:1000; height:400" coordorigin="0 0" coordsize="1000 400">
+</v:group>
+</prdf:section>
+<prdf:section xmlns:v="urn:schemas-microsoft-com:vml" created_by="standard.prdf.generator" created_by_version="1.3">
+<prdf:h2>Worst Groups</prdf:h2>
+<prdf:table>
+<prdf:col_width width="20%"/>
+<prdf:col_width width="40%"/>
+<prdf:col_width width="40%"/>
+<prdf:row>
+<prdf:cell heading="1">
+<prdf:nbsp/>
+</prdf:cell>
+<prdf:cell heading="1" align="center" colspan="1">Groups</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell heading="1" align="left">Files</prdf:cell>
+<prdf:cell heading="1" align="right" angle="90deg">Total</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell heading="2" align="left">Total</prdf:cell>
+<prdf:cell heading="2" align="right">0</prdf:cell>
+</prdf:row>
+</prdf:table>
+<prdf:text bold="1">The following files have no messages:</prdf:text>
+<prdf:file_list>
+<prdf:filename>C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbControl.c</prdf:filename>
+<prdf:filename>C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbEvent.c</prdf:filename>
+<prdf:filename>C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbHwSet.c</prdf:filename>
+<prdf:filename>C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbInfo.c</prdf:filename>
+<prdf:filename>C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c</prdf:filename>
+<prdf:filename>C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbRelaySet.c</prdf:filename>
+<prdf:filename>C:/CodeInspection/DisplayUnit/STemWin/App/MLinkControl.c</prdf:filename>
+<prdf:filename>C:/CodeInspection/DisplayUnit/STemWin/App/MLinkEvent.c</prdf:filename>
+<prdf:filename>C:/CodeInspection/DisplayUnit/STemWin/App/MLinkHwSet.c</prdf:filename>
+<prdf:filename>C:/CodeInspection/DisplayUnit/STemWin/App/MLinkIOSet.c</prdf:filename>
+<prdf:filename>C:/CodeInspection/DisplayUnit/STemWin/App/MLinkInfo.c</prdf:filename>
+<prdf:filename>C:/CodeInspection/DisplayUnit/STemWin/App/MLinkOverview.c</prdf:filename>
+<prdf:filename>C:/CodeInspection/DisplayUnit/STemWin/App/MainMenu.c</prdf:filename>
+<prdf:filename>C:/CodeInspection/DisplayUnit/STemWin/App/MenuDLG.c</prdf:filename>
+<prdf:filename>C:/CodeInspection/DisplayUnit/STemWin/App/PasswordChange.c</prdf:filename>
+<prdf:filename>C:/CodeInspection/DisplayUnit/STemWin/App/SettingInput.c</prdf:filename>
+<prdf:filename>C:/CodeInspection/DisplayUnit/STemWin/App/SettingTime.c</prdf:filename>
+<prdf:filename>C:/CodeInspection/DisplayUnit/STemWin/App/Setup.c</prdf:filename>
+<prdf:filename>C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c</prdf:filename>
+<prdf:filename>C:/CodeInspection/DisplayUnit/STemWin/Board/backlight/backlight.c</prdf:filename>
+<prdf:filename>C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c</prdf:filename>
+<prdf:filename>C:/CodeInspection/DisplayUnit/STemWin/Target/GUIConf.c</prdf:filename>
+<prdf:filename>C:/CodeInspection/DisplayUnit/STemWin/Target/LCDConf_FlexColor_Hmi.c</prdf:filename>
+<prdf:filename>C:/CodeInspection/DisplayUnit/Src/main.c</prdf:filename>
+<prdf:filename>C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_timebase_TIM.c</prdf:filename>
+<prdf:filename>C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_timebase_TIM.h</prdf:filename>
+<prdf:filename>C:/CodeInspection/DisplayUnit/Src/stm32f4xx_it.c</prdf:filename>
+<prdf:filename>C:/CodeInspection/DisplayUnit/Src/system_stm32f4xx.c</prdf:filename>
+<prdf:filename>CMA Multi-Home</prdf:filename>
+</prdf:file_list>
+<prdf:h3>Worst Groups by Number of Messages</prdf:h3>
+<svg:svg width="1000" height="400">
+</svg:svg>
+<v:group style="position:relative; left:0; top:0; width:1000; height:400" coordorigin="0 0" coordsize="1000 400">
+</v:group>
+</prdf:section>
+<prdf:section xmlns:v="urn:schemas-microsoft-com:vml" created_by="standard.prdf.generator" created_by_version="1.3">
+<prdf:h2>Worst Files</prdf:h2>
+<prdf:table>
+<prdf:col_width width="20%"/>
+<prdf:col_width width="40%"/>
+<prdf:col_width width="40%"/>
+<prdf:row>
+<prdf:cell heading="1">
+<prdf:nbsp/>
+</prdf:cell>
+<prdf:cell heading="1" align="center" colspan="1">Files</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell heading="1" align="left">Groups</prdf:cell>
+<prdf:cell heading="1" align="right" angle="90deg">Total</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell heading="2" align="left">Total</prdf:cell>
+<prdf:cell heading="2" align="right">0</prdf:cell>
+</prdf:row>
+</prdf:table>
+<prdf:text bold="1">The following groups have no messages:</prdf:text>
+<prdf:table border="0">
+<prdf:col_width width="45%"/>
+<prdf:col_width width="45%"/>
+<prdf:row>
+<prdf:cell align="left">(0) M2CM Rule 1.2</prdf:cell>
+<prdf:cell align="left">(0) M2CM Rule 10.3</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="left">(0) M2CM Rule 11.1</prdf:cell>
+<prdf:cell align="left">(0) M2CM Rule 11.2</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="left">(0) M2CM Rule 11.4</prdf:cell>
+<prdf:cell align="left">(0) M2CM Rule 11.5</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="left">(0) M2CM Rule 12.11</prdf:cell>
+<prdf:cell align="left">(0) M2CM Rule 12.12</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="left">(0) M2CM Rule 12.2</prdf:cell>
+<prdf:cell align="left">(0) M2CM Rule 12.6</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="left">(0) M2CM Rule 12.7</prdf:cell>
+<prdf:cell align="left">(0) M2CM Rule 12.9</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="left">(0) M2CM Rule 13.4</prdf:cell>
+<prdf:cell align="left">(0) M2CM Rule 16.10</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="left">(0) M2CM Rule 16.3</prdf:cell>
+<prdf:cell align="left">(0) M2CM Rule 16.4</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="left">(0) M2CM Rule 16.5</prdf:cell>
+<prdf:cell align="left">(0) M2CM Rule 16.6</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="left">(0) M2CM Rule 16.7</prdf:cell>
+<prdf:cell align="left">(0) M2CM Rule 16.8</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="left">(0) M2CM Rule 16.9</prdf:cell>
+<prdf:cell align="left">(0) M2CM Rule 17.4</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="left">(0) M2CM Rule 17.6</prdf:cell>
+<prdf:cell align="left">(0) M2CM Rule 18.2</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="left">(0) M2CM Rule 18.4</prdf:cell>
+<prdf:cell align="left">(0) M2CM Rule 19.10</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="left">(0) M2CM Rule 19.8</prdf:cell>
+<prdf:cell align="left">(0) M2CM Rule 19.9</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="left">(0) M2CM Rule 21.1</prdf:cell>
+<prdf:cell align="left">(0) M2CM Rule 6.1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="left">(0) M2CM Rule 6.2</prdf:cell>
+<prdf:cell align="left">(0) M2CM Rule 6.5</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="left">(0) M2CM Rule 8.1</prdf:cell>
+<prdf:cell align="left">(0) M2CM Rule 8.12</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="left">(0) M2CM Rule 8.2</prdf:cell>
+<prdf:cell align="left">(0) M2CM Rule 8.3</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="left">(1) Arithmetic type - Complex expressions</prdf:cell>
+<prdf:cell align="left">(1) Arithmetic type - Enum types </prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="left">(1) Arithmetic type - Implicit conversions</prdf:cell>
+<prdf:cell align="left">(1) M2CM Rule 12.1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="left">(1) M2CM Rule 12.3</prdf:cell>
+<prdf:cell align="left">(1) M2CM Rule 12.4</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="left">(1) M2CM Rule 13.1</prdf:cell>
+<prdf:cell align="left">(1) M2CM Rule 13.3</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="left">(1) M2CM Rule 13.5</prdf:cell>
+<prdf:cell align="left">(1) M2CM Rule 13.7</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="left">(1) M2CM Rule 14.1</prdf:cell>
+<prdf:cell align="left">(1) M2CM Rule 14.10</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="left">(1) M2CM Rule 14.2</prdf:cell>
+<prdf:cell align="left">(1) M2CM Rule 15.1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="left">(1) M2CM Rule 15.2</prdf:cell>
+<prdf:cell align="left">(1) M2CM Rule 15.3</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="left">(1) M2CM Rule 15.4</prdf:cell>
+<prdf:cell align="left">(1) M2CM Rule 15.5</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="left">(1) M2CM Rule 16.2</prdf:cell>
+<prdf:cell align="left">(1) M2CM Rule 17.5</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="left">(1) M2CM Rule 18.1</prdf:cell>
+<prdf:cell align="left">(1) M2CM Rule 19.1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="left">(1) M2CM Rule 19.11</prdf:cell>
+<prdf:cell align="left">(1) M2CM Rule 19.12</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="left">(1) M2CM Rule 19.13</prdf:cell>
+<prdf:cell align="left">(1) M2CM Rule 19.14</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="left">(1) M2CM Rule 19.15</prdf:cell>
+<prdf:cell align="left">(1) M2CM Rule 19.16</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="left">(1) M2CM Rule 19.17</prdf:cell>
+<prdf:cell align="left">(1) M2CM Rule 19.2</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="left">(1) M2CM Rule 19.3</prdf:cell>
+<prdf:cell align="left">(1) M2CM Rule 19.4</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="left">(1) M2CM Rule 19.5</prdf:cell>
+<prdf:cell align="left">(1) M2CM Rule 19.6</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="left">(1) M2CM Rule 19.7</prdf:cell>
+<prdf:cell align="left">(1) M2CM Rule 20.1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="left">(1) M2CM Rule 20.2</prdf:cell>
+<prdf:cell align="left">(1) M2CM Rule 20.7</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="left">(1) M2CM Rule 5.2</prdf:cell>
+<prdf:cell align="left">(1) M2CM Rule 5.3</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="left">(1) M2CM Rule 5.5</prdf:cell>
+<prdf:cell align="left">(1) M2CM Rule 6.3</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="left">(1) M2CM Rule 7.1</prdf:cell>
+<prdf:cell align="left">(1) M2CM Rule 8.10</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="left">(1) M2CM Rule 8.11</prdf:cell>
+<prdf:cell align="left">(1) M2CM Rule 8.6</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="left">(1) M2CM Rule 8.7</prdf:cell>
+<prdf:cell align="left">(1) M2CM Rule 8.8</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="left">(1) M2CM Rule 8.9</prdf:cell>
+<prdf:cell align="left">(1) M2CM Rule 9.1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="left">(1) M2CM Rule 9.2</prdf:cell>
+<prdf:cell align="left">(2) Arithmetic type - Assignment</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="left">(2) Arithmetic type - Balancing</prdf:cell>
+<prdf:cell align="left">(2) Arithmetic type - Casts</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="left">(2) Arithmetic type - Composite expressions</prdf:cell>
+<prdf:cell align="left">(2) Arithmetic type - Operands</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="left">(2) Arithmetic type - Operations</prdf:cell>
+<prdf:cell align="left">(2) LSIS_Coding_Style</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="left">(2) LSIS_Naming_Style</prdf:cell>
+<prdf:cell align="left">(2) M2CM Rule 14.4</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="left">(2) M2CM Rule 14.6</prdf:cell>
+<prdf:cell align="left">(2) M2CM Rule 14.7</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="left">(2) M2CM Rule 14.8</prdf:cell>
+<prdf:cell align="left">(2) M2CM Rule 14.9</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="left">(2) M2CM Rule 2.1</prdf:cell>
+<prdf:cell align="left">(2) M2CM Rule 2.3</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="left">(2) M2CM Rule 3.1</prdf:cell>
+<prdf:cell align="left">(2) M2CM Rule 4.1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="left">(2) M2CM Rule 4.2</prdf:cell>
+<prdf:cell align="left">(2) M2CM Rule 5.1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="left">(2) M2CM Rule 8.5</prdf:cell>
+<prdf:cell align="left">(2) Macro Definition</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="left">(2) Pointers</prdf:cell>
+<prdf:cell align="left">(2) Readability</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="left">(2) Redundancy</prdf:cell>
+<prdf:cell align="left">(2) Side Effects</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="left">(3) Annotations</prdf:cell>
+<prdf:cell align="left">(3) Arithmetic type - Assignment</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="left">(3) Arithmetic type - Balancing</prdf:cell>
+<prdf:cell align="left">(3) Arithmetic type - Casts</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="left">(3) Arithmetic type - Operands</prdf:cell>
+<prdf:cell align="left">(3) Arithmetic type - Operations</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="left">(3) CMA information</prdf:cell>
+<prdf:cell align="left">(3) Dataflow recovery         </prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="left">(3) Parsing recovery</prdf:cell>
+<prdf:cell align="left">(3) Pointers</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="left">(3) Sub-Messages</prdf:cell>
+<prdf:cell align="left">(3) Switch statements</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="left">(4) Local Standards</prdf:cell>
+<prdf:cell align="left">(4) QAC configuration</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="left">(4) Syntax errors</prdf:cell>
+<prdf:cell align="left">(5) Arrays       </prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="left">(5) Arrays, structures, unions &amp; bit-fields</prdf:cell>
+<prdf:cell align="left">(5) Bracing and Indentation</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="left">(5) C++ compatibility</prdf:cell>
+<prdf:cell align="left">(5) CMA declaration checks</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="left">(5) CMA maintenance checks</prdf:cell>
+<prdf:cell align="left">(5) CMA undefined</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="left">(5) Constants</prdf:cell>
+<prdf:cell align="left">(5) Constraint violations</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="left">(5) Control flow</prdf:cell>
+<prdf:cell align="left">(5) Conversion to signed      </prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="left">(5) Conversion to unsigned</prdf:cell>
+<prdf:cell align="left">(5) Dataflow - Arrays</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="left">(5) Dataflow - Control flow</prdf:cell>
+<prdf:cell align="left">(5) Dataflow - Conversion to signed</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="left">(5) Dataflow - Conversion to unsigned</prdf:cell>
+<prdf:cell align="left">(5) Dataflow - Invariant operations</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="left">(5) Dataflow - NULL pointers</prdf:cell>
+<prdf:cell align="left">(5) Dataflow - Overflow and wraparound</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="left">(5) Dataflow - Pointers</prdf:cell>
+<prdf:cell align="left">(5) Dataflow - Shift operations</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="left">(5) Dataflow - Unset data</prdf:cell>
+<prdf:cell align="left">(5) Declarations and Definitions</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="left">(5) Declarations and definitions</prdf:cell>
+<prdf:cell align="left">(5) Enumerations</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="left">(5) Explicitly undefined</prdf:cell>
+<prdf:cell align="left">(5) Functions</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="left">(5) ISO C90 Conformance limits</prdf:cell>
+<prdf:cell align="left">(5) ISO C99 Conformance limits</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="left">(5) ISO C99 Language features</prdf:cell>
+<prdf:cell align="left">(5) Identifiers</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="left">(5) Implementation defined</prdf:cell>
+<prdf:cell align="left">(5) Integral promotion</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="left">(5) Invariant operations</prdf:cell>
+<prdf:cell align="left">(5) K&amp;R compatibility</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="left">(5) Language extensions</prdf:cell>
+<prdf:cell align="left">(5) Metric thresholds</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="left">(5) Miscellaneous</prdf:cell>
+<prdf:cell align="left">(5) NULL pointers</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="left">(5) Overflow and wraparound</prdf:cell>
+<prdf:cell align="left">(5) Preprocessor</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="left">(5) Redundancy</prdf:cell>
+<prdf:cell align="left">(5) Shift operations</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="left">(5) Switch statements</prdf:cell>
+<prdf:cell align="left">(5) Unset data</prdf:cell>
+</prdf:row>
+</prdf:table>
+<prdf:h3>Worst Files by Number of Messages</prdf:h3>
+<svg:svg width="1000" height="400">
+</svg:svg>
+<v:group style="position:relative; left:0; top:0; width:1000; height:400" coordorigin="0 0" coordsize="1000 400">
+</v:group>
+</prdf:section>
+<prdf:section xmlns:v="urn:schemas-microsoft-com:vml" created_by="standard.prdf.generator" created_by_version="1.3">
+<prdf:h2>Compliance Index Per File</prdf:h2>
+<prdf:table>
+<prdf:col_width width="20%"/>
+<prdf:col_width width="26%"/>
+<prdf:col_width width="26%"/>
+<prdf:col_width width="26%"/>
+<prdf:row>
+<prdf:cell heading="1">
+<prdf:nbsp/>
+</prdf:cell>
+<prdf:cell heading="1" align="center" colspan="2">From 172 groups</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell heading="1" align="left">Filename</prdf:cell>
+<prdf:cell heading="1" align="right">Violations</prdf:cell>
+<prdf:cell heading="1" align="right">% Compliance</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell heading="2" align="left">File Compliance Index</prdf:cell>
+<prdf:cell heading="2" align="right"> </prdf:cell>
+<prdf:cell heading="2" align="right">100.00</prdf:cell>
+</prdf:row>
+</prdf:table>
+<prdf:text bold="1">The following files are 100% compliant:</prdf:text>
+<prdf:file_list>
+<prdf:filename>C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbControl.c</prdf:filename>
+<prdf:filename>C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbEvent.c</prdf:filename>
+<prdf:filename>C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbHwSet.c</prdf:filename>
+<prdf:filename>C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbInfo.c</prdf:filename>
+<prdf:filename>C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbMeasurement.c</prdf:filename>
+<prdf:filename>C:/CodeInspection/DisplayUnit/STemWin/App/AcbMccbRelaySet.c</prdf:filename>
+<prdf:filename>C:/CodeInspection/DisplayUnit/STemWin/App/MLinkControl.c</prdf:filename>
+<prdf:filename>C:/CodeInspection/DisplayUnit/STemWin/App/MLinkEvent.c</prdf:filename>
+<prdf:filename>C:/CodeInspection/DisplayUnit/STemWin/App/MLinkHwSet.c</prdf:filename>
+<prdf:filename>C:/CodeInspection/DisplayUnit/STemWin/App/MLinkIOSet.c</prdf:filename>
+<prdf:filename>C:/CodeInspection/DisplayUnit/STemWin/App/MLinkInfo.c</prdf:filename>
+<prdf:filename>C:/CodeInspection/DisplayUnit/STemWin/App/MLinkOverview.c</prdf:filename>
+<prdf:filename>C:/CodeInspection/DisplayUnit/STemWin/App/MainMenu.c</prdf:filename>
+<prdf:filename>C:/CodeInspection/DisplayUnit/STemWin/App/MenuDLG.c</prdf:filename>
+<prdf:filename>C:/CodeInspection/DisplayUnit/STemWin/App/PasswordChange.c</prdf:filename>
+<prdf:filename>C:/CodeInspection/DisplayUnit/STemWin/App/SettingInput.c</prdf:filename>
+<prdf:filename>C:/CodeInspection/DisplayUnit/STemWin/App/SettingTime.c</prdf:filename>
+<prdf:filename>C:/CodeInspection/DisplayUnit/STemWin/App/Setup.c</prdf:filename>
+<prdf:filename>C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c</prdf:filename>
+<prdf:filename>C:/CodeInspection/DisplayUnit/STemWin/Board/backlight/backlight.c</prdf:filename>
+<prdf:filename>C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c</prdf:filename>
+<prdf:filename>C:/CodeInspection/DisplayUnit/STemWin/Target/GUIConf.c</prdf:filename>
+<prdf:filename>C:/CodeInspection/DisplayUnit/STemWin/Target/LCDConf_FlexColor_Hmi.c</prdf:filename>
+<prdf:filename>C:/CodeInspection/DisplayUnit/Src/main.c</prdf:filename>
+<prdf:filename>C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_timebase_TIM.c</prdf:filename>
+<prdf:filename>C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_timebase_TIM.h</prdf:filename>
+<prdf:filename>C:/CodeInspection/DisplayUnit/Src/stm32f4xx_it.c</prdf:filename>
+<prdf:filename>C:/CodeInspection/DisplayUnit/Src/system_stm32f4xx.c</prdf:filename>
+<prdf:filename>CMA Multi-Home</prdf:filename>
+</prdf:file_list>
+</prdf:section>
+</prdf:main>
+<prdf:appendices>
+<prdf:section xmlns:v="urn:schemas-microsoft-com:vml" created_by="standard.prdf.generator" created_by_version="1.3">
+<prdf:h2>Report Statistics</prdf:h2>
+<prdf:text>Note that headers in suppressed directories are ignored in the following statistics.</prdf:text>
+<prdf:eoln/>
+<prdf:text>The number of files is the number of source files in the project, plus the number of header files included by the source.</prdf:text>
+<prdf:eoln/>
+<prdf:text>The Lines of Code is the sum of the metric STTPP (number of unpreprocessed lines) for each source file plus the number of (unpreprocessed) lines in all the included header files.</prdf:text>
+<prdf:eoln/>
+<prdf:text>The total number of messages is the sum of all messages appearing in all files. Messages in header files are only counted once, even if they are included in more than one source file.</prdf:text>
+<prdf:eoln/>
+<prdf:text>The number of violated groups is the number of message groups that have at least one message appearing in the files. The number of Compliant groups is the difference between the total number of groups and the number of violated groups.</prdf:text>
+<prdf:eoln/>
+<prdf:h3>Calculation of Compliance Index</prdf:h3>
+<prdf:text>The Compliance Index is the percentage of groups which have no messages in them.</prdf:text>
+<prdf:eoln/>
+<prdf:text>For each file it is calculated as follows:</prdf:text>
+<prdf:eoln/>
+<prdf:eoln/>
+<prdf:text>( <prdf:italic>N<prdf:subscript>total</prdf:subscript> - N<prdf:subscript>error</prdf:subscript>
+</prdf:italic> ) / <prdf:italic>N<prdf:subscript>total</prdf:subscript>
+</prdf:italic> x 100</prdf:text>
+<prdf:eoln/>
+<prdf:eoln/>
+<prdf:text>
+<prdf:italic>N<prdf:subscript>total</prdf:subscript>
+</prdf:italic> is the total number of message groups.</prdf:text>
+<prdf:eoln/>
+<prdf:text>
+<prdf:italic>N<prdf:subscript>error</prdf:subscript>
+</prdf:italic> is the number of groups for which messages appear in that file.</prdf:text>
+<prdf:eoln/>
+<prdf:text>The File Compliance Index is the mean of all the individual file compliances.</prdf:text>
+<prdf:eoln/>
+<prdf:text>The Project Compliance Index is calculated in a similar way but with <prdf:italic>N<prdf:subscript>error</prdf:subscript>
+</prdf:italic> as the number of groups for which messages appear in all analysed files.</prdf:text>
+<prdf:eoln/>
+<prdf:text>A high File Compliance Index and low Project Compliance Index indicates that each file violates only a small number of rules but each file violates a different rule.</prdf:text>
+<prdf:eoln/>
+<prdf:text>If the Compliance Indices are close then each file is violating more or less the same rules.</prdf:text>
+</prdf:section>
+<prdf:section xmlns:v="urn:schemas-microsoft-com:vml" created_by="standard.prdf.generator" created_by_version="1.3">
+<prdf:h2>Analysis Summary</prdf:h2>
+<prdf:h3>List of Analysed Files</prdf:h3>
+<prdf:file_list>
+<prdf:filename>C:\CodeInspection\DisplayUnit\STemWin\App\AcbMccbControl.c</prdf:filename>
+<prdf:filename>C:\CodeInspection\DisplayUnit\STemWin\App\AcbMccbEvent.c</prdf:filename>
+<prdf:filename>C:\CodeInspection\DisplayUnit\STemWin\App\AcbMccbHwSet.c</prdf:filename>
+<prdf:filename>C:\CodeInspection\DisplayUnit\STemWin\App\AcbMccbInfo.c</prdf:filename>
+<prdf:filename>C:\CodeInspection\DisplayUnit\STemWin\App\AcbMccbMeasurement.c</prdf:filename>
+<prdf:filename>C:\CodeInspection\DisplayUnit\STemWin\App\AcbMccbRelaySet.c</prdf:filename>
+<prdf:filename>C:\CodeInspection\DisplayUnit\STemWin\App\MLinkControl.c</prdf:filename>
+<prdf:filename>C:\CodeInspection\DisplayUnit\STemWin\App\MLinkEvent.c</prdf:filename>
+<prdf:filename>C:\CodeInspection\DisplayUnit\STemWin\App\MLinkHwSet.c</prdf:filename>
+<prdf:filename>C:\CodeInspection\DisplayUnit\STemWin\App\MLinkIOSet.c</prdf:filename>
+<prdf:filename>C:\CodeInspection\DisplayUnit\STemWin\App\MLinkInfo.c</prdf:filename>
+<prdf:filename>C:\CodeInspection\DisplayUnit\STemWin\App\MLinkOverview.c</prdf:filename>
+<prdf:filename>C:\CodeInspection\DisplayUnit\STemWin\App\MainMenu.c</prdf:filename>
+<prdf:filename>C:\CodeInspection\DisplayUnit\STemWin\App\MenuDLG.c</prdf:filename>
+<prdf:filename>C:\CodeInspection\DisplayUnit\STemWin\App\PasswordChange.c</prdf:filename>
+<prdf:filename>C:\CodeInspection\DisplayUnit\STemWin\App\SettingInput.c</prdf:filename>
+<prdf:filename>C:\CodeInspection\DisplayUnit\STemWin\App\SettingTime.c</prdf:filename>
+<prdf:filename>C:\CodeInspection\DisplayUnit\STemWin\App\Setup.c</prdf:filename>
+<prdf:filename>C:\CodeInspection\DisplayUnit\STemWin\App\modbus.c</prdf:filename>
+<prdf:filename>C:\CodeInspection\DisplayUnit\STemWin\Board\backlight\backlight.c</prdf:filename>
+<prdf:filename>C:\CodeInspection\DisplayUnit\STemWin\Board\lcd\lcd.c</prdf:filename>
+<prdf:filename>C:\CodeInspection\DisplayUnit\STemWin\Target\GUIConf.c</prdf:filename>
+<prdf:filename>C:\CodeInspection\DisplayUnit\STemWin\Target\LCDConf_FlexColor_Hmi.c</prdf:filename>
+<prdf:filename>C:\CodeInspection\DisplayUnit\Src\main.c</prdf:filename>
+<prdf:filename>C:\CodeInspection\DisplayUnit\Src\stm32f4xx_hal_timebase_TIM.c</prdf:filename>
+<prdf:filename>C:\CodeInspection\DisplayUnit\Src\stm32f4xx_hal_timebase_TIM.h</prdf:filename>
+<prdf:filename>C:\CodeInspection\DisplayUnit\Src\stm32f4xx_it.c</prdf:filename>
+<prdf:filename>C:\CodeInspection\DisplayUnit\Src\system_stm32f4xx.c</prdf:filename>
+<prdf:filename>C:\CodeInspection\DisplayUnit\qac\out\DisplayUnit (CMA file)</prdf:filename>
+</prdf:file_list>
+</prdf:section>
+<prdf:section xmlns:v="urn:schemas-microsoft-com:vml" created_by="standard.prdf.generator" created_by_version="1.3">
+<prdf:h3>Analysis Options</prdf:h3>
+<prdf:h4>Message Groups</prdf:h4>
+<prdf:text>Note: Messages that are mapped to more than one group will appear in the highest or lowest group only, according to the -standard option.</prdf:text>
+<prdf:eoln/>
+<prdf:eoln/>
+<prdf:text bold="1">Level 0</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> M2CM Rule 1.2: On</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> M2CM Rule 10.3: On</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> M2CM Rule 11.1: On</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> M2CM Rule 11.2: On</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> M2CM Rule 11.4: On</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> M2CM Rule 11.5: On</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> M2CM Rule 12.11: On</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> M2CM Rule 12.12: On</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> M2CM Rule 12.2: On</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> M2CM Rule 12.6: On</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> M2CM Rule 12.7: On</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> M2CM Rule 12.9: On</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> M2CM Rule 13.4: On</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> M2CM Rule 16.10: On</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> M2CM Rule 16.3: On</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> M2CM Rule 16.4: On</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> M2CM Rule 16.5: On</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> M2CM Rule 16.6: On</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> M2CM Rule 16.7: On</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> M2CM Rule 16.8: On</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> M2CM Rule 16.9: On</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> M2CM Rule 17.4: On</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> M2CM Rule 17.6: On</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> M2CM Rule 18.2: On</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> M2CM Rule 18.4: On</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> M2CM Rule 19.10: On</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> M2CM Rule 19.8: On</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> M2CM Rule 19.9: On</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> M2CM Rule 21.1: On</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> M2CM Rule 6.1: On</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> M2CM Rule 6.2: On</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> M2CM Rule 6.5: On</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> M2CM Rule 8.1: On</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> M2CM Rule 8.12: On</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> M2CM Rule 8.2: On</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> M2CM Rule 8.3: On</prdf:text>
+<prdf:eoln/>
+<prdf:text bold="1">Level 1</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> Arithmetic type - Complex expressions: Off</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> Arithmetic type - Enum types : Off</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> Arithmetic type - Implicit conversions: Off</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> M2CM Rule 12.1: On</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> M2CM Rule 12.3: On</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> M2CM Rule 12.4: On</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> M2CM Rule 13.1: On</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> M2CM Rule 13.3: On</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> M2CM Rule 13.5: On</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> M2CM Rule 13.7: On</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> M2CM Rule 14.1: On</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> M2CM Rule 14.10: On</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> M2CM Rule 14.2: On</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> M2CM Rule 15.1: On</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> M2CM Rule 15.2: On</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> M2CM Rule 15.3: On</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> M2CM Rule 15.4: On</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> M2CM Rule 15.5: On</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> M2CM Rule 16.2: On</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> M2CM Rule 17.5: On</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> M2CM Rule 18.1: On</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> M2CM Rule 19.1: Off</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> M2CM Rule 19.11: On</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> M2CM Rule 19.12: On</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> M2CM Rule 19.13: On</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> M2CM Rule 19.14: On</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> M2CM Rule 19.15: On</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> M2CM Rule 19.16: On</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> M2CM Rule 19.17: On</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> M2CM Rule 19.2: On</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> M2CM Rule 19.3: On</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> M2CM Rule 19.4: On</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> M2CM Rule 19.5: On</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> M2CM Rule 19.6: On</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> M2CM Rule 19.7: On</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> M2CM Rule 20.1: On</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> M2CM Rule 20.2: On</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> M2CM Rule 20.7: Off</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> M2CM Rule 5.2: On</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> M2CM Rule 5.3: On</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> M2CM Rule 5.5: On</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> M2CM Rule 6.3: Off</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> M2CM Rule 7.1: On</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> M2CM Rule 8.10: On</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> M2CM Rule 8.11: On</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> M2CM Rule 8.6: On</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> M2CM Rule 8.7: On</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> M2CM Rule 8.8: On</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> M2CM Rule 8.9: On</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> M2CM Rule 9.1: On</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> M2CM Rule 9.2: On</prdf:text>
+<prdf:eoln/>
+<prdf:text bold="1">Level 2</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> Arithmetic type - Assignment: Off</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> Arithmetic type - Balancing: Off</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> Arithmetic type - Casts: Off</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> Arithmetic type - Composite expressions: Off</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> Arithmetic type - Operands: Off</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> Arithmetic type - Operations: Off</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> LSIS_Coding_Style: On</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> LSIS_Naming_Style: Off</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> M2CM Rule 14.4: On</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> M2CM Rule 14.6: On</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> M2CM Rule 14.7: On</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> M2CM Rule 14.8: On</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> M2CM Rule 14.9: On</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> M2CM Rule 2.1: On</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> M2CM Rule 2.3: On</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> M2CM Rule 3.1: On</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> M2CM Rule 4.1: On</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> M2CM Rule 4.2: On</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> M2CM Rule 5.1: On</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> M2CM Rule 8.5: On</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> Macro Definition: Off</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> Pointers: Off</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> Readability: Off</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> Redundancy: Off</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> Side Effects: Off</prdf:text>
+<prdf:eoln/>
+<prdf:text bold="1">Level 3</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> Annotations: Off</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> Arithmetic type - Assignment: Off</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> Arithmetic type - Balancing: Off</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> Arithmetic type - Casts: Off</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> Arithmetic type - Operands: Off</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> Arithmetic type - Operations: Off</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> CMA information: Off</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> Dataflow recovery         : Off</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> Parsing recovery: Off</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> Pointers: Off</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> Sub-Messages: Off</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> Switch statements: Off</prdf:text>
+<prdf:eoln/>
+<prdf:text bold="1">Level 4</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> Local Standards: Off</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> QAC configuration: On</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> Syntax errors: On</prdf:text>
+<prdf:eoln/>
+<prdf:text bold="1">Level 5</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> Arrays       : Off</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> Arrays, structures, unions &amp; bit-fields: Off</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> Bracing and Indentation: Off</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> C++ compatibility: Off</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> CMA declaration checks: Off</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> CMA maintenance checks: Off</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> CMA undefined: Off</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> Constants: Off</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> Constraint violations: Off</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> Control flow: Off</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> Conversion to signed      : Off</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> Conversion to unsigned: Off</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> Dataflow - Arrays: Off</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> Dataflow - Control flow: Off</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> Dataflow - Conversion to signed: Off</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> Dataflow - Conversion to unsigned: Off</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> Dataflow - Invariant operations: Off</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> Dataflow - NULL pointers: Off</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> Dataflow - Overflow and wraparound: Off</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> Dataflow - Pointers: Off</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> Dataflow - Shift operations: Off</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> Dataflow - Unset data: Off</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> Declarations and Definitions: Off</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> Declarations and definitions: Off</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> Enumerations: Off</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> Explicitly undefined: Off</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> Functions: Off</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> ISO C90 Conformance limits: Off</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> ISO C99 Conformance limits: Off</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> ISO C99 Language features: Off</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> Identifiers: Off</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> Implementation defined: Off</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> Integral promotion: Off</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> Invariant operations: Off</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> K&amp;R compatibility: Off</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> Language extensions: Off</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> Metric thresholds: Off</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> Miscellaneous: Off</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> NULL pointers: Off</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> Overflow and wraparound: Off</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> Preprocessor: Off</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> Redundancy: Off</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> Shift operations: Off</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> Switch statements: Off</prdf:text>
+<prdf:eoln/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:nbsp/>
+<prdf:text> Unset data: Off</prdf:text>
+<prdf:eoln/>
+</prdf:section>
+<prdf:section xmlns:v="urn:schemas-microsoft-com:vml" created_by="standard.prdf.generator" created_by_version="1.3">
+<prdf:h4>Personality Options</prdf:h4>
+<prdf:verbatim>
+-align                   int=2
+-arithrsh                + (on)
+-bitsigned               + (on)
+-calling                 
+-callpack                
+-comment                 a
+-crossmoduleanalysisfile C:/CodeInspection/DisplayUnit/qac/out/
+                         DisplayUnit
+-d                       uint8_t=unsigned char,
+                         uint16_t=unsigned short,
+                         __IO=volatile,
+                         __AAPCS__=1,
+                         __ARM7EM__=1,
+                         __ATTRIBUTES_CAN_THROW=,
+                         __ATTRIBUTES_NORETURN=,
+                         __ATTRIBUTES=,
+                         __BOOL_TYPE__=unsigned char,
+                         __BUILD_NUMBER__=4415,
+                         __C99_BOOL__=1,
+                         __CHAR_ALIGN__=1,
+                         __CHAR_BITS__=8,
+                         __CHAR_MAX__=0xff,
+                         __CHAR_MIN__=0,
+                         __CHAR_SIZE__=1,
+                         __CODE_MEM0__=__code,
+                         __CODE_MEM0_POINTER_OK__=1,
+                         __CODE_MEM0_UNIQUE_POINTER__=1,
+                         __CODE_MEM0_VAR_OK__=1,
+                         __CODE_MEMORY_LIST1__()=
+                         __CODE_MEM_HELPER1__(__code,
+                         0 ),
+                         __CODE_MEMORY_LIST2__(_P1)=
+                         __CODE_MEM_HELPER2__(__code,
+                         0 ,
+                          _P1 ),
+                         __CODE_MEMORY_LIST3__(_P1,
+                         _P2)=__CODE_MEM_HELPER3__(__code,
+                         0 ,
+                          _P1 ,
+                          _P2 ),
+                         __CODE_PTR_MEMORY_LIST1__()=
+                         __CODE_PTR_MEM_HELPER1__(__code,
+                         0 ),
+                         __CODE_PTR_MEMORY_LIST2__(_P1)=
+                         __CODE_PTR_MEM_HELPER2__(__code,
+                         0 ,
+                          _P1 ),
+                         __CODE_PTR_MEMORY_LIST3__(_P1,
+                         _P2)=__CODE_PTR_MEM_HELPER3__(__code,
+                         0 ,
+                          _P1 ,
+                          _P2 ),
+                         __constrange(x,
+                        y)=,
+                         __CORE__=__ARM7EM__,
+                         __CPU_MODE__=2,
+                         __DATA_MEM0__=__data,
+                         __DATA_MEM0_HEAP__=0,
+                         __DATA_MEM0_INDEX_TYPE__=int,
+                         __DATA_MEM0_INTPTR_TYPE__=int,
+                         __DATA_MEM0_MAX_SIZE__=0x7fffffff,
+                         __DATA_MEM0_PAGE_SIZE__=0,
+                         __DATA_MEM0_POINTER_OK__=1,
+                         __DATA_MEM0_SIZE_TYPE__=unsigned int,
+                         __DATA_MEM0_UINTPTR_TYPE__=unsigned int,
+                         __DATA_MEM0_UNIQUE_POINTER__=1,
+                         __DATA_MEM0_VAR_OK__=1,
+                         __DATA_MEMORY_LIST1__()=
+                         __DATA_MEM_HELPER1__(__data,
+                         0 ),
+                         __DATA_MEMORY_LIST2__(_P1)=
+                         __DATA_MEM_HELPER2__(__data,
+                         0 ,
+                          _P1 ),
+                         __DATA_MEMORY_LIST3__(_P1,
+                         _P2)=__DATA_MEM_HELPER3__(__data,
+                         0 ,
+                          _P1 ,
+                          _P2 ),
+                         __DATA_PTR_MEMORY_LIST1__()=
+                         __DATA_PTR_MEM_HELPER1__(__data,
+                         0 ),
+                         __DATA_PTR_MEMORY_LIST2__(_P1)=
+                         __DATA_PTR_MEM_HELPER2__(__data,
+                         0 ,
+                          _P1 ),
+                         __DATA_PTR_MEMORY_LIST3__(_P1,
+                         _P2)=__DATA_PTR_MEM_HELPER3__(__data,
+                         0 ,
+                          _P1 ,
+                          _P2 ),
+                         __DEF_HEAP_MEM__=__data,
+                         __DEF_PTR_MEM__=__data,
+                         __DEPREC_ATTRS_CAN_THROW=,
+                         __DEPREC_ATTRS=,
+                         __DOUBLE_ALIGN__=8,
+                         __DOUBLE_SIZE__=8,
+                         __FLOAT_ALIGN__=4,
+                         __FLOAT_SIZE__=4,
+                         __HAS_JOINED_TYPES__=1,
+                         __HAS_LOCATED_DECLARATION__=1,
+                         __HAS_LOCATED_WITH_INIT__=1,
+                         __HAS_PACKED__=1,
+                         __HAS_WEAK__=1,
+                         __HEAP_MEM0__=0,
+                         __HEAP_MEMORY_LIST1__()=
+                         __HEAP_MEM_HELPER1__(__data,
+                         0 ),
+                         __HEAP_MEMORY_LIST2__(_P1)=
+                         __HEAP_MEM_HELPER2__(__data,
+                         0 ,
+                          _P1 ),
+                         __HEAP_MEMORY_LIST3__(_P1,
+                         _P2)=__HEAP_MEM_HELPER3__(__data,
+                         0 ,
+                          _P1 ,
+                          _P2 ),
+                         __HEAPD_MEMORY_LIST1__()=
+                         __HEAPD_MEM_HELPER1__(__data,
+                         0,
+                         _ ),
+                         __HEAPU_MEMORY_LIST1__()=
+                         __HEAPU_MEM_HELPER1__(__data,
+                         0 ),
+                         __HVAR_MEMORY_LIST1__()=
+                         __HVAR_MEM_HELPER1__(__data,
+                         0 ),
+                         __IAR_COMPILERBASE__=593157,
+                         __IAR_SYSTEMS_ICC__=9,
+                         __ICCARM__=1,
+                         __INT_ALIGN__=4,
+                         __INT_FAST16_T_MAX__=2147483647,
+                         __INT_FAST16_T_TYPE__=signed int,
+                         __INT_FAST32_T_MAX__=2147483647,
+                         __INT_FAST32_T_TYPE__=signed int,
+                         __INT_FAST64_T_MAX__=
+                         9223372036854775807LL,
+                         __INT_FAST64_T_TYPE__=signed long long 
+                         int,
+                         __INT_FAST8_T_MAX__=2147483647,
+                         __INT_FAST8_T_TYPE__=signed int,
+                         __INT_LEAST16_T_MAX__=32767,
+                         __INT_LEAST16_T_TYPE__=signed short int,
+                         __INT_LEAST32_T_MAX__=2147483647,
+                         __INT_LEAST32_T_TYPE__=signed int,
+                         __INT_LEAST64_T_MAX__=
+                         9223372036854775807LL,
+                         __INT_LEAST64_T_TYPE__=signed long long 
+                         int,
+                         __INT_LEAST8_T_MAX__=127,
+                         __INT_LEAST8_T_TYPE__=signed char,
+                         __INT_SIZE__=4,
+                         __INT16_C_SUFFIX__,
+                         __INT16_T_MAX__=32767,
+                         __INT16_T_TYPE__=signed short int,
+                         __INT32_C_SUFFIX__,
+                         __INT32_T_MAX__=2147483647,
+                         __INT32_T_TYPE__=signed int,
+                         __INT64_C_SUFFIX__=LL,
+                         __INT64_T_MAX__=9223372036854775807LL,
+                         __INT64_T_TYPE__=signed long long int,
+                         __INT8_C_SUFFIX__,
+                         __INT8_T_MAX__=127,
+                         __INT8_T_TYPE__=signed char,
+                         __INTMAX_C_SUFFIX__=LL,
+                         __INTMAX_T_MAX__=9223372036854775807LL,
+                         __INTMAX_T_TYPE__=signed long long int,
+                         __INTPTR_T_MAX__=2147483647L,
+                         __INTPTR_T_TYPE__=signed long int,
+                         __intrinsic=,
+                         __JMP_BUF_ELEMENT_TYPE__=unsigned long 
+                         long int,
+                         __JMP_BUF_NUM_ELEMENTS__=8,
+                         __LITTLE_ENDIAN__=1,
+                         __LONG_ALIGN__=4,
+                         __LONG_DOUBLE_ALIGN__=8,
+                         __LONG_DOUBLE_SIZE__=8,
+                         __LONG_LONG_ALIGN__=8,
+                         __LONG_LONG_SIZE__=8,
+                         __LONG_SIZE__=4,
+                         __MULTIPLE_HEAPS__=0,
+                         __MULTIPLE_INHERITANCE__=1,
+                         __NAN_HAS_HIGH_MANTISSA_BIT_SET__=0,
+                         __NO_WCHAR__,
+                         __PLAIN_INT_BITFIELD_IS_SIGNED__=0,
+                         __PRAGMA_PACK_ON__=1,
+                         __PTRDIFF_T_MAX__=2147483647,
+                         __PTRDIFF_T_TYPE__=signed int,
+                         __SHORT_ALIGN__=2,
+                         __SHORT_SIZE__=2,
+                         __SIGNED_CHAR_MAX__=127,
+                         __SIGNED_INT_MAX__=2147483647,
+                         __SIGNED_LONG_LONG_MAX__=
+                         9223372036854775807LL,
+                         __SIGNED_LONG_MAX__=2147483647L,
+                         __SIGNED_SHORT_MAX__=32767,
+                         __SIZE_T_MAX__=0xffffffffU,
+                         __SIZE_T_TYPE__=unsigned int,
+                         __spec_string=,
+                         __SUBNORMAL_FLOATING_POINTS__=1,
+                         __TID__=0xcf10,
+                         __TOPM_DATA_MEMORY_LIST1__(),
+                         __TOPM_DATA_MEMORY_LIST2__(_P1),
+                         __TOPM_DATA_MEMORY_LIST3__(_P1,
+                         _P2),
+                         __TOPP_DATA_MEMORY_LIST1__()=
+                         __TOPP_DATA_MEM_HELPER1__(__data,
+                         0 ),
+                         __TOPP_DATA_MEMORY_LIST2__(_P1)=
+                         __TOPP_DATA_MEM_HELPER2__(__data,
+                         0 ,
+                          _P1 ),
+                         __TOPP_DATA_MEMORY_LIST3__(_P1,
+                         _P2)=__TOPP_DATA_MEM_HELPER3__(__data,
+                         0 ,
+                          _P1 ,
+                          _P2 ),
+                         __UINT_FAST16_T_MAX__=0xffffffffU,
+                         __UINT_FAST16_T_TYPE__=unsigned int,
+                         __UINT_FAST32_T_MAX__=0xffffffffU,
+                         __UINT_FAST32_T_TYPE__=unsigned int,
+                         __UINT_FAST64_T_MAX__=
+                         0xffffffffffffffffULL,
+                         __UINT_FAST64_T_TYPE__=unsigned long long 
+                         int,
+                         __UINT_FAST8_T_MAX__=0xffffffffU,
+                         __UINT_FAST8_T_TYPE__=unsigned int,
+                         __UINT_LEAST16_T_MAX__=0xffff,
+                         __UINT_LEAST16_T_TYPE__=unsigned short 
+                         int,
+                         __UINT_LEAST32_T_MAX__=0xffffffffU,
+                         __UINT_LEAST32_T_TYPE__=unsigned int,
+                         __UINT_LEAST64_T_MAX__=
+                         0xffffffffffffffffULL,
+                         __UINT_LEAST64_T_TYPE__=unsigned long 
+                         long int,
+                         __UINT_LEAST8_T_MAX__=0xff,
+                         __UINT_LEAST8_T_TYPE__=unsigned char,
+                         __UINT16_C_SUFFIX__,
+                         __UINT16_T_MAX__=0xffff,
+                         __UINT16_T_TYPE__=unsigned short int,
+                         __UINT32_C_SUFFIX__=U,
+                         __UINT32_T_MAX__=0xffffffffU,
+                         __UINT32_T_TYPE__=unsigned int,
+                         __UINT64_C_SUFFIX__=ULL,
+                         __UINT64_T_MAX__=0xffffffffffffffffULL,
+                         __UINT64_T_TYPE__=unsigned long long int,
+                         __UINT8_C_SUFFIX__,
+                         __UINT8_T_MAX__=0xff,
+                         __UINT8_T_TYPE__=unsigned char,
+                         __UINTMAX_C_SUFFIX__=ULL,
+                         __UINTMAX_T_MAX__=0xffffffffffffffffULL,
+                         __UINTMAX_T_TYPE__=unsigned long long int,
+                         __UINTPTR_T_MAX__=0xffffffffUL,
+                         __UINTPTR_T_TYPE__=unsigned long int,
+                         __UNSIGNED_CHAR_MAX__=0xff,
+                         __UNSIGNED_INT_MAX__=0xffffffffU,
+                         __UNSIGNED_LONG_LONG_MAX__=
+                         0xffffffffffffffffULL,
+                         __UNSIGNED_LONG_MAX__=0xffffffffUL,
+                         __UNSIGNED_SHORT_MAX__=0xffff,
+                         __VA_STACK_ALIGN__=4,
+                         __VA_STACK_ALIGN_EXTRA_BEFORE__=0,
+                         __VA_STACK_DECREASING__=1,
+                         __VAR_MEMORY_LIST1__()=
+                         __VAR_MEM_HELPER1__(__data,
+                         0 ),
+                         __VAR_MEMORY_LIST2__(_P1)=
+                         __VAR_MEM_HELPER2__(__data,
+                         0 ,
+                          _P1 ),
+                         __VAR_MEMORY_LIST3__(_P1,
+                         _P2)=__VAR_MEM_HELPER3__(__data,
+                         0 ,
+                          _P1 ,
+                          _P2 ),
+                         __VARD_MEMORY_LIST1__()=
+                         __VARD_MEM_HELPER1__(__data,
+                         0,
+                         _ ),
+                         __VER__=6050001,
+                         __WCHAR_T_MAX__=0xffff,
+                         __WCHAR_T_SIZE__=2,
+                         __WCHAR_T_TYPE__=unsigned short int,
+                         __WEAK=,
+                         _DLIB_ONLY_C89=0,
+                         _DLIB_WIDE_CHARACTERS=0,
+                         _Pragma(x)=,
+                         _PTRDIFF_T=1,
+                         _WCHART=1,
+                         DEBUG=1,
+                         OS_LIBMODE_XR,
+                         OS_SUPPORT_PTLS=0,
+                         STM32F407xx,
+                         USE_HAL_DRIVER
+-echo                    
+-enabledataflow          - (off)
+-encoding                ASC
+-expandmultihomedmessages 1500-1501 1506-1510 1512-1513 1515-1517 
+                         1520 1525-1529
+-extensions              ansipc,
+                         pc,
+                         asm,
+                         dollar,
+                         longlong
+-file                    
+-foldplainchar           + (on)
+-forceinclude            
+-forgetall               
+-format                  %?u==0%(%?C%(%^%)%)%?u==0%(%?h%(Err%:Msg%)
+                         (%g:%N) %:%R(12, )%R(%u,  )%)%t%?u!=0%(: 
+                         %B(%l)%)
+-hdrsuppress             - (off)
+-heap                    512
+-help                    - (off)
+-hiddenmessage           - (off)
+-hiddenwarnings          - (off)
+-html                    - (off)
+-i                       C:/PRQA/QAC-8.1.2-R/include/ansi,
+                         C:/CodeInspection/DisplayUnit/Inc,
+                         C:/CodeInspection/DisplayUnit/Drivers/
+                         STM32F4xx_HAL_Driver/Inc,
+                         C:/CodeInspection/DisplayUnit/Drivers/
+                         STM32F4xx_HAL_Driver/Inc/Legacy,
+                         C:/CodeInspection/DisplayUnit/Middlewares/
+                         ST/STM32_USB_Device_Library/Core/Inc,
+                         C:/CodeInspection/DisplayUnit/Middlewares/
+                         ST/STM32_USB_Device_Library/Class/CDC/Inc,
+                         C:/CodeInspection/DisplayUnit/Middlewares/
+                         ST/STM32_USB_Host_Library/Core/Inc,
+                         C:/CodeInspection/DisplayUnit/Middlewares/
+                         ST/STM32_USB_Host_Library/Class/CDC/Inc,
+                         C:/CodeInspection/DisplayUnit/Drivers/
+                         CMSIS/Device/ST/STM32F4xx/Include,
+                         C:/CodeInspection/DisplayUnit/Drivers/
+                         CMSIS/Include,
+                         C:/CodeInspection/DisplayUnit/
+                         embOS_CortexM_IAR_V6_Src_V438/Start/
+                         BoardSupport/ST/STM32F429_Discovery/Setup,
+                         C:/CodeInspection/DisplayUnit/
+                         embOS_CortexM_IAR_V6_Src_V438/Start/Inc,
+                         C:/CodeInspection/DisplayUnit/STemWin/
+                         Board/Inc,
+                         C:/CodeInspection/DisplayUnit/STemWin/
+                         Target,
+                         C:/CodeInspection/DisplayUnit/STemWin/App,
+                         C:/CodeInspection/DisplayUnit/Middlewares/
+                         ST/STemWin/inc,
+                         C:/CodeInspection/DisplayUnit/Drivers/
+                         CMSIS/RTOS/Template,
+                         C:/CodeInspection/DisplayUnit/Middlewares/
+                         ST/STM32_USB_Host_Library/Class/AUDIO/Inc,
+                         C:/CodeInspection/DisplayUnit/Middlewares/
+                         ST/STM32_USB_Host_Library/Class/HID/Inc,
+                         C:/CodeInspection/DisplayUnit/Middlewares/
+                         ST/STM32_USB_Host_Library/Class/MSC/Inc,
+                         C:/CodeInspection/DisplayUnit/Middlewares/
+                         ST/STM32_USB_Host_Library/Class/MTP/Inc,
+                         C:/CodeInspection/DisplayUnit/Middlewares/
+                         ST/STM32_USB_Device_Library/Class/
+                         CustomHID/Inc,
+                         C:/CodeInspection/DisplayUnit/Middlewares/
+                         ST/STM32_USB_Device_Library/Class/HID/Inc,
+                         C:/CodeInspection/DisplayUnit/qac/lib,
+                         C:/CodeInspection/DisplayUnit/STemWin/App/
+                         DEMO,
+                         C:/CodeInspection/DisplayUnit/Middlewares/
+                         Modbus/include,
+                         C:/CodeInspection/DisplayUnit/Middlewares/
+                         MbSlave,
+                         C:/CodeInspection/DisplayUnit/Middlewares/
+                         Modbus/port
+-indentlevel             4
+-intrinsictype           
+-k+r                     
+-line                    + (on)
+-list                    
+-maxcount                0
+-maxerrors               0
+-maxlinelength           0
+-messagesonly            - (off)
+-metrics                 + (on)
+-namelength              31
+-namerulefile            
+-nomsg                   
+-nosort                  - (off)
+-onelineonly             - (off)
+-only                    9 40-42 159-179 184-186 190-204 206-208 
+                         231 234-235 245 249-251 257-259 268-269 
+                         275 284-287 289 301-302 304 307-313 
+                         316-317 336-337 339 341-342 400-403 
+                         422-423 434 473 475 488-489 491-492 502 
+                         543-545 581 594 606 623-625 630 632 
+                         636-637 648 654 658 661 666-668 670 672 
+                         676 678 680 686 693-694 706 735 745 750 
+                         759 771 777 779 805-809 813-814 817-820 
+                         822-827 829 831 833 836-837 841-842 
+                         846-850 853-854 856 863-865 867 869 872 
+                         874 878-881 883-888 896-898 904 907 
+                         914-915 917-918 925-928 942 970 1004-1005 
+                         1009-1010 1013 1330-1336 1460 1501 
+                         1503-1509 1513-1514 1520 1525-1529 1594 
+                         1599 2001-2004 2008-2009 2019-2020 
+                         2050-2051 2203 2205 2212 2214 2216 
+                         2462-2463 2547 2744 2776-2777 2791-2792 
+                         2800-2802 2810-2812 2820-2822 2830-2832 
+                         2840-2842 2850-2853 2855-2857 2860-2862 
+                         2871-2872 2877 2880 2882-2883 2887-2892 
+                         2895-2897 2901-2902 2910-2912 2930-2932 
+                         2961-2962 2971-2972 2980-2983 2990-2996 
+                         3001-3002 3006-3007 3101-3102 3104-3105 
+                         3107-3108 3110 3112-3115 3120 3132 3200 
+                         3205 3207 3217-3219 3221-3222 3224-3225 
+                         3230 3260-3263 3307 3311-3313 3315 
+                         3317-3320 3322 3326 3332 3334-3335 
+                         3340-3342 3377 3389 3391-3397 3402 3406 
+                         3408-3413 3415 3425-3427 3431 3437-3439 
+                         3447-3448 3450-3453 3458 3460-3461 3480 
+                         3601 3610 3628-3629 3635 3659-3660 3665 
+                         3670 3673 3675 3684 3700-3707 3711 3722 
+                         3733 3744 3755 3766 3777 3788 3832-3833 
+                         3850 3863 3900-3907 3911 3922 3933 3944 
+                         3955 3966 3977 3988 4032-4033 4050 4063 
+                         4100-4116 4121 4130-4131 4140 4600-4608
+-outputpath              C:/CodeInspection/DisplayUnit/qac/out/
+                         STemWin/Target
+-overwrite               - (off)
+-ppfilename              + (on)
+-pplist                  + (on)
+-ppmetrics               - (off)
+-prodoption              qar::report_type=Compliance Report
+-quiet                   C:/PRQA/QAC-8.1.2-R/include/ansi,
+                         C:/CodeInspection/DisplayUnit/Inc,
+                         C:/CodeInspection/DisplayUnit/Drivers/
+                         STM32F4xx_HAL_Driver/Inc,
+                         C:/CodeInspection/DisplayUnit/Drivers/
+                         STM32F4xx_HAL_Driver/Inc/Legacy,
+                         C:/CodeInspection/DisplayUnit/Middlewares/
+                         ST/STM32_USB_Device_Library/Core/Inc,
+                         C:/CodeInspection/DisplayUnit/Middlewares/
+                         ST/STM32_USB_Device_Library/Class/CDC/Inc,
+                         C:/CodeInspection/DisplayUnit/Middlewares/
+                         ST/STM32_USB_Host_Library/Core/Inc,
+                         C:/CodeInspection/DisplayUnit/Middlewares/
+                         ST/STM32_USB_Host_Library/Class/CDC/Inc,
+                         C:/CodeInspection/DisplayUnit/Drivers/
+                         CMSIS/Device/ST/STM32F4xx/Include,
+                         C:/CodeInspection/DisplayUnit/Drivers/
+                         CMSIS/Include,
+                         C:/CodeInspection/DisplayUnit/
+                         embOS_CortexM_IAR_V6_Src_V438/Start/
+                         BoardSupport/ST/STM32F429_Discovery/Setup,
+                         C:/CodeInspection/DisplayUnit/
+                         embOS_CortexM_IAR_V6_Src_V438/Start/Inc,
+                         C:/CodeInspection/DisplayUnit/STemWin/
+                         Board/Inc,
+                         C:/CodeInspection/DisplayUnit/STemWin/
+                         Target,
+                         C:/CodeInspection/DisplayUnit/STemWin/App,
+                         C:/CodeInspection/DisplayUnit/Middlewares/
+                         ST/STemWin/inc,
+                         C:/CodeInspection/DisplayUnit/Drivers/
+                         CMSIS/RTOS/Template,
+                         C:/CodeInspection/DisplayUnit/Middlewares/
+                         ST/STM32_USB_Host_Library/Class/AUDIO/Inc,
+                         C:/CodeInspection/DisplayUnit/Middlewares/
+                         ST/STM32_USB_Host_Library/Class/HID/Inc,
+                         C:/CodeInspection/DisplayUnit/Middlewares/
+                         ST/STM32_USB_Host_Library/Class/MSC/Inc,
+                         C:/CodeInspection/DisplayUnit/Middlewares/
+                         ST/STM32_USB_Host_Library/Class/MTP/Inc,
+                         C:/CodeInspection/DisplayUnit/Middlewares/
+                         ST/STM32_USB_Device_Library/Class/
+                         CustomHID/Inc,
+                         C:/CodeInspection/DisplayUnit/Middlewares/
+                         ST/STM32_USB_Device_Library/Class/HID/Inc,
+                         C:/CodeInspection/DisplayUnit/qac/lib,
+                         C:/CodeInspection/DisplayUnit/STemWin/App/
+                         DEMO,
+                         C:/CodeInspection/DisplayUnit/Middlewares/
+                         Modbus/include,
+                         C:/CodeInspection/DisplayUnit/Middlewares/
+                         MbSlave,
+                         C:/CodeInspection/DisplayUnit/Middlewares/
+                         Modbus/port
+-references              - (off)
+-remark                  
+-settings                - (off)
+-size                    int=16
+-skippragma              asm,
+                        endasm,
+                         ASM,
+                        ENDASM
+-slashwhite              + (on)
+-standard                + (on)
+-strict                  + (on)
+-strictrank              - (off)
+-strictsignedness        + (on)
+-style                   exdented
+-summary                 - (off)
+-suppresslvl             3 5-9
+-tablesummary            - (off)
+-tabstop                 4
+-textonly                - (off)
+-threshold               
+-total                   - (off)
+-unsignedchar            - (off)
+-usrfile                 .LSIS
+-usrpath                 C:/CodeInspection/DisplayUnit/qac/per/
+-version                 - (off)
+-via                     
+-warncall                
+-xcase                   - (off)
+-xnamelength             31
+</prdf:verbatim>
+</prdf:section>
+<prdf:section xmlns:v="urn:schemas-microsoft-com:vml" created_by="standard.prdf.generator" created_by_version="1.3">
+<prdf:h3>Report Settings</prdf:h3>
+<prdf:verbatim>
+top_ten_only: false
+hide_clean: false
+</prdf:verbatim>
+</prdf:section>
+<prdf:section xmlns:v="urn:schemas-microsoft-com:vml" created_by="standard.prdf.generator" created_by_version="1.3">
+<prdf:h3>Program Details</prdf:h3>
+<prdf:text>Created by Programming Research standard.prdf.generator version 1.3</prdf:text>
+</prdf:section>
+</prdf:appendices>
+</prdf:report>

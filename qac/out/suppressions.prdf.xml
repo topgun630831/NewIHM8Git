@@ -1,0 +1,1518 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+
+<prdf:section created_by='standard.prdf.generator' created_by_version='1.3'
+ xmlns:prdf='http://www.programmingresearch.com/todo'
+ xmlns:svg='http://www.w3.org/2000/svg'
+ xmlns:v='urn:schemas-microsoft-com:vml' >
+<prdf:h2>Suppressions</prdf:h2>
+<prdf:table>
+<prdf:col_width width='12%'/>
+<prdf:col_width width='62%'/>
+<prdf:col_width width='12%'/>
+<prdf:row>
+<prdf:cell heading='1' align='right'>Message Number</prdf:cell>
+<prdf:cell heading='1' align='left'>Message Text</prdf:cell>
+<prdf:cell heading='1' align='right'>#Suppressions</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell label='L001-msgNo' align='right'>310</prdf:cell>
+<prdf:cell label='L002-msgTxt' align='left'>Casting to different object pointer type. (M2CM Rule 11.4)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>7</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell heading='1'><prdf:nbsp/></prdf:cell>
+<prdf:cell heading='1' align='left'>File Name</prdf:cell>
+<prdf:cell heading='1' align='right'>#Suppressions On<prdf:nbsp/>Line</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\App\Setup.c (line:292)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\App\modbus.c (line:401)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\App\modbus.c (line:424)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\App\modbus.c (line:447)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\App\modbus.c (line:549)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\App\modbus.c (line:883)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\Src\main.c (line:148)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+</prdf:table>
+<prdf:table>
+<prdf:col_width width='12%'/>
+<prdf:col_width width='62%'/>
+<prdf:col_width width='12%'/>
+<prdf:row>
+<prdf:cell heading='1' align='right'>Message Number</prdf:cell>
+<prdf:cell heading='1' align='left'>Message Text</prdf:cell>
+<prdf:cell heading='1' align='right'>#Suppressions</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell label='L001-msgNo' align='right'>1330</prdf:cell>
+<prdf:cell label='L002-msgTxt' align='left'>The parameter identifiers in this function declaration differ from those in a previous declaration. (M2CM Rule 16.4)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell heading='1'><prdf:nbsp/></prdf:cell>
+<prdf:cell heading='1' align='left'>File Name</prdf:cell>
+<prdf:cell heading='1' align='right'>#Suppressions On<prdf:nbsp/>Line</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\Src\main.c (line:142)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+</prdf:table>
+<prdf:table>
+<prdf:col_width width='12%'/>
+<prdf:col_width width='62%'/>
+<prdf:col_width width='12%'/>
+<prdf:row>
+<prdf:cell heading='1' align='right'>Message Number</prdf:cell>
+<prdf:cell heading='1' align='left'>Message Text</prdf:cell>
+<prdf:cell heading='1' align='right'>#Suppressions</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell label='L001-msgNo' align='right'>1334</prdf:cell>
+<prdf:cell label='L002-msgTxt' align='left'>The parameter identifiers in the prototypes of these functions/function pointers are different. (M2CM Rule 16.4)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>7</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell heading='1'><prdf:nbsp/></prdf:cell>
+<prdf:cell heading='1' align='left'>File Name</prdf:cell>
+<prdf:cell heading='1' align='right'>#Suppressions On<prdf:nbsp/>Line</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\App\MenuDLG.c (line:499)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\App\MenuDLG.c (line:500)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\App\MenuDLG.c (line:501)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\App\MenuDLG.c (line:502)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\App\MenuDLG.c (line:503)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\App\MenuDLG.c (line:504)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\App\MenuDLG.c (line:505)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+</prdf:table>
+<prdf:table>
+<prdf:col_width width='12%'/>
+<prdf:col_width width='62%'/>
+<prdf:col_width width='12%'/>
+<prdf:row>
+<prdf:cell heading='1' align='right'>Message Number</prdf:cell>
+<prdf:cell heading='1' align='left'>Message Text</prdf:cell>
+<prdf:cell heading='1' align='right'>#Suppressions</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell label='L001-msgNo' align='right'>1503</prdf:cell>
+<prdf:cell label='L002-msgTxt' align='left'>The function '%1s' is defined but is not used within this project. (M2CM Rule 14.1)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>77</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell heading='1'><prdf:nbsp/></prdf:cell>
+<prdf:cell heading='1' align='left'>File Name</prdf:cell>
+<prdf:cell heading='1' align='right'>#Suppressions On<prdf:nbsp/>Line</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\Src\system_stm32f4xx.c (line:170)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\Src\system_stm32f4xx.c (line:243)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\Src\stm32f4xx_it.c (line:63)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\Src\stm32f4xx_it.c (line:94)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\Src\stm32f4xx_it.c (line:110)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\Src\stm32f4xx_it.c (line:126)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\Src\stm32f4xx_it.c (line:142)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\Src\stm32f4xx_it.c (line:155)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\Src\stm32f4xx_it.c (line:204)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\Src\stm32f4xx_it.c (line:217)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\Src\stm32f4xx_it.c (line:231)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\Src\stm32f4xx_it.c (line:245)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\Src\stm32f4xx_it.c (line:259)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\Src\stm32f4xx_hal_timebase_TIM.c (line:83)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\Src\stm32f4xx_hal_timebase_TIM.c (line:137)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\Src\stm32f4xx_hal_timebase_TIM.c (line:149)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\App\Setup.c (line:1083)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\App\PasswordChange.c (line:235)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\App\modbus.c (line:65)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\App\modbus.c (line:124)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\App\modbus.c (line:162)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\App\modbus.c (line:212)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\App\modbus.c (line:257)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\App\modbus.c (line:304)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\App\modbus.c (line:348)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\App\modbus.c (line:359)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\App\modbus.c (line:370)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\App\modbus.c (line:381)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\App\modbus.c (line:392)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\App\modbus.c (line:415)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\App\modbus.c (line:438)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\App\modbus.c (line:457)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\App\modbus.c (line:499)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\App\modbus.c (line:512)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\App\modbus.c (line:532)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\App\modbus.c (line:558)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\App\modbus.c (line:576)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\App\modbus.c (line:587)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\App\modbus.c (line:688)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\App\modbus.c (line:833)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\App\modbus.c (line:844)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\App\MLinkOverview.c (line:58)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\App\MLinkOverview.c (line:79)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\App\MLinkOverview.c (line:215)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\App\SettingInput.c (line:82)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\App\SettingInput.c (line:285)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\App\SettingTime.c (line:165)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\App\MLinkInfo.c (line:614)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\App\MainMenu.c (line:1187)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\App\MainMenu.c (line:1420)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\App\MainMenu.c (line:1591)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\App\MLinkControl.c (line:639)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\App\MLinkIOSet.c (line:501)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\App\MLinkEvent.c (line:119)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\App\MenuDLG.c (line:490)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\App\MLinkHwSet.c (line:148)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\App\AcbMccbMeasurement.c (line:1034)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\App\AcbMccbEvent.c (line:533)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\App\AcbMccbHwSet.c (line:212)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\App\AcbMccbRelaySet.c (line:309)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\App\AcbMccbInfo.c (line:404)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\Board\lcd\lcd.c (line:412)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\Board\lcd\lcd.c (line:732)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\App\AcbMccbControl.c (line:527)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\Target\GUIConf.c (line:104)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\Board\backlight\backlight.c (line:68)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\Target\LCDConf_FlexColor_Hmi.c (line:374)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\Target\LCDConf_FlexColor_Hmi.c (line:445)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\Src\main.c (line:142)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\Src\main.c (line:929)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\Src\main.c (line:1121)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\Src\main.c (line:1330)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\Src\main.c (line:1360)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\Src\main.c (line:1454)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\Src\main.c (line:1481)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\Src\main.c (line:1643)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\Src\main.c (line:1686)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+</prdf:table>
+<prdf:table>
+<prdf:col_width width='12%'/>
+<prdf:col_width width='62%'/>
+<prdf:col_width width='12%'/>
+<prdf:row>
+<prdf:cell heading='1' align='right'>Message Number</prdf:cell>
+<prdf:cell heading='1' align='left'>Message Text</prdf:cell>
+<prdf:cell heading='1' align='right'>#Suppressions</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell label='L001-msgNo' align='right'>1504</prdf:cell>
+<prdf:cell label='L002-msgTxt' align='left'>The object '%1s' is only referenced in the translation unit where it is defined. (M2CM Rule 8.10)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell heading='1'><prdf:nbsp/></prdf:cell>
+<prdf:cell heading='1' align='left'>File Name</prdf:cell>
+<prdf:cell heading='1' align='right'>#Suppressions On<prdf:nbsp/>Line</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\Src\main.c (line:96)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+</prdf:table>
+<prdf:table>
+<prdf:col_width width='12%'/>
+<prdf:col_width width='62%'/>
+<prdf:col_width width='12%'/>
+<prdf:row>
+<prdf:cell heading='1' align='right'>Message Number</prdf:cell>
+<prdf:cell heading='1' align='left'>Message Text</prdf:cell>
+<prdf:cell heading='1' align='right'>#Suppressions</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell label='L001-msgNo' align='right'>1505</prdf:cell>
+<prdf:cell label='L002-msgTxt' align='left'>The function '%1s' is only referenced in the translation unit where it is defined. (M2CM Rule 8.10)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>28</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell heading='1'><prdf:nbsp/></prdf:cell>
+<prdf:cell heading='1' align='left'>File Name</prdf:cell>
+<prdf:cell heading='1' align='right'>#Suppressions On<prdf:nbsp/>Line</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\App\PasswordChange.c (line:79)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\App\modbus.c (line:319)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\App\modbus.c (line:797)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\App\SettingTime.c (line:129)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\App\MainMenu.c (line:83)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\App\MainMenu.c (line:184)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\App\MainMenu.c (line:191)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\App\MainMenu.c (line:243)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\App\MainMenu.c (line:550)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\App\MainMenu.c (line:601)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\App\MainMenu.c (line:609)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\App\MainMenu.c (line:640)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\App\MainMenu.c (line:719)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\App\MainMenu.c (line:748)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\App\MainMenu.c (line:1132)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\App\MLinkControl.c (line:37)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\App\MLinkControl.c (line:148)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\App\MLinkControl.c (line:193)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\App\MLinkControl.c (line:253)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\App\MLinkEvent.c (line:55)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\App\AcbMccbEvent.c (line:99)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\App\AcbMccbEvent.c (line:135)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\App\AcbMccbInfo.c (line:93)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\Board\lcd\lcd.c (line:178)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\Board\lcd\lcd.c (line:183)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\Board\lcd\lcd.c (line:188)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\Board\lcd\lcd.c (line:248)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\Src\main.c (line:1142)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+</prdf:table>
+<prdf:table>
+<prdf:col_width width='12%'/>
+<prdf:col_width width='62%'/>
+<prdf:col_width width='12%'/>
+<prdf:row>
+<prdf:cell heading='1' align='right'>Message Number</prdf:cell>
+<prdf:cell heading='1' align='left'>Message Text</prdf:cell>
+<prdf:cell heading='1' align='right'>#Suppressions</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell label='L001-msgNo' align='right'>1514</prdf:cell>
+<prdf:cell label='L002-msgTxt' align='left'>The object '%1s' is only referenced by function '%2s', in the translation unit where it is defined (M2CM Rule 8.7)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>8</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell heading='1'><prdf:nbsp/></prdf:cell>
+<prdf:cell heading='1' align='left'>File Name</prdf:cell>
+<prdf:cell heading='1' align='right'>#Suppressions On<prdf:nbsp/>Line</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\Src\system_stm32f4xx.c (line:140)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\Src\system_stm32f4xx.c (line:141)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\App\MLinkOverview.c (line:75)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\App\MLinkOverview.c (line:76)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\App\MainMenu.c (line:72)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\Src\main.c (line:92)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\Src\main.c (line:93)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\Src\main.c (line:94)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+</prdf:table>
+<prdf:table>
+<prdf:col_width width='12%'/>
+<prdf:col_width width='62%'/>
+<prdf:col_width width='12%'/>
+<prdf:row>
+<prdf:cell heading='1' align='right'>Message Number</prdf:cell>
+<prdf:cell heading='1' align='left'>Message Text</prdf:cell>
+<prdf:cell heading='1' align='right'>#Suppressions</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell label='L001-msgNo' align='right'>3120</prdf:cell>
+<prdf:cell label='L002-msgTxt' align='left'>Hard-coded 'magic' integer constant '%s'. (LSIS_Coding_Style)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>97</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell heading='1'><prdf:nbsp/></prdf:cell>
+<prdf:cell heading='1' align='left'>File Name</prdf:cell>
+<prdf:cell heading='1' align='right'>#Suppressions On<prdf:nbsp/>Line</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\Src\system_stm32f4xx.c (line:140)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\Src\system_stm32f4xx.c (line:184)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\Src\system_stm32f4xx.c (line:187)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\Src\system_stm32f4xx.c (line:190)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\Src\system_stm32f4xx.c (line:245)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>2</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\Src\system_stm32f4xx.c (line:255)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\Src\system_stm32f4xx.c (line:258)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\Src\system_stm32f4xx.c (line:263)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\Src\system_stm32f4xx.c (line:269)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\Src\system_stm32f4xx.c (line:274)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\Src\system_stm32f4xx.c (line:277)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\Src\system_stm32f4xx.c (line:286)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\Src\stm32f4xx_hal_timebase_TIM.c (line:103)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\Src\stm32f4xx_hal_timebase_TIM.c (line:106)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\Src\stm32f4xx_hal_timebase_TIM.c (line:117)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\Board\lcd\lcd.c (line:285)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\Board\lcd\lcd.c (line:292)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\Board\lcd\lcd.c (line:296)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\Board\lcd\lcd.c (line:299)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\Board\lcd\lcd.c (line:301)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\Board\lcd\lcd.c (line:306)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\Board\lcd\lcd.c (line:307)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\Board\lcd\lcd.c (line:309)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\Board\lcd\lcd.c (line:310)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\Board\lcd\lcd.c (line:313)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\Board\lcd\lcd.c (line:316)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\Board\lcd\lcd.c (line:318)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\Board\lcd\lcd.c (line:319)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\Board\lcd\lcd.c (line:320)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\Board\lcd\lcd.c (line:322)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\Board\lcd\lcd.c (line:323)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\Board\lcd\lcd.c (line:325)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\Board\lcd\lcd.c (line:326)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\Board\lcd\lcd.c (line:328)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\Board\lcd\lcd.c (line:329)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\Board\lcd\lcd.c (line:331)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\Board\lcd\lcd.c (line:332)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\Board\lcd\lcd.c (line:334)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\Board\lcd\lcd.c (line:335)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\Board\lcd\lcd.c (line:336)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\Board\lcd\lcd.c (line:339)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\Board\lcd\lcd.c (line:340)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\Board\lcd\lcd.c (line:341)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\Board\lcd\lcd.c (line:342)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\Board\lcd\lcd.c (line:344)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\Board\lcd\lcd.c (line:345)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\Board\lcd\lcd.c (line:346)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\Board\lcd\lcd.c (line:347)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\Board\lcd\lcd.c (line:348)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\Board\lcd\lcd.c (line:349)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\Board\lcd\lcd.c (line:350)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\Board\lcd\lcd.c (line:351)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\Board\lcd\lcd.c (line:352)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\Board\lcd\lcd.c (line:353)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\Board\lcd\lcd.c (line:354)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\Board\lcd\lcd.c (line:355)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\Board\lcd\lcd.c (line:356)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\Board\lcd\lcd.c (line:357)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\Board\lcd\lcd.c (line:358)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\Board\lcd\lcd.c (line:360)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\Board\lcd\lcd.c (line:361)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\Board\lcd\lcd.c (line:362)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\Board\lcd\lcd.c (line:363)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\Board\lcd\lcd.c (line:364)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\Board\lcd\lcd.c (line:365)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\Board\lcd\lcd.c (line:366)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\Board\lcd\lcd.c (line:367)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\Board\lcd\lcd.c (line:368)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\Board\lcd\lcd.c (line:369)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\Board\lcd\lcd.c (line:370)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\Board\lcd\lcd.c (line:371)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\Board\lcd\lcd.c (line:372)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\Board\lcd\lcd.c (line:373)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\Board\lcd\lcd.c (line:374)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\Board\lcd\lcd.c (line:379)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\Board\lcd\lcd.c (line:380)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\Board\lcd\lcd.c (line:382)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\Board\lcd\lcd.c (line:383)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\Board\lcd\lcd.c (line:387)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\Board\lcd\lcd.c (line:388)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\Board\lcd\lcd.c (line:389)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\Board\lcd\lcd.c (line:390)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\Board\lcd\lcd.c (line:397)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\Board\lcd\lcd.c (line:398)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\Board\lcd\lcd.c (line:400)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\Board\lcd\lcd.c (line:403)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\Board\lcd\lcd.c (line:404)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\Board\lcd\lcd.c (line:406)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\Board\lcd\lcd.c (line:409)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\Board\lcd\lcd.c (line:416)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\Board\lcd\lcd.c (line:417)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\Board\lcd\lcd.c (line:419)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\Board\lcd\lcd.c (line:422)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\Board\lcd\lcd.c (line:423)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\Board\lcd\lcd.c (line:425)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\Board\lcd\lcd.c (line:428)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+</prdf:table>
+<prdf:table>
+<prdf:col_width width='12%'/>
+<prdf:col_width width='62%'/>
+<prdf:col_width width='12%'/>
+<prdf:row>
+<prdf:cell heading='1' align='right'>Message Number</prdf:cell>
+<prdf:cell heading='1' align='left'>Message Text</prdf:cell>
+<prdf:cell heading='1' align='right'>#Suppressions</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell label='L001-msgNo' align='right'>3132</prdf:cell>
+<prdf:cell label='L002-msgTxt' align='left'>Hard coded 'magic' number '%s' used to define the size of an array. (LSIS_Coding_Style)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>2</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell heading='1'><prdf:nbsp/></prdf:cell>
+<prdf:cell heading='1' align='left'>File Name</prdf:cell>
+<prdf:cell heading='1' align='right'>#Suppressions On<prdf:nbsp/>Line</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\Src\system_stm32f4xx.c (line:141)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\Src\system_stm32f4xx.c (line:142)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+</prdf:table>
+<prdf:table>
+<prdf:col_width width='12%'/>
+<prdf:col_width width='62%'/>
+<prdf:col_width width='12%'/>
+<prdf:row>
+<prdf:cell heading='1' align='right'>Message Number</prdf:cell>
+<prdf:cell heading='1' align='left'>Message Text</prdf:cell>
+<prdf:cell heading='1' align='right'>#Suppressions</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell label='L001-msgNo' align='right'>3200</prdf:cell>
+<prdf:cell label='L002-msgTxt' align='left'>'%s' returns a value which is not being used. (M2CM Rule 16.10)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell heading='1'><prdf:nbsp/></prdf:cell>
+<prdf:cell heading='1' align='left'>File Name</prdf:cell>
+<prdf:cell heading='1' align='right'>#Suppressions On<prdf:nbsp/>Line</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\Src\main.c (line:697)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+</prdf:table>
+<prdf:table>
+<prdf:col_width width='12%'/>
+<prdf:col_width width='62%'/>
+<prdf:col_width width='12%'/>
+<prdf:row>
+<prdf:cell heading='1' align='right'>Message Number</prdf:cell>
+<prdf:cell heading='1' align='left'>Message Text</prdf:cell>
+<prdf:cell heading='1' align='right'>#Suppressions</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell label='L001-msgNo' align='right'>3335</prdf:cell>
+<prdf:cell label='L002-msgTxt' align='left'>No function declaration. Implicit declaration inserted: 'extern int %s();'. (M2CM Rule 8.1)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>3</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell heading='1'><prdf:nbsp/></prdf:cell>
+<prdf:cell heading='1' align='left'>File Name</prdf:cell>
+<prdf:cell heading='1' align='right'>#Suppressions On<prdf:nbsp/>Line</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\App\MainMenu.c (line:203)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\App\MainMenu.c (line:369)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\Src\main.c (line:697)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+</prdf:table>
+<prdf:table>
+<prdf:col_width width='12%'/>
+<prdf:col_width width='62%'/>
+<prdf:col_width width='12%'/>
+<prdf:row>
+<prdf:cell heading='1' align='right'>Message Number</prdf:cell>
+<prdf:cell heading='1' align='left'>Message Text</prdf:cell>
+<prdf:cell heading='1' align='right'>#Suppressions</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell label='L001-msgNo' align='right'>3635</prdf:cell>
+<prdf:cell label='L002-msgTxt' align='left'>Function identifier used as a pointer without a preceding &amp; operator. (M2CM Rule 16.9)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>7</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell heading='1'><prdf:nbsp/></prdf:cell>
+<prdf:cell heading='1' align='left'>File Name</prdf:cell>
+<prdf:cell heading='1' align='right'>#Suppressions On<prdf:nbsp/>Line</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\App\MenuDLG.c (line:499)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\App\MenuDLG.c (line:500)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\App\MenuDLG.c (line:501)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\App\MenuDLG.c (line:502)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\App\MenuDLG.c (line:503)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\App\MenuDLG.c (line:504)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\App\MenuDLG.c (line:505)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+</prdf:table>
+<prdf:table>
+<prdf:col_width width='12%'/>
+<prdf:col_width width='62%'/>
+<prdf:col_width width='12%'/>
+<prdf:row>
+<prdf:cell heading='1' align='right'>Message Number</prdf:cell>
+<prdf:cell heading='1' align='left'>Message Text</prdf:cell>
+<prdf:cell heading='1' align='right'>#Suppressions</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell label='L001-msgNo' align='right'>3673</prdf:cell>
+<prdf:cell label='L002-msgTxt' align='left'>The object addressed by the pointer parameter '%s' is not modified and so the pointer could be of type 'pointer to const'. (M2CM Rule 16.7)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell heading='1'><prdf:nbsp/></prdf:cell>
+<prdf:cell heading='1' align='left'>File Name</prdf:cell>
+<prdf:cell heading='1' align='right'>#Suppressions On<prdf:nbsp/>Line</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\Src\main.c (line:1121)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+</prdf:table>
+<prdf:table>
+<prdf:col_width width='12%'/>
+<prdf:col_width width='62%'/>
+<prdf:col_width width='12%'/>
+<prdf:row>
+<prdf:cell heading='1' align='right'>Message Number</prdf:cell>
+<prdf:cell heading='1' align='left'>Message Text</prdf:cell>
+<prdf:cell heading='1' align='right'>#Suppressions</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell label='L001-msgNo' align='right'>4603</prdf:cell>
+<prdf:cell label='L002-msgTxt' align='left'>The object/function '%1s'is being defined with the same name as an ordinary identifier defined in '&lt;%2s&gt;'. (M2CM Rule 20.2)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell heading='1'><prdf:nbsp/></prdf:cell>
+<prdf:cell heading='1' align='left'>File Name</prdf:cell>
+<prdf:cell heading='1' align='right'>#Suppressions On<prdf:nbsp/>Line</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\Src\main.c (line:142)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+</prdf:table>
+<prdf:table>
+<prdf:col_width width='12%'/>
+<prdf:col_width width='62%'/>
+<prdf:col_width width='12%'/>
+<prdf:row>
+<prdf:cell heading='1' align='right'>Message Number</prdf:cell>
+<prdf:cell heading='1' align='left'>Message Text</prdf:cell>
+<prdf:cell heading='1' align='right'>#Suppressions</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell label='L001-msgNo' align='right'>4604</prdf:cell>
+<prdf:cell label='L002-msgTxt' align='left'>The object/function '%1s' is being declared with the same name as an ordinary identifier defined in '&lt;%2s&gt;'. (M2CM Rule 20.2)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>2</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell heading='1'><prdf:nbsp/></prdf:cell>
+<prdf:cell heading='1' align='left'>File Name</prdf:cell>
+<prdf:cell heading='1' align='right'>#Suppressions On<prdf:nbsp/>Line</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\App\MainMenu.c (line:203)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell><prdf:nbsp/></prdf:cell>
+<prdf:cell label='L004-fileLineLoc' align='left'>C:\CodeInspection\DisplayUnit\STemWin\App\MainMenu.c (line:369)</prdf:cell>
+<prdf:cell label='L003-count' align='right'>1</prdf:cell>
+</prdf:row>
+</prdf:table>
+</prdf:section>

@@ -1,0 +1,963 @@
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\qac\out\DisplayUnit
+<S>STNAM C:\CodeInspection\DisplayUnit\qac\out\DisplayUnit
+<S>STCYA 1537
+<S>STNFA 237
+<S>STNEA 78
+<S>STNRA 0
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\Target\LCDConf_FlexColor_Hmi.c
+<S>STNAM LcdWriteReg
+<S>STM29 0
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\Target\LCDConf_FlexColor_Hmi.c
+<S>STNAM LcdWriteData
+<S>STM29 0
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\Target\LCDConf_FlexColor_Hmi.c
+<S>STNAM LcdWriteDataMultiple
+<S>STM29 0
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\Target\LCDConf_FlexColor_Hmi.c
+<S>STNAM LcdReadDataMultiple
+<S>STM29 0
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\Target\LCDConf_FlexColor_Hmi.c
+<S>STNAM LCD_X_Config
+<S>STM29 0
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\Target\LCDConf_FlexColor_Hmi.c
+<S>STNAM LCD_X_DisplayDriver
+<S>STM29 0
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\Board\lcd\lcd.c
+<S>STNAM LCD_init
+<S>STM29 2
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\Src\system_stm32f4xx.c
+<S>STNAM SystemInit
+<S>STM29 0
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\Src\system_stm32f4xx.c
+<S>STNAM SystemCoreClockUpdate
+<S>STM29 0
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\Src\stm32f4xx_it.c
+<S>STNAM NMI_Handler
+<S>STM29 0
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\Src\stm32f4xx_it.c
+<S>STNAM MemManage_Handler
+<S>STM29 0
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\Src\stm32f4xx_it.c
+<S>STNAM BusFault_Handler
+<S>STM29 0
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\Src\stm32f4xx_it.c
+<S>STNAM UsageFault_Handler
+<S>STM29 0
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\Src\stm32f4xx_it.c
+<S>STNAM SVC_Handler
+<S>STM29 0
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\Src\stm32f4xx_it.c
+<S>STNAM DebugMon_Handler
+<S>STM29 0
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\Src\stm32f4xx_it.c
+<S>STNAM RCC_IRQHandler
+<S>STM29 0
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\Src\stm32f4xx_it.c
+<S>STNAM TIM2_IRQHandler
+<S>STM29 0
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\Src\stm32f4xx_it.c
+<S>STNAM SPI3_IRQHandler
+<S>STM29 0
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\Src\stm32f4xx_it.c
+<S>STNAM OTG_FS_IRQHandler
+<S>STM29 0
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\Src\stm32f4xx_it.c
+<S>STNAM OTG_HS_IRQHandler
+<S>STM29 0
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\Src\stm32f4xx_hal_timebase_TIM.c
+<S>STNAM HAL_InitTick
+<S>STM29 0
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\Src\stm32f4xx_hal_timebase_TIM.c
+<S>STNAM HAL_SuspendTick
+<S>STM29 0
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\Src\stm32f4xx_hal_timebase_TIM.c
+<S>STNAM HAL_ResumeTick
+<S>STM29 0
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\Src\main.c
+<S>STNAM ReceiveTask
+<S>STM29 0
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\Src\main.c
+<S>STNAM EmWinTask
+<S>STM29 0
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\Src\main.c
+<S>STNAM OS_HAL_Init
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\Src\main.c
+<S>STNAM OS_Sysclock_Config
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\Src\main.c
+<S>STNAM Board_Init
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\Src\main.c
+<S>STNAM GetSector
+<S>STM29 2
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\Src\main.c
+<S>STNAM PCF2129_set_register
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\Src\main.c
+<S>STNAM PCF2129_read_register
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\Src\main.c
+<S>STNAM i2bcd
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\Src\main.c
+<S>STNAM bcd2i
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\Src\main.c
+<S>STNAM fputc
+<S>STM29 0
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\Src\main.c
+<S>STNAM MX_GPIO_Init
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\Src\main.c
+<S>STNAM MX_USART1_UART_Init
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\Src\main.c
+<S>STNAM MX_USART6_UART_Init
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\Src\main.c
+<S>STNAM MX_FSMC_Init
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\Src\main.c
+<S>STNAM MX_TIM4_Init
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\Src\main.c
+<S>STNAM MX_SPI3_Init
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\Src\main.c
+<S>STNAM MX_CRC_Init
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\Src\main.c
+<S>STNAM Pcf2129AT_init
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\Src\main.c
+<S>STNAM main
+<S>STM29 0
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\Board\backlight\backlight.c
+<S>STNAM User_Pwm_Setup
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\Src\main.c
+<S>STNAM __set_BASEPRI
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\Src\main.c
+<S>STNAM MX_I2C2_Init
+<S>STM29 0
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\Src\main.c
+<S>STNAM MX_USART2_UART_Init
+<S>STM29 0
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\Src\main.c
+<S>STNAM HAL_TIM_PeriodElapsedCallback
+<S>STM29 0
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\Src\main.c
+<S>STNAM _Error_Handler
+<S>STM29 2
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\Src\main.c
+<S>STNAM FlashRead
+<S>STM29 0
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\Src\main.c
+<S>STNAM FlashWrite
+<S>STM29 0
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\Src\main.c
+<S>STNAM FaultCountRead
+<S>STM29 0
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\Src\main.c
+<S>STNAM FaultCountWrite
+<S>STM29 0
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\Src\main.c
+<S>STNAM PCF2127_set_time
+<S>STM29 2
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\Src\main.c
+<S>STNAM PCF2127_readTime
+<S>STM29 0
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\Src\main.c
+<S>STNAM RTCBatteryStatus
+<S>STM29 0
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\Setup.c
+<S>STNAM DeviceDescroptionSend
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\Setup.c
+<S>STNAM DeviceDescriptionDisp
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\Setup.c
+<S>STNAM DisplayConnectSettingMenu
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\Setup.c
+<S>STNAM DisplayConnectSetting
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\Setup.c
+<S>STNAM DisplaySettingMenu
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\Setup.c
+<S>STNAM SettingMenuExec
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\Setup.c
+<S>STNAM DisplaySetting
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\Setup.c
+<S>STNAM SetupDeviceInfoValueDisp
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\Setup.c
+<S>STNAM DisplayDeviceDisp
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\Setup.c
+<S>STNAM SetInfoMenu
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\Setup.c
+<S>STNAM FactoryRest
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\Setup.c
+<S>STNAM FactoryResetInitDisp
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\Setup.c
+<S>STNAM DisplayDeviceDispValue
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\Setup.c
+<S>STNAM Setup
+<S>STM29 0
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\SettingTime.c
+<S>STNAM DateTimeDisp
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\SettingTime.c
+<S>STNAM LeapYear
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\SettingTime.c
+<S>STNAM GetDaysInMonth
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\SettingTime.c
+<S>STNAM ButtonDisp
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\SettingTime.c
+<S>STNAM SettingTime
+<S>STM29 0
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\SettingInput.c
+<S>STNAM InputDisp
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\SettingInput.c
+<S>STNAM InputDispString
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\SettingInput.c
+<S>STNAM SettingInput
+<S>STM29 0
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\SettingInput.c
+<S>STNAM SettingInputString
+<S>STM29 0
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\PasswordChange.c
+<S>STNAM PasswordButtonDisp
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\PasswordChange.c
+<S>STNAM PasswordChangeDisp
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\PasswordChange.c
+<S>STNAM QuestionMessage
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\PasswordChange.c
+<S>STNAM PasswordChange
+<S>STM29 0
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\modbus.c
+<S>STNAM CRC16
+<S>STM29 8
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\modbus.c
+<S>STNAM ReadAll
+<S>STM29 6
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\modbus.c
+<S>STNAM ModbusRecvCheck
+<S>STM29 2
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\modbus.c
+<S>STNAM ModbusSendFrame
+<S>STM29 0
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\modbus.c
+<S>STNAM ModbusSendFrameReadTime
+<S>STM29 0
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\modbus.c
+<S>STNAM ModbusSendFrameDeviceIdentofocation
+<S>STM29 0
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\modbus.c
+<S>STNAM ModbusSendFrameDeviceIdentofocation3
+<S>STM29 0
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\modbus.c
+<S>STNAM ModbusSendFrameEvent
+<S>STM29 0
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\modbus.c
+<S>STNAM ModbusSendFrameFromUsb
+<S>STM29 0
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\modbus.c
+<S>STNAM ModbusCRCCheck
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\modbus.c
+<S>STNAM ModbusGetUint8_U
+<S>STM29 0
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\modbus.c
+<S>STNAM ModbusGetUint8_L
+<S>STM29 0
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\modbus.c
+<S>STNAM ModbusGetUint16
+<S>STM29 0
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\modbus.c
+<S>STNAM ModbusGetInt16
+<S>STM29 0
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\modbus.c
+<S>STNAM ModbusGetFloat
+<S>STM29 0
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\modbus.c
+<S>STNAM ModbusGetUint32
+<S>STM29 0
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\modbus.c
+<S>STNAM ModbusGetInt32
+<S>STM29 0
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\modbus.c
+<S>STNAM ModbusGetBit
+<S>STM29 0
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\modbus.c
+<S>STNAM ModbusGetString
+<S>STM29 0
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\modbus.c
+<S>STNAM ModbusGetDateTime
+<S>STM29 0
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\modbus.c
+<S>STNAM ModbusGetProductName
+<S>STM29 0
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\modbus.c
+<S>STNAM ModbusGetId1
+<S>STM29 0
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\modbus.c
+<S>STNAM ModbusGetId2
+<S>STM29 0
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\modbus.c
+<S>STNAM ModbusGetId3
+<S>STM29 0
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\modbus.c
+<S>STNAM ModbusControl
+<S>STM29 0
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\modbus.c
+<S>STNAM ModbusSetTime
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\modbus.c
+<S>STNAM ModbusSetTimeAndWait
+<S>STM29 0
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\modbus.c
+<S>STNAM ModbusAcbSystemEventGet
+<S>STM29 0
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\MLinkOverview.c
+<S>STNAM DispMLinkStatus
+<S>STM29 0
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\MLinkOverview.c
+<S>STNAM MLinkOverviewValue
+<S>STM29 0
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\MLinkOverview.c
+<S>STNAM MLinkOverview
+<S>STM29 0
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\MLinkIOSet.c
+<S>STNAM MLinkIOSetMenu
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\MLinkIOSet.c
+<S>STNAM MLinkIOSetSend
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\MLinkIOSet.c
+<S>STNAM MLinkIOSetAppValue
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\MLinkIOSet.c
+<S>STNAM MLinkIOSetApp
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\MLinkIOSet.c
+<S>STNAM MLinkDiMakeString
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\MLinkIOSet.c
+<S>STNAM MLinkIOSetDIValue
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\MLinkIOSet.c
+<S>STNAM MLinkIOSetDI
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\MLinkIOSet.c
+<S>STNAM MLinkDoMakeString
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\MLinkIOSet.c
+<S>STNAM MLinkIOSetDOValue
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\MLinkIOSet.c
+<S>STNAM MLinkIOSetDO
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\MLinkIOSet.c
+<S>STNAM MLinkIOSetDisp
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\MLinkIOSet.c
+<S>STNAM MLinkIOSetValueDisp
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\MLinkIOSet.c
+<S>STNAM MLinkIOSet
+<S>STM29 0
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\MLinkInfo.c
+<S>STNAM BaseDispU32
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\MLinkInfo.c
+<S>STNAM DispFormatU32
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\MLinkInfo.c
+<S>STNAM DeviceInfoSend
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\MLinkInfo.c
+<S>STNAM OperationInfoSend
+<S>STM29 2
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\MLinkInfo.c
+<S>STNAM DeviceInfoValueDisp
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\MLinkInfo.c
+<S>STNAM DeviceInitDisp
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\MLinkInfo.c
+<S>STNAM OperationInfoValueDisp
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\MLinkInfo.c
+<S>STNAM OperationDisp
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\MLinkInfo.c
+<S>STNAM OperationInitDisp
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\MLinkInfo.c
+<S>STNAM MlinkDeviceDisp
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\MLinkInfo.c
+<S>STNAM MLinkInfomation
+<S>STM29 0
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\MLinkHwSet.c
+<S>STNAM MlinkHwSetSend
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\MLinkHwSet.c
+<S>STNAM MlinkHwSetDisp
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\MLinkHwSet.c
+<S>STNAM MLinkSetInitDisp
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\MLinkHwSet.c
+<S>STNAM MLinkHwSet
+<S>STM29 0
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\MLinkEvent.c
+<S>STNAM MLinkEventInitDisp
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\MLinkEvent.c
+<S>STNAM CountDisp
+<S>STM29 2
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\MLinkEvent.c
+<S>STNAM MLinkEvent
+<S>STM29 0
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\MLinkControl.c
+<S>STNAM ControlSucceededMessage
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\MLinkControl.c
+<S>STNAM InitDisp
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\MLinkControl.c
+<S>STNAM MLinkControlValueDisp
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\MLinkControl.c
+<S>STNAM MLinkControlDisp
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\MLinkControl.c
+<S>STNAM ControlErrorMessage
+<S>STM29 2
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\MLinkControl.c
+<S>STNAM PasswordDisp
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\MLinkControl.c
+<S>STNAM MLinkButtonDisp
+<S>STM29 2
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\MLinkControl.c
+<S>STNAM ControlSet
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\MLinkControl.c
+<S>STNAM MLinkControl
+<S>STM29 0
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\MenuDLG.c
+<S>STNAM EnglishInitButton
+<S>STM29 2
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\MenuDLG.c
+<S>STNAM ChineseInitButton
+<S>STM29 2
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\MenuDLG.c
+<S>STNAM RussianInitButton
+<S>STM29 2
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\MenuDLG.c
+<S>STNAM _cbDialog
+<S>STM29 0
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\MenuDLG.c
+<S>STNAM MenuDisp
+<S>STM29 2
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\MenuDLG.c
+<S>STNAM AcbMccbMenu
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\MenuDLG.c
+<S>STNAM MlinkMenu
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\MenuDLG.c
+<S>STNAM CreateMenu
+<S>STM29 0
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\MainMenu.c
+<S>STNAM AcbMccbOverView
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\MainMenu.c
+<S>STNAM AcbMccbOverViewValue
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\MainMenu.c
+<S>STNAM PageDisp
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\MainMenu.c
+<S>STNAM CommStatusDisp
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\MainMenu.c
+<S>STNAM Overview
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\MainMenu.c
+<S>STNAM ScreenTimerInit
+<S>STM29 2
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\MainMenu.c
+<S>STNAM GetTimerDiff
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\MainMenu.c
+<S>STNAM LanguageSelect
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\MainMenu.c
+<S>STNAM BaseDisp
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\MainMenu.c
+<S>STNAM DispFormat
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\MainMenu.c
+<S>STNAM round
+<S>STM29 2
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\MainMenu.c
+<S>STNAM DispStatus
+<S>STM29 2
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\MainMenu.c
+<S>STNAM OverViewValue
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\MainMenu.c
+<S>STNAM CommTimerClear
+<S>STM29 2
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\MainMenu.c
+<S>STNAM CommTimerInit
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\MainMenu.c
+<S>STNAM StatusSend
+<S>STM29 2
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\MainMenu.c
+<S>STNAM StatusRecvErrorProcess
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\MainMenu.c
+<S>STNAM StatusRecv
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\MainMenu.c
+<S>STNAM OverviewSend
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\MainMenu.c
+<S>STNAM GuiMain
+<S>STM29 0
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\MainMenu.c
+<S>STNAM GetKey
+<S>STM29 0
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\MainMenu.c
+<S>STNAM KeyCheck
+<S>STM29 0
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\AcbMccbRelaySet.c
+<S>STNAM RelaySetSend
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\AcbMccbRelaySet.c
+<S>STNAM RelaySetValueDisp
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\AcbMccbRelaySet.c
+<S>STNAM AcbMccbRelaySetInitDisp
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\AcbMccbRelaySet.c
+<S>STNAM AcbMccbRelaySet
+<S>STM29 0
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\AcbMccbMeasurement.c
+<S>STNAM AcbMccbMeasurementSend
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\AcbMccbMeasurement.c
+<S>STNAM DemandMakeString
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\AcbMccbMeasurement.c
+<S>STNAM AcbMccbValueDispDemand
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\AcbMccbMeasurement.c
+<S>STNAM AcbMccbMeasurementRecv
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\AcbMccbMeasurement.c
+<S>STNAM AcbMccbMeasurementMenu
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\AcbMccbMeasurement.c
+<S>STNAM AcbMccbValueDispVIP
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\AcbMccbMeasurement.c
+<S>STNAM AcbMccbMeasurementDispVIP
+<S>STM29 2
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\AcbMccbMeasurement.c
+<S>STNAM AcbMccbValueDispEnergy
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\AcbMccbMeasurement.c
+<S>STNAM AcbMccbMeasurementDispEnergy
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\AcbMccbMeasurement.c
+<S>STNAM AcbMccbValueDispPQ
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\AcbMccbMeasurement.c
+<S>STNAM AcbMccbMeasurementDispPQ
+<S>STM29 2
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\AcbMccbMeasurement.c
+<S>STNAM AcbMccbMeasurementDispDemand
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\AcbMccbMeasurement.c
+<S>STNAM AcbMccbMeasurementDisp
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\AcbMccbMeasurement.c
+<S>STNAM AcbMccbValueDisp
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\AcbMccbMeasurement.c
+<S>STNAM localFloor
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\AcbMccbMeasurement.c
+<S>STNAM BaseDisp3
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\AcbMccbMeasurement.c
+<S>STNAM DispFormat3
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\AcbMccbMeasurement.c
+<S>STNAM AcbMccbMeasurement
+<S>STM29 0
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\AcbMccbInfo.c
+<S>STNAM InfoSend
+<S>STM29 2
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\AcbMccbInfo.c
+<S>STNAM InfoValueDisp
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\AcbMccbInfo.c
+<S>STNAM InfoInitDisp
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\AcbMccbInfo.c
+<S>STNAM InfoDisp
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\AcbMccbInfo.c
+<S>STNAM InfoMenu
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\AcbMccbInfo.c
+<S>STNAM AcbMccbInfomation
+<S>STM29 0
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\AcbMccbHwSet.c
+<S>STNAM AcbMccbHwSetSend
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\AcbMccbHwSet.c
+<S>STNAM RecvHwSetDisp
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\AcbMccbHwSet.c
+<S>STNAM AcbMccbHwSetDisp
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\AcbMccbHwSet.c
+<S>STNAM AcbMccbHwSet
+<S>STM29 0
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\AcbMccbEvent.c
+<S>STNAM BaseDisp2
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\AcbMccbEvent.c
+<S>STNAM DispFormat2
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\AcbMccbEvent.c
+<S>STNAM EventMenuDisp
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\AcbMccbEvent.c
+<S>STNAM EventMenu
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\AcbMccbEvent.c
+<S>STNAM EventSend
+<S>STM29 2
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\AcbMccbEvent.c
+<S>STNAM EventDataRecv
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\AcbMccbEvent.c
+<S>STNAM AcbMccbEvent
+<S>STM29 0
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\AcbMccbControl.c
+<S>STNAM AcbMccbControlSend
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\AcbMccbControl.c
+<S>STNAM ControlCheck
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\AcbMccbControl.c
+<S>STNAM AcbMccbIoValueDisp
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\AcbMccbControl.c
+<S>STNAM AcbMccbControlDisp
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\App\AcbMccbControl.c
+<S>STNAM AcbMccbControl
+<S>STM29 0
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\Board\backlight\backlight.c
+<S>STNAM BacklightBrghtness
+<S>STM29 0
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\Board\lcd\lcd.c
+<S>STNAM _CPU_Ram_Write
+<S>STM29 2
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\Board\lcd\lcd.c
+<S>STNAM Set_Window_Size
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\Board\lcd\lcd.c
+<S>STNAM Draw_Line
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\Board\lcd\lcd.c
+<S>STNAM CPU_Command_Write
+<S>STM29 4
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\Board\lcd\lcd.c
+<S>STNAM CPU_Data_Write
+<S>STM29 4
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\Board\lcd\lcd.c
+<S>STNAM CPU_Data_Read
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\Board\lcd\lcd.c
+<S>STNAM LCD_OnOff
+<S>STM29 1
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\Board\lcd\lcd.c
+<S>STNAM LCD_Clear
+<S>STM29 0
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\Board\lcd\lcd.c
+<S>STNAM Draw_Rectangle
+<S>STM29 0
+<S>
+<S>STFIL C:\CodeInspection\DisplayUnit\STemWin\Target\GUIConf.c
+<S>STNAM GUI_X_Config
+<S>STM29 0

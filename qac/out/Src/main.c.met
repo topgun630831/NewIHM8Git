@@ -1,0 +1,2742 @@
+<RDEF> I Includes
+<R>I C:/CodeInspection/DisplayUnit/Src/main.c C:/CodeInspection/DisplayUnit/Inc/main.h 50
+<R>I C:/CodeInspection/DisplayUnit/Inc/main.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI.h 58
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_ConfDefaults.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_ConfDefaults.h C:/CodeInspection/DisplayUnit/STemWin/Target/GUIConf.h 60
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_Type.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_Type.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/LCD.h 60
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/LCD.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_ConfDefaults.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/LCD.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/Global.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_Type.h C:/CodeInspection/DisplayUnit/STemWin/Target/GUIConf.h 61
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_Version.h 58
+<R>I C:/CodeInspection/DisplayUnit/Inc/main.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h 59
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h 46
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Inc/main.h 43
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h 244
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h 46
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h 149
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cm4.h 183
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cm4.h C:/CodeInspection/DisplayUnit/qac/lib/stdint.h 44
+<R>I C:/CodeInspection/DisplayUnit/qac/lib/stdint.h C:/CodeInspection/DisplayUnit/qac/lib/ycheck.h 10
+<R>I C:/CodeInspection/DisplayUnit/qac/lib/stdint.h C:/CodeInspection/DisplayUnit/qac/lib/yvals.h 11
+<R>I C:/CodeInspection/DisplayUnit/qac/lib/yvals.h C:/CodeInspection/DisplayUnit/qac/lib/DLib_Defaults.h 42
+<R>I C:/CodeInspection/DisplayUnit/qac/lib/DLib_Defaults.h C:/CodeInspection/DisplayUnit/qac/lib/DLib_Product.h 50
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cm4.h C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cmInstr.h 210
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cmInstr.h C:/CodeInspection/DisplayUnit/qac/lib/cmsis_iar.h 65
+<R>I C:/CodeInspection/DisplayUnit/qac/lib/cmsis_iar.h C:/CodeInspection/DisplayUnit/qac/lib/intrinsics.h 22
+<R>I C:/CodeInspection/DisplayUnit/qac/lib/intrinsics.h C:/CodeInspection/DisplayUnit/qac/lib/yvals.h 14
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cm4.h C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cmFunc.h 211
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cmFunc.h C:/CodeInspection/DisplayUnit/qac/lib/cmsis_iar.h 65
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cm4.h C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cmSimd.h 212
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cmSimd.h C:/CodeInspection/DisplayUnit/qac/lib/cmsis_iar.h 69
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h 184
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h C:/CodeInspection/DisplayUnit/qac/lib/stdint.h 185
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h 250
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h 47
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h C:/PRQA/QAC-8.1.2-R/include/ansi/stdio.h 48
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h 49
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h 248
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h 230
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h 252
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h 656
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h 256
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_crc.h 268
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_crc.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h 292
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h 313
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h 314
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_sram.h 296
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_sram.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_fsmc.h 47
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_fsmc.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h 320
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c_ex.h 473
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_iwdg.h 328
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_iwdg.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h 336
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h 290
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc.h 344
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc_ex.h 634
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc_ex.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h 360
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h 364
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h 1289
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h 368
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h 388
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h 49
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 49
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h 121
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 49
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_hcd.h 392
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_hcd.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h 49
+<R>I C:/CodeInspection/DisplayUnit/Inc/main.h C:/PRQA/QAC-8.1.2-R/include/ansi/time.h 60
+<R>I C:/CodeInspection/DisplayUnit/Src/main.c C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h 51
+<R>I C:/CodeInspection/DisplayUnit/Src/main.c C:/CodeInspection/DisplayUnit/Inc/usb_device.h 52
+<R>I C:/CodeInspection/DisplayUnit/Inc/usb_device.h C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h 57
+<R>I C:/CodeInspection/DisplayUnit/Inc/usb_device.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h 58
+<R>I C:/CodeInspection/DisplayUnit/Inc/usb_device.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h 59
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h C:/CodeInspection/DisplayUnit/Inc/usbd_conf.h 37
+<R>I C:/CodeInspection/DisplayUnit/Inc/usbd_conf.h C:/PRQA/QAC-8.1.2-R/include/ansi/stdio.h 56
+<R>I C:/CodeInspection/DisplayUnit/Inc/usbd_conf.h C:/PRQA/QAC-8.1.2-R/include/ansi/stdlib.h 57
+<R>I C:/CodeInspection/DisplayUnit/Inc/usbd_conf.h C:/PRQA/QAC-8.1.2-R/include/ansi/string.h 58
+<R>I C:/CodeInspection/DisplayUnit/Inc/usbd_conf.h C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h 59
+<R>I C:/CodeInspection/DisplayUnit/Inc/usbd_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h 60
+<R>I C:/CodeInspection/DisplayUnit/Src/main.c C:/CodeInspection/DisplayUnit/Inc/usb_host.h 53
+<R>I C:/CodeInspection/DisplayUnit/Inc/usb_host.h C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h 58
+<R>I C:/CodeInspection/DisplayUnit/Inc/usb_host.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h 59
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/main.c 56 5 N ON - F P
+<R>I C:/CodeInspection/DisplayUnit/Src/main.c C:/CodeInspection/DisplayUnit/embOS_CortexM_IAR_V6_Src_V438/Start/Inc/RTOS.h 59
+<R>I C:/CodeInspection/DisplayUnit/embOS_CortexM_IAR_V6_Src_V438/Start/Inc/RTOS.h C:/PRQA/QAC-8.1.2-R/include/ansi/string.h 65
+<R>I C:/CodeInspection/DisplayUnit/embOS_CortexM_IAR_V6_Src_V438/Start/Inc/RTOS.h C:/CodeInspection/DisplayUnit/qac/lib/intrinsics.h 66
+<R>I C:/CodeInspection/DisplayUnit/Src/main.c C:/CodeInspection/DisplayUnit/STemWin/Board/Inc/lcd.h 60
+<R>I C:/CodeInspection/DisplayUnit/STemWin/Board/Inc/lcd.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h 4
+<R>I C:/CodeInspection/DisplayUnit/Src/main.c C:/CodeInspection/DisplayUnit/STemWin/Board/Inc/ads7843_ts.h 61
+<R>I C:/CodeInspection/DisplayUnit/STemWin/Board/Inc/ads7843_ts.h C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h 5
+<R>I C:/CodeInspection/DisplayUnit/Src/main.c C:/CodeInspection/DisplayUnit/STemWin/Board/Inc/backlight.h 62
+<R>I C:/CodeInspection/DisplayUnit/Src/main.c C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 63
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_ConfDefaults.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_Type.h 58
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM_GUI.h 59
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI.h 60
+<DEFINE> EXTERN C:/CodeInspection/DisplayUnit/Src/main.c 64 N DF OM - - - O
+<R>I C:/CodeInspection/DisplayUnit/Src/main.c C:/CodeInspection/DisplayUnit/STemWin/App/GuiData.h 65
+<R>I C:/CodeInspection/DisplayUnit/STemWin/App/GuiData.h C:/PRQA/QAC-8.1.2-R/include/ansi/stdlib.h 4
+<R>I C:/CodeInspection/DisplayUnit/STemWin/App/GuiData.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h 5
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/BUTTON.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/BUTTON.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/BUTTON.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG_Intern.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG_Intern.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/BUTTON.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WIDGET.h 58
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WIDGET.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM_Intern.h 60
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM_Intern.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM_Intern.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_Private.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_Private.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_Private.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/LCD_Protected.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/LCD_Protected.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/LCD.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_Private.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_Debug.h 58
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_Debug.h C:/PRQA/QAC-8.1.2-R/include/ansi/stddef.h 59
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_Debug.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI.h 61
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_Private.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM_GUI.h 60
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WIDGET.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/SCROLLBAR.h 96
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/SCROLLBAR.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/SCROLLBAR.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG_Intern.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/SCROLLBAR.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WIDGET.h 58
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/CALENDAR.h 58
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/CALENDAR.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/CHECKBOX.h 59
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/CHECKBOX.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/CHECKBOX.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG_Intern.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/CHECKBOX.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WIDGET.h 58
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/CHOOSECOLOR.h 60
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/CHOOSECOLOR.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/CHOOSEFILE.h 61
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/CHOOSEFILE.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DROPDOWN.h 62
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DROPDOWN.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DROPDOWN.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG_Intern.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DROPDOWN.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/LISTBOX.h 58
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/LISTBOX.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/LISTBOX.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WIDGET.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/LISTBOX.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG_Intern.h 58
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/EDIT.h 63
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/EDIT.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/EDIT.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG_Intern.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/FRAMEWIN.h 64
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/FRAMEWIN.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/FRAMEWIN.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WIDGET.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/FRAMEWIN.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG_Intern.h 59
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GRAPH.h 65
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GRAPH.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GRAPH.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG_Intern.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GRAPH.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WIDGET.h 58
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/HEADER.h 66
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/HEADER.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/HEADER.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG_Intern.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/HEADER.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WIDGET.h 58
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/ICONVIEW.h 67
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/ICONVIEW.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/ICONVIEW.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG_Intern.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/ICONVIEW.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WIDGET.h 58
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/IMAGE.h 68
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/IMAGE.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/IMAGE.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG_Intern.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/IMAGE.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WIDGET.h 58
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/LISTBOX.h 69
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/LISTVIEW.h 70
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/LISTVIEW.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/LISTVIEW.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG_Intern.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/LISTVIEW.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/ICONVIEW.h 58
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/LISTVIEW.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/HEADER.h 59
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/LISTWHEEL.h 71
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/LISTWHEEL.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/LISTWHEEL.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG_Intern.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/LISTWHEEL.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WIDGET.h 58
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/MENU.h 72
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/MENU.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/MENU.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WIDGET.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/MENU.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG_Intern.h 58
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/MULTIEDIT.h 73
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/MULTIEDIT.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/MULTIEDIT.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG_Intern.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/MULTIPAGE.h 74
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/MULTIPAGE.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/MULTIPAGE.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/PROGBAR.h 75
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/PROGBAR.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/PROGBAR.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG_Intern.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/PROGBAR.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WIDGET.h 58
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/RADIO.h 76
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/RADIO.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/RADIO.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG_Intern.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/RADIO.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WIDGET.h 58
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/SCROLLBAR.h 77
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/SLIDER.h 78
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/SLIDER.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/SLIDER.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG_Intern.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/SLIDER.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WIDGET.h 58
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/SPINBOX.h 79
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/SPINBOX.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/SPINBOX.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG_Intern.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/SPINBOX.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WIDGET.h 58
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/SPINBOX.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_Debug.h 59
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/SPINBOX.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/EDIT.h 60
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/SWIPELIST.h 80
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/SWIPELIST.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 37
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/SWIPELIST.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG_Intern.h 38
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/SWIPELIST.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WIDGET.h 39
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/SWIPELIST.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_Debug.h 40
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/TEXT.h 81
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/TEXT.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/TEXT.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG_Intern.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/TEXT.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WIDGET.h 58
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/TEXT.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_Debug.h 59
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/TREEVIEW.h 82
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/TREEVIEW.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/TREEVIEW.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG_Intern.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/TREEVIEW.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WIDGET.h 58
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/KNOB.h 83
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/KNOB.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/KNOB.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG_Intern.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/KNOB.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WIDGET.h 58
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/KNOB.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_Debug.h 59
+<R>I C:/CodeInspection/DisplayUnit/STemWin/App/GuiData.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI.h 6
+<R>I C:/CodeInspection/DisplayUnit/STemWin/App/GuiData.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h 7
+<R>I C:/CodeInspection/DisplayUnit/STemWin/App/GuiData.h C:/CodeInspection/DisplayUnit/STemWin/App/modbus.h 8
+<R>I C:/CodeInspection/DisplayUnit/STemWin/App/modbus.h C:/CodeInspection/DisplayUnit/embOS_CortexM_IAR_V6_Src_V438/Start/Inc/RTOS.H 4
+<R>I C:/CodeInspection/DisplayUnit/Src/main.c C:/CodeInspection/DisplayUnit/STemWin/App/modbus.h 66
+<DEFINE> ReceiveTask C:/CodeInspection/DisplayUnit/Src/main.c 72 N DC OF F I (.,.) -
+<DEFINE> EmWinTask C:/CodeInspection/DisplayUnit/Src/main.c 73 N DC OF F I (.,.) -
+<DEFINE> EmWinTask C:/CodeInspection/DisplayUnit/Src/main.c 74 N DR OF F I (.,.) -
+<DEFINE> OS_HAL_Init C:/CodeInspection/DisplayUnit/Src/main.c 75 N DC OF F I (.,.) -
+<DEFINE> OS_Sysclock_Config C:/CodeInspection/DisplayUnit/Src/main.c 76 N DC OF F I (.,.) -
+<DEFINE> Board_Init C:/CodeInspection/DisplayUnit/Src/main.c 77 N DC OF F I (.,.) -
+<DEFINE> Address C:/CodeInspection/DisplayUnit/Src/main.c 78 N DC OV P N ui R
+<DEFINE> GetSector C:/CodeInspection/DisplayUnit/Src/main.c 78 N DC OF F I (ui,ui) -
+<DEFINE> addr C:/CodeInspection/DisplayUnit/Src/main.c 79 N DC OV P N uc R
+<DEFINE> data C:/CodeInspection/DisplayUnit/Src/main.c 79 N DC OV P N uc R
+<DEFINE> PCF2129_set_register C:/CodeInspection/DisplayUnit/Src/main.c 79 N DC OF F I (us,uc,uc) -
+<DEFINE> addr C:/CodeInspection/DisplayUnit/Src/main.c 80 N DC OV P N uc R
+<DEFINE> PCF2129_read_register C:/CodeInspection/DisplayUnit/Src/main.c 80 N DC OF F I (us,uc) -
+<DEFINE> n C:/CodeInspection/DisplayUnit/Src/main.c 81 N DC OV P N uc R
+<DEFINE> i2bcd C:/CodeInspection/DisplayUnit/Src/main.c 81 N DC OF F I (uc,uc) -
+<DEFINE> bcd C:/CodeInspection/DisplayUnit/Src/main.c 82 N DC OV P N uc R
+<DEFINE> bcd2i C:/CodeInspection/DisplayUnit/Src/main.c 82 N DC OF F I (uc,uc) -
+<EXTT> hi2c2 C:/CodeInspection/DisplayUnit/Src/main.c 86
+<DEFINE> hi2c2 C:/CodeInspection/DisplayUnit/Src/main.c 86 N DC OV F I {sI2C_HandleTypeDef} S
+<EXTT> hspi3 C:/CodeInspection/DisplayUnit/Src/main.c 92
+<DEFINE> hspi3 C:/CodeInspection/DisplayUnit/Src/main.c 92 N DR OV F X {s__SPI_HandleTypeDef} S
+<EXTT> htim4 C:/CodeInspection/DisplayUnit/Src/main.c 93
+<DEFINE> htim4 C:/CodeInspection/DisplayUnit/Src/main.c 93 N DR OV F X {sTIM_HandleTypeDef} S
+<EXTT> huart1 C:/CodeInspection/DisplayUnit/Src/main.c 94
+<DEFINE> huart1 C:/CodeInspection/DisplayUnit/Src/main.c 94 N DR OV F X {sUART_HandleTypeDef} S
+<EXTT> huart2 C:/CodeInspection/DisplayUnit/Src/main.c 96
+<DEFINE> huart2 C:/CodeInspection/DisplayUnit/Src/main.c 96 N DR OV F X {sUART_HandleTypeDef} S
+<EXTT> huart6 C:/CodeInspection/DisplayUnit/Src/main.c 98
+<DEFINE> huart6 C:/CodeInspection/DisplayUnit/Src/main.c 98 N DC OV F I {sUART_HandleTypeDef} S
+<EXTT> hiwdg C:/CodeInspection/DisplayUnit/Src/main.c 99
+<DEFINE> hiwdg C:/CodeInspection/DisplayUnit/Src/main.c 99 N DR OV F X {sIWDG_HandleTypeDef} S
+<EXTT> EraseInitStruct C:/CodeInspection/DisplayUnit/Src/main.c 105
+<DEFINE> EraseInitStruct C:/CodeInspection/DisplayUnit/Src/main.c 105 N DC OV F I {sFLASH_EraseInitTypeDef} S
+<DEFINE> __DBG__ C:/CodeInspection/DisplayUnit/Src/main.c 113 N DF OM - - - O
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/main.c 115 5 N ON - F P
+<DEFINE> PUTCHAR_PROTOTYPE C:/CodeInspection/DisplayUnit/Src/main.c 130 N DF OM - - - O
+<EXTD> fputc C:/CodeInspection/DisplayUnit/Src/main.c 142
+<DEFINE> ch C:/CodeInspection/DisplayUnit/Src/main.c 142 N DC OV B N ni R
+<DEFINE> f C:/CodeInspection/DisplayUnit/Src/main.c 142 N DC OV B N p{sFILE} R
+<DEFINE> fputc C:/CodeInspection/DisplayUnit/Src/main.c 142 N DR OF F X (ni,ni,p{sFILE}) -
+<DEFINE> fputc C:/CodeInspection/DisplayUnit/Src/main.c 142 N DF OF F X (ni,ni,p{sFILE}) -
+<RDEF> C Calls
+<R>C fputc HAL_UART_Transmit 148
+<RDEF> X Refers-to
+<R>X fputc HAL_UART_Transmit 148 R
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/Src/main.c 148 54 N DN ni B X
+<CTLG> fputc 1
+<CTLG> 1 2
+<CTLG> 2 4
+<CTLGN> 143 149 149 149 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/Src/main.c
+<S>STNAM  fputc
+<S>STCYC  1
+<S>STMCC  0 (1:1)
+<S>STMIF  0
+<S>STSUB  1
+<S>STAKI  2
+<S>STLIN  6
+<S>STXLN  2
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  1
+<S>STLCT  0
+<S>STPTH  1
+<S>STPDN  0.50   
+<S>STPBG  0
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  1
+<S>STAV1  12
+<S>STAV2  12
+<S>STAV3  12
+<S>STST1  2
+<S>STST2  2
+<S>STST3  2
+<S>STPAR  2
+<S>STCAL  1
+<S>STFN1  18
+<S>STFN2  7
+
+<DEFINE> MX_GPIO_Init C:/CodeInspection/DisplayUnit/Src/main.c 167 N DC OF F I (.,.) -
+<DEFINE> MX_USART1_UART_Init C:/CodeInspection/DisplayUnit/Src/main.c 168 N DC OF F I (.,.) -
+<DEFINE> MX_USART6_UART_Init C:/CodeInspection/DisplayUnit/Src/main.c 169 N DC OF F I (.,.) -
+<DEFINE> MX_FSMC_Init C:/CodeInspection/DisplayUnit/Src/main.c 170 N DC OF F I (.,.) -
+<DEFINE> MX_TIM4_Init C:/CodeInspection/DisplayUnit/Src/main.c 171 N DC OF F I (.,.) -
+<DEFINE> MX_SPI3_Init C:/CodeInspection/DisplayUnit/Src/main.c 172 N DC OF F I (.,.) -
+<DEFINE> MX_CRC_Init C:/CodeInspection/DisplayUnit/Src/main.c 173 N DC OF F I (.,.) -
+<DEFINE> RX_BUFF_SIZE C:/CodeInspection/DisplayUnit/Src/main.c 186 N DF OM - - - O
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/Src/main.c 186 24 N DN - F M
+<LIT> 1024 - P C:/CodeInspection/DisplayUnit/Src/main.c 186 26 N DN - F M
+<DEFINE> TX_BUFF_SIZE C:/CodeInspection/DisplayUnit/Src/main.c 187 N DF OM - - - O
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/Src/main.c 187 24 N DN - F M
+<LIT> 1024 - P C:/CodeInspection/DisplayUnit/Src/main.c 187 26 N DN - F M
+<DEFINE> Pcf2129AT_init C:/CodeInspection/DisplayUnit/Src/main.c 194 N DC OF F I (.,.) -
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/main.c 200 5 N ON - F P
+<DEFINE> ReceiveTask C:/CodeInspection/DisplayUnit/Src/main.c 228 N DR OF F I (.,.) -
+<DEFINE> ReceiveTask C:/CodeInspection/DisplayUnit/Src/main.c 228 N DF OF F I (.,.) -
+<DEFINE> time_cnt_led C:/CodeInspection/DisplayUnit/Src/main.c 230 N DC OV B N ni -
+<DEFINE> time_cnt_led C:/CodeInspection/DisplayUnit/Src/main.c 230 N DF OV B N ni -
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/main.c 230 22 N ON ni B O
+<R>X ReceiveTask sendFlag 231 W
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/main.c 231 16 N ON ni B X
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/Src/main.c 232 12 N DN ni B X
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/main.c 236 28 N ON ni B X
+<R>C ReceiveTask HAL_GPIO_TogglePin 237
+<R>X ReceiveTask HAL_GPIO_TogglePin 237 R
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/Src/main.c 239 24 N DN ni B X
+<R>X ReceiveTask sendFlag 239 R
+<DEFINE> stat C:/CodeInspection/DisplayUnit/Src/main.c 241 N DC OV B N {eHAL_StatusTypeDef} -
+<DEFINE> stat C:/CodeInspection/DisplayUnit/Src/main.c 241 N DF OV B N {eHAL_StatusTypeDef} -
+<DEFINE> nTimeOut C:/CodeInspection/DisplayUnit/Src/main.c 242 N DC OV B N ni -
+<DEFINE> nTimeOut C:/CodeInspection/DisplayUnit/Src/main.c 242 N DF OV B N ni -
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/main.c 243 51 N ON ni B X
+<R>X ReceiveTask SettingValue 243 R
+<DEFINE> bRecvOk C:/CodeInspection/DisplayUnit/Src/main.c 247 N DC OV B N ni -
+<DEFINE> bRecvOk C:/CodeInspection/DisplayUnit/Src/main.c 247 N DF OV B N ni -
+<R>X ReceiveTask huart2 248 R
+<DEFINE> readExceptionLen C:/CodeInspection/DisplayUnit/Src/main.c 250 N DC OV B N us -
+<DEFINE> readExceptionLen C:/CodeInspection/DisplayUnit/Src/main.c 250 N DF OV B N us -
+<R>X ReceiveTask g_functionCode 251 R
+<R>C ReceiveTask HAL_UART_Receive 255
+<R>X ReceiveTask HAL_UART_Receive 255 R
+<R>X ReceiveTask huart2 255 R
+<R>X ReceiveTask huart2 255 W
+<R>X ReceiveTask g_modbusRxBuff 255 R
+<R>X ReceiveTask g_modbusRxBuff 255 W
+<R>X ReceiveTask gDeviceIndex 258 R
+<R>X ReceiveTask gCommErrorCount 258 R
+<R>X ReceiveTask gDeviceIndex 258 R
+<R>X ReceiveTask gCommErrorCount 258 W
+<R>X ReceiveTask gDeviceIndex 260 R
+<R>X ReceiveTask gCommStatus 260 W
+<R>X ReceiveTask gDeviceIndex 261 R
+<R>X ReceiveTask gCommErrorCount 261 W
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/main.c 261 57 N ON ni B X
+<R>X ReceiveTask g_modbusRxError 263 W
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/Src/main.c 263 39 N DN ni B X
+<R>C ReceiveTask printf 264
+<R>X ReceiveTask printf 264 R
+<LIT> "Exception Read Error(%x)!!!!\n" - - C:/CodeInspection/DisplayUnit/Src/main.c 264 34 N SN [30,_c] B X
+<R>X ReceiveTask sendFlag 265 W
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/main.c 265 32 N ON ni B X
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/Src/main.c 268 38 N DN ni B X
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/main.c 268 89 N ON ni B X
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/Src/main.c 268 150 N DN ni B X
+<R>X ReceiveTask g_modbusRxBuff 268 R
+<R>X ReceiveTask g_modbusRxBuff 268 R
+<R>X ReceiveTask g_modbusAddress 268 R
+<R>X ReceiveTask g_functionCode 268 R
+<R>X ReceiveTask g_modbusRxBuff 268 R
+<R>C ReceiveTask printf 270
+<R>X ReceiveTask printf 270 R
+<LIT> "Exception Frame Read!!!\n" - - C:/CodeInspection/DisplayUnit/Src/main.c 270 34 N SN [25,_c] B X
+<DEFINE> i C:/CodeInspection/DisplayUnit/Src/main.c 271 N DC OV B N ni -
+<DEFINE> i C:/CodeInspection/DisplayUnit/Src/main.c 271 N DF OV B N ni -
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/main.c 271 33 N ON ni B O
+<R>C ReceiveTask printf 273
+<R>X ReceiveTask printf 273 R
+<R>X ReceiveTask g_modbusRxBuff 273 R
+<LIT> "%02X " - - C:/CodeInspection/DisplayUnit/Src/main.c 273 38 N SN [6,_c] B X
+<R>C ReceiveTask printf 275
+<R>X ReceiveTask printf 275 R
+<LIT> "\n" - - C:/CodeInspection/DisplayUnit/Src/main.c 275 34 N SN [2,_c] B X
+<R>X ReceiveTask gDeviceIndex 276 R
+<R>X ReceiveTask gCommErrorCount 276 R
+<R>X ReceiveTask gDeviceIndex 276 R
+<R>X ReceiveTask gCommErrorCount 276 W
+<R>X ReceiveTask gDeviceIndex 278 R
+<R>X ReceiveTask gCommStatus 278 W
+<R>X ReceiveTask gDeviceIndex 279 R
+<R>X ReceiveTask gCommErrorCount 279 W
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/main.c 279 57 N ON ni B X
+<R>X ReceiveTask g_modbusRxError 281 W
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/Src/main.c 281 39 N DN ni B X
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/Src/main.c 282 39 N DN ni B X
+<R>X ReceiveTask g_modbusRxBuff 282 R
+<R>C ReceiveTask printf 284
+<R>X ReceiveTask printf 284 R
+<LIT> "Header Exception Error!!!!\n" - - C:/CodeInspection/DisplayUnit/Src/main.c 284 38 N SN [28,_c] B X
+<R>C ReceiveTask printf 288
+<R>X ReceiveTask printf 288 R
+<LIT> "Header Comm Error!!!!\n" - - C:/CodeInspection/DisplayUnit/Src/main.c 288 38 N SN [23,_c] B X
+<R>X ReceiveTask sendFlag 290 W
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/main.c 290 32 N ON ni B X
+<DEFINE> readLen C:/CodeInspection/DisplayUnit/Src/main.c 293 N DC OV B N us -
+<DEFINE> readLen C:/CodeInspection/DisplayUnit/Src/main.c 293 N DF OV B N us -
+<R>X ReceiveTask g_wModbusWaitLen 293 R
+<R>C ReceiveTask HAL_UART_Receive 294
+<R>X ReceiveTask HAL_UART_Receive 294 R
+<R>X ReceiveTask huart2 294 R
+<R>X ReceiveTask huart2 294 W
+<R>X ReceiveTask g_modbusRxBuff 294 R
+<R>X ReceiveTask g_modbusRxBuff 294 W
+<R>X ReceiveTask g_bRecvVariable 298 R
+<R>X ReceiveTask g_wModbusWaitLen 300 R
+<R>X ReceiveTask g_modbusRxIndex 300 W
+<R>X ReceiveTask g_modbusRxDone 301 W
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/Src/main.c 301 38 N DN ni B X
+<R>X ReceiveTask gDeviceIndex 302 R
+<R>X ReceiveTask gCommStatus 302 W
+<R>X ReceiveTask gDeviceIndex 303 R
+<R>X ReceiveTask gCommErrorCount 303 W
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/main.c 303 55 N ON ni B X
+<R>C ReceiveTask printf 304
+<R>X ReceiveTask printf 304 R
+<LIT> "Recv Done!!!!\n" - - C:/CodeInspection/DisplayUnit/Src/main.c 304 36 N SN [15,_c] B X
+<DEFINE> index C:/CodeInspection/DisplayUnit/Src/main.c 309 N DC OV B N us -
+<DEFINE> index C:/CodeInspection/DisplayUnit/Src/main.c 309 N DF OV B N us -
+<R>X ReceiveTask g_wModbusWaitLen 309 R
+<DEFINE> cnt C:/CodeInspection/DisplayUnit/Src/main.c 310 N DC OV B N uc -
+<DEFINE> cnt C:/CodeInspection/DisplayUnit/Src/main.c 310 N DF OV B N uc -
+<R>X ReceiveTask g_modbusRxBuff 310 R
+<DEFINE> i C:/CodeInspection/DisplayUnit/Src/main.c 312 N DC OV B N uc -
+<DEFINE> i C:/CodeInspection/DisplayUnit/Src/main.c 312 N DF OV B N uc -
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/main.c 312 41 N ON ni B O
+<R>C ReceiveTask HAL_UART_Receive 314
+<R>X ReceiveTask HAL_UART_Receive 314 R
+<R>X ReceiveTask huart2 314 R
+<R>X ReceiveTask huart2 314 W
+<R>X ReceiveTask g_modbusRxBuff 314 R
+<R>X ReceiveTask g_modbusRxBuff 314 W
+<R>C ReceiveTask HAL_UART_Receive 318
+<R>X ReceiveTask HAL_UART_Receive 318 R
+<R>X ReceiveTask huart2 318 R
+<R>X ReceiveTask huart2 318 W
+<R>X ReceiveTask g_modbusRxBuff 318 R
+<R>X ReceiveTask g_modbusRxBuff 318 W
+<R>X ReceiveTask g_modbusRxBuff 318 R
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/Src/main.c 318 112 N DN ni B X
+<DEFINE> len C:/CodeInspection/DisplayUnit/Src/main.c 321 N DC OV B N uc -
+<DEFINE> len C:/CodeInspection/DisplayUnit/Src/main.c 321 N DF OV B N uc -
+<R>X ReceiveTask g_modbusRxBuff 321 R
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/Src/main.c 321 72 N DN ni B O
+<R>C ReceiveTask HAL_UART_Receive 340
+<R>X ReceiveTask HAL_UART_Receive 340 R
+<R>X ReceiveTask huart2 340 R
+<R>X ReceiveTask huart2 340 W
+<R>X ReceiveTask g_modbusRxBuff 340 R
+<R>X ReceiveTask g_modbusRxBuff 340 W
+<R>X ReceiveTask g_modbusRxIndex 351 W
+<R>X ReceiveTask g_modbusRxDone 352 W
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/Src/main.c 352 48 N DN ni B X
+<R>X ReceiveTask gDeviceIndex 353 R
+<R>X ReceiveTask gCommStatus 353 W
+<R>X ReceiveTask gDeviceIndex 354 R
+<R>X ReceiveTask gCommErrorCount 354 W
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/main.c 354 65 N ON ni B X
+<R>C ReceiveTask printf 355
+<R>X ReceiveTask printf 355 R
+<LIT> "[g_bRecvVariable]Recv Done!!!!\n" - - C:/CodeInspection/DisplayUnit/Src/main.c 355 46 N SN [32,_c] B X
+<R>X ReceiveTask gDeviceIndex 364 R
+<R>X ReceiveTask gCommErrorCount 364 R
+<R>X ReceiveTask gDeviceIndex 364 R
+<R>X ReceiveTask gCommErrorCount 364 W
+<R>X ReceiveTask gDeviceIndex 366 R
+<R>X ReceiveTask gCommStatus 366 W
+<R>X ReceiveTask gDeviceIndex 367 R
+<R>X ReceiveTask gCommErrorCount 367 W
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/main.c 367 57 N ON ni B X
+<R>C ReceiveTask printf 368
+<R>X ReceiveTask printf 368 R
+<LIT> "Comm Error!!!!\n" - - C:/CodeInspection/DisplayUnit/Src/main.c 368 38 N SN [16,_c] B X
+<R>X ReceiveTask g_modbusRxError 370 W
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/Src/main.c 370 39 N DN ni B X
+<R>C ReceiveTask printf 371
+<R>X ReceiveTask printf 371 R
+<LIT> "Error(%x)!!!!\n" - - C:/CodeInspection/DisplayUnit/Src/main.c 371 34 N SN [15,_c] B X
+<R>X ReceiveTask sendFlag 374 W
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/main.c 374 24 N ON ni B X
+<R>C ReceiveTask OS_Delay 387
+<R>X ReceiveTask OS_Delay 387 R
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/Src/main.c 387 18 N DN ni B X
+<CTLG> ReceiveTask 1
+<CTLG> 1 2
+<CTLG> 2 3
+<CTLG> 2 70
+<CTLG> 3 4
+<CTLG> 3 5
+<CTLG> 4 5
+<CTLG> 5 6
+<CTLG> 5 69
+<CTLG> 6 7
+<CTLG> 6 8
+<CTLG> 7 8
+<CTLG> 8 9
+<CTLG> 8 68
+<CTLG> 9 10
+<CTLG> 9 11
+<CTLG> 10 11
+<CTLG> 11 12
+<CTLG> 12 13
+<CTLG> 12 18
+<CTLG> 13 14
+<CTLG> 13 15
+<CTLG> 14 15
+<CTLG> 15 16
+<CTLG> 16 2
+<CTLG> 18 19
+<CTLG> 18 34
+<CTLG> 19 20
+<CTLG> 20 21
+<CTLG> 21 22
+<CTLG> 21 24
+<CTLG> 22 23
+<CTLG> 23 21
+<CTLG> 24 25
+<CTLG> 25 26
+<CTLG> 25 27
+<CTLG> 26 27
+<CTLG> 27 28
+<CTLG> 28 29
+<CTLG> 28 30
+<CTLG> 29 31
+<CTLG> 30 31
+<CTLG> 31 32
+<CTLG> 32 2
+<CTLG> 34 35
+<CTLG> 35 36
+<CTLG> 35 63
+<CTLG> 36 37
+<CTLG> 36 38
+<CTLG> 37 62
+<CTLG> 38 39
+<CTLG> 39 40
+<CTLG> 40 41
+<CTLG> 40 53
+<CTLG> 41 42
+<CTLG> 42 43
+<CTLG> 42 50
+<CTLG> 43 44
+<CTLG> 44 45
+<CTLG> 44 46
+<CTLG> 45 49
+<CTLG> 46 47
+<CTLG> 47 53
+<CTLG> 49 51
+<CTLG> 50 51
+<CTLG> 51 52
+<CTLG> 52 40
+<CTLG> 53 54
+<CTLG> 53 61
+<CTLG> 54 55
+<CTLG> 55 56
+<CTLG> 55 57
+<CTLG> 56 58
+<CTLG> 57 58
+<CTLG> 58 59
+<CTLG> 58 60
+<CTLG> 59 60
+<CTLG> 60 61
+<CTLG> 61 62
+<CTLG> 62 63
+<CTLG> 63 64
+<CTLG> 63 67
+<CTLG> 64 65
+<CTLG> 64 66
+<CTLG> 65 66
+<CTLG> 66 67
+<CTLG> 67 68
+<CTLG> 68 69
+<CTLG> 69 2
+<CTLG> 70 72
+<CTLGN> 229 232 232 234 234 239 243 243 248 251 251 256 256 258 258 266 266 256 268 271 271 271 271 271 276 276 276 282 282 282 286 291 291 268 296 296 298 298 312 312 312 315 315 319 319 319 329 329 324 315 332 312 312 338 341 341 341 345 349 349 338 307 296 362 364 364 362 248 239 232 390 390 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/Src/main.c
+<S>STNAM  ReceiveTask
+<S>STCYC  23
+<S>STMCC  2 (23:25)
+<S>STMIF  8
+<S>STSUB  17
+<S>STAKI  40
+<S>STLIN  160
+<S>STXLN  88
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  3
+<S>STKDN  0.03   
+<S>STUNV  0
+<S>STLCT  11
+<S>STPTH  14263
+<S>STPDN  162.08 
+<S>STPBG  4
+<S>STLOP  2
+<S>STM07  11
+<S>STM19  0
+<S>STAV1  6
+<S>STAV2  8
+<S>STAV3  9
+<S>STST1  111
+<S>STST2  84
+<S>STST3  75
+<S>STPAR  0
+<S>STCAL  4
+<S>STFN1  444
+<S>STFN2  232
+
+<DEFINE> EmWinTask C:/CodeInspection/DisplayUnit/Src/main.c 477 N DR OF F I (.,.) -
+<DEFINE> EmWinTask C:/CodeInspection/DisplayUnit/Src/main.c 477 N DF OF F I (.,.) -
+<R>C EmWinTask GUI_Init 480
+<R>X EmWinTask GUI_Init 480 R
+<R>C EmWinTask WM_SetCreateFlags 483
+<R>X EmWinTask WM_SetCreateFlags 483 R
+<R>C EmWinTask GUI_UC_SetEncodeUTF8 503
+<R>X EmWinTask GUI_UC_SetEncodeUTF8 503 R
+<R>C EmWinTask KeyCheck 505
+<R>X EmWinTask KeyCheck 505 R
+<R>C EmWinTask GuiMain 506
+<R>X EmWinTask GuiMain 506 R
+<CTLG> EmWinTask 1
+<CTLG> 1 2
+<CTLG> 2 4
+<CTLGN> 478 508 508 508 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/Src/main.c
+<S>STNAM  EmWinTask
+<S>STCYC  1
+<S>STMCC  0 (1:1)
+<S>STMIF  0
+<S>STSUB  5
+<S>STAKI  6
+<S>STLIN  29
+<S>STXLN  5
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  0
+<S>STPTH  1
+<S>STPDN  0.20   
+<S>STPBG  0
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  0
+<S>STAV1  6
+<S>STAV2  6
+<S>STAV3  6
+<S>STST1  5
+<S>STST2  5
+<S>STST3  5
+<S>STPAR  0
+<S>STCAL  5
+<S>STFN1  27
+<S>STFN2  7
+
+<DEFINE> OS_HAL_Init C:/CodeInspection/DisplayUnit/Src/main.c 512 N DR OF F I (.,.) -
+<DEFINE> OS_HAL_Init C:/CodeInspection/DisplayUnit/Src/main.c 512 N DF OF F I (.,.) -
+<LIT> 0 U P C:/CodeInspection/DisplayUnit/Src/main.c 516 34 N ON - B P
+<LIT> 0 U P C:/CodeInspection/DisplayUnit/Src/main.c 520 27 N ON - B P
+<LIT> 0 U P C:/CodeInspection/DisplayUnit/Src/main.c 524 25 N ON - B P
+<R>C OS_HAL_Init HAL_NVIC_SetPriorityGrouping 529
+<R>X OS_HAL_Init HAL_NVIC_SetPriorityGrouping 529 R
+<R>C OS_HAL_Init HAL_InitTick 532
+<R>X OS_HAL_Init HAL_InitTick 532 R
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/main.c 534 5 N ON - B P
+<CTLG> OS_HAL_Init 1
+<CTLG> 1 2
+<CTLG> 2 4
+<CTLGN> 513 540 540 540 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/Src/main.c
+<S>STNAM  OS_HAL_Init
+<S>STCYC  1
+<S>STMCC  0 (1:1)
+<S>STMIF  0
+<S>STSUB  2
+<S>STAKI  3
+<S>STLIN  26
+<S>STXLN  6
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  0
+<S>STPTH  1
+<S>STPDN  0.17   
+<S>STPBG  0
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  0
+<S>STAV1  10
+<S>STAV2  10
+<S>STAV3  10
+<S>STST1  6
+<S>STST2  6
+<S>STST3  6
+<S>STPAR  0
+<S>STCAL  2
+<S>STFN1  48
+<S>STFN2  17
+
+<DEFINE> OS_Sysclock_Config C:/CodeInspection/DisplayUnit/Src/main.c 542 N DR OF F I (.,.) -
+<DEFINE> OS_Sysclock_Config C:/CodeInspection/DisplayUnit/Src/main.c 542 N DF OF F I (.,.) -
+<DEFINE> RCC_OscInitStruct C:/CodeInspection/DisplayUnit/Src/main.c 545 N DC OV B N {sRCC_OscInitTypeDef} -
+<DEFINE> RCC_OscInitStruct C:/CodeInspection/DisplayUnit/Src/main.c 545 N DF OV B N {sRCC_OscInitTypeDef} -
+<DEFINE> RCC_ClkInitStruct C:/CodeInspection/DisplayUnit/Src/main.c 546 N DC OV B N {sRCC_ClkInitTypeDef} -
+<DEFINE> RCC_ClkInitStruct C:/CodeInspection/DisplayUnit/Src/main.c 546 N DF OV B N {sRCC_ClkInitTypeDef} -
+<DEFINE> tmpreg C:/CodeInspection/DisplayUnit/Src/main.c 550 N DC OV B N ^ui -
+<DEFINE> tmpreg C:/CodeInspection/DisplayUnit/Src/main.c 550 N DF OV B N ^ui -
+<DEFINE> tmpreg C:/CodeInspection/DisplayUnit/Src/main.c 551 N DC OV B N ^ui -
+<DEFINE> tmpreg C:/CodeInspection/DisplayUnit/Src/main.c 551 N DF OV B N ^ui -
+<R>C OS_Sysclock_Config HAL_RCC_OscConfig 564
+<R>X OS_Sysclock_Config HAL_RCC_OscConfig 564 R
+<R>C OS_Sysclock_Config _Error_Handler 566
+<R>X OS_Sysclock_Config _Error_Handler 566 R
+<R>C OS_Sysclock_Config HAL_RCC_ClockConfig 578
+<R>X OS_Sysclock_Config HAL_RCC_ClockConfig 578 R
+<R>C OS_Sysclock_Config _Error_Handler 580
+<R>X OS_Sysclock_Config _Error_Handler 580 R
+<CTLG> OS_Sysclock_Config 1
+<CTLG> 1 2
+<CTLG> 2 3
+<CTLG> 3 1
+<CTLG> 3 4
+<CTLG> 4 5
+<CTLG> 5 6
+<CTLG> 6 4
+<CTLG> 6 7
+<CTLG> 7 8
+<CTLG> 8 9
+<CTLG> 8 10
+<CTLG> 9 10
+<CTLG> 10 11
+<CTLG> 11 12
+<CTLG> 11 13
+<CTLG> 12 13
+<CTLG> 13 15
+<CTLGN> 543 550 550 550 551 551 551 564 564 564 578 578 578 585 585 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/Src/main.c
+<S>STNAM  OS_Sysclock_Config
+<S>STCYC  5
+<S>STMCC  0 (5:5)
+<S>STMIF  1
+<S>STSUB  4
+<S>STAKI  9
+<S>STLIN  41
+<S>STXLN  20
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  4
+<S>STPTH  16
+<S>STPDN  0.80   
+<S>STPBG  1
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  0
+<S>STAV1  4
+<S>STAV2  5
+<S>STAV3  5
+<S>STST1  33
+<S>STST2  29
+<S>STST3  25
+<S>STPAR  0
+<S>STCAL  3
+<S>STFN1  85
+<S>STFN2  64
+
+<DEFINE> Board_Init C:/CodeInspection/DisplayUnit/Src/main.c 587 N DR OF F I (.,.) -
+<DEFINE> Board_Init C:/CodeInspection/DisplayUnit/Src/main.c 587 N DF OF F I (.,.) -
+<R>C Board_Init HAL_GPIO_WritePin 591
+<R>X Board_Init HAL_GPIO_WritePin 591 R
+<R>C Board_Init HAL_GPIO_ReadPin 594
+<R>X Board_Init HAL_GPIO_ReadPin 594 R
+<R>C Board_Init HAL_GPIO_WritePin 604
+<R>X Board_Init HAL_GPIO_WritePin 604 R
+<R>C Board_Init HAL_Delay 605
+<R>X Board_Init HAL_Delay 605 R
+<R>C Board_Init HAL_GPIO_WritePin 606
+<R>X Board_Init HAL_GPIO_WritePin 606 R
+<R>C Board_Init HAL_Delay 607
+<R>X Board_Init HAL_Delay 607 R
+<R>C Board_Init HAL_GPIO_WritePin 608
+<R>X Board_Init HAL_GPIO_WritePin 608 R
+<R>C Board_Init HAL_Delay 609
+<R>X Board_Init HAL_Delay 609 R
+<DEFINE> LCD_init C:/CodeInspection/DisplayUnit/Src/main.c 613 N DC OF F X (.,.) -
+<R>C Board_Init LCD_init 613
+<R>X Board_Init LCD_init 613 R
+<R>C Board_Init LCD_Clear 614
+<R>X Board_Init LCD_Clear 614 R
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/main.c 614 15 N ON ni B X
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/main.c 614 18 N ON ni B X
+<CTLG> Board_Init 1
+<CTLG> 1 2
+<CTLG> 2 3
+<CTLG> 2 4
+<CTLG> 3 5
+<CTLG> 4 5
+<CTLG> 5 6
+<CTLG> 6 8
+<CTLGN> 588 594 594 594 597 615 615 615 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/Src/main.c
+<S>STNAM  Board_Init
+<S>STCYC  2
+<S>STMCC  0 (2:2)
+<S>STMIF  1
+<S>STSUB  10
+<S>STAKI  12
+<S>STLIN  26
+<S>STXLN  13
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  0
+<S>STPTH  2
+<S>STPDN  0.15   
+<S>STPBG  0
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  0
+<S>STAV1  6
+<S>STAV2  8
+<S>STAV3  8
+<S>STST1  14
+<S>STST2  10
+<S>STST3  10
+<S>STPAR  0
+<S>STCAL  5
+<S>STFN1  55
+<S>STFN2  33
+
+<EXTD> main C:/CodeInspection/DisplayUnit/Src/main.c 620
+<DEFINE> main C:/CodeInspection/DisplayUnit/Src/main.c 620 N DC OF F X (ni,.) -
+<DEFINE> main C:/CodeInspection/DisplayUnit/Src/main.c 620 N DF OF F X (ni,.) -
+<DEFINE> StackEmWin C:/CodeInspection/DisplayUnit/Src/main.c 622 N DC OV B N [4096,ni] S
+<DEFINE> StackEmWin C:/CodeInspection/DisplayUnit/Src/main.c 622 N DF OV B N [4096,ni] S
+<DEFINE> TCBEMWIN C:/CodeInspection/DisplayUnit/Src/main.c 623 N DC OV B N {sOS_TASK_STRUCT} S
+<DEFINE> TCBEMWIN C:/CodeInspection/DisplayUnit/Src/main.c 623 N DF OV B N {sOS_TASK_STRUCT} S
+<DEFINE> StackReceive C:/CodeInspection/DisplayUnit/Src/main.c 625 N DC OV B N [1024,ni] S
+<DEFINE> StackReceive C:/CodeInspection/DisplayUnit/Src/main.c 625 N DF OV B N [1024,ni] S
+<DEFINE> TCBRECEIVE C:/CodeInspection/DisplayUnit/Src/main.c 626 N DC OV B N {sOS_TASK_STRUCT} S
+<DEFINE> TCBRECEIVE C:/CodeInspection/DisplayUnit/Src/main.c 626 N DF OV B N {sOS_TASK_STRUCT} S
+<R>C main OS_HAL_Init 629
+<R>C main OS_Sysclock_Config 630
+<R>C main MX_GPIO_Init 635
+<R>C main HAL_GPIO_TogglePin 636
+<R>X main HAL_GPIO_TogglePin 636 R
+<R>C main MX_CRC_Init 638
+<R>C main MX_FSMC_Init 639
+<R>C main MX_TIM4_Init 641
+<R>C main MX_SPI3_Init 642
+<R>C main MX_USART6_UART_Init 644
+<R>C main MX_I2C2_Init 648
+<R>C main Board_Init 651
+<DEFINE> User_Pwm_Setup C:/CodeInspection/DisplayUnit/Src/main.c 652 N DC OF F X (.,.) -
+<R>C main User_Pwm_Setup 652
+<R>X main User_Pwm_Setup 652 R
+<R>C main FlashRead 654
+<R>X main FlashRead 654 R
+<R>C main FaultCountRead 655
+<R>X main FaultCountRead 655 R
+<R>C main MX_USART1_UART_Init 657
+<R>C main MX_USART2_UART_Init 658
+<R>X main MX_USART2_UART_Init 658 R
+<R>C main BacklightBrghtness 661
+<R>X main BacklightBrghtness 661 R
+<R>X main SettingValue 661 R
+<R>C main OS_InitKern_STD 680
+<R>X main OS_InitKern_STD 680 R
+<R>C main OS_InitHW 681
+<R>X main OS_InitHW 681 R
+<R>C main Pcf2129AT_init 683
+<R>C main printf 684
+<R>X main printf 684 R
+<LIT> "\n\r" - - C:/CodeInspection/DisplayUnit/Src/main.c 684 18 N SN [3,_c] B X
+<R>C main printf 685
+<R>X main printf 685 R
+<LIT> "\n\r*************************" - - C:/CodeInspection/DisplayUnit/Src/main.c 685 18 N SN [28,_c] B X
+<R>C main printf 686
+<R>X main printf 686 R
+<LIT> "\n\r Smart LV Panel Display Unit" - - C:/CodeInspection/DisplayUnit/Src/main.c 686 18 N SN [31,_c] B X
+<R>C main printf 687
+<R>X main printf 687 R
+<R>X main _acinfo_modebus_version 687 R
+<LIT> "\n\r Modbus Version\n\r%s\n\r" - - C:/CodeInspection/DisplayUnit/Src/main.c 687 18 N SN [24,_c] B X
+<R>C main printf 688
+<R>X main printf 688 R
+<R>X main SettingValue 688 R
+<LIT> "\n\r Devie Count : %d" - - C:/CodeInspection/DisplayUnit/Src/main.c 688 18 N SN [20,_c] B X
+<R>C main printf 689
+<R>X main printf 689 R
+<LIT> "\n\r starting.." - - C:/CodeInspection/DisplayUnit/Src/main.c 689 18 N SN [14,_c] B X
+<R>C main printf 690
+<R>X main printf 690 R
+<LIT> "\n\r*************************" - - C:/CodeInspection/DisplayUnit/Src/main.c 690 18 N SN [28,_c] B X
+<R>C main printf 691
+<R>X main printf 691 R
+<LIT> "\n\r" - - C:/CodeInspection/DisplayUnit/Src/main.c 691 18 N SN [3,_c] B X
+<R>C main OS_CreateTask_XR 693
+<R>X main OS_CreateTask_XR 693 R
+<R>C main OS_CreateTask_XR 694
+<R>X main OS_CreateTask_XR 694 R
+<R>C main __disable_interrupt 697
+<R>X main __disable_interrupt 697 R
+<EXTN> __set_BASEPRI C:/CodeInspection/DisplayUnit/Src/main.c 697
+<DEFINE> __set_BASEPRI C:/CodeInspection/DisplayUnit/Src/main.c 697 N DC OF B X (ni,ni) -
+<R>C main __set_BASEPRI 697
+<R>X main __set_BASEPRI 697 R
+<R>C main __enable_interrupt 697
+<R>X main __enable_interrupt 697 R
+<R>C main __no_operation 697
+<R>X main __no_operation 697 R
+<R>C main __no_operation 697
+<R>X main __no_operation 697 R
+<R>X main OS_Running 697 W
+<R>C main OS_StartASM 697
+<R>X main OS_StartASM 697 R
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/main.c 701 12 N ON ni B X
+<CTLG> main 1
+<CTLG> 1 2
+<CTLG> 2 4
+<CTLGN> 621 701 701 701 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/Src/main.c
+<S>STNAM  main
+<S>STCYC  1
+<S>STMCC  0 (1:1)
+<S>STMIF  0
+<S>STSUB  36
+<S>STAKI  37
+<S>STLIN  86
+<S>STXLN  32
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  4
+<S>STPTH  1
+<S>STPDN  0.03   
+<S>STPBG  0
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  1
+<S>STAV1  5
+<S>STAV2  5
+<S>STAV3  6
+<S>STST1  44
+<S>STST2  42
+<S>STST3  38
+<S>STPAR  0
+<S>STCAL  27
+<S>STFN1  161
+<S>STFN2  69
+
+<DEFINE> MX_I2C2_Init C:/CodeInspection/DisplayUnit/Src/main.c 779 N DR OF F I (.,.) -
+<DEFINE> MX_I2C2_Init C:/CodeInspection/DisplayUnit/Src/main.c 779 N DF OF F I (.,.) -
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/main.c 785 28 N ON ni B X
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/main.c 788 28 N ON ni B X
+<R>C MX_I2C2_Init HAL_I2C_Init 791
+<R>X MX_I2C2_Init HAL_I2C_Init 791 R
+<R>C MX_I2C2_Init _Error_Handler 793
+<R>X MX_I2C2_Init _Error_Handler 793 R
+<CTLG> MX_I2C2_Init 1
+<CTLG> 1 2
+<CTLG> 2 3
+<CTLG> 2 4
+<CTLG> 3 4
+<CTLG> 4 6
+<CTLGN> 780 791 791 791 796 796 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/Src/main.c
+<S>STNAM  MX_I2C2_Init
+<S>STCYC  2
+<S>STMCC  0 (2:2)
+<S>STMIF  1
+<S>STSUB  2
+<S>STAKI  4
+<S>STLIN  15
+<S>STXLN  11
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  0
+<S>STPTH  2
+<S>STPDN  0.18   
+<S>STPBG  0
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  0
+<S>STAV1  7
+<S>STAV2  8
+<S>STAV3  8
+<S>STST1  12
+<S>STST2  11
+<S>STST3  11
+<S>STPAR  0
+<S>STCAL  2
+<S>STFN1  50
+<S>STFN2  39
+
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/main.c 799 5 N ON - F P
+<DEFINE> MX_CRC_Init C:/CodeInspection/DisplayUnit/Src/main.c 836 N DR OF F I (.,.) -
+<DEFINE> MX_CRC_Init C:/CodeInspection/DisplayUnit/Src/main.c 836 N DF OF F I (.,.) -
+<DEFINE> hcrc C:/CodeInspection/DisplayUnit/Src/main.c 838 N DC OV B N {sCRC_HandleTypeDef} S
+<DEFINE> hcrc C:/CodeInspection/DisplayUnit/Src/main.c 838 N DF OV B N {sCRC_HandleTypeDef} S
+<R>C MX_CRC_Init HAL_CRC_Init 841
+<R>X MX_CRC_Init HAL_CRC_Init 841 R
+<R>C MX_CRC_Init _Error_Handler 843
+<R>X MX_CRC_Init _Error_Handler 843 R
+<CTLG> MX_CRC_Init 1
+<CTLG> 1 2
+<CTLG> 2 3
+<CTLG> 2 4
+<CTLG> 3 4
+<CTLG> 4 6
+<CTLGN> 837 841 841 841 846 846 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/Src/main.c
+<S>STNAM  MX_CRC_Init
+<S>STCYC  2
+<S>STMCC  0 (2:2)
+<S>STMIF  1
+<S>STSUB  2
+<S>STAKI  4
+<S>STLIN  8
+<S>STXLN  3
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  1
+<S>STPTH  2
+<S>STPDN  0.67   
+<S>STPBG  0
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  0
+<S>STAV1  5
+<S>STAV2  7
+<S>STAV3  9
+<S>STST1  5
+<S>STST2  4
+<S>STST3  3
+<S>STPAR  0
+<S>STCAL  2
+<S>STFN1  20
+<S>STFN2  9
+
+<DEFINE> MX_SPI3_Init C:/CodeInspection/DisplayUnit/Src/main.c 849 N DR OF F I (.,.) -
+<DEFINE> MX_SPI3_Init C:/CodeInspection/DisplayUnit/Src/main.c 849 N DF OF F I (.,.) -
+<R>X MX_SPI3_Init hspi3 853 W
+<R>X MX_SPI3_Init hspi3 854 W
+<R>X MX_SPI3_Init hspi3 855 W
+<R>X MX_SPI3_Init hspi3 856 W
+<R>X MX_SPI3_Init hspi3 857 W
+<R>X MX_SPI3_Init hspi3 858 W
+<R>X MX_SPI3_Init hspi3 859 W
+<R>X MX_SPI3_Init hspi3 860 W
+<R>X MX_SPI3_Init hspi3 861 W
+<R>X MX_SPI3_Init hspi3 862 W
+<R>X MX_SPI3_Init hspi3 863 W
+<R>X MX_SPI3_Init hspi3 864 W
+<R>C MX_SPI3_Init HAL_SPI_Init 865
+<R>X MX_SPI3_Init HAL_SPI_Init 865 R
+<R>X MX_SPI3_Init hspi3 865 R
+<R>X MX_SPI3_Init hspi3 865 W
+<R>C MX_SPI3_Init _Error_Handler 867
+<R>X MX_SPI3_Init _Error_Handler 867 R
+<CTLG> MX_SPI3_Init 1
+<CTLG> 1 2
+<CTLG> 2 3
+<CTLG> 2 4
+<CTLG> 3 4
+<CTLG> 4 6
+<CTLGN> 850 865 865 865 870 870 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/Src/main.c
+<S>STNAM  MX_SPI3_Init
+<S>STCYC  2
+<S>STMCC  0 (2:2)
+<S>STMIF  1
+<S>STSUB  2
+<S>STAKI  4
+<S>STLIN  19
+<S>STXLN  14
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  0
+<S>STPTH  2
+<S>STPDN  0.14   
+<S>STPBG  0
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  0
+<S>STAV1  7
+<S>STAV2  8
+<S>STAV3  8
+<S>STST1  15
+<S>STST2  14
+<S>STST3  14
+<S>STPAR  0
+<S>STCAL  2
+<S>STFN1  62
+<S>STFN2  51
+
+<DEFINE> MX_TIM4_Init C:/CodeInspection/DisplayUnit/Src/main.c 873 N DR OF F I (.,.) -
+<DEFINE> MX_TIM4_Init C:/CodeInspection/DisplayUnit/Src/main.c 873 N DF OF F I (.,.) -
+<DEFINE> sMasterConfig C:/CodeInspection/DisplayUnit/Src/main.c 876 N DC OV B N {sTIM_MasterConfigTypeDef} -
+<DEFINE> sMasterConfig C:/CodeInspection/DisplayUnit/Src/main.c 876 N DF OV B N {sTIM_MasterConfigTypeDef} -
+<DEFINE> sConfigOC C:/CodeInspection/DisplayUnit/Src/main.c 877 N DC OV B N {sTIM_OC_InitTypeDef} -
+<DEFINE> sConfigOC C:/CodeInspection/DisplayUnit/Src/main.c 877 N DF OV B N {sTIM_OC_InitTypeDef} -
+<R>X MX_TIM4_Init htim4 879 W
+<R>X MX_TIM4_Init htim4 880 W
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/main.c 880 28 N ON ni B X
+<R>X MX_TIM4_Init htim4 881 W
+<R>X MX_TIM4_Init htim4 882 W
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/main.c 882 25 N ON ni B X
+<R>X MX_TIM4_Init htim4 883 W
+<R>C MX_TIM4_Init HAL_TIM_PWM_Init 884
+<R>X MX_TIM4_Init HAL_TIM_PWM_Init 884 R
+<R>X MX_TIM4_Init htim4 884 R
+<R>X MX_TIM4_Init htim4 884 W
+<R>C MX_TIM4_Init _Error_Handler 886
+<R>X MX_TIM4_Init _Error_Handler 886 R
+<R>C MX_TIM4_Init HAL_TIMEx_MasterConfigSynchronization 891
+<R>X MX_TIM4_Init HAL_TIMEx_MasterConfigSynchronization 891 R
+<R>X MX_TIM4_Init htim4 891 R
+<R>X MX_TIM4_Init htim4 891 W
+<R>C MX_TIM4_Init _Error_Handler 893
+<R>X MX_TIM4_Init _Error_Handler 893 R
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/main.c 897 23 N ON ni B X
+<R>C MX_TIM4_Init HAL_TIM_PWM_ConfigChannel 900
+<R>X MX_TIM4_Init HAL_TIM_PWM_ConfigChannel 900 R
+<R>X MX_TIM4_Init htim4 900 R
+<R>X MX_TIM4_Init htim4 900 W
+<R>C MX_TIM4_Init _Error_Handler 902
+<R>X MX_TIM4_Init _Error_Handler 902 R
+<R>C MX_TIM4_Init HAL_TIM_MspPostInit 905
+<R>X MX_TIM4_Init HAL_TIM_MspPostInit 905 R
+<R>X MX_TIM4_Init htim4 905 R
+<R>X MX_TIM4_Init htim4 905 W
+<CTLG> MX_TIM4_Init 1
+<CTLG> 1 2
+<CTLG> 2 3
+<CTLG> 2 4
+<CTLG> 3 4
+<CTLG> 4 5
+<CTLG> 5 6
+<CTLG> 5 7
+<CTLG> 6 7
+<CTLG> 7 8
+<CTLG> 8 9
+<CTLG> 8 10
+<CTLG> 9 10
+<CTLG> 10 11
+<CTLG> 11 13
+<CTLGN> 874 884 884 884 891 891 891 900 900 900 907 907 907 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/Src/main.c
+<S>STNAM  MX_TIM4_Init
+<S>STCYC  4
+<S>STMCC  0 (4:4)
+<S>STMIF  1
+<S>STSUB  7
+<S>STAKI  11
+<S>STLIN  32
+<S>STXLN  18
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  2
+<S>STPTH  8
+<S>STPDN  0.44   
+<S>STPBG  1
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  0
+<S>STAV1  6
+<S>STAV2  7
+<S>STAV3  8
+<S>STST1  23
+<S>STST2  20
+<S>STST3  18
+<S>STPAR  0
+<S>STCAL  5
+<S>STFN1  89
+<S>STFN2  58
+
+<DEFINE> MX_USART1_UART_Init C:/CodeInspection/DisplayUnit/Src/main.c 910 N DR OF F I (.,.) -
+<DEFINE> MX_USART1_UART_Init C:/CodeInspection/DisplayUnit/Src/main.c 910 N DF OF F I (.,.) -
+<R>X MX_USART1_UART_Init huart1 913 W
+<R>X MX_USART1_UART_Init huart1 914 W
+<R>X MX_USART1_UART_Init huart1 915 W
+<R>X MX_USART1_UART_Init huart1 916 W
+<R>X MX_USART1_UART_Init huart1 917 W
+<R>X MX_USART1_UART_Init huart1 918 W
+<R>X MX_USART1_UART_Init huart1 919 W
+<R>X MX_USART1_UART_Init huart1 920 W
+<R>C MX_USART1_UART_Init HAL_UART_Init 921
+<R>X MX_USART1_UART_Init HAL_UART_Init 921 R
+<R>X MX_USART1_UART_Init huart1 921 R
+<R>X MX_USART1_UART_Init huart1 921 W
+<R>C MX_USART1_UART_Init _Error_Handler 923
+<R>X MX_USART1_UART_Init _Error_Handler 923 R
+<CTLG> MX_USART1_UART_Init 1
+<CTLG> 1 2
+<CTLG> 2 3
+<CTLG> 2 4
+<CTLG> 3 4
+<CTLG> 4 6
+<CTLGN> 911 921 921 921 925 925 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/Src/main.c
+<S>STNAM  MX_USART1_UART_Init
+<S>STCYC  2
+<S>STMCC  0 (2:2)
+<S>STMIF  1
+<S>STSUB  2
+<S>STAKI  4
+<S>STLIN  13
+<S>STXLN  10
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  0
+<S>STPTH  2
+<S>STPDN  0.20   
+<S>STPBG  0
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  0
+<S>STAV1  7
+<S>STAV2  8
+<S>STAV3  8
+<S>STST1  11
+<S>STST2  10
+<S>STST3  10
+<S>STPAR  0
+<S>STCAL  2
+<S>STFN1  46
+<S>STFN2  35
+
+<EXTD> MX_USART2_UART_Init C:/CodeInspection/DisplayUnit/Src/main.c 929
+<DEFINE> MX_USART2_UART_Init C:/CodeInspection/DisplayUnit/Src/main.c 929 N DR OF F X (.,.) -
+<DEFINE> MX_USART2_UART_Init C:/CodeInspection/DisplayUnit/Src/main.c 929 N DF OF F X (.,.) -
+<R>X MX_USART2_UART_Init huart2 931 W
+<R>X MX_USART2_UART_Init SettingValue 935 R
+<R>X MX_USART2_UART_Init setup_speed 935 R
+<R>X MX_USART2_UART_Init huart2 935 W
+<R>X MX_USART2_UART_Init huart2 937 W
+<R>X MX_USART2_UART_Init huart2 938 W
+<R>X MX_USART2_UART_Init huart2 939 W
+<R>X MX_USART2_UART_Init huart2 940 W
+<R>X MX_USART2_UART_Init huart2 941 W
+<R>X MX_USART2_UART_Init huart2 942 W
+<R>C MX_USART2_UART_Init HAL_UART_Init 943
+<R>X MX_USART2_UART_Init HAL_UART_Init 943 R
+<R>X MX_USART2_UART_Init huart2 943 R
+<R>X MX_USART2_UART_Init huart2 943 W
+<R>C MX_USART2_UART_Init _Error_Handler 945
+<R>X MX_USART2_UART_Init _Error_Handler 945 R
+<CTLG> MX_USART2_UART_Init 1
+<CTLG> 1 2
+<CTLG> 2 3
+<CTLG> 2 4
+<CTLG> 3 4
+<CTLG> 4 6
+<CTLGN> 930 943 943 943 948 948 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/Src/main.c
+<S>STNAM  MX_USART2_UART_Init
+<S>STCYC  2
+<S>STMCC  0 (2:2)
+<S>STMIF  1
+<S>STSUB  2
+<S>STAKI  4
+<S>STLIN  17
+<S>STXLN  10
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  0
+<S>STPTH  2
+<S>STPDN  0.20   
+<S>STPBG  0
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  0
+<S>STAV1  8
+<S>STAV2  9
+<S>STAV3  9
+<S>STST1  11
+<S>STST2  10
+<S>STST3  10
+<S>STPAR  0
+<S>STCAL  2
+<S>STFN1  56
+<S>STFN2  38
+
+<DEFINE> MX_USART6_UART_Init C:/CodeInspection/DisplayUnit/Src/main.c 953 N DR OF F I (.,.) -
+<DEFINE> MX_USART6_UART_Init C:/CodeInspection/DisplayUnit/Src/main.c 953 N DF OF F I (.,.) -
+<R>C MX_USART6_UART_Init HAL_UART_Init 964
+<R>X MX_USART6_UART_Init HAL_UART_Init 964 R
+<R>C MX_USART6_UART_Init _Error_Handler 966
+<R>X MX_USART6_UART_Init _Error_Handler 966 R
+<CTLG> MX_USART6_UART_Init 1
+<CTLG> 1 2
+<CTLG> 2 3
+<CTLG> 2 4
+<CTLG> 3 4
+<CTLG> 4 6
+<CTLGN> 954 964 964 964 969 969 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/Src/main.c
+<S>STNAM  MX_USART6_UART_Init
+<S>STCYC  2
+<S>STMCC  0 (2:2)
+<S>STMIF  1
+<S>STSUB  2
+<S>STAKI  4
+<S>STLIN  14
+<S>STXLN  10
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  0
+<S>STPTH  2
+<S>STPDN  0.20   
+<S>STPBG  0
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  0
+<S>STAV1  7
+<S>STAV2  8
+<S>STAV3  8
+<S>STST1  11
+<S>STST2  10
+<S>STST3  10
+<S>STPAR  0
+<S>STCAL  2
+<S>STFN1  46
+<S>STFN2  35
+
+<DEFINE> MX_GPIO_Init C:/CodeInspection/DisplayUnit/Src/main.c 978 N DR OF F I (.,.) -
+<DEFINE> MX_GPIO_Init C:/CodeInspection/DisplayUnit/Src/main.c 978 N DF OF F I (.,.) -
+<DEFINE> GPIO_InitStruct C:/CodeInspection/DisplayUnit/Src/main.c 981 N DC OV B N {sGPIO_InitTypeDef} -
+<DEFINE> GPIO_InitStruct C:/CodeInspection/DisplayUnit/Src/main.c 981 N DF OV B N {sGPIO_InitTypeDef} -
+<DEFINE> tmpreg C:/CodeInspection/DisplayUnit/Src/main.c 984 N DC OV B N ^ui -
+<DEFINE> tmpreg C:/CodeInspection/DisplayUnit/Src/main.c 984 N DF OV B N ^ui -
+<DEFINE> tmpreg C:/CodeInspection/DisplayUnit/Src/main.c 985 N DC OV B N ^ui -
+<DEFINE> tmpreg C:/CodeInspection/DisplayUnit/Src/main.c 985 N DF OV B N ^ui -
+<DEFINE> tmpreg C:/CodeInspection/DisplayUnit/Src/main.c 986 N DC OV B N ^ui -
+<DEFINE> tmpreg C:/CodeInspection/DisplayUnit/Src/main.c 986 N DF OV B N ^ui -
+<DEFINE> tmpreg C:/CodeInspection/DisplayUnit/Src/main.c 987 N DC OV B N ^ui -
+<DEFINE> tmpreg C:/CodeInspection/DisplayUnit/Src/main.c 987 N DF OV B N ^ui -
+<DEFINE> tmpreg C:/CodeInspection/DisplayUnit/Src/main.c 988 N DC OV B N ^ui -
+<DEFINE> tmpreg C:/CodeInspection/DisplayUnit/Src/main.c 988 N DF OV B N ^ui -
+<DEFINE> tmpreg C:/CodeInspection/DisplayUnit/Src/main.c 989 N DC OV B N ^ui -
+<DEFINE> tmpreg C:/CodeInspection/DisplayUnit/Src/main.c 989 N DF OV B N ^ui -
+<R>C MX_GPIO_Init HAL_GPIO_Init 1003
+<R>X MX_GPIO_Init HAL_GPIO_Init 1003 R
+<R>C MX_GPIO_Init HAL_GPIO_WritePin 1006
+<R>X MX_GPIO_Init HAL_GPIO_WritePin 1006 R
+<R>C MX_GPIO_Init HAL_GPIO_Init 1019
+<R>X MX_GPIO_Init HAL_GPIO_Init 1019 R
+<R>C MX_GPIO_Init HAL_GPIO_Init 1025
+<R>X MX_GPIO_Init HAL_GPIO_Init 1025 R
+<R>C MX_GPIO_Init HAL_GPIO_Init 1032
+<R>X MX_GPIO_Init HAL_GPIO_Init 1032 R
+<R>C MX_GPIO_Init HAL_GPIO_Init 1046
+<R>X MX_GPIO_Init HAL_GPIO_Init 1046 R
+<R>C MX_GPIO_Init HAL_GPIO_Init 1061
+<R>X MX_GPIO_Init HAL_GPIO_Init 1061 R
+<R>C MX_GPIO_Init HAL_GPIO_WritePin 1063
+<R>X MX_GPIO_Init HAL_GPIO_WritePin 1063 R
+<CTLG> MX_GPIO_Init 1
+<CTLG> 1 2
+<CTLG> 2 3
+<CTLG> 3 1
+<CTLG> 3 4
+<CTLG> 4 5
+<CTLG> 5 6
+<CTLG> 6 4
+<CTLG> 6 7
+<CTLG> 7 8
+<CTLG> 8 9
+<CTLG> 9 7
+<CTLG> 9 10
+<CTLG> 10 11
+<CTLG> 11 12
+<CTLG> 12 10
+<CTLG> 12 13
+<CTLG> 13 14
+<CTLG> 14 15
+<CTLG> 15 13
+<CTLG> 15 16
+<CTLG> 16 17
+<CTLG> 17 18
+<CTLG> 18 16
+<CTLG> 18 19
+<CTLG> 19 20
+<CTLG> 20 22
+<CTLGN> 979 984 984 984 985 985 985 986 986 986 987 987 987 988 988 988 989 989 989 1065 1065 1065 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/Src/main.c
+<S>STNAM  MX_GPIO_Init
+<S>STCYC  7
+<S>STMCC  0 (7:7)
+<S>STMIF  1
+<S>STSUB  8
+<S>STAKI  15
+<S>STLIN  85
+<S>STXLN  37
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  7
+<S>STPTH  64
+<S>STPDN  1.73   
+<S>STPBG  2
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  0
+<S>STAV1  3
+<S>STAV2  3
+<S>STAV3  4
+<S>STST1  68
+<S>STST2  62
+<S>STST3  55
+<S>STPAR  0
+<S>STCAL  2
+<S>STFN1  136
+<S>STFN2  109
+
+<DEFINE> MX_FSMC_Init C:/CodeInspection/DisplayUnit/Src/main.c 1068 N DR OF F I (.,.) -
+<DEFINE> MX_FSMC_Init C:/CodeInspection/DisplayUnit/Src/main.c 1068 N DF OF F I (.,.) -
+<DEFINE> Timing C:/CodeInspection/DisplayUnit/Src/main.c 1070 N DC OV B N {sFSMC_NORSRAM_TimingTypeDef} -
+<DEFINE> Timing C:/CodeInspection/DisplayUnit/Src/main.c 1070 N DF OV B N {sFSMC_NORSRAM_TimingTypeDef} -
+<DEFINE> hsram1 C:/CodeInspection/DisplayUnit/Src/main.c 1071 N DC OV B N {sSRAM_HandleTypeDef} S
+<DEFINE> hsram1 C:/CodeInspection/DisplayUnit/Src/main.c 1071 N DF OV B N {sSRAM_HandleTypeDef} S
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/main.c 1096 36 N ON ni B X
+<R>C MX_FSMC_Init HAL_SRAM_Init 1102
+<R>X MX_FSMC_Init HAL_SRAM_Init 1102 R
+<R>C MX_FSMC_Init _Error_Handler 1104
+<R>X MX_FSMC_Init _Error_Handler 1104 R
+<CTLG> MX_FSMC_Init 1
+<CTLG> 1 2
+<CTLG> 2 3
+<CTLG> 2 4
+<CTLG> 3 4
+<CTLG> 4 6
+<CTLGN> 1069 1102 1102 1102 1107 1107 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/Src/main.c
+<S>STNAM  MX_FSMC_Init
+<S>STCYC  2
+<S>STMCC  0 (2:2)
+<S>STMIF  1
+<S>STSUB  2
+<S>STAKI  4
+<S>STLIN  37
+<S>STXLN  25
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  2
+<S>STPTH  2
+<S>STPDN  0.08   
+<S>STPBG  0
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  0
+<S>STAV1  7
+<S>STAV2  7
+<S>STAV3  7
+<S>STST1  28
+<S>STST2  27
+<S>STST3  25
+<S>STPAR  0
+<S>STCAL  2
+<S>STFN1  104
+<S>STFN2  93
+
+<EXTD> HAL_TIM_PeriodElapsedCallback C:/CodeInspection/DisplayUnit/Src/main.c 1121
+<DEFINE> htim C:/CodeInspection/DisplayUnit/Src/main.c 1121 N DC OV B N p{sTIM_HandleTypeDef} R
+<DEFINE> HAL_TIM_PeriodElapsedCallback C:/CodeInspection/DisplayUnit/Src/main.c 1121 N DR OF F X (.,p{sTIM_HandleTypeDef}) -
+<DEFINE> HAL_TIM_PeriodElapsedCallback C:/CodeInspection/DisplayUnit/Src/main.c 1121 N DF OF F X (.,p{sTIM_HandleTypeDef}) -
+<R>C HAL_TIM_PeriodElapsedCallback HAL_IncTick 1128
+<R>X HAL_TIM_PeriodElapsedCallback HAL_IncTick 1128 R
+<CTLG> HAL_TIM_PeriodElapsedCallback 1
+<CTLG> 1 2
+<CTLG> 1 3
+<CTLG> 2 3
+<CTLG> 3 5
+<CTLGN> 1122 1127 1127 1133 1133 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/Src/main.c
+<S>STNAM  HAL_TIM_PeriodElapsedCallback
+<S>STCYC  2
+<S>STMCC  0 (2:2)
+<S>STMIF  1
+<S>STSUB  1
+<S>STAKI  3
+<S>STLIN  10
+<S>STXLN  2
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  0
+<S>STPTH  2
+<S>STPDN  1.00   
+<S>STPBG  0
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  0
+<S>STAV1  5
+<S>STAV2  8
+<S>STAV3  8
+<S>STST1  3
+<S>STST2  2
+<S>STST3  2
+<S>STPAR  1
+<S>STCAL  1
+<S>STFN1  12
+<S>STFN2  4
+
+<EXTD> _Error_Handler C:/CodeInspection/DisplayUnit/Src/main.c 1142
+<DEFINE> file C:/CodeInspection/DisplayUnit/Src/main.c 1142 N DC OV B N p_c R
+<DEFINE> line C:/CodeInspection/DisplayUnit/Src/main.c 1142 N DC OV B N ni R
+<DEFINE> _Error_Handler C:/CodeInspection/DisplayUnit/Src/main.c 1142 N DR OF F X (.,p_c,ni) -
+<DEFINE> _Error_Handler C:/CodeInspection/DisplayUnit/Src/main.c 1142 N DF OF F X (.,p_c,ni) -
+<R>C _Error_Handler printf 1144
+<R>X _Error_Handler printf 1144 R
+<LIT> "Error file:%s Line:%d\n" - - C:/CodeInspection/DisplayUnit/Src/main.c 1144 18 N SN [23,_c] B X
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/Src/main.c 1147 11 N DN ni B X
+<CTLG> _Error_Handler 1
+<CTLG> 1 2
+<CTLG> 2 3
+<CTLG> 2 4
+<CTLG> 3 2
+<CTLG> 4 6
+<CTLGN> 1143 1147 1147 1147 1151 1151 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/Src/main.c
+<S>STNAM  _Error_Handler
+<S>STCYC  2
+<S>STMCC  0 (2:2)
+<S>STMIF  1
+<S>STSUB  1
+<S>STAKI  3
+<S>STLIN  7
+<S>STXLN  2
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  0
+<S>STPTH  2
+<S>STPDN  1.00   
+<S>STPBG  0
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  0
+<S>STAV1  6
+<S>STAV2  10
+<S>STAV3  10
+<S>STST1  3
+<S>STST2  2
+<S>STST3  2
+<S>STPAR  2
+<S>STCAL  1
+<S>STFN1  15
+<S>STFN2  5
+
+<DEFINE> Address C:/CodeInspection/DisplayUnit/Src/main.c 1181 N DC OV B N ui R
+<DEFINE> GetSector C:/CodeInspection/DisplayUnit/Src/main.c 1181 N DR OF F I (ui,ui) -
+<DEFINE> GetSector C:/CodeInspection/DisplayUnit/Src/main.c 1181 N DF OF F I (ui,ui) -
+<DEFINE> sector C:/CodeInspection/DisplayUnit/Src/main.c 1183 N DC OV B N ui -
+<DEFINE> sector C:/CodeInspection/DisplayUnit/Src/main.c 1183 N DF OV B N ui -
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/main.c 1183 23 N ON ni B O
+<CTLG> GetSector 1
+<CTLG> 1 2
+<CTLG> 1 3
+<CTLG> 2 34
+<CTLG> 3 4
+<CTLG> 3 5
+<CTLG> 4 33
+<CTLG> 5 6
+<CTLG> 5 7
+<CTLG> 6 32
+<CTLG> 7 8
+<CTLG> 7 9
+<CTLG> 8 31
+<CTLG> 9 10
+<CTLG> 9 11
+<CTLG> 10 30
+<CTLG> 11 12
+<CTLG> 11 13
+<CTLG> 12 29
+<CTLG> 13 14
+<CTLG> 13 15
+<CTLG> 14 28
+<CTLG> 15 16
+<CTLG> 15 17
+<CTLG> 16 27
+<CTLG> 17 18
+<CTLG> 17 19
+<CTLG> 18 26
+<CTLG> 19 20
+<CTLG> 19 21
+<CTLG> 20 25
+<CTLG> 21 22
+<CTLG> 21 23
+<CTLG> 22 24
+<CTLG> 23 24
+<CTLG> 24 25
+<CTLG> 25 26
+<CTLG> 26 27
+<CTLG> 27 28
+<CTLG> 28 29
+<CTLG> 29 30
+<CTLG> 30 31
+<CTLG> 31 32
+<CTLG> 32 33
+<CTLG> 33 34
+<CTLG> 34 36
+<CTLGN> 1182 1185 1185 1189 1189 1193 1193 1197 1197 1201 1201 1205 1205 1209 1209 1213 1213 1217 1217 1221 1221 1225 1225 1229 1225 1221 1217 1213 1209 1205 1201 1197 1193 1189 1234 1234 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/Src/main.c
+<S>STNAM  GetSector
+<S>STCYC  12
+<S>STMCC  11 (12:23)
+<S>STMIF  11
+<S>STSUB  0
+<S>STAKI  12
+<S>STLIN  52
+<S>STXLN  26
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  1
+<S>STPTH  12
+<S>STPDN  0.46   
+<S>STPBG  1
+<S>STLOP  11
+<S>STM07  1
+<S>STM19  1
+<S>STAV1  6
+<S>STAV2  9
+<S>STAV3  10
+<S>STST1  37
+<S>STST2  25
+<S>STST3  24
+<S>STPAR  1
+<S>STCAL  0
+<S>STFN1  175
+<S>STFN2  72
+
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/main.c 1237 5 N ON - F P
+<EXTD> FlashRead C:/CodeInspection/DisplayUnit/Src/main.c 1330
+<DEFINE> FlashRead C:/CodeInspection/DisplayUnit/Src/main.c 1330 N DR OF F X (.,.) -
+<DEFINE> FlashRead C:/CodeInspection/DisplayUnit/Src/main.c 1330 N DF OF F X (.,.) -
+<DEFINE> Address C:/CodeInspection/DisplayUnit/Src/main.c 1332 N DC OV B N ui -
+<DEFINE> Address C:/CodeInspection/DisplayUnit/Src/main.c 1332 N DF OV B N ui -
+<DEFINE> data C:/CodeInspection/DisplayUnit/Src/main.c 1334 N DC OV B N us -
+<DEFINE> data C:/CodeInspection/DisplayUnit/Src/main.c 1334 N DF OV B N us -
+<R>C FlashRead printf 1336
+<R>X FlashRead printf 1336 R
+<LIT> " Flash Read ID %04x\n" - - C:/CodeInspection/DisplayUnit/Src/main.c 1336 18 N SN [21,_c] B X
+<R>C FlashRead printf 1340
+<R>X FlashRead printf 1340 R
+<LIT> "Read Falsh.............\n" - - C:/CodeInspection/DisplayUnit/Src/main.c 1340 22 N SN [25,_c] B X
+<DEFINE> i C:/CodeInspection/DisplayUnit/Src/main.c 1342 N DC OV B N ni -
+<DEFINE> i C:/CodeInspection/DisplayUnit/Src/main.c 1342 N DF OV B N ni -
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/main.c 1342 21 N ON ni B O
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/Src/main.c 1342 41 N DN ni B X
+<R>X FlashRead SettingValue 1344 W
+<DEFINE> i C:/CodeInspection/DisplayUnit/Src/main.c 1347 N DC OV B N ni -
+<DEFINE> i C:/CodeInspection/DisplayUnit/Src/main.c 1347 N DF OV B N ni -
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/main.c 1347 21 N ON ni B O
+<R>X FlashRead ConnectSetting 1349 W
+<R>X FlashRead ConnectSetting 1351 W
+<R>X FlashRead SettingValue 1354 W
+<R>X FlashRead SettingValue 1355 R
+<R>X FlashRead gDeviceCount 1355 W
+<CTLG> FlashRead 1
+<CTLG> 1 2
+<CTLG> 2 3
+<CTLG> 2 13
+<CTLG> 3 4
+<CTLG> 4 5
+<CTLG> 5 6
+<CTLG> 5 8
+<CTLG> 6 7
+<CTLG> 7 5
+<CTLG> 8 9
+<CTLG> 9 10
+<CTLG> 9 12
+<CTLG> 10 11
+<CTLG> 11 9
+<CTLG> 12 13
+<CTLG> 13 15
+<CTLGN> 1331 1338 1338 1342 1342 1342 1342 1342 1347 1347 1347 1347 1338 1357 1357 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/Src/main.c
+<S>STNAM  FlashRead
+<S>STCYC  4
+<S>STMCC  0 (4:4)
+<S>STMIF  2
+<S>STSUB  2
+<S>STAKI  6
+<S>STLIN  25
+<S>STXLN  17
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  4
+<S>STPTH  5
+<S>STPDN  0.29   
+<S>STPBG  1
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  0
+<S>STAV1  8
+<S>STAV2  9
+<S>STAV3  10
+<S>STST1  21
+<S>STST2  18
+<S>STST3  16
+<S>STPAR  0
+<S>STCAL  1
+<S>STFN1  107
+<S>STFN2  63
+
+<EXTD> FlashWrite C:/CodeInspection/DisplayUnit/Src/main.c 1360
+<DEFINE> FlashWrite C:/CodeInspection/DisplayUnit/Src/main.c 1360 N DR OF F X (.,.) -
+<DEFINE> FlashWrite C:/CodeInspection/DisplayUnit/Src/main.c 1360 N DF OF F X (.,.) -
+<DEFINE> FirstSector C:/CodeInspection/DisplayUnit/Src/main.c 1362 N DC OV B N ui -
+<DEFINE> FirstSector C:/CodeInspection/DisplayUnit/Src/main.c 1362 N DF OV B N ui -
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/main.c 1362 28 N ON ni B O
+<DEFINE> NbOfSectors C:/CodeInspection/DisplayUnit/Src/main.c 1362 N DC OV B N ui -
+<DEFINE> NbOfSectors C:/CodeInspection/DisplayUnit/Src/main.c 1362 N DF OV B N ui -
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/main.c 1362 45 N ON ni B O
+<DEFINE> Address C:/CodeInspection/DisplayUnit/Src/main.c 1362 N DC OV B N ui -
+<DEFINE> Address C:/CodeInspection/DisplayUnit/Src/main.c 1362 N DF OV B N ui -
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/main.c 1362 58 N ON ni B O
+<DEFINE> SectorError C:/CodeInspection/DisplayUnit/Src/main.c 1363 N DC OV B N ui -
+<DEFINE> SectorError C:/CodeInspection/DisplayUnit/Src/main.c 1363 N DF OV B N ui -
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/main.c 1363 28 N ON ni B O
+<R>C FlashWrite HAL_FLASH_Unlock 1365
+<R>X FlashWrite HAL_FLASH_Unlock 1365 R
+<R>C FlashWrite GetSector 1371
+<R>C FlashWrite GetSector 1373
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/Src/main.c 1373 68 N DN ni B X
+<R>C FlashWrite HAL_FLASHEx_Erase 1380
+<R>X FlashWrite HAL_FLASHEx_Erase 1380 R
+<R>C FlashWrite _Error_Handler 1391
+<R>X FlashWrite _Error_Handler 1391 R
+<R>C FlashWrite HAL_FLASH_Program 1415
+<R>X FlashWrite HAL_FLASH_Program 1415 R
+<DEFINE> i C:/CodeInspection/DisplayUnit/Src/main.c 1418 N DC OV B N ni -
+<DEFINE> i C:/CodeInspection/DisplayUnit/Src/main.c 1418 N DF OV B N ni -
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/main.c 1418 21 N ON ni B O
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/Src/main.c 1418 41 N DN ni B X
+<R>C FlashWrite HAL_FLASH_Program 1420
+<R>X FlashWrite HAL_FLASH_Program 1420 R
+<R>X FlashWrite SettingValue 1420 R
+<R>C FlashWrite printf 1422
+<R>X FlashWrite printf 1422 R
+<LIT> "Write Fail SettingValue[%d]\n" - - C:/CodeInspection/DisplayUnit/Src/main.c 1422 30 N SN [29,_c] B X
+<DEFINE> i C:/CodeInspection/DisplayUnit/Src/main.c 1426 N DC OV B N ni -
+<DEFINE> i C:/CodeInspection/DisplayUnit/Src/main.c 1426 N DF OV B N ni -
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/main.c 1426 21 N ON ni B O
+<R>C FlashWrite HAL_FLASH_Program 1428
+<R>X FlashWrite HAL_FLASH_Program 1428 R
+<R>X FlashWrite ConnectSetting 1428 R
+<R>C FlashWrite printf 1430
+<R>X FlashWrite printf 1430 R
+<LIT> "Write Fail ConnectSetting[%d].DeviceType\n" - - C:/CodeInspection/DisplayUnit/Src/main.c 1430 30 N SN [42,_c] B X
+<R>C FlashWrite HAL_FLASH_Program 1433
+<R>X FlashWrite HAL_FLASH_Program 1433 R
+<R>X FlashWrite ConnectSetting 1433 R
+<R>C FlashWrite printf 1435
+<R>X FlashWrite printf 1435 R
+<LIT> "Write Fail ConnectSetting[%d].Address\n" - - C:/CodeInspection/DisplayUnit/Src/main.c 1435 30 N SN [39,_c] B X
+<R>C FlashWrite HAL_FLASH_Program 1439
+<R>X FlashWrite HAL_FLASH_Program 1439 R
+<R>X FlashWrite SettingValue 1439 R
+<R>C FlashWrite printf 1441
+<R>X FlashWrite printf 1441 R
+<LIT> "Write Fail SettingValue[SETUP_GATEWAY_USE]\n" - - C:/CodeInspection/DisplayUnit/Src/main.c 1441 26 N SN [44,_c] B X
+<R>C FlashWrite printf 1446
+<R>X FlashWrite printf 1446 R
+<LIT> "Write Fail SETUP_WRITE_ID\n" - - C:/CodeInspection/DisplayUnit/Src/main.c 1446 22 N SN [27,_c] B X
+<R>C FlashWrite HAL_FLASH_Lock 1450
+<R>X FlashWrite HAL_FLASH_Lock 1450 R
+<CTLG> FlashWrite 1
+<CTLG> 1 2
+<CTLG> 2 3
+<CTLG> 2 4
+<CTLG> 3 4
+<CTLG> 4 5
+<CTLG> 5 6
+<CTLG> 6 7
+<CTLG> 7 5
+<CTLG> 7 8
+<CTLG> 8 9
+<CTLG> 9 10
+<CTLG> 10 8
+<CTLG> 10 11
+<CTLG> 11 12
+<CTLG> 12 13
+<CTLG> 12 32
+<CTLG> 13 14
+<CTLG> 14 15
+<CTLG> 15 16
+<CTLG> 15 20
+<CTLG> 16 17
+<CTLG> 16 18
+<CTLG> 17 18
+<CTLG> 18 19
+<CTLG> 19 15
+<CTLG> 20 21
+<CTLG> 21 22
+<CTLG> 21 29
+<CTLG> 22 23
+<CTLG> 22 24
+<CTLG> 23 24
+<CTLG> 24 25
+<CTLG> 25 26
+<CTLG> 25 27
+<CTLG> 26 27
+<CTLG> 27 28
+<CTLG> 28 21
+<CTLG> 29 30
+<CTLG> 29 31
+<CTLG> 30 31
+<CTLG> 31 33
+<CTLG> 32 33
+<CTLG> 33 34
+<CTLG> 34 36
+<CTLGN> 1361 1380 1380 1380 1402 1402 1402 1402 1403 1403 1403 1415 1415 1418 1418 1418 1420 1420 1418 1418 1426 1426 1428 1428 1433 1433 1433 1426 1426 1439 1439 1415 1444 1451 1451 1451 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/Src/main.c
+<S>STNAM  FlashWrite
+<S>STCYC  11
+<S>STMCC  0 (11:11)
+<S>STMIF  3
+<S>STSUB  16
+<S>STAKI  27
+<S>STLIN  89
+<S>STXLN  36
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  6
+<S>STPTH  248
+<S>STPDN  6.89   
+<S>STPBG  2
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  0
+<S>STAV1  6
+<S>STAV2  7
+<S>STAV3  8
+<S>STST1  52
+<S>STST2  41
+<S>STST3  37
+<S>STPAR  0
+<S>STCAL  7
+<S>STFN1  210
+<S>STFN2  108
+
+<EXTD> FaultCountRead C:/CodeInspection/DisplayUnit/Src/main.c 1454
+<DEFINE> FaultCountRead C:/CodeInspection/DisplayUnit/Src/main.c 1454 N DR OF F X (.,.) -
+<DEFINE> FaultCountRead C:/CodeInspection/DisplayUnit/Src/main.c 1454 N DF OF F X (.,.) -
+<DEFINE> Address C:/CodeInspection/DisplayUnit/Src/main.c 1456 N DC OV B N ui -
+<DEFINE> Address C:/CodeInspection/DisplayUnit/Src/main.c 1456 N DF OV B N ui -
+<DEFINE> data C:/CodeInspection/DisplayUnit/Src/main.c 1458 N DC OV B N us -
+<DEFINE> data C:/CodeInspection/DisplayUnit/Src/main.c 1458 N DF OV B N us -
+<R>C FaultCountRead printf 1460
+<R>X FaultCountRead printf 1460 R
+<LIT> " Flash Fault Read ID %04x\n" - - C:/CodeInspection/DisplayUnit/Src/main.c 1460 18 N SN [27,_c] B X
+<R>C FaultCountRead printf 1464
+<R>X FaultCountRead printf 1464 R
+<LIT> "Read Falsh.............\n" - - C:/CodeInspection/DisplayUnit/Src/main.c 1464 22 N SN [25,_c] B X
+<DEFINE> i C:/CodeInspection/DisplayUnit/Src/main.c 1466 N DC OV B N ni -
+<DEFINE> i C:/CodeInspection/DisplayUnit/Src/main.c 1466 N DF OV B N ni -
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/main.c 1466 21 N ON ni B O
+<R>X FaultCountRead gOldFaultEventIndex 1468 W
+<DEFINE> i C:/CodeInspection/DisplayUnit/Src/main.c 1473 N DC OV B N ni -
+<DEFINE> i C:/CodeInspection/DisplayUnit/Src/main.c 1473 N DF OV B N ni -
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/main.c 1473 17 N ON ni B O
+<R>X FaultCountRead _acHardwareVersion 1475 W
+<R>X FaultCountRead _acHardwareVersion 1477 W
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/main.c 1477 35 N ON ni B X
+<CTLG> FaultCountRead 1
+<CTLG> 1 2
+<CTLG> 2 3
+<CTLG> 2 9
+<CTLG> 3 4
+<CTLG> 4 5
+<CTLG> 5 6
+<CTLG> 5 8
+<CTLG> 6 7
+<CTLG> 7 5
+<CTLG> 8 9
+<CTLG> 9 10
+<CTLG> 10 11
+<CTLG> 11 12
+<CTLG> 11 14
+<CTLG> 12 13
+<CTLG> 13 11
+<CTLG> 14 15
+<CTLG> 15 17
+<CTLGN> 1455 1462 1462 1466 1466 1466 1466 1466 1462 1473 1473 1473 1473 1473 1478 1478 1478 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/Src/main.c
+<S>STNAM  FaultCountRead
+<S>STCYC  4
+<S>STMCC  0 (4:4)
+<S>STMIF  2
+<S>STSUB  2
+<S>STAKI  6
+<S>STLIN  22
+<S>STXLN  14
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  4
+<S>STPTH  6
+<S>STPDN  0.43   
+<S>STPBG  1
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  0
+<S>STAV1  7
+<S>STAV2  9
+<S>STAV3  10
+<S>STST1  18
+<S>STST2  15
+<S>STST3  13
+<S>STPAR  0
+<S>STCAL  1
+<S>STFN1  88
+<S>STFN2  49
+
+<EXTD> FaultCountWrite C:/CodeInspection/DisplayUnit/Src/main.c 1481
+<DEFINE> FaultCountWrite C:/CodeInspection/DisplayUnit/Src/main.c 1481 N DR OF F X (.,.) -
+<DEFINE> FaultCountWrite C:/CodeInspection/DisplayUnit/Src/main.c 1481 N DF OF F X (.,.) -
+<R>C FaultCountWrite printf 1483
+<R>X FaultCountWrite printf 1483 R
+<LIT> "FaultCountWrite();\n" - - C:/CodeInspection/DisplayUnit/Src/main.c 1483 18 N SN [20,_c] B X
+<DEFINE> FirstSector C:/CodeInspection/DisplayUnit/Src/main.c 1484 N DC OV B N ui -
+<DEFINE> FirstSector C:/CodeInspection/DisplayUnit/Src/main.c 1484 N DF OV B N ui -
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/main.c 1484 28 N ON ni B O
+<DEFINE> NbOfSectors C:/CodeInspection/DisplayUnit/Src/main.c 1484 N DC OV B N ui -
+<DEFINE> NbOfSectors C:/CodeInspection/DisplayUnit/Src/main.c 1484 N DF OV B N ui -
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/main.c 1484 45 N ON ni B O
+<DEFINE> Address C:/CodeInspection/DisplayUnit/Src/main.c 1484 N DC OV B N ui -
+<DEFINE> Address C:/CodeInspection/DisplayUnit/Src/main.c 1484 N DF OV B N ui -
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/main.c 1484 58 N ON ni B O
+<DEFINE> SectorError C:/CodeInspection/DisplayUnit/Src/main.c 1485 N DC OV B N ui -
+<DEFINE> SectorError C:/CodeInspection/DisplayUnit/Src/main.c 1485 N DF OV B N ui -
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/main.c 1485 28 N ON ni B O
+<R>C FaultCountWrite HAL_FLASH_Unlock 1487
+<R>X FaultCountWrite HAL_FLASH_Unlock 1487 R
+<R>C FaultCountWrite GetSector 1493
+<R>C FaultCountWrite GetSector 1495
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/Src/main.c 1495 69 N DN ni B X
+<R>C FaultCountWrite HAL_FLASHEx_Erase 1502
+<R>X FaultCountWrite HAL_FLASHEx_Erase 1502 R
+<R>C FaultCountWrite _Error_Handler 1513
+<R>X FaultCountWrite _Error_Handler 1513 R
+<R>C FaultCountWrite HAL_FLASH_Program 1537
+<R>X FaultCountWrite HAL_FLASH_Program 1537 R
+<DEFINE> i C:/CodeInspection/DisplayUnit/Src/main.c 1540 N DC OV B N ni -
+<DEFINE> i C:/CodeInspection/DisplayUnit/Src/main.c 1540 N DF OV B N ni -
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/main.c 1540 21 N ON ni B O
+<R>C FaultCountWrite HAL_FLASH_Program 1542
+<R>X FaultCountWrite HAL_FLASH_Program 1542 R
+<R>X FaultCountWrite gOldFaultEventIndex 1542 R
+<R>C FaultCountWrite printf 1544
+<R>X FaultCountWrite printf 1544 R
+<LIT> "Write Fail gOldFaultEventIndex[%d]\n" - - C:/CodeInspection/DisplayUnit/Src/main.c 1544 30 N SN [36,_c] B X
+<R>C FaultCountWrite printf 1551
+<R>X FaultCountWrite printf 1551 R
+<LIT> "Write Fail FAULT SETUP_WRITE_ID\n" - - C:/CodeInspection/DisplayUnit/Src/main.c 1551 22 N SN [33,_c] B X
+<DEFINE> i C:/CodeInspection/DisplayUnit/Src/main.c 1556 N DC OV B N ni -
+<DEFINE> i C:/CodeInspection/DisplayUnit/Src/main.c 1556 N DF OV B N ni -
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/main.c 1556 17 N ON ni B O
+<R>C FaultCountWrite HAL_FLASH_Program 1558
+<R>X FaultCountWrite HAL_FLASH_Program 1558 R
+<R>X FaultCountWrite _acHardwareVersion 1558 R
+<R>C FaultCountWrite printf 1560
+<R>X FaultCountWrite printf 1560 R
+<LIT> "Write Fail _acHardwareVersion[%d]\n" - - C:/CodeInspection/DisplayUnit/Src/main.c 1560 26 N SN [35,_c] B X
+<R>C FaultCountWrite HAL_FLASH_Lock 1565
+<R>X FaultCountWrite HAL_FLASH_Lock 1565 R
+<CTLG> FaultCountWrite 1
+<CTLG> 1 2
+<CTLG> 2 3
+<CTLG> 2 4
+<CTLG> 3 4
+<CTLG> 4 5
+<CTLG> 5 6
+<CTLG> 6 7
+<CTLG> 7 5
+<CTLG> 7 8
+<CTLG> 8 9
+<CTLG> 9 10
+<CTLG> 10 8
+<CTLG> 10 11
+<CTLG> 11 12
+<CTLG> 12 13
+<CTLG> 12 21
+<CTLG> 13 14
+<CTLG> 14 15
+<CTLG> 15 16
+<CTLG> 15 20
+<CTLG> 16 17
+<CTLG> 16 18
+<CTLG> 17 18
+<CTLG> 18 19
+<CTLG> 19 15
+<CTLG> 20 22
+<CTLG> 21 22
+<CTLG> 22 23
+<CTLG> 23 24
+<CTLG> 24 25
+<CTLG> 24 29
+<CTLG> 25 26
+<CTLG> 25 27
+<CTLG> 26 27
+<CTLG> 27 28
+<CTLG> 28 24
+<CTLG> 29 30
+<CTLG> 30 32
+<CTLGN> 1482 1502 1502 1502 1524 1524 1524 1524 1525 1525 1525 1537 1537 1540 1540 1540 1542 1542 1540 1540 1537 1549 1556 1556 1556 1558 1558 1556 1556 1566 1566 1566 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/Src/main.c
+<S>STNAM  FaultCountWrite
+<S>STCYC  9
+<S>STMCC  0 (9:9)
+<S>STMIF  3
+<S>STSUB  13
+<S>STAKI  22
+<S>STLIN  83
+<S>STXLN  32
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  6
+<S>STPTH  96
+<S>STPDN  3.00   
+<S>STPBG  2
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  0
+<S>STAV1  5
+<S>STAV2  7
+<S>STAV3  8
+<S>STST1  46
+<S>STST2  37
+<S>STST3  33
+<S>STPAR  0
+<S>STCAL  7
+<S>STFN1  177
+<S>STFN2  91
+
+<DEFINE> addr C:/CodeInspection/DisplayUnit/Src/main.c 1568 N DC OV B N uc R
+<DEFINE> data C:/CodeInspection/DisplayUnit/Src/main.c 1568 N DC OV B N uc R
+<DEFINE> PCF2129_set_register C:/CodeInspection/DisplayUnit/Src/main.c 1568 N DR OF F I (us,uc,uc) -
+<DEFINE> PCF2129_set_register C:/CodeInspection/DisplayUnit/Src/main.c 1568 N DF OF F I (us,uc,uc) -
+<DEFINE> b C:/CodeInspection/DisplayUnit/Src/main.c 1570 N DC OV B N [2,uc] -
+<DEFINE> b C:/CodeInspection/DisplayUnit/Src/main.c 1570 N DF OV B N [2,uc] -
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/main.c 1572 8 N ON ni B X
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/Src/main.c 1573 8 N DN ni B X
+<R>C PCF2129_set_register HAL_I2C_Master_Transmit 1575
+<R>X PCF2129_set_register HAL_I2C_Master_Transmit 1575 R
+<CTLG> PCF2129_set_register 1
+<CTLG> 1 2
+<CTLG> 2 4
+<CTLGN> 1569 1575 1575 1575 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/Src/main.c
+<S>STNAM  PCF2129_set_register
+<S>STCYC  1
+<S>STMCC  0 (1:1)
+<S>STMIF  0
+<S>STSUB  1
+<S>STAKI  2
+<S>STLIN  6
+<S>STXLN  3
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  1
+<S>STPTH  1
+<S>STPDN  0.33   
+<S>STPBG  0
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  1
+<S>STAV1  10
+<S>STAV2  10
+<S>STAV3  14
+<S>STST1  4
+<S>STST2  4
+<S>STST3  3
+<S>STPAR  2
+<S>STCAL  1
+<S>STFN1  27
+<S>STFN2  15
+
+<DEFINE> addr C:/CodeInspection/DisplayUnit/Src/main.c 1578 N DC OV B N uc R
+<DEFINE> PCF2129_read_register C:/CodeInspection/DisplayUnit/Src/main.c 1578 N DR OF F I (us,uc) -
+<DEFINE> PCF2129_read_register C:/CodeInspection/DisplayUnit/Src/main.c 1578 N DF OF F I (us,uc) -
+<DEFINE> data C:/CodeInspection/DisplayUnit/Src/main.c 1580 N DC OV B N uc -
+<DEFINE> data C:/CodeInspection/DisplayUnit/Src/main.c 1580 N DF OV B N uc -
+<R>C PCF2129_read_register HAL_I2C_Master_Transmit 1583
+<R>X PCF2129_read_register HAL_I2C_Master_Transmit 1583 R
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/Src/main.c 1583 77 N DN ni B X
+<R>C PCF2129_read_register HAL_I2C_Master_Receive 1584
+<R>X PCF2129_read_register HAL_I2C_Master_Receive 1584 R
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/Src/main.c 1584 76 N DN ni B X
+<CTLG> PCF2129_read_register 1
+<CTLG> 1 2
+<CTLG> 2 4
+<CTLGN> 1579 1586 1586 1586 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/Src/main.c
+<S>STNAM  PCF2129_read_register
+<S>STCYC  1
+<S>STMCC  0 (1:1)
+<S>STMIF  0
+<S>STSUB  2
+<S>STAKI  3
+<S>STLIN  7
+<S>STXLN  4
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  1
+<S>STPTH  1
+<S>STPDN  0.25   
+<S>STPBG  0
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  1
+<S>STAV1  10
+<S>STAV2  10
+<S>STAV3  12
+<S>STST1  5
+<S>STST2  5
+<S>STST3  4
+<S>STPAR  1
+<S>STCAL  2
+<S>STFN1  33
+<S>STFN2  17
+
+<DEFINE> n C:/CodeInspection/DisplayUnit/Src/main.c 1589 N DC OV B N uc R
+<DEFINE> i2bcd C:/CodeInspection/DisplayUnit/Src/main.c 1589 N DR OF F I (uc,uc) -
+<DEFINE> i2bcd C:/CodeInspection/DisplayUnit/Src/main.c 1589 N DF OF F I (uc,uc) -
+<CTLG> i2bcd 1
+<CTLG> 1 3
+<CTLGN> 1590 1591 1591 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/Src/main.c
+<S>STNAM  i2bcd
+<S>STCYC  1
+<S>STMCC  0 (1:1)
+<S>STMIF  0
+<S>STSUB  0
+<S>STAKI  1
+<S>STLIN  1
+<S>STXLN  1
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  0
+<S>STPTH  1
+<S>STPDN  1.00   
+<S>STPBG  0
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  1
+<S>STAV1  21
+<S>STAV2  21
+<S>STAV3  21
+<S>STST1  1
+<S>STST2  1
+<S>STST3  1
+<S>STPAR  1
+<S>STCAL  0
+<S>STFN1  16
+<S>STFN2  5
+
+<DEFINE> bcd C:/CodeInspection/DisplayUnit/Src/main.c 1594 N DC OV B N uc R
+<DEFINE> bcd2i C:/CodeInspection/DisplayUnit/Src/main.c 1594 N DR OF F I (uc,uc) -
+<DEFINE> bcd2i C:/CodeInspection/DisplayUnit/Src/main.c 1594 N DF OF F I (uc,uc) -
+<CTLG> bcd2i 1
+<CTLG> 1 3
+<CTLGN> 1595 1596 1596 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/Src/main.c
+<S>STNAM  bcd2i
+<S>STCYC  1
+<S>STMCC  0 (1:1)
+<S>STMIF  0
+<S>STSUB  0
+<S>STAKI  1
+<S>STLIN  1
+<S>STXLN  1
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  0
+<S>STPTH  1
+<S>STPDN  1.00   
+<S>STPBG  0
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  1
+<S>STAV1  21
+<S>STAV2  21
+<S>STAV3  21
+<S>STST1  1
+<S>STST2  1
+<S>STST3  1
+<S>STPAR  1
+<S>STCAL  0
+<S>STFN1  16
+<S>STFN2  5
+
+<EXTD> PCF2127_set_time C:/CodeInspection/DisplayUnit/Src/main.c 1599
+<DEFINE> PCF2127_set_time C:/CodeInspection/DisplayUnit/Src/main.c 1599 N DR OF F X (us,.) -
+<DEFINE> PCF2127_set_time C:/CodeInspection/DisplayUnit/Src/main.c 1599 N DF OF F X (us,.) -
+<DEFINE> data C:/CodeInspection/DisplayUnit/Src/main.c 1601 N DC OV B N [8,uc] -
+<DEFINE> data C:/CodeInspection/DisplayUnit/Src/main.c 1601 N DF OV B N [8,uc] -
+<DEFINE> err C:/CodeInspection/DisplayUnit/Src/main.c 1602 N DC OV B N uc -
+<DEFINE> err C:/CodeInspection/DisplayUnit/Src/main.c 1602 N DF OV B N uc -
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/main.c 1604 10 N ON ni B X
+<R>C PCF2127_set_time i2bcd 1606
+<R>X PCF2127_set_time gDateTime 1606 R
+<R>C PCF2127_set_time i2bcd 1607
+<R>X PCF2127_set_time gDateTime 1607 R
+<R>C PCF2127_set_time i2bcd 1608
+<R>X PCF2127_set_time gDateTime 1608 R
+<R>C PCF2127_set_time i2bcd 1609
+<R>X PCF2127_set_time gDateTime 1609 R
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/main.c 1610 26 N ON ni B X
+<R>C PCF2127_set_time i2bcd 1611
+<R>X PCF2127_set_time gDateTime 1611 R
+<R>C PCF2127_set_time i2bcd 1612
+<R>X PCF2127_set_time gDateTime 1612 R
+<R>C PCF2127_set_time HAL_I2C_Master_Transmit 1621
+<R>X PCF2127_set_time HAL_I2C_Master_Transmit 1621 R
+<CTLG> PCF2127_set_time 1
+<CTLG> 1 2
+<CTLG> 2 4
+<CTLGN> 1600 1623 1623 1623 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/Src/main.c
+<S>STNAM  PCF2127_set_time
+<S>STCYC  1
+<S>STMCC  0 (1:1)
+<S>STMIF  0
+<S>STSUB  7
+<S>STAKI  8
+<S>STLIN  23
+<S>STXLN  10
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  2
+<S>STPTH  1
+<S>STPDN  0.10   
+<S>STPBG  0
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  1
+<S>STAV1  10
+<S>STAV2  10
+<S>STAV3  12
+<S>STST1  12
+<S>STST2  12
+<S>STST3  10
+<S>STPAR  0
+<S>STCAL  2
+<S>STFN1  72
+<S>STFN2  52
+
+<DEFINE> Pcf2129AT_init C:/CodeInspection/DisplayUnit/Src/main.c 1626 N DR OF F I (.,.) -
+<DEFINE> Pcf2129AT_init C:/CodeInspection/DisplayUnit/Src/main.c 1626 N DF OF F I (.,.) -
+<DEFINE> data C:/CodeInspection/DisplayUnit/Src/main.c 1628 N DC OV B N [4,uc] -
+<DEFINE> data C:/CodeInspection/DisplayUnit/Src/main.c 1628 N DF OV B N [4,uc] -
+<R>C Pcf2129AT_init OS_Delay 1630
+<R>X Pcf2129AT_init OS_Delay 1630 R
+<R>C Pcf2129AT_init HAL_I2C_Master_Transmit 1637
+<R>X Pcf2129AT_init HAL_I2C_Master_Transmit 1637 R
+<R>C Pcf2129AT_init PCF2129_set_register 1638
+<CTLG> Pcf2129AT_init 1
+<CTLG> 1 2
+<CTLG> 2 4
+<CTLGN> 1627 1640 1640 1640 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/Src/main.c
+<S>STNAM  Pcf2129AT_init
+<S>STCYC  1
+<S>STMCC  0 (1:1)
+<S>STMIF  0
+<S>STSUB  3
+<S>STAKI  4
+<S>STLIN  12
+<S>STXLN  7
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  1
+<S>STPTH  1
+<S>STPDN  0.14   
+<S>STPBG  0
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  0
+<S>STAV1  8
+<S>STAV2  8
+<S>STAV3  10
+<S>STST1  8
+<S>STST2  8
+<S>STST3  7
+<S>STPAR  0
+<S>STCAL  3
+<S>STFN1  45
+<S>STFN2  26
+
+<EXTD> PCF2127_readTime C:/CodeInspection/DisplayUnit/Src/main.c 1643
+<DEFINE> flag C:/CodeInspection/DisplayUnit/Src/main.c 1643 N DC OV B N uc R
+<DEFINE> PCF2127_readTime C:/CodeInspection/DisplayUnit/Src/main.c 1643 N DR OF F X (.,uc) -
+<DEFINE> PCF2127_readTime C:/CodeInspection/DisplayUnit/Src/main.c 1643 N DF OF F X (.,uc) -
+<DEFINE> buf C:/CodeInspection/DisplayUnit/Src/main.c 1645 N DC OV B N [8,uc] -
+<DEFINE> buf C:/CodeInspection/DisplayUnit/Src/main.c 1645 N DF OV B N [8,uc] -
+<R>C PCF2127_readTime OS_Delay 1647
+<R>X PCF2127_readTime OS_Delay 1647 R
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/main.c 1649 10 N ON ni B X
+<R>C PCF2127_readTime HAL_I2C_Master_Transmit 1651
+<R>X PCF2127_readTime HAL_I2C_Master_Transmit 1651 R
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/Src/main.c 1651 75 N DN ni B X
+<DEFINE> err C:/CodeInspection/DisplayUnit/Src/main.c 1653 N DC OV B N uc -
+<DEFINE> err C:/CodeInspection/DisplayUnit/Src/main.c 1653 N DF OV B N uc -
+<R>C PCF2127_readTime HAL_I2C_Master_Receive 1653
+<R>X PCF2127_readTime HAL_I2C_Master_Receive 1653 R
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/Src/main.c 1655 17 N DN ni B X
+<R>C PCF2127_readTime bcd2i 1657
+<R>X PCF2127_readTime gDateTime 1657 W
+<R>C PCF2127_readTime bcd2i 1658
+<R>X PCF2127_readTime gDateTime 1658 W
+<R>C PCF2127_readTime bcd2i 1659
+<R>X PCF2127_readTime gDateTime 1659 W
+<R>C PCF2127_readTime bcd2i 1660
+<R>X PCF2127_readTime gDateTime 1660 W
+<R>C PCF2127_readTime bcd2i 1661
+<R>X PCF2127_readTime gDateTime 1661 W
+<R>C PCF2127_readTime bcd2i 1662
+<R>X PCF2127_readTime gDateTime 1662 W
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/Src/main.c 1666 36 N DN ni B X
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/Src/main.c 1668 34 N DN ni B X
+<R>X PCF2127_readTime gDateTime 1672 R
+<R>X PCF2127_readTime gDateTime 1672 R
+<R>X PCF2127_readTime gDateTime 1672 R
+<R>X PCF2127_readTime gDateTime 1672 R
+<R>X PCF2127_readTime gDateTime 1672 R
+<R>X PCF2127_readTime gDateTime 1672 R
+<R>X PCF2127_readTime gDateTime 1672 R
+<R>X PCF2127_readTime gDateTime 1672 R
+<R>X PCF2127_readTime gDateTime 1672 R
+<R>X PCF2127_readTime gDateTime 1674 W
+<R>X PCF2127_readTime gDateTime 1675 W
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/Src/main.c 1675 27 N DN ni B X
+<R>X PCF2127_readTime gDateTime 1676 W
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/Src/main.c 1676 25 N DN ni B X
+<R>X PCF2127_readTime gDateTime 1677 W
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/main.c 1677 26 N ON ni B X
+<R>X PCF2127_readTime gDateTime 1678 W
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/main.c 1678 25 N ON ni B X
+<R>X PCF2127_readTime gDateTime 1679 W
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/Src/main.c 1679 25 N DN ni B X
+<R>C PCF2127_readTime PCF2127_set_time 1680
+<R>X PCF2127_readTime PCF2127_set_time 1680 R
+<R>C PCF2127_readTime printf 1681
+<R>X PCF2127_readTime printf 1681 R
+<LIT> "PCF2127_set_time....\n" - - C:/CodeInspection/DisplayUnit/Src/main.c 1681 22 N SN [22,_c] B X
+<R>C PCF2127_readTime printf 1683
+<R>X PCF2127_readTime printf 1683 R
+<R>X PCF2127_readTime gDateTime 1683 R
+<R>X PCF2127_readTime gDateTime 1683 R
+<R>X PCF2127_readTime gDateTime 1683 R
+<R>X PCF2127_readTime gDateTime 1683 R
+<R>X PCF2127_readTime gDateTime 1683 R
+<R>X PCF2127_readTime gDateTime 1683 R
+<R>C PCF2127_readTime HAL_GetTick 1683
+<R>X PCF2127_readTime HAL_GetTick 1683 R
+<LIT> "%d/%d/%d %d:%d:%d(%d)\n" - - C:/CodeInspection/DisplayUnit/Src/main.c 1683 18 N SN [23,_c] B X
+<CTLG> PCF2127_readTime 1
+<CTLG> 1 2
+<CTLG> 2 3
+<CTLG> 2 4
+<CTLG> 3 4
+<CTLG> 4 5
+<CTLG> 4 6
+<CTLG> 5 6
+<CTLG> 6 7
+<CTLG> 7 9
+<CTLGN> 1644 1655 1655 1655 1672 1672 1684 1684 1684 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/Src/main.c
+<S>STNAM  PCF2127_readTime
+<S>STCYC  3
+<S>STMCC  9 (3:12)
+<S>STMIF  1
+<S>STSUB  13
+<S>STAKI  16
+<S>STLIN  39
+<S>STXLN  29
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  2
+<S>STPTH  4
+<S>STPDN  0.14   
+<S>STPBG  1
+<S>STLOP  9
+<S>STM07  1
+<S>STM19  0
+<S>STAV1  12
+<S>STAV2  13
+<S>STAV3  15
+<S>STST1  24
+<S>STST2  22
+<S>STST3  20
+<S>STPAR  1
+<S>STCAL  7
+<S>STFN1  187
+<S>STFN2  120
+
+<EXTD> RTCBatteryStatus C:/CodeInspection/DisplayUnit/Src/main.c 1686
+<DEFINE> RTCBatteryStatus C:/CodeInspection/DisplayUnit/Src/main.c 1686 N DR OF F X (us,.) -
+<DEFINE> RTCBatteryStatus C:/CodeInspection/DisplayUnit/Src/main.c 1686 N DF OF F X (us,.) -
+<R>C RTCBatteryStatus printf 1688
+<R>X RTCBatteryStatus printf 1688 R
+<LIT> "RTCBatteryStatus => " - - C:/CodeInspection/DisplayUnit/Src/main.c 1688 18 N SN [21,_c] B X
+<R>C RTCBatteryStatus PCF2129_read_register 1689
+<CTLG> RTCBatteryStatus 1
+<CTLG> 1 2
+<CTLG> 2 4
+<CTLGN> 1687 1689 1689 1689 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/Src/main.c
+<S>STNAM  RTCBatteryStatus
+<S>STCYC  1
+<S>STMCC  0 (1:1)
+<S>STMIF  0
+<S>STSUB  2
+<S>STAKI  3
+<S>STLIN  2
+<S>STXLN  2
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  0
+<S>STPTH  1
+<S>STPDN  0.50   
+<S>STPBG  0
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  1
+<S>STAV1  10
+<S>STAV2  10
+<S>STAV3  10
+<S>STST1  2
+<S>STST2  2
+<S>STST3  2
+<S>STPAR  0
+<S>STCAL  2
+<S>STFN1  15
+<S>STFN2  5
+
+<EXTD> nSendStep C:/CodeInspection/DisplayUnit/STemWin/App/modbus.h 197
+<DEFINE> nSendStep C:/CodeInspection/DisplayUnit/STemWin/App/modbus.h 197 I DI OV F X ni S
+<EXTD> gDeviceTypeAll C:/CodeInspection/DisplayUnit/STemWin/App/modbus.h 215
+<DEFINE> gDeviceTypeAll C:/CodeInspection/DisplayUnit/STemWin/App/modbus.h 215 I DI OV F X [8,ni] S
+<EXTD> g_bRecvAllDone C:/CodeInspection/DisplayUnit/STemWin/App/modbus.h 205
+<DEFINE> g_bRecvAllDone C:/CodeInspection/DisplayUnit/STemWin/App/modbus.h 205 I DI OV F X ni S
+<EXTD> g_subFunction C:/CodeInspection/DisplayUnit/STemWin/App/modbus.h 184
+<DEFINE> g_subFunction C:/CodeInspection/DisplayUnit/STemWin/App/modbus.h 184 I DI OV F X uc S
+<EXTD> g_nStatusNoUpdate C:/CodeInspection/DisplayUnit/STemWin/App/modbus.h 202
+<DEFINE> g_nStatusNoUpdate C:/CodeInspection/DisplayUnit/STemWin/App/modbus.h 202 I DI OV F X ni S
+<EXTD> g_modbusRxError C:/CodeInspection/DisplayUnit/STemWin/App/modbus.h 179
+<DEFINE> g_modbusRxError C:/CodeInspection/DisplayUnit/STemWin/App/modbus.h 179 I DI OV F X uc S
+<EXTD> g_wModbusWaitLen C:/CodeInspection/DisplayUnit/STemWin/App/modbus.h 181
+<DEFINE> g_wModbusWaitLen C:/CodeInspection/DisplayUnit/STemWin/App/modbus.h 181 I DI OV F X us S
+<EXTD> hspi3 C:/CodeInspection/DisplayUnit/Src/main.c 92
+<DEFINE> hspi3 C:/CodeInspection/DisplayUnit/Src/main.c 92 N DI OV F X {s__SPI_HandleTypeDef} S
+<EXTD> hiwdg C:/CodeInspection/DisplayUnit/Src/main.c 99
+<DEFINE> hiwdg C:/CodeInspection/DisplayUnit/Src/main.c 99 N DI OV F X {sIWDG_HandleTypeDef} S
+<EXTD> gFaultEventTotalCount C:/CodeInspection/DisplayUnit/STemWin/App/modbus.h 194
+<DEFINE> gFaultEventTotalCount C:/CodeInspection/DisplayUnit/STemWin/App/modbus.h 194 I DI OV F X [8,us] S
+<EXTD> g_modbusRxIndex C:/CodeInspection/DisplayUnit/STemWin/App/modbus.h 176
+<DEFINE> g_modbusRxIndex C:/CodeInspection/DisplayUnit/STemWin/App/modbus.h 176 I DI OV F X uc S
+<EXTD> gbSettingTime C:/CodeInspection/DisplayUnit/STemWin/App/modbus.h 216
+<DEFINE> gbSettingTime C:/CodeInspection/DisplayUnit/STemWin/App/modbus.h 216 I DI OV F X ni S
+<EXTD> gFaultEventIndex C:/CodeInspection/DisplayUnit/STemWin/App/modbus.h 190
+<DEFINE> gFaultEventIndex C:/CodeInspection/DisplayUnit/STemWin/App/modbus.h 190 I DI OV F X [8,us] S
+<EXTD> gOldFaultEventIndex C:/CodeInspection/DisplayUnit/STemWin/App/modbus.h 192
+<DEFINE> gOldFaultEventIndex C:/CodeInspection/DisplayUnit/STemWin/App/modbus.h 192 I DI OV F X [8,us] S
+<EXTD> gCommErrorCount C:/CodeInspection/DisplayUnit/STemWin/App/modbus.h 200
+<DEFINE> gCommErrorCount C:/CodeInspection/DisplayUnit/STemWin/App/modbus.h 200 I DI OV F X [8,ni] S
+<EXTD> gFaultEventReaded C:/CodeInspection/DisplayUnit/STemWin/App/modbus.h 195
+<DEFINE> gFaultEventReaded C:/CodeInspection/DisplayUnit/STemWin/App/modbus.h 195 I DI OV F X [8,us] S
+<EXTD> g_modbusRxBuff C:/CodeInspection/DisplayUnit/STemWin/App/modbus.h 177
+<DEFINE> g_modbusRxBuff C:/CodeInspection/DisplayUnit/STemWin/App/modbus.h 177 I DI OV F X [500,uc] S
+<EXTD> gProductInfo C:/CodeInspection/DisplayUnit/STemWin/App/modbus.h 196
+<DEFINE> gProductInfo C:/CodeInspection/DisplayUnit/STemWin/App/modbus.h 196 I DI OV F X [8,{ss_Product_Info}] S
+<EXTD> gProductName C:/CodeInspection/DisplayUnit/STemWin/App/modbus.h 218
+<DEFINE> gProductName C:/CodeInspection/DisplayUnit/STemWin/App/modbus.h 218 I DI OV F X [8,[60,_c]] S
+<EXTD> gOldSystemEventIndex C:/CodeInspection/DisplayUnit/STemWin/App/modbus.h 191
+<DEFINE> gOldSystemEventIndex C:/CodeInspection/DisplayUnit/STemWin/App/modbus.h 191 I DI OV F X [8,us] S
+<EXTD> g_functionCode C:/CodeInspection/DisplayUnit/STemWin/App/modbus.h 183
+<DEFINE> g_functionCode C:/CodeInspection/DisplayUnit/STemWin/App/modbus.h 183 I DI OV F X uc S
+<EXTD> g_AddressRecv C:/CodeInspection/DisplayUnit/STemWin/App/modbus.h 187
+<DEFINE> g_AddressRecv C:/CodeInspection/DisplayUnit/STemWin/App/modbus.h 187 I DI OV F X uc S
+<EXTD> serialNo C:/CodeInspection/DisplayUnit/STemWin/App/modbus.h 209
+<DEFINE> serialNo C:/CodeInspection/DisplayUnit/STemWin/App/modbus.h 209 I DI OV F X [20,_c] S
+<EXTD> gCommOldStatus C:/CodeInspection/DisplayUnit/STemWin/App/modbus.h 199
+<DEFINE> gCommOldStatus C:/CodeInspection/DisplayUnit/STemWin/App/modbus.h 199 I DI OV F X [8,ni] S
+<EXTD> VendorName C:/CodeInspection/DisplayUnit/STemWin/App/modbus.h 207
+<DEFINE> VendorName C:/CodeInspection/DisplayUnit/STemWin/App/modbus.h 207 I DI OV F X [20,_c] S
+<EXTD> g_waitReceiveLen C:/CodeInspection/DisplayUnit/STemWin/App/modbus.h 186
+<DEFINE> g_waitReceiveLen C:/CodeInspection/DisplayUnit/STemWin/App/modbus.h 186 I DI OV F X us S
+<EXTD> g_modbusAddress C:/CodeInspection/DisplayUnit/STemWin/App/modbus.h 182
+<DEFINE> g_modbusAddress C:/CodeInspection/DisplayUnit/STemWin/App/modbus.h 182 I DI OV F X uc S
+<DEFINE> EraseInitStruct C:/CodeInspection/DisplayUnit/Src/main.c 105 N DI OV F I {sFLASH_EraseInitTypeDef} S
+<EXTD> ModbusVersion C:/CodeInspection/DisplayUnit/STemWin/App/modbus.h 208
+<DEFINE> ModbusVersion C:/CodeInspection/DisplayUnit/STemWin/App/modbus.h 208 I DI OV F X [20,_c] S
+<EXTD> g_startAddr C:/CodeInspection/DisplayUnit/STemWin/App/modbus.h 185
+<DEFINE> g_startAddr C:/CodeInspection/DisplayUnit/STemWin/App/modbus.h 185 I DI OV F X us S
+<DEFINE> hi2c2 C:/CodeInspection/DisplayUnit/Src/main.c 86 N DI OV F I {sI2C_HandleTypeDef} S
+<EXTD> mLinkSBO C:/CodeInspection/DisplayUnit/STemWin/App/modbus.h 220
+<DEFINE> mLinkSBO C:/CodeInspection/DisplayUnit/STemWin/App/modbus.h 220 I DI OV F X [8,us] S
+<EXTD> softwareVersion C:/CodeInspection/DisplayUnit/STemWin/App/modbus.h 212
+<DEFINE> softwareVersion C:/CodeInspection/DisplayUnit/STemWin/App/modbus.h 212 I DI OV F X [20,_c] S
+<EXTD> productCode C:/CodeInspection/DisplayUnit/STemWin/App/modbus.h 210
+<DEFINE> productCode C:/CodeInspection/DisplayUnit/STemWin/App/modbus.h 210 I DI OV F X [20,_c] S
+<EXTD> sendFlag C:/CodeInspection/DisplayUnit/STemWin/App/modbus.h 188
+<DEFINE> sendFlag C:/CodeInspection/DisplayUnit/STemWin/App/modbus.h 188 I DI OV F X uc S
+<EXTD> g_UartRx C:/CodeInspection/DisplayUnit/STemWin/App/modbus.h 174
+<DEFINE> g_UartRx C:/CodeInspection/DisplayUnit/STemWin/App/modbus.h 174 I DI OV F X [1,uc] S
+<EXTD> gSystemEventTotalCount C:/CodeInspection/DisplayUnit/STemWin/App/modbus.h 193
+<DEFINE> gSystemEventTotalCount C:/CodeInspection/DisplayUnit/STemWin/App/modbus.h 193 I DI OV F X [8,us] S
+<EXTD> gGroupOffset C:/CodeInspection/DisplayUnit/STemWin/App/modbus.h 213
+<DEFINE> gGroupOffset C:/CodeInspection/DisplayUnit/STemWin/App/modbus.h 213 I DI OV F X [8,us] S
+<EXTD> htim4 C:/CodeInspection/DisplayUnit/Src/main.c 93
+<DEFINE> htim4 C:/CodeInspection/DisplayUnit/Src/main.c 93 N DI OV F X {sTIM_HandleTypeDef} S
+<EXTD> gCommStatus C:/CodeInspection/DisplayUnit/STemWin/App/modbus.h 198
+<DEFINE> gCommStatus C:/CodeInspection/DisplayUnit/STemWin/App/modbus.h 198 I DI OV F X [8,ni] S
+<EXTD> huart1 C:/CodeInspection/DisplayUnit/Src/main.c 94
+<DEFINE> huart1 C:/CodeInspection/DisplayUnit/Src/main.c 94 N DI OV F X {sUART_HandleTypeDef} S
+<EXTD> huart2 C:/CodeInspection/DisplayUnit/Src/main.c 96
+<DEFINE> huart2 C:/CodeInspection/DisplayUnit/Src/main.c 96 N DI OV F X {sUART_HandleTypeDef} S
+<DEFINE> huart6 C:/CodeInspection/DisplayUnit/Src/main.c 98 N DI OV F I {sUART_HandleTypeDef} S
+<EXTD> hardwarVersion C:/CodeInspection/DisplayUnit/STemWin/App/modbus.h 211
+<DEFINE> hardwarVersion C:/CodeInspection/DisplayUnit/STemWin/App/modbus.h 211 I DI OV F X [20,_c] S
+<EXTD> g_bRecvVariable C:/CodeInspection/DisplayUnit/STemWin/App/modbus.h 204
+<DEFINE> g_bRecvVariable C:/CodeInspection/DisplayUnit/STemWin/App/modbus.h 204 I DI OV F X ni S
+<EXTD> g_modbusRxDone C:/CodeInspection/DisplayUnit/STemWin/App/modbus.h 178
+<DEFINE> g_modbusRxDone C:/CodeInspection/DisplayUnit/STemWin/App/modbus.h 178 I DI OV F X uc S
+<EXTD> mLinkMode C:/CodeInspection/DisplayUnit/STemWin/App/modbus.h 219
+<DEFINE> mLinkMode C:/CodeInspection/DisplayUnit/STemWin/App/modbus.h 219 I DI OV F X [8,us] S
+<EXTD> gSystemEventIndex C:/CodeInspection/DisplayUnit/STemWin/App/modbus.h 189
+<DEFINE> gSystemEventIndex C:/CodeInspection/DisplayUnit/STemWin/App/modbus.h 189 I DI OV F X [8,us] S
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/Src/main.c
+<S>STNAM  C:/CodeInspection/DisplayUnit/Src/main.c
+<S>STNTB  NON-TOKEN BASED STATISTICS...
+<S>STSCT  21
+<S>STECT  26
+<S>STFNC  31
+<S>STFCO  143
+<S>STTKB  TOKEN BASED STATISTICS...
+<S>STVAR  492
+<S>STOPT  49
+<S>STOPN  646
+<S>STTOT  5222
+<S>STZIP  4949
+<S>STHAL  6306
+<S>STSHN  24945
+<S>STDIF  11.15  
+<S>STEFF  549828
+<S>STVOL  49300
+<S>STDEV  91.64  
+<S>STBUG  7
+<S>STTPP  1706
+<S>STTLN  786
+<S>STM20  1690
+<S>STM21  3525
+<S>STM22  450
+<S>STM28  365
+<S>STM33  157
+<S>STBCS  BASIC COCOMO STATISTICS...
+<S>STBMO  4.205  
+<S>STBMS  5.457  
+<S>STBME  6.834  
+<S>STTDO  4.315  
+<S>STTDS  4.528  
+<S>STTDE  4.624  
+<S>STCOM  COMMENT BASED STATISTICS...
+<S>STCDN  0.639  
+

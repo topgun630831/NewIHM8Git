@@ -1,0 +1,2401 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<prdf:report xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg" xmlns:prdf="http://www.programmingresearch.com/todo">
+<prdf:title>Suppression Report</prdf:title>
+<prdf:project_name>DisplayUnit</prdf:project_name>
+<prdf:date>8 April 2019</prdf:date>
+<prdf:front_page>
+<prdf:section xmlns:v="urn:schemas-microsoft-com:vml" created_by="standard.prdf.generator" created_by_version="1.3">
+<prdf:text bold="1">Suppression Summary</prdf:text>
+<prdf:table class="center">
+<prdf:col_width width="80%"/>
+<prdf:col_width width="20%"/>
+<prdf:row>
+<prdf:cell align="left">Number of Files</prdf:cell>
+<prdf:cell align="right">28</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="left">Lines of Code</prdf:cell>
+<prdf:cell align="right">16836</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="left">Number of Unique Messages Suppressed</prdf:cell>
+<prdf:cell align="right">15</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="left">Number of Messages Suppressed</prdf:cell>
+<prdf:cell align="right">243</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="left">Percentage of Messages Suppressed</prdf:cell>
+<prdf:cell align="right">100.0%</prdf:cell>
+</prdf:row>
+</prdf:table>
+</prdf:section>
+</prdf:front_page>
+<prdf:main>
+<prdf:section xmlns:v="urn:schemas-microsoft-com:vml" created_by="standard.prdf.generator" created_by_version="1.3">
+<prdf:h2>Redundant Suppressions</prdf:h2>
+<prdf:h3>Duplicated Suppressions</prdf:h3>
+<prdf:divider>1 - main.c</prdf:divider>
+<prdf:table>
+<prdf:col_width width="10%"/>
+<prdf:col_width width="8%"/>
+<prdf:col_width width="8%"/>
+<prdf:col_width width="74%"/>
+<prdf:row>
+<prdf:cell heading="2" align="left" colspan="4">C:\CodeInspection\DisplayUnit\Src\main.c</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell heading="1" align="right">Message</prdf:cell>
+<prdf:cell heading="1" align="right">Line</prdf:cell>
+<prdf:cell heading="1" align="right">Column</prdf:cell>
+<prdf:cell heading="1" align="left">Suppression Annotations</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="right">1503</prdf:cell>
+<prdf:cell align="right">1360</prdf:cell>
+<prdf:cell align="right">1</prdf:cell>
+<prdf:cell align="left">main.c:1142 - main.c:2647:PRQA S 1503</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="right">
+<prdf:nbsp/>
+</prdf:cell>
+<prdf:cell align="right">
+<prdf:nbsp/>
+</prdf:cell>
+<prdf:cell align="right">
+<prdf:nbsp/>
+</prdf:cell>
+<prdf:cell align="left">main.c:1359 - main.c:1360:PRQA S 1503</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="right">1503</prdf:cell>
+<prdf:cell align="right">1481</prdf:cell>
+<prdf:cell align="right">1</prdf:cell>
+<prdf:cell align="left">main.c:1480 - main.c:1481:PRQA S 1503</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="right">
+<prdf:nbsp/>
+</prdf:cell>
+<prdf:cell align="right">
+<prdf:nbsp/>
+</prdf:cell>
+<prdf:cell align="right">
+<prdf:nbsp/>
+</prdf:cell>
+<prdf:cell align="left">main.c:1142 - main.c:2647:PRQA S 1503</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="right">1503</prdf:cell>
+<prdf:cell align="right">1330</prdf:cell>
+<prdf:cell align="right">1</prdf:cell>
+<prdf:cell align="left">main.c:1142 - main.c:2647:PRQA S 1503</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="right">
+<prdf:nbsp/>
+</prdf:cell>
+<prdf:cell align="right">
+<prdf:nbsp/>
+</prdf:cell>
+<prdf:cell align="right">
+<prdf:nbsp/>
+</prdf:cell>
+<prdf:cell align="left">main.c:1329 - main.c:1330:PRQA S 1503</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="right">1503</prdf:cell>
+<prdf:cell align="right">1454</prdf:cell>
+<prdf:cell align="right">1</prdf:cell>
+<prdf:cell align="left">main.c:1142 - main.c:2647:PRQA S 1503</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="right">
+<prdf:nbsp/>
+</prdf:cell>
+<prdf:cell align="right">
+<prdf:nbsp/>
+</prdf:cell>
+<prdf:cell align="right">
+<prdf:nbsp/>
+</prdf:cell>
+<prdf:cell align="left">main.c:1453 - main.c:1454:PRQA S 1503</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="right">1503</prdf:cell>
+<prdf:cell align="right">1686</prdf:cell>
+<prdf:cell align="right">1</prdf:cell>
+<prdf:cell align="left">main.c:1142 - main.c:2647:PRQA S 1503</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="right">
+<prdf:nbsp/>
+</prdf:cell>
+<prdf:cell align="right">
+<prdf:nbsp/>
+</prdf:cell>
+<prdf:cell align="right">
+<prdf:nbsp/>
+</prdf:cell>
+<prdf:cell align="left">main.c:1685 - main.c:1686:PRQA S 1503</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="right">1503</prdf:cell>
+<prdf:cell align="right">1643</prdf:cell>
+<prdf:cell align="right">1</prdf:cell>
+<prdf:cell align="left">main.c:1142 - main.c:2647:PRQA S 1503</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="right">
+<prdf:nbsp/>
+</prdf:cell>
+<prdf:cell align="right">
+<prdf:nbsp/>
+</prdf:cell>
+<prdf:cell align="right">
+<prdf:nbsp/>
+</prdf:cell>
+<prdf:cell align="left">main.c:1642 - main.c:1643:PRQA S 1503</prdf:cell>
+</prdf:row>
+</prdf:table>
+<prdf:h3>Unused Suppressions</prdf:h3>
+<prdf:divider>1 - AcbMccbEvent.c</prdf:divider>
+<prdf:table>
+<prdf:col_width width="8%"/>
+<prdf:col_width width="92%"/>
+<prdf:row>
+<prdf:cell heading="2" align="left" colspan="2">C:\CodeInspection\DisplayUnit\STemWin\App\AcbMccbEvent.c</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell heading="1" align="right">Line</prdf:cell>
+<prdf:cell heading="1" align="left">Suppression Annotations</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="right">532</prdf:cell>
+<prdf:cell align="left">AcbMccbEvent.c:532 - AcbMccbEvent.c:533:PRQA S 1505</prdf:cell>
+</prdf:row>
+</prdf:table>
+<prdf:divider>2 - AcbMccbInfo.c</prdf:divider>
+<prdf:table>
+<prdf:col_width width="8%"/>
+<prdf:col_width width="92%"/>
+<prdf:row>
+<prdf:cell heading="2" align="left" colspan="2">C:\CodeInspection\DisplayUnit\STemWin\App\AcbMccbInfo.c</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell heading="1" align="right">Line</prdf:cell>
+<prdf:cell heading="1" align="left">Suppression Annotations</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="right">91</prdf:cell>
+<prdf:cell align="left">AcbMccbInfo.c:91 - AcbMccbInfo.c:93:PRQA S 1503</prdf:cell>
+</prdf:row>
+</prdf:table>
+<prdf:divider>3 - AcbMccbMeasurement.c</prdf:divider>
+<prdf:table>
+<prdf:col_width width="8%"/>
+<prdf:col_width width="92%"/>
+<prdf:row>
+<prdf:cell heading="2" align="left" colspan="2">C:\CodeInspection\DisplayUnit\STemWin\App\AcbMccbMeasurement.c</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell heading="1" align="right">Line</prdf:cell>
+<prdf:cell heading="1" align="left">Suppression Annotations</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="right">59</prdf:cell>
+<prdf:cell align="left">AcbMccbMeasurement.c:59 - AcbMccbMeasurement.c:60:PRQA S 1505</prdf:cell>
+</prdf:row>
+</prdf:table>
+<prdf:divider>4 - MainMenu.c</prdf:divider>
+<prdf:table>
+<prdf:col_width width="8%"/>
+<prdf:col_width width="92%"/>
+<prdf:row>
+<prdf:cell heading="2" align="left" colspan="2">C:\CodeInspection\DisplayUnit\STemWin\App\MainMenu.c</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell heading="1" align="right">Line</prdf:cell>
+<prdf:cell heading="1" align="left">Suppression Annotations</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="right">45</prdf:cell>
+<prdf:cell align="left">MainMenu.c:45 - MainMenu.c:47:PRQA S 1514</prdf:cell>
+</prdf:row>
+</prdf:table>
+<prdf:divider>5 - modbus.c</prdf:divider>
+<prdf:table>
+<prdf:col_width width="8%"/>
+<prdf:col_width width="92%"/>
+<prdf:row>
+<prdf:cell heading="2" align="left" colspan="2">C:\CodeInspection\DisplayUnit\STemWin\App\modbus.c</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell heading="1" align="right">Line</prdf:cell>
+<prdf:cell heading="1" align="left">Suppression Annotations</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="right">562</prdf:cell>
+<prdf:cell align="left">modbus.c:562 - modbus.c:563:PRQA S 310</prdf:cell>
+</prdf:row>
+</prdf:table>
+<prdf:divider>6 - main.c</prdf:divider>
+<prdf:table>
+<prdf:col_width width="8%"/>
+<prdf:col_width width="92%"/>
+<prdf:row>
+<prdf:cell heading="2" align="left" colspan="2">C:\CodeInspection\DisplayUnit\Src\main.c</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell heading="1" align="right">Line</prdf:cell>
+<prdf:cell heading="1" align="left">Suppression Annotations</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="right">1140</prdf:cell>
+<prdf:cell align="left">main.c:1140 - main.c:1142:PRQA S 1503</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="right">712</prdf:cell>
+<prdf:cell align="left">main.c:712 - main.c:713:PRQA S 1503</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="right">952</prdf:cell>
+<prdf:cell align="left">main.c:952 - main.c:953:PRQA S 1503</prdf:cell>
+</prdf:row>
+</prdf:table>
+<prdf:divider>7 - stm32f4xx_hal_timebase_TIM.c</prdf:divider>
+<prdf:table>
+<prdf:col_width width="8%"/>
+<prdf:col_width width="92%"/>
+<prdf:row>
+<prdf:cell heading="2" align="left" colspan="2">C:\CodeInspection\DisplayUnit\Src\stm32f4xx_hal_timebase_TIM.c</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell heading="1" align="right">Line</prdf:cell>
+<prdf:cell heading="1" align="left">Suppression Annotations</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="right">2</prdf:cell>
+<prdf:cell align="left">stm32f4xx_hal_timebase_TIM.c:2 - stm32f4xx_hal_timebase_TIM.c:164:PRQA S 3132</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell align="right">69</prdf:cell>
+<prdf:cell align="left">stm32f4xx_hal_timebase_TIM.c:69 - stm32f4xx_hal_timebase_TIM.c:70:PRQA S 3447</prdf:cell>
+</prdf:row>
+</prdf:table>
+</prdf:section>
+<prdf:section xmlns:v="urn:schemas-microsoft-com:vml" created_by="standard.prdf.generator" created_by_version="1.3">
+<prdf:h2>Suppression by File</prdf:h2>
+<prdf:divider>1 - AcbMccbControl.c</prdf:divider>
+<prdf:table>
+<prdf:col_width width="12%"/>
+<prdf:col_width width="12%"/>
+<prdf:col_width width="76%"/>
+<prdf:row>
+<prdf:cell heading="2" align="left" colspan="3">C:\CodeInspection\DisplayUnit\STemWin\App\AcbMccbControl.c</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell heading="1" align="left">Lines</prdf:cell>
+<prdf:cell heading="1" align="left">Messages</prdf:cell>
+<prdf:cell heading="1" align="left">Groups</prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">526-527</prdf:cell>
+<prdf:cell align="left">1503</prdf:cell>
+<prdf:cell align="left">(1) M2CM Rule 14.1 </prdf:cell>
+</prdf:row>
+</prdf:table>
+<prdf:divider>2 - AcbMccbEvent.c</prdf:divider>
+<prdf:table>
+<prdf:col_width width="12%"/>
+<prdf:col_width width="12%"/>
+<prdf:col_width width="76%"/>
+<prdf:row>
+<prdf:cell heading="2" align="left" colspan="3">C:\CodeInspection\DisplayUnit\STemWin\App\AcbMccbEvent.c</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell heading="1" align="left">Lines</prdf:cell>
+<prdf:cell heading="1" align="left">Messages</prdf:cell>
+<prdf:cell heading="1" align="left">Groups</prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">98-99</prdf:cell>
+<prdf:cell align="left">1505</prdf:cell>
+<prdf:cell align="left">(1) M2CM Rule 8.10 </prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">134-135</prdf:cell>
+<prdf:cell align="left">1505</prdf:cell>
+<prdf:cell align="left">(1) M2CM Rule 8.10 </prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">531-533</prdf:cell>
+<prdf:cell align="left">1503</prdf:cell>
+<prdf:cell align="left">(1) M2CM Rule 14.1 </prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">532-533</prdf:cell>
+<prdf:cell align="left">1505</prdf:cell>
+<prdf:cell align="left">(1) M2CM Rule 8.10 </prdf:cell>
+</prdf:row>
+</prdf:table>
+<prdf:divider>3 - AcbMccbHwSet.c</prdf:divider>
+<prdf:table>
+<prdf:col_width width="12%"/>
+<prdf:col_width width="12%"/>
+<prdf:col_width width="76%"/>
+<prdf:row>
+<prdf:cell heading="2" align="left" colspan="3">C:\CodeInspection\DisplayUnit\STemWin\App\AcbMccbHwSet.c</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell heading="1" align="left">Lines</prdf:cell>
+<prdf:cell heading="1" align="left">Messages</prdf:cell>
+<prdf:cell heading="1" align="left">Groups</prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">211-212</prdf:cell>
+<prdf:cell align="left">1503</prdf:cell>
+<prdf:cell align="left">(1) M2CM Rule 14.1 </prdf:cell>
+</prdf:row>
+</prdf:table>
+<prdf:divider>4 - AcbMccbInfo.c</prdf:divider>
+<prdf:table>
+<prdf:col_width width="12%"/>
+<prdf:col_width width="12%"/>
+<prdf:col_width width="76%"/>
+<prdf:row>
+<prdf:cell heading="2" align="left" colspan="3">C:\CodeInspection\DisplayUnit\STemWin\App\AcbMccbInfo.c</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell heading="1" align="left">Lines</prdf:cell>
+<prdf:cell heading="1" align="left">Messages</prdf:cell>
+<prdf:cell heading="1" align="left">Groups</prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">91-93</prdf:cell>
+<prdf:cell align="left">1503</prdf:cell>
+<prdf:cell align="left">(1) M2CM Rule 14.1 </prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">92-93</prdf:cell>
+<prdf:cell align="left">1505</prdf:cell>
+<prdf:cell align="left">(1) M2CM Rule 8.10 </prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">403-404</prdf:cell>
+<prdf:cell align="left">1503</prdf:cell>
+<prdf:cell align="left">(1) M2CM Rule 14.1 </prdf:cell>
+</prdf:row>
+</prdf:table>
+<prdf:divider>5 - AcbMccbMeasurement.c</prdf:divider>
+<prdf:table>
+<prdf:col_width width="12%"/>
+<prdf:col_width width="12%"/>
+<prdf:col_width width="76%"/>
+<prdf:row>
+<prdf:cell heading="2" align="left" colspan="3">C:\CodeInspection\DisplayUnit\STemWin\App\AcbMccbMeasurement.c</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell heading="1" align="left">Lines</prdf:cell>
+<prdf:cell heading="1" align="left">Messages</prdf:cell>
+<prdf:cell heading="1" align="left">Groups</prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">59-60</prdf:cell>
+<prdf:cell align="left">1505</prdf:cell>
+<prdf:cell align="left">(1) M2CM Rule 8.10 </prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">1033-1034</prdf:cell>
+<prdf:cell align="left">1503</prdf:cell>
+<prdf:cell align="left">(1) M2CM Rule 14.1 </prdf:cell>
+</prdf:row>
+</prdf:table>
+<prdf:divider>6 - AcbMccbRelaySet.c</prdf:divider>
+<prdf:table>
+<prdf:col_width width="12%"/>
+<prdf:col_width width="12%"/>
+<prdf:col_width width="76%"/>
+<prdf:row>
+<prdf:cell heading="2" align="left" colspan="3">C:\CodeInspection\DisplayUnit\STemWin\App\AcbMccbRelaySet.c</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell heading="1" align="left">Lines</prdf:cell>
+<prdf:cell heading="1" align="left">Messages</prdf:cell>
+<prdf:cell heading="1" align="left">Groups</prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">308-309</prdf:cell>
+<prdf:cell align="left">1503</prdf:cell>
+<prdf:cell align="left">(1) M2CM Rule 14.1 </prdf:cell>
+</prdf:row>
+</prdf:table>
+<prdf:divider>7 - MLinkControl.c</prdf:divider>
+<prdf:table>
+<prdf:col_width width="12%"/>
+<prdf:col_width width="12%"/>
+<prdf:col_width width="76%"/>
+<prdf:row>
+<prdf:cell heading="2" align="left" colspan="3">C:\CodeInspection\DisplayUnit\STemWin\App\MLinkControl.c</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell heading="1" align="left">Lines</prdf:cell>
+<prdf:cell heading="1" align="left">Messages</prdf:cell>
+<prdf:cell heading="1" align="left">Groups</prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">36-37</prdf:cell>
+<prdf:cell align="left">1505</prdf:cell>
+<prdf:cell align="left">(1) M2CM Rule 8.10 </prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">147-148</prdf:cell>
+<prdf:cell align="left">1505</prdf:cell>
+<prdf:cell align="left">(1) M2CM Rule 8.10 </prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">192-193</prdf:cell>
+<prdf:cell align="left">1505</prdf:cell>
+<prdf:cell align="left">(1) M2CM Rule 8.10 </prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">252-253</prdf:cell>
+<prdf:cell align="left">1505</prdf:cell>
+<prdf:cell align="left">(1) M2CM Rule 8.10 </prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">638-639</prdf:cell>
+<prdf:cell align="left">1503</prdf:cell>
+<prdf:cell align="left">(1) M2CM Rule 14.1 </prdf:cell>
+</prdf:row>
+</prdf:table>
+<prdf:divider>8 - MLinkEvent.c</prdf:divider>
+<prdf:table>
+<prdf:col_width width="12%"/>
+<prdf:col_width width="12%"/>
+<prdf:col_width width="76%"/>
+<prdf:row>
+<prdf:cell heading="2" align="left" colspan="3">C:\CodeInspection\DisplayUnit\STemWin\App\MLinkEvent.c</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell heading="1" align="left">Lines</prdf:cell>
+<prdf:cell heading="1" align="left">Messages</prdf:cell>
+<prdf:cell heading="1" align="left">Groups</prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">54-55</prdf:cell>
+<prdf:cell align="left">1505</prdf:cell>
+<prdf:cell align="left">(1) M2CM Rule 8.10 </prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">118-119</prdf:cell>
+<prdf:cell align="left">1503</prdf:cell>
+<prdf:cell align="left">(1) M2CM Rule 14.1 </prdf:cell>
+</prdf:row>
+</prdf:table>
+<prdf:divider>9 - MLinkHwSet.c</prdf:divider>
+<prdf:table>
+<prdf:col_width width="12%"/>
+<prdf:col_width width="12%"/>
+<prdf:col_width width="76%"/>
+<prdf:row>
+<prdf:cell heading="2" align="left" colspan="3">C:\CodeInspection\DisplayUnit\STemWin\App\MLinkHwSet.c</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell heading="1" align="left">Lines</prdf:cell>
+<prdf:cell heading="1" align="left">Messages</prdf:cell>
+<prdf:cell heading="1" align="left">Groups</prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">147-148</prdf:cell>
+<prdf:cell align="left">1503</prdf:cell>
+<prdf:cell align="left">(1) M2CM Rule 14.1 </prdf:cell>
+</prdf:row>
+</prdf:table>
+<prdf:divider>10 - MLinkIOSet.c</prdf:divider>
+<prdf:table>
+<prdf:col_width width="12%"/>
+<prdf:col_width width="12%"/>
+<prdf:col_width width="76%"/>
+<prdf:row>
+<prdf:cell heading="2" align="left" colspan="3">C:\CodeInspection\DisplayUnit\STemWin\App\MLinkIOSet.c</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell heading="1" align="left">Lines</prdf:cell>
+<prdf:cell heading="1" align="left">Messages</prdf:cell>
+<prdf:cell heading="1" align="left">Groups</prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">500-501</prdf:cell>
+<prdf:cell align="left">1503</prdf:cell>
+<prdf:cell align="left">(1) M2CM Rule 14.1 </prdf:cell>
+</prdf:row>
+</prdf:table>
+<prdf:divider>11 - MLinkInfo.c</prdf:divider>
+<prdf:table>
+<prdf:col_width width="12%"/>
+<prdf:col_width width="12%"/>
+<prdf:col_width width="76%"/>
+<prdf:row>
+<prdf:cell heading="2" align="left" colspan="3">C:\CodeInspection\DisplayUnit\STemWin\App\MLinkInfo.c</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell heading="1" align="left">Lines</prdf:cell>
+<prdf:cell heading="1" align="left">Messages</prdf:cell>
+<prdf:cell heading="1" align="left">Groups</prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">613-614</prdf:cell>
+<prdf:cell align="left">1503</prdf:cell>
+<prdf:cell align="left">(1) M2CM Rule 14.1 </prdf:cell>
+</prdf:row>
+</prdf:table>
+<prdf:divider>12 - MLinkOverview.c</prdf:divider>
+<prdf:table>
+<prdf:col_width width="12%"/>
+<prdf:col_width width="12%"/>
+<prdf:col_width width="76%"/>
+<prdf:row>
+<prdf:cell heading="2" align="left" colspan="3">C:\CodeInspection\DisplayUnit\STemWin\App\MLinkOverview.c</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell heading="1" align="left">Lines</prdf:cell>
+<prdf:cell heading="1" align="left">Messages</prdf:cell>
+<prdf:cell heading="1" align="left">Groups</prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">57-58</prdf:cell>
+<prdf:cell align="left">1503</prdf:cell>
+<prdf:cell align="left">(1) M2CM Rule 14.1 </prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">74-76</prdf:cell>
+<prdf:cell align="left">1514</prdf:cell>
+<prdf:cell align="left">(1) M2CM Rule 8.7 </prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">78-79</prdf:cell>
+<prdf:cell align="left">1503</prdf:cell>
+<prdf:cell align="left">(1) M2CM Rule 14.1 </prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">214-215</prdf:cell>
+<prdf:cell align="left">1503</prdf:cell>
+<prdf:cell align="left">(1) M2CM Rule 14.1 </prdf:cell>
+</prdf:row>
+</prdf:table>
+<prdf:divider>13 - MainMenu.c</prdf:divider>
+<prdf:table>
+<prdf:col_width width="12%"/>
+<prdf:col_width width="12%"/>
+<prdf:col_width width="76%"/>
+<prdf:row>
+<prdf:cell heading="2" align="left" colspan="3">C:\CodeInspection\DisplayUnit\STemWin\App\MainMenu.c</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell heading="1" align="left">Lines</prdf:cell>
+<prdf:cell heading="1" align="left">Messages</prdf:cell>
+<prdf:cell heading="1" align="left">Groups</prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">45-47</prdf:cell>
+<prdf:cell align="left">1514</prdf:cell>
+<prdf:cell align="left">(1) M2CM Rule 8.7 </prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">82-83</prdf:cell>
+<prdf:cell align="left">1505</prdf:cell>
+<prdf:cell align="left">(1) M2CM Rule 8.10 </prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">183-184</prdf:cell>
+<prdf:cell align="left">1505</prdf:cell>
+<prdf:cell align="left">(1) M2CM Rule 8.10 </prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">190-191</prdf:cell>
+<prdf:cell align="left">1505</prdf:cell>
+<prdf:cell align="left">(1) M2CM Rule 8.10 </prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">242-243</prdf:cell>
+<prdf:cell align="left">1505</prdf:cell>
+<prdf:cell align="left">(1) M2CM Rule 8.10 </prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">549-550</prdf:cell>
+<prdf:cell align="left">1505</prdf:cell>
+<prdf:cell align="left">(1) M2CM Rule 8.10 </prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">600-601</prdf:cell>
+<prdf:cell align="left">1505</prdf:cell>
+<prdf:cell align="left">(1) M2CM Rule 8.10 </prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">608-609</prdf:cell>
+<prdf:cell align="left">1505</prdf:cell>
+<prdf:cell align="left">(1) M2CM Rule 8.10 </prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">639-640</prdf:cell>
+<prdf:cell align="left">1505</prdf:cell>
+<prdf:cell align="left">(1) M2CM Rule 8.10 </prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">718-719</prdf:cell>
+<prdf:cell align="left">1505</prdf:cell>
+<prdf:cell align="left">(1) M2CM Rule 8.10 </prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">747-748</prdf:cell>
+<prdf:cell align="left">1505</prdf:cell>
+<prdf:cell align="left">(1) M2CM Rule 8.10 </prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">1131-1132</prdf:cell>
+<prdf:cell align="left">1505</prdf:cell>
+<prdf:cell align="left">(1) M2CM Rule 8.10 </prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">1186-1187</prdf:cell>
+<prdf:cell align="left">1503</prdf:cell>
+<prdf:cell align="left">(1) M2CM Rule 14.1 </prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">1419-1420</prdf:cell>
+<prdf:cell align="left">1503</prdf:cell>
+<prdf:cell align="left">(1) M2CM Rule 14.1 </prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">1590-1591</prdf:cell>
+<prdf:cell align="left">1503</prdf:cell>
+<prdf:cell align="left">(1) M2CM Rule 14.1 </prdf:cell>
+</prdf:row>
+</prdf:table>
+<prdf:divider>14 - MenuDLG.c</prdf:divider>
+<prdf:table>
+<prdf:col_width width="12%"/>
+<prdf:col_width width="12%"/>
+<prdf:col_width width="76%"/>
+<prdf:row>
+<prdf:cell heading="2" align="left" colspan="3">C:\CodeInspection\DisplayUnit\STemWin\App\MenuDLG.c</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell heading="1" align="left">Lines</prdf:cell>
+<prdf:cell heading="1" align="left">Messages</prdf:cell>
+<prdf:cell heading="1" align="left">Groups</prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">489-490</prdf:cell>
+<prdf:cell align="left">1503</prdf:cell>
+<prdf:cell align="left">(1) M2CM Rule 14.1 </prdf:cell>
+</prdf:row>
+</prdf:table>
+<prdf:divider>15 - PasswordChange.c</prdf:divider>
+<prdf:table>
+<prdf:col_width width="12%"/>
+<prdf:col_width width="12%"/>
+<prdf:col_width width="76%"/>
+<prdf:row>
+<prdf:cell heading="2" align="left" colspan="3">C:\CodeInspection\DisplayUnit\STemWin\App\PasswordChange.c</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell heading="1" align="left">Lines</prdf:cell>
+<prdf:cell heading="1" align="left">Messages</prdf:cell>
+<prdf:cell heading="1" align="left">Groups</prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">78-79</prdf:cell>
+<prdf:cell align="left">1505</prdf:cell>
+<prdf:cell align="left">(1) M2CM Rule 8.10 </prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">234-235</prdf:cell>
+<prdf:cell align="left">1503</prdf:cell>
+<prdf:cell align="left">(1) M2CM Rule 14.1 </prdf:cell>
+</prdf:row>
+</prdf:table>
+<prdf:divider>16 - SettingInput.c</prdf:divider>
+<prdf:table>
+<prdf:col_width width="12%"/>
+<prdf:col_width width="12%"/>
+<prdf:col_width width="76%"/>
+<prdf:row>
+<prdf:cell heading="2" align="left" colspan="3">C:\CodeInspection\DisplayUnit\STemWin\App\SettingInput.c</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell heading="1" align="left">Lines</prdf:cell>
+<prdf:cell heading="1" align="left">Messages</prdf:cell>
+<prdf:cell heading="1" align="left">Groups</prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">81-82</prdf:cell>
+<prdf:cell align="left">1503</prdf:cell>
+<prdf:cell align="left">(1) M2CM Rule 14.1 </prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">284-285</prdf:cell>
+<prdf:cell align="left">1503</prdf:cell>
+<prdf:cell align="left">(1) M2CM Rule 14.1 </prdf:cell>
+</prdf:row>
+</prdf:table>
+<prdf:divider>17 - SettingTime.c</prdf:divider>
+<prdf:table>
+<prdf:col_width width="12%"/>
+<prdf:col_width width="12%"/>
+<prdf:col_width width="76%"/>
+<prdf:row>
+<prdf:cell heading="2" align="left" colspan="3">C:\CodeInspection\DisplayUnit\STemWin\App\SettingTime.c</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell heading="1" align="left">Lines</prdf:cell>
+<prdf:cell heading="1" align="left">Messages</prdf:cell>
+<prdf:cell heading="1" align="left">Groups</prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">128-129</prdf:cell>
+<prdf:cell align="left">1505</prdf:cell>
+<prdf:cell align="left">(1) M2CM Rule 8.10 </prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">164-165</prdf:cell>
+<prdf:cell align="left">1503</prdf:cell>
+<prdf:cell align="left">(1) M2CM Rule 14.1 </prdf:cell>
+</prdf:row>
+</prdf:table>
+<prdf:divider>18 - Setup.c</prdf:divider>
+<prdf:table>
+<prdf:col_width width="12%"/>
+<prdf:col_width width="12%"/>
+<prdf:col_width width="76%"/>
+<prdf:row>
+<prdf:cell heading="2" align="left" colspan="3">C:\CodeInspection\DisplayUnit\STemWin\App\Setup.c</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell heading="1" align="left">Lines</prdf:cell>
+<prdf:cell heading="1" align="left">Messages</prdf:cell>
+<prdf:cell heading="1" align="left">Groups</prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">291-292</prdf:cell>
+<prdf:cell align="left">310</prdf:cell>
+<prdf:cell align="left">(0) M2CM Rule 11.4 </prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">1082-1083</prdf:cell>
+<prdf:cell align="left">1503</prdf:cell>
+<prdf:cell align="left">(1) M2CM Rule 14.1 </prdf:cell>
+</prdf:row>
+</prdf:table>
+<prdf:divider>19 - modbus.c</prdf:divider>
+<prdf:table>
+<prdf:col_width width="12%"/>
+<prdf:col_width width="12%"/>
+<prdf:col_width width="76%"/>
+<prdf:row>
+<prdf:cell heading="2" align="left" colspan="3">C:\CodeInspection\DisplayUnit\STemWin\App\modbus.c</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell heading="1" align="left">Lines</prdf:cell>
+<prdf:cell heading="1" align="left">Messages</prdf:cell>
+<prdf:cell heading="1" align="left">Groups</prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">17-901</prdf:cell>
+<prdf:cell align="left">1503</prdf:cell>
+<prdf:cell align="left">(1) M2CM Rule 14.1 </prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">18-901</prdf:cell>
+<prdf:cell align="left">1505</prdf:cell>
+<prdf:cell align="left">(1) M2CM Rule 8.10 </prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">400-401</prdf:cell>
+<prdf:cell align="left">310</prdf:cell>
+<prdf:cell align="left">(0) M2CM Rule 11.4 </prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">423-424</prdf:cell>
+<prdf:cell align="left">310</prdf:cell>
+<prdf:cell align="left">(0) M2CM Rule 11.4 </prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">446-447</prdf:cell>
+<prdf:cell align="left">310</prdf:cell>
+<prdf:cell align="left">(0) M2CM Rule 11.4 </prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">548-549</prdf:cell>
+<prdf:cell align="left">310</prdf:cell>
+<prdf:cell align="left">(0) M2CM Rule 11.4 </prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">562-563</prdf:cell>
+<prdf:cell align="left">310</prdf:cell>
+<prdf:cell align="left">(0) M2CM Rule 11.4 </prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">882-883</prdf:cell>
+<prdf:cell align="left">310</prdf:cell>
+<prdf:cell align="left">(0) M2CM Rule 11.4 </prdf:cell>
+</prdf:row>
+</prdf:table>
+<prdf:divider>20 - backlight.c</prdf:divider>
+<prdf:table>
+<prdf:col_width width="12%"/>
+<prdf:col_width width="12%"/>
+<prdf:col_width width="76%"/>
+<prdf:row>
+<prdf:cell heading="2" align="left" colspan="3">C:\CodeInspection\DisplayUnit\STemWin\Board\backlight\backlight.c</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell heading="1" align="left">Lines</prdf:cell>
+<prdf:cell heading="1" align="left">Messages</prdf:cell>
+<prdf:cell heading="1" align="left">Groups</prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">67-68</prdf:cell>
+<prdf:cell align="left">1503</prdf:cell>
+<prdf:cell align="left">(1) M2CM Rule 14.1 </prdf:cell>
+</prdf:row>
+</prdf:table>
+<prdf:divider>21 - lcd.c</prdf:divider>
+<prdf:table>
+<prdf:col_width width="12%"/>
+<prdf:col_width width="12%"/>
+<prdf:col_width width="76%"/>
+<prdf:row>
+<prdf:cell heading="2" align="left" colspan="3">C:\CodeInspection\DisplayUnit\STemWin\Board\lcd\lcd.c</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell heading="1" align="left">Lines</prdf:cell>
+<prdf:cell heading="1" align="left">Messages</prdf:cell>
+<prdf:cell heading="1" align="left">Groups</prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">12-746</prdf:cell>
+<prdf:cell align="left">1505</prdf:cell>
+<prdf:cell align="left">(1) M2CM Rule 8.10 </prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">13-746</prdf:cell>
+<prdf:cell align="left">1503</prdf:cell>
+<prdf:cell align="left">(1) M2CM Rule 14.1 </prdf:cell>
+</prdf:row>
+</prdf:table>
+<prdf:divider>22 - GUIConf.c</prdf:divider>
+<prdf:table>
+<prdf:col_width width="12%"/>
+<prdf:col_width width="12%"/>
+<prdf:col_width width="76%"/>
+<prdf:row>
+<prdf:cell heading="2" align="left" colspan="3">C:\CodeInspection\DisplayUnit\STemWin\Target\GUIConf.c</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell heading="1" align="left">Lines</prdf:cell>
+<prdf:cell heading="1" align="left">Messages</prdf:cell>
+<prdf:cell heading="1" align="left">Groups</prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">103-104</prdf:cell>
+<prdf:cell align="left">1503</prdf:cell>
+<prdf:cell align="left">(1) M2CM Rule 14.1 </prdf:cell>
+</prdf:row>
+</prdf:table>
+<prdf:divider>23 - LCDConf_FlexColor_Hmi.c</prdf:divider>
+<prdf:table>
+<prdf:col_width width="12%"/>
+<prdf:col_width width="12%"/>
+<prdf:col_width width="76%"/>
+<prdf:row>
+<prdf:cell heading="2" align="left" colspan="3">C:\CodeInspection\DisplayUnit\STemWin\Target\LCDConf_FlexColor_Hmi.c</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell heading="1" align="left">Lines</prdf:cell>
+<prdf:cell heading="1" align="left">Messages</prdf:cell>
+<prdf:cell heading="1" align="left">Groups</prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">373-374</prdf:cell>
+<prdf:cell align="left">1503</prdf:cell>
+<prdf:cell align="left">(1) M2CM Rule 14.1 </prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">444-445</prdf:cell>
+<prdf:cell align="left">1503</prdf:cell>
+<prdf:cell align="left">(1) M2CM Rule 14.1 </prdf:cell>
+</prdf:row>
+</prdf:table>
+<prdf:divider>24 - main.c</prdf:divider>
+<prdf:table>
+<prdf:col_width width="12%"/>
+<prdf:col_width width="12%"/>
+<prdf:col_width width="76%"/>
+<prdf:row>
+<prdf:cell heading="2" align="left" colspan="3">C:\CodeInspection\DisplayUnit\Src\main.c</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell heading="1" align="left">Lines</prdf:cell>
+<prdf:cell heading="1" align="left">Messages</prdf:cell>
+<prdf:cell heading="1" align="left">Groups</prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">147-148</prdf:cell>
+<prdf:cell align="left">310</prdf:cell>
+<prdf:cell align="left">(0) M2CM Rule 11.4 </prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">712-713</prdf:cell>
+<prdf:cell align="left">1503</prdf:cell>
+<prdf:cell align="left">(1) M2CM Rule 14.1 </prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">928-929</prdf:cell>
+<prdf:cell align="left">1503</prdf:cell>
+<prdf:cell align="left">(1) M2CM Rule 14.1 </prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">952-953</prdf:cell>
+<prdf:cell align="left">1503</prdf:cell>
+<prdf:cell align="left">(1) M2CM Rule 14.1 </prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">1119-1121</prdf:cell>
+<prdf:cell align="left">1503</prdf:cell>
+<prdf:cell align="left">(1) M2CM Rule 14.1 </prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">1120-1121</prdf:cell>
+<prdf:cell align="left">3673</prdf:cell>
+<prdf:cell align="left">(0) M2CM Rule 16.7 </prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">1140-1142</prdf:cell>
+<prdf:cell align="left">1503</prdf:cell>
+<prdf:cell align="left">(1) M2CM Rule 14.1 </prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">1141-1142</prdf:cell>
+<prdf:cell align="left">1505</prdf:cell>
+<prdf:cell align="left">(1) M2CM Rule 8.10 </prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">1142-2647</prdf:cell>
+<prdf:cell align="left">1503</prdf:cell>
+<prdf:cell align="left">(1) M2CM Rule 14.1 </prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">1329-1330</prdf:cell>
+<prdf:cell align="left">1503</prdf:cell>
+<prdf:cell align="left">(1) M2CM Rule 14.1 </prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">1359-1360</prdf:cell>
+<prdf:cell align="left">1503</prdf:cell>
+<prdf:cell align="left">(1) M2CM Rule 14.1 </prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">1453-1454</prdf:cell>
+<prdf:cell align="left">1503</prdf:cell>
+<prdf:cell align="left">(1) M2CM Rule 14.1 </prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">1480-1481</prdf:cell>
+<prdf:cell align="left">1503</prdf:cell>
+<prdf:cell align="left">(1) M2CM Rule 14.1 </prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">1642-1643</prdf:cell>
+<prdf:cell align="left">1503</prdf:cell>
+<prdf:cell align="left">(1) M2CM Rule 14.1 </prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">1685-1686</prdf:cell>
+<prdf:cell align="left">1503</prdf:cell>
+<prdf:cell align="left">(1) M2CM Rule 14.1 </prdf:cell>
+</prdf:row>
+</prdf:table>
+<prdf:divider>25 - stm32f4xx_hal_timebase_TIM.c</prdf:divider>
+<prdf:table>
+<prdf:col_width width="12%"/>
+<prdf:col_width width="12%"/>
+<prdf:col_width width="76%"/>
+<prdf:row>
+<prdf:cell heading="2" align="left" colspan="3">C:\CodeInspection\DisplayUnit\Src\stm32f4xx_hal_timebase_TIM.c</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell heading="1" align="left">Lines</prdf:cell>
+<prdf:cell heading="1" align="left">Messages</prdf:cell>
+<prdf:cell heading="1" align="left">Groups</prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">1-164</prdf:cell>
+<prdf:cell align="left">3120</prdf:cell>
+<prdf:cell align="left">(2) LSIS_Coding_Style </prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">2-164</prdf:cell>
+<prdf:cell align="left">3132</prdf:cell>
+<prdf:cell align="left">(2) LSIS_Coding_Style </prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">55-164</prdf:cell>
+<prdf:cell align="left">1503</prdf:cell>
+<prdf:cell align="left">(1) M2CM Rule 14.1 </prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">69-70</prdf:cell>
+<prdf:cell align="left">3447</prdf:cell>
+<prdf:cell align="left">(1) M2CM Rule 8.8 </prdf:cell>
+</prdf:row>
+</prdf:table>
+<prdf:divider>26 - stm32f4xx_it.c</prdf:divider>
+<prdf:table>
+<prdf:col_width width="12%"/>
+<prdf:col_width width="12%"/>
+<prdf:col_width width="76%"/>
+<prdf:row>
+<prdf:cell heading="2" align="left" colspan="3">C:\CodeInspection\DisplayUnit\Src\stm32f4xx_it.c</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell heading="1" align="left">Lines</prdf:cell>
+<prdf:cell heading="1" align="left">Messages</prdf:cell>
+<prdf:cell heading="1" align="left">Groups</prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">46-302</prdf:cell>
+<prdf:cell align="left">1503</prdf:cell>
+<prdf:cell align="left">(1) M2CM Rule 14.1 </prdf:cell>
+</prdf:row>
+</prdf:table>
+<prdf:divider>27 - system_stm32f4xx.c</prdf:divider>
+<prdf:table>
+<prdf:col_width width="12%"/>
+<prdf:col_width width="12%"/>
+<prdf:col_width width="76%"/>
+<prdf:row>
+<prdf:cell heading="2" align="left" colspan="3">C:\CodeInspection\DisplayUnit\Src\system_stm32f4xx.c</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell heading="1" align="left">Lines</prdf:cell>
+<prdf:cell heading="1" align="left">Messages</prdf:cell>
+<prdf:cell heading="1" align="left">Groups</prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">1-766</prdf:cell>
+<prdf:cell align="left">3120</prdf:cell>
+<prdf:cell align="left">(2) LSIS_Coding_Style </prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">2-766</prdf:cell>
+<prdf:cell align="left">3132</prdf:cell>
+<prdf:cell align="left">(2) LSIS_Coding_Style </prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">3-766</prdf:cell>
+<prdf:cell align="left">1503</prdf:cell>
+<prdf:cell align="left">(1) M2CM Rule 14.1 </prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">4-766</prdf:cell>
+<prdf:cell align="left">1514</prdf:cell>
+<prdf:cell align="left">(1) M2CM Rule 8.7 </prdf:cell>
+</prdf:row>
+</prdf:table>
+</prdf:section>
+<prdf:section xmlns:v="urn:schemas-microsoft-com:vml" created_by="standard.prdf.generator" created_by_version="1.3">
+<prdf:h2>Continuous Suppressions by File</prdf:h2>
+<prdf:divider>1 - MainMenu.c</prdf:divider>
+<prdf:table>
+<prdf:col_width width="12%"/>
+<prdf:col_width width="12%"/>
+<prdf:col_width width="76%"/>
+<prdf:row>
+<prdf:cell heading="2" align="left" colspan="3">C:\CodeInspection\DisplayUnit\STemWin\App\MainMenu.c</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell heading="1" align="left">Lines</prdf:cell>
+<prdf:cell heading="1" align="left">Messages</prdf:cell>
+<prdf:cell heading="1" align="left">Groups</prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">71-75</prdf:cell>
+<prdf:cell align="left">1514</prdf:cell>
+<prdf:cell align="left">(1) M2CM Rule 8.7 </prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">201-202</prdf:cell>
+<prdf:cell align="left">3335</prdf:cell>
+<prdf:cell align="left">(0) M2CM Rule 8.1 </prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">202-204</prdf:cell>
+<prdf:cell align="left">3335, 4604</prdf:cell>
+<prdf:cell align="left">(0) M2CM Rule 8.1 (1) M2CM Rule 20.2 </prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">204-205</prdf:cell>
+<prdf:cell align="left">4604</prdf:cell>
+<prdf:cell align="left">(1) M2CM Rule 20.2 </prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">367-368</prdf:cell>
+<prdf:cell align="left">3335</prdf:cell>
+<prdf:cell align="left">(0) M2CM Rule 8.1 </prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">368-370</prdf:cell>
+<prdf:cell align="left">3335, 4604</prdf:cell>
+<prdf:cell align="left">(0) M2CM Rule 8.1 (1) M2CM Rule 20.2 </prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">370-371</prdf:cell>
+<prdf:cell align="left">4604</prdf:cell>
+<prdf:cell align="left">(1) M2CM Rule 20.2 </prdf:cell>
+</prdf:row>
+</prdf:table>
+<prdf:divider>2 - MenuDLG.c</prdf:divider>
+<prdf:table>
+<prdf:col_width width="12%"/>
+<prdf:col_width width="12%"/>
+<prdf:col_width width="76%"/>
+<prdf:row>
+<prdf:cell heading="2" align="left" colspan="3">C:\CodeInspection\DisplayUnit\STemWin\App\MenuDLG.c</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell heading="1" align="left">Lines</prdf:cell>
+<prdf:cell heading="1" align="left">Messages</prdf:cell>
+<prdf:cell heading="1" align="left">Groups</prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">497-498</prdf:cell>
+<prdf:cell align="left">1334</prdf:cell>
+<prdf:cell align="left">(0) M2CM Rule 16.4 </prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">498-506</prdf:cell>
+<prdf:cell align="left">1334, 3635</prdf:cell>
+<prdf:cell align="left">(0) M2CM Rule 16.4 (0) M2CM Rule 16.9 </prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">506-507</prdf:cell>
+<prdf:cell align="left">3635</prdf:cell>
+<prdf:cell align="left">(0) M2CM Rule 16.9 </prdf:cell>
+</prdf:row>
+</prdf:table>
+<prdf:divider>3 - lcd.c</prdf:divider>
+<prdf:table>
+<prdf:col_width width="12%"/>
+<prdf:col_width width="12%"/>
+<prdf:col_width width="76%"/>
+<prdf:row>
+<prdf:cell heading="2" align="left" colspan="3">C:\CodeInspection\DisplayUnit\STemWin\Board\lcd\lcd.c</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell heading="1" align="left">Lines</prdf:cell>
+<prdf:cell heading="1" align="left">Messages</prdf:cell>
+<prdf:cell heading="1" align="left">Groups</prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">267-730</prdf:cell>
+<prdf:cell align="left">3120</prdf:cell>
+<prdf:cell align="left">(2) LSIS_Coding_Style </prdf:cell>
+</prdf:row>
+</prdf:table>
+<prdf:divider>4 - main.c</prdf:divider>
+<prdf:table>
+<prdf:col_width width="12%"/>
+<prdf:col_width width="12%"/>
+<prdf:col_width width="76%"/>
+<prdf:row>
+<prdf:cell heading="2" align="left" colspan="3">C:\CodeInspection\DisplayUnit\Src\main.c</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell heading="1" align="left">Lines</prdf:cell>
+<prdf:cell heading="1" align="left">Messages</prdf:cell>
+<prdf:cell heading="1" align="left">Groups</prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">91-95</prdf:cell>
+<prdf:cell align="left">1514</prdf:cell>
+<prdf:cell align="left">(1) M2CM Rule 8.7 </prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">95-97</prdf:cell>
+<prdf:cell align="left">1504, 1514</prdf:cell>
+<prdf:cell align="left">(1) M2CM Rule 8.10 (1) M2CM Rule 8.7 </prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">97-100</prdf:cell>
+<prdf:cell align="left">1504, 1514, 3408</prdf:cell>
+<prdf:cell align="left">(1) M2CM Rule 8.10 (1) M2CM Rule 8.7 (1) M2CM Rule 8.8 </prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">100-101</prdf:cell>
+<prdf:cell align="left">1504, 1514</prdf:cell>
+<prdf:cell align="left">(1) M2CM Rule 8.10 (1) M2CM Rule 8.7 </prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">101-102</prdf:cell>
+<prdf:cell align="left">1504</prdf:cell>
+<prdf:cell align="left">(1) M2CM Rule 8.10 </prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">139-140</prdf:cell>
+<prdf:cell align="left">1330</prdf:cell>
+<prdf:cell align="left">(0) M2CM Rule 16.4 </prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">140-141</prdf:cell>
+<prdf:cell align="left">1330, 4603</prdf:cell>
+<prdf:cell align="left">(0) M2CM Rule 16.4 (1) M2CM Rule 20.2 </prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">141-151</prdf:cell>
+<prdf:cell align="left">1330, 1503, 4603</prdf:cell>
+<prdf:cell align="left">(0) M2CM Rule 16.4 (1) M2CM Rule 14.1 (1) M2CM Rule 20.2 </prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">151-152</prdf:cell>
+<prdf:cell align="left">1503, 4603</prdf:cell>
+<prdf:cell align="left">(1) M2CM Rule 14.1 (1) M2CM Rule 20.2 </prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">152-153</prdf:cell>
+<prdf:cell align="left">1503</prdf:cell>
+<prdf:cell align="left">(1) M2CM Rule 14.1 </prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">695-696</prdf:cell>
+<prdf:cell align="left">3200</prdf:cell>
+<prdf:cell align="left">(0) M2CM Rule 16.10 </prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">696-698</prdf:cell>
+<prdf:cell align="left">3200, 3335</prdf:cell>
+<prdf:cell align="left">(0) M2CM Rule 16.10 (0) M2CM Rule 8.1 </prdf:cell>
+</prdf:row>
+<prdf:row valign="1">
+<prdf:cell align="left">698-699</prdf:cell>
+<prdf:cell align="left">3335</prdf:cell>
+<prdf:cell align="left">(0) M2CM Rule 8.1 </prdf:cell>
+</prdf:row>
+</prdf:table>
+</prdf:section>
+<prdf:section xmlns:v="urn:schemas-microsoft-com:vml" created_by="standard.prdf.generator" created_by_version="1.3">
+<prdf:h2>Suppression by Group</prdf:h2>
+<prdf:table>
+<prdf:col_width width="15%"/>
+<prdf:col_width width="7%"/>
+<prdf:col_width width="7%"/>
+<prdf:col_width width="7%"/>
+<prdf:col_width width="7%"/>
+<prdf:col_width width="7%"/>
+<prdf:col_width width="7%"/>
+<prdf:col_width width="7%"/>
+<prdf:col_width width="7%"/>
+<prdf:col_width width="7%"/>
+<prdf:col_width width="7%"/>
+<prdf:col_width width="7%"/>
+<prdf:row>
+<prdf:cell heading="1">
+<prdf:nbsp/>
+</prdf:cell>
+<prdf:cell heading="1" align="center" colspan="11">Groups</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell heading="1" align="left">Files</prdf:cell>
+<prdf:cell heading="1" align="left" angle="90deg">(2) LSIS_Coding_Style</prdf:cell>
+<prdf:cell heading="1" align="left" angle="90deg">(1) M2CM Rule 14.1</prdf:cell>
+<prdf:cell heading="1" align="left" angle="90deg">(1) M2CM Rule 8.10</prdf:cell>
+<prdf:cell heading="1" align="left" angle="90deg">(1) M2CM Rule 8.7</prdf:cell>
+<prdf:cell heading="1" align="left" angle="90deg">(0) M2CM Rule 16.4</prdf:cell>
+<prdf:cell heading="1" align="left" angle="90deg">(0) M2CM Rule 16.9</prdf:cell>
+<prdf:cell heading="1" align="left" angle="90deg">(0) M2CM Rule 11.4</prdf:cell>
+<prdf:cell heading="1" align="left" angle="90deg">(1) M2CM Rule 20.2</prdf:cell>
+<prdf:cell heading="1" align="left" angle="90deg">(0) M2CM Rule 8.1</prdf:cell>
+<prdf:cell heading="1" align="left" angle="90deg">Others</prdf:cell>
+<prdf:cell heading="1" align="left" angle="90deg">Total</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell heading="1" align="left" colspan="12">C:\CodeInspection\DisplayUnit\STemWin\App</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell heading="1" align="left">modbus.c</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">23</prdf:cell>
+<prdf:cell heading="0" align="right">2</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">5</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">30</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell heading="1" align="left">MainMenu.c</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">3</prdf:cell>
+<prdf:cell heading="0" align="right">11</prdf:cell>
+<prdf:cell heading="0" align="right">1</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">2</prdf:cell>
+<prdf:cell heading="0" align="right">2</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">19</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell heading="1" align="left">MenuDLG.c</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">1</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">7</prdf:cell>
+<prdf:cell heading="0" align="right">7</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">15</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell heading="1" align="left">MLinkOverview.c</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">3</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">2</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">5</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell heading="1" align="left">MLinkControl.c</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">1</prdf:cell>
+<prdf:cell heading="0" align="right">4</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">5</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell heading="1" align="left">AcbMccbEvent.c</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">1</prdf:cell>
+<prdf:cell heading="0" align="right">2</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">3</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell heading="1" align="left">Setup.c</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">1</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">1</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">2</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell heading="1" align="left">SettingTime.c</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">1</prdf:cell>
+<prdf:cell heading="0" align="right">1</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">2</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell heading="1" align="left">SettingInput.c</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">2</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">2</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell heading="1" align="left">PasswordChange.c</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">1</prdf:cell>
+<prdf:cell heading="0" align="right">1</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">2</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell heading="1" align="left">MLinkEvent.c</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">1</prdf:cell>
+<prdf:cell heading="0" align="right">1</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">2</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell heading="1" align="left">AcbMccbInfo.c</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">1</prdf:cell>
+<prdf:cell heading="0" align="right">1</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">2</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell heading="1" align="left">MLinkInfo.c</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">1</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell heading="1" align="left">MLinkIOSet.c</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">1</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell heading="1" align="left">MLinkHwSet.c</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">1</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell heading="1" align="left">AcbMccbRelaySet.c</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">1</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell heading="1" align="left">AcbMccbMeasurement.c</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">1</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell heading="1" align="left">AcbMccbHwSet.c</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">1</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell heading="1" align="left">AcbMccbControl.c</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">1</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell heading="1" align="left" colspan="12">C:\CodeInspection\DisplayUnit\STemWin\Board\backlight</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell heading="1" align="left">backlight.c</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">1</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell heading="1" align="left" colspan="12">C:\CodeInspection\DisplayUnit\STemWin\Board\lcd</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell heading="1" align="left">lcd.c</prdf:cell>
+<prdf:cell heading="0" align="right">81</prdf:cell>
+<prdf:cell heading="0" align="right">2</prdf:cell>
+<prdf:cell heading="0" align="right">4</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">87</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell heading="1" align="left" colspan="12">C:\CodeInspection\DisplayUnit\STemWin\Target</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell heading="1" align="left">LCDConf_FlexColor_Hmi.c</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">2</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">2</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell heading="1" align="left">GUIConf.c</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">1</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">1</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell heading="1" align="left" colspan="12">C:\CodeInspection\DisplayUnit\Src</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell heading="1" align="left">main.c</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">9</prdf:cell>
+<prdf:cell heading="0" align="right">2</prdf:cell>
+<prdf:cell heading="0" align="right">3</prdf:cell>
+<prdf:cell heading="0" align="right">1</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">1</prdf:cell>
+<prdf:cell heading="0" align="right">1</prdf:cell>
+<prdf:cell heading="0" align="right">1</prdf:cell>
+<prdf:cell heading="0" align="right">2</prdf:cell>
+<prdf:cell heading="0" align="right">20</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell heading="1" align="left">system_stm32f4xx.c</prdf:cell>
+<prdf:cell heading="0" align="right">15</prdf:cell>
+<prdf:cell heading="0" align="right">2</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">2</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">19</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell heading="1" align="left">stm32f4xx_it.c</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">11</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">11</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell heading="1" align="left">stm32f4xx_hal_timebase_TIM.c</prdf:cell>
+<prdf:cell heading="0" align="right">3</prdf:cell>
+<prdf:cell heading="0" align="right">3</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">0</prdf:cell>
+<prdf:cell heading="0" align="right">6</prdf:cell>
+</prdf:row>
+<prdf:row>
+<prdf:cell heading="2" align="left">Total</prdf:cell>
+<prdf:cell heading="2" align="right">99</prdf:cell>
+<prdf:cell heading="2" align="right">77</prdf:cell>
+<prdf:cell heading="2" align="right">29</prdf:cell>
+<prdf:cell heading="2" align="right">8</prdf:cell>
+<prdf:cell heading="2" align="right">8</prdf:cell>
+<prdf:cell heading="2" align="right">7</prdf:cell>
+<prdf:cell heading="2" align="right">7</prdf:cell>
+<prdf:cell heading="2" align="right">3</prdf:cell>
+<prdf:cell heading="2" align="right">3</prdf:cell>
+<prdf:cell heading="2" align="right">2</prdf:cell>
+<prdf:cell heading="2" align="right">243</prdf:cell>
+</prdf:row>
+</prdf:table>
+<prdf:h3>Most Suppressed Groups</prdf:h3>
+<svg:svg width="1000" height="400">
+<svg:path d="M200 200 L64.4845 114.938 A160 160 0 0 1 360 200 z" style="fill:red; fill-opacity: 1; stroke:black; stroke-width: 1"/>
+<svg:rect x="535" y="30" width="30" height="20" style="stroke-linejoin: miter; stroke-width: 1; stroke: black; fill: red"/>
+<svg:text x="570" y="45" style="font-family arial, sans-serif; font-size: 14; fill black; stroke none">(2) LSIS_Coding_Style (99)</svg:text>
+<svg:path d="M200 200 L180.236 358.775 A160 160 0 0 1 64.4845 114.938 z" style="fill:lime; fill-opacity: 1; stroke:black; stroke-width: 1"/>
+<svg:rect x="535" y="60" width="30" height="20" style="stroke-linejoin: miter; stroke-width: 1; stroke: black; fill: lime"/>
+<svg:text x="570" y="75" style="font-family arial, sans-serif; font-size: 14; fill black; stroke none">(1) M2CM Rule 14.1 (77)</svg:text>
+<svg:path d="M200 200 L294.551 329.074 A160 160 0 0 1 180.236 358.775 z" style="fill:navy; fill-opacity: 1; stroke:black; stroke-width: 1"/>
+<svg:rect x="535" y="90" width="30" height="20" style="stroke-linejoin: miter; stroke-width: 1; stroke: black; fill: navy"/>
+<svg:text x="570" y="105" style="font-family arial, sans-serif; font-size: 14; fill black; stroke none">(1) M2CM Rule 8.10 (29)</svg:text>
+<svg:path d="M200 200 L319.228 306.699 A160 160 0 0 1 294.551 329.074 z" style="fill:fuchsia; fill-opacity: 1; stroke:black; stroke-width: 1"/>
+<svg:rect x="535" y="120" width="30" height="20" style="stroke-linejoin: miter; stroke-width: 1; stroke: black; fill: fuchsia"/>
+<svg:text x="570" y="135" style="font-family arial, sans-serif; font-size: 14; fill black; stroke none">(1) M2CM Rule 8.7 (8)</svg:text>
+<svg:path d="M200 200 L338.738 279.699 A160 160 0 0 1 319.228 306.699 z" style="fill:olive; fill-opacity: 1; stroke:black; stroke-width: 1"/>
+<svg:rect x="535" y="150" width="30" height="20" style="stroke-linejoin: miter; stroke-width: 1; stroke: black; fill: olive"/>
+<svg:text x="570" y="165" style="font-family arial, sans-serif; font-size: 14; fill black; stroke none">(0) M2CM Rule 16.4 (8)</svg:text>
+<svg:path d="M200 200 L350.898 253.196 A160 160 0 0 1 338.738 279.699 z" style="fill:aqua; fill-opacity: 1; stroke:black; stroke-width: 1"/>
+<svg:rect x="535" y="180" width="30" height="20" style="stroke-linejoin: miter; stroke-width: 1; stroke: black; fill: aqua"/>
+<svg:text x="570" y="195" style="font-family arial, sans-serif; font-size: 14; fill black; stroke none">(0) M2CM Rule 16.9 (7)</svg:text>
+<svg:path d="M200 200 L358.046 224.927 A160 160 0 0 1 350.898 253.196 z" style="fill:maroon; fill-opacity: 1; stroke:black; stroke-width: 1"/>
+<svg:rect x="535" y="210" width="30" height="20" style="stroke-linejoin: miter; stroke-width: 1; stroke: black; fill: maroon"/>
+<svg:text x="570" y="225" style="font-family arial, sans-serif; font-size: 14; fill black; stroke none">(0) M2CM Rule 11.4 (7)</svg:text>
+<svg:path d="M200 200 L359.511 212.501 A160 160 0 0 1 358.046 224.927 z" style="fill:yellow; fill-opacity: 1; stroke:black; stroke-width: 1"/>
+<svg:rect x="535" y="240" width="30" height="20" style="stroke-linejoin: miter; stroke-width: 1; stroke: black; fill: yellow"/>
+<svg:text x="570" y="255" style="font-family arial, sans-serif; font-size: 14; fill black; stroke none">(1) M2CM Rule 20.2 (3)</svg:text>
+<svg:path d="M200 200 L360 200 A160 160 0 0 1 359.511 212.501 z" style="fill:blue; fill-opacity: 1; stroke:black; stroke-width: 1"/>
+<svg:rect x="535" y="270" width="30" height="20" style="stroke-linejoin: miter; stroke-width: 1; stroke: black; fill: blue"/>
+<svg:text x="570" y="285" style="font-family arial, sans-serif; font-size: 14; fill black; stroke none">(0) M2CM Rule 8.1 (3)</svg:text>
+</svg:svg>
+<v:group style="position:relative; left:0; top:0; width:1000; height:400" coordorigin="0 0" coordsize="1000 400">
+<v:shape style="position: relative; left:0; top:0; width:1000; height:400" coordorigin="0 0" coordsize="1000 400">
+<v:fill color="red"/>
+<v:path v="M 200 200 AE 200 200 160 160 0 9691713 X E"/>
+</v:shape>
+<v:rect style="top:30; left:535; width:30; height:25" fillcolor="red"/>
+<v:rect style="top=30; left:570; width:570; height:25" strokecolor="white">
+<v:textbox style="font: 14">(2) LSIS_Coding_Style (99)</v:textbox>
+</v:rect>
+<v:shape style="position: relative; left:0; top:0; width:1000; height:400" coordorigin="0 0" coordsize="1000 400">
+<v:fill color="lime"/>
+<v:path v="M 200 200 AE 200 200 160 160 9691713 7537999 X E"/>
+</v:shape>
+<v:rect style="top:60; left:535; width:30; height:25" fillcolor="lime"/>
+<v:rect style="top=60; left:570; width:570; height:25" strokecolor="white">
+<v:textbox style="font: 14">(1) M2CM Rule 14.1 (77)</v:textbox>
+</v:rect>
+<v:shape style="position: relative; left:0; top:0; width:1000; height:400" coordorigin="0 0" coordsize="1000 400">
+<v:fill color="navy"/>
+<v:path v="M 200 200 AE 200 200 160 160 17229713 2838986 X E"/>
+</v:shape>
+<v:rect style="top:90; left:535; width:30; height:25" fillcolor="navy"/>
+<v:rect style="top=90; left:570; width:570; height:25" strokecolor="white">
+<v:textbox style="font: 14">(1) M2CM Rule 8.10 (29)</v:textbox>
+</v:rect>
+<v:shape style="position: relative; left:0; top:0; width:1000; height:400" coordorigin="0 0" coordsize="1000 400">
+<v:fill color="fuchsia"/>
+<v:path v="M 200 200 AE 200 200 160 160 20068700 783168 X E"/>
+</v:shape>
+<v:rect style="top:120; left:535; width:30; height:25" fillcolor="fuchsia"/>
+<v:rect style="top=120; left:570; width:570; height:25" strokecolor="white">
+<v:textbox style="font: 14">(1) M2CM Rule 8.7 (8)</v:textbox>
+</v:rect>
+<v:shape style="position: relative; left:0; top:0; width:1000; height:400" coordorigin="0 0" coordsize="1000 400">
+<v:fill color="olive"/>
+<v:path v="M 200 200 AE 200 200 160 160 20851869 783168 X E"/>
+</v:shape>
+<v:rect style="top:150; left:535; width:30; height:25" fillcolor="olive"/>
+<v:rect style="top=150; left:570; width:570; height:25" strokecolor="white">
+<v:textbox style="font: 14">(0) M2CM Rule 16.4 (8)</v:textbox>
+</v:rect>
+<v:shape style="position: relative; left:0; top:0; width:1000; height:400" coordorigin="0 0" coordsize="1000 400">
+<v:fill color="aqua"/>
+<v:path v="M 200 200 AE 200 200 160 160 21635038 685272 X E"/>
+</v:shape>
+<v:rect style="top:180; left:535; width:30; height:25" fillcolor="aqua"/>
+<v:rect style="top=180; left:570; width:570; height:25" strokecolor="white">
+<v:textbox style="font: 14">(0) M2CM Rule 16.9 (7)</v:textbox>
+</v:rect>
+<v:shape style="position: relative; left:0; top:0; width:1000; height:400" coordorigin="0 0" coordsize="1000 400">
+<v:fill color="maroon"/>
+<v:path v="M 200 200 AE 200 200 160 160 22320310 685272 X E"/>
+</v:shape>
+<v:rect style="top:210; left:535; width:30; height:25" fillcolor="maroon"/>
+<v:rect style="top=210; left:570; width:570; height:25" strokecolor="white">
+<v:textbox style="font: 14">(0) M2CM Rule 11.4 (7)</v:textbox>
+</v:rect>
+<v:shape style="position: relative; left:0; top:0; width:1000; height:400" coordorigin="0 0" coordsize="1000 400">
+<v:fill color="yellow"/>
+<v:path v="M 200 200 AE 200 200 160 160 23005583 293688 X E"/>
+</v:shape>
+<v:rect style="top:240; left:535; width:30; height:25" fillcolor="yellow"/>
+<v:rect style="top=240; left:570; width:570; height:25" strokecolor="white">
+<v:textbox style="font: 14">(1) M2CM Rule 20.2 (3)</v:textbox>
+</v:rect>
+<v:shape style="position: relative; left:0; top:0; width:1000; height:400" coordorigin="0 0" coordsize="1000 400">
+<v:fill color="blue"/>
+<v:path v="M 200 200 AE 200 200 160 160 23299271 293688 X E"/>
+</v:shape>
+<v:rect style="top:270; left:535; width:30; height:25" fillcolor="blue"/>
+<v:rect style="top=270; left:570; width:570; height:25" strokecolor="white">
+<v:textbox style="font: 14">(0) M2CM Rule 8.1 (3)</v:textbox>
+</v:rect>
+</v:group>
+</prdf:section>
+<prdf:section created_by="standard.prdf.generator" created_by_version="1.3"/>
+</prdf:main>
+<prdf:appendices>
+<prdf:section xmlns:v="urn:schemas-microsoft-com:vml" created_by="standard.prdf.generator" created_by_version="1.3">
+<prdf:h2>Analysis Summary</prdf:h2>
+<prdf:h3>List of Analysed Files</prdf:h3>
+<prdf:file_list>
+<prdf:filename>C:\CodeInspection\DisplayUnit\Src\system_stm32f4xx.c</prdf:filename>
+<prdf:filename>C:\CodeInspection\DisplayUnit\Src\stm32f4xx_it.c</prdf:filename>
+<prdf:filename>C:\CodeInspection\DisplayUnit\Src\stm32f4xx_hal_timebase_TIM.c</prdf:filename>
+<prdf:filename>C:\CodeInspection\DisplayUnit\Src\main.c</prdf:filename>
+<prdf:filename>C:\CodeInspection\DisplayUnit\STemWin\App\Setup.c</prdf:filename>
+<prdf:filename>C:\CodeInspection\DisplayUnit\STemWin\App\SettingTime.c</prdf:filename>
+<prdf:filename>C:\CodeInspection\DisplayUnit\STemWin\App\SettingInput.c</prdf:filename>
+<prdf:filename>C:\CodeInspection\DisplayUnit\STemWin\App\PasswordChange.c</prdf:filename>
+<prdf:filename>C:\CodeInspection\DisplayUnit\STemWin\App\modbus.c</prdf:filename>
+<prdf:filename>C:\CodeInspection\DisplayUnit\STemWin\App\MLinkOverview.c</prdf:filename>
+<prdf:filename>C:\CodeInspection\DisplayUnit\STemWin\App\MLinkIOSet.c</prdf:filename>
+<prdf:filename>C:\CodeInspection\DisplayUnit\STemWin\App\MLinkInfo.c</prdf:filename>
+<prdf:filename>C:\CodeInspection\DisplayUnit\STemWin\App\MLinkHwSet.c</prdf:filename>
+<prdf:filename>C:\CodeInspection\DisplayUnit\STemWin\App\MLinkEvent.c</prdf:filename>
+<prdf:filename>C:\CodeInspection\DisplayUnit\STemWin\App\MLinkControl.c</prdf:filename>
+<prdf:filename>C:\CodeInspection\DisplayUnit\STemWin\App\MenuDLG.c</prdf:filename>
+<prdf:filename>C:\CodeInspection\DisplayUnit\STemWin\App\MainMenu.c</prdf:filename>
+<prdf:filename>C:\CodeInspection\DisplayUnit\STemWin\App\AcbMccbRelaySet.c</prdf:filename>
+<prdf:filename>C:\CodeInspection\DisplayUnit\STemWin\App\AcbMccbMeasurement.c</prdf:filename>
+<prdf:filename>C:\CodeInspection\DisplayUnit\STemWin\App\AcbMccbInfo.c</prdf:filename>
+<prdf:filename>C:\CodeInspection\DisplayUnit\STemWin\App\AcbMccbHwSet.c</prdf:filename>
+<prdf:filename>C:\CodeInspection\DisplayUnit\STemWin\App\AcbMccbEvent.c</prdf:filename>
+<prdf:filename>C:\CodeInspection\DisplayUnit\STemWin\App\AcbMccbControl.c</prdf:filename>
+<prdf:filename>C:\CodeInspection\DisplayUnit\STemWin\Board\backlight\backlight.c</prdf:filename>
+<prdf:filename>C:\CodeInspection\DisplayUnit\STemWin\Board\lcd\lcd.c</prdf:filename>
+<prdf:filename>C:\CodeInspection\DisplayUnit\STemWin\Target\LCDConf_FlexColor_Hmi.c</prdf:filename>
+<prdf:filename>C:\CodeInspection\DisplayUnit\STemWin\Target\GUIConf.c</prdf:filename>
+</prdf:file_list>
+<prdf:h3>Analysis Options</prdf:h3>
+<prdf:h4>Personality Options</prdf:h4>
+<prdf:verbatim>
+-align                   int=2
+-arithrsh                + (on)
+-bitsigned               + (on)
+-calling                 
+-callpack                
+-comment                 a
+-crossmoduleanalysisfile C:/CodeInspection/DisplayUnit/qac/out/
+                         DisplayUnit
+-d                       uint8_t=unsigned char,
+                         uint16_t=unsigned short,
+                         __IO=volatile,
+                         __AAPCS__=1,
+                         __ARM7EM__=1,
+                         __ATTRIBUTES_CAN_THROW=,
+                         __ATTRIBUTES_NORETURN=,
+                         __ATTRIBUTES=,
+                         __BOOL_TYPE__=unsigned char,
+                         __BUILD_NUMBER__=4415,
+                         __C99_BOOL__=1,
+                         __CHAR_ALIGN__=1,
+                         __CHAR_BITS__=8,
+                         __CHAR_MAX__=0xff,
+                         __CHAR_MIN__=0,
+                         __CHAR_SIZE__=1,
+                         __CODE_MEM0__=__code,
+                         __CODE_MEM0_POINTER_OK__=1,
+                         __CODE_MEM0_UNIQUE_POINTER__=1,
+                         __CODE_MEM0_VAR_OK__=1,
+                         __CODE_MEMORY_LIST1__()=
+                         __CODE_MEM_HELPER1__(__code,
+                         0 ),
+                         __CODE_MEMORY_LIST2__(_P1)=
+                         __CODE_MEM_HELPER2__(__code,
+                         0 ,
+                          _P1 ),
+                         __CODE_MEMORY_LIST3__(_P1,
+                         _P2)=__CODE_MEM_HELPER3__(__code,
+                         0 ,
+                          _P1 ,
+                          _P2 ),
+                         __CODE_PTR_MEMORY_LIST1__()=
+                         __CODE_PTR_MEM_HELPER1__(__code,
+                         0 ),
+                         __CODE_PTR_MEMORY_LIST2__(_P1)=
+                         __CODE_PTR_MEM_HELPER2__(__code,
+                         0 ,
+                          _P1 ),
+                         __CODE_PTR_MEMORY_LIST3__(_P1,
+                         _P2)=__CODE_PTR_MEM_HELPER3__(__code,
+                         0 ,
+                          _P1 ,
+                          _P2 ),
+                         __constrange(x,
+                        y)=,
+                         __CORE__=__ARM7EM__,
+                         __CPU_MODE__=2,
+                         __DATA_MEM0__=__data,
+                         __DATA_MEM0_HEAP__=0,
+                         __DATA_MEM0_INDEX_TYPE__=int,
+                         __DATA_MEM0_INTPTR_TYPE__=int,
+                         __DATA_MEM0_MAX_SIZE__=0x7fffffff,
+                         __DATA_MEM0_PAGE_SIZE__=0,
+                         __DATA_MEM0_POINTER_OK__=1,
+                         __DATA_MEM0_SIZE_TYPE__=unsigned int,
+                         __DATA_MEM0_UINTPTR_TYPE__=unsigned int,
+                         __DATA_MEM0_UNIQUE_POINTER__=1,
+                         __DATA_MEM0_VAR_OK__=1,
+                         __DATA_MEMORY_LIST1__()=
+                         __DATA_MEM_HELPER1__(__data,
+                         0 ),
+                         __DATA_MEMORY_LIST2__(_P1)=
+                         __DATA_MEM_HELPER2__(__data,
+                         0 ,
+                          _P1 ),
+                         __DATA_MEMORY_LIST3__(_P1,
+                         _P2)=__DATA_MEM_HELPER3__(__data,
+                         0 ,
+                          _P1 ,
+                          _P2 ),
+                         __DATA_PTR_MEMORY_LIST1__()=
+                         __DATA_PTR_MEM_HELPER1__(__data,
+                         0 ),
+                         __DATA_PTR_MEMORY_LIST2__(_P1)=
+                         __DATA_PTR_MEM_HELPER2__(__data,
+                         0 ,
+                          _P1 ),
+                         __DATA_PTR_MEMORY_LIST3__(_P1,
+                         _P2)=__DATA_PTR_MEM_HELPER3__(__data,
+                         0 ,
+                          _P1 ,
+                          _P2 ),
+                         __DEF_HEAP_MEM__=__data,
+                         __DEF_PTR_MEM__=__data,
+                         __DEPREC_ATTRS_CAN_THROW=,
+                         __DEPREC_ATTRS=,
+                         __DOUBLE_ALIGN__=8,
+                         __DOUBLE_SIZE__=8,
+                         __FLOAT_ALIGN__=4,
+                         __FLOAT_SIZE__=4,
+                         __HAS_JOINED_TYPES__=1,
+                         __HAS_LOCATED_DECLARATION__=1,
+                         __HAS_LOCATED_WITH_INIT__=1,
+                         __HAS_PACKED__=1,
+                         __HAS_WEAK__=1,
+                         __HEAP_MEM0__=0,
+                         __HEAP_MEMORY_LIST1__()=
+                         __HEAP_MEM_HELPER1__(__data,
+                         0 ),
+                         __HEAP_MEMORY_LIST2__(_P1)=
+                         __HEAP_MEM_HELPER2__(__data,
+                         0 ,
+                          _P1 ),
+                         __HEAP_MEMORY_LIST3__(_P1,
+                         _P2)=__HEAP_MEM_HELPER3__(__data,
+                         0 ,
+                          _P1 ,
+                          _P2 ),
+                         __HEAPD_MEMORY_LIST1__()=
+                         __HEAPD_MEM_HELPER1__(__data,
+                         0,
+                         _ ),
+                         __HEAPU_MEMORY_LIST1__()=
+                         __HEAPU_MEM_HELPER1__(__data,
+                         0 ),
+                         __HVAR_MEMORY_LIST1__()=
+                         __HVAR_MEM_HELPER1__(__data,
+                         0 ),
+                         __IAR_COMPILERBASE__=593157,
+                         __IAR_SYSTEMS_ICC__=9,
+                         __ICCARM__=1,
+                         __INT_ALIGN__=4,
+                         __INT_FAST16_T_MAX__=2147483647,
+                         __INT_FAST16_T_TYPE__=signed int,
+                         __INT_FAST32_T_MAX__=2147483647,
+                         __INT_FAST32_T_TYPE__=signed int,
+                         __INT_FAST64_T_MAX__=
+                         9223372036854775807LL,
+                         __INT_FAST64_T_TYPE__=signed long long 
+                         int,
+                         __INT_FAST8_T_MAX__=2147483647,
+                         __INT_FAST8_T_TYPE__=signed int,
+                         __INT_LEAST16_T_MAX__=32767,
+                         __INT_LEAST16_T_TYPE__=signed short int,
+                         __INT_LEAST32_T_MAX__=2147483647,
+                         __INT_LEAST32_T_TYPE__=signed int,
+                         __INT_LEAST64_T_MAX__=
+                         9223372036854775807LL,
+                         __INT_LEAST64_T_TYPE__=signed long long 
+                         int,
+                         __INT_LEAST8_T_MAX__=127,
+                         __INT_LEAST8_T_TYPE__=signed char,
+                         __INT_SIZE__=4,
+                         __INT16_C_SUFFIX__,
+                         __INT16_T_MAX__=32767,
+                         __INT16_T_TYPE__=signed short int,
+                         __INT32_C_SUFFIX__,
+                         __INT32_T_MAX__=2147483647,
+                         __INT32_T_TYPE__=signed int,
+                         __INT64_C_SUFFIX__=LL,
+                         __INT64_T_MAX__=9223372036854775807LL,
+                         __INT64_T_TYPE__=signed long long int,
+                         __INT8_C_SUFFIX__,
+                         __INT8_T_MAX__=127,
+                         __INT8_T_TYPE__=signed char,
+                         __INTMAX_C_SUFFIX__=LL,
+                         __INTMAX_T_MAX__=9223372036854775807LL,
+                         __INTMAX_T_TYPE__=signed long long int,
+                         __INTPTR_T_MAX__=2147483647L,
+                         __INTPTR_T_TYPE__=signed long int,
+                         __intrinsic=,
+                         __JMP_BUF_ELEMENT_TYPE__=unsigned long 
+                         long int,
+                         __JMP_BUF_NUM_ELEMENTS__=8,
+                         __LITTLE_ENDIAN__=1,
+                         __LONG_ALIGN__=4,
+                         __LONG_DOUBLE_ALIGN__=8,
+                         __LONG_DOUBLE_SIZE__=8,
+                         __LONG_LONG_ALIGN__=8,
+                         __LONG_LONG_SIZE__=8,
+                         __LONG_SIZE__=4,
+                         __MULTIPLE_HEAPS__=0,
+                         __MULTIPLE_INHERITANCE__=1,
+                         __NAN_HAS_HIGH_MANTISSA_BIT_SET__=0,
+                         __NO_WCHAR__,
+                         __PLAIN_INT_BITFIELD_IS_SIGNED__=0,
+                         __PRAGMA_PACK_ON__=1,
+                         __PTRDIFF_T_MAX__=2147483647,
+                         __PTRDIFF_T_TYPE__=signed int,
+                         __SHORT_ALIGN__=2,
+                         __SHORT_SIZE__=2,
+                         __SIGNED_CHAR_MAX__=127,
+                         __SIGNED_INT_MAX__=2147483647,
+                         __SIGNED_LONG_LONG_MAX__=
+                         9223372036854775807LL,
+                         __SIGNED_LONG_MAX__=2147483647L,
+                         __SIGNED_SHORT_MAX__=32767,
+                         __SIZE_T_MAX__=0xffffffffU,
+                         __SIZE_T_TYPE__=unsigned int,
+                         __spec_string=,
+                         __SUBNORMAL_FLOATING_POINTS__=1,
+                         __TID__=0xcf10,
+                         __TOPM_DATA_MEMORY_LIST1__(),
+                         __TOPM_DATA_MEMORY_LIST2__(_P1),
+                         __TOPM_DATA_MEMORY_LIST3__(_P1,
+                         _P2),
+                         __TOPP_DATA_MEMORY_LIST1__()=
+                         __TOPP_DATA_MEM_HELPER1__(__data,
+                         0 ),
+                         __TOPP_DATA_MEMORY_LIST2__(_P1)=
+                         __TOPP_DATA_MEM_HELPER2__(__data,
+                         0 ,
+                          _P1 ),
+                         __TOPP_DATA_MEMORY_LIST3__(_P1,
+                         _P2)=__TOPP_DATA_MEM_HELPER3__(__data,
+                         0 ,
+                          _P1 ,
+                          _P2 ),
+                         __UINT_FAST16_T_MAX__=0xffffffffU,
+                         __UINT_FAST16_T_TYPE__=unsigned int,
+                         __UINT_FAST32_T_MAX__=0xffffffffU,
+                         __UINT_FAST32_T_TYPE__=unsigned int,
+                         __UINT_FAST64_T_MAX__=
+                         0xffffffffffffffffULL,
+                         __UINT_FAST64_T_TYPE__=unsigned long long 
+                         int,
+                         __UINT_FAST8_T_MAX__=0xffffffffU,
+                         __UINT_FAST8_T_TYPE__=unsigned int,
+                         __UINT_LEAST16_T_MAX__=0xffff,
+                         __UINT_LEAST16_T_TYPE__=unsigned short 
+                         int,
+                         __UINT_LEAST32_T_MAX__=0xffffffffU,
+                         __UINT_LEAST32_T_TYPE__=unsigned int,
+                         __UINT_LEAST64_T_MAX__=
+                         0xffffffffffffffffULL,
+                         __UINT_LEAST64_T_TYPE__=unsigned long 
+                         long int,
+                         __UINT_LEAST8_T_MAX__=0xff,
+                         __UINT_LEAST8_T_TYPE__=unsigned char,
+                         __UINT16_C_SUFFIX__,
+                         __UINT16_T_MAX__=0xffff,
+                         __UINT16_T_TYPE__=unsigned short int,
+                         __UINT32_C_SUFFIX__=U,
+                         __UINT32_T_MAX__=0xffffffffU,
+                         __UINT32_T_TYPE__=unsigned int,
+                         __UINT64_C_SUFFIX__=ULL,
+                         __UINT64_T_MAX__=0xffffffffffffffffULL,
+                         __UINT64_T_TYPE__=unsigned long long int,
+                         __UINT8_C_SUFFIX__,
+                         __UINT8_T_MAX__=0xff,
+                         __UINT8_T_TYPE__=unsigned char,
+                         __UINTMAX_C_SUFFIX__=ULL,
+                         __UINTMAX_T_MAX__=0xffffffffffffffffULL,
+                         __UINTMAX_T_TYPE__=unsigned long long int,
+                         __UINTPTR_T_MAX__=0xffffffffUL,
+                         __UINTPTR_T_TYPE__=unsigned long int,
+                         __UNSIGNED_CHAR_MAX__=0xff,
+                         __UNSIGNED_INT_MAX__=0xffffffffU,
+                         __UNSIGNED_LONG_LONG_MAX__=
+                         0xffffffffffffffffULL,
+                         __UNSIGNED_LONG_MAX__=0xffffffffUL,
+                         __UNSIGNED_SHORT_MAX__=0xffff,
+                         __VA_STACK_ALIGN__=4,
+                         __VA_STACK_ALIGN_EXTRA_BEFORE__=0,
+                         __VA_STACK_DECREASING__=1,
+                         __VAR_MEMORY_LIST1__()=
+                         __VAR_MEM_HELPER1__(__data,
+                         0 ),
+                         __VAR_MEMORY_LIST2__(_P1)=
+                         __VAR_MEM_HELPER2__(__data,
+                         0 ,
+                          _P1 ),
+                         __VAR_MEMORY_LIST3__(_P1,
+                         _P2)=__VAR_MEM_HELPER3__(__data,
+                         0 ,
+                          _P1 ,
+                          _P2 ),
+                         __VARD_MEMORY_LIST1__()=
+                         __VARD_MEM_HELPER1__(__data,
+                         0,
+                         _ ),
+                         __VER__=6050001,
+                         __WCHAR_T_MAX__=0xffff,
+                         __WCHAR_T_SIZE__=2,
+                         __WCHAR_T_TYPE__=unsigned short int,
+                         __WEAK=,
+                         _DLIB_ONLY_C89=0,
+                         _DLIB_WIDE_CHARACTERS=0,
+                         _Pragma(x)=,
+                         _PTRDIFF_T=1,
+                         _WCHART=1,
+                         DEBUG=1,
+                         OS_LIBMODE_XR,
+                         OS_SUPPORT_PTLS=0,
+                         STM32F407xx,
+                         USE_HAL_DRIVER
+-echo                    
+-enabledataflow          - (off)
+-encoding                ASC
+-expandmultihomedmessages 1500-1501 1506-1510 1512-1513 1515-1517 
+                         1520 1525-1529
+-extensions              ansipc,
+                         pc,
+                         asm,
+                         dollar,
+                         longlong
+-file                    
+-foldplainchar           + (on)
+-forceinclude            
+-forgetall               
+-format                  %?u==0%(%?C%(%^%)%)%?u==0%(%?h%(Err%:Msg%)
+                         (%g:%N) %:%R(12, )%R(%u,  )%)%t%?u!=0%(: 
+                         %B(%l)%)
+-hdrsuppress             - (off)
+-heap                    512
+-help                    - (off)
+-hiddenmessage           - (off)
+-hiddenwarnings          - (off)
+-html                    - (off)
+-i                       C:/PRQA/QAC-8.1.2-R/include/ansi,
+                         C:/CodeInspection/DisplayUnit/Inc,
+                         C:/CodeInspection/DisplayUnit/Drivers/
+                         STM32F4xx_HAL_Driver/Inc,
+                         C:/CodeInspection/DisplayUnit/Drivers/
+                         STM32F4xx_HAL_Driver/Inc/Legacy,
+                         C:/CodeInspection/DisplayUnit/Middlewares/
+                         ST/STM32_USB_Device_Library/Core/Inc,
+                         C:/CodeInspection/DisplayUnit/Middlewares/
+                         ST/STM32_USB_Device_Library/Class/CDC/Inc,
+                         C:/CodeInspection/DisplayUnit/Middlewares/
+                         ST/STM32_USB_Host_Library/Core/Inc,
+                         C:/CodeInspection/DisplayUnit/Middlewares/
+                         ST/STM32_USB_Host_Library/Class/CDC/Inc,
+                         C:/CodeInspection/DisplayUnit/Drivers/
+                         CMSIS/Device/ST/STM32F4xx/Include,
+                         C:/CodeInspection/DisplayUnit/Drivers/
+                         CMSIS/Include,
+                         C:/CodeInspection/DisplayUnit/
+                         embOS_CortexM_IAR_V6_Src_V438/Start/
+                         BoardSupport/ST/STM32F429_Discovery/Setup,
+                         C:/CodeInspection/DisplayUnit/
+                         embOS_CortexM_IAR_V6_Src_V438/Start/Inc,
+                         C:/CodeInspection/DisplayUnit/STemWin/
+                         Board/Inc,
+                         C:/CodeInspection/DisplayUnit/STemWin/
+                         Target,
+                         C:/CodeInspection/DisplayUnit/STemWin/App,
+                         C:/CodeInspection/DisplayUnit/Middlewares/
+                         ST/STemWin/inc,
+                         C:/CodeInspection/DisplayUnit/Drivers/
+                         CMSIS/RTOS/Template,
+                         C:/CodeInspection/DisplayUnit/Middlewares/
+                         ST/STM32_USB_Host_Library/Class/AUDIO/Inc,
+                         C:/CodeInspection/DisplayUnit/Middlewares/
+                         ST/STM32_USB_Host_Library/Class/HID/Inc,
+                         C:/CodeInspection/DisplayUnit/Middlewares/
+                         ST/STM32_USB_Host_Library/Class/MSC/Inc,
+                         C:/CodeInspection/DisplayUnit/Middlewares/
+                         ST/STM32_USB_Host_Library/Class/MTP/Inc,
+                         C:/CodeInspection/DisplayUnit/Middlewares/
+                         ST/STM32_USB_Device_Library/Class/
+                         CustomHID/Inc,
+                         C:/CodeInspection/DisplayUnit/Middlewares/
+                         ST/STM32_USB_Device_Library/Class/HID/Inc,
+                         C:/CodeInspection/DisplayUnit/qac/lib,
+                         C:/CodeInspection/DisplayUnit/STemWin/App/
+                         DEMO,
+                         C:/CodeInspection/DisplayUnit/Middlewares/
+                         Modbus/include,
+                         C:/CodeInspection/DisplayUnit/Middlewares/
+                         MbSlave,
+                         C:/CodeInspection/DisplayUnit/Middlewares/
+                         Modbus/port
+-indentlevel             4
+-intrinsictype           
+-k+r                     
+-line                    + (on)
+-list                    
+-maxcount                0
+-maxerrors               0
+-maxlinelength           0
+-messagesonly            - (off)
+-metrics                 + (on)
+-namelength              31
+-namerulefile            
+-nomsg                   
+-nosort                  - (off)
+-onelineonly             - (off)
+-only                    9 40-42 159-179 184-186 190-204 206-208 
+                         231 234-235 245 249-251 257-259 268-269 
+                         275 284-287 289 301-302 304 307-313 
+                         316-317 336-337 339 341-342 400-403 
+                         422-423 434 473 475 488-489 491-492 502 
+                         543-545 581 594 606 623-625 630 632 
+                         636-637 648 654 658 661 666-668 670 672 
+                         676 678 680 686 693-694 706 735 745 750 
+                         759 771 777 779 805-809 813-814 817-820 
+                         822-827 829 831 833 836-837 841-842 
+                         846-850 853-854 856 863-865 867 869 872 
+                         874 878-881 883-888 896-898 904 907 
+                         914-915 917-918 925-928 942 970 1004-1005 
+                         1009-1010 1013 1330-1336 1460 1501 
+                         1503-1509 1513-1514 1520 1525-1529 1594 
+                         1599 2001-2004 2008-2009 2019-2020 
+                         2050-2051 2203 2205 2212 2214 2216 
+                         2462-2463 2547 2744 2776-2777 2791-2792 
+                         2800-2802 2810-2812 2820-2822 2830-2832 
+                         2840-2842 2850-2853 2855-2857 2860-2862 
+                         2871-2872 2877 2880 2882-2883 2887-2892 
+                         2895-2897 2901-2902 2910-2912 2930-2932 
+                         2961-2962 2971-2972 2980-2983 2990-2996 
+                         3001-3002 3006-3007 3101-3102 3104-3105 
+                         3107-3108 3110 3112-3115 3120 3132 3200 
+                         3205 3207 3217-3219 3221-3222 3224-3225 
+                         3230 3260-3263 3307 3311-3313 3315 
+                         3317-3320 3322 3326 3332 3334-3335 
+                         3340-3342 3377 3389 3391-3397 3402 3406 
+                         3408-3413 3415 3425-3427 3431 3437-3439 
+                         3447-3448 3450-3453 3458 3460-3461 3480 
+                         3601 3610 3628-3629 3635 3659-3660 3665 
+                         3670 3673 3675 3684 3700-3707 3711 3722 
+                         3733 3744 3755 3766 3777 3788 3832-3833 
+                         3850 3863 3900-3907 3911 3922 3933 3944 
+                         3955 3966 3977 3988 4032-4033 4050 4063 
+                         4100-4116 4121 4130-4131 4140 4600-4608
+-outputpath              C:/CodeInspection/DisplayUnit/qac/out/
+                         STemWin/Target
+-overwrite               - (off)
+-ppfilename              + (on)
+-pplist                  + (on)
+-ppmetrics               - (off)
+-prodoption              qar::report_type=Suppression Report
+-quiet                   C:/PRQA/QAC-8.1.2-R/include/ansi,
+                         C:/CodeInspection/DisplayUnit/Inc,
+                         C:/CodeInspection/DisplayUnit/Drivers/
+                         STM32F4xx_HAL_Driver/Inc,
+                         C:/CodeInspection/DisplayUnit/Drivers/
+                         STM32F4xx_HAL_Driver/Inc/Legacy,
+                         C:/CodeInspection/DisplayUnit/Middlewares/
+                         ST/STM32_USB_Device_Library/Core/Inc,
+                         C:/CodeInspection/DisplayUnit/Middlewares/
+                         ST/STM32_USB_Device_Library/Class/CDC/Inc,
+                         C:/CodeInspection/DisplayUnit/Middlewares/
+                         ST/STM32_USB_Host_Library/Core/Inc,
+                         C:/CodeInspection/DisplayUnit/Middlewares/
+                         ST/STM32_USB_Host_Library/Class/CDC/Inc,
+                         C:/CodeInspection/DisplayUnit/Drivers/
+                         CMSIS/Device/ST/STM32F4xx/Include,
+                         C:/CodeInspection/DisplayUnit/Drivers/
+                         CMSIS/Include,
+                         C:/CodeInspection/DisplayUnit/
+                         embOS_CortexM_IAR_V6_Src_V438/Start/
+                         BoardSupport/ST/STM32F429_Discovery/Setup,
+                         C:/CodeInspection/DisplayUnit/
+                         embOS_CortexM_IAR_V6_Src_V438/Start/Inc,
+                         C:/CodeInspection/DisplayUnit/STemWin/
+                         Board/Inc,
+                         C:/CodeInspection/DisplayUnit/STemWin/
+                         Target,
+                         C:/CodeInspection/DisplayUnit/STemWin/App,
+                         C:/CodeInspection/DisplayUnit/Middlewares/
+                         ST/STemWin/inc,
+                         C:/CodeInspection/DisplayUnit/Drivers/
+                         CMSIS/RTOS/Template,
+                         C:/CodeInspection/DisplayUnit/Middlewares/
+                         ST/STM32_USB_Host_Library/Class/AUDIO/Inc,
+                         C:/CodeInspection/DisplayUnit/Middlewares/
+                         ST/STM32_USB_Host_Library/Class/HID/Inc,
+                         C:/CodeInspection/DisplayUnit/Middlewares/
+                         ST/STM32_USB_Host_Library/Class/MSC/Inc,
+                         C:/CodeInspection/DisplayUnit/Middlewares/
+                         ST/STM32_USB_Host_Library/Class/MTP/Inc,
+                         C:/CodeInspection/DisplayUnit/Middlewares/
+                         ST/STM32_USB_Device_Library/Class/
+                         CustomHID/Inc,
+                         C:/CodeInspection/DisplayUnit/Middlewares/
+                         ST/STM32_USB_Device_Library/Class/HID/Inc,
+                         C:/CodeInspection/DisplayUnit/qac/lib,
+                         C:/CodeInspection/DisplayUnit/STemWin/App/
+                         DEMO,
+                         C:/CodeInspection/DisplayUnit/Middlewares/
+                         Modbus/include,
+                         C:/CodeInspection/DisplayUnit/Middlewares/
+                         MbSlave,
+                         C:/CodeInspection/DisplayUnit/Middlewares/
+                         Modbus/port
+-references              - (off)
+-remark                  
+-settings                - (off)
+-size                    int=16
+-skippragma              asm,
+                        endasm,
+                         ASM,
+                        ENDASM
+-slashwhite              + (on)
+-standard                + (on)
+-strict                  + (on)
+-strictrank              - (off)
+-strictsignedness        + (on)
+-style                   exdented
+-summary                 - (off)
+-suppresslvl             3 5-9
+-tablesummary            - (off)
+-tabstop                 4
+-textonly                - (off)
+-threshold               
+-total                   - (off)
+-unsignedchar            - (off)
+-usrfile                 .LSIS
+-usrpath                 C:/CodeInspection/DisplayUnit/qac/per/
+-version                 - (off)
+-via                     
+-warncall                
+-xcase                   - (off)
+-xnamelength             31
+</prdf:verbatim>
+<prdf:h3>Report Settings</prdf:h3>
+<prdf:verbatim>
+top_ten: No
+Suppression details section: Suppressions by group
+</prdf:verbatim>
+</prdf:section>
+<prdf:section xmlns:v="urn:schemas-microsoft-com:vml" created_by="standard.prdf.generator" created_by_version="1.3">
+<prdf:h3>Program Details</prdf:h3>
+<prdf:text>Created by Programming Research standard.prdf.generator version 1.3</prdf:text>
+</prdf:section>
+</prdf:appendices>
+</prdf:report>

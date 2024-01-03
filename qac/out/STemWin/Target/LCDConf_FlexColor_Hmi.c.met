@@ -1,0 +1,478 @@
+<RDEF> I Includes
+<R>I C:/CodeInspection/DisplayUnit/STemWin/Target/LCDConf_FlexColor_Hmi.c C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUIDRV_FlexColor.h 53
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUIDRV_FlexColor.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_ConfDefaults.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_ConfDefaults.h C:/CodeInspection/DisplayUnit/STemWin/Target/GUIConf.h 60
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_Type.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_Type.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/LCD.h 60
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/LCD.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_ConfDefaults.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/LCD.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/Global.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_Type.h C:/CodeInspection/DisplayUnit/STemWin/Target/GUIConf.h 61
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_Version.h 58
+<R>I C:/CodeInspection/DisplayUnit/STemWin/Target/LCDConf_FlexColor_Hmi.c C:/CodeInspection/DisplayUnit/STemWin/Board/Inc/lcd.h 54
+<R>I C:/CodeInspection/DisplayUnit/STemWin/Board/Inc/lcd.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h 4
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h 46
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Inc/main.h 43
+<R>I C:/CodeInspection/DisplayUnit/Inc/main.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI.h 58
+<R>I C:/CodeInspection/DisplayUnit/Inc/main.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h 59
+<R>I C:/CodeInspection/DisplayUnit/Inc/main.h C:/PRQA/QAC-8.1.2-R/include/ansi/time.h 60
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h 244
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h 46
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h 149
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cm4.h 183
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cm4.h C:/CodeInspection/DisplayUnit/qac/lib/stdint.h 44
+<R>I C:/CodeInspection/DisplayUnit/qac/lib/stdint.h C:/CodeInspection/DisplayUnit/qac/lib/ycheck.h 10
+<R>I C:/CodeInspection/DisplayUnit/qac/lib/stdint.h C:/CodeInspection/DisplayUnit/qac/lib/yvals.h 11
+<R>I C:/CodeInspection/DisplayUnit/qac/lib/yvals.h C:/CodeInspection/DisplayUnit/qac/lib/DLib_Defaults.h 42
+<R>I C:/CodeInspection/DisplayUnit/qac/lib/DLib_Defaults.h C:/CodeInspection/DisplayUnit/qac/lib/DLib_Product.h 50
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cm4.h C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cmInstr.h 210
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cmInstr.h C:/CodeInspection/DisplayUnit/qac/lib/cmsis_iar.h 65
+<R>I C:/CodeInspection/DisplayUnit/qac/lib/cmsis_iar.h C:/CodeInspection/DisplayUnit/qac/lib/intrinsics.h 22
+<R>I C:/CodeInspection/DisplayUnit/qac/lib/intrinsics.h C:/CodeInspection/DisplayUnit/qac/lib/yvals.h 14
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cm4.h C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cmFunc.h 211
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cmFunc.h C:/CodeInspection/DisplayUnit/qac/lib/cmsis_iar.h 65
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cm4.h C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cmSimd.h 212
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cmSimd.h C:/CodeInspection/DisplayUnit/qac/lib/cmsis_iar.h 69
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h 184
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h C:/CodeInspection/DisplayUnit/qac/lib/stdint.h 185
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h 250
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h 47
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h C:/PRQA/QAC-8.1.2-R/include/ansi/stdio.h 48
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h 49
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h 248
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h 230
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h 252
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h 656
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h 256
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_crc.h 268
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_crc.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h 292
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h 313
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h 314
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_sram.h 296
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_sram.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_fsmc.h 47
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_fsmc.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h 320
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c_ex.h 473
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_iwdg.h 328
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_iwdg.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h 336
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h 290
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc.h 344
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc_ex.h 634
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc_ex.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h 360
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h 364
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h 1289
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h 368
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h 388
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h 49
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 49
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h 121
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 49
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_hcd.h 392
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_hcd.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h 49
+<R>I C:/CodeInspection/DisplayUnit/STemWin/Target/LCDConf_FlexColor_Hmi.c C:/CodeInspection/DisplayUnit/Inc/main.h 56
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Target/LCDConf_FlexColor_Hmi.c 57 5 N ON - F P
+<R>I C:/CodeInspection/DisplayUnit/STemWin/Target/LCDConf_FlexColor_Hmi.c C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h 63
+<DEFINE> Data C:/CodeInspection/DisplayUnit/STemWin/Target/LCDConf_FlexColor_Hmi.c 73 N DC OV P N us R
+<DEFINE> LcdWriteReg C:/CodeInspection/DisplayUnit/STemWin/Target/LCDConf_FlexColor_Hmi.c 73 N DC OF F I (.,us) -
+<DEFINE> Data C:/CodeInspection/DisplayUnit/STemWin/Target/LCDConf_FlexColor_Hmi.c 74 N DC OV P N us R
+<DEFINE> LcdWriteData C:/CodeInspection/DisplayUnit/STemWin/Target/LCDConf_FlexColor_Hmi.c 74 N DC OF F I (.,us) -
+<DEFINE> pData C:/CodeInspection/DisplayUnit/STemWin/Target/LCDConf_FlexColor_Hmi.c 75 N DC OV P N p=us R
+<DEFINE> NumItems C:/CodeInspection/DisplayUnit/STemWin/Target/LCDConf_FlexColor_Hmi.c 75 N DC OV P N ni R
+<DEFINE> LcdWriteDataMultiple C:/CodeInspection/DisplayUnit/STemWin/Target/LCDConf_FlexColor_Hmi.c 75 N DC OF F I (.,p=us,ni) -
+<DEFINE> pData C:/CodeInspection/DisplayUnit/STemWin/Target/LCDConf_FlexColor_Hmi.c 76 N DC OV P N pus R
+<DEFINE> NumItems C:/CodeInspection/DisplayUnit/STemWin/Target/LCDConf_FlexColor_Hmi.c 76 N DC OV P N ni R
+<DEFINE> LcdReadDataMultiple C:/CodeInspection/DisplayUnit/STemWin/Target/LCDConf_FlexColor_Hmi.c 76 N DC OF F I (.,pus,ni) -
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/Target/LCDConf_FlexColor_Hmi.c 78 5 N DN - F P
+<DEFINE> LCD_SWAP_XY C:/CodeInspection/DisplayUnit/STemWin/Target/LCDConf_FlexColor_Hmi.c 82 N DF OM - - - O
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Target/LCDConf_FlexColor_Hmi.c 82 22 N ON - F M
+<DEFINE> LCD_MIRROR_Y C:/CodeInspection/DisplayUnit/STemWin/Target/LCDConf_FlexColor_Hmi.c 83 N DF OM - - - O
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Target/LCDConf_FlexColor_Hmi.c 83 22 N ON - F M
+<DEFINE> LCD_MIRROR_X C:/CodeInspection/DisplayUnit/STemWin/Target/LCDConf_FlexColor_Hmi.c 84 N DF OM - - - O
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/Target/LCDConf_FlexColor_Hmi.c 84 22 N DN - F M
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/Target/LCDConf_FlexColor_Hmi.c 90 5 N DN - F P
+<DEFINE> XSIZE_PHYS C:/CodeInspection/DisplayUnit/STemWin/Target/LCDConf_FlexColor_Hmi.c 91 N DF OM - - - O
+<LIT> 320 - P C:/CodeInspection/DisplayUnit/STemWin/Target/LCDConf_FlexColor_Hmi.c 91 21 N DN - F M
+<DEFINE> YSIZE_PHYS C:/CodeInspection/DisplayUnit/STemWin/Target/LCDConf_FlexColor_Hmi.c 92 N DF OM - - - O
+<LIT> 480 - P C:/CodeInspection/DisplayUnit/STemWin/Target/LCDConf_FlexColor_Hmi.c 92 21 N DN - F M
+<DEFINE> NUM_BUFFERS C:/CodeInspection/DisplayUnit/STemWin/Target/LCDConf_FlexColor_Hmi.c 98 N DF OM - - - O
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/Target/LCDConf_FlexColor_Hmi.c 98 22 N DN - F M
+<DEFINE> NUM_VSCREENS C:/CodeInspection/DisplayUnit/STemWin/Target/LCDConf_FlexColor_Hmi.c 99 N DF OM - - - O
+<LIT> 2 - P C:/CodeInspection/DisplayUnit/STemWin/Target/LCDConf_FlexColor_Hmi.c 99 22 N DN - F M
+<DEFINE> BK_COLOR C:/CodeInspection/DisplayUnit/STemWin/Target/LCDConf_FlexColor_Hmi.c 101 N DF OM - - - O
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Target/LCDConf_FlexColor_Hmi.c 110 5 N ON - F P
+<DEFINE> COLOR_CONVERSION_0 C:/CodeInspection/DisplayUnit/STemWin/Target/LCDConf_FlexColor_Hmi.c 114 N DF OM - - - O
+<DEFINE> DISPLAY_DRIVER_0 C:/CodeInspection/DisplayUnit/STemWin/Target/LCDConf_FlexColor_Hmi.c 115 N DF OM - - - O
+<DEFINE> VXSIZE_PHYS C:/CodeInspection/DisplayUnit/STemWin/Target/LCDConf_FlexColor_Hmi.c 126 N DF OM - - - O
+<DEFINE> VYSIZE_PHYS C:/CodeInspection/DisplayUnit/STemWin/Target/LCDConf_FlexColor_Hmi.c 129 N DF OM - - - O
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Target/LCDConf_FlexColor_Hmi.c 150 5 N ON - F P
+<DEFINE> Data C:/CodeInspection/DisplayUnit/STemWin/Target/LCDConf_FlexColor_Hmi.c 179 N DC OV B N us R
+<DEFINE> LcdWriteReg C:/CodeInspection/DisplayUnit/STemWin/Target/LCDConf_FlexColor_Hmi.c 179 N DR OF F I (.,us) -
+<DEFINE> LcdWriteReg C:/CodeInspection/DisplayUnit/STemWin/Target/LCDConf_FlexColor_Hmi.c 179 N DF OF F I (.,us) -
+<RDEF> C Calls
+<R>C LcdWriteReg CPU_Command_Write 182
+<RDEF> X Refers-to
+<R>X LcdWriteReg CPU_Command_Write 182 R
+<CTLG> LcdWriteReg 1
+<CTLG> 1 2
+<CTLG> 2 4
+<CTLGN> 180 183 183 183 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/STemWin/Target/LCDConf_FlexColor_Hmi.c
+<S>STNAM  LcdWriteReg
+<S>STCYC  1
+<S>STMCC  0 (1:1)
+<S>STMIF  0
+<S>STSUB  1
+<S>STAKI  2
+<S>STLIN  2
+<S>STXLN  1
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  0
+<S>STPTH  1
+<S>STPDN  1.00   
+<S>STPBG  0
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  0
+<S>STAV1  7
+<S>STAV2  7
+<S>STAV3  7
+<S>STST1  1
+<S>STST2  1
+<S>STST3  1
+<S>STPAR  1
+<S>STCAL  1
+<S>STFN1  5
+<S>STFN2  2
+
+<DEFINE> Data C:/CodeInspection/DisplayUnit/STemWin/Target/LCDConf_FlexColor_Hmi.c 192 N DC OV B N us R
+<DEFINE> LcdWriteData C:/CodeInspection/DisplayUnit/STemWin/Target/LCDConf_FlexColor_Hmi.c 192 N DR OF F I (.,us) -
+<DEFINE> LcdWriteData C:/CodeInspection/DisplayUnit/STemWin/Target/LCDConf_FlexColor_Hmi.c 192 N DF OF F I (.,us) -
+<R>C LcdWriteData CPU_Data_Write 195
+<R>X LcdWriteData CPU_Data_Write 195 R
+<CTLG> LcdWriteData 1
+<CTLG> 1 2
+<CTLG> 2 4
+<CTLGN> 193 196 196 196 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/STemWin/Target/LCDConf_FlexColor_Hmi.c
+<S>STNAM  LcdWriteData
+<S>STCYC  1
+<S>STMCC  0 (1:1)
+<S>STMIF  0
+<S>STSUB  1
+<S>STAKI  2
+<S>STLIN  2
+<S>STXLN  1
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  0
+<S>STPTH  1
+<S>STPDN  1.00   
+<S>STPBG  0
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  0
+<S>STAV1  7
+<S>STAV2  7
+<S>STAV3  7
+<S>STST1  1
+<S>STST2  1
+<S>STST3  1
+<S>STPAR  1
+<S>STCAL  1
+<S>STFN1  5
+<S>STFN2  2
+
+<DEFINE> pData C:/CodeInspection/DisplayUnit/STemWin/Target/LCDConf_FlexColor_Hmi.c 205 N DC OV B N p=us R
+<DEFINE> NumItems C:/CodeInspection/DisplayUnit/STemWin/Target/LCDConf_FlexColor_Hmi.c 205 N DC OV B N ni R
+<DEFINE> LcdWriteDataMultiple C:/CodeInspection/DisplayUnit/STemWin/Target/LCDConf_FlexColor_Hmi.c 205 N DR OF F I (.,p=us,ni) -
+<DEFINE> LcdWriteDataMultiple C:/CodeInspection/DisplayUnit/STemWin/Target/LCDConf_FlexColor_Hmi.c 205 N DF OF F I (.,p=us,ni) -
+<DEFINE> i C:/CodeInspection/DisplayUnit/STemWin/Target/LCDConf_FlexColor_Hmi.c 212 N DC OV B N ni -
+<DEFINE> i C:/CodeInspection/DisplayUnit/STemWin/Target/LCDConf_FlexColor_Hmi.c 212 N DF OV B N ni -
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Target/LCDConf_FlexColor_Hmi.c 212 11 N ON ni B O
+<DEFINE> pD C:/CodeInspection/DisplayUnit/STemWin/Target/LCDConf_FlexColor_Hmi.c 213 N DC OV B N us -
+<DEFINE> pD C:/CodeInspection/DisplayUnit/STemWin/Target/LCDConf_FlexColor_Hmi.c 213 N DF OV B N us -
+<R>C LcdWriteDataMultiple CPU_Data_Write 219
+<R>X LcdWriteDataMultiple CPU_Data_Write 219 R
+<CTLG> LcdWriteDataMultiple 1
+<CTLG> 1 2
+<CTLG> 1 3
+<CTLG> 2 1
+<CTLG> 3 5
+<CTLGN> 206 215 215 222 222 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/STemWin/Target/LCDConf_FlexColor_Hmi.c
+<S>STNAM  LcdWriteDataMultiple
+<S>STCYC  2
+<S>STMCC  0 (2:2)
+<S>STMIF  1
+<S>STSUB  1
+<S>STAKI  3
+<S>STLIN  15
+<S>STXLN  5
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  2
+<S>STPTH  2
+<S>STPDN  0.40   
+<S>STPBG  0
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  0
+<S>STAV1  4
+<S>STAV2  5
+<S>STAV3  8
+<S>STST1  7
+<S>STST2  6
+<S>STST3  4
+<S>STPAR  2
+<S>STCAL  1
+<S>STFN1  21
+<S>STFN2  11
+
+<DEFINE> pData C:/CodeInspection/DisplayUnit/STemWin/Target/LCDConf_FlexColor_Hmi.c 231 N DC OV B N pus R
+<DEFINE> NumItems C:/CodeInspection/DisplayUnit/STemWin/Target/LCDConf_FlexColor_Hmi.c 231 N DC OV B N ni R
+<DEFINE> LcdReadDataMultiple C:/CodeInspection/DisplayUnit/STemWin/Target/LCDConf_FlexColor_Hmi.c 231 N DR OF F I (.,pus,ni) -
+<DEFINE> LcdReadDataMultiple C:/CodeInspection/DisplayUnit/STemWin/Target/LCDConf_FlexColor_Hmi.c 231 N DF OF F I (.,pus,ni) -
+<DEFINE> i C:/CodeInspection/DisplayUnit/STemWin/Target/LCDConf_FlexColor_Hmi.c 238 N DC OV B N ni -
+<DEFINE> i C:/CodeInspection/DisplayUnit/STemWin/Target/LCDConf_FlexColor_Hmi.c 238 N DF OV B N ni -
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Target/LCDConf_FlexColor_Hmi.c 238 11 N ON ni B O
+<R>C LcdReadDataMultiple CPU_Data_Read 243
+<R>X LcdReadDataMultiple CPU_Data_Read 243 R
+<CTLG> LcdReadDataMultiple 1
+<CTLG> 1 2
+<CTLG> 1 3
+<CTLG> 2 1
+<CTLG> 3 5
+<CTLGN> 232 240 240 245 245 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/STemWin/Target/LCDConf_FlexColor_Hmi.c
+<S>STNAM  LcdReadDataMultiple
+<S>STCYC  2
+<S>STMCC  0 (2:2)
+<S>STMIF  1
+<S>STSUB  1
+<S>STAKI  3
+<S>STLIN  12
+<S>STXLN  3
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  1
+<S>STPTH  2
+<S>STPDN  0.67   
+<S>STPBG  0
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  0
+<S>STAV1  6
+<S>STAV2  8
+<S>STAV3  12
+<S>STST1  4
+<S>STST2  3
+<S>STST3  2
+<S>STPAR  2
+<S>STCAL  1
+<S>STFN1  18
+<S>STFN2  6
+
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Target/LCDConf_FlexColor_Hmi.c 253 5 N ON - F P
+<EXTD> LCD_X_Config C:/CodeInspection/DisplayUnit/STemWin/Target/LCDConf_FlexColor_Hmi.c 374
+<DEFINE> LCD_X_Config C:/CodeInspection/DisplayUnit/STemWin/Target/LCDConf_FlexColor_Hmi.c 374 N DR OF F X (.,.) -
+<DEFINE> LCD_X_Config C:/CodeInspection/DisplayUnit/STemWin/Target/LCDConf_FlexColor_Hmi.c 374 N DF OF F X (.,.) -
+<DEFINE> pDevice C:/CodeInspection/DisplayUnit/STemWin/Target/LCDConf_FlexColor_Hmi.c 375 N DC OV B N p{sGUI_DEVICE} -
+<DEFINE> pDevice C:/CodeInspection/DisplayUnit/STemWin/Target/LCDConf_FlexColor_Hmi.c 375 N DF OV B N p{sGUI_DEVICE} -
+<DEFINE> Config C:/CodeInspection/DisplayUnit/STemWin/Target/LCDConf_FlexColor_Hmi.c 376 N DC OV B N {sCONFIG_FLEXCOLOR} -
+<DEFINE> Config C:/CodeInspection/DisplayUnit/STemWin/Target/LCDConf_FlexColor_Hmi.c 376 N DF OV B N {sCONFIG_FLEXCOLOR} -
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Target/LCDConf_FlexColor_Hmi.c 376 32 N ON ni B S
+<DEFINE> PortAPI C:/CodeInspection/DisplayUnit/STemWin/Target/LCDConf_FlexColor_Hmi.c 377 N DC OV B N {sGUI_PORT_API} -
+<DEFINE> PortAPI C:/CodeInspection/DisplayUnit/STemWin/Target/LCDConf_FlexColor_Hmi.c 377 N DF OV B N {sGUI_PORT_API} -
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Target/LCDConf_FlexColor_Hmi.c 377 29 N ON ni B S
+<R>C LCD_X_Config GUI_DEVICE_CreateAndLink 382
+<R>X LCD_X_Config GUI_DEVICE_CreateAndLink 382 R
+<R>X LCD_X_Config GUIDRV_FlexColor_API 382 R
+<R>X LCD_X_Config LCD_API_ColorConv_565 382 R
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Target/LCDConf_FlexColor_Hmi.c 382 69 N ON ni B X
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Target/LCDConf_FlexColor_Hmi.c 382 72 N ON ni B X
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/Target/LCDConf_FlexColor_Hmi.c 388 5 N DN - B P
+<R>C LCD_X_Config LCD_SetSizeEx 389
+<R>X LCD_X_Config LCD_SetSizeEx 389 R
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Target/LCDConf_FlexColor_Hmi.c 389 26 N ON ni B X
+<R>C LCD_X_Config LCD_SetVSizeEx 390
+<R>X LCD_X_Config LCD_SetVSizeEx 390 R
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Target/LCDConf_FlexColor_Hmi.c 390 26 N ON ni B X
+<R>C LCD_X_Config GUIDRV_FlexColor_Config 408
+<R>X LCD_X_Config GUIDRV_FlexColor_Config 408 R
+<R>C LCD_X_Config GUIDRV_FlexColor_SetFunc 418
+<R>X LCD_X_Config GUIDRV_FlexColor_SetFunc 418 R
+<R>X LCD_X_Config GUIDRV_FlexColor_SetFunc66709 418 R
+<R>X LCD_X_Config GUIDRV_FlexColor_SetMode16bppC0B16 418 R
+<CTLG> LCD_X_Config 1
+<CTLG> 1 2
+<CTLG> 2 4
+<CTLGN> 374 421 421 421 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/STemWin/Target/LCDConf_FlexColor_Hmi.c
+<S>STNAM  LCD_X_Config
+<S>STCYC  1
+<S>STMCC  0 (1:1)
+<S>STMIF  0
+<S>STSUB  5
+<S>STAKI  6
+<S>STLIN  46
+<S>STXLN  12
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  3
+<S>STPTH  1
+<S>STPDN  0.08   
+<S>STPBG  0
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  0
+<S>STAV1  9
+<S>STAV2  9
+<S>STAV3  12
+<S>STST1  13
+<S>STST2  13
+<S>STST3  10
+<S>STPAR  0
+<S>STCAL  5
+<S>STFN1  76
+<S>STFN2  48
+
+<EXTD> LCD_X_DisplayDriver C:/CodeInspection/DisplayUnit/STemWin/Target/LCDConf_FlexColor_Hmi.c 445
+<DEFINE> LayerIndex C:/CodeInspection/DisplayUnit/STemWin/Target/LCDConf_FlexColor_Hmi.c 445 N DC OV B N ui R
+<DEFINE> Cmd C:/CodeInspection/DisplayUnit/STemWin/Target/LCDConf_FlexColor_Hmi.c 445 N DC OV B N ui R
+<DEFINE> pData C:/CodeInspection/DisplayUnit/STemWin/Target/LCDConf_FlexColor_Hmi.c 445 N DC OV B N p. R
+<DEFINE> LCD_X_DisplayDriver C:/CodeInspection/DisplayUnit/STemWin/Target/LCDConf_FlexColor_Hmi.c 445 N DR OF F X (ni,ui,ui,p.) -
+<DEFINE> LCD_X_DisplayDriver C:/CodeInspection/DisplayUnit/STemWin/Target/LCDConf_FlexColor_Hmi.c 445 N DF OF F X (ni,ui,ui,p.) -
+<DEFINE> r C:/CodeInspection/DisplayUnit/STemWin/Target/LCDConf_FlexColor_Hmi.c 447 N DC OV B N ni -
+<DEFINE> r C:/CodeInspection/DisplayUnit/STemWin/Target/LCDConf_FlexColor_Hmi.c 447 N DF OV B N ni -
+<DEFINE> LCD_init C:/CodeInspection/DisplayUnit/STemWin/Target/LCDConf_FlexColor_Hmi.c 461 N DC OF F X (.,.) -
+<R>C LCD_X_DisplayDriver LCD_init 461
+<R>X LCD_X_DisplayDriver LCD_init 461 R
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Target/LCDConf_FlexColor_Hmi.c 463 20 N ON ni B X
+<LIT> 1 - N C:/CodeInspection/DisplayUnit/STemWin/Target/LCDConf_FlexColor_Hmi.c 467 18 N DN ni B X
+<CTLG> LCD_X_DisplayDriver 1
+<CTLG> 1 2
+<CTLG> 1 5
+<CTLG> 2 3
+<CTLG> 3 10
+<CTLG> 5 6
+<CTLG> 6 8
+<CTLG> 8 10
+<CTLGN> 446 451 463 463 464 468 468 451 470 463 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/STemWin/Target/LCDConf_FlexColor_Hmi.c
+<S>STNAM  LCD_X_DisplayDriver
+<S>STCYC  2
+<S>STMCC  0 (2:2)
+<S>STMIF  1
+<S>STSUB  1
+<S>STAKI  3
+<S>STLIN  24
+<S>STXLN  9
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  1
+<S>STKDN  0.11   
+<S>STUNV  2
+<S>STLCT  1
+<S>STPTH  2
+<S>STPDN  0.22   
+<S>STPBG  0
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  2
+<S>STAV1  3
+<S>STAV2  4
+<S>STAV3  5
+<S>STST1  12
+<S>STST2  8
+<S>STST3  7
+<S>STPAR  3
+<S>STCAL  1
+<S>STFN1  29
+<S>STFN2  8
+
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/STemWin/Target/LCDConf_FlexColor_Hmi.c
+<S>STNAM  C:/CodeInspection/DisplayUnit/STemWin/Target/LCDConf_FlexColor_Hmi.c
+<S>STNTB  NON-TOKEN BASED STATISTICS...
+<S>STSCT  4
+<S>STECT  2
+<S>STFNC  6
+<S>STFCO  11
+<S>STTKB  TOKEN BASED STATISTICS...
+<S>STVAR  57
+<S>STOPT  35
+<S>STOPN  80
+<S>STTOT  841
+<S>STZIP  612
+<S>STHAL  685
+<S>STSHN  2418
+<S>STDIF  16.59  
+<S>STEFF  95494
+<S>STVOL  5757
+<S>STDEV  15.92  
+<S>STBUG  2
+<S>STTPP  474
+<S>STTLN  62
+<S>STM20  145
+<S>STM21  693
+<S>STM22  33
+<S>STM28  96
+<S>STM33  57
+<S>STBCS  BASIC COCOMO STATISTICS...
+<S>STBMO  1.096  
+<S>STBMS  1.300  
+<S>STBME  1.470  
+<S>STTDO  2.589  
+<S>STTDS  2.741  
+<S>STTDE  2.828  
+<S>STCOM  COMMENT BASED STATISTICS...
+<S>STCDN  1.031  
+

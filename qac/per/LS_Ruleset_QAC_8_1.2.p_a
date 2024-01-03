@@ -1,0 +1,15 @@
+-il 4
+-sty exdented
+-tab 4
+-en ASC
+-maxerr 0
+-ppl+
+-ppf+
+-spragma "asm","endasm"
+-spragma "ASM","ENDASM"
+-met+
+-ppm-
+-co a
+-ss+
+-sr-
+-mll 0

@@ -1,0 +1,223 @@
+*******************************************************************************
+***************************  LSIS Naming Sytle Rule  **************************
+*******************************************************************************
+* 1: 2011.06.01: 이대규K - 최초 사용자 정의 메세지 추가
+* 2: 2013.02.24: 남미현C - replace entire messages for namging rules which were changed on Feb./19, 2013
+* 3: 2013.12.04: 안수근C - Naming 스타일 변경 외
+*******************************************************************************
+rule={'pattern':'^.{1,31}$', 'message':7001}
+*-------------------------------------------------------
+* Basic 
+*-------------------------------------------------------
+* Basic: scope
+rule={'space':'OV','scope':'F', 'linkage':'X','def':'DF','pattern':'^g_.*','message':6003}
+rule={'space':'OV','scope':'F', 'linkage':'I','def':'DF','pattern':'^t_.*','message':6004}
+
+* Basic: pointer and array
+rule={'space':'OV','type':'].*$','def':'DF', 'pattern':'^a.*$|^g_a.*$|^t_a.*$', 'message':6010}
+rule={'space':'OV','type':'^p.*$','def':'DF', 'pattern':'^p.*$|^g_p.*$|^t_p.*$|^t_g_p.*$', 'message':6011}
+rule={'space':'OV','scope':'F','type':'^p\\(','flag':'S','def':'DC','pattern':'^p[A-Z]|^g_p[A-Z]*|^t_p[A-Z]','message':6012}
+
+* Basic: function name
+rule={'space':'OM', 'flag':'F', 'def':'DF', 'pattern':'^[A-Z_].[A-Z_0-9]{1,31}$', 'message':6020}
+rule={'space':'OF', 'scope':'F', 'linkage':'X', 'def':'DC', 'pattern':'^[A-Z].*', 'message':6023}
+
+* Basic: macro constant
+rule={'space':'OM', 'flag':'O', 'def':'DF', 'pattern':'^.[A-Z_0-9]*$', 'message':6030}
+
+* Basic: user-defined type
+rule={'space':'OT', 'linkage':'N', 'type':'^{e.*}]$', 'def':'DC', 'pattern':'^E_[A-Z][A-Z_0-9]{1,31}$', 'message':6040}
+rule={'space':'OT', 'linkage':'N', 'type':'^{s.*}]$', 'def':'DC', 'pattern':'^S_[A-Z][A-Z_0-9]{1,31}$', 'message':6041}
+rule={'space':'OT', 'linkage':'N', 'type':'^{u.*}]$', 'def':'DC', 'pattern':'^U_[A-Z][A-Z_0-9]{1,31}$', 'message':6042}
+
+*-------------------------------------------------------
+* Block Scope + Auto Storage 
+*-------------------------------------------------------
+
+* Block Scope + Auto Storage: 일반 변수
+rule={'space':'OV', 'scope':'B', 'linkage':'N', 'type':'^nc$', 'flag':'-', 'def':'DF', 'pattern':'^c[A-Z].*', 'message':6051}
+rule={'space':'OV', 'scope':'B', 'linkage':'N', 'type':'^_c$', 'flag':'-', 'def':'DF', 'pattern':'^c[A-Z].*', 'message':6052}
+rule={'space':'OV', 'scope':'B', 'linkage':'N', 'type':'^uc$', 'flag':'-', 'def':'DF', 'pattern':'^uc[A-Z].*$|^b[A-Z].*$|^bl[A-Z].*$', 'message':6053}
+rule={'space':'OV', 'scope':'B', 'linkage':'N', 'type':'^_s$', 'flag':'-', 'def':'DF', 'pattern':'^s[A-Z].*', 'message':6055}
+rule={'space':'OV', 'scope':'B', 'linkage':'N', 'type':'^us$', 'flag':'-', 'def':'DF', 'pattern':'^us[A-Z].*$|^w[A-Z].*$', 'message':6056}
+*rule={'space':'OV', 'scope':'B', 'linkage':'N', 'type':'^ni$', 'flag':'-', 'def':'DF', 'pattern':'^i[A-Z].*', 'message':6057}
+*rule={'space':'OV', 'scope':'B', 'linkage':'N', 'type':'^ui$', 'flag':'-', 'def':'DF', 'pattern':'^ui[A-Z].*', 'message':6058}
+rule={'space':'OV', 'scope':'B', 'linkage':'N', 'type':'^ni$', 'flag':'-', 'def':'DF', 'message':7000}
+rule={'space':'OV', 'scope':'B', 'linkage':'N', 'type':'^ui$', 'flag':'-', 'def':'DF', 'message':7000}
+rule={'space':'OV', 'scope':'B', 'linkage':'N', 'type':'^_l$', 'flag':'-', 'def':'DF', 'pattern':'^l[A-Z].*', 'message':6061}
+rule={'space':'OV', 'scope':'B', 'linkage':'N', 'type':'^ul$', 'flag':'-', 'def':'DF', 'pattern':'^ul[A-Z].*$|^dw[A-Z].*$', 'message':6062}
+rule={'space':'OV', 'scope':'B', 'linkage':'N', 'type':'^nll$', 'flag':'-', 'def':'DF', 'pattern':'^ll[A-Z].*', 'message':6063}
+rule={'space':'OV', 'scope':'B', 'linkage':'N', 'type':'^ull$', 'flag':'-', 'def':'DF', 'pattern':'^ull[A-Z].*', 'message':6064}
+rule={'space':'OV', 'scope':'B', 'linkage':'N', 'type':'^fs$', 'flag':'-', 'def':'DF', 'pattern':'^f[A-Z].*', 'message':6065}
+rule={'space':'OV', 'scope':'B', 'linkage':'N', 'type':'^ff$', 'flag':'-', 'def':'DF', 'pattern':'^d[A-Z].*', 'message':6066}
+rule={'space':'OV', 'scope':'B', 'linkage':'N', 'type':'^{e.*}]$', 'flag':'-', 'def':'DF', 'pattern':'^e[A-Z].*', 'message':6067}
+rule={'space':'OV', 'scope':'B', 'linkage':'N', 'type':'^{s.*}]$', 'flag':'-', 'def':'DF', 'pattern':'^st[A-Z].*', 'message':6068}
+rule={'space':'OV', 'scope':'B', 'linkage':'N', 'type':'^{u.*}]$', 'flag':'-', 'def':'DF', 'pattern':'^u[A-Z].*', 'message':6069}
+
+* Block Scope + Auto Storage: 포인터 변수
+rule={'space':'OV', 'scope':'B', 'linkage':'N', 'type':'^pnc$', 'flag':'-', 'def':'DF', 'pattern':'^pc[A-Z].*$', 'message':6151}
+rule={'space':'OV', 'scope':'B', 'linkage':'N', 'type':'^p_c$', 'flag':'-', 'def':'DF', 'pattern':'^pc[A-Z].*$', 'message':6152}
+rule={'space':'OV', 'scope':'B', 'linkage':'N', 'type':'^puc$', 'flag':'-', 'def':'DF', 'pattern':'^puc[A-Z].*$|^pb[A-Z].*$|^pbl[A-Z].*$', 'message':6153}
+rule={'space':'OV', 'scope':'B', 'linkage':'N', 'type':'^pns$', 'flag':'-', 'def':'DF', 'pattern':'^ps[A-Z].*', 'message':6155}
+rule={'space':'OV', 'scope':'B', 'linkage':'N', 'type':'^pus$', 'flag':'-', 'def':'DF', 'pattern':'^pus[A-Z].*$|^pw[A-Z].*$', 'message':6156}
+*rule={'space':'OV', 'scope':'B', 'linkage':'N', 'type':'^pni$', 'flag':'-', 'def':'DF', 'pattern':'^pi[A-Z].*', 'message':6157}
+*rule={'space':'OV', 'scope':'B', 'linkage':'N', 'type':'^pui$', 'flag':'-', 'def':'DF', 'pattern':'^pui[A-Z].*', 'message':6158}
+rule={'space':'OV', 'scope':'B', 'linkage':'N', 'type':'^pni$', 'flag':'-', 'def':'DF', 'message':7000}
+rule={'space':'OV', 'scope':'B', 'linkage':'N', 'type':'^pui$', 'flag':'-', 'def':'DF', 'message':7000}
+rule={'space':'OV', 'scope':'B', 'linkage':'N', 'type':'^p_l$', 'flag':'-', 'def':'DF', 'pattern':'^pl[A-Z].*', 'message':6161}
+rule={'space':'OV', 'scope':'B', 'linkage':'N', 'type':'^pul$', 'flag':'-', 'def':'DF', 'pattern':'^pul[A-Z].*$|^pdw[A-Z].*$', 'message':6162}
+rule={'space':'OV', 'scope':'B', 'linkage':'N', 'type':'^pnll$', 'flag':'-', 'def':'DF', 'pattern':'^pll[A-Z].*', 'message':6163}
+rule={'space':'OV', 'scope':'B', 'linkage':'N', 'type':'^pull$', 'flag':'-', 'def':'DF', 'pattern':'^pull[A-Z].*', 'message':6164}
+rule={'space':'OV', 'scope':'B', 'linkage':'N', 'type':'^pfs$', 'flag':'-', 'def':'DF', 'pattern':'^pf[A-Z].*', 'message':6165}
+rule={'space':'OV', 'scope':'B', 'linkage':'N', 'type':'^pff$', 'flag':'-', 'def':'DF', 'pattern':'^pd[A-Z].*', 'message':6166}
+rule={'space':'OV', 'scope':'B', 'linkage':'N', 'type':'^p{e.*}]$', 'flag':'-', 'def':'DF', 'pattern':'^pe[A-Z].*', 'message':6167}
+rule={'space':'OV', 'scope':'B', 'linkage':'N', 'type':'^p{s.*}]$', 'flag':'-', 'def':'DF', 'pattern':'^pst[A-Z].*', 'message':6168}
+rule={'space':'OV', 'scope':'B', 'linkage':'N', 'type':'^p{u.*}]$', 'flag':'-', 'def':'DF', 'pattern':'^pu[A-Z].*', 'message':6169}
+
+* Block Scope + Auto Storage: 배열 변수
+rule={'space':'OV', 'scope':'B', 'linkage':'N', 'type':'nc]$', 'flag':'-', 'def':'DF', 'pattern':'^ac[A-Z].*', 'message':6201}
+rule={'space':'OV', 'scope':'B', 'linkage':'N', 'type':'_c]$', 'flag':'-', 'def':'DF', 'pattern':'^ac[A-Z].*', 'message':6202}
+rule={'space':'OV', 'scope':'B', 'linkage':'N', 'type':'uc]$', 'flag':'-', 'def':'DF', 'pattern':'^auc[A-Z].*$|^ab[A-Z].*$|^abl[A-Z].*$', 'message':6203}
+rule={'space':'OV', 'scope':'B', 'linkage':'N', 'type':'ns]$', 'flag':'-', 'def':'DF', 'pattern':'^as[A-Z].*', 'message':6205}
+rule={'space':'OV', 'scope':'B', 'linkage':'N', 'type':'us]$', 'flag':'-', 'def':'DF', 'pattern':'^aus[A-Z].*$|^aw[A-Z].*$', 'message':6206}
+*rule={'space':'OV', 'scope':'B', 'linkage':'N', 'type':'ni]$', 'flag':'-', 'def':'DF', 'pattern':'^ai[A-Z].*', 'message':6207}
+*rule={'space':'OV', 'scope':'B', 'linkage':'N', 'type':'ui]$', 'flag':'-', 'def':'DF', 'pattern':'^aui[A-Z].*', 'message':6208}
+rule={'space':'OV', 'scope':'B', 'linkage':'N', 'type':'ni]$', 'flag':'-', 'def':'DF', 'message':7000}
+rule={'space':'OV', 'scope':'B', 'linkage':'N', 'type':'ui]$', 'flag':'-', 'def':'DF', 'message':7000}
+rule={'space':'OV', 'scope':'B', 'linkage':'N', 'type':'_l]$', 'flag':'-', 'def':'DF', 'pattern':'^al[A-Z].*', 'message':6211}
+rule={'space':'OV', 'scope':'B', 'linkage':'N', 'type':'ul]$', 'flag':'-', 'def':'DF', 'pattern':'^aul[A-Z].*$|^adw[A-Z].*$', 'message':6212}
+rule={'space':'OV', 'scope':'B', 'linkage':'N', 'type':'nll]$', 'flag':'-', 'def':'DF', 'pattern':'^all[A-Z].*', 'message':6213}
+rule={'space':'OV', 'scope':'B', 'linkage':'N', 'type':'ull]$', 'flag':'-', 'def':'DF', 'pattern':'^aull[A-Z].*', 'message':6214}
+rule={'space':'OV', 'scope':'B', 'linkage':'N', 'type':'fs]$', 'flag':'-', 'def':'DF', 'pattern':'^af[A-Z].*', 'message':6215}
+rule={'space':'OV', 'scope':'B', 'linkage':'N', 'type':'ff]$', 'flag':'-', 'def':'DF', 'pattern':'^ad[A-Z].*', 'message':6216}
+rule={'space':'OV', 'scope':'B', 'linkage':'N', 'type':',{e.*}]$', 'flag':'-', 'def':'DF', 'pattern':'^ae[A-Z].*', 'message':6217}
+rule={'space':'OV', 'scope':'B', 'linkage':'N', 'type':',{s.*}]$', 'flag':'-', 'def':'DF', 'pattern':'^ast[A-Z].*', 'message':6218}
+rule={'space':'OV', 'scope':'B', 'linkage':'N', 'type':',{u.*}]$', 'flag':'-', 'def':'DF', 'pattern':'^au[A-Z].*', 'message':6219}
+
+*-------------------------------------------------------
+* File Scope + External Linkage + Static Storage 
+*-------------------------------------------------------
+
+* File Scope + External Linkage + Static Storage: 일반 변수
+rule={'space':'OV', 'scope':'F', 'linkage':'X', 'type':'^nc$', 'flag':'S', 'def':'DC', 'pattern':'^g_c[A-Z].*', 'message':6401}
+rule={'space':'OV', 'scope':'F', 'linkage':'X', 'type':'^_c$', 'flag':'S', 'def':'DC', 'pattern':'^g_c[A-Z].*', 'message':6402}
+rule={'space':'OV', 'scope':'F', 'linkage':'X', 'type':'^uc$', 'flag':'S', 'def':'DC', 'pattern':'^g_uc[A-Z].*$|^g_b[A-Z].*$|^g_bl[A-Z].*$', 'message':6403}
+rule={'space':'OV', 'scope':'F', 'linkage':'X', 'type':'^ns$', 'flag':'S', 'def':'DC', 'pattern':'^g_s[A-Z].*', 'message':6405}
+rule={'space':'OV', 'scope':'F', 'linkage':'X', 'type':'^us$', 'flag':'S', 'def':'DC', 'pattern':'^g_us[A-Z].*$|^g_w[A-Z].*$', 'message':6406}
+*rule={'space':'OV', 'scope':'F', 'linkage':'X', 'type':'^ni$', 'flag':'S', 'def':'DC', 'pattern':'^g_i[A-Z].*', 'message':6407}
+*rule={'space':'OV', 'scope':'F', 'linkage':'X', 'type':'^ui$', 'flag':'S', 'def':'DC', 'pattern':'^g_ui[A-Z].*', 'message':6408}
+rule={'space':'OV', 'scope':'F', 'linkage':'X', 'type':'^ni$', 'flag':'S', 'def':'DC', 'message':7000}
+rule={'space':'OV', 'scope':'F', 'linkage':'X', 'type':'^ui$', 'flag':'S', 'def':'DC', 'message':7000}
+rule={'space':'OV', 'scope':'F', 'linkage':'X', 'type':'^_l$', 'flag':'S', 'def':'DC', 'pattern':'^g_l[A-Z].*', 'message':6411}
+rule={'space':'OV', 'scope':'F', 'linkage':'X', 'type':'^ul$', 'flag':'S', 'def':'DC', 'pattern':'^g_ul[A-Z].*$|^g_dw[A-Z].*$', 'message':6412}
+rule={'space':'OV', 'scope':'F', 'linkage':'X', 'type':'^nll$', 'flag':'S', 'def':'DC', 'pattern':'^g_ll[A-Z].*', 'message':6413}
+rule={'space':'OV', 'scope':'F', 'linkage':'X', 'type':'^ull$', 'flag':'S', 'def':'DC', 'pattern':'^g_ull[A-Z].*', 'message':6414}
+rule={'space':'OV', 'scope':'F', 'linkage':'X', 'type':'^fs$', 'flag':'S', 'def':'DC', 'pattern':'^g_f[A-Z].*', 'message':6415}
+rule={'space':'OV', 'scope':'F', 'linkage':'X', 'type':'^ff$', 'flag':'S', 'def':'DC', 'pattern':'^g_d[A-Z].*', 'message':6416}
+rule={'space':'OV', 'scope':'F', 'linkage':'X', 'type':'^{e.*}]$', 'flag':'S', 'def':'DC', 'pattern':'^g_e[A-Z].*', 'message':6417}
+rule={'space':'OV', 'scope':'F', 'linkage':'X', 'type':'^{s.*}]$', 'flag':'S', 'def':'DC', 'pattern':'^g_st[A-Z].*', 'message':6418}
+rule={'space':'OV', 'scope':'F', 'linkage':'X', 'type':'^{u.*}]$', 'flag':'S', 'def':'DC', 'pattern':'^g_u[A-Z].*', 'message':6419}
+
+* File Scope + External Linkage + Static Storage: 포인터 변수
+rule={'space':'OV', 'scope':'F', 'linkage':'X', 'type':'^pnc$', 'flag':'S', 'def':'DC', 'pattern':'^g_pc[A-Z].*', 'message':6501}
+rule={'space':'OV', 'scope':'F', 'linkage':'X', 'type':'^p_c$', 'flag':'S', 'def':'DC', 'pattern':'^g_pc[A-Z].*', 'message':6502}
+rule={'space':'OV', 'scope':'F', 'linkage':'X', 'type':'^puc$', 'flag':'S', 'def':'DC', 'pattern':'^g_puc[A-Z].*$|^g_pb[A-Z].*$|^g_pbl[A-Z].*$', 'message':6503}
+rule={'space':'OV', 'scope':'F', 'linkage':'X', 'type':'^pns$', 'flag':'S', 'def':'DC', 'pattern':'^g_ps[A-Z].*.', 'message':6505}
+rule={'space':'OV', 'scope':'F', 'linkage':'X', 'type':'^pus$', 'flag':'S', 'def':'DC', 'pattern':'^g_pus[A-Z].*$|^g_pw[A-Z].*$', 'message':6506}
+*rule={'space':'OV', 'scope':'F', 'linkage':'X', 'type':'^pni$', 'flag':'S', 'def':'DC', 'pattern':'^g_pi[A-Z].*', 'message':6507}
+*rule={'space':'OV', 'scope':'F', 'linkage':'X', 'type':'^pui$', 'flag':'S', 'def':'DC', 'pattern':'^g_pui[A-Z].*', 'message':6508}
+rule={'space':'OV', 'scope':'F', 'linkage':'X', 'type':'^pni$', 'flag':'S', 'def':'DC', 'message':7000}
+rule={'space':'OV', 'scope':'F', 'linkage':'X', 'type':'^pui$', 'flag':'S', 'def':'DC', 'message':7000}
+rule={'space':'OV', 'scope':'F', 'linkage':'X', 'type':'^p_l$', 'flag':'S', 'def':'DC', 'pattern':'^g_pl[A-Z].*', 'message':6511}
+rule={'space':'OV', 'scope':'F', 'linkage':'X', 'type':'^pul$', 'flag':'S', 'def':'DC', 'pattern':'^g_pul[A-Z].*$|^g_dw[A-Z].*$', 'message':6512}
+rule={'space':'OV', 'scope':'F', 'linkage':'X', 'type':'^pnll$', 'flag':'S', 'def':'DC', 'pattern':'^g_pll[A-Z].*', 'message':6513}
+rule={'space':'OV', 'scope':'F', 'linkage':'X', 'type':'^pull$', 'flag':'S', 'def':'DC', 'pattern':'^g_pull[A-Z].*', 'message':6514}
+rule={'space':'OV', 'scope':'F', 'linkage':'X', 'type':'^pfs$', 'flag':'S', 'def':'DC', 'pattern':'^g_pf[A-Z].*', 'message':6515}
+rule={'space':'OV', 'scope':'F', 'linkage':'X', 'type':'^pff$', 'flag':'S', 'def':'DC', 'pattern':'^g_pd[A-Z].*', 'message':6516}
+rule={'space':'OV', 'scope':'F', 'linkage':'X', 'type':'^p{e.*}]$', 'flag':'S', 'def':'DC', 'pattern':'^g_pe[A-Z].*', 'message':6517}
+rule={'space':'OV', 'scope':'F', 'linkage':'X', 'type':'^p{s.*}]$', 'flag':'S', 'def':'DC', 'pattern':'^g_pst[A-Z.]*', 'message':6518}
+rule={'space':'OV', 'scope':'F', 'linkage':'X', 'type':'^p{u.*}]$', 'flag':'S', 'def':'DC', 'pattern':'^g_pu[A-Z].*', 'message':6519}
+
+* File Scope + External Linkage + Static Storage: 배열 변수
+rule={'space':'OV', 'scope':'F', 'linkage':'X', 'type':'nc]$', 'flag':'S', 'def':'DC', 'pattern':'^g_ac[A-Z].*', 'message':6551}
+rule={'space':'OV', 'scope':'F', 'linkage':'X', 'type':'_c]$', 'flag':'S', 'def':'DC', 'pattern':'^g_ac[A-Z].*', 'message':6552}
+rule={'space':'OV', 'scope':'F', 'linkage':'X', 'type':'uc]$', 'flag':'S', 'def':'DC', 'pattern':'^g_auc[A-Z].*$|^g_ab[A-Z].*$|^g_abl[A-Z].*$', 'message':6553}
+rule={'space':'OV', 'scope':'F', 'linkage':'X', 'type':'ns]$', 'flag':'S', 'def':'DC', 'pattern':'^g_as[A-Z].*', 'message':6555}
+rule={'space':'OV', 'scope':'F', 'linkage':'X', 'type':'us]$', 'flag':'S', 'def':'DC', 'pattern':'^g_aus[A-Z].*$|^g_aw[A-Z].*$', 'message':6556}
+*rule={'space':'OV', 'scope':'F', 'linkage':'X', 'type':'ni]$', 'flag':'S', 'def':'DC', 'pattern':'^g_ai[A-Z].*', 'message':6557}
+*rule={'space':'OV', 'scope':'F', 'linkage':'X', 'type':'ui]$', 'flag':'S', 'def':'DC', 'pattern':'^g_aui[A-Z].*', 'message':6558}
+rule={'space':'OV', 'scope':'F', 'linkage':'X', 'type':'ni]$', 'flag':'S', 'def':'DC', 'message':7000}
+rule={'space':'OV', 'scope':'F', 'linkage':'X', 'type':'ui]$', 'flag':'S', 'def':'DC', 'message':7000}
+rule={'space':'OV', 'scope':'F', 'linkage':'X', 'type':'_l]$', 'flag':'S', 'def':'DC', 'pattern':'^g_al[A-Z].*', 'message':6561}
+rule={'space':'OV', 'scope':'F', 'linkage':'X', 'type':'ul]$', 'flag':'S', 'def':'DC', 'pattern':'^g_aul[A-Z].*$|^g_adw[A-Z].*$', 'message':6562}
+rule={'space':'OV', 'scope':'F', 'linkage':'X', 'type':'nll]$', 'flag':'S', 'def':'DC', 'pattern':'^g_all[A-Z].*', 'message':6563}
+rule={'space':'OV', 'scope':'F', 'linkage':'X', 'type':'ull]$', 'flag':'S', 'def':'DC', 'pattern':'^g_aull[A-Z].*', 'message':6564}
+rule={'space':'OV', 'scope':'F', 'linkage':'X', 'type':'fs]$', 'flag':'S', 'def':'DC', 'pattern':'^g_af[A-Z].*', 'message':6565}
+rule={'space':'OV', 'scope':'F', 'linkage':'X', 'type':'ff]$', 'flag':'S', 'def':'DC', 'pattern':'^g_ad[A-Z].*', 'message':6566}
+rule={'space':'OV', 'scope':'F', 'linkage':'X', 'type':',{e.*}]$', 'flag':'S', 'def':'DC', 'pattern':'^g_ae[A-Z].*', 'message':6567}
+rule={'space':'OV', 'scope':'F', 'linkage':'X', 'type':',{s.*}]$', 'flag':'S', 'def':'DC', 'pattern':'^g_ast[A-Z].*', 'message':6568}
+rule={'space':'OV', 'scope':'F', 'linkage':'X', 'type':',{u.*}]$', 'flag':'S', 'def':'DC', 'pattern':'^g_au[A-Z].*', 'message':6569}
+
+*-------------------------------------------------------
+* File Scope + Internal Linkage + Static Storage 
+*-------------------------------------------------------
+
+* File Scope + Internal Linkage + Static Storage: 일반 변수
+rule={'space':'OV', 'scope':'F', 'linkage':'I', 'type':'^nc$', 'flag':'S', 'def':'DC', 'pattern':'^t_c[A-Z].*|^g_c[A-Z].*', 'message':6601}
+rule={'space':'OV', 'scope':'F', 'linkage':'I', 'type':'^_c$', 'flag':'S', 'def':'DC', 'pattern':'^t_c[A-Z].*|^g_c[A-Z].*', 'message':6602}
+rule={'space':'OV', 'scope':'F', 'linkage':'I', 'type':'^uc$', 'flag':'S', 'def':'DC', 'pattern':'^t_uc[A-Z].*$|^t_b[A-Z].*$|^t_bl[A-Z].*$|^g_uc[A-Z].*$|^g_b[A-Z].*$|^g_bl[A-Z].*$', 'message':6603}
+rule={'space':'OV', 'scope':'F', 'linkage':'I', 'type':'^ns$', 'flag':'S', 'def':'DC', 'pattern':'^t_s[A-Z].*|^g_s[A-Z].*', 'message':6605}
+rule={'space':'OV', 'scope':'F', 'linkage':'I', 'type':'^us$', 'flag':'S', 'def':'DC', 'pattern':'^t_us[A-Z].*$|^t_w[A-Z].*$|^g_us[A-Z].*$|^g_w[A-Z].*$', 'message':6606}
+*rule={'space':'OV', 'scope':'F', 'linkage':'I', 'type':'^ni$', 'flag':'S', 'def':'DC', 'pattern':'^t_i[A-Z].*', 'message':6607}
+*rule={'space':'OV', 'scope':'F', 'linkage':'I', 'type':'^ui$', 'flag':'S', 'def':'DC', 'pattern':'^t_ui[A-Z].*', 'message':6608}
+rule={'space':'OV', 'scope':'F', 'linkage':'I', 'type':'^ni$', 'flag':'S', 'def':'DC', 'message':7000}
+rule={'space':'OV', 'scope':'F', 'linkage':'I', 'type':'^ui$', 'flag':'S', 'def':'DC', 'message':7000}
+rule={'space':'OV', 'scope':'F', 'linkage':'I', 'type':'^_l$', 'flag':'S', 'def':'DC', 'pattern':'^t_l[A-Z].*|^g_l[A-Z].*', 'message':6611}
+rule={'space':'OV', 'scope':'F', 'linkage':'I', 'type':'^ul$', 'flag':'S', 'def':'DC', 'pattern':'^t_ul[A-Z].*$|^t_dw[A-Z].*$|^g_ul[A-Z].*$|^g_dw[A-Z].*$', 'message':6612}
+rule={'space':'OV', 'scope':'F', 'linkage':'I', 'type':'^nll$', 'flag':'S', 'def':'DC', 'pattern':'^t_ll[A-Z].*|^g_ll[A-Z].*', 'message':6613}
+rule={'space':'OV', 'scope':'F', 'linkage':'I', 'type':'^ull$', 'flag':'S', 'def':'DC', 'pattern':'^t_ull[A-Z].*|^g_ull[A-Z].*', 'message':6614}
+rule={'space':'OV', 'scope':'F', 'linkage':'I', 'type':'^fs$', 'flag':'S', 'def':'DC', 'pattern':'^t_f[A-Z].*|^g_f[A-Z].*', 'message':6615}
+rule={'space':'OV', 'scope':'F', 'linkage':'I', 'type':'^ff$', 'flag':'S', 'def':'DC', 'pattern':'^t_d[A-Z].*|^g_d[A-Z].*', 'message':6616}
+rule={'space':'OV', 'scope':'F', 'linkage':'I', 'type':'^{e.*}]$', 'flag':'S', 'def':'DC', 'pattern':'^t_e[A-Z].*|^g_e[A-Z].*', 'message':6617}
+rule={'space':'OV', 'scope':'F', 'linkage':'I', 'type':'^{s.*}]$', 'flag':'S', 'def':'DC', 'pattern':'^t_st[A-Z].*|^g_st[A-Z].*', 'message':6618}
+rule={'space':'OV', 'scope':'F', 'linkage':'I', 'type':'^{u.*}]$', 'flag':'S', 'def':'DC', 'pattern':'^t_u[A-Z].*|^g_u[A-Z].*', 'message':6619}
+
+* File Scope + Internal Linkage + Static Storage: 포인터 변수
+rule={'space':'OV', 'scope':'F', 'linkage':'I', 'type':'^pnc$', 'flag':'S', 'def':'DC', 'pattern':'^t_pc[A-Z].*|^g_pc[A-Z].*', 'message':6701}
+rule={'space':'OV', 'scope':'F', 'linkage':'I', 'type':'^p_c$', 'flag':'S', 'def':'DC', 'pattern':'^t_pc[A-Z].*|^g_pc[A-Z].*', 'message':6702}
+rule={'space':'OV', 'scope':'F', 'linkage':'I', 'type':'^puc$', 'flag':'S', 'def':'DC', 'pattern':'^t_puc[A-Z].*$|^t_pb[A-Z].*$|^t_pbl[A-Z].*$|^g_puc[A-Z].*$|^g_pb[A-Z].*$|^g_pbl[A-Z].*$', 'message':6703}
+rule={'space':'OV', 'scope':'F', 'linkage':'I', 'type':'^pns$', 'flag':'S', 'def':'DC', 'pattern':'^t_ps[A-Z].*|^g_ps[A-Z].*', 'message':6705}
+rule={'space':'OV', 'scope':'F', 'linkage':'I', 'type':'^pus$', 'flag':'S', 'def':'DC', 'pattern':'^t_pus[A-Z].*$|^t_pw[A-Z].*$|g_pus[A-Z].*$|^g_pw[A-Z].*$', 'message':6706}
+*rule={'space':'OV', 'scope':'F', 'linkage':'I', 'type':'^pni$', 'flag':'S', 'def':'DC', 'pattern':'^t_pi[A-Z].*', 'message':6707}
+*rule={'space':'OV', 'scope':'F', 'linkage':'I', 'type':'^pui$', 'flag':'S', 'def':'DC', 'pattern':'^t_pui[A-Z].*', 'message':6708}
+rule={'space':'OV', 'scope':'F', 'linkage':'I', 'type':'^pni$', 'flag':'S', 'def':'DC', 'message':7000}
+rule={'space':'OV', 'scope':'F', 'linkage':'I', 'type':'^pui$', 'flag':'S', 'def':'DC', 'message':7000}
+rule={'space':'OV', 'scope':'F', 'linkage':'I', 'type':'^p_l$', 'flag':'S', 'def':'DC', 'pattern':'^t_pl[A-Z].*|^g_pl[A-Z].*', 'message':6711}
+rule={'space':'OV', 'scope':'F', 'linkage':'I', 'type':'^pul$', 'flag':'S', 'def':'DC', 'pattern':'^t_pul[A-Z].*$|^t_dw[A-Z].*$|^g_pul[A-Z].*$|^g_dw[A-Z].*$', 'message':6712}
+rule={'space':'OV', 'scope':'F', 'linkage':'I', 'type':'^pnll$', 'flag':'S', 'def':'DC', 'pattern':'^t_pll[A-Z].*|^g_pll[A-Z].*', 'message':6713}
+rule={'space':'OV', 'scope':'F', 'linkage':'I', 'type':'^pull$', 'flag':'S', 'def':'DC', 'pattern':'^t_pull[A-Z].*|^g_pull[A-Z].*', 'message':6714}
+rule={'space':'OV', 'scope':'F', 'linkage':'I', 'type':'^pfs$', 'flag':'S', 'def':'DC', 'pattern':'^t_pf[A-Z].*|^g_pf[A-Z].*', 'message':6715}
+rule={'space':'OV', 'scope':'F', 'linkage':'I', 'type':'^pff$', 'flag':'S', 'def':'DC', 'pattern':'^t_pd[A-Z].*|^g_pd[A-Z].*', 'message':6716}
+rule={'space':'OV', 'scope':'F', 'linkage':'I', 'type':'^p{e.*}]$', 'flag':'S', 'def':'DC', 'pattern':'^t_pe[A-Z].*|^g_pe[A-Z].*', 'message':6717}
+rule={'space':'OV', 'scope':'F', 'linkage':'I', 'type':'^p{s.*}]$', 'flag':'S', 'def':'DC', 'pattern':'^t_pst[A-Z.]*|^g_pst[A-Z.]*', 'message':6718}
+rule={'space':'OV', 'scope':'F', 'linkage':'I', 'type':'^p{u.*}]$', 'flag':'S', 'def':'DC', 'pattern':'^t_pu[A-Z].*|^g_pu[A-Z].*', 'message':6719}
+
+* File Scope + Internal Linkage + Static Storage: 배열 변수
+rule={'space':'OV', 'scope':'F', 'linkage':'I', 'type':'nc]$', 'flag':'S', 'def':'DC', 'pattern':'^t_ac[A-Z].*|^g_ac[A-Z].*', 'message':6751}
+rule={'space':'OV', 'scope':'F', 'linkage':'I', 'type':'_c]$', 'flag':'S', 'def':'DC', 'pattern':'^t_ac[A-Z].*|^g_ac[A-Z].*', 'message':6752}
+rule={'space':'OV', 'scope':'F', 'linkage':'I', 'type':'uc]$', 'flag':'S', 'def':'DC', 'pattern':'^t_auc[A-Z].*$|^t_ab[A-Z].*$|^t_abl[A-Z].*$|^g_auc[A-Z].*$|^g_ab[A-Z].*$|^g_abl[A-Z].*$', 'message':6753}
+rule={'space':'OV', 'scope':'F', 'linkage':'I', 'type':'ns]$', 'flag':'S', 'def':'DC', 'pattern':'^t_as[A-Z].*|^g_as[A-Z].*', 'message':6755}
+rule={'space':'OV', 'scope':'F', 'linkage':'I', 'type':'us]$', 'flag':'S', 'def':'DC', 'pattern':'^t_aus[A-Z].*$|^t_aw[A-Z].*$|^g_aus[A-Z].*$|^g_aw[A-Z].*$', 'message':6756}
+*rule={'space':'OV', 'scope':'F', 'linkage':'I', 'type':'ni]$', 'flag':'S', 'def':'DC', 'pattern':'^t_ai[A-Z].*', 'message':6757}
+*rule={'space':'OV', 'scope':'F', 'linkage':'I', 'type':'ui]$', 'flag':'S', 'def':'DC', 'pattern':'^t_aui[A-Z].*', 'message':6758}
+rule={'space':'OV', 'scope':'F', 'linkage':'I', 'type':'ni]$', 'flag':'S', 'def':'DC', 'message':7000}
+rule={'space':'OV', 'scope':'F', 'linkage':'I', 'type':'ui]$', 'flag':'S', 'def':'DC', 'message':7000}
+rule={'space':'OV', 'scope':'F', 'linkage':'I', 'type':'_l]$', 'flag':'S', 'def':'DC', 'pattern':'^t_al[A-Z].*|^g_al[A-Z].*', 'message':6761}
+rule={'space':'OV', 'scope':'F', 'linkage':'I', 'type':'ul]$', 'flag':'S', 'def':'DC', 'pattern':'^t_aul[A-Z].*$|^t_adw[A-Z].*$|^g_aul[A-Z].*$|^g_adw[A-Z].*$', 'message':6762}
+rule={'space':'OV', 'scope':'F', 'linkage':'I', 'type':'nll]$', 'flag':'S', 'def':'DC', 'pattern':'^t_all[A-Z].*|^g_all[A-Z].*', 'message':6763}
+rule={'space':'OV', 'scope':'F', 'linkage':'I', 'type':'ull]$', 'flag':'S', 'def':'DC', 'pattern':'^t_aull[A-Z].*|^g_aull[A-Z].*', 'message':6764}
+rule={'space':'OV', 'scope':'F', 'linkage':'I', 'type':'fs]$', 'flag':'S', 'def':'DC', 'pattern':'^t_af[A-Z].*|^g_af[A-Z].*', 'message':6765}
+rule={'space':'OV', 'scope':'F', 'linkage':'I', 'type':'ff]$', 'flag':'S', 'def':'DC', 'pattern':'^t_ad[A-Z].*|g_ad[A-Z].*', 'message':6766}
+rule={'space':'OV', 'scope':'F', 'linkage':'I', 'type':',{e.*}]$', 'flag':'S', 'def':'DC', 'pattern':'^t_ae[A-Z].*|^g_ae[A-Z].*', 'message':6767}
+rule={'space':'OV', 'scope':'F', 'linkage':'I', 'type':',{s.*}]$', 'flag':'S', 'def':'DC', 'pattern':'^t_ast[A-Z].*|^g_ast[A-Z].*', 'message':6768}
+rule={'space':'OV', 'scope':'F', 'linkage':'I', 'type':',{u.*}]$', 'flag':'S', 'def':'DC', 'pattern':'^t_au[A-Z].*|^g_au[A-Z].*', 'message':6769}

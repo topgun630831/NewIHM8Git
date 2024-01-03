@@ -1,0 +1,1782 @@
+<RDEF> I Includes
+<R>I C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c C:/PRQA/QAC-8.1.2-R/include/ansi/string.h 6
+<R>I C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c C:/PRQA/QAC-8.1.2-R/include/ansi/stdlib.h 7
+<R>I C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h 9
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h 46
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Inc/main.h 43
+<R>I C:/CodeInspection/DisplayUnit/Inc/main.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI.h 58
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_ConfDefaults.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_ConfDefaults.h C:/CodeInspection/DisplayUnit/STemWin/Target/GUIConf.h 60
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_Type.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_Type.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/LCD.h 60
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/LCD.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_ConfDefaults.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/LCD.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/Global.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_Type.h C:/CodeInspection/DisplayUnit/STemWin/Target/GUIConf.h 61
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_Version.h 58
+<R>I C:/CodeInspection/DisplayUnit/Inc/main.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h 59
+<R>I C:/CodeInspection/DisplayUnit/Inc/main.h C:/PRQA/QAC-8.1.2-R/include/ansi/time.h 60
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h 244
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h 46
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h 149
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cm4.h 183
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cm4.h C:/CodeInspection/DisplayUnit/qac/lib/stdint.h 44
+<R>I C:/CodeInspection/DisplayUnit/qac/lib/stdint.h C:/CodeInspection/DisplayUnit/qac/lib/ycheck.h 10
+<R>I C:/CodeInspection/DisplayUnit/qac/lib/stdint.h C:/CodeInspection/DisplayUnit/qac/lib/yvals.h 11
+<R>I C:/CodeInspection/DisplayUnit/qac/lib/yvals.h C:/CodeInspection/DisplayUnit/qac/lib/DLib_Defaults.h 42
+<R>I C:/CodeInspection/DisplayUnit/qac/lib/DLib_Defaults.h C:/CodeInspection/DisplayUnit/qac/lib/DLib_Product.h 50
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cm4.h C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cmInstr.h 210
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cmInstr.h C:/CodeInspection/DisplayUnit/qac/lib/cmsis_iar.h 65
+<R>I C:/CodeInspection/DisplayUnit/qac/lib/cmsis_iar.h C:/CodeInspection/DisplayUnit/qac/lib/intrinsics.h 22
+<R>I C:/CodeInspection/DisplayUnit/qac/lib/intrinsics.h C:/CodeInspection/DisplayUnit/qac/lib/yvals.h 14
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cm4.h C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cmFunc.h 211
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cmFunc.h C:/CodeInspection/DisplayUnit/qac/lib/cmsis_iar.h 65
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cm4.h C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cmSimd.h 212
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cmSimd.h C:/CodeInspection/DisplayUnit/qac/lib/cmsis_iar.h 69
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h 184
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h C:/CodeInspection/DisplayUnit/qac/lib/stdint.h 185
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h 250
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h 47
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h C:/PRQA/QAC-8.1.2-R/include/ansi/stdio.h 48
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h 49
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h 248
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h 230
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h 252
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h 656
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h 256
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_crc.h 268
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_crc.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h 292
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h 313
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h 314
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_sram.h 296
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_sram.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_fsmc.h 47
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_fsmc.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h 320
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c_ex.h 473
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_iwdg.h 328
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_iwdg.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h 336
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h 290
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc.h 344
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc_ex.h 634
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc_ex.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h 360
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h 364
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h 1289
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h 368
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h 388
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h 49
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 49
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h 121
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 49
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_hcd.h 392
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_hcd.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h 49
+<R>I C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/../inc/lcd.h 10
+<R>I C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/../inc/lcd.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h 4
+<EXTD> ASCII_TABLE C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 15
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 17 1 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 17 6 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 17 11 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 17 16 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 17 21 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 17 26 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 17 31 N HN ni F A
+<LIT> 0x20 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 18 1 N HN ni F A
+<LIT> 0x20 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 18 6 N HN ni F A
+<LIT> 0x20 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 18 11 N HN ni F A
+<LIT> 0x20 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 18 16 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 18 21 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 18 26 N HN ni F A
+<LIT> 0x20 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 18 31 N HN ni F A
+<LIT> 0x50 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 19 1 N HN ni F A
+<LIT> 0x50 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 19 6 N HN ni F A
+<LIT> 0x50 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 19 11 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 19 16 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 19 21 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 19 26 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 19 31 N HN ni F A
+<LIT> 0x50 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 20 1 N HN ni F A
+<LIT> 0x50 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 20 6 N HN ni F A
+<LIT> 0xF8 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 20 11 N HN ni F A
+<LIT> 0x50 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 20 16 N HN ni F A
+<LIT> 0xF8 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 20 21 N HN ni F A
+<LIT> 0x50 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 20 26 N HN ni F A
+<LIT> 0x50 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 20 31 N HN ni F A
+<LIT> 0x20 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 21 1 N HN ni F A
+<LIT> 0x78 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 21 6 N HN ni F A
+<LIT> 0xA0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 21 11 N HN ni F A
+<LIT> 0x70 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 21 16 N HN ni F A
+<LIT> 0x28 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 21 21 N HN ni F A
+<LIT> 0xF0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 21 26 N HN ni F A
+<LIT> 0x20 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 21 31 N HN ni F A
+<LIT> 0xC0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 22 1 N HN ni F A
+<LIT> 0xC8 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 22 6 N HN ni F A
+<LIT> 0x10 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 22 11 N HN ni F A
+<LIT> 0x20 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 22 16 N HN ni F A
+<LIT> 0x40 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 22 21 N HN ni F A
+<LIT> 0x98 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 22 26 N HN ni F A
+<LIT> 0x18 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 22 31 N HN ni F A
+<LIT> 0x60 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 23 1 N HN ni F A
+<LIT> 0x90 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 23 6 N HN ni F A
+<LIT> 0xA0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 23 11 N HN ni F A
+<LIT> 0x40 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 23 16 N HN ni F A
+<LIT> 0xA0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 23 21 N HN ni F A
+<LIT> 0x90 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 23 26 N HN ni F A
+<LIT> 0x68 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 23 31 N HN ni F A
+<LIT> 0x60 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 24 1 N HN ni F A
+<LIT> 0x20 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 24 6 N HN ni F A
+<LIT> 0x40 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 24 11 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 24 16 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 24 21 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 24 26 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 24 31 N HN ni F A
+<LIT> 0x10 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 25 1 N HN ni F A
+<LIT> 0x20 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 25 6 N HN ni F A
+<LIT> 0x40 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 25 11 N HN ni F A
+<LIT> 0x40 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 25 16 N HN ni F A
+<LIT> 0x40 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 25 21 N HN ni F A
+<LIT> 0x20 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 25 26 N HN ni F A
+<LIT> 0x10 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 25 31 N HN ni F A
+<LIT> 0x40 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 26 1 N HN ni F A
+<LIT> 0x20 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 26 6 N HN ni F A
+<LIT> 0x10 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 26 11 N HN ni F A
+<LIT> 0x10 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 26 16 N HN ni F A
+<LIT> 0x10 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 26 21 N HN ni F A
+<LIT> 0x20 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 26 26 N HN ni F A
+<LIT> 0x40 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 26 31 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 27 1 N HN ni F A
+<LIT> 0x20 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 27 6 N HN ni F A
+<LIT> 0xA8 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 27 11 N HN ni F A
+<LIT> 0x70 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 27 16 N HN ni F A
+<LIT> 0xA8 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 27 21 N HN ni F A
+<LIT> 0x20 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 27 26 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 27 31 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 28 1 N HN ni F A
+<LIT> 0x20 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 28 6 N HN ni F A
+<LIT> 0x20 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 28 11 N HN ni F A
+<LIT> 0xF8 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 28 16 N HN ni F A
+<LIT> 0x20 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 28 21 N HN ni F A
+<LIT> 0x20 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 28 26 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 28 31 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 29 1 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 29 6 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 29 11 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 29 16 N HN ni F A
+<LIT> 0x60 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 29 21 N HN ni F A
+<LIT> 0x20 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 29 26 N HN ni F A
+<LIT> 0x40 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 29 31 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 30 1 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 30 6 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 30 11 N HN ni F A
+<LIT> 0xF8 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 30 16 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 30 21 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 30 26 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 30 31 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 31 1 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 31 6 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 31 11 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 31 16 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 31 21 N HN ni F A
+<LIT> 0x60 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 31 26 N HN ni F A
+<LIT> 0x60 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 31 31 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 32 1 N HN ni F A
+<LIT> 0x08 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 32 6 N HN ni F A
+<LIT> 0x10 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 32 11 N HN ni F A
+<LIT> 0x20 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 32 16 N HN ni F A
+<LIT> 0x40 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 32 21 N HN ni F A
+<LIT> 0x80 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 32 26 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 32 31 N HN ni F A
+<LIT> 0x70 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 34 1 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 34 6 N HN ni F A
+<LIT> 0x98 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 34 11 N HN ni F A
+<LIT> 0xA8 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 34 16 N HN ni F A
+<LIT> 0xC8 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 34 21 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 34 26 N HN ni F A
+<LIT> 0x70 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 34 31 N HN ni F A
+<LIT> 0x20 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 35 1 N HN ni F A
+<LIT> 0x60 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 35 6 N HN ni F A
+<LIT> 0x20 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 35 11 N HN ni F A
+<LIT> 0x20 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 35 16 N HN ni F A
+<LIT> 0x20 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 35 21 N HN ni F A
+<LIT> 0x20 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 35 26 N HN ni F A
+<LIT> 0x70 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 35 31 N HN ni F A
+<LIT> 0x70 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 36 1 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 36 6 N HN ni F A
+<LIT> 0x08 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 36 11 N HN ni F A
+<LIT> 0x10 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 36 16 N HN ni F A
+<LIT> 0x20 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 36 21 N HN ni F A
+<LIT> 0x40 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 36 26 N HN ni F A
+<LIT> 0xF8 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 36 31 N HN ni F A
+<LIT> 0xF8 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 37 1 N HN ni F A
+<LIT> 0x10 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 37 6 N HN ni F A
+<LIT> 0x20 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 37 11 N HN ni F A
+<LIT> 0x10 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 37 16 N HN ni F A
+<LIT> 0x08 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 37 21 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 37 26 N HN ni F A
+<LIT> 0x70 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 37 31 N HN ni F A
+<LIT> 0x10 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 38 1 N HN ni F A
+<LIT> 0x30 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 38 6 N HN ni F A
+<LIT> 0x50 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 38 11 N HN ni F A
+<LIT> 0x90 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 38 16 N HN ni F A
+<LIT> 0xF8 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 38 21 N HN ni F A
+<LIT> 0x10 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 38 26 N HN ni F A
+<LIT> 0x10 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 38 31 N HN ni F A
+<LIT> 0xF8 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 39 1 N HN ni F A
+<LIT> 0x80 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 39 6 N HN ni F A
+<LIT> 0xF0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 39 11 N HN ni F A
+<LIT> 0x08 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 39 16 N HN ni F A
+<LIT> 0x08 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 39 21 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 39 26 N HN ni F A
+<LIT> 0x70 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 39 31 N HN ni F A
+<LIT> 0x30 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 40 1 N HN ni F A
+<LIT> 0x40 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 40 6 N HN ni F A
+<LIT> 0x80 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 40 11 N HN ni F A
+<LIT> 0xF0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 40 16 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 40 21 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 40 26 N HN ni F A
+<LIT> 0x70 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 40 31 N HN ni F A
+<LIT> 0xF8 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 41 1 N HN ni F A
+<LIT> 0x08 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 41 6 N HN ni F A
+<LIT> 0x10 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 41 11 N HN ni F A
+<LIT> 0x20 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 41 16 N HN ni F A
+<LIT> 0x40 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 41 21 N HN ni F A
+<LIT> 0x40 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 41 26 N HN ni F A
+<LIT> 0x40 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 41 31 N HN ni F A
+<LIT> 0x70 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 42 1 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 42 6 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 42 11 N HN ni F A
+<LIT> 0x70 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 42 16 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 42 21 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 42 26 N HN ni F A
+<LIT> 0x70 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 42 31 N HN ni F A
+<LIT> 0x70 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 43 1 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 43 6 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 43 11 N HN ni F A
+<LIT> 0x78 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 43 16 N HN ni F A
+<LIT> 0x08 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 43 21 N HN ni F A
+<LIT> 0x10 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 43 26 N HN ni F A
+<LIT> 0x60 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 43 31 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 44 1 N HN ni F A
+<LIT> 0x60 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 44 6 N HN ni F A
+<LIT> 0x60 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 44 11 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 44 16 N HN ni F A
+<LIT> 0x60 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 44 21 N HN ni F A
+<LIT> 0x60 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 44 26 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 44 31 N HN ni F A
+<LIT> 0x60 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 45 1 N HN ni F A
+<LIT> 0x60 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 45 6 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 45 11 N HN ni F A
+<LIT> 0x60 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 45 16 N HN ni F A
+<LIT> 0x20 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 45 21 N HN ni F A
+<LIT> 0x40 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 45 26 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 45 31 N HN ni F A
+<LIT> 0x10 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 46 1 N HN ni F A
+<LIT> 0x20 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 46 6 N HN ni F A
+<LIT> 0x40 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 46 11 N HN ni F A
+<LIT> 0x80 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 46 16 N HN ni F A
+<LIT> 0x40 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 46 21 N HN ni F A
+<LIT> 0x20 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 46 26 N HN ni F A
+<LIT> 0x10 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 46 31 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 47 1 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 47 6 N HN ni F A
+<LIT> 0xF8 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 47 11 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 47 16 N HN ni F A
+<LIT> 0xF8 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 47 21 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 47 26 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 47 31 N HN ni F A
+<LIT> 0x40 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 48 1 N HN ni F A
+<LIT> 0x20 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 48 6 N HN ni F A
+<LIT> 0x10 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 48 11 N HN ni F A
+<LIT> 0x08 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 48 16 N HN ni F A
+<LIT> 0x10 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 48 21 N HN ni F A
+<LIT> 0x20 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 48 26 N HN ni F A
+<LIT> 0x40 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 48 31 N HN ni F A
+<LIT> 0x70 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 49 1 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 49 6 N HN ni F A
+<LIT> 0x08 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 49 11 N HN ni F A
+<LIT> 0x10 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 49 16 N HN ni F A
+<LIT> 0x20 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 49 21 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 49 26 N HN ni F A
+<LIT> 0x20 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 49 31 N HN ni F A
+<LIT> 0x70 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 51 1 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 51 6 N HN ni F A
+<LIT> 0x08 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 51 11 N HN ni F A
+<LIT> 0x68 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 51 16 N HN ni F A
+<LIT> 0xA8 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 51 21 N HN ni F A
+<LIT> 0xA8 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 51 26 N HN ni F A
+<LIT> 0x70 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 51 31 N HN ni F A
+<LIT> 0x70 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 52 1 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 52 6 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 52 11 N HN ni F A
+<LIT> 0xF8 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 52 16 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 52 21 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 52 26 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 52 31 N HN ni F A
+<LIT> 0xF0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 53 1 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 53 6 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 53 11 N HN ni F A
+<LIT> 0xF0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 53 16 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 53 21 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 53 26 N HN ni F A
+<LIT> 0xF0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 53 31 N HN ni F A
+<LIT> 0x70 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 54 1 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 54 6 N HN ni F A
+<LIT> 0x80 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 54 11 N HN ni F A
+<LIT> 0x80 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 54 16 N HN ni F A
+<LIT> 0x80 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 54 21 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 54 26 N HN ni F A
+<LIT> 0x70 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 54 31 N HN ni F A
+<LIT> 0xE0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 55 1 N HN ni F A
+<LIT> 0x90 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 55 6 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 55 11 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 55 16 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 55 21 N HN ni F A
+<LIT> 0x90 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 55 26 N HN ni F A
+<LIT> 0xE0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 55 31 N HN ni F A
+<LIT> 0xF8 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 56 1 N HN ni F A
+<LIT> 0x80 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 56 6 N HN ni F A
+<LIT> 0x80 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 56 11 N HN ni F A
+<LIT> 0xE0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 56 16 N HN ni F A
+<LIT> 0x80 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 56 21 N HN ni F A
+<LIT> 0x80 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 56 26 N HN ni F A
+<LIT> 0xF8 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 56 31 N HN ni F A
+<LIT> 0xF8 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 57 1 N HN ni F A
+<LIT> 0x80 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 57 6 N HN ni F A
+<LIT> 0x80 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 57 11 N HN ni F A
+<LIT> 0xF0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 57 16 N HN ni F A
+<LIT> 0x80 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 57 21 N HN ni F A
+<LIT> 0x80 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 57 26 N HN ni F A
+<LIT> 0x80 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 57 31 N HN ni F A
+<LIT> 0x70 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 58 1 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 58 6 N HN ni F A
+<LIT> 0x80 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 58 11 N HN ni F A
+<LIT> 0xB8 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 58 16 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 58 21 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 58 26 N HN ni F A
+<LIT> 0x78 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 58 31 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 59 1 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 59 6 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 59 11 N HN ni F A
+<LIT> 0xF8 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 59 16 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 59 21 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 59 26 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 59 31 N HN ni F A
+<LIT> 0x70 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 60 1 N HN ni F A
+<LIT> 0x20 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 60 6 N HN ni F A
+<LIT> 0x20 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 60 11 N HN ni F A
+<LIT> 0x20 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 60 16 N HN ni F A
+<LIT> 0x20 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 60 21 N HN ni F A
+<LIT> 0x20 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 60 26 N HN ni F A
+<LIT> 0x70 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 60 31 N HN ni F A
+<LIT> 0x38 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 61 1 N HN ni F A
+<LIT> 0x10 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 61 6 N HN ni F A
+<LIT> 0x10 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 61 11 N HN ni F A
+<LIT> 0x10 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 61 16 N HN ni F A
+<LIT> 0x10 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 61 21 N HN ni F A
+<LIT> 0x90 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 61 26 N HN ni F A
+<LIT> 0x60 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 61 31 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 62 1 N HN ni F A
+<LIT> 0x90 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 62 6 N HN ni F A
+<LIT> 0xA0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 62 11 N HN ni F A
+<LIT> 0xC0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 62 16 N HN ni F A
+<LIT> 0xA0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 62 21 N HN ni F A
+<LIT> 0x90 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 62 26 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 62 31 N HN ni F A
+<LIT> 0x80 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 63 1 N HN ni F A
+<LIT> 0x80 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 63 6 N HN ni F A
+<LIT> 0x80 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 63 11 N HN ni F A
+<LIT> 0x80 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 63 16 N HN ni F A
+<LIT> 0x80 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 63 21 N HN ni F A
+<LIT> 0x80 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 63 26 N HN ni F A
+<LIT> 0xF8 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 63 31 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 64 1 N HN ni F A
+<LIT> 0xD8 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 64 6 N HN ni F A
+<LIT> 0xA8 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 64 11 N HN ni F A
+<LIT> 0xA8 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 64 16 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 64 21 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 64 26 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 64 31 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 65 1 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 65 6 N HN ni F A
+<LIT> 0xC8 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 65 11 N HN ni F A
+<LIT> 0xA8 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 65 16 N HN ni F A
+<LIT> 0x98 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 65 21 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 65 26 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 65 31 N HN ni F A
+<LIT> 0x70 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 66 1 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 66 6 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 66 11 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 66 16 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 66 21 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 66 26 N HN ni F A
+<LIT> 0x70 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 66 31 N HN ni F A
+<LIT> 0xF0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 68 1 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 68 6 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 68 11 N HN ni F A
+<LIT> 0xF0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 68 16 N HN ni F A
+<LIT> 0x80 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 68 21 N HN ni F A
+<LIT> 0x80 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 68 26 N HN ni F A
+<LIT> 0x80 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 68 31 N HN ni F A
+<LIT> 0x70 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 69 1 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 69 6 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 69 11 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 69 16 N HN ni F A
+<LIT> 0xA8 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 69 21 N HN ni F A
+<LIT> 0x90 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 69 26 N HN ni F A
+<LIT> 0x68 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 69 31 N HN ni F A
+<LIT> 0xF0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 70 1 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 70 6 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 70 11 N HN ni F A
+<LIT> 0xF0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 70 16 N HN ni F A
+<LIT> 0xA0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 70 21 N HN ni F A
+<LIT> 0x90 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 70 26 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 70 31 N HN ni F A
+<LIT> 0x78 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 71 1 N HN ni F A
+<LIT> 0x80 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 71 6 N HN ni F A
+<LIT> 0x80 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 71 11 N HN ni F A
+<LIT> 0x70 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 71 16 N HN ni F A
+<LIT> 0x08 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 71 21 N HN ni F A
+<LIT> 0x08 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 71 26 N HN ni F A
+<LIT> 0xF0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 71 31 N HN ni F A
+<LIT> 0xF8 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 72 1 N HN ni F A
+<LIT> 0x20 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 72 6 N HN ni F A
+<LIT> 0x20 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 72 11 N HN ni F A
+<LIT> 0x20 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 72 16 N HN ni F A
+<LIT> 0x20 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 72 21 N HN ni F A
+<LIT> 0x20 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 72 26 N HN ni F A
+<LIT> 0x20 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 72 31 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 73 1 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 73 6 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 73 11 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 73 16 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 73 21 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 73 26 N HN ni F A
+<LIT> 0x70 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 73 31 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 74 1 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 74 6 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 74 11 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 74 16 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 74 21 N HN ni F A
+<LIT> 0x50 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 74 26 N HN ni F A
+<LIT> 0x20 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 74 31 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 75 1 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 75 6 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 75 11 N HN ni F A
+<LIT> 0xA8 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 75 16 N HN ni F A
+<LIT> 0xA8 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 75 21 N HN ni F A
+<LIT> 0xA8 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 75 26 N HN ni F A
+<LIT> 0x50 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 75 31 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 76 1 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 76 6 N HN ni F A
+<LIT> 0x50 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 76 11 N HN ni F A
+<LIT> 0x20 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 76 16 N HN ni F A
+<LIT> 0x50 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 76 21 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 76 26 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 76 31 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 77 1 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 77 6 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 77 11 N HN ni F A
+<LIT> 0x50 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 77 16 N HN ni F A
+<LIT> 0x20 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 77 21 N HN ni F A
+<LIT> 0x20 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 77 26 N HN ni F A
+<LIT> 0x20 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 77 31 N HN ni F A
+<LIT> 0xF8 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 78 1 N HN ni F A
+<LIT> 0x08 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 78 6 N HN ni F A
+<LIT> 0x10 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 78 11 N HN ni F A
+<LIT> 0x20 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 78 16 N HN ni F A
+<LIT> 0x40 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 78 21 N HN ni F A
+<LIT> 0x80 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 78 26 N HN ni F A
+<LIT> 0xF8 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 78 31 N HN ni F A
+<LIT> 0x70 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 79 1 N HN ni F A
+<LIT> 0x40 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 79 6 N HN ni F A
+<LIT> 0x40 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 79 11 N HN ni F A
+<LIT> 0x40 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 79 16 N HN ni F A
+<LIT> 0x40 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 79 21 N HN ni F A
+<LIT> 0x40 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 79 26 N HN ni F A
+<LIT> 0x70 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 79 31 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 80 1 N HN ni F A
+<LIT> 0x80 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 80 6 N HN ni F A
+<LIT> 0x40 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 80 11 N HN ni F A
+<LIT> 0x20 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 80 16 N HN ni F A
+<LIT> 0x10 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 80 21 N HN ni F A
+<LIT> 0x08 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 80 26 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 80 31 N HN ni F A
+<LIT> 0x70 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 81 1 N HN ni F A
+<LIT> 0x10 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 81 6 N HN ni F A
+<LIT> 0x10 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 81 11 N HN ni F A
+<LIT> 0x10 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 81 16 N HN ni F A
+<LIT> 0x10 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 81 21 N HN ni F A
+<LIT> 0x10 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 81 26 N HN ni F A
+<LIT> 0x70 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 81 31 N HN ni F A
+<LIT> 0x20 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 82 1 N HN ni F A
+<LIT> 0x50 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 82 6 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 82 11 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 82 16 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 82 21 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 82 26 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 82 31 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 83 1 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 83 6 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 83 11 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 83 16 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 83 21 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 83 26 N HN ni F A
+<LIT> 0xF8 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 83 31 N HN ni F A
+<LIT> 0x40 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 85 1 N HN ni F A
+<LIT> 0x20 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 85 6 N HN ni F A
+<LIT> 0x10 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 85 11 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 85 16 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 85 21 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 85 26 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 85 31 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 86 1 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 86 6 N HN ni F A
+<LIT> 0x70 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 86 11 N HN ni F A
+<LIT> 0x08 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 86 16 N HN ni F A
+<LIT> 0x78 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 86 21 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 86 26 N HN ni F A
+<LIT> 0x78 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 86 31 N HN ni F A
+<LIT> 0x80 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 87 1 N HN ni F A
+<LIT> 0x80 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 87 6 N HN ni F A
+<LIT> 0xB0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 87 11 N HN ni F A
+<LIT> 0xC8 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 87 16 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 87 21 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 87 26 N HN ni F A
+<LIT> 0xF0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 87 31 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 88 1 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 88 6 N HN ni F A
+<LIT> 0x70 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 88 11 N HN ni F A
+<LIT> 0x80 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 88 16 N HN ni F A
+<LIT> 0x80 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 88 21 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 88 26 N HN ni F A
+<LIT> 0x70 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 88 31 N HN ni F A
+<LIT> 0x08 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 89 1 N HN ni F A
+<LIT> 0x08 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 89 6 N HN ni F A
+<LIT> 0x68 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 89 11 N HN ni F A
+<LIT> 0x98 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 89 16 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 89 21 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 89 26 N HN ni F A
+<LIT> 0x78 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 89 31 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 90 1 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 90 6 N HN ni F A
+<LIT> 0x70 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 90 11 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 90 16 N HN ni F A
+<LIT> 0xF8 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 90 21 N HN ni F A
+<LIT> 0x80 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 90 26 N HN ni F A
+<LIT> 0x70 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 90 31 N HN ni F A
+<LIT> 0x30 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 91 1 N HN ni F A
+<LIT> 0x48 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 91 6 N HN ni F A
+<LIT> 0x40 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 91 11 N HN ni F A
+<LIT> 0xE0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 91 16 N HN ni F A
+<LIT> 0x40 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 91 21 N HN ni F A
+<LIT> 0x40 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 91 26 N HN ni F A
+<LIT> 0x40 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 91 31 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 92 1 N HN ni F A
+<LIT> 0x78 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 92 6 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 92 11 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 92 16 N HN ni F A
+<LIT> 0x78 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 92 21 N HN ni F A
+<LIT> 0x08 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 92 26 N HN ni F A
+<LIT> 0x70 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 92 31 N HN ni F A
+<LIT> 0x80 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 93 1 N HN ni F A
+<LIT> 0x80 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 93 6 N HN ni F A
+<LIT> 0xB0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 93 11 N HN ni F A
+<LIT> 0xC8 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 93 16 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 93 21 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 93 26 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 93 31 N HN ni F A
+<LIT> 0x20 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 94 1 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 94 6 N HN ni F A
+<LIT> 0x60 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 94 11 N HN ni F A
+<LIT> 0x20 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 94 16 N HN ni F A
+<LIT> 0x20 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 94 21 N HN ni F A
+<LIT> 0x20 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 94 26 N HN ni F A
+<LIT> 0x70 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 94 31 N HN ni F A
+<LIT> 0x10 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 95 1 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 95 6 N HN ni F A
+<LIT> 0x30 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 95 11 N HN ni F A
+<LIT> 0x10 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 95 16 N HN ni F A
+<LIT> 0x10 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 95 21 N HN ni F A
+<LIT> 0x90 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 95 26 N HN ni F A
+<LIT> 0x60 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 95 31 N HN ni F A
+<LIT> 0x80 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 96 1 N HN ni F A
+<LIT> 0x80 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 96 6 N HN ni F A
+<LIT> 0x90 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 96 11 N HN ni F A
+<LIT> 0xA0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 96 16 N HN ni F A
+<LIT> 0xC0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 96 21 N HN ni F A
+<LIT> 0xA0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 96 26 N HN ni F A
+<LIT> 0x90 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 96 31 N HN ni F A
+<LIT> 0x60 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 97 1 N HN ni F A
+<LIT> 0x20 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 97 6 N HN ni F A
+<LIT> 0x20 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 97 11 N HN ni F A
+<LIT> 0x20 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 97 16 N HN ni F A
+<LIT> 0x20 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 97 21 N HN ni F A
+<LIT> 0x20 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 97 26 N HN ni F A
+<LIT> 0x70 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 97 31 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 98 1 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 98 6 N HN ni F A
+<LIT> 0xD0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 98 11 N HN ni F A
+<LIT> 0xA8 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 98 16 N HN ni F A
+<LIT> 0xA8 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 98 21 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 98 26 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 98 31 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 99 1 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 99 6 N HN ni F A
+<LIT> 0xB0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 99 11 N HN ni F A
+<LIT> 0xC8 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 99 16 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 99 21 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 99 26 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 99 31 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 100 1 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 100 6 N HN ni F A
+<LIT> 0x70 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 100 11 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 100 16 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 100 21 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 100 26 N HN ni F A
+<LIT> 0x70 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 100 31 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 102 1 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 102 6 N HN ni F A
+<LIT> 0xF0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 102 11 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 102 16 N HN ni F A
+<LIT> 0xF0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 102 21 N HN ni F A
+<LIT> 0x80 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 102 26 N HN ni F A
+<LIT> 0x80 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 102 31 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 103 1 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 103 6 N HN ni F A
+<LIT> 0x68 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 103 11 N HN ni F A
+<LIT> 0x98 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 103 16 N HN ni F A
+<LIT> 0x78 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 103 21 N HN ni F A
+<LIT> 0x08 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 103 26 N HN ni F A
+<LIT> 0x08 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 103 31 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 104 1 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 104 6 N HN ni F A
+<LIT> 0xB0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 104 11 N HN ni F A
+<LIT> 0xC8 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 104 16 N HN ni F A
+<LIT> 0x80 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 104 21 N HN ni F A
+<LIT> 0x80 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 104 26 N HN ni F A
+<LIT> 0x80 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 104 31 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 105 1 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 105 6 N HN ni F A
+<LIT> 0x70 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 105 11 N HN ni F A
+<LIT> 0x80 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 105 16 N HN ni F A
+<LIT> 0x70 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 105 21 N HN ni F A
+<LIT> 0x08 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 105 26 N HN ni F A
+<LIT> 0xF0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 105 31 N HN ni F A
+<LIT> 0x40 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 106 1 N HN ni F A
+<LIT> 0x40 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 106 6 N HN ni F A
+<LIT> 0xE0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 106 11 N HN ni F A
+<LIT> 0x40 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 106 16 N HN ni F A
+<LIT> 0x40 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 106 21 N HN ni F A
+<LIT> 0x48 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 106 26 N HN ni F A
+<LIT> 0x30 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 106 31 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 107 1 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 107 6 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 107 11 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 107 16 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 107 21 N HN ni F A
+<LIT> 0x98 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 107 26 N HN ni F A
+<LIT> 0x68 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 107 31 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 108 1 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 108 6 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 108 11 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 108 16 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 108 21 N HN ni F A
+<LIT> 0x50 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 108 26 N HN ni F A
+<LIT> 0x20 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 108 31 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 109 1 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 109 6 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 109 11 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 109 16 N HN ni F A
+<LIT> 0xA8 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 109 21 N HN ni F A
+<LIT> 0xA8 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 109 26 N HN ni F A
+<LIT> 0x50 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 109 31 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 110 1 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 110 6 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 110 11 N HN ni F A
+<LIT> 0x50 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 110 16 N HN ni F A
+<LIT> 0x20 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 110 21 N HN ni F A
+<LIT> 0x50 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 110 26 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 110 31 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 111 1 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 111 6 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 111 11 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 111 16 N HN ni F A
+<LIT> 0x78 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 111 21 N HN ni F A
+<LIT> 0x08 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 111 26 N HN ni F A
+<LIT> 0x70 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 111 31 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 112 1 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 112 6 N HN ni F A
+<LIT> 0xF8 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 112 11 N HN ni F A
+<LIT> 0x10 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 112 16 N HN ni F A
+<LIT> 0x20 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 112 21 N HN ni F A
+<LIT> 0x40 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 112 26 N HN ni F A
+<LIT> 0xF8 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 112 31 N HN ni F A
+<LIT> 0x10 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 113 1 N HN ni F A
+<LIT> 0x20 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 113 6 N HN ni F A
+<LIT> 0x20 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 113 11 N HN ni F A
+<LIT> 0x40 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 113 16 N HN ni F A
+<LIT> 0x20 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 113 21 N HN ni F A
+<LIT> 0x20 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 113 26 N HN ni F A
+<LIT> 0x10 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 113 31 N HN ni F A
+<LIT> 0x20 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 114 1 N HN ni F A
+<LIT> 0x20 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 114 6 N HN ni F A
+<LIT> 0x20 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 114 11 N HN ni F A
+<LIT> 0x20 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 114 16 N HN ni F A
+<LIT> 0x20 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 114 21 N HN ni F A
+<LIT> 0x20 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 114 26 N HN ni F A
+<LIT> 0x20 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 114 31 N HN ni F A
+<LIT> 0x40 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 115 1 N HN ni F A
+<LIT> 0x20 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 115 6 N HN ni F A
+<LIT> 0x20 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 115 11 N HN ni F A
+<LIT> 0x10 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 115 16 N HN ni F A
+<LIT> 0x20 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 115 21 N HN ni F A
+<LIT> 0x20 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 115 26 N HN ni F A
+<LIT> 0x40 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 115 31 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 117 1 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 117 6 N HN ni F A
+<LIT> 0x40 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 117 11 N HN ni F A
+<LIT> 0xa8 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 117 16 N HN ni F A
+<LIT> 0x10 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 117 21 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 117 26 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 117 31 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 118 1 N HN ni F A
+<LIT> 0x20 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 118 6 N HN ni F A
+<LIT> 0x40 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 118 11 N HN ni F A
+<LIT> 0xF8 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 118 16 N HN ni F A
+<LIT> 0x40 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 118 21 N HN ni F A
+<LIT> 0x20 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 118 26 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 118 31 N HN ni F A
+<LIT> 0x38 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 120 1 N HN ni F A
+<LIT> 0xF8 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 120 6 N HN ni F A
+<LIT> 0x38 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 120 11 N HN ni F A
+<LIT> 0x38 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 120 16 N HN ni F A
+<LIT> 0x38 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 120 21 N HN ni F A
+<LIT> 0xF8 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 120 26 N HN ni F A
+<LIT> 0x38 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 120 31 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 121 1 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 121 6 N HN ni F A
+<LIT> 0xD0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 121 11 N HN ni F A
+<LIT> 0xE0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 121 16 N HN ni F A
+<LIT> 0xC0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 121 21 N HN ni F A
+<LIT> 0x80 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 121 26 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 121 31 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 122 1 N HN ni F A
+<LIT> 0x80 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 122 6 N HN ni F A
+<LIT> 0x40 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 122 11 N HN ni F A
+<LIT> 0x20 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 122 16 N HN ni F A
+<LIT> 0x18 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 122 21 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 122 26 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 122 31 N HN ni F A
+<LIT> 0x38 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 124 1 N HN ni F A
+<LIT> 0x20 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 124 6 N HN ni F A
+<LIT> 0x68 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 124 11 N HN ni F A
+<LIT> 0x68 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 124 16 N HN ni F A
+<LIT> 0x68 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 124 21 N HN ni F A
+<LIT> 0x20 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 124 26 N HN ni F A
+<LIT> 0x38 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 124 31 N HN ni F A
+<LIT> 0xF8 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 125 1 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 125 6 N HN ni F A
+<LIT> 0xB0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 125 11 N HN ni F A
+<LIT> 0xB0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 125 16 N HN ni F A
+<LIT> 0xB0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 125 21 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 125 26 N HN ni F A
+<LIT> 0xF8 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 125 31 N HN ni F A
+<LIT> 0xF0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 126 1 N HN ni F A
+<LIT> 0x10 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 126 6 N HN ni F A
+<LIT> 0xD0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 126 11 N HN ni F A
+<LIT> 0xD0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 126 16 N HN ni F A
+<LIT> 0xD0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 126 21 N HN ni F A
+<LIT> 0x10 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 126 26 N HN ni F A
+<LIT> 0xF0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 126 31 N HN ni F A
+<LIT> 0x38 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 128 1 N HN ni F A
+<LIT> 0x20 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 128 6 N HN ni F A
+<LIT> 0x60 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 128 11 N HN ni F A
+<LIT> 0x60 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 128 16 N HN ni F A
+<LIT> 0x60 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 128 21 N HN ni F A
+<LIT> 0x20 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 128 26 N HN ni F A
+<LIT> 0x38 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 128 31 N HN ni F A
+<LIT> 0xF8 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 129 1 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 129 6 N HN ni F A
+<LIT> 0x30 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 129 11 N HN ni F A
+<LIT> 0x30 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 129 16 N HN ni F A
+<LIT> 0x30 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 129 21 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 129 26 N HN ni F A
+<LIT> 0xF8 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 129 31 N HN ni F A
+<LIT> 0xF8 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 133 1 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 133 6 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 133 11 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 133 16 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 133 21 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 133 26 N HN ni F A
+<LIT> 0xF8 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 133 31 N HN ni F A
+<LIT> 0xF8 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 137 1 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 137 6 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 137 11 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 137 16 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 137 21 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 137 26 N HN ni F A
+<LIT> 0xF8 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 137 31 N HN ni F A
+<LIT> 0xF0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 138 1 N HN ni F A
+<LIT> 0x10 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 138 6 N HN ni F A
+<LIT> 0x10 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 138 11 N HN ni F A
+<LIT> 0x10 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 138 16 N HN ni F A
+<LIT> 0x10 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 138 21 N HN ni F A
+<LIT> 0x10 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 138 26 N HN ni F A
+<LIT> 0xF0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 138 31 N HN ni F A
+<LIT> 0x38 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 141 1 N HN ni F A
+<LIT> 0x20 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 141 6 N HN ni F A
+<LIT> 0x08 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 141 11 N HN ni F A
+<LIT> 0xF8 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 141 16 N HN ni F A
+<LIT> 0x08 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 141 21 N HN ni F A
+<LIT> 0x20 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 141 26 N HN ni F A
+<LIT> 0x38 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 141 31 N HN ni F A
+<LIT> 0xF8 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 142 1 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 142 6 N HN ni F A
+<LIT> 0x30 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 142 11 N HN ni F A
+<LIT> 0xB0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 142 16 N HN ni F A
+<LIT> 0x30 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 142 21 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 142 26 N HN ni F A
+<LIT> 0xF8 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 142 31 N HN ni F A
+<LIT> 0x20 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 145 1 N HN ni F A
+<LIT> 0x20 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 145 6 N HN ni F A
+<LIT> 0x20 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 145 11 N HN ni F A
+<LIT> 0xf8 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 145 16 N HN ni F A
+<LIT> 0x70 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 145 21 N HN ni F A
+<LIT> 0x20 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 145 26 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 145 31 N HN ni F A
+<LIT> 0x20 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 146 1 N HN ni F A
+<LIT> 0x70 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 146 6 N HN ni F A
+<LIT> 0xf8 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 146 11 N HN ni F A
+<LIT> 0x20 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 146 16 N HN ni F A
+<LIT> 0x20 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 146 21 N HN ni F A
+<LIT> 0x20 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 146 26 N HN ni F A
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 146 31 N HN ni F A
+<LIT> 0xf8 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 148 1 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 148 6 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 148 11 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 148 16 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 148 21 N HN ni F A
+<LIT> 0x88 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 148 26 N HN ni F A
+<LIT> 0xf8 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 148 31 N HN ni F A
+<DEFINE> ASCII_TABLE C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 15 N DR OV F X [784,=uc] S
+<DEFINE> ASCII_TABLE C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 15 N DF OV F X [784,=uc] S
+<DEFINE> lData C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 152 N DC OV P N ul R
+<DEFINE> _CPU_Ram_Write C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 152 N DC OF F I (.,ul) -
+<DEFINE> X0 C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 153 N DC OV P N ui R
+<DEFINE> Y0 C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 153 N DC OV P N ui R
+<DEFINE> X1 C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 153 N DC OV P N ui R
+<DEFINE> Y1 C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 153 N DC OV P N ui R
+<DEFINE> Set_Window_Size C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 153 N DC OF F I (.,ui,ui,ui,ui) -
+<DEFINE> X0 C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 154 N DC OV P N ni R
+<DEFINE> Y0 C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 154 N DC OV P N ni R
+<DEFINE> X1 C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 154 N DC OV P N ni R
+<DEFINE> Y1 C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 154 N DC OV P N ni R
+<DEFINE> color C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 154 N DC OV P N ul R
+<DEFINE> Draw_Line C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 154 N DC OF F I (.,ni,ni,ni,ni,ul) -
+<DEFINE> LCD_REG C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 156 N DF OM - - - O
+<LIT> 0x60000000 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 156 53 N HN - F M
+<DEFINE> LCD_RAM C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 157 N DF OM - - - O
+<LIT> 0x60020000 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 157 53 N HN - F M
+<DEFINE> US_DIV C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 159 N DF OM - - - O
+<LIT> 1000000 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 159 21 N DN - F M
+<DEFINE> MS_MUL C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 160 N DF OM - - - O
+<LIT> 1000 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 160 21 N DN - F M
+<DEFINE> COLOR_BLUE C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 161 N DF OM - - - O
+<LIT> 0x0000FF - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 161 21 N HN - F M
+<DEFINE> COLOR_GREEN C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 162 N DF OM - - - O
+<LIT> 0x00FF00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 162 21 N HN - F M
+<DEFINE> COLOR_RED C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 163 N DF OM - - - O
+<LIT> 0xFF0000 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 163 21 N HN - F M
+<DEFINE> SHIFT_2 C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 164 N DF OM - - - O
+<LIT> 2 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 164 21 N DN - F M
+<DEFINE> SHIFT_3 C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 165 N DF OM - - - O
+<LIT> 3 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 165 21 N DN - F M
+<DEFINE> SHIFT_5 C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 166 N DF OM - - - O
+<LIT> 5 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 166 21 N DN - F M
+<DEFINE> SHIFT_8 C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 167 N DF OM - - - O
+<LIT> 8 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 167 21 N DN - F M
+<DEFINE> SHIFT_11 C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 168 N DF OM - - - O
+<LIT> 11 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 168 21 N DN - F M
+<DEFINE> SHIFT_16 C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 169 N DF OM - - - O
+<LIT> 16 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 169 21 N DN - F M
+<DEFINE> DISPLAY_ON C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 170 N DF OM - - - O
+<LIT> 0x29 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 170 21 N HN - F M
+<DEFINE> DISPLAY_OFF C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 171 N DF OM - - - O
+<LIT> 0x28 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 171 21 N HN - F M
+<DEFINE> DELAY_10 C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 173 N DF OM - - - O
+<LIT> 10 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 173 21 N DN - F M
+<DEFINE> DELAY_100 C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 174 N DF OM - - - O
+<LIT> 100 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 174 21 N DN - F M
+<EXTD> CPU_Command_Write C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 178
+<DEFINE> nData C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 178 N DC OV B N us R
+<DEFINE> CPU_Command_Write C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 178 N DR OF F X (.,us) -
+<DEFINE> CPU_Command_Write C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 178 N DF OF F X (.,us) -
+<CTLG> CPU_Command_Write 1
+<CTLG> 1 2
+<CTLG> 2 4
+<CTLGN> 179 181 181 181 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c
+<S>STNAM  CPU_Command_Write
+<S>STCYC  1
+<S>STMCC  0 (1:1)
+<S>STMIF  0
+<S>STSUB  0
+<S>STAKI  1
+<S>STLIN  1
+<S>STXLN  1
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  0
+<S>STPTH  1
+<S>STPDN  1.00   
+<S>STPBG  0
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  0
+<S>STAV1  6
+<S>STAV2  6
+<S>STAV3  6
+<S>STST1  1
+<S>STST2  1
+<S>STST3  1
+<S>STPAR  1
+<S>STCAL  0
+<S>STFN1  4
+<S>STFN2  2
+
+<EXTD> CPU_Data_Write C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 183
+<DEFINE> nData C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 183 N DC OV B N us R
+<DEFINE> CPU_Data_Write C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 183 N DR OF F X (.,us) -
+<DEFINE> CPU_Data_Write C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 183 N DF OF F X (.,us) -
+<CTLG> CPU_Data_Write 1
+<CTLG> 1 2
+<CTLG> 2 4
+<CTLGN> 184 186 186 186 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c
+<S>STNAM  CPU_Data_Write
+<S>STCYC  1
+<S>STMCC  0 (1:1)
+<S>STMIF  0
+<S>STSUB  0
+<S>STAKI  1
+<S>STLIN  1
+<S>STXLN  1
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  0
+<S>STPTH  1
+<S>STPDN  1.00   
+<S>STPBG  0
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  0
+<S>STAV1  6
+<S>STAV2  6
+<S>STAV3  6
+<S>STST1  1
+<S>STST2  1
+<S>STST3  1
+<S>STPAR  1
+<S>STCAL  0
+<S>STFN1  4
+<S>STFN2  2
+
+<EXTD> CPU_Data_Read C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 188
+<DEFINE> CPU_Data_Read C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 188 N DR OF F X (us,.) -
+<DEFINE> CPU_Data_Read C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 188 N DF OF F X (us,.) -
+<CTLG> CPU_Data_Read 1
+<CTLG> 1 3
+<CTLGN> 189 190 190 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c
+<S>STNAM  CPU_Data_Read
+<S>STCYC  1
+<S>STMCC  0 (1:1)
+<S>STMIF  0
+<S>STSUB  0
+<S>STAKI  1
+<S>STLIN  1
+<S>STXLN  1
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  0
+<S>STPTH  1
+<S>STPDN  1.00   
+<S>STPBG  0
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  1
+<S>STAV1  5
+<S>STAV2  5
+<S>STAV3  5
+<S>STST1  1
+<S>STST2  1
+<S>STST3  1
+<S>STPAR  0
+<S>STCAL  0
+<S>STFN1  4
+<S>STFN2  1
+
+<DEFINE> lData C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 230 N DC OV B N ul R
+<DEFINE> _CPU_Ram_Write C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 230 N DR OF F I (.,ul) -
+<DEFINE> _CPU_Ram_Write C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 230 N DF OF F I (.,ul) -
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 232 5 N ON - B P
+<DEFINE> nRGB C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 234 N DC OV B N us -
+<DEFINE> nRGB C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 234 N DF OV B N us -
+<DEFINE> nBlue C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 235 N DC OV B N us -
+<DEFINE> nBlue C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 235 N DF OV B N us -
+<DEFINE> nGreen C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 236 N DC OV B N us -
+<DEFINE> nGreen C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 236 N DF OV B N us -
+<DEFINE> nRed C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 237 N DC OV B N us -
+<DEFINE> nRed C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 237 N DF OV B N us -
+<RDEF> C Calls
+<R>C _CPU_Ram_Write CPU_Data_Write 243
+<RDEF> X Refers-to
+<R>X _CPU_Ram_Write CPU_Data_Write 243 R
+<CTLG> _CPU_Ram_Write 1
+<CTLG> 1 2
+<CTLG> 2 4
+<CTLGN> 231 245 245 245 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c
+<S>STNAM  _CPU_Ram_Write
+<S>STCYC  1
+<S>STMCC  0 (1:1)
+<S>STMIF  0
+<S>STSUB  1
+<S>STAKI  2
+<S>STLIN  13
+<S>STXLN  8
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  4
+<S>STPTH  1
+<S>STPDN  0.13   
+<S>STPBG  0
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  0
+<S>STAV1  9
+<S>STAV2  9
+<S>STAV3  17
+<S>STST1  9
+<S>STST2  9
+<S>STST3  5
+<S>STPAR  1
+<S>STCAL  1
+<S>STFN1  58
+<S>STFN2  30
+
+<EXTD> LCD_OnOff C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 248
+<DEFINE> nOnOff C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 248 N DC OV B N ni R
+<DEFINE> LCD_OnOff C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 248 N DR OF F X (.,ni) -
+<DEFINE> LCD_OnOff C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 248 N DF OF F X (.,ni) -
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 254 18 N DN ni B X
+<R>C LCD_OnOff CPU_Command_Write 256
+<R>X LCD_OnOff CPU_Command_Write 256 R
+<R>C LCD_OnOff CPU_Command_Write 260
+<R>X LCD_OnOff CPU_Command_Write 260 R
+<CTLG> LCD_OnOff 1
+<CTLG> 1 2
+<CTLG> 1 3
+<CTLG> 2 4
+<CTLG> 3 4
+<CTLG> 4 6
+<CTLGN> 249 254 254 258 263 263 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c
+<S>STNAM  LCD_OnOff
+<S>STCYC  2
+<S>STMCC  0 (2:2)
+<S>STMIF  1
+<S>STSUB  2
+<S>STAKI  4
+<S>STLIN  14
+<S>STXLN  5
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  0
+<S>STPTH  2
+<S>STPDN  0.40   
+<S>STPBG  0
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  1
+<S>STAV1  4
+<S>STAV2  6
+<S>STAV3  6
+<S>STST1  6
+<S>STST2  4
+<S>STST3  4
+<S>STPAR  1
+<S>STCAL  1
+<S>STFN1  19
+<S>STFN2  6
+
+<EXTD> LCD_init C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 268
+<DEFINE> LCD_init C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 268 N DR OF F X (.,.) -
+<DEFINE> LCD_init C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 268 N DF OF F X (.,.) -
+<R>C LCD_init HAL_GPIO_WritePin 276
+<R>X LCD_init HAL_GPIO_WritePin 276 R
+<R>C LCD_init HAL_Delay 277
+<R>X LCD_init HAL_Delay 277 R
+<R>C LCD_init HAL_GPIO_WritePin 278
+<R>X LCD_init HAL_GPIO_WritePin 278 R
+<R>C LCD_init HAL_Delay 279
+<R>X LCD_init HAL_Delay 279 R
+<R>C LCD_init HAL_GPIO_WritePin 280
+<R>X LCD_init HAL_GPIO_WritePin 280 R
+<R>C LCD_init HAL_Delay 281
+<R>X LCD_init HAL_Delay 281 R
+<R>C LCD_init CPU_Command_Write 285
+<R>X LCD_init CPU_Command_Write 285 R
+<LIT> 0xda - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 285 23 N HN ni B X
+<R>C LCD_init CPU_Data_Read 287
+<R>X LCD_init CPU_Data_Read 287 R
+<R>C LCD_init CPU_Command_Write 292
+<R>X LCD_init CPU_Command_Write 292 R
+<LIT> 0x36 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 292 23 N HN ni B X
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 293 5 N ON - B P
+<R>C LCD_init CPU_Data_Write 296
+<R>X LCD_init CPU_Data_Write 296 R
+<LIT> 0x48 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 296 20 N HN ni B X
+<R>C LCD_init CPU_Command_Write 299
+<R>X LCD_init CPU_Command_Write 299 R
+<LIT> 0x3A - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 299 23 N HN ni B X
+<R>C LCD_init CPU_Data_Write 301
+<R>X LCD_init CPU_Data_Write 301 R
+<LIT> 0x05 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 301 20 N HN ni B X
+<R>C LCD_init CPU_Command_Write 306
+<R>X LCD_init CPU_Command_Write 306 R
+<LIT> 0xF0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 306 23 N HN ni B X
+<R>C LCD_init CPU_Data_Write 307
+<R>X LCD_init CPU_Data_Write 307 R
+<LIT> 0xC3 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 307 20 N HN ni B X
+<R>C LCD_init CPU_Command_Write 309
+<R>X LCD_init CPU_Command_Write 309 R
+<LIT> 0xF0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 309 23 N HN ni B X
+<R>C LCD_init CPU_Data_Write 310
+<R>X LCD_init CPU_Data_Write 310 R
+<LIT> 0x96 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 310 20 N HN ni B X
+<R>C LCD_init CPU_Command_Write 313
+<R>X LCD_init CPU_Command_Write 313 R
+<LIT> 0xB4 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 313 23 N HN ni B X
+<R>C LCD_init CPU_Data_Write 314
+<R>X LCD_init CPU_Data_Write 314 R
+<LIT> 0x01 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 314 20 N HN ni B X
+<R>C LCD_init CPU_Command_Write 316
+<R>X LCD_init CPU_Command_Write 316 R
+<LIT> 0xB6 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 316 23 N HN ni B X
+<R>C LCD_init CPU_Data_Write 318
+<R>X LCD_init CPU_Data_Write 318 R
+<LIT> 0x80 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 318 20 N HN ni B X
+<R>C LCD_init CPU_Data_Write 319
+<R>X LCD_init CPU_Data_Write 319 R
+<LIT> 0x02 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 319 20 N HN ni B X
+<R>C LCD_init CPU_Data_Write 320
+<R>X LCD_init CPU_Data_Write 320 R
+<LIT> 0x3B - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 320 20 N HN ni B X
+<R>C LCD_init CPU_Command_Write 322
+<R>X LCD_init CPU_Command_Write 322 R
+<LIT> 0xB7 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 322 23 N HN ni B X
+<R>C LCD_init CPU_Data_Write 323
+<R>X LCD_init CPU_Data_Write 323 R
+<LIT> 0xc0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 323 20 N HN ni B X
+<R>C LCD_init CPU_Command_Write 325
+<R>X LCD_init CPU_Command_Write 325 R
+<LIT> 0xC1 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 325 23 N HN ni B X
+<R>C LCD_init CPU_Data_Write 326
+<R>X LCD_init CPU_Data_Write 326 R
+<LIT> 0x13 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 326 20 N HN ni B X
+<R>C LCD_init CPU_Command_Write 328
+<R>X LCD_init CPU_Command_Write 328 R
+<LIT> 0xC2 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 328 23 N HN ni B X
+<R>C LCD_init CPU_Data_Write 329
+<R>X LCD_init CPU_Data_Write 329 R
+<LIT> 0xA7 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 329 20 N HN ni B X
+<R>C LCD_init CPU_Command_Write 331
+<R>X LCD_init CPU_Command_Write 331 R
+<LIT> 0xC5 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 331 23 N HN ni B X
+<R>C LCD_init CPU_Data_Write 332
+<R>X LCD_init CPU_Data_Write 332 R
+<LIT> 0x26 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 332 20 N HN ni B X
+<R>C LCD_init CPU_Command_Write 334
+<R>X LCD_init CPU_Command_Write 334 R
+<LIT> 0xE8 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 334 23 N HN ni B X
+<R>C LCD_init CPU_Data_Write 335
+<R>X LCD_init CPU_Data_Write 335 R
+<LIT> 0x40 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 335 20 N HN ni B X
+<R>C LCD_init CPU_Data_Write 336
+<R>X LCD_init CPU_Data_Write 336 R
+<LIT> 0x8A - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 336 20 N HN ni B X
+<R>C LCD_init CPU_Data_Write 337
+<R>X LCD_init CPU_Data_Write 337 R
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 337 20 N HN ni B X
+<R>C LCD_init CPU_Data_Write 338
+<R>X LCD_init CPU_Data_Write 338 R
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 338 20 N HN ni B X
+<R>C LCD_init CPU_Data_Write 339
+<R>X LCD_init CPU_Data_Write 339 R
+<LIT> 0x29 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 339 20 N HN ni B X
+<R>C LCD_init CPU_Data_Write 340
+<R>X LCD_init CPU_Data_Write 340 R
+<LIT> 0x19 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 340 20 N HN ni B X
+<R>C LCD_init CPU_Data_Write 341
+<R>X LCD_init CPU_Data_Write 341 R
+<LIT> 0xA5 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 341 20 N HN ni B X
+<R>C LCD_init CPU_Data_Write 342
+<R>X LCD_init CPU_Data_Write 342 R
+<LIT> 0x33 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 342 20 N HN ni B X
+<R>C LCD_init CPU_Command_Write 344
+<R>X LCD_init CPU_Command_Write 344 R
+<LIT> 0xE0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 344 23 N HN ni B X
+<R>C LCD_init CPU_Data_Write 345
+<R>X LCD_init CPU_Data_Write 345 R
+<LIT> 0xF0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 345 20 N HN ni B X
+<R>C LCD_init CPU_Data_Write 346
+<R>X LCD_init CPU_Data_Write 346 R
+<LIT> 0x07 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 346 20 N HN ni B X
+<R>C LCD_init CPU_Data_Write 347
+<R>X LCD_init CPU_Data_Write 347 R
+<LIT> 0x0B - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 347 20 N HN ni B X
+<R>C LCD_init CPU_Data_Write 348
+<R>X LCD_init CPU_Data_Write 348 R
+<LIT> 0x08 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 348 20 N HN ni B X
+<R>C LCD_init CPU_Data_Write 349
+<R>X LCD_init CPU_Data_Write 349 R
+<LIT> 0x07 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 349 20 N HN ni B X
+<R>C LCD_init CPU_Data_Write 350
+<R>X LCD_init CPU_Data_Write 350 R
+<LIT> 0x04 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 350 20 N HN ni B X
+<R>C LCD_init CPU_Data_Write 351
+<R>X LCD_init CPU_Data_Write 351 R
+<LIT> 0x2E - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 351 20 N HN ni B X
+<R>C LCD_init CPU_Data_Write 352
+<R>X LCD_init CPU_Data_Write 352 R
+<LIT> 0x33 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 352 20 N HN ni B X
+<R>C LCD_init CPU_Data_Write 353
+<R>X LCD_init CPU_Data_Write 353 R
+<LIT> 0x45 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 353 20 N HN ni B X
+<R>C LCD_init CPU_Data_Write 354
+<R>X LCD_init CPU_Data_Write 354 R
+<LIT> 0x17 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 354 20 N HN ni B X
+<R>C LCD_init CPU_Data_Write 355
+<R>X LCD_init CPU_Data_Write 355 R
+<LIT> 0x13 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 355 20 N HN ni B X
+<R>C LCD_init CPU_Data_Write 356
+<R>X LCD_init CPU_Data_Write 356 R
+<LIT> 0x13 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 356 20 N HN ni B X
+<R>C LCD_init CPU_Data_Write 357
+<R>X LCD_init CPU_Data_Write 357 R
+<LIT> 0x29 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 357 20 N HN ni B X
+<R>C LCD_init CPU_Data_Write 358
+<R>X LCD_init CPU_Data_Write 358 R
+<LIT> 0x30 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 358 20 N HN ni B X
+<R>C LCD_init CPU_Command_Write 360
+<R>X LCD_init CPU_Command_Write 360 R
+<LIT> 0xE1 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 360 23 N HN ni B X
+<R>C LCD_init CPU_Data_Write 361
+<R>X LCD_init CPU_Data_Write 361 R
+<LIT> 0xF0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 361 20 N HN ni B X
+<R>C LCD_init CPU_Data_Write 362
+<R>X LCD_init CPU_Data_Write 362 R
+<LIT> 0x07 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 362 20 N HN ni B X
+<R>C LCD_init CPU_Data_Write 363
+<R>X LCD_init CPU_Data_Write 363 R
+<LIT> 0x0B - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 363 20 N HN ni B X
+<R>C LCD_init CPU_Data_Write 364
+<R>X LCD_init CPU_Data_Write 364 R
+<LIT> 0x08 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 364 20 N HN ni B X
+<R>C LCD_init CPU_Data_Write 365
+<R>X LCD_init CPU_Data_Write 365 R
+<LIT> 0x07 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 365 20 N HN ni B X
+<R>C LCD_init CPU_Data_Write 366
+<R>X LCD_init CPU_Data_Write 366 R
+<LIT> 0x04 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 366 20 N HN ni B X
+<R>C LCD_init CPU_Data_Write 367
+<R>X LCD_init CPU_Data_Write 367 R
+<LIT> 0x2E - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 367 20 N HN ni B X
+<R>C LCD_init CPU_Data_Write 368
+<R>X LCD_init CPU_Data_Write 368 R
+<LIT> 0x33 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 368 20 N HN ni B X
+<R>C LCD_init CPU_Data_Write 369
+<R>X LCD_init CPU_Data_Write 369 R
+<LIT> 0x45 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 369 20 N HN ni B X
+<R>C LCD_init CPU_Data_Write 370
+<R>X LCD_init CPU_Data_Write 370 R
+<LIT> 0x17 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 370 20 N HN ni B X
+<R>C LCD_init CPU_Data_Write 371
+<R>X LCD_init CPU_Data_Write 371 R
+<LIT> 0x13 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 371 20 N HN ni B X
+<R>C LCD_init CPU_Data_Write 372
+<R>X LCD_init CPU_Data_Write 372 R
+<LIT> 0x13 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 372 20 N HN ni B X
+<R>C LCD_init CPU_Data_Write 373
+<R>X LCD_init CPU_Data_Write 373 R
+<LIT> 0x29 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 373 20 N HN ni B X
+<R>C LCD_init CPU_Data_Write 374
+<R>X LCD_init CPU_Data_Write 374 R
+<LIT> 0x30 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 374 20 N HN ni B X
+<R>C LCD_init CPU_Command_Write 379
+<R>X LCD_init CPU_Command_Write 379 R
+<LIT> 0xF0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 379 23 N HN ni B X
+<R>C LCD_init CPU_Data_Write 380
+<R>X LCD_init CPU_Data_Write 380 R
+<LIT> 0x3C - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 380 20 N HN ni B X
+<R>C LCD_init CPU_Command_Write 382
+<R>X LCD_init CPU_Command_Write 382 R
+<LIT> 0xF0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 382 23 N HN ni B X
+<R>C LCD_init CPU_Data_Write 383
+<R>X LCD_init CPU_Data_Write 383 R
+<LIT> 0x69 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 383 20 N HN ni B X
+<R>C LCD_init CPU_Command_Write 387
+<R>X LCD_init CPU_Command_Write 387 R
+<LIT> 0x21 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 387 23 N HN ni B X
+<R>C LCD_init CPU_Command_Write 388
+<R>X LCD_init CPU_Command_Write 388 R
+<LIT> 0x11 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 388 23 N HN ni B X
+<R>C LCD_init CPU_Command_Write 389
+<R>X LCD_init CPU_Command_Write 389 R
+<LIT> 0x29 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 389 23 N HN ni B X
+<R>C LCD_init CPU_Command_Write 390
+<R>X LCD_init CPU_Command_Write 390 R
+<LIT> 0x2C - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 390 23 N HN ni B X
+<CTLG> LCD_init 1
+<CTLG> 1 2
+<CTLG> 2 4
+<CTLGN> 269 392 392 392 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c
+<S>STNAM  LCD_init
+<S>STCYC  1
+<S>STMCC  0 (1:1)
+<S>STMIF  0
+<S>STSUB  77
+<S>STAKI  78
+<S>STLIN  122
+<S>STXLN  77
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  0
+<S>STPTH  1
+<S>STPDN  0.01   
+<S>STPBG  0
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  0
+<S>STAV1  5
+<S>STAV2  5
+<S>STAV3  5
+<S>STST1  77
+<S>STST2  77
+<S>STST3  77
+<S>STPAR  0
+<S>STCAL  5
+<S>STFN1  248
+<S>STFN2  160
+
+<DEFINE> X0 C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 395 N DC OV B N ui R
+<DEFINE> Y0 C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 395 N DC OV B N ui R
+<DEFINE> X1 C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 395 N DC OV B N ui R
+<DEFINE> Y1 C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 395 N DC OV B N ui R
+<DEFINE> Set_Window_Size C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 395 N DR OF F I (.,ui,ui,ui,ui) -
+<DEFINE> Set_Window_Size C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 395 N DF OF F I (.,ui,ui,ui,ui) -
+<R>C Set_Window_Size CPU_Command_Write 397
+<R>X Set_Window_Size CPU_Command_Write 397 R
+<LIT> 0x2a - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 397 23 N HN ni B X
+<R>C Set_Window_Size CPU_Data_Write 398
+<R>X Set_Window_Size CPU_Data_Write 398 R
+<LIT> 8 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 398 42 N DN ni B X
+<R>C Set_Window_Size CPU_Data_Write 399
+<R>X Set_Window_Size CPU_Data_Write 399 R
+<R>C Set_Window_Size CPU_Data_Write 400
+<R>X Set_Window_Size CPU_Data_Write 400 R
+<LIT> 8 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 400 42 N DN ni B X
+<R>C Set_Window_Size CPU_Data_Write 401
+<R>X Set_Window_Size CPU_Data_Write 401 R
+<R>C Set_Window_Size CPU_Command_Write 403
+<R>X Set_Window_Size CPU_Command_Write 403 R
+<LIT> 0x2b - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 403 23 N HN ni B X
+<R>C Set_Window_Size CPU_Data_Write 404
+<R>X Set_Window_Size CPU_Data_Write 404 R
+<LIT> 8 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 404 40 N DN ni B X
+<R>C Set_Window_Size CPU_Data_Write 405
+<R>X Set_Window_Size CPU_Data_Write 405 R
+<R>C Set_Window_Size CPU_Data_Write 406
+<R>X Set_Window_Size CPU_Data_Write 406 R
+<LIT> 8 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 406 40 N DN ni B X
+<R>C Set_Window_Size CPU_Data_Write 407
+<R>X Set_Window_Size CPU_Data_Write 407 R
+<R>C Set_Window_Size CPU_Command_Write 409
+<R>X Set_Window_Size CPU_Command_Write 409 R
+<LIT> 0x2c - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 409 23 N HN ni B X
+<CTLG> Set_Window_Size 1
+<CTLG> 1 2
+<CTLG> 2 4
+<CTLGN> 396 410 410 410 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c
+<S>STNAM  Set_Window_Size
+<S>STCYC  1
+<S>STMCC  0 (1:1)
+<S>STMIF  0
+<S>STSUB  11
+<S>STAKI  12
+<S>STLIN  13
+<S>STXLN  11
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  0
+<S>STPTH  1
+<S>STPDN  0.09   
+<S>STPBG  0
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  0
+<S>STAV1  9
+<S>STAV2  9
+<S>STAV3  9
+<S>STST1  11
+<S>STST2  11
+<S>STST3  11
+<S>STPAR  4
+<S>STCAL  2
+<S>STFN1  83
+<S>STFN2  26
+
+<EXTD> LCD_Clear C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 412
+<DEFINE> X0 C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 412 N DC OV B N ui R
+<DEFINE> Y0 C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 412 N DC OV B N ui R
+<DEFINE> width C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 412 N DC OV B N ui R
+<DEFINE> height C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 412 N DC OV B N ui R
+<DEFINE> Fill_Color C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 412 N DC OV B N ul R
+<DEFINE> LCD_Clear C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 412 N DR OF F X (.,ui,ui,ui,ui,ul) -
+<DEFINE> LCD_Clear C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 412 N DF OF F X (.,ui,ui,ui,ui,ul) -
+<DEFINE> i C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 414 N DC OV B N ui -
+<DEFINE> i C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 414 N DF OV B N ui -
+<DEFINE> j C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 414 N DC OV B N ui -
+<DEFINE> j C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 414 N DF OV B N ui -
+<R>C LCD_Clear CPU_Command_Write 416
+<R>X LCD_Clear CPU_Command_Write 416 R
+<LIT> 0x2a - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 416 23 N HN ni B X
+<R>C LCD_Clear CPU_Data_Write 417
+<R>X LCD_Clear CPU_Data_Write 417 R
+<LIT> 8 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 417 42 N DN ni B X
+<R>C LCD_Clear CPU_Data_Write 418
+<R>X LCD_Clear CPU_Data_Write 418 R
+<R>C LCD_Clear CPU_Data_Write 419
+<R>X LCD_Clear CPU_Data_Write 419 R
+<LIT> 8 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 419 48 N DN ni B X
+<R>C LCD_Clear CPU_Data_Write 420
+<R>X LCD_Clear CPU_Data_Write 420 R
+<R>C LCD_Clear CPU_Command_Write 422
+<R>X LCD_Clear CPU_Command_Write 422 R
+<LIT> 0x2b - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 422 23 N HN ni B X
+<R>C LCD_Clear CPU_Data_Write 423
+<R>X LCD_Clear CPU_Data_Write 423 R
+<LIT> 8 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 423 40 N DN ni B X
+<R>C LCD_Clear CPU_Data_Write 424
+<R>X LCD_Clear CPU_Data_Write 424 R
+<R>C LCD_Clear CPU_Data_Write 425
+<R>X LCD_Clear CPU_Data_Write 425 R
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 425 49 N DN ni B X
+<LIT> 8 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 425 53 N DN ni B X
+<R>C LCD_Clear CPU_Data_Write 426
+<R>X LCD_Clear CPU_Data_Write 426 R
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 426 48 N DN ni B X
+<R>C LCD_Clear CPU_Command_Write 428
+<R>X LCD_Clear CPU_Command_Write 428 R
+<LIT> 0x2c - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 428 24 N HN ni B X
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 430 13 N ON ni B X
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 432 15 N ON ni B X
+<R>C LCD_Clear _CPU_Ram_Write 434
+<R>C LCD_Clear LCD_OnOff 438
+<R>X LCD_Clear LCD_OnOff 438 R
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 438 15 N DN ni B X
+<CTLG> LCD_Clear 1
+<CTLG> 1 2
+<CTLG> 2 3
+<CTLG> 3 4
+<CTLG> 3 10
+<CTLG> 4 5
+<CTLG> 5 6
+<CTLG> 5 8
+<CTLG> 6 7
+<CTLG> 7 5
+<CTLG> 8 9
+<CTLG> 9 3
+<CTLG> 10 11
+<CTLG> 11 13
+<CTLGN> 413 430 430 430 432 432 432 432 430 430 439 439 439 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c
+<S>STNAM  LCD_Clear
+<S>STCYC  3
+<S>STMCC  0 (3:3)
+<S>STMIF  2
+<S>STSUB  13
+<S>STAKI  16
+<S>STLIN  25
+<S>STXLN  15
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  2
+<S>STPTH  3
+<S>STPDN  0.20   
+<S>STPBG  0
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  0
+<S>STAV1  9
+<S>STAV2  10
+<S>STAV3  11
+<S>STST1  19
+<S>STST2  17
+<S>STST3  15
+<S>STPAR  5
+<S>STCAL  4
+<S>STFN1  129
+<S>STFN2  48
+
+<DEFINE> DISP_ORIENTATION C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 441 N DF OM - - - O
+<LIT> 270 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 441 45 N DN - F M
+<DEFINE> MAX_X C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 442 N DF OM - - - O
+<LIT> 320 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 442 17 N DN - F M
+<DEFINE> MAX_Y C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 443 N DF OM - - - O
+<LIT> 480 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 443 17 N DN - F M
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 444 5 N ON - F P
+<DEFINE> X0 C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 674 N DC OV B N ni R
+<DEFINE> Y0 C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 674 N DC OV B N ni R
+<DEFINE> X1 C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 674 N DC OV B N ni R
+<DEFINE> Y1 C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 674 N DC OV B N ni R
+<DEFINE> color C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 674 N DC OV B N ul R
+<DEFINE> Draw_Line C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 674 N DR OF F I (.,ni,ni,ni,ni,ul) -
+<DEFINE> Draw_Line C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 674 N DF OF F I (.,ni,ni,ni,ni,ul) -
+<DEFINE> length1 C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 676 N DC OV B N ui -
+<DEFINE> length1 C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 676 N DF OV B N ui -
+<DEFINE> length2 C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 676 N DC OV B N ui -
+<DEFINE> length2 C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 676 N DF OV B N ui -
+<DEFINE> i C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 677 N DC OV B N ui -
+<DEFINE> i C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 677 N DF OV B N ui -
+<DEFINE> x C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 678 N DC OV B N ni -
+<DEFINE> x C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 678 N DF OV B N ni -
+<DEFINE> y C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 678 N DC OV B N ni -
+<DEFINE> y C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 678 N DF OV B N ni -
+<R>C Draw_Line Set_Window_Size 682
+<R>C Draw_Line _CPU_Ram_Write 684
+<R>C Draw_Line abs 689
+<R>X Draw_Line abs 689 R
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 689 28 N DN ni B X
+<R>C Draw_Line abs 690
+<R>X Draw_Line abs 690 R
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 690 28 N DN ni B X
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 693 19 N ON ni B X
+<R>C Draw_Line Set_Window_Size 704
+<R>C Draw_Line _CPU_Ram_Write 706
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 711 19 N ON ni B X
+<R>C Draw_Line Set_Window_Size 723
+<R>C Draw_Line _CPU_Ram_Write 725
+<CTLG> Draw_Line 1
+<CTLG> 1 2
+<CTLG> 1 3
+<CTLG> 2 22
+<CTLG> 3 4
+<CTLG> 4 5
+<CTLG> 4 13
+<CTLG> 5 6
+<CTLG> 6 7
+<CTLG> 6 12
+<CTLG> 7 8
+<CTLG> 7 9
+<CTLG> 8 10
+<CTLG> 9 10
+<CTLG> 10 11
+<CTLG> 11 6
+<CTLG> 12 21
+<CTLG> 13 14
+<CTLG> 14 15
+<CTLG> 14 20
+<CTLG> 15 16
+<CTLG> 15 17
+<CTLG> 16 18
+<CTLG> 17 18
+<CTLG> 18 19
+<CTLG> 19 14
+<CTLG> 20 21
+<CTLG> 21 22
+<CTLG> 22 24
+<CTLGN> 675 680 680 691 691 693 693 695 695 699 693 693 691 711 711 713 713 717 711 711 709 687 729 729 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c
+<S>STNAM  Draw_Line
+<S>STCYC  7
+<S>STMCC  1 (7:8)
+<S>STMIF  4
+<S>STSUB  8
+<S>STAKI  15
+<S>STLIN  53
+<S>STXLN  24
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  5
+<S>STPTH  7
+<S>STPDN  0.29   
+<S>STPBG  1
+<S>STLOP  1
+<S>STM07  1
+<S>STM19  0
+<S>STAV1  7
+<S>STAV2  9
+<S>STAV3  12
+<S>STST1  35
+<S>STST2  25
+<S>STST3  20
+<S>STPAR  5
+<S>STCAL  3
+<S>STFN1  161
+<S>STFN2  84
+
+<EXTD> Draw_Rectangle C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 732
+<DEFINE> X0 C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 732 N DC OV B N ui R
+<DEFINE> Y0 C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 732 N DC OV B N ui R
+<DEFINE> X1 C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 732 N DC OV B N ui R
+<DEFINE> Y1 C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 732 N DC OV B N ui R
+<DEFINE> color C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 732 N DC OV B N ul R
+<DEFINE> Draw_Rectangle C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 732 N DR OF F X (.,ui,ui,ui,ui,ul) -
+<DEFINE> Draw_Rectangle C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 732 N DF OF F X (.,ui,ui,ui,ui,ul) -
+<R>C Draw_Rectangle Draw_Line 734
+<R>C Draw_Rectangle Draw_Line 735
+<R>C Draw_Rectangle Draw_Line 736
+<R>C Draw_Rectangle Draw_Line 737
+<CTLG> Draw_Rectangle 1
+<CTLG> 1 2
+<CTLG> 2 4
+<CTLGN> 733 738 738 738 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c
+<S>STNAM  Draw_Rectangle
+<S>STCYC  1
+<S>STMCC  0 (1:1)
+<S>STMIF  0
+<S>STSUB  4
+<S>STAKI  5
+<S>STLIN  4
+<S>STXLN  4
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  0
+<S>STPTH  1
+<S>STPDN  0.25   
+<S>STPBG  0
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  0
+<S>STAV1  13
+<S>STAV2  13
+<S>STAV3  13
+<S>STST1  4
+<S>STST2  4
+<S>STST3  4
+<S>STPAR  5
+<S>STCAL  1
+<S>STFN1  30
+<S>STFN2  24
+
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c 740 5 N ON - F P
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c
+<S>STNAM  C:/CodeInspection/DisplayUnit/STemWin/Board/lcd/lcd.c
+<S>STNTB  NON-TOKEN BASED STATISTICS...
+<S>STSCT  3
+<S>STECT  1
+<S>STFNC  10
+<S>STFCO  113
+<S>STTKB  TOKEN BASED STATISTICS...
+<S>STVAR  59
+<S>STOPT  39
+<S>STOPN  961
+<S>STTOT  3375
+<S>STZIP  7485
+<S>STHAL  9728
+<S>STSHN  39430
+<S>STDIF  92.97  
+<S>STEFF  3127030
+<S>STVOL  33635
+<S>STDEV  521.17 
+<S>STBUG  21
+<S>STTPP  745
+<S>STTLN  328
+<S>STM20  1256
+<S>STM21  2116
+<S>STM22  142
+<S>STM28  203
+<S>STM33  174
+<S>STBCS  BASIC COCOMO STATISTICS...
+<S>STBMO  1.762  
+<S>STBMS  2.157  
+<S>STBME  2.529  
+<S>STTDO  3.100  
+<S>STTDS  3.272  
+<S>STTDE  3.364  
+<S>STCOM  COMMENT BASED STATISTICS...
+<S>STCDN  0.283  
+

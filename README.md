@@ -1,2 +1,0 @@
-# NewIHM8Git
-NewIHM8

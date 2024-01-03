@@ -1,0 +1,889 @@
+<RDEF> I Includes
+<R>I C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h 50
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h 46
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Inc/main.h 43
+<R>I C:/CodeInspection/DisplayUnit/Inc/main.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI.h 55
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_ConfDefaults.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_ConfDefaults.h C:/CodeInspection/DisplayUnit/STemWin/Target/GUIConf.h 60
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_Type.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_Type.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/LCD.h 60
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/LCD.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_ConfDefaults.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/LCD.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/Global.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_Type.h C:/CodeInspection/DisplayUnit/STemWin/Target/GUIConf.h 61
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_Version.h 58
+<R>I C:/CodeInspection/DisplayUnit/Inc/main.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h 56
+<R>I C:/CodeInspection/DisplayUnit/Inc/main.h C:/PRQA/QAC-8.1.2-R/include/ansi/time.h 57
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h 244
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h 46
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h 149
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cm4.h 183
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cm4.h C:/CodeInspection/DisplayUnit/qac/lib/stdint.h 44
+<R>I C:/CodeInspection/DisplayUnit/qac/lib/stdint.h C:/CodeInspection/DisplayUnit/qac/lib/ycheck.h 10
+<R>I C:/CodeInspection/DisplayUnit/qac/lib/stdint.h C:/CodeInspection/DisplayUnit/qac/lib/yvals.h 11
+<R>I C:/CodeInspection/DisplayUnit/qac/lib/yvals.h C:/CodeInspection/DisplayUnit/qac/lib/DLib_Defaults.h 42
+<R>I C:/CodeInspection/DisplayUnit/qac/lib/DLib_Defaults.h C:/CodeInspection/DisplayUnit/qac/lib/DLib_Product.h 50
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cm4.h C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cmInstr.h 210
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cmInstr.h C:/CodeInspection/DisplayUnit/qac/lib/cmsis_iar.h 65
+<R>I C:/CodeInspection/DisplayUnit/qac/lib/cmsis_iar.h C:/CodeInspection/DisplayUnit/qac/lib/intrinsics.h 22
+<R>I C:/CodeInspection/DisplayUnit/qac/lib/intrinsics.h C:/CodeInspection/DisplayUnit/qac/lib/yvals.h 14
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cm4.h C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cmFunc.h 211
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cmFunc.h C:/CodeInspection/DisplayUnit/qac/lib/cmsis_iar.h 65
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cm4.h C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cmSimd.h 212
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cmSimd.h C:/CodeInspection/DisplayUnit/qac/lib/cmsis_iar.h 69
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h 184
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h C:/CodeInspection/DisplayUnit/qac/lib/stdint.h 185
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h 250
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h 47
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h C:/PRQA/QAC-8.1.2-R/include/ansi/stdio.h 48
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h 49
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h 248
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h 230
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h 252
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h 656
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h 256
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_crc.h 268
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_crc.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h 292
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h 313
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h 314
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_sram.h 296
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_sram.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_fsmc.h 47
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_fsmc.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h 320
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c_ex.h 473
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h 336
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h 290
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc.h 344
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc_ex.h 634
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc_ex.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h 360
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h 364
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h 1289
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h 368
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h 388
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h 49
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 49
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h 121
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 49
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_hcd.h 392
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_hcd.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h 49
+<DEFINE> HAL_FSMC_MspInit C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c 56 N DC OF F I (.,.) -
+<DEFINE> HAL_FSMC_MspDeInit C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c 57 N DC OF F I (.,.) -
+<EXTD> HAL_MspInit C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c 62
+<DEFINE> HAL_MspInit C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c 62 N DR OF F X (.,.) -
+<DEFINE> HAL_MspInit C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c 62 N DF OF F X (.,.) -
+<RDEF> C Calls
+<R>C HAL_MspInit HAL_NVIC_SetPriorityGrouping 68
+<RDEF> X Refers-to
+<R>X HAL_MspInit HAL_NVIC_SetPriorityGrouping 68 R
+<R>C HAL_MspInit HAL_NVIC_SetPriority 72
+<R>X HAL_MspInit HAL_NVIC_SetPriority 72 R
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c 72 47 N ON ni B X
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c 72 50 N ON ni B X
+<R>C HAL_MspInit HAL_NVIC_SetPriority 74
+<R>X HAL_MspInit HAL_NVIC_SetPriority 74 R
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c 74 39 N ON ni B X
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c 74 42 N ON ni B X
+<R>C HAL_MspInit HAL_NVIC_SetPriority 76
+<R>X HAL_MspInit HAL_NVIC_SetPriority 76 R
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c 76 41 N ON ni B X
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c 76 44 N ON ni B X
+<R>C HAL_MspInit HAL_NVIC_SetPriority 78
+<R>X HAL_MspInit HAL_NVIC_SetPriority 78 R
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c 78 37 N ON ni B X
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c 78 40 N ON ni B X
+<R>C HAL_MspInit HAL_NVIC_SetPriority 80
+<R>X HAL_MspInit HAL_NVIC_SetPriority 80 R
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c 80 43 N ON ni B X
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c 80 46 N ON ni B X
+<R>C HAL_MspInit HAL_NVIC_SetPriority 82
+<R>X HAL_MspInit HAL_NVIC_SetPriority 82 R
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c 82 37 N ON ni B X
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c 82 40 N ON ni B X
+<R>C HAL_MspInit HAL_NVIC_SetPriority 84
+<R>X HAL_MspInit HAL_NVIC_SetPriority 84 R
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c 84 38 N ON ni B X
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c 84 41 N ON ni B X
+<R>C HAL_MspInit HAL_NVIC_SetPriority 88
+<R>X HAL_MspInit HAL_NVIC_SetPriority 88 R
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c 88 34 N ON ni B X
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c 88 37 N ON ni B X
+<R>C HAL_MspInit HAL_NVIC_EnableIRQ 89
+<R>X HAL_MspInit HAL_NVIC_EnableIRQ 89 R
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c 90 5 N ON - B P
+<CTLG> HAL_MspInit 1
+<CTLG> 1 2
+<CTLG> 2 4
+<CTLGN> 63 102 102 102 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c
+<S>STNAM  HAL_MspInit
+<S>STCYC  1
+<S>STMCC  0 (1:1)
+<S>STMIF  0
+<S>STSUB  10
+<S>STAKI  11
+<S>STLIN  38
+<S>STXLN  10
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  0
+<S>STPTH  1
+<S>STPDN  0.10   
+<S>STPBG  0
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  0
+<S>STAV1  8
+<S>STAV2  8
+<S>STAV3  8
+<S>STST1  10
+<S>STST2  10
+<S>STST3  10
+<S>STPAR  0
+<S>STCAL  3
+<S>STFN1  52
+<S>STFN2  37
+
+<EXTD> HAL_CRC_MspInit C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c 192
+<DEFINE> hcrc C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c 192 N DC OV B N p={sCRC_HandleTypeDef} R
+<DEFINE> HAL_CRC_MspInit C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c 192 N DR OF F X (.,p={sCRC_HandleTypeDef}) -
+<DEFINE> HAL_CRC_MspInit C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c 192 N DF OF F X (.,p={sCRC_HandleTypeDef}) -
+<DEFINE> tmpreg C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c 201 N DC OV B N ^ui -
+<DEFINE> tmpreg C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c 201 N DF OV B N ^ui -
+<CTLG> HAL_CRC_MspInit 1
+<CTLG> 1 2
+<CTLG> 1 6
+<CTLG> 2 3
+<CTLG> 3 4
+<CTLG> 4 2
+<CTLG> 4 5
+<CTLG> 5 6
+<CTLG> 6 8
+<CTLGN> 193 195 201 201 201 195 207 207 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c
+<S>STNAM  HAL_CRC_MspInit
+<S>STCYC  3
+<S>STMCC  0 (3:3)
+<S>STMIF  2
+<S>STSUB  0
+<S>STAKI  3
+<S>STLIN  13
+<S>STXLN  2
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  1
+<S>STPTH  3
+<S>STPDN  1.50   
+<S>STPBG  0
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  0
+<S>STAV1  2
+<S>STAV2  2
+<S>STAV3  3
+<S>STST1  8
+<S>STST2  6
+<S>STST3  5
+<S>STPAR  1
+<S>STCAL  0
+<S>STFN1  12
+<S>STFN2  4
+
+<EXTD> HAL_CRC_MspDeInit C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c 209
+<DEFINE> hcrc C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c 209 N DC OV B N p={sCRC_HandleTypeDef} R
+<DEFINE> HAL_CRC_MspDeInit C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c 209 N DR OF F X (.,p={sCRC_HandleTypeDef}) -
+<DEFINE> HAL_CRC_MspDeInit C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c 209 N DF OF F X (.,p={sCRC_HandleTypeDef}) -
+<CTLG> HAL_CRC_MspDeInit 1
+<CTLG> 1 2
+<CTLG> 1 3
+<CTLG> 2 3
+<CTLG> 3 5
+<CTLGN> 210 212 212 224 224 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c
+<S>STNAM  HAL_CRC_MspDeInit
+<S>STCYC  2
+<S>STMCC  0 (2:2)
+<S>STMIF  1
+<S>STSUB  0
+<S>STAKI  2
+<S>STLIN  13
+<S>STXLN  2
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  0
+<S>STPTH  2
+<S>STPDN  1.00   
+<S>STPBG  0
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  0
+<S>STAV1  5
+<S>STAV2  8
+<S>STAV3  8
+<S>STST1  3
+<S>STST2  2
+<S>STST3  2
+<S>STPAR  1
+<S>STCAL  0
+<S>STFN1  12
+<S>STFN2  4
+
+<EXTD> HAL_SPI_MspInit C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c 226
+<DEFINE> hspi C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c 226 N DC OV B N p={s__SPI_HandleTypeDef} R
+<DEFINE> HAL_SPI_MspInit C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c 226 N DR OF F X (.,p={s__SPI_HandleTypeDef}) -
+<DEFINE> HAL_SPI_MspInit C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c 226 N DF OF F X (.,p={s__SPI_HandleTypeDef}) -
+<DEFINE> GPIO_InitStruct C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c 229 N DC OV B N {sGPIO_InitTypeDef} -
+<DEFINE> GPIO_InitStruct C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c 229 N DF OV B N {sGPIO_InitTypeDef} -
+<DEFINE> tmpreg C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c 236 N DC OV B N ^ui -
+<DEFINE> tmpreg C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c 236 N DF OV B N ^ui -
+<R>C HAL_SPI_MspInit HAL_GPIO_Init 248
+<R>X HAL_SPI_MspInit HAL_GPIO_Init 248 R
+<R>C HAL_SPI_MspInit HAL_NVIC_SetPriority 251
+<R>X HAL_SPI_MspInit HAL_NVIC_SetPriority 251 R
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c 251 37 N ON ni B X
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c 251 40 N ON ni B X
+<R>C HAL_SPI_MspInit HAL_NVIC_EnableIRQ 252
+<R>X HAL_SPI_MspInit HAL_NVIC_EnableIRQ 252 R
+<CTLG> HAL_SPI_MspInit 1
+<CTLG> 1 2
+<CTLG> 1 6
+<CTLG> 2 3
+<CTLG> 3 4
+<CTLG> 4 2
+<CTLG> 4 5
+<CTLG> 5 6
+<CTLG> 6 8
+<CTLGN> 227 230 236 236 236 230 258 258 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c
+<S>STNAM  HAL_SPI_MspInit
+<S>STCYC  3
+<S>STMCC  0 (3:3)
+<S>STMIF  2
+<S>STSUB  3
+<S>STAKI  6
+<S>STLIN  30
+<S>STXLN  10
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  2
+<S>STPTH  3
+<S>STPDN  0.30   
+<S>STPBG  0
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  0
+<S>STAV1  4
+<S>STAV2  5
+<S>STAV3  5
+<S>STST1  17
+<S>STST2  15
+<S>STST3  13
+<S>STPAR  1
+<S>STCAL  3
+<S>STFN1  43
+<S>STFN2  32
+
+<EXTD> HAL_SPI_MspDeInit C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c 260
+<DEFINE> hspi C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c 260 N DC OV B N p={s__SPI_HandleTypeDef} R
+<DEFINE> HAL_SPI_MspDeInit C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c 260 N DR OF F X (.,p={s__SPI_HandleTypeDef}) -
+<DEFINE> HAL_SPI_MspDeInit C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c 260 N DF OF F X (.,p={s__SPI_HandleTypeDef}) -
+<R>C HAL_SPI_MspDeInit HAL_GPIO_DeInit 276
+<R>X HAL_SPI_MspDeInit HAL_GPIO_DeInit 276 R
+<R>C HAL_SPI_MspDeInit HAL_NVIC_DisableIRQ 279
+<R>X HAL_SPI_MspDeInit HAL_NVIC_DisableIRQ 279 R
+<R>C HAL_SPI_MspDeInit HAL_NVIC_DisableIRQ 282
+<R>X HAL_SPI_MspDeInit HAL_NVIC_DisableIRQ 282 R
+<CTLG> HAL_SPI_MspDeInit 1
+<CTLG> 1 2
+<CTLG> 1 3
+<CTLG> 2 3
+<CTLG> 3 5
+<CTLGN> 261 263 263 289 289 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c
+<S>STNAM  HAL_SPI_MspDeInit
+<S>STCYC  2
+<S>STMCC  0 (2:2)
+<S>STMIF  1
+<S>STSUB  3
+<S>STAKI  5
+<S>STLIN  27
+<S>STXLN  5
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  0
+<S>STPTH  2
+<S>STPDN  0.40   
+<S>STPBG  0
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  0
+<S>STAV1  6
+<S>STAV2  7
+<S>STAV3  7
+<S>STST1  6
+<S>STST2  5
+<S>STST3  5
+<S>STPAR  1
+<S>STCAL  2
+<S>STFN1  24
+<S>STFN2  13
+
+<EXTD> HAL_TIM_PWM_MspInit C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c 291
+<DEFINE> htim C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c 291 N DC OV B N p={sTIM_HandleTypeDef} R
+<DEFINE> HAL_TIM_PWM_MspInit C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c 291 N DR OF F X (.,p={sTIM_HandleTypeDef}) -
+<DEFINE> HAL_TIM_PWM_MspInit C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c 291 N DF OF F X (.,p={sTIM_HandleTypeDef}) -
+<DEFINE> tmpreg C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c 300 N DC OV B N ^ui -
+<DEFINE> tmpreg C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c 300 N DF OV B N ^ui -
+<CTLG> HAL_TIM_PWM_MspInit 1
+<CTLG> 1 2
+<CTLG> 1 6
+<CTLG> 2 3
+<CTLG> 3 4
+<CTLG> 4 2
+<CTLG> 4 5
+<CTLG> 5 6
+<CTLG> 6 8
+<CTLGN> 292 294 300 300 300 294 306 306 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c
+<S>STNAM  HAL_TIM_PWM_MspInit
+<S>STCYC  3
+<S>STMCC  0 (3:3)
+<S>STMIF  2
+<S>STSUB  0
+<S>STAKI  3
+<S>STLIN  13
+<S>STXLN  2
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  1
+<S>STPTH  3
+<S>STPDN  1.50   
+<S>STPBG  0
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  0
+<S>STAV1  2
+<S>STAV2  2
+<S>STAV3  3
+<S>STST1  8
+<S>STST2  6
+<S>STST3  5
+<S>STPAR  1
+<S>STCAL  0
+<S>STFN1  12
+<S>STFN2  4
+
+<EXTD> HAL_TIM_MspPostInit C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c 307
+<DEFINE> htim C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c 307 N DC OV B N p={sTIM_HandleTypeDef} R
+<DEFINE> HAL_TIM_MspPostInit C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c 307 N DR OF F X (.,p={sTIM_HandleTypeDef}) -
+<DEFINE> HAL_TIM_MspPostInit C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c 307 N DF OF F X (.,p={sTIM_HandleTypeDef}) -
+<DEFINE> GPIO_InitStruct C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c 310 N DC OV B N {sGPIO_InitTypeDef} -
+<DEFINE> GPIO_InitStruct C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c 310 N DF OV B N {sGPIO_InitTypeDef} -
+<R>C HAL_TIM_MspPostInit HAL_GPIO_Init 325
+<R>X HAL_TIM_MspPostInit HAL_GPIO_Init 325 R
+<R>C HAL_TIM_MspPostInit HAL_GPIO_WritePin 327
+<R>X HAL_TIM_MspPostInit HAL_GPIO_WritePin 327 R
+<CTLG> HAL_TIM_MspPostInit 1
+<CTLG> 1 2
+<CTLG> 1 3
+<CTLG> 2 3
+<CTLG> 3 5
+<CTLGN> 308 311 311 334 334 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c
+<S>STNAM  HAL_TIM_MspPostInit
+<S>STCYC  2
+<S>STMCC  0 (2:2)
+<S>STMIF  1
+<S>STSUB  2
+<S>STAKI  4
+<S>STLIN  25
+<S>STXLN  8
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  1
+<S>STPTH  2
+<S>STPDN  0.25   
+<S>STPBG  0
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  0
+<S>STAV1  6
+<S>STAV2  6
+<S>STAV3  7
+<S>STST1  10
+<S>STST2  9
+<S>STST3  8
+<S>STPAR  1
+<S>STCAL  2
+<S>STFN1  35
+<S>STFN2  27
+
+<EXTD> HAL_TIM_PWM_MspDeInit C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c 335
+<DEFINE> htim C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c 335 N DC OV B N p={sTIM_HandleTypeDef} R
+<DEFINE> HAL_TIM_PWM_MspDeInit C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c 335 N DR OF F X (.,p={sTIM_HandleTypeDef}) -
+<DEFINE> HAL_TIM_PWM_MspDeInit C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c 335 N DF OF F X (.,p={sTIM_HandleTypeDef}) -
+<CTLG> HAL_TIM_PWM_MspDeInit 1
+<CTLG> 1 2
+<CTLG> 1 3
+<CTLG> 2 3
+<CTLG> 3 5
+<CTLGN> 336 338 338 350 350 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c
+<S>STNAM  HAL_TIM_PWM_MspDeInit
+<S>STCYC  2
+<S>STMCC  0 (2:2)
+<S>STMIF  1
+<S>STSUB  0
+<S>STAKI  2
+<S>STLIN  13
+<S>STXLN  2
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  0
+<S>STPTH  2
+<S>STPDN  1.00   
+<S>STPBG  0
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  0
+<S>STAV1  5
+<S>STAV2  8
+<S>STAV3  8
+<S>STST1  3
+<S>STST2  2
+<S>STST3  2
+<S>STPAR  1
+<S>STCAL  0
+<S>STFN1  12
+<S>STFN2  4
+
+<EXTD> HAL_UART_MspInit C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c 352
+<DEFINE> huart C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c 352 N DC OV B N p={sUART_HandleTypeDef} R
+<DEFINE> HAL_UART_MspInit C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c 352 N DR OF F X (.,p={sUART_HandleTypeDef}) -
+<DEFINE> HAL_UART_MspInit C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c 352 N DF OF F X (.,p={sUART_HandleTypeDef}) -
+<DEFINE> GPIO_InitStruct C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c 355 N DC OV B N {sGPIO_InitTypeDef} -
+<DEFINE> GPIO_InitStruct C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c 355 N DF OV B N {sGPIO_InitTypeDef} -
+<DEFINE> tmpreg C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c 362 N DC OV B N ^ui -
+<DEFINE> tmpreg C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c 362 N DF OV B N ^ui -
+<R>C HAL_UART_MspInit HAL_GPIO_Init 372
+<R>X HAL_UART_MspInit HAL_GPIO_Init 372 R
+<DEFINE> tmpreg C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c 388 N DC OV B N ^ui -
+<DEFINE> tmpreg C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c 388 N DF OV B N ^ui -
+<R>C HAL_UART_MspInit HAL_GPIO_Init 398
+<R>X HAL_UART_MspInit HAL_GPIO_Init 398 R
+<DEFINE> tmpreg C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c 414 N DC OV B N ^ui -
+<DEFINE> tmpreg C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c 414 N DF OV B N ^ui -
+<R>C HAL_UART_MspInit HAL_GPIO_Init 425
+<R>X HAL_UART_MspInit HAL_GPIO_Init 425 R
+<CTLG> HAL_UART_MspInit 1
+<CTLG> 1 2
+<CTLG> 1 6
+<CTLG> 2 3
+<CTLG> 3 4
+<CTLG> 4 2
+<CTLG> 4 5
+<CTLG> 5 19
+<CTLG> 6 7
+<CTLG> 6 11
+<CTLG> 7 8
+<CTLG> 8 9
+<CTLG> 9 7
+<CTLG> 9 10
+<CTLG> 10 18
+<CTLG> 11 12
+<CTLG> 11 16
+<CTLG> 12 13
+<CTLG> 13 14
+<CTLG> 14 12
+<CTLG> 14 15
+<CTLG> 15 17
+<CTLG> 16 17
+<CTLG> 17 18
+<CTLG> 18 19
+<CTLG> 19 21
+<CTLGN> 353 356 362 362 362 356 382 388 388 388 382 408 414 414 414 408 431 407 381 433 433 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c
+<S>STNAM  HAL_UART_MspInit
+<S>STCYC  7
+<S>STMCC  0 (7:7)
+<S>STMIF  4
+<S>STSUB  3
+<S>STAKI  10
+<S>STLIN  79
+<S>STXLN  27
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  4
+<S>STPTH  7
+<S>STPDN  0.26   
+<S>STPBG  1
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  0
+<S>STAV1  3
+<S>STAV2  4
+<S>STAV3  5
+<S>STST1  44
+<S>STST2  37
+<S>STST3  33
+<S>STPAR  1
+<S>STCAL  1
+<S>STFN1  101
+<S>STFN2  71
+
+<EXTD> HAL_UART_MspDeInit C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c 435
+<DEFINE> huart C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c 435 N DC OV B N p={sUART_HandleTypeDef} R
+<DEFINE> HAL_UART_MspDeInit C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c 435 N DR OF F X (.,p={sUART_HandleTypeDef}) -
+<DEFINE> HAL_UART_MspDeInit C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c 435 N DF OF F X (.,p={sUART_HandleTypeDef}) -
+<R>C HAL_UART_MspDeInit HAL_GPIO_DeInit 450
+<R>X HAL_UART_MspDeInit HAL_GPIO_DeInit 450 R
+<R>C HAL_UART_MspDeInit HAL_NVIC_DisableIRQ 474
+<R>X HAL_UART_MspDeInit HAL_NVIC_DisableIRQ 474 R
+<R>C HAL_UART_MspDeInit HAL_GPIO_DeInit 491
+<R>X HAL_UART_MspDeInit HAL_GPIO_DeInit 491 R
+<CTLG> HAL_UART_MspDeInit 1
+<CTLG> 1 2
+<CTLG> 1 3
+<CTLG> 2 10
+<CTLG> 3 4
+<CTLG> 3 5
+<CTLG> 4 9
+<CTLG> 5 6
+<CTLG> 5 7
+<CTLG> 6 8
+<CTLG> 7 8
+<CTLG> 8 9
+<CTLG> 9 10
+<CTLG> 10 12
+<CTLGN> 436 438 438 459 459 479 479 497 479 458 499 499 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c
+<S>STNAM  HAL_UART_MspDeInit
+<S>STCYC  4
+<S>STMCC  0 (4:4)
+<S>STMIF  3
+<S>STSUB  3
+<S>STAKI  7
+<S>STLIN  62
+<S>STXLN  11
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  0
+<S>STPTH  4
+<S>STPDN  0.36   
+<S>STPBG  1
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  0
+<S>STAV1  5
+<S>STAV2  8
+<S>STAV3  8
+<S>STST1  13
+<S>STST2  9
+<S>STST3  9
+<S>STPAR  1
+<S>STCAL  2
+<S>STFN1  50
+<S>STFN2  22
+
+<DEFINE> HAL_FSMC_MspInit C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c 501 N DR OF F I (.,.) -
+<DEFINE> HAL_FSMC_MspInit C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c 501 N DF OF F I (.,.) -
+<DEFINE> FSMC_Initialized C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c 503 N DC OV B N ui S
+<DEFINE> FSMC_Initialized C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c 503 N DF OV B N ui S
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c 503 40 N ON ni B O
+<DEFINE> GPIO_InitStruct C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c 508 N DC OV B N {sGPIO_InitTypeDef} -
+<DEFINE> GPIO_InitStruct C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c 508 N DF OV B N {sGPIO_InitTypeDef} -
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c 512 22 N DN ni B X
+<DEFINE> tmpreg C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c 514 N DC OV B N ^ui -
+<DEFINE> tmpreg C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c 514 N DF OV B N ^ui -
+<R>C HAL_FSMC_MspInit HAL_GPIO_Init 545
+<R>X HAL_FSMC_MspInit HAL_GPIO_Init 545 R
+<R>C HAL_FSMC_MspInit HAL_GPIO_Init 554
+<R>X HAL_FSMC_MspInit HAL_GPIO_Init 554 R
+<CTLG> HAL_FSMC_MspInit 1
+<CTLG> 1 2
+<CTLG> 1 4
+<CTLG> 2 11
+<CTLG> 4 5
+<CTLG> 5 6
+<CTLG> 6 7
+<CTLG> 7 5
+<CTLG> 7 8
+<CTLG> 8 9
+<CTLG> 9 11
+<CTLGN> 502 509 510 509 514 514 514 514 559 559 510 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c
+<S>STNAM  HAL_FSMC_MspInit
+<S>STCYC  3
+<S>STMCC  0 (3:3)
+<S>STMIF  1
+<S>STSUB  2
+<S>STAKI  5
+<S>STLIN  56
+<S>STXLN  21
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  1
+<S>STKDN  0.05   
+<S>STUNV  0
+<S>STLCT  3
+<S>STPTH  4
+<S>STPDN  0.19   
+<S>STPBG  1
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  1
+<S>STAV1  5
+<S>STAV2  6
+<S>STAV3  7
+<S>STST1  24
+<S>STST2  22
+<S>STST3  19
+<S>STPAR  0
+<S>STCAL  1
+<S>STFN1  76
+<S>STFN2  63
+
+<EXTD> HAL_SRAM_MspInit C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c 561
+<DEFINE> hsram C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c 561 N DC OV B N p={sSRAM_HandleTypeDef} R
+<DEFINE> HAL_SRAM_MspInit C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c 561 N DR OF F X (.,p={sSRAM_HandleTypeDef}) -
+<DEFINE> HAL_SRAM_MspInit C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c 561 N DF OF F X (.,p={sSRAM_HandleTypeDef}) -
+<R>C HAL_SRAM_MspInit HAL_FSMC_MspInit 565
+<CTLG> HAL_SRAM_MspInit 1
+<CTLG> 1 2
+<CTLG> 2 4
+<CTLGN> 561 569 569 569 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c
+<S>STNAM  HAL_SRAM_MspInit
+<S>STCYC  1
+<S>STMCC  0 (1:1)
+<S>STMIF  0
+<S>STSUB  1
+<S>STAKI  2
+<S>STLIN  7
+<S>STXLN  1
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  1
+<S>STLCT  0
+<S>STPTH  1
+<S>STPDN  1.00   
+<S>STPBG  0
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  0
+<S>STAV1  6
+<S>STAV2  6
+<S>STAV3  6
+<S>STST1  1
+<S>STST2  1
+<S>STST3  1
+<S>STPAR  1
+<S>STCAL  1
+<S>STFN1  5
+<S>STFN2  1
+
+<DEFINE> HAL_FSMC_MspDeInit C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c 571 N DR OF F I (.,.) -
+<DEFINE> HAL_FSMC_MspDeInit C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c 571 N DF OF F I (.,.) -
+<DEFINE> FSMC_DeInitialized C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c 573 N DC OV B N ui S
+<DEFINE> FSMC_DeInitialized C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c 573 N DF OV B N ui S
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c 573 42 N ON ni B O
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c 580 24 N DN ni B X
+<R>C HAL_FSMC_MspDeInit HAL_GPIO_DeInit 608
+<R>X HAL_FSMC_MspDeInit HAL_GPIO_DeInit 608 R
+<R>C HAL_FSMC_MspDeInit HAL_GPIO_DeInit 612
+<R>X HAL_FSMC_MspDeInit HAL_GPIO_DeInit 612 R
+<CTLG> HAL_FSMC_MspDeInit 1
+<CTLG> 1 2
+<CTLG> 1 4
+<CTLG> 2 7
+<CTLG> 4 5
+<CTLG> 5 7
+<CTLGN> 572 577 578 577 617 617 578 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c
+<S>STNAM  HAL_FSMC_MspDeInit
+<S>STCYC  2
+<S>STMCC  0 (2:2)
+<S>STMIF  1
+<S>STSUB  2
+<S>STAKI  4
+<S>STLIN  44
+<S>STXLN  11
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  1
+<S>STKDN  0.09   
+<S>STUNV  0
+<S>STLCT  1
+<S>STPTH  2
+<S>STPDN  0.18   
+<S>STPBG  0
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  1
+<S>STAV1  9
+<S>STAV2  10
+<S>STAV3  12
+<S>STST1  8
+<S>STST2  7
+<S>STST3  6
+<S>STPAR  0
+<S>STCAL  1
+<S>STFN1  43
+<S>STFN2  31
+
+<EXTD> HAL_SRAM_MspDeInit C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c 619
+<DEFINE> hsram C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c 619 N DC OV B N p={sSRAM_HandleTypeDef} R
+<DEFINE> HAL_SRAM_MspDeInit C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c 619 N DR OF F X (.,p={sSRAM_HandleTypeDef}) -
+<DEFINE> HAL_SRAM_MspDeInit C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c 619 N DF OF F X (.,p={sSRAM_HandleTypeDef}) -
+<R>C HAL_SRAM_MspDeInit HAL_FSMC_MspDeInit 623
+<CTLG> HAL_SRAM_MspDeInit 1
+<CTLG> 1 2
+<CTLG> 2 4
+<CTLGN> 619 627 627 627 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c
+<S>STNAM  HAL_SRAM_MspDeInit
+<S>STCYC  1
+<S>STMCC  0 (1:1)
+<S>STMIF  0
+<S>STSUB  1
+<S>STAKI  2
+<S>STLIN  7
+<S>STXLN  1
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  1
+<S>STLCT  0
+<S>STPTH  1
+<S>STPDN  1.00   
+<S>STPBG  0
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  0
+<S>STAV1  6
+<S>STAV2  6
+<S>STAV3  6
+<S>STST1  1
+<S>STST2  1
+<S>STST3  1
+<S>STPAR  1
+<S>STCAL  1
+<S>STFN1  5
+<S>STFN2  1
+
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c
+<S>STNAM  C:/CodeInspection/DisplayUnit/Src/stm32f4xx_hal_msp.c
+<S>STNTB  NON-TOKEN BASED STATISTICS...
+<S>STSCT  2
+<S>STECT  0
+<S>STFNC  14
+<S>STFCO  23
+<S>STTKB  TOKEN BASED STATISTICS...
+<S>STVAR  112
+<S>STOPT  22
+<S>STOPN  135
+<S>STTOT  1281
+<S>STZIP  884
+<S>STHAL  1053
+<S>STSHN  3657
+<S>STDIF  12.00  
+<S>STEFF  112097
+<S>STVOL  9344
+<S>STDEV  18.68  
+<S>STBUG  2
+<S>STTPP  642
+<S>STTLN  187
+<S>STM20  352
+<S>STM21  928
+<S>STM22  91
+<S>STM28  219
+<S>STM33  122
+<S>STBCS  BASIC COCOMO STATISTICS...
+<S>STBMO  1.507  
+<S>STBMS  1.826  
+<S>STBME  2.115  
+<S>STTDO  2.922  
+<S>STTDS  3.087  
+<S>STTDE  3.177  
+<S>STCOM  COMMENT BASED STATISTICS...
+<S>STCDN  1.654  
+

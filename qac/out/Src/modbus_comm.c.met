@@ -1,0 +1,2152 @@
+<RDEF> I Includes
+<R>I C:/CodeInspection/DisplayUnit/Src/modbus_comm.c C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h 6
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h 46
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Inc/main.h 43
+<R>I C:/CodeInspection/DisplayUnit/Inc/main.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI.h 55
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_ConfDefaults.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_ConfDefaults.h C:/CodeInspection/DisplayUnit/STemWin/Target/GUIConf.h 60
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_Type.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_Type.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/LCD.h 60
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/LCD.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_ConfDefaults.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/LCD.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/Global.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_Type.h C:/CodeInspection/DisplayUnit/STemWin/Target/GUIConf.h 61
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_Version.h 58
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h 244
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h 46
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h 149
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cm4.h 183
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cm4.h C:/CodeInspection/DisplayUnit/qac/lib/stdint.h 44
+<R>I C:/CodeInspection/DisplayUnit/qac/lib/stdint.h C:/CodeInspection/DisplayUnit/qac/lib/ycheck.h 10
+<R>I C:/CodeInspection/DisplayUnit/qac/lib/stdint.h C:/CodeInspection/DisplayUnit/qac/lib/yvals.h 11
+<R>I C:/CodeInspection/DisplayUnit/qac/lib/yvals.h C:/CodeInspection/DisplayUnit/qac/lib/DLib_Defaults.h 42
+<R>I C:/CodeInspection/DisplayUnit/qac/lib/DLib_Defaults.h C:/CodeInspection/DisplayUnit/qac/lib/DLib_Product.h 50
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cm4.h C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cmInstr.h 210
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cmInstr.h C:/CodeInspection/DisplayUnit/qac/lib/cmsis_iar.h 65
+<R>I C:/CodeInspection/DisplayUnit/qac/lib/cmsis_iar.h C:/CodeInspection/DisplayUnit/qac/lib/intrinsics.h 22
+<R>I C:/CodeInspection/DisplayUnit/qac/lib/intrinsics.h C:/CodeInspection/DisplayUnit/qac/lib/yvals.h 14
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cm4.h C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cmFunc.h 211
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cmFunc.h C:/CodeInspection/DisplayUnit/qac/lib/cmsis_iar.h 65
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cm4.h C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cmSimd.h 212
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cmSimd.h C:/CodeInspection/DisplayUnit/qac/lib/cmsis_iar.h 69
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h 184
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h C:/CodeInspection/DisplayUnit/qac/lib/stdint.h 185
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h 250
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h 47
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h C:/PRQA/QAC-8.1.2-R/include/ansi/stdio.h 48
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h 49
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h 248
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h 230
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h 252
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h 656
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h 256
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_crc.h 268
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_crc.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h 292
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h 313
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h 314
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_sram.h 296
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_sram.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_fsmc.h 47
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_fsmc.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h 336
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h 290
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc.h 344
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc_ex.h 634
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc_ex.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h 360
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h 364
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h 1289
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h 368
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h 388
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h 49
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 49
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h 121
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 49
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_hcd.h 392
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_hcd.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h 49
+<R>I C:/CodeInspection/DisplayUnit/Src/modbus_comm.c C:/CodeInspection/DisplayUnit/Inc/usb_device.h 7
+<R>I C:/CodeInspection/DisplayUnit/Inc/usb_device.h C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h 57
+<R>I C:/CodeInspection/DisplayUnit/Inc/usb_device.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h 58
+<R>I C:/CodeInspection/DisplayUnit/Inc/usb_device.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h 59
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h C:/CodeInspection/DisplayUnit/Inc/usbd_conf.h 37
+<R>I C:/CodeInspection/DisplayUnit/Inc/usbd_conf.h C:/PRQA/QAC-8.1.2-R/include/ansi/stdio.h 56
+<R>I C:/CodeInspection/DisplayUnit/Inc/usbd_conf.h C:/PRQA/QAC-8.1.2-R/include/ansi/stdlib.h 57
+<R>I C:/CodeInspection/DisplayUnit/Inc/usbd_conf.h C:/PRQA/QAC-8.1.2-R/include/ansi/string.h 58
+<R>I C:/CodeInspection/DisplayUnit/Inc/usbd_conf.h C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h 59
+<R>I C:/CodeInspection/DisplayUnit/Inc/usbd_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h 60
+<R>I C:/CodeInspection/DisplayUnit/Src/modbus_comm.c C:/CodeInspection/DisplayUnit/Inc/usb_host.h 8
+<R>I C:/CodeInspection/DisplayUnit/Inc/usb_host.h C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h 58
+<R>I C:/CodeInspection/DisplayUnit/Inc/usb_host.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h 59
+<R>I C:/CodeInspection/DisplayUnit/Src/modbus_comm.c C:/CodeInspection/DisplayUnit/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h 10
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h 37
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h 37
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h 38
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h C:/CodeInspection/DisplayUnit/Inc/usbd_conf.h 37
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h 38
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h 39
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h 40
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h 37
+<R>I C:/CodeInspection/DisplayUnit/Src/modbus_comm.c C:/CodeInspection/DisplayUnit/Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc/usbh_cdc.h 11
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc/usbh_cdc.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STM32_USB_Host_Library/Core/Inc/usbh_core.h 37
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STM32_USB_Host_Library/Core/Inc/usbh_core.h C:/CodeInspection/DisplayUnit/Inc/usbh_conf.h 37
+<R>I C:/CodeInspection/DisplayUnit/Inc/usbh_conf.h C:/PRQA/QAC-8.1.2-R/include/ansi/stdio.h 52
+<R>I C:/CodeInspection/DisplayUnit/Inc/usbh_conf.h C:/PRQA/QAC-8.1.2-R/include/ansi/stdlib.h 53
+<R>I C:/CodeInspection/DisplayUnit/Inc/usbh_conf.h C:/PRQA/QAC-8.1.2-R/include/ansi/string.h 54
+<R>I C:/CodeInspection/DisplayUnit/Inc/usbh_conf.h C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h 60
+<R>I C:/CodeInspection/DisplayUnit/Inc/usbh_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h 61
+<R>I C:/CodeInspection/DisplayUnit/Inc/usbh_conf.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI.h 64
+<R>I C:/CodeInspection/DisplayUnit/Inc/usbh_conf.h C:/CodeInspection/DisplayUnit/STemWin/Board/Inc/LCD.h 65
+<R>I C:/CodeInspection/DisplayUnit/STemWin/Board/Inc/LCD.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h 4
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STM32_USB_Host_Library/Core/Inc/usbh_core.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STM32_USB_Host_Library/Core/Inc/usbh_def.h 38
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STM32_USB_Host_Library/Core/Inc/usbh_def.h C:/CodeInspection/DisplayUnit/Inc/usbh_conf.h 37
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STM32_USB_Host_Library/Core/Inc/usbh_core.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STM32_USB_Host_Library/Core/Inc/usbh_ioreq.h 39
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STM32_USB_Host_Library/Core/Inc/usbh_ioreq.h C:/CodeInspection/DisplayUnit/Inc/usbh_conf.h 37
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STM32_USB_Host_Library/Core/Inc/usbh_ioreq.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STM32_USB_Host_Library/Core/Inc/usbh_core.h 38
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STM32_USB_Host_Library/Core/Inc/usbh_core.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STM32_USB_Host_Library/Core/Inc/usbh_pipes.h 40
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STM32_USB_Host_Library/Core/Inc/usbh_pipes.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STM32_USB_Host_Library/Core/Inc/usbh_core.h 37
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STM32_USB_Host_Library/Core/Inc/usbh_core.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STM32_USB_Host_Library/Core/Inc/usbh_ctlreq.h 41
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STM32_USB_Host_Library/Core/Inc/usbh_ctlreq.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STM32_USB_Host_Library/Core/Inc/usbh_core.h 37
+<R>I C:/CodeInspection/DisplayUnit/Src/modbus_comm.c C:/CodeInspection/DisplayUnit/Inc/usbd_cdc_if.h 12
+<R>I C:/CodeInspection/DisplayUnit/Inc/usbd_cdc_if.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h 57
+<R>I C:/CodeInspection/DisplayUnit/Src/modbus_comm.c C:/CodeInspection/DisplayUnit/embOS_CortexM_IAR_V6_Src_V438/Start/Inc/RTOS.h 14
+<R>I C:/CodeInspection/DisplayUnit/embOS_CortexM_IAR_V6_Src_V438/Start/Inc/RTOS.h C:/PRQA/QAC-8.1.2-R/include/ansi/string.h 65
+<R>I C:/CodeInspection/DisplayUnit/embOS_CortexM_IAR_V6_Src_V438/Start/Inc/RTOS.h C:/CodeInspection/DisplayUnit/qac/lib/intrinsics.h 66
+<R>I C:/CodeInspection/DisplayUnit/Src/modbus_comm.c C:/CodeInspection/DisplayUnit/Src/global_var.h 22
+<DEFINE> __GLOBAL_VAR_H__ C:/CodeInspection/DisplayUnit/Src/global_var.h 2 I DF OM - - - O
+<R>I C:/CodeInspection/DisplayUnit/Src/global_var.h C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h 4
+<R>I C:/CodeInspection/DisplayUnit/Src/global_var.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h 5
+<R>I C:/CodeInspection/DisplayUnit/Src/global_var.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STM32_USB_Host_Library/Core/Inc/usbh_def.h 6
+<R>I C:/CodeInspection/DisplayUnit/Src/global_var.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI.h 7
+<R>I C:/CodeInspection/DisplayUnit/Src/global_var.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 8
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_ConfDefaults.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_Type.h 58
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM_GUI.h 59
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI.h 60
+<EXTN> HWSETON C:/CodeInspection/DisplayUnit/Src/global_var.h 16
+<DEFINE> HWSETON C:/CodeInspection/DisplayUnit/Src/global_var.h 16 I DC OV F X ni S
+<EXTN> hHsWnd C:/CodeInspection/DisplayUnit/Src/global_var.h 18
+<DEFINE> hHsWnd C:/CodeInspection/DisplayUnit/Src/global_var.h 18 I DC OV F X nl S
+<EXTN> hItem C:/CodeInspection/DisplayUnit/Src/global_var.h 20
+<DEFINE> hItem C:/CodeInspection/DisplayUnit/Src/global_var.h 20 I DC OV F X nl S
+<EXTN> hBackBtn_h C:/CodeInspection/DisplayUnit/Src/global_var.h 22
+<DEFINE> hBackBtn_h C:/CodeInspection/DisplayUnit/Src/global_var.h 22 I DC OV F X nl S
+<EXTN> hGoBtn_n C:/CodeInspection/DisplayUnit/Src/global_var.h 22
+<DEFINE> hGoBtn_n C:/CodeInspection/DisplayUnit/Src/global_var.h 22 I DC OV F X nl S
+<EXTN> hQuitBtn_n C:/CodeInspection/DisplayUnit/Src/global_var.h 22
+<DEFINE> hQuitBtn_n C:/CodeInspection/DisplayUnit/Src/global_var.h 22 I DC OV F X nl S
+<EXTN> hBackBtn_n C:/CodeInspection/DisplayUnit/Src/global_var.h 23
+<DEFINE> hBackBtn_n C:/CodeInspection/DisplayUnit/Src/global_var.h 23 I DC OV F X nl S
+<EXTN> hGoBtn_h C:/CodeInspection/DisplayUnit/Src/global_var.h 23
+<DEFINE> hGoBtn_h C:/CodeInspection/DisplayUnit/Src/global_var.h 23 I DC OV F X nl S
+<EXTN> hQuitBtn_h C:/CodeInspection/DisplayUnit/Src/global_var.h 23
+<DEFINE> hQuitBtn_h C:/CodeInspection/DisplayUnit/Src/global_var.h 23 I DC OV F X nl S
+<EXTN> hBackBtn_s C:/CodeInspection/DisplayUnit/Src/global_var.h 24
+<DEFINE> hBackBtn_s C:/CodeInspection/DisplayUnit/Src/global_var.h 24 I DC OV F X nl S
+<EXTN> hGoBtn_s C:/CodeInspection/DisplayUnit/Src/global_var.h 24
+<DEFINE> hGoBtn_s C:/CodeInspection/DisplayUnit/Src/global_var.h 24 I DC OV F X nl S
+<EXTN> hQuitBtn_s C:/CodeInspection/DisplayUnit/Src/global_var.h 24
+<DEFINE> hQuitBtn_s C:/CodeInspection/DisplayUnit/Src/global_var.h 24 I DC OV F X nl S
+<EXTN> hListB_n1 C:/CodeInspection/DisplayUnit/Src/global_var.h 26
+<DEFINE> hListB_n1 C:/CodeInspection/DisplayUnit/Src/global_var.h 26 I DC OV F X nl S
+<EXTN> hListB_n2 C:/CodeInspection/DisplayUnit/Src/global_var.h 26
+<DEFINE> hListB_n2 C:/CodeInspection/DisplayUnit/Src/global_var.h 26 I DC OV F X nl S
+<EXTN> hListB_n3 C:/CodeInspection/DisplayUnit/Src/global_var.h 26
+<DEFINE> hListB_n3 C:/CodeInspection/DisplayUnit/Src/global_var.h 26 I DC OV F X nl S
+<EXTN> hListB_n4 C:/CodeInspection/DisplayUnit/Src/global_var.h 26
+<DEFINE> hListB_n4 C:/CodeInspection/DisplayUnit/Src/global_var.h 26 I DC OV F X nl S
+<EXTN> hListB_n5 C:/CodeInspection/DisplayUnit/Src/global_var.h 26
+<DEFINE> hListB_n5 C:/CodeInspection/DisplayUnit/Src/global_var.h 26 I DC OV F X nl S
+<EXTN> hListB_s1 C:/CodeInspection/DisplayUnit/Src/global_var.h 27
+<DEFINE> hListB_s1 C:/CodeInspection/DisplayUnit/Src/global_var.h 27 I DC OV F X nl S
+<EXTN> hListB_s2 C:/CodeInspection/DisplayUnit/Src/global_var.h 27
+<DEFINE> hListB_s2 C:/CodeInspection/DisplayUnit/Src/global_var.h 27 I DC OV F X nl S
+<EXTN> hListB_s3 C:/CodeInspection/DisplayUnit/Src/global_var.h 27
+<DEFINE> hListB_s3 C:/CodeInspection/DisplayUnit/Src/global_var.h 27 I DC OV F X nl S
+<EXTN> hListB_s4 C:/CodeInspection/DisplayUnit/Src/global_var.h 27
+<DEFINE> hListB_s4 C:/CodeInspection/DisplayUnit/Src/global_var.h 27 I DC OV F X nl S
+<EXTN> hListB_s5 C:/CodeInspection/DisplayUnit/Src/global_var.h 27
+<DEFINE> hListB_s5 C:/CodeInspection/DisplayUnit/Src/global_var.h 27 I DC OV F X nl S
+<EXTN> hList1 C:/CodeInspection/DisplayUnit/Src/global_var.h 28
+<DEFINE> hList1 C:/CodeInspection/DisplayUnit/Src/global_var.h 28 I DC OV F X nl S
+<EXTN> hList2 C:/CodeInspection/DisplayUnit/Src/global_var.h 28
+<DEFINE> hList2 C:/CodeInspection/DisplayUnit/Src/global_var.h 28 I DC OV F X nl S
+<EXTN> hList3 C:/CodeInspection/DisplayUnit/Src/global_var.h 28
+<DEFINE> hList3 C:/CodeInspection/DisplayUnit/Src/global_var.h 28 I DC OV F X nl S
+<EXTN> hList4 C:/CodeInspection/DisplayUnit/Src/global_var.h 28
+<DEFINE> hList4 C:/CodeInspection/DisplayUnit/Src/global_var.h 28 I DC OV F X nl S
+<EXTN> hList5 C:/CodeInspection/DisplayUnit/Src/global_var.h 28
+<DEFINE> hList5 C:/CodeInspection/DisplayUnit/Src/global_var.h 28 I DC OV F X nl S
+<EXTN> hItemHome C:/CodeInspection/DisplayUnit/Src/global_var.h 30
+<DEFINE> hItemHome C:/CodeInspection/DisplayUnit/Src/global_var.h 30 I DC OV F X nl S
+<EXTN> hItemMode C:/CodeInspection/DisplayUnit/Src/global_var.h 30
+<DEFINE> hItemMode C:/CodeInspection/DisplayUnit/Src/global_var.h 30 I DC OV F X nl S
+<EXTN> hItemBack C:/CodeInspection/DisplayUnit/Src/global_var.h 31
+<DEFINE> hItemBack C:/CodeInspection/DisplayUnit/Src/global_var.h 31 I DC OV F X nl S
+<EXTN> hItemGo C:/CodeInspection/DisplayUnit/Src/global_var.h 31
+<DEFINE> hItemGo C:/CodeInspection/DisplayUnit/Src/global_var.h 31 I DC OV F X nl S
+<EXTN> hItemQuit C:/CodeInspection/DisplayUnit/Src/global_var.h 31
+<DEFINE> hItemQuit C:/CodeInspection/DisplayUnit/Src/global_var.h 31 I DC OV F X nl S
+<EXTN> hRELAY_Win C:/CodeInspection/DisplayUnit/Src/global_var.h 32
+<DEFINE> hRELAY_Win C:/CodeInspection/DisplayUnit/Src/global_var.h 32 I DC OV F X nl S
+<EXTN> hCurrUddWin C:/CodeInspection/DisplayUnit/Src/global_var.h 33
+<DEFINE> hCurrUddWin C:/CodeInspection/DisplayUnit/Src/global_var.h 33 I DC OV F X [0,nl] S
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/global_var.h 36 17 I ON ni F E
+<DEFINE> F_LOAD_CURR C:/CodeInspection/DisplayUnit/Src/global_var.h 36 I DC OE F N ne -
+<DEFINE> F_LOAD_CURR C:/CodeInspection/DisplayUnit/Src/global_var.h 36 I DF OE F N ne -
+<DEFINE> F_METER_OVER C:/CodeInspection/DisplayUnit/Src/global_var.h 37 I DC OE F N ne -
+<DEFINE> F_METER_OVER C:/CodeInspection/DisplayUnit/Src/global_var.h 37 I DF OE F N ne -
+<DEFINE> F_VOL_CURR C:/CodeInspection/DisplayUnit/Src/global_var.h 38 I DC OE F N ne -
+<DEFINE> F_VOL_CURR C:/CodeInspection/DisplayUnit/Src/global_var.h 38 I DF OE F N ne -
+<DEFINE> F_POWER_ENG C:/CodeInspection/DisplayUnit/Src/global_var.h 39 I DC OE F N ne -
+<DEFINE> F_POWER_ENG C:/CodeInspection/DisplayUnit/Src/global_var.h 39 I DF OE F N ne -
+<DEFINE> F_HARMONIC C:/CodeInspection/DisplayUnit/Src/global_var.h 40 I DC OE F N ne -
+<DEFINE> F_HARMONIC C:/CodeInspection/DisplayUnit/Src/global_var.h 40 I DF OE F N ne -
+<DEFINE> F_SYS_INFO C:/CodeInspection/DisplayUnit/Src/global_var.h 41 I DC OE F N ne -
+<DEFINE> F_SYS_INFO C:/CodeInspection/DisplayUnit/Src/global_var.h 41 I DF OE F N ne -
+<DEFINE> F_DEV_STS C:/CodeInspection/DisplayUnit/Src/global_var.h 42 I DC OE F N ne -
+<DEFINE> F_DEV_STS C:/CodeInspection/DisplayUnit/Src/global_var.h 42 I DF OE F N ne -
+<DEFINE> F_RLY_STS C:/CodeInspection/DisplayUnit/Src/global_var.h 43 I DC OE F N ne -
+<DEFINE> F_RLY_STS C:/CodeInspection/DisplayUnit/Src/global_var.h 43 I DF OE F N ne -
+<DEFINE> F_MAX C:/CodeInspection/DisplayUnit/Src/global_var.h 44 I DC OE F N ne -
+<DEFINE> F_MAX C:/CodeInspection/DisplayUnit/Src/global_var.h 44 I DF OE F N ne -
+<DEFINE> UDD_FUNC_INDEX C:/CodeInspection/DisplayUnit/Src/global_var.h 45 I DC OT F N {e} -
+<EXTN> gCurPageNum C:/CodeInspection/DisplayUnit/Src/global_var.h 48
+<DEFINE> gCurPageNum C:/CodeInspection/DisplayUnit/Src/global_var.h 48 I DC OV F X ni S
+<EXTN> gDnFlag C:/CodeInspection/DisplayUnit/Src/global_var.h 49
+<DEFINE> gDnFlag C:/CodeInspection/DisplayUnit/Src/global_var.h 49 I DC OV F X ni S
+<EXTN> gnStaStep C:/CodeInspection/DisplayUnit/Src/global_var.h 50
+<DEFINE> gnStaStep C:/CodeInspection/DisplayUnit/Src/global_var.h 50 I DC OV F X ni S
+<EXTN> gUsbCdcStart C:/CodeInspection/DisplayUnit/Src/global_var.h 52
+<DEFINE> gUsbCdcStart C:/CodeInspection/DisplayUnit/Src/global_var.h 52 I DC OV F X ni S
+<EXTN> gMeaGetTime C:/CodeInspection/DisplayUnit/Src/global_var.h 54
+<DEFINE> gMeaGetTime C:/CodeInspection/DisplayUnit/Src/global_var.h 54 I DC OV F X ni S
+<EXTN> gPcTimeOutStart C:/CodeInspection/DisplayUnit/Src/global_var.h 55
+<DEFINE> gPcTimeOutStart C:/CodeInspection/DisplayUnit/Src/global_var.h 55 I DC OV F X ni S
+<EXTN> InPcBypass C:/CodeInspection/DisplayUnit/Src/global_var.h 56
+<DEFINE> InPcBypass C:/CodeInspection/DisplayUnit/Src/global_var.h 56 I DC OV F X ni S
+<EXTN> gTime_cnt_pc C:/CodeInspection/DisplayUnit/Src/global_var.h 57
+<DEFINE> gTime_cnt_pc C:/CodeInspection/DisplayUnit/Src/global_var.h 57 I DC OV F X ni S
+<EXTN> gToken_nn C:/CodeInspection/DisplayUnit/Src/global_var.h 58
+<DEFINE> gToken_nn C:/CodeInspection/DisplayUnit/Src/global_var.h 58 I DC OV F X ni S
+<EXTN> gChkNorCmd C:/CodeInspection/DisplayUnit/Src/global_var.h 59
+<DEFINE> gChkNorCmd C:/CodeInspection/DisplayUnit/Src/global_var.h 59 I DC OV F X ni S
+<EXTN> gChkWBusy C:/CodeInspection/DisplayUnit/Src/global_var.h 60
+<DEFINE> gChkWBusy C:/CodeInspection/DisplayUnit/Src/global_var.h 60 I DC OV F X ni S
+<EXTN> gPcCommOn C:/CodeInspection/DisplayUnit/Src/global_var.h 61
+<DEFINE> gPcCommOn C:/CodeInspection/DisplayUnit/Src/global_var.h 61 I DC OV F X ni S
+<EXTN> gBleCommOn C:/CodeInspection/DisplayUnit/Src/global_var.h 62
+<DEFINE> gBleCommOn C:/CodeInspection/DisplayUnit/Src/global_var.h 62 I DC OV F X ni S
+<LIT> 20 - P C:/CodeInspection/DisplayUnit/Src/global_var.h 64 24 I DN ni F D
+<EXTN> strPrevVal C:/CodeInspection/DisplayUnit/Src/global_var.h 64
+<DEFINE> strPrevVal C:/CodeInspection/DisplayUnit/Src/global_var.h 64 I DC OV F X [20,_c] S
+<LIT> 20 - P C:/CodeInspection/DisplayUnit/Src/global_var.h 65 24 I DN ni F D
+<EXTN> strSetValW C:/CodeInspection/DisplayUnit/Src/global_var.h 65
+<DEFINE> strSetValW C:/CodeInspection/DisplayUnit/Src/global_var.h 65 I DC OV F X [20,_c] S
+<EXTN> gLastSysEvtIdx C:/CodeInspection/DisplayUnit/Src/global_var.h 67
+<DEFINE> gLastSysEvtIdx C:/CodeInspection/DisplayUnit/Src/global_var.h 67 I DC OV F X us S
+<EXTN> gLastFltEvtIdx C:/CodeInspection/DisplayUnit/Src/global_var.h 68
+<DEFINE> gLastFltEvtIdx C:/CodeInspection/DisplayUnit/Src/global_var.h 68 I DC OV F X us S
+<EXTN> gRlySetMode C:/CodeInspection/DisplayUnit/Src/global_var.h 70
+<DEFINE> gRlySetMode C:/CodeInspection/DisplayUnit/Src/global_var.h 70 I DC OV F X ni S
+<DEFINE> RX_BUFF_SIZE C:/CodeInspection/DisplayUnit/Src/global_var.h 74 I DF OM - - - O
+<LIT> 256 - P C:/CodeInspection/DisplayUnit/Src/global_var.h 74 23 I DN - F M
+<DEFINE> TX_BUFF_SIZE C:/CodeInspection/DisplayUnit/Src/global_var.h 75 I DF OM - - - O
+<LIT> 256 - P C:/CodeInspection/DisplayUnit/Src/global_var.h 75 23 I DN - F M
+<LIT> 100 - P C:/CodeInspection/DisplayUnit/Src/global_var.h 77 24 I DN ni F D
+<LIT> 10 - P C:/CodeInspection/DisplayUnit/Src/global_var.h 77 29 I DN ni F D
+<EXTN> modtest C:/CodeInspection/DisplayUnit/Src/global_var.h 77
+<DEFINE> modtest C:/CodeInspection/DisplayUnit/Src/global_var.h 77 I DC OV F X [100,[10,uc]] S
+<EXTN> CDC_TXBuf C:/CodeInspection/DisplayUnit/Src/global_var.h 78
+<DEFINE> CDC_TXBuf C:/CodeInspection/DisplayUnit/Src/global_var.h 78 I DC OV F X [256,uc] S
+<EXTN> CDC_RXBuf C:/CodeInspection/DisplayUnit/Src/global_var.h 79
+<DEFINE> CDC_RXBuf C:/CodeInspection/DisplayUnit/Src/global_var.h 79 I DC OV F X [256,uc] S
+<EXTN> hUsbHostHS C:/CodeInspection/DisplayUnit/Src/global_var.h 81
+<DEFINE> hUsbHostHS C:/CodeInspection/DisplayUnit/Src/global_var.h 81 I DC OV F X {s_USBH_HandleTypeDef} S
+<EXTN> workBuf C:/CodeInspection/DisplayUnit/Src/global_var.h 83
+<DEFINE> workBuf C:/CodeInspection/DisplayUnit/Src/global_var.h 83 I DC OV F X [256,uc] S
+<EXTN> rxDataLen C:/CodeInspection/DisplayUnit/Src/global_var.h 84
+<DEFINE> rxDataLen C:/CodeInspection/DisplayUnit/Src/global_var.h 84 I DC OV F X ni S
+<EXTN> UsbHStatus C:/CodeInspection/DisplayUnit/Src/global_var.h 85
+<DEFINE> UsbHStatus C:/CodeInspection/DisplayUnit/Src/global_var.h 85 I DC OV F X ni S
+<EXTN> bufPt C:/CodeInspection/DisplayUnit/Src/global_var.h 86
+<DEFINE> bufPt C:/CodeInspection/DisplayUnit/Src/global_var.h 86 I DC OV F X puc S
+<EXTN> Cmd_Prompt C:/CodeInspection/DisplayUnit/Src/global_var.h 91
+<DEFINE> Cmd_Prompt C:/CodeInspection/DisplayUnit/Src/global_var.h 91 I DC OF F X (.,) -
+<DEFINE> phost C:/CodeInspection/DisplayUnit/Src/global_var.h 93 I DC OV P N p{s_USBH_HandleTypeDef} R
+<DEFINE> USBH_CDC_ReceiveCallback C:/CodeInspection/DisplayUnit/Src/global_var.h 93 I DR OF F X (.,p{s_USBH_HandleTypeDef}) -
+<EXTN> USBD_PcRcv_Data C:/CodeInspection/DisplayUnit/Src/global_var.h 94
+<DEFINE> Buf C:/CodeInspection/DisplayUnit/Src/global_var.h 94 I DC OV P N puc R
+<DEFINE> Len C:/CodeInspection/DisplayUnit/Src/global_var.h 94 I DC OV P N pui R
+<DEFINE> USBD_PcRcv_Data C:/CodeInspection/DisplayUnit/Src/global_var.h 94 I DC OF F X (nc,puc,pui) -
+<EXTN> ModbusRTUTask C:/CodeInspection/DisplayUnit/Src/global_var.h 95
+<DEFINE> ModbusRTUTask C:/CodeInspection/DisplayUnit/Src/global_var.h 95 I DC OF F X (.,) -
+<EXTN> GroupModeSelect C:/CodeInspection/DisplayUnit/Src/global_var.h 97
+<DEFINE> pMsg C:/CodeInspection/DisplayUnit/Src/global_var.h 97 I DC OV P N p{sWM_MESSAGE} R
+<DEFINE> id_btn C:/CodeInspection/DisplayUnit/Src/global_var.h 97 I DC OV P N ni R
+<DEFINE> Select C:/CodeInspection/DisplayUnit/Src/global_var.h 97 I DC OV P N ni R
+<DEFINE> GroupModeSelect C:/CodeInspection/DisplayUnit/Src/global_var.h 97 I DC OF F X (.,p{sWM_MESSAGE},ni,ni) -
+<EXTN> ButtonAttrpSet C:/CodeInspection/DisplayUnit/Src/global_var.h 98
+<DEFINE> ButtonAttrpSet C:/CodeInspection/DisplayUnit/Src/global_var.h 98 I DC OF F X (.,) -
+<EXTN> DropdownAttrpSet C:/CodeInspection/DisplayUnit/Src/global_var.h 99
+<DEFINE> DropdownAttrpSet C:/CodeInspection/DisplayUnit/Src/global_var.h 99 I DC OF F X (.,) -
+<EXTN> Uart_PcRcv_Data C:/CodeInspection/DisplayUnit/Src/global_var.h 100
+<DEFINE> Buf C:/CodeInspection/DisplayUnit/Src/global_var.h 100 I DC OV P N puc R
+<DEFINE> Len C:/CodeInspection/DisplayUnit/Src/global_var.h 100 I DC OV P N pui R
+<DEFINE> Uart_PcRcv_Data C:/CodeInspection/DisplayUnit/Src/global_var.h 100 I DC OF F X (nc,puc,pui) -
+<LIT> 20 - P C:/CodeInspection/DisplayUnit/Src/global_var.h 102 71 I DN ni P D
+<EXTN> DispFormat C:/CodeInspection/DisplayUnit/Src/global_var.h 102
+<DEFINE> value C:/CodeInspection/DisplayUnit/Src/global_var.h 102 I DC OV P N fs R
+<DEFINE> baseUnit C:/CodeInspection/DisplayUnit/Src/global_var.h 102 I DC OV P N p=_c R
+<DEFINE> result C:/CodeInspection/DisplayUnit/Src/global_var.h 102 I DC OV P N p_c R
+<DEFINE> DispFormat C:/CodeInspection/DisplayUnit/Src/global_var.h 102 I DC OF F X (.,fs,p=_c,p_c) -
+<DEFINE> _rlymode C:/CodeInspection/DisplayUnit/Src/global_var.h 109 I DF TG F N {e_rlymode} -
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/global_var.h 110 12 I ON ni F E
+<DEFINE> A_MODE C:/CodeInspection/DisplayUnit/Src/global_var.h 110 I DC OE F N ne -
+<DEFINE> A_MODE C:/CodeInspection/DisplayUnit/Src/global_var.h 110 I DF OE F N ne -
+<DEFINE> B_MODE C:/CodeInspection/DisplayUnit/Src/global_var.h 111 I DC OE F N ne -
+<DEFINE> B_MODE C:/CodeInspection/DisplayUnit/Src/global_var.h 111 I DF OE F N ne -
+<DEFINE> RLY_MODE C:/CodeInspection/DisplayUnit/Src/global_var.h 112 I DC OT F N {e_rlymode} -
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/global_var.h 116 20 I ON ni F E
+<DEFINE> USB_DATA_READY C:/CodeInspection/DisplayUnit/Src/global_var.h 116 I DC OE F N ne -
+<DEFINE> USB_DATA_READY C:/CodeInspection/DisplayUnit/Src/global_var.h 116 I DF OE F N ne -
+<DEFINE> USB_DATA_START C:/CodeInspection/DisplayUnit/Src/global_var.h 117 I DC OE F N ne -
+<DEFINE> USB_DATA_START C:/CodeInspection/DisplayUnit/Src/global_var.h 117 I DF OE F N ne -
+<DEFINE> USB_DATA_FINISH C:/CodeInspection/DisplayUnit/Src/global_var.h 118 I DC OE F N ne -
+<DEFINE> USB_DATA_FINISH C:/CodeInspection/DisplayUnit/Src/global_var.h 118 I DF OE F N ne -
+<DEFINE> USBHDATA_STATUS C:/CodeInspection/DisplayUnit/Src/global_var.h 119 I DC OT F N {e} -
+<DEFINE> cmd_mode C:/CodeInspection/DisplayUnit/Src/global_var.h 122 I DF TG F N {ecmd_mode} -
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/global_var.h 123 27 I ON ni F E
+<DEFINE> FASTUPDATE_MODE C:/CodeInspection/DisplayUnit/Src/global_var.h 123 I DC OE F N ne -
+<DEFINE> FASTUPDATE_MODE C:/CodeInspection/DisplayUnit/Src/global_var.h 123 I DF OE F N ne -
+<DEFINE> NORMAL_MODE C:/CodeInspection/DisplayUnit/Src/global_var.h 124 I DC OE F N ne -
+<DEFINE> NORMAL_MODE C:/CodeInspection/DisplayUnit/Src/global_var.h 124 I DF OE F N ne -
+<LIT> 100 - P C:/CodeInspection/DisplayUnit/Src/global_var.h 126 23 I DN ni F E
+<DEFINE> PROCESS_END C:/CodeInspection/DisplayUnit/Src/global_var.h 126 I DC OE F N ne -
+<DEFINE> PROCESS_END C:/CodeInspection/DisplayUnit/Src/global_var.h 126 I DF OE F N ne -
+<DEFINE> CMD_MODE C:/CodeInspection/DisplayUnit/Src/global_var.h 127 I DC OT F N {ecmd_mode} -
+<DEFINE> WAIT_NORCMD C:/CodeInspection/DisplayUnit/Src/global_var.h 132 I DF OM - - - O
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/Src/global_var.h 131 75 I DN - F M
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/global_var.h 132 79 I ON - F M
+<DEFINE> WAIT_FASTCMD C:/CodeInspection/DisplayUnit/Src/global_var.h 136 I DF OM - - - O
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/Src/global_var.h 135 71 I DN - F M
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/global_var.h 136 79 I ON - F M
+<DEFINE> WAIT_TOKEN C:/CodeInspection/DisplayUnit/Src/global_var.h 138 I DF OM - - - O
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/Src/global_var.h 138 51 I DN - F M
+<DEFINE> WAIT_WBUSY_CHK C:/CodeInspection/DisplayUnit/Src/global_var.h 140 I DF OM - - - O
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/Src/global_var.h 140 47 I DN - F M
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/Src/global_var.h 140 73 I DN - F M
+<DEFINE> g_timer_id C:/CodeInspection/DisplayUnit/Src/global_var.h 145 I DF TG F N {eg_timer_id} -
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/global_var.h 146 23 I ON ni F E
+<DEFINE> FUD_TIMER C:/CodeInspection/DisplayUnit/Src/global_var.h 146 I DC OE F N ne -
+<DEFINE> FUD_TIMER C:/CodeInspection/DisplayUnit/Src/global_var.h 146 I DF OE F N ne -
+<DEFINE> VOLCUR_TM C:/CodeInspection/DisplayUnit/Src/global_var.h 147 I DC OE F N ne -
+<DEFINE> VOLCUR_TM C:/CodeInspection/DisplayUnit/Src/global_var.h 147 I DF OE F N ne -
+<DEFINE> LCUR_TMID C:/CodeInspection/DisplayUnit/Src/global_var.h 148 I DC OE F N ne -
+<DEFINE> LCUR_TMID C:/CodeInspection/DisplayUnit/Src/global_var.h 148 I DF OE F N ne -
+<DEFINE> VEC_TIME C:/CodeInspection/DisplayUnit/Src/global_var.h 149 I DC OE F N ne -
+<DEFINE> VEC_TIME C:/CodeInspection/DisplayUnit/Src/global_var.h 149 I DF OE F N ne -
+<DEFINE> HAM_TMID C:/CodeInspection/DisplayUnit/Src/global_var.h 150 I DC OE F N ne -
+<DEFINE> HAM_TMID C:/CodeInspection/DisplayUnit/Src/global_var.h 150 I DF OE F N ne -
+<DEFINE> OV_TIMER C:/CodeInspection/DisplayUnit/Src/global_var.h 151 I DC OE F N ne -
+<DEFINE> OV_TIMER C:/CodeInspection/DisplayUnit/Src/global_var.h 151 I DF OE F N ne -
+<DEFINE> OSC_TM C:/CodeInspection/DisplayUnit/Src/global_var.h 152 I DC OE F N ne -
+<DEFINE> OSC_TM C:/CodeInspection/DisplayUnit/Src/global_var.h 152 I DF OE F N ne -
+<DEFINE> DEMAND_TM C:/CodeInspection/DisplayUnit/Src/global_var.h 153 I DC OE F N ne -
+<DEFINE> DEMAND_TM C:/CodeInspection/DisplayUnit/Src/global_var.h 153 I DF OE F N ne -
+<DEFINE> RTC_TIMER C:/CodeInspection/DisplayUnit/Src/global_var.h 154 I DC OE F N ne -
+<DEFINE> RTC_TIMER C:/CodeInspection/DisplayUnit/Src/global_var.h 154 I DF OE F N ne -
+<DEFINE> MAX_TMID C:/CodeInspection/DisplayUnit/Src/global_var.h 156 I DC OE F N ne -
+<DEFINE> MAX_TMID C:/CodeInspection/DisplayUnit/Src/global_var.h 156 I DF OE F N ne -
+<DEFINE> G_TIMER_ID C:/CodeInspection/DisplayUnit/Src/global_var.h 157 I DC OT F N {eg_timer_id} -
+<DEFINE> g_step C:/CodeInspection/DisplayUnit/Src/global_var.h 162 I DF TG F N {eg_step} -
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/global_var.h 163 21 I ON ni F E
+<DEFINE> UDD_WAIT_STEP C:/CodeInspection/DisplayUnit/Src/global_var.h 163 I DC OE F N ne -
+<DEFINE> UDD_WAIT_STEP C:/CodeInspection/DisplayUnit/Src/global_var.h 163 I DF OE F N ne -
+<DEFINE> UDD_MAIN_STEP C:/CodeInspection/DisplayUnit/Src/global_var.h 164 I DC OE F N ne -
+<DEFINE> UDD_MAIN_STEP C:/CodeInspection/DisplayUnit/Src/global_var.h 164 I DF OE F N ne -
+<DEFINE> UDD_START_STEP C:/CodeInspection/DisplayUnit/Src/global_var.h 165 I DC OE F N ne -
+<DEFINE> UDD_START_STEP C:/CodeInspection/DisplayUnit/Src/global_var.h 165 I DF OE F N ne -
+<DEFINE> UDD_SECOND_STEP C:/CodeInspection/DisplayUnit/Src/global_var.h 166 I DC OE F N ne -
+<DEFINE> UDD_SECOND_STEP C:/CodeInspection/DisplayUnit/Src/global_var.h 166 I DF OE F N ne -
+<DEFINE> UDD_THIRD_STEP C:/CodeInspection/DisplayUnit/Src/global_var.h 167 I DC OE F N ne -
+<DEFINE> UDD_THIRD_STEP C:/CodeInspection/DisplayUnit/Src/global_var.h 167 I DF OE F N ne -
+<DEFINE> UDD_END_STEP C:/CodeInspection/DisplayUnit/Src/global_var.h 168 I DC OE F N ne -
+<DEFINE> UDD_END_STEP C:/CodeInspection/DisplayUnit/Src/global_var.h 168 I DF OE F N ne -
+<DEFINE> G_UDD_STEP C:/CodeInspection/DisplayUnit/Src/global_var.h 170 I DC OT F N {eg_step} -
+<DEFINE> u32Data C:/CodeInspection/DisplayUnit/Src/global_var.h 177 I DC MB F N ui -
+<DEFINE> fData C:/CodeInspection/DisplayUnit/Src/global_var.h 178 I DC MB F N fs -
+<DEFINE> f_temp C:/CodeInspection/DisplayUnit/Src/global_var.h 179 I DC OT F N {u} -
+<DEFINE> g_token C:/CodeInspection/DisplayUnit/Src/global_var.h 185 I DF TG F N {eg_token} -
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/global_var.h 186 16 I ON ni F E
+<DEFINE> TOK_WAIT C:/CodeInspection/DisplayUnit/Src/global_var.h 186 I DC OE F N ne -
+<DEFINE> TOK_WAIT C:/CodeInspection/DisplayUnit/Src/global_var.h 186 I DF OE F N ne -
+<DEFINE> HWSET_HW1SET_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 188 I DC OE F N ne -
+<DEFINE> HWSET_HW1SET_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 188 I DF OE F N ne -
+<DEFINE> HWSET_HW1SET_WR C:/CodeInspection/DisplayUnit/Src/global_var.h 189 I DC OE F N ne -
+<DEFINE> HWSET_HW1SET_WR C:/CodeInspection/DisplayUnit/Src/global_var.h 189 I DF OE F N ne -
+<DEFINE> HWSET_HW2SET_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 190 I DC OE F N ne -
+<DEFINE> HWSET_HW2SET_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 190 I DF OE F N ne -
+<DEFINE> HWSET_HW2SET_WR C:/CodeInspection/DisplayUnit/Src/global_var.h 191 I DC OE F N ne -
+<DEFINE> HWSET_HW2SET_WR C:/CodeInspection/DisplayUnit/Src/global_var.h 191 I DF OE F N ne -
+<DEFINE> HWSET_TIMESET_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 192 I DC OE F N ne -
+<DEFINE> HWSET_TIMESET_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 192 I DF OE F N ne -
+<DEFINE> HWSET_TIMESET_WR C:/CodeInspection/DisplayUnit/Src/global_var.h 193 I DC OE F N ne -
+<DEFINE> HWSET_TIMESET_WR C:/CodeInspection/DisplayUnit/Src/global_var.h 193 I DF OE F N ne -
+<DEFINE> HWSET_DATA_CLEAR C:/CodeInspection/DisplayUnit/Src/global_var.h 194 I DC OE F N ne -
+<DEFINE> HWSET_DATA_CLEAR C:/CodeInspection/DisplayUnit/Src/global_var.h 194 I DF OE F N ne -
+<DEFINE> HWSET_DO_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 196 I DC OE F N ne -
+<DEFINE> HWSET_DO_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 196 I DF OE F N ne -
+<DEFINE> HWSET_DO_WR C:/CodeInspection/DisplayUnit/Src/global_var.h 197 I DC OE F N ne -
+<DEFINE> HWSET_DO_WR C:/CodeInspection/DisplayUnit/Src/global_var.h 197 I DF OE F N ne -
+<DEFINE> HWSET_DO_WR_OP C:/CodeInspection/DisplayUnit/Src/global_var.h 198 I DC OE F N ne -
+<DEFINE> HWSET_DO_WR_OP C:/CodeInspection/DisplayUnit/Src/global_var.h 198 I DF OE F N ne -
+<DEFINE> RELAY_L_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 201 I DC OE F N ne -
+<DEFINE> RELAY_L_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 201 I DF OE F N ne -
+<DEFINE> RELAY_L_WR C:/CodeInspection/DisplayUnit/Src/global_var.h 202 I DC OE F N ne -
+<DEFINE> RELAY_L_WR C:/CodeInspection/DisplayUnit/Src/global_var.h 202 I DF OE F N ne -
+<DEFINE> RELAY_LN_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 204 I DC OE F N ne -
+<DEFINE> RELAY_LN_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 204 I DF OE F N ne -
+<DEFINE> RELAY_LN_WR C:/CodeInspection/DisplayUnit/Src/global_var.h 205 I DC OE F N ne -
+<DEFINE> RELAY_LN_WR C:/CodeInspection/DisplayUnit/Src/global_var.h 205 I DF OE F N ne -
+<DEFINE> RELAY_S1_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 207 I DC OE F N ne -
+<DEFINE> RELAY_S1_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 207 I DF OE F N ne -
+<DEFINE> RELAY_S1_WR C:/CodeInspection/DisplayUnit/Src/global_var.h 208 I DC OE F N ne -
+<DEFINE> RELAY_S1_WR C:/CodeInspection/DisplayUnit/Src/global_var.h 208 I DF OE F N ne -
+<DEFINE> RELAY_S2_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 209 I DC OE F N ne -
+<DEFINE> RELAY_S2_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 209 I DF OE F N ne -
+<DEFINE> RELAY_S2_WR C:/CodeInspection/DisplayUnit/Src/global_var.h 210 I DC OE F N ne -
+<DEFINE> RELAY_S2_WR C:/CodeInspection/DisplayUnit/Src/global_var.h 210 I DF OE F N ne -
+<DEFINE> RELAY_I_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 212 I DC OE F N ne -
+<DEFINE> RELAY_I_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 212 I DF OE F N ne -
+<DEFINE> RELAY_I_WR C:/CodeInspection/DisplayUnit/Src/global_var.h 213 I DC OE F N ne -
+<DEFINE> RELAY_I_WR C:/CodeInspection/DisplayUnit/Src/global_var.h 213 I DF OE F N ne -
+<DEFINE> RELAY_G_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 215 I DC OE F N ne -
+<DEFINE> RELAY_G_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 215 I DF OE F N ne -
+<DEFINE> RELAY_G_WR C:/CodeInspection/DisplayUnit/Src/global_var.h 216 I DC OE F N ne -
+<DEFINE> RELAY_G_WR C:/CodeInspection/DisplayUnit/Src/global_var.h 216 I DF OE F N ne -
+<DEFINE> RELAY_GEXT_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 218 I DC OE F N ne -
+<DEFINE> RELAY_GEXT_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 218 I DF OE F N ne -
+<DEFINE> RELAY_GEXT_WR C:/CodeInspection/DisplayUnit/Src/global_var.h 219 I DC OE F N ne -
+<DEFINE> RELAY_GEXT_WR C:/CodeInspection/DisplayUnit/Src/global_var.h 219 I DF OE F N ne -
+<DEFINE> RELAY_PTA_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 221 I DC OE F N ne -
+<DEFINE> RELAY_PTA_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 221 I DF OE F N ne -
+<DEFINE> RELAY_PTA_WR C:/CodeInspection/DisplayUnit/Src/global_var.h 222 I DC OE F N ne -
+<DEFINE> RELAY_PTA_WR C:/CodeInspection/DisplayUnit/Src/global_var.h 222 I DF OE F N ne -
+<DEFINE> RELAY_UV_ST1_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 224 I DC OE F N ne -
+<DEFINE> RELAY_UV_ST1_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 224 I DF OE F N ne -
+<DEFINE> RELAY_UV_ST1_WR C:/CodeInspection/DisplayUnit/Src/global_var.h 225 I DC OE F N ne -
+<DEFINE> RELAY_UV_ST1_WR C:/CodeInspection/DisplayUnit/Src/global_var.h 225 I DF OE F N ne -
+<DEFINE> RELAY_UV_ST2_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 226 I DC OE F N ne -
+<DEFINE> RELAY_UV_ST2_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 226 I DF OE F N ne -
+<DEFINE> RELAY_UV_ST2_WR C:/CodeInspection/DisplayUnit/Src/global_var.h 227 I DC OE F N ne -
+<DEFINE> RELAY_UV_ST2_WR C:/CodeInspection/DisplayUnit/Src/global_var.h 227 I DF OE F N ne -
+<DEFINE> RELAY_OVR1_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 229 I DC OE F N ne -
+<DEFINE> RELAY_OVR1_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 229 I DF OE F N ne -
+<DEFINE> RELAY_OVR1_WR C:/CodeInspection/DisplayUnit/Src/global_var.h 230 I DC OE F N ne -
+<DEFINE> RELAY_OVR1_WR C:/CodeInspection/DisplayUnit/Src/global_var.h 230 I DF OE F N ne -
+<DEFINE> RELAY_OVR2_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 231 I DC OE F N ne -
+<DEFINE> RELAY_OVR2_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 231 I DF OE F N ne -
+<DEFINE> RELAY_OVR2_WR C:/CodeInspection/DisplayUnit/Src/global_var.h 232 I DC OE F N ne -
+<DEFINE> RELAY_OVR2_WR C:/CodeInspection/DisplayUnit/Src/global_var.h 232 I DF OE F N ne -
+<DEFINE> RELAY_RV_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 234 I DC OE F N ne -
+<DEFINE> RELAY_RV_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 234 I DF OE F N ne -
+<DEFINE> RELAY_RV_WR C:/CodeInspection/DisplayUnit/Src/global_var.h 235 I DC OE F N ne -
+<DEFINE> RELAY_RV_WR C:/CodeInspection/DisplayUnit/Src/global_var.h 235 I DF OE F N ne -
+<DEFINE> RELAY_D_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 237 I DC OE F N ne -
+<DEFINE> RELAY_D_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 237 I DF OE F N ne -
+<DEFINE> RELAY_D_WR C:/CodeInspection/DisplayUnit/Src/global_var.h 238 I DC OE F N ne -
+<DEFINE> RELAY_D_WR C:/CodeInspection/DisplayUnit/Src/global_var.h 238 I DF OE F N ne -
+<DEFINE> RELAY_S_ST1_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 240 I DC OE F N ne -
+<DEFINE> RELAY_S_ST1_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 240 I DF OE F N ne -
+<DEFINE> RELAY_S_ST1_WR C:/CodeInspection/DisplayUnit/Src/global_var.h 241 I DC OE F N ne -
+<DEFINE> RELAY_S_ST1_WR C:/CodeInspection/DisplayUnit/Src/global_var.h 241 I DF OE F N ne -
+<DEFINE> RELAY_S_ST2_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 242 I DC OE F N ne -
+<DEFINE> RELAY_S_ST2_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 242 I DF OE F N ne -
+<DEFINE> RELAY_S_ST2_WR C:/CodeInspection/DisplayUnit/Src/global_var.h 243 I DC OE F N ne -
+<DEFINE> RELAY_S_ST2_WR C:/CodeInspection/DisplayUnit/Src/global_var.h 243 I DF OE F N ne -
+<DEFINE> RELAY_IU_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 245 I DC OE F N ne -
+<DEFINE> RELAY_IU_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 245 I DF OE F N ne -
+<DEFINE> RELAY_IU_WR C:/CodeInspection/DisplayUnit/Src/global_var.h 246 I DC OE F N ne -
+<DEFINE> RELAY_IU_WR C:/CodeInspection/DisplayUnit/Src/global_var.h 246 I DF OE F N ne -
+<DEFINE> RELAY_VU_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 247 I DC OE F N ne -
+<DEFINE> RELAY_VU_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 247 I DF OE F N ne -
+<DEFINE> RELAY_VU_WR C:/CodeInspection/DisplayUnit/Src/global_var.h 248 I DC OE F N ne -
+<DEFINE> RELAY_VU_WR C:/CodeInspection/DisplayUnit/Src/global_var.h 248 I DF OE F N ne -
+<DEFINE> RELAY_UF_ST1_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 250 I DC OE F N ne -
+<DEFINE> RELAY_UF_ST1_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 250 I DF OE F N ne -
+<DEFINE> RELAY_UF_ST1_WR C:/CodeInspection/DisplayUnit/Src/global_var.h 251 I DC OE F N ne -
+<DEFINE> RELAY_UF_ST1_WR C:/CodeInspection/DisplayUnit/Src/global_var.h 251 I DF OE F N ne -
+<DEFINE> RELAY_UF_ST2_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 252 I DC OE F N ne -
+<DEFINE> RELAY_UF_ST2_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 252 I DF OE F N ne -
+<DEFINE> RELAY_UF_ST2_WR C:/CodeInspection/DisplayUnit/Src/global_var.h 253 I DC OE F N ne -
+<DEFINE> RELAY_UF_ST2_WR C:/CodeInspection/DisplayUnit/Src/global_var.h 253 I DF OE F N ne -
+<DEFINE> RELAY_OF_ST1_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 255 I DC OE F N ne -
+<DEFINE> RELAY_OF_ST1_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 255 I DF OE F N ne -
+<DEFINE> RELAY_OF_ST1_WR C:/CodeInspection/DisplayUnit/Src/global_var.h 256 I DC OE F N ne -
+<DEFINE> RELAY_OF_ST1_WR C:/CodeInspection/DisplayUnit/Src/global_var.h 256 I DF OE F N ne -
+<DEFINE> RELAY_OF_ST2_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 257 I DC OE F N ne -
+<DEFINE> RELAY_OF_ST2_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 257 I DF OE F N ne -
+<DEFINE> RELAY_OF_ST2_WR C:/CodeInspection/DisplayUnit/Src/global_var.h 258 I DC OE F N ne -
+<DEFINE> RELAY_OF_ST2_WR C:/CodeInspection/DisplayUnit/Src/global_var.h 258 I DF OE F N ne -
+<DEFINE> RELAY_ROCOF_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 260 I DC OE F N ne -
+<DEFINE> RELAY_ROCOF_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 260 I DF OE F N ne -
+<DEFINE> RELAY_ROCOF_WR C:/CodeInspection/DisplayUnit/Src/global_var.h 261 I DC OE F N ne -
+<DEFINE> RELAY_ROCOF_WR C:/CodeInspection/DisplayUnit/Src/global_var.h 261 I DF OE F N ne -
+<DEFINE> RELAY_RP_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 262 I DC OE F N ne -
+<DEFINE> RELAY_RP_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 262 I DF OE F N ne -
+<DEFINE> RELAY_RP_WR C:/CodeInspection/DisplayUnit/Src/global_var.h 263 I DC OE F N ne -
+<DEFINE> RELAY_RP_WR C:/CodeInspection/DisplayUnit/Src/global_var.h 263 I DF OE F N ne -
+<DEFINE> RELAY_RQ_ST1_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 264 I DC OE F N ne -
+<DEFINE> RELAY_RQ_ST1_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 264 I DF OE F N ne -
+<DEFINE> RELAY_RQ_ST1_WR C:/CodeInspection/DisplayUnit/Src/global_var.h 265 I DC OE F N ne -
+<DEFINE> RELAY_RQ_ST1_WR C:/CodeInspection/DisplayUnit/Src/global_var.h 265 I DF OE F N ne -
+<DEFINE> RELAY_RQ_ST2_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 266 I DC OE F N ne -
+<DEFINE> RELAY_RQ_ST2_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 266 I DF OE F N ne -
+<DEFINE> RELAY_RQ_ST2_WR C:/CodeInspection/DisplayUnit/Src/global_var.h 267 I DC OE F N ne -
+<DEFINE> RELAY_RQ_ST2_WR C:/CodeInspection/DisplayUnit/Src/global_var.h 267 I DF OE F N ne -
+<DEFINE> RELAY_OP_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 269 I DC OE F N ne -
+<DEFINE> RELAY_OP_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 269 I DF OE F N ne -
+<DEFINE> RELAY_OP_WR C:/CodeInspection/DisplayUnit/Src/global_var.h 270 I DC OE F N ne -
+<DEFINE> RELAY_OP_WR C:/CodeInspection/DisplayUnit/Src/global_var.h 270 I DF OE F N ne -
+<DEFINE> RELAY_OQ_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 271 I DC OE F N ne -
+<DEFINE> RELAY_OQ_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 271 I DF OE F N ne -
+<DEFINE> RELAY_OQ_WR C:/CodeInspection/DisplayUnit/Src/global_var.h 272 I DC OE F N ne -
+<DEFINE> RELAY_OQ_WR C:/CodeInspection/DisplayUnit/Src/global_var.h 272 I DF OE F N ne -
+<DEFINE> RELAY_UP_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 273 I DC OE F N ne -
+<DEFINE> RELAY_UP_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 273 I DF OE F N ne -
+<DEFINE> RELAY_UP_WR C:/CodeInspection/DisplayUnit/Src/global_var.h 274 I DC OE F N ne -
+<DEFINE> RELAY_UP_WR C:/CodeInspection/DisplayUnit/Src/global_var.h 274 I DF OE F N ne -
+<DEFINE> RELAY_OP_OQ_UP_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 275 I DC OE F N ne -
+<DEFINE> RELAY_OP_OQ_UP_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 275 I DF OE F N ne -
+<DEFINE> MEA_LD_CURR_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 278 I DC OE F N ne -
+<DEFINE> MEA_LD_CURR_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 278 I DF OE F N ne -
+<DEFINE> MEA_LD_PHVOL_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 280 I DC OE F N ne -
+<DEFINE> MEA_LD_PHVOL_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 280 I DF OE F N ne -
+<DEFINE> MEA_FAST_UPD_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 282 I DC OE F N ne -
+<DEFINE> MEA_FAST_UPD_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 282 I DF OE F N ne -
+<DEFINE> MEA_MAXVO_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 283 I DC OE F N ne -
+<DEFINE> MEA_MAXVO_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 283 I DF OE F N ne -
+<DEFINE> MEA_MAXIO_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 284 I DC OE F N ne -
+<DEFINE> MEA_MAXIO_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 284 I DF OE F N ne -
+<DEFINE> MEA_DEMAND_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 286 I DC OE F N ne -
+<DEFINE> MEA_DEMAND_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 286 I DF OE F N ne -
+<DEFINE> MEA_MAX_DEMAND_IA_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 287 I DC OE F N ne -
+<DEFINE> MEA_MAX_DEMAND_IA_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 287 I DF OE F N ne -
+<DEFINE> MEA_MAX_DEMAND_IB_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 288 I DC OE F N ne -
+<DEFINE> MEA_MAX_DEMAND_IB_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 288 I DF OE F N ne -
+<DEFINE> MEA_MAX_DEMAND_IC_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 289 I DC OE F N ne -
+<DEFINE> MEA_MAX_DEMAND_IC_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 289 I DF OE F N ne -
+<DEFINE> MEA_MAX_DEMAND_W_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 290 I DC OE F N ne -
+<DEFINE> MEA_MAX_DEMAND_W_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 290 I DF OE F N ne -
+<DEFINE> MEA_HARMONICS_VA_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 292 I DC OE F N ne -
+<DEFINE> MEA_HARMONICS_VA_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 292 I DF OE F N ne -
+<DEFINE> MEA_HARMONICS_VB_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 293 I DC OE F N ne -
+<DEFINE> MEA_HARMONICS_VB_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 293 I DF OE F N ne -
+<DEFINE> MEA_HARMONICS_VC_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 294 I DC OE F N ne -
+<DEFINE> MEA_HARMONICS_VC_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 294 I DF OE F N ne -
+<DEFINE> MEA_HARMONICS_IA_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 296 I DC OE F N ne -
+<DEFINE> MEA_HARMONICS_IA_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 296 I DF OE F N ne -
+<DEFINE> MEA_HARMONICS_IB_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 297 I DC OE F N ne -
+<DEFINE> MEA_HARMONICS_IB_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 297 I DF OE F N ne -
+<DEFINE> MEA_HARMONICS_IC_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 298 I DC OE F N ne -
+<DEFINE> MEA_HARMONICS_IC_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 298 I DF OE F N ne -
+<DEFINE> MEA_HAM_THD_TDD_KF_IVABC_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 300 I DC OE F N ne -
+<DEFINE> MEA_HAM_THD_TDD_KF_IVABC_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 300 I DF OE F N ne -
+<DEFINE> MEA_OSCILLOSCOPE_1_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 302 I DC OE F N ne -
+<DEFINE> MEA_OSCILLOSCOPE_1_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 302 I DF OE F N ne -
+<DEFINE> MEA_OSCILLOSCOPE_2_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 303 I DC OE F N ne -
+<DEFINE> MEA_OSCILLOSCOPE_2_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 303 I DF OE F N ne -
+<DEFINE> MEA_OSCILLOSCOPE_3_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 304 I DC OE F N ne -
+<DEFINE> MEA_OSCILLOSCOPE_3_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 304 I DF OE F N ne -
+<DEFINE> EVT_MAXEVT_BUFSIZE_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 307 I DC OE F N ne -
+<DEFINE> EVT_MAXEVT_BUFSIZE_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 307 I DF OE F N ne -
+<DEFINE> EVT_SYS_EVT_DATA_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 308 I DC OE F N ne -
+<DEFINE> EVT_SYS_EVT_DATA_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 308 I DF OE F N ne -
+<DEFINE> EVT_FLT_EVT_DATA_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 309 I DC OE F N ne -
+<DEFINE> EVT_FLT_EVT_DATA_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 309 I DF OE F N ne -
+<DEFINE> DEV_OCRINFO_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 312 I DC OE F N ne -
+<DEFINE> DEV_OCRINFO_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 312 I DF OE F N ne -
+<DEFINE> DEV_OCRINFO_WR C:/CodeInspection/DisplayUnit/Src/global_var.h 313 I DC OE F N ne -
+<DEFINE> DEV_OCRINFO_WR C:/CodeInspection/DisplayUnit/Src/global_var.h 313 I DF OE F N ne -
+<DEFINE> DEV_HMIINFO_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 314 I DC OE F N ne -
+<DEFINE> DEV_HMIINFO_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 314 I DF OE F N ne -
+<DEFINE> DEV_HMIINFO_WR C:/CodeInspection/DisplayUnit/Src/global_var.h 315 I DC OE F N ne -
+<DEFINE> DEV_HMIINFO_WR C:/CodeInspection/DisplayUnit/Src/global_var.h 315 I DF OE F N ne -
+<DEFINE> DEV_LIFE_CYCLE_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 316 I DC OE F N ne -
+<DEFINE> DEV_LIFE_CYCLE_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 316 I DF OE F N ne -
+<DEFINE> DEV_SYSEVT_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 318 I DC OE F N ne -
+<DEFINE> DEV_SYSEVT_RD C:/CodeInspection/DisplayUnit/Src/global_var.h 318 I DF OE F N ne -
+<DEFINE> G_TOK_MAX C:/CodeInspection/DisplayUnit/Src/global_var.h 320 I DC OE F N ne -
+<DEFINE> G_TOK_MAX C:/CodeInspection/DisplayUnit/Src/global_var.h 320 I DF OE F N ne -
+<DEFINE> G_TOKEN C:/CodeInspection/DisplayUnit/Src/global_var.h 321 I DC OT F N {eg_token} -
+<DEFINE> pagenum C:/CodeInspection/DisplayUnit/Src/global_var.h 325 I DF TG F N {epagenum} -
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/global_var.h 326 22 I ON ni F E
+<DEFINE> P1_NETWORK_SET C:/CodeInspection/DisplayUnit/Src/global_var.h 326 I DC OE F N ne -
+<DEFINE> P1_NETWORK_SET C:/CodeInspection/DisplayUnit/Src/global_var.h 326 I DF OE F N ne -
+<DEFINE> P1_COMM_SET C:/CodeInspection/DisplayUnit/Src/global_var.h 327 I DC OE F N ne -
+<DEFINE> P1_COMM_SET C:/CodeInspection/DisplayUnit/Src/global_var.h 327 I DF OE F N ne -
+<DEFINE> P1_PASSWORD C:/CodeInspection/DisplayUnit/Src/global_var.h 328 I DC OE F N ne -
+<DEFINE> P1_PASSWORD C:/CodeInspection/DisplayUnit/Src/global_var.h 328 I DF OE F N ne -
+<DEFINE> P1_TIMERTC C:/CodeInspection/DisplayUnit/Src/global_var.h 329 I DC OE F N ne -
+<DEFINE> P1_TIMERTC C:/CodeInspection/DisplayUnit/Src/global_var.h 329 I DF OE F N ne -
+<DEFINE> P1_PWALM C:/CodeInspection/DisplayUnit/Src/global_var.h 330 I DC OE F N ne -
+<DEFINE> P1_PWALM C:/CodeInspection/DisplayUnit/Src/global_var.h 330 I DF OE F N ne -
+<DEFINE> P1_OCR_L C:/CodeInspection/DisplayUnit/Src/global_var.h 332 I DC OE F N ne -
+<DEFINE> P1_OCR_L C:/CodeInspection/DisplayUnit/Src/global_var.h 332 I DF OE F N ne -
+<DEFINE> P1_OCR_LN C:/CodeInspection/DisplayUnit/Src/global_var.h 333 I DC OE F N ne -
+<DEFINE> P1_OCR_LN C:/CodeInspection/DisplayUnit/Src/global_var.h 333 I DF OE F N ne -
+<DEFINE> P1_OCR_S1 C:/CodeInspection/DisplayUnit/Src/global_var.h 334 I DC OE F N ne -
+<DEFINE> P1_OCR_S1 C:/CodeInspection/DisplayUnit/Src/global_var.h 334 I DF OE F N ne -
+<DEFINE> P1_OCR_S2 C:/CodeInspection/DisplayUnit/Src/global_var.h 335 I DC OE F N ne -
+<DEFINE> P1_OCR_S2 C:/CodeInspection/DisplayUnit/Src/global_var.h 335 I DF OE F N ne -
+<DEFINE> P1_OCR_I C:/CodeInspection/DisplayUnit/Src/global_var.h 336 I DC OE F N ne -
+<DEFINE> P1_OCR_I C:/CodeInspection/DisplayUnit/Src/global_var.h 336 I DF OE F N ne -
+<DEFINE> P1_OCR_G C:/CodeInspection/DisplayUnit/Src/global_var.h 337 I DC OE F N ne -
+<DEFINE> P1_OCR_G C:/CodeInspection/DisplayUnit/Src/global_var.h 337 I DF OE F N ne -
+<DEFINE> P1_OCR_GEXT C:/CodeInspection/DisplayUnit/Src/global_var.h 338 I DC OE F N ne -
+<DEFINE> P1_OCR_GEXT C:/CodeInspection/DisplayUnit/Src/global_var.h 338 I DF OE F N ne -
+<DEFINE> P1_OCR_PTA C:/CodeInspection/DisplayUnit/Src/global_var.h 339 I DC OE F N ne -
+<DEFINE> P1_OCR_PTA C:/CodeInspection/DisplayUnit/Src/global_var.h 339 I DF OE F N ne -
+<DEFINE> P1_OCR_UV C:/CodeInspection/DisplayUnit/Src/global_var.h 340 I DC OE F N ne -
+<DEFINE> P1_OCR_UV C:/CodeInspection/DisplayUnit/Src/global_var.h 340 I DF OE F N ne -
+<DEFINE> P1_OCR_OVR1 C:/CodeInspection/DisplayUnit/Src/global_var.h 341 I DC OE F N ne -
+<DEFINE> P1_OCR_OVR1 C:/CodeInspection/DisplayUnit/Src/global_var.h 341 I DF OE F N ne -
+<DEFINE> P1_OCR_OVR2 C:/CodeInspection/DisplayUnit/Src/global_var.h 342 I DC OE F N ne -
+<DEFINE> P1_OCR_OVR2 C:/CodeInspection/DisplayUnit/Src/global_var.h 342 I DF OE F N ne -
+<DEFINE> P1_OCR_RV C:/CodeInspection/DisplayUnit/Src/global_var.h 343 I DC OE F N ne -
+<DEFINE> P1_OCR_RV C:/CodeInspection/DisplayUnit/Src/global_var.h 343 I DF OE F N ne -
+<DEFINE> P1_OCR_D C:/CodeInspection/DisplayUnit/Src/global_var.h 344 I DC OE F N ne -
+<DEFINE> P1_OCR_D C:/CodeInspection/DisplayUnit/Src/global_var.h 344 I DF OE F N ne -
+<DEFINE> P1_OCR_S C:/CodeInspection/DisplayUnit/Src/global_var.h 345 I DC OE F N ne -
+<DEFINE> P1_OCR_S C:/CodeInspection/DisplayUnit/Src/global_var.h 345 I DF OE F N ne -
+<DEFINE> P1_OCR_IU C:/CodeInspection/DisplayUnit/Src/global_var.h 346 I DC OE F N ne -
+<DEFINE> P1_OCR_IU C:/CodeInspection/DisplayUnit/Src/global_var.h 346 I DF OE F N ne -
+<DEFINE> P1_OCR_VU C:/CodeInspection/DisplayUnit/Src/global_var.h 347 I DC OE F N ne -
+<DEFINE> P1_OCR_VU C:/CodeInspection/DisplayUnit/Src/global_var.h 347 I DF OE F N ne -
+<DEFINE> P1_OCR_UF C:/CodeInspection/DisplayUnit/Src/global_var.h 348 I DC OE F N ne -
+<DEFINE> P1_OCR_UF C:/CodeInspection/DisplayUnit/Src/global_var.h 348 I DF OE F N ne -
+<DEFINE> P1_OCR_OF C:/CodeInspection/DisplayUnit/Src/global_var.h 349 I DC OE F N ne -
+<DEFINE> P1_OCR_OF C:/CodeInspection/DisplayUnit/Src/global_var.h 349 I DF OE F N ne -
+<DEFINE> P1_OCR_ROCOF C:/CodeInspection/DisplayUnit/Src/global_var.h 350 I DC OE F N ne -
+<DEFINE> P1_OCR_ROCOF C:/CodeInspection/DisplayUnit/Src/global_var.h 350 I DF OE F N ne -
+<DEFINE> P1_OCR_RP C:/CodeInspection/DisplayUnit/Src/global_var.h 351 I DC OE F N ne -
+<DEFINE> P1_OCR_RP C:/CodeInspection/DisplayUnit/Src/global_var.h 351 I DF OE F N ne -
+<DEFINE> P1_OCR_RQ C:/CodeInspection/DisplayUnit/Src/global_var.h 352 I DC OE F N ne -
+<DEFINE> P1_OCR_RQ C:/CodeInspection/DisplayUnit/Src/global_var.h 352 I DF OE F N ne -
+<DEFINE> P1_OCR_OP C:/CodeInspection/DisplayUnit/Src/global_var.h 353 I DC OE F N ne -
+<DEFINE> P1_OCR_OP C:/CodeInspection/DisplayUnit/Src/global_var.h 353 I DF OE F N ne -
+<DEFINE> P1_OCR_OQ C:/CodeInspection/DisplayUnit/Src/global_var.h 354 I DC OE F N ne -
+<DEFINE> P1_OCR_OQ C:/CodeInspection/DisplayUnit/Src/global_var.h 354 I DF OE F N ne -
+<DEFINE> P1_OCR_UP C:/CodeInspection/DisplayUnit/Src/global_var.h 355 I DC OE F N ne -
+<DEFINE> P1_OCR_UP C:/CodeInspection/DisplayUnit/Src/global_var.h 355 I DF OE F N ne -
+<DEFINE> P1_OCR_LDCURR C:/CodeInspection/DisplayUnit/Src/global_var.h 357 I DC OE F N ne -
+<DEFINE> P1_OCR_LDCURR C:/CodeInspection/DisplayUnit/Src/global_var.h 357 I DF OE F N ne -
+<DEFINE> MAX_PAGE C:/CodeInspection/DisplayUnit/Src/global_var.h 360 I DC OE F N ne -
+<DEFINE> MAX_PAGE C:/CodeInspection/DisplayUnit/Src/global_var.h 360 I DF OE F N ne -
+<DEFINE> PAGE_NUM C:/CodeInspection/DisplayUnit/Src/global_var.h 361 I DC OT F N {epagenum} -
+<DEFINE> hw1set C:/CodeInspection/DisplayUnit/Src/global_var.h 368 I DC TG F N {shw1set} -
+<DEFINE> hw1set C:/CodeInspection/DisplayUnit/Src/global_var.h 368 I DF TG F N {shw1set} -
+<DEFINE> nDevType C:/CodeInspection/DisplayUnit/Src/global_var.h 371 I DC MB F N uc -
+<DEFINE> nNFCnY C:/CodeInspection/DisplayUnit/Src/global_var.h 372 I DC MB F N uc -
+<DEFINE> nPols C:/CodeInspection/DisplayUnit/Src/global_var.h 373 I DC MB F N uc -
+<DEFINE> nWiring C:/CodeInspection/DisplayUnit/Src/global_var.h 374 I DC MB F N uc -
+<DEFINE> nFreq C:/CodeInspection/DisplayUnit/Src/global_var.h 375 I DC MB F N us -
+<DEFINE> nAF C:/CodeInspection/DisplayUnit/Src/global_var.h 376 I DC MB F N us -
+<DEFINE> nRatePlug C:/CodeInspection/DisplayUnit/Src/global_var.h 377 I DC MB F N us -
+<DEFINE> nLnFact C:/CodeInspection/DisplayUnit/Src/global_var.h 378 I DC MB F N us -
+<DEFINE> nLn C:/CodeInspection/DisplayUnit/Src/global_var.h 379 I DC MB F N us -
+<DEFINE> nMaxCbMoc C:/CodeInspection/DisplayUnit/Src/global_var.h 380 I DC MB F N us -
+<DEFINE> nMaxCbEoc C:/CodeInspection/DisplayUnit/Src/global_var.h 381 I DC MB F N us -
+<DEFINE> nMaxCW C:/CodeInspection/DisplayUnit/Src/global_var.h 382 I DC MB F N ull -
+<DEFINE> nDanCurr1 C:/CodeInspection/DisplayUnit/Src/global_var.h 383 I DC MB F N us -
+<DEFINE> nDanCurr2 C:/CodeInspection/DisplayUnit/Src/global_var.h 384 I DC MB F N us -
+<DEFINE> nDanCurr3 C:/CodeInspection/DisplayUnit/Src/global_var.h 385 I DC MB F N us -
+<DEFINE> nOpt1 C:/CodeInspection/DisplayUnit/Src/global_var.h 386 I DC MB F N us -
+<DEFINE> nOpt2 C:/CodeInspection/DisplayUnit/Src/global_var.h 387 I DC MB F N us -
+<DEFINE> nOpt3 C:/CodeInspection/DisplayUnit/Src/global_var.h 388 I DC MB F N us -
+<DEFINE> HW1Set_Def C:/CodeInspection/DisplayUnit/Src/global_var.h 389 I DC OT F N {shw1set} -
+<DEFINE> nPhaseVal C:/CodeInspection/DisplayUnit/Src/global_var.h 396 I DC MB F N us -
+<DEFINE> nRateVol C:/CodeInspection/DisplayUnit/Src/global_var.h 397 I DC MB F N us -
+<DEFINE> nCurrDir C:/CodeInspection/DisplayUnit/Src/global_var.h 398 I DC MB F N us -
+<DEFINE> Address C:/CodeInspection/DisplayUnit/Src/global_var.h 399 I DC MB F N us -
+<DEFINE> Baudrate C:/CodeInspection/DisplayUnit/Src/global_var.h 400 I DC MB F N us -
+<DEFINE> RES1 C:/CodeInspection/DisplayUnit/Src/global_var.h 401 I DC MB F N us -
+<DEFINE> RES2 C:/CodeInspection/DisplayUnit/Src/global_var.h 402 I DC MB F N us -
+<DEFINE> Demand C:/CodeInspection/DisplayUnit/Src/global_var.h 403 I DC MB F N us -
+<DEFINE> LRCtrl C:/CodeInspection/DisplayUnit/Src/global_var.h 404 I DC MB F N us -
+<DEFINE> RES3 C:/CodeInspection/DisplayUnit/Src/global_var.h 405 I DC MB F N us -
+<DEFINE> nLanguage C:/CodeInspection/DisplayUnit/Src/global_var.h 406 I DC MB F N us -
+<DEFINE> Reserved C:/CodeInspection/DisplayUnit/Src/global_var.h 407 I DC MB F N us -
+<DEFINE> GroupCtrl C:/CodeInspection/DisplayUnit/Src/global_var.h 408 I DC MB F N us -
+<DEFINE> UserDefDp0 C:/CodeInspection/DisplayUnit/Src/global_var.h 409 I DC MB F N us -
+<DEFINE> UserDefDp1 C:/CodeInspection/DisplayUnit/Src/global_var.h 410 I DC MB F N us -
+<DEFINE> UserDefDp2 C:/CodeInspection/DisplayUnit/Src/global_var.h 411 I DC MB F N us -
+<DEFINE> Pf_Disp C:/CodeInspection/DisplayUnit/Src/global_var.h 412 I DC MB F N us -
+<DEFINE> UnderPFAlm C:/CodeInspection/DisplayUnit/Src/global_var.h 413 I DC MB F N us -
+<DEFINE> OverPFAlm C:/CodeInspection/DisplayUnit/Src/global_var.h 414 I DC MB F N us -
+<DEFINE> HW2Set_Def C:/CodeInspection/DisplayUnit/Src/global_var.h 415 I DC OT F N {s} -
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/global_var.h 418 5 I ON - F P
+<DEFINE> nYear C:/CodeInspection/DisplayUnit/Src/global_var.h 430 I DC MB F N uc -
+<DEFINE> nMonth C:/CodeInspection/DisplayUnit/Src/global_var.h 431 I DC MB F N uc -
+<DEFINE> nDay C:/CodeInspection/DisplayUnit/Src/global_var.h 432 I DC MB F N uc -
+<DEFINE> nHour C:/CodeInspection/DisplayUnit/Src/global_var.h 433 I DC MB F N uc -
+<DEFINE> nMinute C:/CodeInspection/DisplayUnit/Src/global_var.h 434 I DC MB F N uc -
+<DEFINE> nSecond C:/CodeInspection/DisplayUnit/Src/global_var.h 435 I DC MB F N us -
+<DEFINE> Nw_TimeSet_Def C:/CodeInspection/DisplayUnit/Src/global_var.h 437 I DC OT F N {s} -
+<DEFINE> nAddress C:/CodeInspection/DisplayUnit/Src/global_var.h 445 I DC MB F N us -
+<DEFINE> Nw_DataClear_Def C:/CodeInspection/DisplayUnit/Src/global_var.h 447 I DC OT F N {s} -
+<DEFINE> nDataOutBit03 C:/CodeInspection/DisplayUnit/Src/global_var.h 452 I DC MB F N us -
+<DEFINE> Nw_DOut_Def C:/CodeInspection/DisplayUnit/Src/global_var.h 455 I DC OT F N {s} -
+<DEFINE> nUse C:/CodeInspection/DisplayUnit/Src/global_var.h 460 I DC MB F N uc -
+<DEFINE> nDoSel C:/CodeInspection/DisplayUnit/Src/global_var.h 461 I DC MB F N uc -
+<DEFINE> nOpmode C:/CodeInspection/DisplayUnit/Src/global_var.h 462 I DC MB F N uc -
+<DEFINE> nIdmtlSel C:/CodeInspection/DisplayUnit/Src/global_var.h 463 I DC MB F N uc -
+<DEFINE> nHotCold C:/CodeInspection/DisplayUnit/Src/global_var.h 464 I DC MB F N uc -
+<DEFINE> nReserve C:/CodeInspection/DisplayUnit/Src/global_var.h 465 I DC MB F N uc -
+<DEFINE> nPickup C:/CodeInspection/DisplayUnit/Src/global_var.h 466 I DC MB F N us -
+<DEFINE> nTimeDly C:/CodeInspection/DisplayUnit/Src/global_var.h 467 I DC MB F N us -
+<DEFINE> Ry_L_OL_Def C:/CodeInspection/DisplayUnit/Src/global_var.h 469 I DC OT F N {s} -
+<DEFINE> nUse C:/CodeInspection/DisplayUnit/Src/global_var.h 473 I DC MB F N uc -
+<DEFINE> nDoSel C:/CodeInspection/DisplayUnit/Src/global_var.h 474 I DC MB F N uc -
+<DEFINE> nOpmode C:/CodeInspection/DisplayUnit/Src/global_var.h 475 I DC MB F N uc -
+<DEFINE> nIdmtlSel C:/CodeInspection/DisplayUnit/Src/global_var.h 476 I DC MB F N uc -
+<DEFINE> nI2TOn C:/CodeInspection/DisplayUnit/Src/global_var.h 477 I DC MB F N uc -
+<DEFINE> ZsiEn C:/CodeInspection/DisplayUnit/Src/global_var.h 478 I DC MB F N uc -
+<DEFINE> nStartUpEn C:/CodeInspection/DisplayUnit/Src/global_var.h 479 I DC MB F N uc -
+<DEFINE> Res C:/CodeInspection/DisplayUnit/Src/global_var.h 480 I DC MB F N uc -
+<DEFINE> nPickup C:/CodeInspection/DisplayUnit/Src/global_var.h 481 I DC MB F N us -
+<DEFINE> nTmDly C:/CodeInspection/DisplayUnit/Src/global_var.h 482 I DC MB F N us -
+<DEFINE> nZsiTmDly C:/CodeInspection/DisplayUnit/Src/global_var.h 483 I DC MB F N us -
+<DEFINE> nSuPikup C:/CodeInspection/DisplayUnit/Src/global_var.h 484 I DC MB F N us -
+<DEFINE> nSuTmDly C:/CodeInspection/DisplayUnit/Src/global_var.h 485 I DC MB F N us -
+<DEFINE> Ry_S_OCST1_Def C:/CodeInspection/DisplayUnit/Src/global_var.h 487 I DC OT F N {s} -
+<DEFINE> nUse C:/CodeInspection/DisplayUnit/Src/global_var.h 491 I DC MB F N uc -
+<DEFINE> nDoSel C:/CodeInspection/DisplayUnit/Src/global_var.h 492 I DC MB F N uc -
+<DEFINE> nOpmode C:/CodeInspection/DisplayUnit/Src/global_var.h 493 I DC MB F N uc -
+<DEFINE> nIdmtlSel C:/CodeInspection/DisplayUnit/Src/global_var.h 494 I DC MB F N uc -
+<DEFINE> nI2TOn C:/CodeInspection/DisplayUnit/Src/global_var.h 495 I DC MB F N uc -
+<DEFINE> Res C:/CodeInspection/DisplayUnit/Src/global_var.h 496 I DC MB F N uc -
+<DEFINE> nStartUpEn C:/CodeInspection/DisplayUnit/Src/global_var.h 497 I DC MB F N uc -
+<DEFINE> Reserve C:/CodeInspection/DisplayUnit/Src/global_var.h 498 I DC MB F N uc -
+<DEFINE> nPickup C:/CodeInspection/DisplayUnit/Src/global_var.h 499 I DC MB F N us -
+<DEFINE> nTmDly C:/CodeInspection/DisplayUnit/Src/global_var.h 500 I DC MB F N us -
+<DEFINE> nReserve C:/CodeInspection/DisplayUnit/Src/global_var.h 501 I DC MB F N us -
+<DEFINE> nSuPikup C:/CodeInspection/DisplayUnit/Src/global_var.h 502 I DC MB F N us -
+<DEFINE> nSuTmDly C:/CodeInspection/DisplayUnit/Src/global_var.h 503 I DC MB F N us -
+<DEFINE> Ry_S_OCST2_Def C:/CodeInspection/DisplayUnit/Src/global_var.h 505 I DC OT F N {s} -
+<DEFINE> nUse C:/CodeInspection/DisplayUnit/Src/global_var.h 509 I DC MB F N uc -
+<DEFINE> nDoSel C:/CodeInspection/DisplayUnit/Src/global_var.h 510 I DC MB F N uc -
+<DEFINE> nOpmode C:/CodeInspection/DisplayUnit/Src/global_var.h 511 I DC MB F N uc -
+<DEFINE> nErms C:/CodeInspection/DisplayUnit/Src/global_var.h 512 I DC MB F N uc -
+<DEFINE> nStartUpEn C:/CodeInspection/DisplayUnit/Src/global_var.h 513 I DC MB F N uc -
+<DEFINE> Res C:/CodeInspection/DisplayUnit/Src/global_var.h 514 I DC MB F N uc -
+<DEFINE> nPickup C:/CodeInspection/DisplayUnit/Src/global_var.h 515 I DC MB F N us -
+<DEFINE> nSuPickup C:/CodeInspection/DisplayUnit/Src/global_var.h 516 I DC MB F N us -
+<DEFINE> nSuTmDly C:/CodeInspection/DisplayUnit/Src/global_var.h 517 I DC MB F N us -
+<DEFINE> Ry_I_IO_Def C:/CodeInspection/DisplayUnit/Src/global_var.h 519 I DC OT F N {s} -
+<DEFINE> nUse C:/CodeInspection/DisplayUnit/Src/global_var.h 523 I DC MB F N uc -
+<DEFINE> nDoSel C:/CodeInspection/DisplayUnit/Src/global_var.h 524 I DC MB F N uc -
+<DEFINE> nOpmode C:/CodeInspection/DisplayUnit/Src/global_var.h 525 I DC MB F N uc -
+<DEFINE> nIdmtlSel C:/CodeInspection/DisplayUnit/Src/global_var.h 526 I DC MB F N uc -
+<DEFINE> nI2TOn C:/CodeInspection/DisplayUnit/Src/global_var.h 527 I DC MB F N uc -
+<DEFINE> ZsiEn C:/CodeInspection/DisplayUnit/Src/global_var.h 528 I DC MB F N uc -
+<DEFINE> nStartUpEn C:/CodeInspection/DisplayUnit/Src/global_var.h 529 I DC MB F N uc -
+<DEFINE> Res C:/CodeInspection/DisplayUnit/Src/global_var.h 530 I DC MB F N uc -
+<DEFINE> nPickup C:/CodeInspection/DisplayUnit/Src/global_var.h 531 I DC MB F N us -
+<DEFINE> nTmDly C:/CodeInspection/DisplayUnit/Src/global_var.h 532 I DC MB F N us -
+<DEFINE> nZsiTmDly C:/CodeInspection/DisplayUnit/Src/global_var.h 533 I DC MB F N us -
+<DEFINE> nSuPikup C:/CodeInspection/DisplayUnit/Src/global_var.h 534 I DC MB F N us -
+<DEFINE> nSuTmDly C:/CodeInspection/DisplayUnit/Src/global_var.h 535 I DC MB F N us -
+<DEFINE> Ry_G_EthFault_Def C:/CodeInspection/DisplayUnit/Src/global_var.h 537 I DC OT F N {s} -
+<DEFINE> nNprot C:/CodeInspection/DisplayUnit/Src/global_var.h 541 I DC MB F N us -
+<DEFINE> nRes C:/CodeInspection/DisplayUnit/Src/global_var.h 542 I DC MB F N us -
+<DEFINE> Ry_MCCB_Def C:/CodeInspection/DisplayUnit/Src/global_var.h 544 I DC OT F N {s} -
+<DEFINE> nUse C:/CodeInspection/DisplayUnit/Src/global_var.h 548 I DC MB F N uc -
+<DEFINE> nDoSel C:/CodeInspection/DisplayUnit/Src/global_var.h 549 I DC MB F N uc -
+<DEFINE> nOpmode C:/CodeInspection/DisplayUnit/Src/global_var.h 550 I DC MB F N uc -
+<DEFINE> nI2TOn C:/CodeInspection/DisplayUnit/Src/global_var.h 551 I DC MB F N uc -
+<DEFINE> nStartUpEn C:/CodeInspection/DisplayUnit/Src/global_var.h 552 I DC MB F N uc -
+<DEFINE> ZsiEn C:/CodeInspection/DisplayUnit/Src/global_var.h 553 I DC MB F N uc -
+<DEFINE> nPickup C:/CodeInspection/DisplayUnit/Src/global_var.h 554 I DC MB F N us -
+<DEFINE> nTmDly C:/CodeInspection/DisplayUnit/Src/global_var.h 555 I DC MB F N us -
+<DEFINE> nZsiTmDly C:/CodeInspection/DisplayUnit/Src/global_var.h 556 I DC MB F N us -
+<DEFINE> nSuPikup C:/CodeInspection/DisplayUnit/Src/global_var.h 557 I DC MB F N us -
+<DEFINE> nSuTmDly C:/CodeInspection/DisplayUnit/Src/global_var.h 558 I DC MB F N us -
+<DEFINE> Ry_GEXT_Def C:/CodeInspection/DisplayUnit/Src/global_var.h 560 I DC OT F N {s} -
+<DEFINE> nUse C:/CodeInspection/DisplayUnit/Src/global_var.h 564 I DC MB F N uc -
+<DEFINE> nDoSel C:/CodeInspection/DisplayUnit/Src/global_var.h 565 I DC MB F N uc -
+<DEFINE> nOpmode C:/CodeInspection/DisplayUnit/Src/global_var.h 566 I DC MB F N uc -
+<DEFINE> nIdmtlSel C:/CodeInspection/DisplayUnit/Src/global_var.h 567 I DC MB F N uc -
+<DEFINE> nHotCold C:/CodeInspection/DisplayUnit/Src/global_var.h 568 I DC MB F N uc -
+<DEFINE> nReserve C:/CodeInspection/DisplayUnit/Src/global_var.h 569 I DC MB F N uc -
+<DEFINE> nPercent C:/CodeInspection/DisplayUnit/Src/global_var.h 570 I DC MB F N us -
+<DEFINE> nTmDly C:/CodeInspection/DisplayUnit/Src/global_var.h 571 I DC MB F N us -
+<DEFINE> Ry_LN_Def C:/CodeInspection/DisplayUnit/Src/global_var.h 573 I DC OT F N {s} -
+<DEFINE> nUse C:/CodeInspection/DisplayUnit/Src/global_var.h 577 I DC MB F N uc -
+<DEFINE> nDoSel C:/CodeInspection/DisplayUnit/Src/global_var.h 578 I DC MB F N uc -
+<DEFINE> nOpmode C:/CodeInspection/DisplayUnit/Src/global_var.h 579 I DC MB F N uc -
+<DEFINE> nI2TOn C:/CodeInspection/DisplayUnit/Src/global_var.h 580 I DC MB F N uc -
+<DEFINE> Pickup C:/CodeInspection/DisplayUnit/Src/global_var.h 581 I DC MB F N us -
+<DEFINE> nTmDly C:/CodeInspection/DisplayUnit/Src/global_var.h 582 I DC MB F N us -
+<DEFINE> Ry_PTA_Def C:/CodeInspection/DisplayUnit/Src/global_var.h 584 I DC OT F N {s} -
+<DEFINE> nUse C:/CodeInspection/DisplayUnit/Src/global_var.h 588 I DC MB F N uc -
+<DEFINE> nDoSel C:/CodeInspection/DisplayUnit/Src/global_var.h 589 I DC MB F N uc -
+<DEFINE> nOpmode C:/CodeInspection/DisplayUnit/Src/global_var.h 590 I DC MB F N uc -
+<DEFINE> nAutoFR C:/CodeInspection/DisplayUnit/Src/global_var.h 591 I DC MB F N uc -
+<DEFINE> nNomsg C:/CodeInspection/DisplayUnit/Src/global_var.h 592 I DC MB F N uc -
+<DEFINE> nDeadVolBL C:/CodeInspection/DisplayUnit/Src/global_var.h 593 I DC MB F N uc -
+<DEFINE> nPhMode C:/CodeInspection/DisplayUnit/Src/global_var.h 594 I DC MB F N uc -
+<DEFINE> nReserve C:/CodeInspection/DisplayUnit/Src/global_var.h 595 I DC MB F N uc -
+<DEFINE> Pickup C:/CodeInspection/DisplayUnit/Src/global_var.h 596 I DC MB F N us -
+<DEFINE> nTmDly C:/CodeInspection/DisplayUnit/Src/global_var.h 597 I DC MB F N us -
+<DEFINE> Ry_UV_Sta1_Def C:/CodeInspection/DisplayUnit/Src/global_var.h 599 I DC OT F N {s} -
+<DEFINE> nUse C:/CodeInspection/DisplayUnit/Src/global_var.h 603 I DC MB F N uc -
+<DEFINE> nDoSel C:/CodeInspection/DisplayUnit/Src/global_var.h 604 I DC MB F N uc -
+<DEFINE> nOpmode C:/CodeInspection/DisplayUnit/Src/global_var.h 605 I DC MB F N uc -
+<DEFINE> nAutoFR C:/CodeInspection/DisplayUnit/Src/global_var.h 606 I DC MB F N uc -
+<DEFINE> nNomsg C:/CodeInspection/DisplayUnit/Src/global_var.h 607 I DC MB F N uc -
+<DEFINE> nDeadVolBL C:/CodeInspection/DisplayUnit/Src/global_var.h 608 I DC MB F N uc -
+<DEFINE> nPhMode C:/CodeInspection/DisplayUnit/Src/global_var.h 609 I DC MB F N uc -
+<DEFINE> nReserve C:/CodeInspection/DisplayUnit/Src/global_var.h 610 I DC MB F N uc -
+<DEFINE> Pickup C:/CodeInspection/DisplayUnit/Src/global_var.h 611 I DC MB F N us -
+<DEFINE> nTmDly C:/CodeInspection/DisplayUnit/Src/global_var.h 612 I DC MB F N us -
+<DEFINE> Ry_UV_Sta2_Def C:/CodeInspection/DisplayUnit/Src/global_var.h 614 I DC OT F N {s} -
+<DEFINE> nUse C:/CodeInspection/DisplayUnit/Src/global_var.h 618 I DC MB F N uc -
+<DEFINE> nDoSel C:/CodeInspection/DisplayUnit/Src/global_var.h 619 I DC MB F N uc -
+<DEFINE> nOpmode C:/CodeInspection/DisplayUnit/Src/global_var.h 620 I DC MB F N uc -
+<DEFINE> nReserve C:/CodeInspection/DisplayUnit/Src/global_var.h 621 I DC MB F N uc -
+<DEFINE> Pickup C:/CodeInspection/DisplayUnit/Src/global_var.h 622 I DC MB F N us -
+<DEFINE> nTmDly C:/CodeInspection/DisplayUnit/Src/global_var.h 623 I DC MB F N us -
+<DEFINE> Ry_OV_Sta1_Def C:/CodeInspection/DisplayUnit/Src/global_var.h 625 I DC OT F N {s} -
+<DEFINE> nUse C:/CodeInspection/DisplayUnit/Src/global_var.h 629 I DC MB F N uc -
+<DEFINE> nDoSel C:/CodeInspection/DisplayUnit/Src/global_var.h 630 I DC MB F N uc -
+<DEFINE> nOpmode C:/CodeInspection/DisplayUnit/Src/global_var.h 631 I DC MB F N uc -
+<DEFINE> nReserve C:/CodeInspection/DisplayUnit/Src/global_var.h 632 I DC MB F N uc -
+<DEFINE> Pickup C:/CodeInspection/DisplayUnit/Src/global_var.h 633 I DC MB F N us -
+<DEFINE> nTmDly C:/CodeInspection/DisplayUnit/Src/global_var.h 634 I DC MB F N us -
+<DEFINE> Ry_OV_Sta2_Def C:/CodeInspection/DisplayUnit/Src/global_var.h 636 I DC OT F N {s} -
+<DEFINE> nUse C:/CodeInspection/DisplayUnit/Src/global_var.h 640 I DC MB F N uc -
+<DEFINE> nDoSel C:/CodeInspection/DisplayUnit/Src/global_var.h 641 I DC MB F N uc -
+<DEFINE> nOpmode C:/CodeInspection/DisplayUnit/Src/global_var.h 642 I DC MB F N uc -
+<DEFINE> nReserve C:/CodeInspection/DisplayUnit/Src/global_var.h 643 I DC MB F N uc -
+<DEFINE> Pickup C:/CodeInspection/DisplayUnit/Src/global_var.h 644 I DC MB F N us -
+<DEFINE> nTmDly C:/CodeInspection/DisplayUnit/Src/global_var.h 645 I DC MB F N us -
+<DEFINE> Ry_RV_Def C:/CodeInspection/DisplayUnit/Src/global_var.h 647 I DC OT F N {s} -
+<DEFINE> nUse C:/CodeInspection/DisplayUnit/Src/global_var.h 651 I DC MB F N uc -
+<DEFINE> nDoSel C:/CodeInspection/DisplayUnit/Src/global_var.h 652 I DC MB F N uc -
+<DEFINE> nOpmode C:/CodeInspection/DisplayUnit/Src/global_var.h 653 I DC MB F N uc -
+<DEFINE> ZsiEn C:/CodeInspection/DisplayUnit/Src/global_var.h 654 I DC MB F N uc -
+<DEFINE> nStartUpEn C:/CodeInspection/DisplayUnit/Src/global_var.h 655 I DC MB F N uc -
+<DEFINE> Res C:/CodeInspection/DisplayUnit/Src/global_var.h 656 I DC MB F N uc -
+<DEFINE> nPickup C:/CodeInspection/DisplayUnit/Src/global_var.h 657 I DC MB F N us -
+<DEFINE> nTmDly C:/CodeInspection/DisplayUnit/Src/global_var.h 658 I DC MB F N us -
+<DEFINE> nCherAngle C:/CodeInspection/DisplayUnit/Src/global_var.h 659 I DC MB F N us -
+<DEFINE> nZsiTmDly C:/CodeInspection/DisplayUnit/Src/global_var.h 660 I DC MB F N us -
+<DEFINE> nSuPikup C:/CodeInspection/DisplayUnit/Src/global_var.h 661 I DC MB F N us -
+<DEFINE> nSuTmDly C:/CodeInspection/DisplayUnit/Src/global_var.h 662 I DC MB F N us -
+<DEFINE> Ry_D_OV_Def C:/CodeInspection/DisplayUnit/Src/global_var.h 664 I DC OT F N {s} -
+<DEFINE> nUse C:/CodeInspection/DisplayUnit/Src/global_var.h 668 I DC MB F N uc -
+<DEFINE> nDoSel C:/CodeInspection/DisplayUnit/Src/global_var.h 669 I DC MB F N uc -
+<DEFINE> nOpmode C:/CodeInspection/DisplayUnit/Src/global_var.h 670 I DC MB F N uc -
+<DEFINE> nModeSel C:/CodeInspection/DisplayUnit/Src/global_var.h 671 I DC MB F N uc -
+<DEFINE> nPickupVL C:/CodeInspection/DisplayUnit/Src/global_var.h 672 I DC MB F N us -
+<DEFINE> nPickupVH C:/CodeInspection/DisplayUnit/Src/global_var.h 673 I DC MB F N us -
+<DEFINE> nPickupA C:/CodeInspection/DisplayUnit/Src/global_var.h 674 I DC MB F N us -
+<DEFINE> nTmDly C:/CodeInspection/DisplayUnit/Src/global_var.h 675 I DC MB F N us -
+<DEFINE> nKs C:/CodeInspection/DisplayUnit/Src/global_var.h 676 I DC MB F N us -
+<DEFINE> Ry_S_OCOP_Sta1_Def C:/CodeInspection/DisplayUnit/Src/global_var.h 678 I DC OT F N {s} -
+<DEFINE> nUse C:/CodeInspection/DisplayUnit/Src/global_var.h 682 I DC MB F N uc -
+<DEFINE> nDoSel C:/CodeInspection/DisplayUnit/Src/global_var.h 683 I DC MB F N uc -
+<DEFINE> nOpmode C:/CodeInspection/DisplayUnit/Src/global_var.h 684 I DC MB F N uc -
+<DEFINE> nModeSel C:/CodeInspection/DisplayUnit/Src/global_var.h 685 I DC MB F N uc -
+<DEFINE> nPickupVL C:/CodeInspection/DisplayUnit/Src/global_var.h 686 I DC MB F N us -
+<DEFINE> nPickupVH C:/CodeInspection/DisplayUnit/Src/global_var.h 687 I DC MB F N us -
+<DEFINE> nPickupA C:/CodeInspection/DisplayUnit/Src/global_var.h 688 I DC MB F N us -
+<DEFINE> nTmDly C:/CodeInspection/DisplayUnit/Src/global_var.h 689 I DC MB F N us -
+<DEFINE> nKs C:/CodeInspection/DisplayUnit/Src/global_var.h 690 I DC MB F N us -
+<DEFINE> Ry_S_OCOP_Sta2_Def C:/CodeInspection/DisplayUnit/Src/global_var.h 692 I DC OT F N {s} -
+<DEFINE> nUse C:/CodeInspection/DisplayUnit/Src/global_var.h 696 I DC MB F N uc -
+<DEFINE> nDoSel C:/CodeInspection/DisplayUnit/Src/global_var.h 697 I DC MB F N uc -
+<DEFINE> nOpmode C:/CodeInspection/DisplayUnit/Src/global_var.h 698 I DC MB F N uc -
+<DEFINE> Res C:/CodeInspection/DisplayUnit/Src/global_var.h 699 I DC MB F N uc -
+<DEFINE> nPickup C:/CodeInspection/DisplayUnit/Src/global_var.h 700 I DC MB F N us -
+<DEFINE> nTmDly C:/CodeInspection/DisplayUnit/Src/global_var.h 701 I DC MB F N us -
+<DEFINE> Ry_IU_Def C:/CodeInspection/DisplayUnit/Src/global_var.h 703 I DC OT F N {s} -
+<DEFINE> nUse C:/CodeInspection/DisplayUnit/Src/global_var.h 707 I DC MB F N uc -
+<DEFINE> nDoSel C:/CodeInspection/DisplayUnit/Src/global_var.h 708 I DC MB F N uc -
+<DEFINE> nOpmode C:/CodeInspection/DisplayUnit/Src/global_var.h 709 I DC MB F N uc -
+<DEFINE> Res C:/CodeInspection/DisplayUnit/Src/global_var.h 710 I DC MB F N uc -
+<DEFINE> nPickup C:/CodeInspection/DisplayUnit/Src/global_var.h 711 I DC MB F N us -
+<DEFINE> nTmDly C:/CodeInspection/DisplayUnit/Src/global_var.h 712 I DC MB F N us -
+<DEFINE> Ry_VU_Def C:/CodeInspection/DisplayUnit/Src/global_var.h 714 I DC OT F N {s} -
+<DEFINE> nUse C:/CodeInspection/DisplayUnit/Src/global_var.h 718 I DC MB F N uc -
+<DEFINE> nDoSel C:/CodeInspection/DisplayUnit/Src/global_var.h 719 I DC MB F N uc -
+<DEFINE> nOpmode C:/CodeInspection/DisplayUnit/Src/global_var.h 720 I DC MB F N uc -
+<DEFINE> Res C:/CodeInspection/DisplayUnit/Src/global_var.h 721 I DC MB F N uc -
+<DEFINE> nUnderVol C:/CodeInspection/DisplayUnit/Src/global_var.h 722 I DC MB F N us -
+<DEFINE> nPickup C:/CodeInspection/DisplayUnit/Src/global_var.h 723 I DC MB F N us -
+<DEFINE> nTmDly C:/CodeInspection/DisplayUnit/Src/global_var.h 724 I DC MB F N us -
+<DEFINE> Ry_UF_STA1_Def C:/CodeInspection/DisplayUnit/Src/global_var.h 726 I DC OT F N {s} -
+<DEFINE> nUse C:/CodeInspection/DisplayUnit/Src/global_var.h 730 I DC MB F N uc -
+<DEFINE> nDoSel C:/CodeInspection/DisplayUnit/Src/global_var.h 731 I DC MB F N uc -
+<DEFINE> nOpmode C:/CodeInspection/DisplayUnit/Src/global_var.h 732 I DC MB F N uc -
+<DEFINE> Res C:/CodeInspection/DisplayUnit/Src/global_var.h 733 I DC MB F N uc -
+<DEFINE> nUnderVol C:/CodeInspection/DisplayUnit/Src/global_var.h 734 I DC MB F N us -
+<DEFINE> nPickup C:/CodeInspection/DisplayUnit/Src/global_var.h 735 I DC MB F N us -
+<DEFINE> nTmDly C:/CodeInspection/DisplayUnit/Src/global_var.h 736 I DC MB F N us -
+<DEFINE> Ry_UF_STA2_Def C:/CodeInspection/DisplayUnit/Src/global_var.h 738 I DC OT F N {s} -
+<DEFINE> nUse C:/CodeInspection/DisplayUnit/Src/global_var.h 742 I DC MB F N uc -
+<DEFINE> nDoSel C:/CodeInspection/DisplayUnit/Src/global_var.h 743 I DC MB F N uc -
+<DEFINE> nOpmode C:/CodeInspection/DisplayUnit/Src/global_var.h 744 I DC MB F N uc -
+<DEFINE> Res C:/CodeInspection/DisplayUnit/Src/global_var.h 745 I DC MB F N uc -
+<DEFINE> nUnderVol C:/CodeInspection/DisplayUnit/Src/global_var.h 746 I DC MB F N us -
+<DEFINE> nPickup C:/CodeInspection/DisplayUnit/Src/global_var.h 747 I DC MB F N us -
+<DEFINE> nTmDly C:/CodeInspection/DisplayUnit/Src/global_var.h 748 I DC MB F N us -
+<DEFINE> Ry_OF_STA1_Def C:/CodeInspection/DisplayUnit/Src/global_var.h 750 I DC OT F N {s} -
+<DEFINE> nUse C:/CodeInspection/DisplayUnit/Src/global_var.h 754 I DC MB F N uc -
+<DEFINE> nDoSel C:/CodeInspection/DisplayUnit/Src/global_var.h 755 I DC MB F N uc -
+<DEFINE> nOpmode C:/CodeInspection/DisplayUnit/Src/global_var.h 756 I DC MB F N uc -
+<DEFINE> Res C:/CodeInspection/DisplayUnit/Src/global_var.h 757 I DC MB F N uc -
+<DEFINE> nUnderVol C:/CodeInspection/DisplayUnit/Src/global_var.h 758 I DC MB F N us -
+<DEFINE> nPickup C:/CodeInspection/DisplayUnit/Src/global_var.h 759 I DC MB F N us -
+<DEFINE> nTmDly C:/CodeInspection/DisplayUnit/Src/global_var.h 760 I DC MB F N us -
+<DEFINE> Ry_OF_STA2_Def C:/CodeInspection/DisplayUnit/Src/global_var.h 762 I DC OT F N {s} -
+<DEFINE> nUse C:/CodeInspection/DisplayUnit/Src/global_var.h 766 I DC MB F N uc -
+<DEFINE> nDoSel C:/CodeInspection/DisplayUnit/Src/global_var.h 767 I DC MB F N uc -
+<DEFINE> nOpmode C:/CodeInspection/DisplayUnit/Src/global_var.h 768 I DC MB F N uc -
+<DEFINE> nRocof C:/CodeInspection/DisplayUnit/Src/global_var.h 769 I DC MB F N uc -
+<DEFINE> nUnderVol C:/CodeInspection/DisplayUnit/Src/global_var.h 770 I DC MB F N us -
+<DEFINE> nPickup C:/CodeInspection/DisplayUnit/Src/global_var.h 771 I DC MB F N us -
+<DEFINE> nTmDly C:/CodeInspection/DisplayUnit/Src/global_var.h 772 I DC MB F N us -
+<DEFINE> Ry_ROCOF_Def C:/CodeInspection/DisplayUnit/Src/global_var.h 774 I DC OT F N {s} -
+<DEFINE> nUse C:/CodeInspection/DisplayUnit/Src/global_var.h 778 I DC MB F N uc -
+<DEFINE> nDoSel C:/CodeInspection/DisplayUnit/Src/global_var.h 779 I DC MB F N uc -
+<DEFINE> nOpmode C:/CodeInspection/DisplayUnit/Src/global_var.h 780 I DC MB F N uc -
+<DEFINE> Res C:/CodeInspection/DisplayUnit/Src/global_var.h 781 I DC MB F N uc -
+<DEFINE> nPickup C:/CodeInspection/DisplayUnit/Src/global_var.h 782 I DC MB F N ui -
+<DEFINE> nTmDly C:/CodeInspection/DisplayUnit/Src/global_var.h 783 I DC MB F N us -
+<DEFINE> Ry_RP_Def C:/CodeInspection/DisplayUnit/Src/global_var.h 785 I DC OT F N {s} -
+<DEFINE> nUse C:/CodeInspection/DisplayUnit/Src/global_var.h 789 I DC MB F N uc -
+<DEFINE> nDoSel C:/CodeInspection/DisplayUnit/Src/global_var.h 790 I DC MB F N uc -
+<DEFINE> nOpmode C:/CodeInspection/DisplayUnit/Src/global_var.h 791 I DC MB F N uc -
+<DEFINE> Res C:/CodeInspection/DisplayUnit/Src/global_var.h 792 I DC MB F N uc -
+<DEFINE> nPickup C:/CodeInspection/DisplayUnit/Src/global_var.h 793 I DC MB F N ui -
+<DEFINE> nTmDly C:/CodeInspection/DisplayUnit/Src/global_var.h 794 I DC MB F N us -
+<DEFINE> Ry_RQ_STA1_Def C:/CodeInspection/DisplayUnit/Src/global_var.h 796 I DC OT F N {s} -
+<DEFINE> nUse C:/CodeInspection/DisplayUnit/Src/global_var.h 800 I DC MB F N uc -
+<DEFINE> nDoSel C:/CodeInspection/DisplayUnit/Src/global_var.h 801 I DC MB F N uc -
+<DEFINE> nOpmode C:/CodeInspection/DisplayUnit/Src/global_var.h 802 I DC MB F N uc -
+<DEFINE> Res C:/CodeInspection/DisplayUnit/Src/global_var.h 803 I DC MB F N uc -
+<DEFINE> nPickup C:/CodeInspection/DisplayUnit/Src/global_var.h 804 I DC MB F N ui -
+<DEFINE> nTmDly C:/CodeInspection/DisplayUnit/Src/global_var.h 805 I DC MB F N us -
+<DEFINE> Ry_RQ_STA2_Def C:/CodeInspection/DisplayUnit/Src/global_var.h 807 I DC OT F N {s} -
+<DEFINE> nUse C:/CodeInspection/DisplayUnit/Src/global_var.h 811 I DC MB F N uc -
+<DEFINE> nDoSel C:/CodeInspection/DisplayUnit/Src/global_var.h 812 I DC MB F N uc -
+<DEFINE> nOpmode C:/CodeInspection/DisplayUnit/Src/global_var.h 813 I DC MB F N uc -
+<DEFINE> Res C:/CodeInspection/DisplayUnit/Src/global_var.h 814 I DC MB F N uc -
+<DEFINE> nPickup C:/CodeInspection/DisplayUnit/Src/global_var.h 815 I DC MB F N ui -
+<DEFINE> nTmDly C:/CodeInspection/DisplayUnit/Src/global_var.h 816 I DC MB F N us -
+<DEFINE> Ry_OP_Def C:/CodeInspection/DisplayUnit/Src/global_var.h 818 I DC OT F N {s} -
+<DEFINE> nUse C:/CodeInspection/DisplayUnit/Src/global_var.h 822 I DC MB F N uc -
+<DEFINE> nDoSel C:/CodeInspection/DisplayUnit/Src/global_var.h 823 I DC MB F N uc -
+<DEFINE> nOpmode C:/CodeInspection/DisplayUnit/Src/global_var.h 824 I DC MB F N uc -
+<DEFINE> Res C:/CodeInspection/DisplayUnit/Src/global_var.h 825 I DC MB F N uc -
+<DEFINE> nPickup C:/CodeInspection/DisplayUnit/Src/global_var.h 826 I DC MB F N ui -
+<DEFINE> nTmDly C:/CodeInspection/DisplayUnit/Src/global_var.h 827 I DC MB F N us -
+<DEFINE> Ry_OQ_Def C:/CodeInspection/DisplayUnit/Src/global_var.h 829 I DC OT F N {s} -
+<DEFINE> nUse C:/CodeInspection/DisplayUnit/Src/global_var.h 833 I DC MB F N uc -
+<DEFINE> nDoSel C:/CodeInspection/DisplayUnit/Src/global_var.h 834 I DC MB F N uc -
+<DEFINE> nOpmode C:/CodeInspection/DisplayUnit/Src/global_var.h 835 I DC MB F N uc -
+<DEFINE> Res C:/CodeInspection/DisplayUnit/Src/global_var.h 836 I DC MB F N uc -
+<DEFINE> nDeadCurr C:/CodeInspection/DisplayUnit/Src/global_var.h 837 I DC MB F N us -
+<DEFINE> nPickup C:/CodeInspection/DisplayUnit/Src/global_var.h 838 I DC MB F N ui -
+<DEFINE> nTmDly C:/CodeInspection/DisplayUnit/Src/global_var.h 839 I DC MB F N us -
+<DEFINE> Ry_UP_Def C:/CodeInspection/DisplayUnit/Src/global_var.h 841 I DC OT F N {s} -
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/Src/global_var.h 848 5 I DN - F P
+<DEFINE> PhACurr C:/CodeInspection/DisplayUnit/Src/global_var.h 851 I DC MB F N ui -
+<DEFINE> PhBCurr C:/CodeInspection/DisplayUnit/Src/global_var.h 852 I DC MB F N ui -
+<DEFINE> PhCCurr C:/CodeInspection/DisplayUnit/Src/global_var.h 853 I DC MB F N ui -
+<DEFINE> PhNCurr C:/CodeInspection/DisplayUnit/Src/global_var.h 854 I DC MB F N ui -
+<DEFINE> Mea_PhCurr_Def C:/CodeInspection/DisplayUnit/Src/global_var.h 855 I DC OT F N {s} -
+<DEFINE> PhAVol C:/CodeInspection/DisplayUnit/Src/global_var.h 862 I DC MB F N fs -
+<DEFINE> PhBVol C:/CodeInspection/DisplayUnit/Src/global_var.h 863 I DC MB F N fs -
+<DEFINE> PhCVol C:/CodeInspection/DisplayUnit/Src/global_var.h 864 I DC MB F N fs -
+<DEFINE> PhABVol C:/CodeInspection/DisplayUnit/Src/global_var.h 866 I DC MB F N fs -
+<DEFINE> PhBCVol C:/CodeInspection/DisplayUnit/Src/global_var.h 867 I DC MB F N fs -
+<DEFINE> PhCAVol C:/CodeInspection/DisplayUnit/Src/global_var.h 868 I DC MB F N fs -
+<DEFINE> PhACur C:/CodeInspection/DisplayUnit/Src/global_var.h 870 I DC MB F N fs -
+<DEFINE> PhBCur C:/CodeInspection/DisplayUnit/Src/global_var.h 871 I DC MB F N fs -
+<DEFINE> PhCCur C:/CodeInspection/DisplayUnit/Src/global_var.h 872 I DC MB F N fs -
+<DEFINE> PhNCur C:/CodeInspection/DisplayUnit/Src/global_var.h 873 I DC MB F N fs -
+<DEFINE> Mea_PhVolDef C:/CodeInspection/DisplayUnit/Src/global_var.h 875 I DC OT F N {s} -
+<DEFINE> nSyseRollOverC C:/CodeInspection/DisplayUnit/Src/global_var.h 881 I DC MB F N uc -
+<DEFINE> nFlteRollOverC C:/CodeInspection/DisplayUnit/Src/global_var.h 882 I DC MB F N uc -
+<DEFINE> nLastSysEvtIdx C:/CodeInspection/DisplayUnit/Src/global_var.h 884 I DC MB F N us -
+<DEFINE> nLastFltEvtIdx C:/CodeInspection/DisplayUnit/Src/global_var.h 885 I DC MB F N us -
+<DEFINE> nLastTripWaveFN C:/CodeInspection/DisplayUnit/Src/global_var.h 887 I DC MB F N uc -
+<DEFINE> nVaildTripWaveCnt C:/CodeInspection/DisplayUnit/Src/global_var.h 888 I DC MB F N uc -
+<DEFINE> nDemandNum C:/CodeInspection/DisplayUnit/Src/global_var.h 890 I DC MB F N uc -
+<DEFINE> nDemandNone C:/CodeInspection/DisplayUnit/Src/global_var.h 891 I DC MB F N uc -
+<DEFINE> nSysSetNum C:/CodeInspection/DisplayUnit/Src/global_var.h 893 I DC MB F N uc -
+<DEFINE> nPwrSetNum C:/CodeInspection/DisplayUnit/Src/global_var.h 894 I DC MB F N uc -
+<DEFINE> nPols C:/CodeInspection/DisplayUnit/Src/global_var.h 896 I DC MB F N uc -
+<DEFINE> nUseVolSet C:/CodeInspection/DisplayUnit/Src/global_var.h 897 I DC MB F N uc -
+<DEFINE> nKnobSts1 C:/CodeInspection/DisplayUnit/Src/global_var.h 899 I DC MB F N us -
+<DEFINE> nKnobSts2 C:/CodeInspection/DisplayUnit/Src/global_var.h 900 I DC MB F N us -
+<DEFINE> nLongtmIR C:/CodeInspection/DisplayUnit/Src/global_var.h 902 I DC MB F N us -
+<DEFINE> nRes1 C:/CodeInspection/DisplayUnit/Src/global_var.h 904 I DC MB F N us -
+<DEFINE> nRes2 C:/CodeInspection/DisplayUnit/Src/global_var.h 905 I DC MB F N us -
+<DEFINE> nOperStatus C:/CodeInspection/DisplayUnit/Src/global_var.h 907 I DC MB F N us -
+<DEFINE> nDIstatus C:/CodeInspection/DisplayUnit/Src/global_var.h 908 I DC MB F N us -
+<DEFINE> nDOstatus C:/CodeInspection/DisplayUnit/Src/global_var.h 909 I DC MB F N us -
+<DEFINE> nDevActFail1 C:/CodeInspection/DisplayUnit/Src/global_var.h 911 I DC MB F N us -
+<DEFINE> nDevActFail2 C:/CodeInspection/DisplayUnit/Src/global_var.h 912 I DC MB F N us -
+<DEFINE> nCurrPwrAct1 C:/CodeInspection/DisplayUnit/Src/global_var.h 914 I DC MB F N us -
+<DEFINE> nCurrPwrAct2 C:/CodeInspection/DisplayUnit/Src/global_var.h 915 I DC MB F N us -
+<DEFINE> nCpxPwrAct1 C:/CodeInspection/DisplayUnit/Src/global_var.h 917 I DC MB F N us -
+<DEFINE> nCpxPwrAct2 C:/CodeInspection/DisplayUnit/Src/global_var.h 918 I DC MB F N us -
+<DEFINE> nAPhCurr C:/CodeInspection/DisplayUnit/Src/global_var.h 920 I DC MB F N fs -
+<DEFINE> nBPhCurr C:/CodeInspection/DisplayUnit/Src/global_var.h 921 I DC MB F N fs -
+<DEFINE> nCPhCurr C:/CodeInspection/DisplayUnit/Src/global_var.h 922 I DC MB F N fs -
+<DEFINE> nNPhCurr C:/CodeInspection/DisplayUnit/Src/global_var.h 923 I DC MB F N fs -
+<DEFINE> n3OPhCurrIn C:/CodeInspection/DisplayUnit/Src/global_var.h 925 I DC MB F N fs -
+<DEFINE> n3OPhCurrOut C:/CodeInspection/DisplayUnit/Src/global_var.h 926 I DC MB F N fs -
+<DEFINE> nNorPhCurr C:/CodeInspection/DisplayUnit/Src/global_var.h 927 I DC MB F N fs -
+<DEFINE> nRevPhCurr C:/CodeInspection/DisplayUnit/Src/global_var.h 928 I DC MB F N fs -
+<DEFINE> nAPhVol C:/CodeInspection/DisplayUnit/Src/global_var.h 930 I DC MB F N fs -
+<DEFINE> nBPhVol C:/CodeInspection/DisplayUnit/Src/global_var.h 931 I DC MB F N fs -
+<DEFINE> nCPhVol C:/CodeInspection/DisplayUnit/Src/global_var.h 932 I DC MB F N fs -
+<DEFINE> nABPhVol C:/CodeInspection/DisplayUnit/Src/global_var.h 934 I DC MB F N fs -
+<DEFINE> nBCPhVol C:/CodeInspection/DisplayUnit/Src/global_var.h 935 I DC MB F N fs -
+<DEFINE> nCAPhVol C:/CodeInspection/DisplayUnit/Src/global_var.h 936 I DC MB F N fs -
+<DEFINE> n3OPhVolIn C:/CodeInspection/DisplayUnit/Src/global_var.h 938 I DC MB F N fs -
+<DEFINE> n3ONorPhVol C:/CodeInspection/DisplayUnit/Src/global_var.h 939 I DC MB F N fs -
+<DEFINE> n3ORevPhVol C:/CodeInspection/DisplayUnit/Src/global_var.h 940 I DC MB F N fs -
+<DEFINE> nTotperPwr C:/CodeInspection/DisplayUnit/Src/global_var.h 942 I DC MB F N fs -
+<DEFINE> nTotWPwr C:/CodeInspection/DisplayUnit/Src/global_var.h 943 I DC MB F N fs -
+<DEFINE> nTotVarPwr C:/CodeInspection/DisplayUnit/Src/global_var.h 944 I DC MB F N fs -
+<DEFINE> nTotVaPwr C:/CodeInspection/DisplayUnit/Src/global_var.h 945 I DC MB F N fs -
+<DEFINE> nF C:/CodeInspection/DisplayUnit/Src/global_var.h 947 I DC MB F N fs -
+<DEFINE> nVolNonPr C:/CodeInspection/DisplayUnit/Src/global_var.h 949 I DC MB F N fs -
+<DEFINE> nCurrNonPr C:/CodeInspection/DisplayUnit/Src/global_var.h 950 I DC MB F N fs -
+<DEFINE> nPwrPcen C:/CodeInspection/DisplayUnit/Src/global_var.h 951 I DC MB F N fs -
+<DEFINE> nEp_l C:/CodeInspection/DisplayUnit/Src/global_var.h 953 I DC MB F N fs -
+<DEFINE> nEp_h C:/CodeInspection/DisplayUnit/Src/global_var.h 954 I DC MB F N ui -
+<DEFINE> nEq_l C:/CodeInspection/DisplayUnit/Src/global_var.h 955 I DC MB F N fs -
+<DEFINE> nEq_h C:/CodeInspection/DisplayUnit/Src/global_var.h 956 I DC MB F N ui -
+<DEFINE> nRp_l C:/CodeInspection/DisplayUnit/Src/global_var.h 958 I DC MB F N fs -
+<DEFINE> nRp_h C:/CodeInspection/DisplayUnit/Src/global_var.h 959 I DC MB F N ui -
+<DEFINE> nRq_l C:/CodeInspection/DisplayUnit/Src/global_var.h 960 I DC MB F N fs -
+<DEFINE> nRq_h C:/CodeInspection/DisplayUnit/Src/global_var.h 961 I DC MB F N ui -
+<DEFINE> nPisan_l C:/CodeInspection/DisplayUnit/Src/global_var.h 963 I DC MB F N fs -
+<DEFINE> nPisan_h C:/CodeInspection/DisplayUnit/Src/global_var.h 964 I DC MB F N ui -
+<DEFINE> nAphPf C:/CodeInspection/DisplayUnit/Src/global_var.h 966 I DC MB F N fs -
+<DEFINE> nBphPf C:/CodeInspection/DisplayUnit/Src/global_var.h 967 I DC MB F N fs -
+<DEFINE> nCphPf C:/CodeInspection/DisplayUnit/Src/global_var.h 968 I DC MB F N fs -
+<DEFINE> nAphP C:/CodeInspection/DisplayUnit/Src/global_var.h 970 I DC MB F N fs -
+<DEFINE> nBphP C:/CodeInspection/DisplayUnit/Src/global_var.h 971 I DC MB F N fs -
+<DEFINE> nCphP C:/CodeInspection/DisplayUnit/Src/global_var.h 972 I DC MB F N fs -
+<DEFINE> nAphQ C:/CodeInspection/DisplayUnit/Src/global_var.h 974 I DC MB F N fs -
+<DEFINE> nBphQ C:/CodeInspection/DisplayUnit/Src/global_var.h 975 I DC MB F N fs -
+<DEFINE> nCphQ C:/CodeInspection/DisplayUnit/Src/global_var.h 976 I DC MB F N fs -
+<DEFINE> Mea_FastUpdate_Def C:/CodeInspection/DisplayUnit/Src/global_var.h 977 I DC OT F N {s} -
+<DEFINE> nVa C:/CodeInspection/DisplayUnit/Src/global_var.h 981 I DC MB F N ui -
+<DEFINE> nVb C:/CodeInspection/DisplayUnit/Src/global_var.h 982 I DC MB F N ui -
+<DEFINE> nVc C:/CodeInspection/DisplayUnit/Src/global_var.h 983 I DC MB F N ui -
+<DEFINE> nIa C:/CodeInspection/DisplayUnit/Src/global_var.h 985 I DC MB F N ui -
+<DEFINE> nIb C:/CodeInspection/DisplayUnit/Src/global_var.h 986 I DC MB F N ui -
+<DEFINE> nIc C:/CodeInspection/DisplayUnit/Src/global_var.h 987 I DC MB F N ui -
+<DEFINE> nVab C:/CodeInspection/DisplayUnit/Src/global_var.h 989 I DC MB F N ui -
+<DEFINE> nVbc C:/CodeInspection/DisplayUnit/Src/global_var.h 990 I DC MB F N ui -
+<DEFINE> nVca C:/CodeInspection/DisplayUnit/Src/global_var.h 991 I DC MB F N ui -
+<DEFINE> Mea_phVolCurr C:/CodeInspection/DisplayUnit/Src/global_var.h 992 I DC OT F N {s} -
+<DEFINE> nMaxVo C:/CodeInspection/DisplayUnit/Src/global_var.h 995 I DC MB F N fs -
+<DEFINE> nMaxVoRes C:/CodeInspection/DisplayUnit/Src/global_var.h 996 I DC MB F N uc -
+<DEFINE> nMaxVoYear C:/CodeInspection/DisplayUnit/Src/global_var.h 997 I DC MB F N uc -
+<DEFINE> nMaxVoMonth C:/CodeInspection/DisplayUnit/Src/global_var.h 998 I DC MB F N uc -
+<DEFINE> nMaxVoDay C:/CodeInspection/DisplayUnit/Src/global_var.h 999 I DC MB F N uc -
+<DEFINE> nMaxVoHour C:/CodeInspection/DisplayUnit/Src/global_var.h 1000 I DC MB F N uc -
+<DEFINE> nMaxVoMinute C:/CodeInspection/DisplayUnit/Src/global_var.h 1001 I DC MB F N uc -
+<DEFINE> nMaxVoSec C:/CodeInspection/DisplayUnit/Src/global_var.h 1002 I DC MB F N us -
+<DEFINE> nMaxIo C:/CodeInspection/DisplayUnit/Src/global_var.h 1004 I DC MB F N fs -
+<DEFINE> nMaxIoRes C:/CodeInspection/DisplayUnit/Src/global_var.h 1005 I DC MB F N uc -
+<DEFINE> nMaxIoYear C:/CodeInspection/DisplayUnit/Src/global_var.h 1006 I DC MB F N uc -
+<DEFINE> nMaxIoMonth C:/CodeInspection/DisplayUnit/Src/global_var.h 1007 I DC MB F N uc -
+<DEFINE> nMaxIoDay C:/CodeInspection/DisplayUnit/Src/global_var.h 1008 I DC MB F N uc -
+<DEFINE> nMaxIoHour C:/CodeInspection/DisplayUnit/Src/global_var.h 1009 I DC MB F N uc -
+<DEFINE> nMaxIoMinute C:/CodeInspection/DisplayUnit/Src/global_var.h 1010 I DC MB F N uc -
+<DEFINE> nMaxIoSec C:/CodeInspection/DisplayUnit/Src/global_var.h 1011 I DC MB F N us -
+<DEFINE> Mea_MaxVoIo C:/CodeInspection/DisplayUnit/Src/global_var.h 1012 I DC OT F N {s} -
+<DEFINE> nIa C:/CodeInspection/DisplayUnit/Src/global_var.h 1015 I DC MB F N fs -
+<DEFINE> nIb C:/CodeInspection/DisplayUnit/Src/global_var.h 1016 I DC MB F N fs -
+<DEFINE> nIc C:/CodeInspection/DisplayUnit/Src/global_var.h 1017 I DC MB F N fs -
+<DEFINE> nIw C:/CodeInspection/DisplayUnit/Src/global_var.h 1018 I DC MB F N fs -
+<DEFINE> nMaxDIa C:/CodeInspection/DisplayUnit/Src/global_var.h 1020 I DC MB F N fs -
+<DEFINE> nMaxDIaRes C:/CodeInspection/DisplayUnit/Src/global_var.h 1021 I DC MB F N uc -
+<DEFINE> nMaxDIaYear C:/CodeInspection/DisplayUnit/Src/global_var.h 1022 I DC MB F N uc -
+<DEFINE> nMaxDIaMonth C:/CodeInspection/DisplayUnit/Src/global_var.h 1023 I DC MB F N uc -
+<DEFINE> nMaxDIaDay C:/CodeInspection/DisplayUnit/Src/global_var.h 1024 I DC MB F N uc -
+<DEFINE> nMaxDIaHour C:/CodeInspection/DisplayUnit/Src/global_var.h 1025 I DC MB F N uc -
+<DEFINE> nMaxDIaMinute C:/CodeInspection/DisplayUnit/Src/global_var.h 1026 I DC MB F N uc -
+<DEFINE> nMaxDIaSec C:/CodeInspection/DisplayUnit/Src/global_var.h 1027 I DC MB F N us -
+<DEFINE> nMaxDIb C:/CodeInspection/DisplayUnit/Src/global_var.h 1029 I DC MB F N fs -
+<DEFINE> nMaxDIbRes C:/CodeInspection/DisplayUnit/Src/global_var.h 1030 I DC MB F N uc -
+<DEFINE> nMaxDIbYear C:/CodeInspection/DisplayUnit/Src/global_var.h 1031 I DC MB F N uc -
+<DEFINE> nMaxDIbMonth C:/CodeInspection/DisplayUnit/Src/global_var.h 1032 I DC MB F N uc -
+<DEFINE> nMaxDIbDay C:/CodeInspection/DisplayUnit/Src/global_var.h 1033 I DC MB F N uc -
+<DEFINE> nMaxDIbHour C:/CodeInspection/DisplayUnit/Src/global_var.h 1034 I DC MB F N uc -
+<DEFINE> nMaxDIbMinute C:/CodeInspection/DisplayUnit/Src/global_var.h 1035 I DC MB F N uc -
+<DEFINE> nMaxDIbSec C:/CodeInspection/DisplayUnit/Src/global_var.h 1036 I DC MB F N us -
+<DEFINE> nMaxDIc C:/CodeInspection/DisplayUnit/Src/global_var.h 1038 I DC MB F N fs -
+<DEFINE> nMaxDIcRes C:/CodeInspection/DisplayUnit/Src/global_var.h 1039 I DC MB F N uc -
+<DEFINE> nMaxDIcYear C:/CodeInspection/DisplayUnit/Src/global_var.h 1040 I DC MB F N uc -
+<DEFINE> nMaxDIcMonth C:/CodeInspection/DisplayUnit/Src/global_var.h 1041 I DC MB F N uc -
+<DEFINE> nMaxDIcDay C:/CodeInspection/DisplayUnit/Src/global_var.h 1042 I DC MB F N uc -
+<DEFINE> nMaxDIcHour C:/CodeInspection/DisplayUnit/Src/global_var.h 1043 I DC MB F N uc -
+<DEFINE> nMaxDIcMinute C:/CodeInspection/DisplayUnit/Src/global_var.h 1044 I DC MB F N uc -
+<DEFINE> nMaxDIcSec C:/CodeInspection/DisplayUnit/Src/global_var.h 1045 I DC MB F N us -
+<DEFINE> nMaxDIw C:/CodeInspection/DisplayUnit/Src/global_var.h 1047 I DC MB F N fs -
+<DEFINE> nMaxDIwRes C:/CodeInspection/DisplayUnit/Src/global_var.h 1048 I DC MB F N uc -
+<DEFINE> nMaxDIwYear C:/CodeInspection/DisplayUnit/Src/global_var.h 1049 I DC MB F N uc -
+<DEFINE> nMaxDIwMonth C:/CodeInspection/DisplayUnit/Src/global_var.h 1050 I DC MB F N uc -
+<DEFINE> nMaxDIwDay C:/CodeInspection/DisplayUnit/Src/global_var.h 1051 I DC MB F N uc -
+<DEFINE> nMaxDIwHour C:/CodeInspection/DisplayUnit/Src/global_var.h 1052 I DC MB F N uc -
+<DEFINE> nMaxDIwMinute C:/CodeInspection/DisplayUnit/Src/global_var.h 1053 I DC MB F N uc -
+<DEFINE> nMaxDIwSec C:/CodeInspection/DisplayUnit/Src/global_var.h 1054 I DC MB F N us -
+<DEFINE> Mea_MaxDemand C:/CodeInspection/DisplayUnit/Src/global_var.h 1056 I DC OT F N {s} -
+<LIT> 64 - P C:/CodeInspection/DisplayUnit/Src/global_var.h 1059 16 I DN ni F D
+<DEFINE> nVa C:/CodeInspection/DisplayUnit/Src/global_var.h 1059 I DC MB F N [64,fs] -
+<LIT> 64 - P C:/CodeInspection/DisplayUnit/Src/global_var.h 1060 16 I DN ni F D
+<DEFINE> nVb C:/CodeInspection/DisplayUnit/Src/global_var.h 1060 I DC MB F N [64,fs] -
+<LIT> 64 - P C:/CodeInspection/DisplayUnit/Src/global_var.h 1061 16 I DN ni F D
+<DEFINE> nVc C:/CodeInspection/DisplayUnit/Src/global_var.h 1061 I DC MB F N [64,fs] -
+<LIT> 64 - P C:/CodeInspection/DisplayUnit/Src/global_var.h 1063 16 I DN ni F D
+<DEFINE> nIa C:/CodeInspection/DisplayUnit/Src/global_var.h 1063 I DC MB F N [64,fs] -
+<LIT> 64 - P C:/CodeInspection/DisplayUnit/Src/global_var.h 1064 16 I DN ni F D
+<DEFINE> nIb C:/CodeInspection/DisplayUnit/Src/global_var.h 1064 I DC MB F N [64,fs] -
+<LIT> 64 - P C:/CodeInspection/DisplayUnit/Src/global_var.h 1065 16 I DN ni F D
+<DEFINE> nIc C:/CodeInspection/DisplayUnit/Src/global_var.h 1065 I DC MB F N [64,fs] -
+<DEFINE> Mea_HamVIabcDef C:/CodeInspection/DisplayUnit/Src/global_var.h 1066 I DC OT F N {s} -
+<DEFINE> nThdVa C:/CodeInspection/DisplayUnit/Src/global_var.h 1069 I DC MB F N fs -
+<DEFINE> nThdVb C:/CodeInspection/DisplayUnit/Src/global_var.h 1070 I DC MB F N fs -
+<DEFINE> nThdVc C:/CodeInspection/DisplayUnit/Src/global_var.h 1071 I DC MB F N fs -
+<DEFINE> nThdIa C:/CodeInspection/DisplayUnit/Src/global_var.h 1073 I DC MB F N fs -
+<DEFINE> nThdIb C:/CodeInspection/DisplayUnit/Src/global_var.h 1074 I DC MB F N fs -
+<DEFINE> nThdIc C:/CodeInspection/DisplayUnit/Src/global_var.h 1075 I DC MB F N fs -
+<DEFINE> nTddIa C:/CodeInspection/DisplayUnit/Src/global_var.h 1077 I DC MB F N fs -
+<DEFINE> nTddIb C:/CodeInspection/DisplayUnit/Src/global_var.h 1078 I DC MB F N fs -
+<DEFINE> nTddIc C:/CodeInspection/DisplayUnit/Src/global_var.h 1079 I DC MB F N fs -
+<DEFINE> nKfIa C:/CodeInspection/DisplayUnit/Src/global_var.h 1081 I DC MB F N fs -
+<DEFINE> nKfIb C:/CodeInspection/DisplayUnit/Src/global_var.h 1082 I DC MB F N fs -
+<DEFINE> nKfIc C:/CodeInspection/DisplayUnit/Src/global_var.h 1083 I DC MB F N fs -
+<DEFINE> Mea_ThdTddKfDef C:/CodeInspection/DisplayUnit/Src/global_var.h 1085 I DC OT F N {s} -
+<DEFINE> rwIA C:/CodeInspection/DisplayUnit/Src/global_var.h 1090 I DC MB F N ns -
+<DEFINE> rwIB C:/CodeInspection/DisplayUnit/Src/global_var.h 1091 I DC MB F N ns -
+<DEFINE> rwIC C:/CodeInspection/DisplayUnit/Src/global_var.h 1092 I DC MB F N ns -
+<DEFINE> rwIN C:/CodeInspection/DisplayUnit/Src/global_var.h 1093 I DC MB F N ns -
+<DEFINE> rwExIzct C:/CodeInspection/DisplayUnit/Src/global_var.h 1094 I DC MB F N ns -
+<DEFINE> rwVaVab C:/CodeInspection/DisplayUnit/Src/global_var.h 1095 I DC MB F N ns -
+<DEFINE> rwVbVbc C:/CodeInspection/DisplayUnit/Src/global_var.h 1096 I DC MB F N ns -
+<DEFINE> rwVcVca C:/CodeInspection/DisplayUnit/Src/global_var.h 1097 I DC MB F N ns -
+<DEFINE> rwRes1 C:/CodeInspection/DisplayUnit/Src/global_var.h 1098 I DC MB F N us -
+<DEFINE> rwRes2 C:/CodeInspection/DisplayUnit/Src/global_var.h 1099 I DC MB F N us -
+<DEFINE> RealWave_SmpDef C:/CodeInspection/DisplayUnit/Src/global_var.h 1101 I DC OT F N {s} -
+<LIT> 32 - P C:/CodeInspection/DisplayUnit/Src/global_var.h 1106 34 I DN ni F D
+<DEFINE> RwSampleData C:/CodeInspection/DisplayUnit/Src/global_var.h 1106 I DC MB F N [32,{sRealWave_SmpDef}] -
+<DEFINE> Mea_OSC_CycleDef C:/CodeInspection/DisplayUnit/Src/global_var.h 1108 I DC OT F N {s} -
+<LIT> 8 - P C:/CodeInspection/DisplayUnit/Src/global_var.h 1113 28 I DN ni F D
+<DEFINE> sys_event C:/CodeInspection/DisplayUnit/Src/global_var.h 1113 I DC MB F N [8,us] -
+<LIT> 7 - P C:/CodeInspection/DisplayUnit/Src/global_var.h 1114 34 I DN ni F D
+<DEFINE> fault_event_hdr C:/CodeInspection/DisplayUnit/Src/global_var.h 1114 I DC MB F N [7,us] -
+<LIT> 9 - P C:/CodeInspection/DisplayUnit/Src/global_var.h 1115 34 I DN ni F D
+<DEFINE> fault_event_val C:/CodeInspection/DisplayUnit/Src/global_var.h 1115 I DC MB F N [9,ui] -
+<DEFINE> TripWavMaxCnt C:/CodeInspection/DisplayUnit/Src/global_var.h 1119 I DC MB F N us -
+<DEFINE> Res C:/CodeInspection/DisplayUnit/Src/global_var.h 1120 I DC MB F N us -
+<DEFINE> TripWavSaveCycle C:/CodeInspection/DisplayUnit/Src/global_var.h 1121 I DC MB F N us -
+<DEFINE> RealWavSaveCycle C:/CodeInspection/DisplayUnit/Src/global_var.h 1122 I DC MB F N us -
+<DEFINE> Trip1CycleSample C:/CodeInspection/DisplayUnit/Src/global_var.h 1123 I DC MB F N us -
+<DEFINE> Real1CycleSample C:/CodeInspection/DisplayUnit/Src/global_var.h 1124 I DC MB F N us -
+<DEFINE> SysEvtMaxCnt C:/CodeInspection/DisplayUnit/Src/global_var.h 1125 I DC MB F N us -
+<DEFINE> FltEvtMaxCnt C:/CodeInspection/DisplayUnit/Src/global_var.h 1126 I DC MB F N us -
+<DEFINE> SysEvt1RecLength C:/CodeInspection/DisplayUnit/Src/global_var.h 1127 I DC MB F N us -
+<DEFINE> FltEvt1RecLength C:/CodeInspection/DisplayUnit/Src/global_var.h 1128 I DC MB F N us -
+<DEFINE> TripWav1RecLength C:/CodeInspection/DisplayUnit/Src/global_var.h 1129 I DC MB F N us -
+<DEFINE> RealWav1RecLength C:/CodeInspection/DisplayUnit/Src/global_var.h 1130 I DC MB F N us -
+<DEFINE> Evt_SysevtDef C:/CodeInspection/DisplayUnit/Src/global_var.h 1132 I DC OT F N {s} -
+<DEFINE> in_temp C:/CodeInspection/DisplayUnit/Src/global_var.h 1146 I DC MB F N fs -
+<DEFINE> op_time C:/CodeInspection/DisplayUnit/Src/global_var.h 1147 I DC MB F N ui -
+<DEFINE> cb_on_time C:/CodeInspection/DisplayUnit/Src/global_var.h 1148 I DC MB F N ui -
+<DEFINE> elec_cnt C:/CodeInspection/DisplayUnit/Src/global_var.h 1149 I DC MB F N ui -
+<DEFINE> mech_cnt C:/CodeInspection/DisplayUnit/Src/global_var.h 1150 I DC MB F N ui -
+<DEFINE> trip_cnt C:/CodeInspection/DisplayUnit/Src/global_var.h 1151 I DC MB F N ui -
+<DEFINE> cont_wear C:/CodeInspection/DisplayUnit/Src/global_var.h 1152 I DC MB F N us -
+<DEFINE> Dev_LifeCycle C:/CodeInspection/DisplayUnit/Src/global_var.h 1153 I DC OT F N {s} -
+<LIT> 12 - P C:/CodeInspection/DisplayUnit/Src/global_var.h 1158 23 I DN ni F D
+<DEFINE> nProcCode C:/CodeInspection/DisplayUnit/Src/global_var.h 1158 I DC MB F N [12,uc] -
+<LIT> 10 - P C:/CodeInspection/DisplayUnit/Src/global_var.h 1159 21 I DN ni F D
+<DEFINE> nSerNum C:/CodeInspection/DisplayUnit/Src/global_var.h 1159 I DC MB F N [10,uc] -
+<LIT> 4 - P C:/CodeInspection/DisplayUnit/Src/global_var.h 1160 24 I DN ni F D
+<DEFINE> nManufName C:/CodeInspection/DisplayUnit/Src/global_var.h 1160 I DC MB F N [4,uc] -
+<LIT> 4 - P C:/CodeInspection/DisplayUnit/Src/global_var.h 1161 23 I DN ni F D
+<DEFINE> nProcName C:/CodeInspection/DisplayUnit/Src/global_var.h 1161 I DC MB F N [4,uc] -
+<LIT> 10 - P C:/CodeInspection/DisplayUnit/Src/global_var.h 1162 24 I DN ni F D
+<DEFINE> nModelName C:/CodeInspection/DisplayUnit/Src/global_var.h 1162 I DC MB F N [10,uc] -
+<LIT> 20 - P C:/CodeInspection/DisplayUnit/Src/global_var.h 1163 29 I DN ni F D
+<DEFINE> nUserDefDevName C:/CodeInspection/DisplayUnit/Src/global_var.h 1163 I DC MB F N [20,uc] -
+<LIT> 6 - P C:/CodeInspection/DisplayUnit/Src/global_var.h 1164 23 I DN ni F D
+<DEFINE> nOcrHwVer C:/CodeInspection/DisplayUnit/Src/global_var.h 1164 I DC MB F N [6,uc] -
+<DEFINE> RES1 C:/CodeInspection/DisplayUnit/Src/global_var.h 1165 I DC MB F N us -
+<DEFINE> RES2 C:/CodeInspection/DisplayUnit/Src/global_var.h 1166 I DC MB F N us -
+<DEFINE> RES3 C:/CodeInspection/DisplayUnit/Src/global_var.h 1167 I DC MB F N us -
+<DEFINE> Dev_OcrInfo C:/CodeInspection/DisplayUnit/Src/global_var.h 1168 I DC OT F N {s} -
+<LIT> 6 - P C:/CodeInspection/DisplayUnit/Src/global_var.h 1171 25 I DN ni F D
+<DEFINE> nHMI_SW_ver C:/CodeInspection/DisplayUnit/Src/global_var.h 1171 I DC MB F N [6,uc] -
+<DEFINE> OCR_Passwd C:/CodeInspection/DisplayUnit/Src/global_var.h 1172 I DC MB F N us -
+<DEFINE> Swap C:/CodeInspection/DisplayUnit/Src/global_var.h 1173 I DC MB F N us -
+<DEFINE> Map C:/CodeInspection/DisplayUnit/Src/global_var.h 1174 I DC MB F N us -
+<DEFINE> RES4 C:/CodeInspection/DisplayUnit/Src/global_var.h 1175 I DC MB F N us -
+<DEFINE> RES5 C:/CodeInspection/DisplayUnit/Src/global_var.h 1176 I DC MB F N us -
+<DEFINE> Dev_HmiInfo C:/CodeInspection/DisplayUnit/Src/global_var.h 1177 I DC OT F N {s} -
+<DEFINE> DevOcrInfo C:/CodeInspection/DisplayUnit/Src/global_var.h 1183 I DC MB F N {sDev_OcrInfo} -
+<DEFINE> DevHmiInfo C:/CodeInspection/DisplayUnit/Src/global_var.h 1185 I DC MB F N {sDev_HmiInfo} -
+<DEFINE> DevLifeCycle C:/CodeInspection/DisplayUnit/Src/global_var.h 1186 I DC MB F N {sDev_LifeCycle} -
+<DEFINE> Dev_SysInfoDef C:/CodeInspection/DisplayUnit/Src/global_var.h 1188 I DC OT F N {s} -
+<LIT> 256 - P C:/CodeInspection/DisplayUnit/Src/global_var.h 1192 25 I DN ni F D
+<DEFINE> nSysStatus C:/CodeInspection/DisplayUnit/Src/global_var.h 1192 I DC MB F N [256,uc] -
+<DEFINE> Dev_StsDef C:/CodeInspection/DisplayUnit/Src/global_var.h 1194 I DC OT F N {s} -
+<LIT> 256 - P C:/CodeInspection/DisplayUnit/Src/global_var.h 1197 25 I DN ni F D
+<DEFINE> nRlyStatus C:/CodeInspection/DisplayUnit/Src/global_var.h 1197 I DC MB F N [256,uc] -
+<DEFINE> Dev_RlyStsDef C:/CodeInspection/DisplayUnit/Src/global_var.h 1199 I DC OT F N {s} -
+<DEFINE> Hw1SetDef C:/CodeInspection/DisplayUnit/Src/global_var.h 1207 I DC MB F N {shw1set} -
+<DEFINE> Hw2SetDef C:/CodeInspection/DisplayUnit/Src/global_var.h 1208 I DC MB F N {sHW2Set_Def} -
+<DEFINE> TimeSetDef C:/CodeInspection/DisplayUnit/Src/global_var.h 1209 I DC MB F N {sNw_TimeSet_Def} -
+<DEFINE> DataClrDef C:/CodeInspection/DisplayUnit/Src/global_var.h 1210 I DC MB F N {sNw_DataClear_Def} -
+<DEFINE> DOutBitDef C:/CodeInspection/DisplayUnit/Src/global_var.h 1211 I DC MB F N {sNw_DOut_Def} -
+<DEFINE> RlyOvrLDef C:/CodeInspection/DisplayUnit/Src/global_var.h 1215 I DC MB F N {sRy_L_OL_Def} -
+<DEFINE> RlySOcst1Def C:/CodeInspection/DisplayUnit/Src/global_var.h 1216 I DC MB F N {sRy_S_OCST1_Def} -
+<DEFINE> RlySOcst2Def C:/CodeInspection/DisplayUnit/Src/global_var.h 1217 I DC MB F N {sRy_S_OCST2_Def} -
+<DEFINE> RlyIIoDef C:/CodeInspection/DisplayUnit/Src/global_var.h 1218 I DC MB F N {sRy_I_IO_Def} -
+<DEFINE> RlyGEthFaultDef C:/CodeInspection/DisplayUnit/Src/global_var.h 1219 I DC MB F N {sRy_G_EthFault_Def} -
+<DEFINE> RlyMccbDef C:/CodeInspection/DisplayUnit/Src/global_var.h 1220 I DC MB F N {sRy_MCCB_Def} -
+<DEFINE> RlyGextDef C:/CodeInspection/DisplayUnit/Src/global_var.h 1221 I DC MB F N {sRy_GEXT_Def} -
+<DEFINE> RlyLnDef C:/CodeInspection/DisplayUnit/Src/global_var.h 1222 I DC MB F N {sRy_LN_Def} -
+<DEFINE> RlyPtaDef C:/CodeInspection/DisplayUnit/Src/global_var.h 1223 I DC MB F N {sRy_PTA_Def} -
+<DEFINE> RlyUvSta1Def C:/CodeInspection/DisplayUnit/Src/global_var.h 1224 I DC MB F N {sRy_UV_Sta1_Def} -
+<DEFINE> RlyUvSta2Def C:/CodeInspection/DisplayUnit/Src/global_var.h 1225 I DC MB F N {sRy_UV_Sta2_Def} -
+<DEFINE> RlyOvSta1Def C:/CodeInspection/DisplayUnit/Src/global_var.h 1226 I DC MB F N {sRy_OV_Sta1_Def} -
+<DEFINE> RlyOvSta2Def C:/CodeInspection/DisplayUnit/Src/global_var.h 1227 I DC MB F N {sRy_OV_Sta2_Def} -
+<DEFINE> RlyRvDef C:/CodeInspection/DisplayUnit/Src/global_var.h 1228 I DC MB F N {sRy_RV_Def} -
+<DEFINE> RlyDOvDef C:/CodeInspection/DisplayUnit/Src/global_var.h 1229 I DC MB F N {sRy_D_OV_Def} -
+<DEFINE> RlySOcopSta1Def C:/CodeInspection/DisplayUnit/Src/global_var.h 1230 I DC MB F N {sRy_S_OCOP_Sta1_Def} -
+<DEFINE> RlySOcopSta2Def C:/CodeInspection/DisplayUnit/Src/global_var.h 1231 I DC MB F N {sRy_S_OCOP_Sta2_Def} -
+<DEFINE> RlyIuDef C:/CodeInspection/DisplayUnit/Src/global_var.h 1232 I DC MB F N {sRy_IU_Def} -
+<DEFINE> RlyVuDef C:/CodeInspection/DisplayUnit/Src/global_var.h 1233 I DC MB F N {sRy_VU_Def} -
+<DEFINE> RlyUfSta1Def C:/CodeInspection/DisplayUnit/Src/global_var.h 1234 I DC MB F N {sRy_UF_STA1_Def} -
+<DEFINE> RlyUfSta2Def C:/CodeInspection/DisplayUnit/Src/global_var.h 1235 I DC MB F N {sRy_UF_STA2_Def} -
+<DEFINE> RlyOfSta1Def C:/CodeInspection/DisplayUnit/Src/global_var.h 1236 I DC MB F N {sRy_OF_STA1_Def} -
+<DEFINE> RlyOfSta2Def C:/CodeInspection/DisplayUnit/Src/global_var.h 1237 I DC MB F N {sRy_OF_STA2_Def} -
+<DEFINE> RlyRocofDef C:/CodeInspection/DisplayUnit/Src/global_var.h 1238 I DC MB F N {sRy_ROCOF_Def} -
+<DEFINE> RlyRpDef C:/CodeInspection/DisplayUnit/Src/global_var.h 1239 I DC MB F N {sRy_RP_Def} -
+<DEFINE> RlyRqSts1Def C:/CodeInspection/DisplayUnit/Src/global_var.h 1240 I DC MB F N {sRy_RQ_STA1_Def} -
+<DEFINE> RlyRqSts2Def C:/CodeInspection/DisplayUnit/Src/global_var.h 1241 I DC MB F N {sRy_RQ_STA2_Def} -
+<DEFINE> RlyOpDef C:/CodeInspection/DisplayUnit/Src/global_var.h 1242 I DC MB F N {sRy_OP_Def} -
+<DEFINE> RlyOqDef C:/CodeInspection/DisplayUnit/Src/global_var.h 1243 I DC MB F N {sRy_OQ_Def} -
+<DEFINE> RlyUpDef C:/CodeInspection/DisplayUnit/Src/global_var.h 1244 I DC MB F N {sRy_UP_Def} -
+<DEFINE> MeaPhCurDef C:/CodeInspection/DisplayUnit/Src/global_var.h 1247 I DC MB F N {sMea_PhCurr_Def} -
+<DEFINE> MeaFastUpdDef C:/CodeInspection/DisplayUnit/Src/global_var.h 1248 I DC MB F N {sMea_FastUpdate_Def} -
+<DEFINE> MeaMaxVoIoDef C:/CodeInspection/DisplayUnit/Src/global_var.h 1249 I DC MB F N {sMea_MaxVoIo} -
+<DEFINE> MeaMaxDemDef C:/CodeInspection/DisplayUnit/Src/global_var.h 1250 I DC MB F N {sMea_MaxDemand} -
+<DEFINE> MeaHamVIabcDef C:/CodeInspection/DisplayUnit/Src/global_var.h 1251 I DC MB F N {sMea_HamVIabcDef} -
+<DEFINE> MeaThdTddKfDef C:/CodeInspection/DisplayUnit/Src/global_var.h 1252 I DC MB F N {sMea_ThdTddKfDef} -
+<DEFINE> MeaOscDef C:/CodeInspection/DisplayUnit/Src/global_var.h 1253 I DC MB F N {sMea_OSC_CycleDef} -
+<DEFINE> MeaPhVolDef C:/CodeInspection/DisplayUnit/Src/global_var.h 1254 I DC MB F N {sMea_PhVolDef} -
+<DEFINE> EvtSysevtDef C:/CodeInspection/DisplayUnit/Src/global_var.h 1256 I DC MB F N {sEvt_SysevtDef} -
+<DEFINE> DevSysInfoDef C:/CodeInspection/DisplayUnit/Src/global_var.h 1258 I DC MB F N {sDev_SysInfoDef} -
+<DEFINE> DevStsDef C:/CodeInspection/DisplayUnit/Src/global_var.h 1259 I DC MB F N {sDev_StsDef} -
+<DEFINE> DevRlyDef C:/CodeInspection/DisplayUnit/Src/global_var.h 1260 I DC MB F N {sDev_RlyStsDef} -
+<DEFINE> MBDATA_HandleTypeDef C:/CodeInspection/DisplayUnit/Src/global_var.h 1262 I DC OT F N {s} -
+<EXTN> hMBData C:/CodeInspection/DisplayUnit/Src/global_var.h 1264
+<DEFINE> hMBData C:/CodeInspection/DisplayUnit/Src/global_var.h 1264 I DC OV F X {sMBDATA_HandleTypeDef} S
+<EXTN> hMBDataSet C:/CodeInspection/DisplayUnit/Src/global_var.h 1265
+<DEFINE> hMBDataSet C:/CodeInspection/DisplayUnit/Src/global_var.h 1265 I DC OV F X {sMBDATA_HandleTypeDef} S
+<EXTN> TS_MainTask C:/CodeInspection/DisplayUnit/Src/global_var.h 1271
+<DEFINE> TS_MainTask C:/CodeInspection/DisplayUnit/Src/global_var.h 1271 I DC OF F X (.,.) -
+<EXTN> TSC_MainTask C:/CodeInspection/DisplayUnit/Src/global_var.h 1272
+<DEFINE> TSC_MainTask C:/CodeInspection/DisplayUnit/Src/global_var.h 1272 I DC OF F X (.,.) -
+<EXTN> Video_MainTask C:/CodeInspection/DisplayUnit/Src/global_var.h 1273
+<DEFINE> Video_MainTask C:/CodeInspection/DisplayUnit/Src/global_var.h 1273 I DC OF F X (.,.) -
+<EXTN> DropDown_MainTask C:/CodeInspection/DisplayUnit/Src/global_var.h 1274
+<DEFINE> DropDown_MainTask C:/CodeInspection/DisplayUnit/Src/global_var.h 1274 I DC OF F X (.,.) -
+<EXTN> GifTask C:/CodeInspection/DisplayUnit/Src/global_var.h 1275
+<DEFINE> GifTask C:/CodeInspection/DisplayUnit/Src/global_var.h 1275 I DC OF F X (.,.) -
+<EXTN> USBH_CDC_MbRcvDataGet C:/CodeInspection/DisplayUnit/Src/global_var.h 1278
+<DEFINE> nFrame C:/CodeInspection/DisplayUnit/Src/global_var.h 1278 I DC OV P N puc R
+<DEFINE> nInLen C:/CodeInspection/DisplayUnit/Src/global_var.h 1278 I DC OV P N ni R
+<DEFINE> nRevData C:/CodeInspection/DisplayUnit/Src/global_var.h 1278 I DC OV P N puc R
+<DEFINE> nOutLen C:/CodeInspection/DisplayUnit/Src/global_var.h 1278 I DC OV P N pus R
+<DEFINE> USBH_CDC_MbRcvDataGet C:/CodeInspection/DisplayUnit/Src/global_var.h 1278 I DC OF F X (.,puc,ni,puc,pus) -
+<EXTN> Hmi_MeterOverview C:/CodeInspection/DisplayUnit/Src/global_var.h 1281
+<DEFINE> Hmi_MeterOverview C:/CodeInspection/DisplayUnit/Src/global_var.h 1281 I DC OF F X (nl,.) -
+<EXTN> KeypadView C:/CodeInspection/DisplayUnit/Src/global_var.h 1283
+<DEFINE> hWnd C:/CodeInspection/DisplayUnit/Src/global_var.h 1283 I DC OV P N nl R
+<DEFINE> KeypadView C:/CodeInspection/DisplayUnit/Src/global_var.h 1283 I DC OF F X (.,nl) -
+<EXTN> Hmi_Main C:/CodeInspection/DisplayUnit/Src/global_var.h 1285
+<DEFINE> Hmi_Main C:/CodeInspection/DisplayUnit/Src/global_var.h 1285 I DC OF F X (.,.) -
+<EXTN> HwsetView C:/CodeInspection/DisplayUnit/Src/global_var.h 1286
+<DEFINE> hWnd C:/CodeInspection/DisplayUnit/Src/global_var.h 1286 I DC OV P N nl R
+<DEFINE> HwsetView C:/CodeInspection/DisplayUnit/Src/global_var.h 1286 I DC OF F X (.,nl) -
+<EXTN> RelaysetView C:/CodeInspection/DisplayUnit/Src/global_var.h 1287
+<DEFINE> hWnd C:/CodeInspection/DisplayUnit/Src/global_var.h 1287 I DC OV P N nl R
+<DEFINE> RelaysetView C:/CodeInspection/DisplayUnit/Src/global_var.h 1287 I DC OF F X (.,nl) -
+<EXTN> MeasureView C:/CodeInspection/DisplayUnit/Src/global_var.h 1288
+<DEFINE> hWnd C:/CodeInspection/DisplayUnit/Src/global_var.h 1288 I DC OV P N nl R
+<DEFINE> MeasureView C:/CodeInspection/DisplayUnit/Src/global_var.h 1288 I DC OF F X (.,nl) -
+<EXTN> EventsView C:/CodeInspection/DisplayUnit/Src/global_var.h 1289
+<DEFINE> hWnd C:/CodeInspection/DisplayUnit/Src/global_var.h 1289 I DC OV P N nl R
+<DEFINE> EventsView C:/CodeInspection/DisplayUnit/Src/global_var.h 1289 I DC OF F X (.,nl) -
+<EXTN> SysInfoView C:/CodeInspection/DisplayUnit/Src/global_var.h 1290
+<DEFINE> hWnd C:/CodeInspection/DisplayUnit/Src/global_var.h 1290 I DC OV P N nl R
+<DEFINE> SysInfoView C:/CodeInspection/DisplayUnit/Src/global_var.h 1290 I DC OF F X (.,nl) -
+<EXTN> NetworkSetView C:/CodeInspection/DisplayUnit/Src/global_var.h 1292
+<DEFINE> hWnd C:/CodeInspection/DisplayUnit/Src/global_var.h 1292 I DC OV P N nl R
+<DEFINE> NetworkSetView C:/CodeInspection/DisplayUnit/Src/global_var.h 1292 I DC OF F X (.,nl) -
+<EXTN> CommSetView C:/CodeInspection/DisplayUnit/Src/global_var.h 1293
+<DEFINE> hWnd C:/CodeInspection/DisplayUnit/Src/global_var.h 1293 I DC OV P N nl R
+<DEFINE> CommSetView C:/CodeInspection/DisplayUnit/Src/global_var.h 1293 I DC OF F X (.,nl) -
+<EXTN> PasswdSetView C:/CodeInspection/DisplayUnit/Src/global_var.h 1294
+<DEFINE> hWnd C:/CodeInspection/DisplayUnit/Src/global_var.h 1294 I DC OV P N nl R
+<DEFINE> PasswdSetView C:/CodeInspection/DisplayUnit/Src/global_var.h 1294 I DC OF F X (.,nl) -
+<EXTN> TimeRtcSetView C:/CodeInspection/DisplayUnit/Src/global_var.h 1295
+<DEFINE> hWnd C:/CodeInspection/DisplayUnit/Src/global_var.h 1295 I DC OV P N nl R
+<DEFINE> TimeRtcSetView C:/CodeInspection/DisplayUnit/Src/global_var.h 1295 I DC OF F X (.,nl) -
+<EXTN> DemandView C:/CodeInspection/DisplayUnit/Src/global_var.h 1296
+<DEFINE> hWnd C:/CodeInspection/DisplayUnit/Src/global_var.h 1296 I DC OV P N nl R
+<DEFINE> DemandView C:/CodeInspection/DisplayUnit/Src/global_var.h 1296 I DC OF F X (.,nl) -
+<EXTN> LanguageSetView C:/CodeInspection/DisplayUnit/Src/global_var.h 1297
+<DEFINE> hWnd C:/CodeInspection/DisplayUnit/Src/global_var.h 1297 I DC OV P N nl R
+<DEFINE> LanguageSetView C:/CodeInspection/DisplayUnit/Src/global_var.h 1297 I DC OF F X (.,nl) -
+<EXTN> GroupConView C:/CodeInspection/DisplayUnit/Src/global_var.h 1298
+<DEFINE> hWnd C:/CodeInspection/DisplayUnit/Src/global_var.h 1298 I DC OV P N nl R
+<DEFINE> GroupConView C:/CodeInspection/DisplayUnit/Src/global_var.h 1298 I DC OF F X (.,nl) -
+<EXTN> UddView C:/CodeInspection/DisplayUnit/Src/global_var.h 1299
+<DEFINE> hWnd C:/CodeInspection/DisplayUnit/Src/global_var.h 1299 I DC OV P N nl R
+<DEFINE> UddView C:/CodeInspection/DisplayUnit/Src/global_var.h 1299 I DC OF F X (.,nl) -
+<EXTN> DataClearView C:/CodeInspection/DisplayUnit/Src/global_var.h 1300
+<DEFINE> hWnd C:/CodeInspection/DisplayUnit/Src/global_var.h 1300 I DC OV P N nl R
+<DEFINE> DataClearView C:/CodeInspection/DisplayUnit/Src/global_var.h 1300 I DC OF F X (.,nl) -
+<EXTN> OpTestView C:/CodeInspection/DisplayUnit/Src/global_var.h 1301
+<DEFINE> hWnd C:/CodeInspection/DisplayUnit/Src/global_var.h 1301 I DC OV P N nl R
+<DEFINE> OpTestView C:/CodeInspection/DisplayUnit/Src/global_var.h 1301 I DC OF F X (.,nl) -
+<EXTN> PwrFactorView C:/CodeInspection/DisplayUnit/Src/global_var.h 1302
+<DEFINE> hWnd C:/CodeInspection/DisplayUnit/Src/global_var.h 1302 I DC OV P N nl R
+<DEFINE> PwrFactorView C:/CodeInspection/DisplayUnit/Src/global_var.h 1302 I DC OF F X (.,nl) -
+<EXTN> LocRemCtrlSet C:/CodeInspection/DisplayUnit/Src/global_var.h 1303
+<DEFINE> hWnd C:/CodeInspection/DisplayUnit/Src/global_var.h 1303 I DC OV P N nl R
+<DEFINE> LocRemCtrlSet C:/CodeInspection/DisplayUnit/Src/global_var.h 1303 I DC OF F X (.,nl) -
+<EXTN> OcrL_1_View C:/CodeInspection/DisplayUnit/Src/global_var.h 1307
+<DEFINE> hWnd C:/CodeInspection/DisplayUnit/Src/global_var.h 1307 I DC OV P N nl R
+<DEFINE> OcrL_1_View C:/CodeInspection/DisplayUnit/Src/global_var.h 1307 I DC OF F X (.,nl) -
+<EXTN> OcrLN_1_View C:/CodeInspection/DisplayUnit/Src/global_var.h 1308
+<DEFINE> hWnd C:/CodeInspection/DisplayUnit/Src/global_var.h 1308 I DC OV P N nl R
+<DEFINE> OcrLN_1_View C:/CodeInspection/DisplayUnit/Src/global_var.h 1308 I DC OF F X (.,nl) -
+<EXTN> OcrS_View C:/CodeInspection/DisplayUnit/Src/global_var.h 1309
+<DEFINE> hWnd C:/CodeInspection/DisplayUnit/Src/global_var.h 1309 I DC OV P N nl R
+<DEFINE> OcrS_View C:/CodeInspection/DisplayUnit/Src/global_var.h 1309 I DC OF F X (.,nl) -
+<EXTN> OcrI_View C:/CodeInspection/DisplayUnit/Src/global_var.h 1310
+<DEFINE> hWnd C:/CodeInspection/DisplayUnit/Src/global_var.h 1310 I DC OV P N nl R
+<DEFINE> OcrI_View C:/CodeInspection/DisplayUnit/Src/global_var.h 1310 I DC OF F X (.,nl) -
+<EXTN> IOcgr_View C:/CodeInspection/DisplayUnit/Src/global_var.h 1311
+<DEFINE> hWnd C:/CodeInspection/DisplayUnit/Src/global_var.h 1311 I DC OV P N nl R
+<DEFINE> IOcgr_View C:/CodeInspection/DisplayUnit/Src/global_var.h 1311 I DC OF F X (.,nl) -
+<EXTN> OOcgr_View C:/CodeInspection/DisplayUnit/Src/global_var.h 1312
+<DEFINE> hWnd C:/CodeInspection/DisplayUnit/Src/global_var.h 1312 I DC OV P N nl R
+<DEFINE> OOcgr_View C:/CodeInspection/DisplayUnit/Src/global_var.h 1312 I DC OF F X (.,nl) -
+<EXTN> PTA_View C:/CodeInspection/DisplayUnit/Src/global_var.h 1313
+<DEFINE> hWnd C:/CodeInspection/DisplayUnit/Src/global_var.h 1313 I DC OV P N nl R
+<DEFINE> PTA_View C:/CodeInspection/DisplayUnit/Src/global_var.h 1313 I DC OF F X (.,nl) -
+<EXTN> Uvr_View C:/CodeInspection/DisplayUnit/Src/global_var.h 1314
+<DEFINE> hWnd C:/CodeInspection/DisplayUnit/Src/global_var.h 1314 I DC OV P N nl R
+<DEFINE> Uvr_View C:/CodeInspection/DisplayUnit/Src/global_var.h 1314 I DC OF F X (.,nl) -
+<EXTN> Ovr_View C:/CodeInspection/DisplayUnit/Src/global_var.h 1315
+<DEFINE> hWnd C:/CodeInspection/DisplayUnit/Src/global_var.h 1315 I DC OV P N nl R
+<DEFINE> Ovr_View C:/CodeInspection/DisplayUnit/Src/global_var.h 1315 I DC OF F X (.,nl) -
+<EXTN> ResOVol_Prot_View C:/CodeInspection/DisplayUnit/Src/global_var.h 1316
+<DEFINE> hWnd C:/CodeInspection/DisplayUnit/Src/global_var.h 1316 I DC OV P N nl R
+<DEFINE> ResOVol_Prot_View C:/CodeInspection/DisplayUnit/Src/global_var.h 1316 I DC OF F X (.,nl) -
+<EXTN> DirOc_View C:/CodeInspection/DisplayUnit/Src/global_var.h 1317
+<DEFINE> hWnd C:/CodeInspection/DisplayUnit/Src/global_var.h 1317 I DC OV P N nl R
+<DEFINE> DirOc_View C:/CodeInspection/DisplayUnit/Src/global_var.h 1317 I DC OF F X (.,nl) -
+<EXTN> VctrlOverCurr_View C:/CodeInspection/DisplayUnit/Src/global_var.h 1318
+<DEFINE> hWnd C:/CodeInspection/DisplayUnit/Src/global_var.h 1318 I DC OV P N nl R
+<DEFINE> VctrlOverCurr_View C:/CodeInspection/DisplayUnit/Src/global_var.h 1318 I DC OF F X (.,nl) -
+<EXTN> CurrUnbal_Prot_View C:/CodeInspection/DisplayUnit/Src/global_var.h 1319
+<DEFINE> hWnd C:/CodeInspection/DisplayUnit/Src/global_var.h 1319 I DC OV P N nl R
+<DEFINE> CurrUnbal_Prot_View C:/CodeInspection/DisplayUnit/Src/global_var.h 1319 I DC OF F X (.,nl) -
+<EXTN> VolUnbal_Prot_View C:/CodeInspection/DisplayUnit/Src/global_var.h 1320
+<DEFINE> hWnd C:/CodeInspection/DisplayUnit/Src/global_var.h 1320 I DC OV P N nl R
+<DEFINE> VolUnbal_Prot_View C:/CodeInspection/DisplayUnit/Src/global_var.h 1320 I DC OF F X (.,nl) -
+<EXTN> UnderFreqProt_View C:/CodeInspection/DisplayUnit/Src/global_var.h 1321
+<DEFINE> hWnd C:/CodeInspection/DisplayUnit/Src/global_var.h 1321 I DC OV P N nl R
+<DEFINE> UnderFreqProt_View C:/CodeInspection/DisplayUnit/Src/global_var.h 1321 I DC OF F X (.,nl) -
+<EXTN> OverFreqProt_View C:/CodeInspection/DisplayUnit/Src/global_var.h 1322
+<DEFINE> hWnd C:/CodeInspection/DisplayUnit/Src/global_var.h 1322 I DC OV P N nl R
+<DEFINE> OverFreqProt_View C:/CodeInspection/DisplayUnit/Src/global_var.h 1322 I DC OF F X (.,nl) -
+<EXTN> RChgFreq_Prot_View C:/CodeInspection/DisplayUnit/Src/global_var.h 1323
+<DEFINE> hWnd C:/CodeInspection/DisplayUnit/Src/global_var.h 1323 I DC OV P N nl R
+<DEFINE> RChgFreq_Prot_View C:/CodeInspection/DisplayUnit/Src/global_var.h 1323 I DC OF F X (.,nl) -
+<EXTN> RAP_Prot_View C:/CodeInspection/DisplayUnit/Src/global_var.h 1324
+<DEFINE> hWnd C:/CodeInspection/DisplayUnit/Src/global_var.h 1324 I DC OV P N nl R
+<DEFINE> RAP_Prot_View C:/CodeInspection/DisplayUnit/Src/global_var.h 1324 I DC OF F X (.,nl) -
+<EXTN> RevReaPowProt_View C:/CodeInspection/DisplayUnit/Src/global_var.h 1325
+<DEFINE> hWnd C:/CodeInspection/DisplayUnit/Src/global_var.h 1325 I DC OV P N nl R
+<DEFINE> RevReaPowProt_View C:/CodeInspection/DisplayUnit/Src/global_var.h 1325 I DC OF F X (.,nl) -
+<EXTN> Act_OP_Prot_View C:/CodeInspection/DisplayUnit/Src/global_var.h 1326
+<DEFINE> hWnd C:/CodeInspection/DisplayUnit/Src/global_var.h 1326 I DC OV P N nl R
+<DEFINE> Act_OP_Prot_View C:/CodeInspection/DisplayUnit/Src/global_var.h 1326 I DC OF F X (.,nl) -
+<EXTN> ReaOverProt_View C:/CodeInspection/DisplayUnit/Src/global_var.h 1327
+<DEFINE> hWnd C:/CodeInspection/DisplayUnit/Src/global_var.h 1327 I DC OV P N nl R
+<DEFINE> ReaOverProt_View C:/CodeInspection/DisplayUnit/Src/global_var.h 1327 I DC OF F X (.,nl) -
+<EXTN> ActUnderProtection_View C:/CodeInspection/DisplayUnit/Src/global_var.h 1328
+<DEFINE> hWnd C:/CodeInspection/DisplayUnit/Src/global_var.h 1328 I DC OV P N nl R
+<DEFINE> ActUnderProtection_View C:/CodeInspection/DisplayUnit/Src/global_var.h 1328 I DC OF F X (.,nl) -
+<EXTN> LoadCurrent_View C:/CodeInspection/DisplayUnit/Src/global_var.h 1331
+<DEFINE> hWnd C:/CodeInspection/DisplayUnit/Src/global_var.h 1331 I DC OV P N nl R
+<DEFINE> LoadCurrent_View C:/CodeInspection/DisplayUnit/Src/global_var.h 1331 I DC OF F X (.,nl) -
+<EXTN> Meter_OverView C:/CodeInspection/DisplayUnit/Src/global_var.h 1332
+<DEFINE> hWnd C:/CodeInspection/DisplayUnit/Src/global_var.h 1332 I DC OV P N nl R
+<DEFINE> Meter_OverView C:/CodeInspection/DisplayUnit/Src/global_var.h 1332 I DC OF F X (.,nl) -
+<EXTN> VolCurr_View C:/CodeInspection/DisplayUnit/Src/global_var.h 1333
+<DEFINE> hWnd C:/CodeInspection/DisplayUnit/Src/global_var.h 1333 I DC OV P N nl R
+<DEFINE> VolCurr_View C:/CodeInspection/DisplayUnit/Src/global_var.h 1333 I DC OF F X (.,nl) -
+<EXTN> PwrEnergy_View C:/CodeInspection/DisplayUnit/Src/global_var.h 1334
+<DEFINE> hWnd C:/CodeInspection/DisplayUnit/Src/global_var.h 1334 I DC OV P N nl R
+<DEFINE> PwrEnergy_View C:/CodeInspection/DisplayUnit/Src/global_var.h 1334 I DC OF F X (.,nl) -
+<EXTN> Demand_View C:/CodeInspection/DisplayUnit/Src/global_var.h 1335
+<DEFINE> hWnd C:/CodeInspection/DisplayUnit/Src/global_var.h 1335 I DC OV P N nl R
+<DEFINE> Demand_View C:/CodeInspection/DisplayUnit/Src/global_var.h 1335 I DC OF F X (.,nl) -
+<EXTN> Harmonics_View C:/CodeInspection/DisplayUnit/Src/global_var.h 1336
+<DEFINE> hWnd C:/CodeInspection/DisplayUnit/Src/global_var.h 1336 I DC OV P N nl R
+<DEFINE> Harmonics_View C:/CodeInspection/DisplayUnit/Src/global_var.h 1336 I DC OF F X (.,nl) -
+<EXTN> Osc_View C:/CodeInspection/DisplayUnit/Src/global_var.h 1337
+<DEFINE> hWnd C:/CodeInspection/DisplayUnit/Src/global_var.h 1337 I DC OV P N nl R
+<DEFINE> Osc_View C:/CodeInspection/DisplayUnit/Src/global_var.h 1337 I DC OF F X (.,nl) -
+<EXTN> SysEvt_View C:/CodeInspection/DisplayUnit/Src/global_var.h 1341
+<DEFINE> hWnd C:/CodeInspection/DisplayUnit/Src/global_var.h 1341 I DC OV P N nl R
+<DEFINE> SysEvt_View C:/CodeInspection/DisplayUnit/Src/global_var.h 1341 I DC OF F X (.,nl) -
+<EXTN> ClearEvt_View C:/CodeInspection/DisplayUnit/Src/global_var.h 1342
+<DEFINE> hWnd C:/CodeInspection/DisplayUnit/Src/global_var.h 1342 I DC OV P N nl R
+<DEFINE> ClearEvt_View C:/CodeInspection/DisplayUnit/Src/global_var.h 1342 I DC OF F X (.,nl) -
+<EXTN> Faults_View C:/CodeInspection/DisplayUnit/Src/global_var.h 1343
+<DEFINE> hWnd C:/CodeInspection/DisplayUnit/Src/global_var.h 1343 I DC OV P N nl R
+<DEFINE> Faults_View C:/CodeInspection/DisplayUnit/Src/global_var.h 1343 I DC OF F X (.,nl) -
+<EXTN> ClearFaults_View C:/CodeInspection/DisplayUnit/Src/global_var.h 1344
+<DEFINE> hWnd C:/CodeInspection/DisplayUnit/Src/global_var.h 1344 I DC OV P N nl R
+<DEFINE> ClearFaults_View C:/CodeInspection/DisplayUnit/Src/global_var.h 1344 I DC OF F X (.,nl) -
+<EXTN> SysInfo_View C:/CodeInspection/DisplayUnit/Src/global_var.h 1347
+<DEFINE> hWnd C:/CodeInspection/DisplayUnit/Src/global_var.h 1347 I DC OV P N nl R
+<DEFINE> SysInfo_View C:/CodeInspection/DisplayUnit/Src/global_var.h 1347 I DC OF F X (.,nl) -
+<EXTN> DevStatus_View C:/CodeInspection/DisplayUnit/Src/global_var.h 1348
+<DEFINE> hWnd C:/CodeInspection/DisplayUnit/Src/global_var.h 1348 I DC OV P N nl R
+<DEFINE> DevStatus_View C:/CodeInspection/DisplayUnit/Src/global_var.h 1348 I DC OF F X (.,nl) -
+<EXTN> RlyStatus_View C:/CodeInspection/DisplayUnit/Src/global_var.h 1349
+<DEFINE> hWnd C:/CodeInspection/DisplayUnit/Src/global_var.h 1349 I DC OV P N nl R
+<DEFINE> RlyStatus_View C:/CodeInspection/DisplayUnit/Src/global_var.h 1349 I DC OF F X (.,nl) -
+<EXTN> _wait_delay C:/CodeInspection/DisplayUnit/Src/global_var.h 1353
+<DEFINE> delay C:/CodeInspection/DisplayUnit/Src/global_var.h 1353 I DC OV P N ni R
+<DEFINE> _wait_delay C:/CodeInspection/DisplayUnit/Src/global_var.h 1353 I DC OF F X (.,ni) -
+<EXTN> test_mb_8 C:/CodeInspection/DisplayUnit/Src/global_var.h 1355
+<DEFINE> func C:/CodeInspection/DisplayUnit/Src/global_var.h 1355 I DC OV P N uc R
+<DEFINE> addr C:/CodeInspection/DisplayUnit/Src/global_var.h 1355 I DC OV P N us R
+<DEFINE> num C:/CodeInspection/DisplayUnit/Src/global_var.h 1355 I DC OV P N us R
+<DEFINE> test_mb_8 C:/CodeInspection/DisplayUnit/Src/global_var.h 1355 I DC OF F X (.,uc,us,us) -
+<R>I C:/CodeInspection/DisplayUnit/Src/modbus_comm.c C:/CodeInspection/DisplayUnit/Src/modbus_comm.h 24
+<DEFINE> __COMM_S_TEST__ C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 29 N DF OM - - - O
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 29 29 N ON - F M
+<DEFINE> __COMM_R_TEST__ C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 30 N DF OM - - - O
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 30 29 N ON - F M
+<EXTT> hMBData C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 33
+<DEFINE> hMBData C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 33 N DR OV F X {sMBDATA_HandleTypeDef} S
+<EXTT> hMBDataSet C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 34
+<DEFINE> hMBDataSet C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 34 N DR OV F X {sMBDATA_HandleTypeDef} S
+<EXTT> CDC_TXBuf C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 37
+<DEFINE> CDC_TXBuf C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 37 N DR OV F X [256,uc] S
+<EXTT> CDC_RXBuf C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 38
+<DEFINE> CDC_RXBuf C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 38 N DR OV F X [256,uc] S
+<EXTD> gRlySetMode C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 42
+<DEFINE> gRlySetMode C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 42 N DR OV F X ni S
+<DEFINE> gRlySetMode C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 42 N DF OV F X ni S
+<EXTD> gToken_nn C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 45
+<DEFINE> gToken_nn C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 45 N DR OV F X ni S
+<DEFINE> gToken_nn C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 45 N DF OV F X ni S
+<EXTD> gCurrStatus C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 46
+<DEFINE> gCurrStatus C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 46 N DC OV F X ni S
+<DEFINE> gCurrStatus C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 46 N DF OV F X ni S
+<EXTD> gRcvMB C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 48
+<DEFINE> gRcvMB C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 48 N DC OV F X ni S
+<DEFINE> gRcvMB C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 48 N DF OV F X ni S
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 48 14 N ON ni F O
+<EXTD> InPcBypass C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 49
+<DEFINE> InPcBypass C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 49 N DR OV F X ni S
+<DEFINE> InPcBypass C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 49 N DF OV F X ni S
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 49 16 N ON ni F O
+<EXTD> gChkNorCmd C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 51
+<DEFINE> gChkNorCmd C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 51 N DR OV F X ni S
+<DEFINE> gChkNorCmd C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 51 N DF OV F X ni S
+<EXTD> gChkWBusy C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 52
+<DEFINE> gChkWBusy C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 52 N DR OV F X ni S
+<DEFINE> gChkWBusy C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 52 N DF OV F X ni S
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 52 16 N ON ni F O
+<EXTN> temp C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 54
+<EXTT> temp C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 54
+<DEFINE> temp C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 54 N DC OV F X {uf_temp} S
+<EXTD> gHmiCommAddr C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 56
+<DEFINE> gHmiCommAddr C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 56 N DC OV F X ni S
+<DEFINE> gHmiCommAddr C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 56 N DF OV F X ni S
+<LIT> 248 - P C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 56 20 N DN ni F O
+<EXTD> modbus_exeception_table C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 74
+<LIT> "ILLEGAL FUNCTION" - - C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 75 6 N SN [17,_c] F A
+<LIT> "ILLEGAL DATA ADDRESS" - - C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 76 6 N SN [21,_c] F A
+<LIT> "ILLEGAL DATA VALUE" - - C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 77 6 N SN [19,_c] F A
+<LIT> "SLAVE DEVICE FAILURE" - - C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 78 6 N SN [21,_c] F A
+<LIT> "ACKNOWLEDGE" - - C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 79 6 N SN [12,_c] F A
+<LIT> "SLAVE DEVICE BUSY" - - C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 80 6 N SN [18,_c] F A
+<LIT> "Event/Fault record: Not Data" - - C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 81 6 N SN [29,_c] F A
+<LIT> "SBO TIME OUT" - - C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 82 6 N SN [13,_c] F A
+<LIT> "ILLEGAL ADU LENGTH" - - C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 83 6 N SN [19,_c] F A
+<LIT> "LOCAL MODE" - - C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 84 6 N SN [11,_c] F A
+<LIT> "MAIN_NAK" - - C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 85 6 N SN [9,_c] F A
+<LIT> "SELECT ERROR" - - C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 86 6 N SN [13,_c] F A
+<LIT> "OPERATOR ERROR" - - C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 87 6 N SN [15,_c] F A
+<DEFINE> modbus_exeception_table C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 74 N DC OV F X [13,p_c] S
+<DEFINE> modbus_exeception_table C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 74 N DF OV F X [13,p_c] S
+<EXTD> Local_RxBuf C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 93
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 93 37 N ON ni F A
+<DEFINE> Local_RxBuf C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 93 N DC OV F X [256,uc] S
+<DEFINE> Local_RxBuf C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 93 N DF OV F X [256,uc] S
+<EXTD> workBuf C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 94
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 94 32 N ON ni F A
+<DEFINE> workBuf C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 94 N DR OV F X [256,uc] S
+<DEFINE> workBuf C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 94 N DF OV F X [256,uc] S
+<EXTD> rxDataLen C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 95
+<DEFINE> rxDataLen C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 95 N DR OV F X ni S
+<DEFINE> rxDataLen C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 95 N DF OV F X ni S
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 95 15 N ON ni F O
+<EXTD> UsbHStatus C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 96
+<DEFINE> UsbHStatus C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 96 N DR OV F X ni S
+<DEFINE> UsbHStatus C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 96 N DF OV F X ni S
+<EXTD> nTimeOutCnt C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 97
+<DEFINE> nTimeOutCnt C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 97 N DC OV F X ni S
+<DEFINE> nTimeOutCnt C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 97 N DF OV F X ni S
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 97 17 N DN ni F O
+<EXTD> bufPt C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 98
+<DEFINE> bufPt C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 98 N DR OV F X puc S
+<DEFINE> bufPt C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 98 N DF OV F X puc S
+<EXTV> bufPt workBuf 98
+<EXTD> UsbH_RcvBypass_Process C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 101
+<DEFINE> UsbH_RcvBypass_Process C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 101 N DC OF F X (.,) -
+<DEFINE> UsbH_RcvBypass_Process C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 101 N DF OF F X (.,) -
+<RDEF> C Calls
+<R>C UsbH_RcvBypass_Process OS_Delay 103
+<RDEF> X Refers-to
+<R>X UsbH_RcvBypass_Process OS_Delay 103 R
+<LIT> 8 - P C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 103 14 N DN ni B X
+<R>C UsbH_RcvBypass_Process USBH_CDC_Receive 104
+<R>X UsbH_RcvBypass_Process USBH_CDC_Receive 104 R
+<R>X UsbH_RcvBypass_Process hUsbHostHS 104 R
+<R>X UsbH_RcvBypass_Process hUsbHostHS 104 W
+<R>X UsbH_RcvBypass_Process Local_RxBuf 104 R
+<R>X UsbH_RcvBypass_Process Local_RxBuf 104 W
+<DEFINE> size C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 106 N DC OV B N ni -
+<DEFINE> size C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 106 N DF OV B N ni -
+<R>C UsbH_RcvBypass_Process USBH_CDC_GetLastReceivedDataSize 106
+<R>X UsbH_RcvBypass_Process USBH_CDC_GetLastReceivedDataSize 106 R
+<R>X UsbH_RcvBypass_Process hUsbHostHS 106 R
+<R>X UsbH_RcvBypass_Process hUsbHostHS 106 W
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 107 19 N ON ni B X
+<R>C UsbH_RcvBypass_Process memcpy 109
+<R>X UsbH_RcvBypass_Process memcpy 109 R
+<R>X UsbH_RcvBypass_Process bufPt 109 R
+<R>X UsbH_RcvBypass_Process Local_RxBuf 109 R
+<R>X UsbH_RcvBypass_Process rxDataLen 110 R
+<R>X UsbH_RcvBypass_Process rxDataLen 110 W
+<R>X UsbH_RcvBypass_Process bufPt 111 R
+<R>X UsbH_RcvBypass_Process bufPt 111 W
+<R>X UsbH_RcvBypass_Process UsbHStatus 112 W
+<R>X UsbH_RcvBypass_Process nTimeOutCnt 113 W
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 113 27 N DN ni B X
+<R>X UsbH_RcvBypass_Process UsbHStatus 117 R
+<R>X UsbH_RcvBypass_Process nTimeOutCnt 119 R
+<R>X UsbH_RcvBypass_Process nTimeOutCnt 119 W
+<LIT> 3 - P C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 123 22 N DN ni B X
+<R>X UsbH_RcvBypass_Process nTimeOutCnt 123 R
+<R>X UsbH_RcvBypass_Process nTimeOutCnt 125 W
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 125 23 N DN ni B X
+<R>X UsbH_RcvBypass_Process UsbHStatus 126 W
+<R>C UsbH_RcvBypass_Process memset 127
+<R>X UsbH_RcvBypass_Process memset 127 R
+<R>X UsbH_RcvBypass_Process Local_RxBuf 127 R
+<R>X UsbH_RcvBypass_Process Local_RxBuf 127 W
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 127 29 N ON ni B X
+<CTLG> UsbH_RcvBypass_Process 1
+<CTLG> 1 2
+<CTLG> 2 3
+<CTLG> 2 8
+<CTLG> 3 4
+<CTLG> 3 5
+<CTLG> 4 5
+<CTLG> 5 6
+<CTLG> 5 7
+<CTLG> 6 7
+<CTLG> 7 8
+<CTLG> 8 9
+<CTLG> 8 10
+<CTLG> 9 10
+<CTLG> 10 12
+<CTLGN> 102 104 104 107 107 117 117 104 123 123 129 129 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/Src/modbus_comm.c
+<S>STNAM  UsbH_RcvBypass_Process
+<S>STCYC  5
+<S>STMCC  0 (5:5)
+<S>STMIF  2
+<S>STSUB  5
+<S>STAKI  10
+<S>STLIN  26
+<S>STXLN  15
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  1
+<S>STPTH  10
+<S>STPDN  0.67   
+<S>STPBG  1
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  0
+<S>STAV1  5
+<S>STAV2  6
+<S>STAV3  7
+<S>STST1  19
+<S>STST2  15
+<S>STST3  14
+<S>STPAR  0
+<S>STCAL  5
+<S>STFN1  64
+<S>STFN2  37
+
+<EXTD> UsbH_Rcv_Process C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 131
+<DEFINE> UsbH_Rcv_Process C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 131 N DC OF F X (.,) -
+<DEFINE> UsbH_Rcv_Process C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 131 N DF OF F X (.,) -
+<R>C UsbH_Rcv_Process OS_Delay 134
+<R>X UsbH_Rcv_Process OS_Delay 134 R
+<LIT> 8 - P C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 134 14 N DN ni B X
+<R>C UsbH_Rcv_Process USBH_CDC_Receive 135
+<R>X UsbH_Rcv_Process USBH_CDC_Receive 135 R
+<R>X UsbH_Rcv_Process hUsbHostHS 135 R
+<R>X UsbH_Rcv_Process hUsbHostHS 135 W
+<R>X UsbH_Rcv_Process Local_RxBuf 135 R
+<R>X UsbH_Rcv_Process Local_RxBuf 135 W
+<DEFINE> size C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 137 N DC OV B N ni -
+<DEFINE> size C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 137 N DF OV B N ni -
+<R>C UsbH_Rcv_Process USBH_CDC_GetLastReceivedDataSize 137
+<R>X UsbH_Rcv_Process USBH_CDC_GetLastReceivedDataSize 137 R
+<R>X UsbH_Rcv_Process hUsbHostHS 137 R
+<R>X UsbH_Rcv_Process hUsbHostHS 137 W
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 138 19 N ON ni B X
+<R>C UsbH_Rcv_Process memcpy 140
+<R>X UsbH_Rcv_Process memcpy 140 R
+<R>X UsbH_Rcv_Process bufPt 140 R
+<R>X UsbH_Rcv_Process Local_RxBuf 140 R
+<R>X UsbH_Rcv_Process rxDataLen 141 R
+<R>X UsbH_Rcv_Process rxDataLen 141 W
+<R>X UsbH_Rcv_Process bufPt 142 R
+<R>X UsbH_Rcv_Process bufPt 142 W
+<R>X UsbH_Rcv_Process UsbHStatus 143 W
+<R>X UsbH_Rcv_Process nTimeOutCnt 144 W
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 144 27 N DN ni B X
+<R>X UsbH_Rcv_Process UsbHStatus 147 R
+<R>X UsbH_Rcv_Process nTimeOutCnt 149 R
+<R>X UsbH_Rcv_Process nTimeOutCnt 149 W
+<LIT> 3 - P C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 153 22 N DN ni B X
+<R>X UsbH_Rcv_Process nTimeOutCnt 153 R
+<R>X UsbH_Rcv_Process nTimeOutCnt 155 W
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 155 23 N DN ni B X
+<R>X UsbH_Rcv_Process UsbHStatus 156 W
+<R>C UsbH_Rcv_Process memset 157
+<R>X UsbH_Rcv_Process memset 157 R
+<R>X UsbH_Rcv_Process Local_RxBuf 157 R
+<R>X UsbH_Rcv_Process Local_RxBuf 157 W
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 157 29 N ON ni B X
+<CTLG> UsbH_Rcv_Process 1
+<CTLG> 1 2
+<CTLG> 2 3
+<CTLG> 2 8
+<CTLG> 3 4
+<CTLG> 3 5
+<CTLG> 4 5
+<CTLG> 5 6
+<CTLG> 5 7
+<CTLG> 6 7
+<CTLG> 7 8
+<CTLG> 8 9
+<CTLG> 8 10
+<CTLG> 9 10
+<CTLG> 10 12
+<CTLGN> 132 135 135 138 138 147 147 135 153 153 160 160 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/Src/modbus_comm.c
+<S>STNAM  UsbH_Rcv_Process
+<S>STCYC  5
+<S>STMCC  0 (5:5)
+<S>STMIF  2
+<S>STSUB  5
+<S>STAKI  10
+<S>STLIN  27
+<S>STXLN  15
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  1
+<S>STPTH  10
+<S>STPDN  0.67   
+<S>STPBG  1
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  0
+<S>STAV1  5
+<S>STAV2  6
+<S>STAV3  7
+<S>STST1  19
+<S>STST2  15
+<S>STST3  14
+<S>STPAR  0
+<S>STCAL  5
+<S>STFN1  64
+<S>STFN2  37
+
+<EXTD> AscToHex C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 163
+<DEFINE> Data C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 163 N DC OV B N uc R
+<DEFINE> AscToHex C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 163 N DC OF F X (uc,uc) -
+<DEFINE> AscToHex C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 163 N DF OF F X (uc,uc) -
+<LIT> 0x30 - P C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 165 15 N HN ni B X
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 166 16 N ON ni B X
+<LIT> 0x30 - P C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 168 10 N HN ni B X
+<LIT> 0x39 - P C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 168 34 N HN ni B X
+<LIT> 0x30 - P C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 170 16 N HN ni B X
+<LIT> 'a' - - C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 173 9 N CN ni B X
+<LIT> 'f' - - C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 173 32 N CN ni B X
+<LIT> 0x57 - P C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 175 16 N HN ni B X
+<LIT> 'A' - - C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 178 9 N CN ni B X
+<LIT> 'F' - - C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 178 32 N CN ni B X
+<LIT> 0x37 - P C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 180 16 N HN ni B X
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 183 12 N ON ni B X
+<CTLG> AscToHex 1
+<CTLG> 1 2
+<CTLG> 1 4
+<CTLG> 2 18
+<CTLG> 4 5
+<CTLG> 4 8
+<CTLG> 5 6
+<CTLG> 6 18
+<CTLG> 8 9
+<CTLG> 8 12
+<CTLG> 9 10
+<CTLG> 10 18
+<CTLG> 12 13
+<CTLG> 12 16
+<CTLG> 13 14
+<CTLG> 14 18
+<CTLG> 16 18
+<CTLGN> 164 165 166 165 168 171 171 168 173 176 176 173 178 181 181 178 183 166 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/Src/modbus_comm.c
+<S>STNAM  AscToHex
+<S>STCYC  5
+<S>STMCC  3 (5:8)
+<S>STMIF  1
+<S>STSUB  0
+<S>STAKI  5
+<S>STLIN  19
+<S>STXLN  12
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  4
+<S>STKDN  0.33   
+<S>STUNV  0
+<S>STLCT  0
+<S>STPTH  16
+<S>STPDN  1.33   
+<S>STPBG  1
+<S>STLOP  3
+<S>STM07  1
+<S>STM19  5
+<S>STAV1  5
+<S>STAV2  6
+<S>STAV3  6
+<S>STST1  15
+<S>STST2  12
+<S>STST3  12
+<S>STPAR  1
+<S>STCAL  0
+<S>STFN1  58
+<S>STFN2  25
+
+<EXTD> Send_Pwr_Packet C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 187
+<DEFINE> sndSize C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 187 N DC OV B N ni R
+<DEFINE> Send_Pwr_Packet C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 187 N DC OF F X (.,ni) -
+<DEFINE> Send_Pwr_Packet C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 187 N DF OF F X (.,ni) -
+<DEFINE> uHost C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 189 N DC OV B N p{s_USBH_HandleTypeDef} -
+<DEFINE> uHost C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 189 N DF OV B N p{s_USBH_HandleTypeDef} -
+<R>C Send_Pwr_Packet USBH_CDC_Stop 191
+<R>X Send_Pwr_Packet USBH_CDC_Stop 191 R
+<R>X Send_Pwr_Packet hUsbHostHS 191 R
+<R>X Send_Pwr_Packet hUsbHostHS 191 W
+<R>X Send_Pwr_Packet hUsbHostHS 193 R
+<R>X Send_Pwr_Packet hUsbHostHS 193 W
+<DEFINE> CDC_Handle C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 195 N DC OV B N p{s_CDC_Process} -
+<DEFINE> CDC_Handle C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 195 N DF OV B N p{s_CDC_Process} -
+<R>C Send_Pwr_Packet USBH_CDC_Transmit 197
+<R>X Send_Pwr_Packet USBH_CDC_Transmit 197 R
+<R>X Send_Pwr_Packet hUsbHostHS 197 R
+<R>X Send_Pwr_Packet hUsbHostHS 197 W
+<R>X Send_Pwr_Packet CDC_TXBuf 197 R
+<R>X Send_Pwr_Packet CDC_TXBuf 197 W
+<CTLG> Send_Pwr_Packet 1
+<CTLG> 1 2
+<CTLG> 2 4
+<CTLGN> 188 203 203 203 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/Src/modbus_comm.c
+<S>STNAM  Send_Pwr_Packet
+<S>STCYC  1
+<S>STMCC  0 (1:1)
+<S>STMIF  0
+<S>STSUB  2
+<S>STAKI  3
+<S>STLIN  14
+<S>STXLN  5
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  2
+<S>STPTH  1
+<S>STPDN  0.20   
+<S>STPBG  0
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  0
+<S>STAV1  9
+<S>STAV2  9
+<S>STAV3  13
+<S>STST1  6
+<S>STST2  6
+<S>STST3  4
+<S>STPAR  1
+<S>STCAL  2
+<S>STFN1  34
+<S>STFN2  20
+
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 206 5 N ON - F P
+<EXTD> Module_Res_Data C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 6339
+<DEFINE> Local_RxBuf C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 6339 N DC OV B N puc R
+<DEFINE> Module_Res_Data C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 6339 N DC OF F X (.,puc) -
+<DEFINE> Module_Res_Data C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 6339 N DF OF F X (.,puc) -
+<CTLG> Module_Res_Data 1
+<CTLG> 1 3
+<CTLGN> 6340 6347 6347 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/Src/modbus_comm.c
+<S>STNAM  Module_Res_Data
+<S>STCYC  1
+<S>STMCC  0 (1:1)
+<S>STMIF  0
+<S>STSUB  0
+<S>STAKI  1
+<S>STLIN  7
+<S>STXLN  1
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  1
+<S>STLCT  0
+<S>STPTH  1
+<S>STPDN  1.00   
+<S>STPBG  0
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  1
+<S>STAV1  4
+<S>STAV2  4
+<S>STAV3  4
+<S>STST1  1
+<S>STST2  1
+<S>STST3  1
+<S>STPAR  1
+<S>STCAL  0
+<S>STFN1  4
+<S>STFN2  0
+
+<EXTD> PowerRly_byp_Host_Comm C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 6350
+<DEFINE> PowerRly_byp_Host_Comm C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 6350 N DC OF F X (.,) -
+<DEFINE> PowerRly_byp_Host_Comm C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 6350 N DF OF F X (.,) -
+<DEFINE> RcvSize C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 6352 N DC OV B N ui -
+<DEFINE> RcvSize C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 6352 N DF OV B N ui -
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 6352 22 N ON ni B O
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 6353 35 N ON ni B A
+<DEFINE> usrBuf C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 6353 N DC OV B N [256,uc] -
+<DEFINE> usrBuf C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 6353 N DF OV B N [256,uc] -
+<R>X PowerRly_byp_Host_Comm gChkWBusy 6356 R
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 6359 45 N ON ni B X
+<R>C PowerRly_byp_Host_Comm USBD_PcRcv_Data 6359
+<R>X PowerRly_byp_Host_Comm USBD_PcRcv_Data 6359 R
+<R>X PowerRly_byp_Host_Comm InPcBypass 6363 W
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 6363 22 N DN ni B X
+<R>X PowerRly_byp_Host_Comm gToken_nn 6364 W
+<R>X PowerRly_byp_Host_Comm gCurrStatus 6365 W
+<R>C PowerRly_byp_Host_Comm memcpy 6370
+<R>X PowerRly_byp_Host_Comm memcpy 6370 R
+<R>X PowerRly_byp_Host_Comm CDC_TXBuf 6370 R
+<R>X PowerRly_byp_Host_Comm CDC_TXBuf 6370 W
+<R>C PowerRly_byp_Host_Comm printf 6371
+<R>X PowerRly_byp_Host_Comm printf 6371 R
+<LIT> "Recv USB Frame!!!\n" - - C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 6371 16 N SN [19,_c] B X
+<DEFINE> i C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 6372 N DC OV B N ni -
+<DEFINE> i C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 6372 N DF OV B N ni -
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 6372 21 N ON ni B O
+<R>C PowerRly_byp_Host_Comm printf 6373
+<R>X PowerRly_byp_Host_Comm printf 6373 R
+<LIT> "%02X " - - C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 6373 20 N SN [6,_c] B X
+<R>C PowerRly_byp_Host_Comm printf 6374
+<R>X PowerRly_byp_Host_Comm printf 6374 R
+<LIT> "\n" - - C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 6374 16 N SN [2,_c] B X
+<EXTN> ModbusSendFrameFromUsb C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 6375
+<DEFINE> ModbusSendFrameFromUsb C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 6375 N DC OF B X (ni,puc,ui) -
+<R>C PowerRly_byp_Host_Comm ModbusSendFrameFromUsb 6375
+<R>X PowerRly_byp_Host_Comm ModbusSendFrameFromUsb 6375 R
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 6377 17 N ON ni B X
+<CTLG> PowerRly_byp_Host_Comm 1
+<CTLG> 1 2
+<CTLG> 1 4
+<CTLG> 2 13
+<CTLG> 4 5
+<CTLG> 4 11
+<CTLG> 5 6
+<CTLG> 6 7
+<CTLG> 7 8
+<CTLG> 7 10
+<CTLG> 8 9
+<CTLG> 9 7
+<CTLG> 10 11
+<CTLG> 11 13
+<CTLGN> 6351 6356 6357 6356 6359 6372 6372 6372 6372 6372 6359 6394 6357 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/Src/modbus_comm.c
+<S>STNAM  PowerRly_byp_Host_Comm
+<S>STCYC  4
+<S>STMCC  0 (4:4)
+<S>STMIF  2
+<S>STSUB  6
+<S>STAKI  10
+<S>STLIN  42
+<S>STXLN  15
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  1
+<S>STKDN  0.07   
+<S>STUNV  0
+<S>STLCT  3
+<S>STPTH  6
+<S>STPDN  0.40   
+<S>STPBG  1
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  1
+<S>STAV1  6
+<S>STAV2  6
+<S>STAV3  7
+<S>STST1  16
+<S>STST2  15
+<S>STST3  13
+<S>STPAR  0
+<S>STCAL  4
+<S>STFN1  63
+<S>STFN2  40
+
+<EXTN> huart2 C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 6397
+<DEFINE> huart2 C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 6397 N DC OV F X {sUART_HandleTypeDef} S
+<EXTD> Host_byp_PowerRly_Comm C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 6399
+<DEFINE> Host_byp_PowerRly_Comm C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 6399 N DC OF F X (.,) -
+<DEFINE> Host_byp_PowerRly_Comm C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 6399 N DF OF F X (.,) -
+<R>X Host_byp_PowerRly_Comm UsbHStatus 6402 R
+<R>C Host_byp_PowerRly_Comm HAL_GPIO_TogglePin 6404
+<R>X Host_byp_PowerRly_Comm HAL_GPIO_TogglePin 6404 R
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 6406 30 N DN ni B X
+<R>X Host_byp_PowerRly_Comm InPcBypass 6406 R
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 6408 34 N DN ni B X
+<R>X Host_byp_PowerRly_Comm gBleCommOn 6408 R
+<R>C Host_byp_PowerRly_Comm HAL_UART_Transmit 6409
+<R>X Host_byp_PowerRly_Comm HAL_UART_Transmit 6409 R
+<R>X Host_byp_PowerRly_Comm huart2 6409 R
+<R>X Host_byp_PowerRly_Comm huart2 6409 W
+<R>X Host_byp_PowerRly_Comm workBuf 6409 R
+<R>X Host_byp_PowerRly_Comm workBuf 6409 W
+<R>X Host_byp_PowerRly_Comm rxDataLen 6409 R
+<LIT> 1000 - P C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 6409 68 N DN ni B X
+<R>X Host_byp_PowerRly_Comm gBleCommOn 6410 W
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 6410 34 N ON ni B X
+<R>C Host_byp_PowerRly_Comm CDC_Transmit_FS 6414
+<R>X Host_byp_PowerRly_Comm CDC_Transmit_FS 6414 R
+<R>X Host_byp_PowerRly_Comm workBuf 6414 R
+<R>X Host_byp_PowerRly_Comm workBuf 6414 W
+<R>X Host_byp_PowerRly_Comm rxDataLen 6414 R
+<R>X Host_byp_PowerRly_Comm gPcTimeOutStart 6415 W
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 6415 39 N DN ni B X
+<R>X Host_byp_PowerRly_Comm gTime_cnt_pc 6416 W
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 6416 35 N ON ni B X
+<R>X Host_byp_PowerRly_Comm gChkNorCmd 6421 W
+<R>X Host_byp_PowerRly_Comm gPcTimeOutStart 6422 W
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 6422 35 N ON ni B X
+<R>X Host_byp_PowerRly_Comm gTime_cnt_pc 6423 W
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 6423 31 N ON ni B X
+<R>C Host_byp_PowerRly_Comm Module_Res_Data 6427
+<R>X Host_byp_PowerRly_Comm Module_Res_Data 6427 R
+<R>X Host_byp_PowerRly_Comm workBuf 6427 R
+<R>X Host_byp_PowerRly_Comm workBuf 6427 W
+<R>X Host_byp_PowerRly_Comm UsbHStatus 6430 W
+<R>X Host_byp_PowerRly_Comm rxDataLen 6431 W
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 6431 25 N ON ni B X
+<R>X Host_byp_PowerRly_Comm workBuf 6432 R
+<R>X Host_byp_PowerRly_Comm workBuf 6432 W
+<R>X Host_byp_PowerRly_Comm bufPt 6432 W
+<R>C Host_byp_PowerRly_Comm memset 6434
+<R>X Host_byp_PowerRly_Comm memset 6434 R
+<R>X Host_byp_PowerRly_Comm workBuf 6434 R
+<R>X Host_byp_PowerRly_Comm workBuf 6434 W
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 6434 29 N ON ni B X
+<CTLG> Host_byp_PowerRly_Comm 1
+<CTLG> 1 2
+<CTLG> 1 10
+<CTLG> 2 3
+<CTLG> 3 4
+<CTLG> 3 8
+<CTLG> 4 5
+<CTLG> 4 6
+<CTLG> 5 7
+<CTLG> 6 7
+<CTLG> 7 9
+<CTLG> 8 9
+<CTLG> 9 10
+<CTLG> 10 12
+<CTLGN> 6400 6402 6406 6406 6408 6408 6412 6406 6419 6402 6438 6438 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/Src/modbus_comm.c
+<S>STNAM  Host_byp_PowerRly_Comm
+<S>STCYC  4
+<S>STMCC  0 (4:4)
+<S>STMIF  3
+<S>STSUB  5
+<S>STAKI  9
+<S>STLIN  37
+<S>STXLN  19
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  0
+<S>STPTH  4
+<S>STPDN  0.21   
+<S>STPBG  1
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  0
+<S>STAV1  5
+<S>STAV2  6
+<S>STAV3  6
+<S>STST1  22
+<S>STST2  17
+<S>STST3  17
+<S>STPAR  0
+<S>STCAL  5
+<S>STFN1  71
+<S>STFN2  42
+
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 6442 5 N ON - F P
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 6451 5 N ON - F P
+<EXTD> CDC_RXBuf C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 38
+<DEFINE> CDC_RXBuf C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 38 N DI OV F X [256,uc] S
+<EXTD> temp C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 54
+<DEFINE> temp C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 54 N DI OV F X {uf_temp} S
+<EXTD> hMBDataSet C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 34
+<DEFINE> hMBDataSet C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 34 N DI OV F X {sMBDATA_HandleTypeDef} S
+<EXTD> hMBData C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 33
+<DEFINE> hMBData C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 33 N DI OV F X {sMBDATA_HandleTypeDef} S
+<EXTD> CDC_TXBuf C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 37
+<DEFINE> CDC_TXBuf C:/CodeInspection/DisplayUnit/Src/modbus_comm.c 37 N DI OV F X [256,uc] S
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/Src/modbus_comm.c
+<S>STNAM  C:/CodeInspection/DisplayUnit/Src/modbus_comm.c
+<S>STNTB  NON-TOKEN BASED STATISTICS...
+<S>STSCT  0
+<S>STECT  25
+<S>STFNC  7
+<S>STFCO  23
+<S>STTKB  TOKEN BASED STATISTICS...
+<S>STVAR  77
+<S>STOPT  33
+<S>STOPN  144
+<S>STTOT  1300
+<S>STZIP  1018
+<S>STHAL  1199
+<S>STSHN  4284
+<S>STDIF  19.49  
+<S>STEFF  189244
+<S>STVOL  9708
+<S>STDEV  31.54  
+<S>STBUG  3
+<S>STTPP  6464
+<S>STTLN  172
+<S>STM20  275
+<S>STM21  1023
+<S>STM22  84
+<S>STM28  353
+<S>STM33  308
+<S>STBCS  BASIC COCOMO STATISTICS...
+<S>STBMO  17.031 
+<S>STBMS  24.260 
+<S>STBME  33.799 
+<S>STTDO  7.342  
+<S>STTDS  7.632  
+<S>STTDE  7.712  
+<S>STCOM  COMMENT BASED STATISTICS...
+<S>STCDN  0.042  
+

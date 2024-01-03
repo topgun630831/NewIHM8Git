@@ -1,0 +1,1651 @@
+* qac.usr.m2cm
+*
+* copyright:  (c) 2011 - Programming Research
+*
+* Purpose:  M2CM-3.0-QAC-8.0 configuration user message file
+*
+* History:  Auto-created from Database on 30-Mar-11
+*
+* CMS version: 0.1a
+*
+#levelname                         0     LSIS_0_Critical
+#levelname                         1     LSIS_1_Potential
+#levelname                         2     LSIS_2_Optional
+#levelname                         3     Information
+#levelname                         4     Parsing_Errors
+#levelname                         5     .
+#levelname                         6     .
+#levelname                         7     .
+#levelname                         8     .
+#levelname                         9     .
+
+#define    ANT_information         3     Annotations
+#define    CMA_information         3     CMA information
+#define    Parser_Rec              3     Parsing recovery
+#define    DF_Recovery             3     Dataflow recovery         
+#define    submsg                  3     Sub-Messages
+#define    Config                  4     QAC configuration
+#define    Syntax                  4     Syntax errors
+
+#define    RULE001_2               0     M2CM Rule 1.2
+#define    RULE002_1               2     M2CM Rule 2.1
+#define    RULE002_3               2     M2CM Rule 2.3
+#define    RULE003_1               2     M2CM Rule 3.1
+#define    RULE004_1               2     M2CM Rule 4.1
+#define    RULE004_2               2     M2CM Rule 4.2
+#define    RULE005_1               2     M2CM Rule 5.1
+#define    RULE005_2               1     M2CM Rule 5.2
+#define    RULE005_3               1     M2CM Rule 5.3
+#define    RULE005_5               1     M2CM Rule 5.5
+#define    RULE006_1               0     M2CM Rule 6.1
+#define    RULE006_2               0     M2CM Rule 6.2
+#define    RULE006_3               1     M2CM Rule 6.3
+#define    RULE006_5               0     M2CM Rule 6.5
+#define    RULE007_1               1     M2CM Rule 7.1
+#define    RULE008_1               0     M2CM Rule 8.1
+#define    RULE008_2               0     M2CM Rule 8.2
+#define    RULE008_3               0     M2CM Rule 8.3
+#define    RULE008_5               2     M2CM Rule 8.5
+#define    RULE008_6               1     M2CM Rule 8.6
+#define    RULE008_7               1     M2CM Rule 8.7
+#define    RULE008_8               1     M2CM Rule 8.8
+#define    RULE008_9               1     M2CM Rule 8.9
+#define    RULE08_10               1     M2CM Rule 8.10
+#define    RULE08_11               1     M2CM Rule 8.11
+#define    RULE08_12               0     M2CM Rule 8.12
+#define    RULE009_1               1     M2CM Rule 9.1
+#define    RULE009_2               1     M2CM Rule 9.2
+#define    RULE010_3               0     M2CM Rule 10.3
+#define    RULE011_1               0     M2CM Rule 11.1
+#define    RULE011_2               0     M2CM Rule 11.2
+#define    RULE011_4               0     M2CM Rule 11.4
+#define    RULE011_5               0     M2CM Rule 11.5
+#define    RULE012_1               1     M2CM Rule 12.1
+#define    RULE012_2               0     M2CM Rule 12.2
+#define    RULE012_3               1     M2CM Rule 12.3
+#define    RULE012_4               1     M2CM Rule 12.4
+#define    RULE012_6               0     M2CM Rule 12.6
+#define    RULE012_7               0     M2CM Rule 12.7
+#define    RULE012_9               0     M2CM Rule 12.9
+#define    RULE12_11               0     M2CM Rule 12.11
+#define    RULE12_12               0     M2CM Rule 12.12
+#define    RULE013_1               1     M2CM Rule 13.1
+#define    RULE013_3               1     M2CM Rule 13.3
+#define    RULE013_4               0     M2CM Rule 13.4
+#define    RULE013_5               1     M2CM Rule 13.5
+#define    RULE013_7               1     M2CM Rule 13.7
+#define    RULE014_1               1     M2CM Rule 14.1
+#define    RULE014_2               1     M2CM Rule 14.2
+#define    RULE014_4               2     M2CM Rule 14.4
+#define    RULE014_6               2     M2CM Rule 14.6
+#define    RULE014_7               2     M2CM Rule 14.7
+#define    RULE014_8               2     M2CM Rule 14.8
+#define    RULE014_9               2     M2CM Rule 14.9
+#define    RULE14_10               1     M2CM Rule 14.10
+#define    RULE015_1               1     M2CM Rule 15.1
+#define    RULE015_2               1     M2CM Rule 15.2
+#define    RULE015_3               1     M2CM Rule 15.3
+#define    RULE015_4               1     M2CM Rule 15.4
+#define    RULE015_5               1     M2CM Rule 15.5
+#define    RULE016_2               1     M2CM Rule 16.2
+#define    RULE016_3               0     M2CM Rule 16.3
+#define    RULE016_4               0     M2CM Rule 16.4
+#define    RULE016_5               0     M2CM Rule 16.5
+#define    RULE016_6               0     M2CM Rule 16.6
+#define    RULE016_7               0     M2CM Rule 16.7
+#define    RULE016_8               0     M2CM Rule 16.8
+#define    RULE016_9               0     M2CM Rule 16.9
+#define    RULE16_10               0     M2CM Rule 16.10
+#define    RULE017_4               0     M2CM Rule 17.4
+#define    RULE017_5               1     M2CM Rule 17.5
+#define    RULE017_6               0     M2CM Rule 17.6
+#define    RULE018_1               1     M2CM Rule 18.1
+#define    RULE018_2               0     M2CM Rule 18.2
+#define    RULE018_4               0     M2CM Rule 18.4
+#define    RULE019_1               1     M2CM Rule 19.1
+#define    RULE019_2               1     M2CM Rule 19.2
+#define    RULE019_3               1     M2CM Rule 19.3
+#define    RULE019_4               1     M2CM Rule 19.4
+#define    RULE019_5               1     M2CM Rule 19.5
+#define    RULE019_6               1     M2CM Rule 19.6
+#define    RULE019_7               1     M2CM Rule 19.7
+#define    RULE019_8               0     M2CM Rule 19.8
+#define    RULE019_9               0     M2CM Rule 19.9
+#define    RULE19_10               0     M2CM Rule 19.10
+#define    RULE19_11               1     M2CM Rule 19.11
+#define    RULE19_12               1     M2CM Rule 19.12
+#define    RULE19_13               1     M2CM Rule 19.13
+#define    RULE19_14               1     M2CM Rule 19.14
+#define    RULE19_15               1     M2CM Rule 19.15
+#define    RULE19_16               1     M2CM Rule 19.16
+#define    RULE19_17               1     M2CM Rule 19.17
+#define    RULE020_1               1     M2CM Rule 20.1
+#define    RULE020_2               1     M2CM Rule 20.2
+#define    RULE020_7               1     M2CM Rule 20.7
+#define    RULE021_1               0     M2CM Rule 21.1
+
+#define    ANT_information         3     Annotations
+#define    CMA_information         3     CMA information
+#define    Parser_Rec              3     Parsing recovery
+#define    DF_Recovery             3     Dataflow recovery         
+#define    submsg                  3     Sub-Messages
+#define    ODF_Signed              5     Conversion to signed      
+#define    ODF_Unsigned            5     Conversion to unsigned
+#define    ODF_Shift               5     Shift operations
+#define    ODF_Overflow            5     Overflow and wraparound
+#define    ODF_Arrays              5     Arrays       
+#define    ODF_Unset               5     Unset data
+#define    ODF_NULL                5     NULL pointers
+#define    ODF_Redundancy          5     Redundancy
+#define    ODF_Invariant           5     Invariant operations
+#define    ODF_Control             5     Control flow
+#define    Obsolete                5     Miscellaneous
+#define    Constraint              5     Constraint violations
+#define    Maj_StoUS               5     Implicit conversions - signed to unsigned
+#define    Maj_UStoLS              5     Implicit conversions - unsigned to larger signed
+#define    ISO_ImplDef             5     Implementation defined
+#define    Maj_Boolean             5     Implicit conversions - Boolean
+#define    Maj_FLtoI               5     Implicit conversions - float to integer
+#define    DF_Redundancy           5     Redundancy
+#define    Maj_Small               5     Implicit conversions - narrowing
+#define    Maj_Pchar               5     Implicit conversions - plain char
+#define    C99_ext                 5     ISO C99 Language features
+#define    CMA_warning             5     CMA undefined
+#define    ISO_ExpU                5     Explicitly undefined
+#define    Lang_ext                5     Language extensions
+#define    Maj_ItoFL               5     Implicit conversions - integer to float
+#define    ISO_ImpU                5     Implicitly undefined
+#define    Maj_UStoS               5     Implicit conversions - unsigned to signed
+#define    Min_Brace               5     Bracing and Indentation
+#define    Min_Array               5     Arrays, structures, unions & bit-fields
+#define    Min_Cpp                 5     C++ compatibility
+#define    CMA_declaration         5     CMA declaration checks
+#define    DF_Shift                5     Dataflow - Shift operations
+#define    CMA_maintenance         5     CMA maintenance checks
+#define    Min_Const               5     Constants
+#define    DF_Overflow             5     Dataflow - Overflow and wraparound
+#define    Min_Decl                5     Declarations and Definitions
+#define    Min_Enum                5     Enumerations
+#define    Min_Func                5     Functions
+#define    Min_Ident               5     Identifiers
+#define    DF_Arrays               5     Dataflow - Arrays
+#define    Min_Prom                5     Integral promotion
+#define    Min_KandR               5     K&R compatibility
+#define    Metrics                 5     Metric thresholds
+#define    Min_Ops                 5     Operations
+#define    DF_Signed               5     Dataflow - Conversion to signed
+#define    DF_Unsigned             5     Dataflow - Conversion to unsigned
+#define    Min_Switch              5     Switch statements
+#define    ISO_C90_Limits          5     ISO C90 Conformance limits
+#define    ISO_C99_Limits          5     ISO C99 Conformance limits
+#define    DF_Pointers             5     Dataflow - Pointers
+#define    DF_NULL                 5     Dataflow - NULL pointers
+#define    DF_Unset                5     Dataflow - Unset data
+#define    Min_Ctrl                5     Control flow
+#define    DF_Invariant            5     Dataflow - Invariant operations
+#define    DF_Control              5     Dataflow - Control flow
+#define    Min_Prepro              5     Preprocessor
+#define    Min_Stmt                5     Statements
+#define    Maj_Enum                5     Enumerations
+#define    Maj_Func                5     Functions
+#define    Maj_Redun               5     Redundancy
+#define    Maj_Stmt                5     Statements
+#define    Maj_Ops                 5     Operations
+#define    Maj_Prepro              5     Preprocessor
+#define    Maj_Decl                5     Declarations and definitions
+
+**************************************************************
+******************** 2011.04.22 ******************************
+************* LSIS Coding Style Rule 을 추가한다. ************
+**************************************************************
+#define    LSIS_NamingStyle 2 	LSIS_Naming_Style
+#define    LSIS_CodingSytle 2 	LSIS_Coding_Style
+
+160    RULE001_2             [U] Using unsupported conversion specifier number %s.\\
+MISRA-C:2004 Rule 1.2; REFERENCE - ISO:C90-7.9.6 Formatted input/output functions
+
+161    RULE001_2             [U] Unknown length modifier used with 'i' or 'd' conversion specifier, number %s.\\
+MISRA-C:2004 Rule 1.2; REFERENCE - ISO:C90-7.9.6.1 Formatted input/output functions
+
+162    RULE001_2             [U] Unknown length modifier used with 'o' conversion specifier, number %s.\\
+MISRA-C:2004 Rule 1.2; REFERENCE - ISO:C90-7.9.6.1 Formatted input/output functions
+
+163    RULE001_2             [U] Unknown length modifier used with 'u' conversion specifier, number %s.\\
+MISRA-C:2004 Rule 1.2; REFERENCE - ISO:C90-7.9.6.1 Formatted input/output functions
+
+164    RULE001_2             [U] Unknown length modifier used with 'x' conversion specifier, number %s.\\
+MISRA-C:2004 Rule 1.2; REFERENCE - ISO:C90-7.9.6.1 Formatted input/output functions
+
+165    RULE001_2             [U] Unknown length modifier used with 'X' conversion specifier, number %s.\\
+MISRA-C:2004 Rule 1.2; REFERENCE - ISO:C90-7.9.6.1 Formatted input/output functions
+
+166    RULE001_2             [U] Unknown length modifier used with 'f' conversion specifier, number %s.\\
+MISRA-C:2004 Rule 1.2; REFERENCE - ISO:C90-7.9.6.1 Formatted input/output functions
+
+167    RULE001_2             [U] Unknown length modifier used with 'e' conversion specifier, number %s.\\
+MISRA-C:2004 Rule 1.2; REFERENCE - ISO:C90-7.9.6.1 Formatted input/output functions
+
+168    RULE001_2             [U] Unknown length modifier used with 'E' conversion specifier, number %s.\\
+MISRA-C:2004 Rule 1.2; REFERENCE - ISO:C90-7.9.6.1 Formatted input/output functions
+
+169    RULE001_2             [U] Unknown length modifier used with 'g' conversion specifier, number %s.\\
+MISRA-C:2004 Rule 1.2; REFERENCE - ISO:C90-7.9.6.1 Formatted input/output functions
+
+170    RULE001_2             [U] Unknown length modifier used with 'G' conversion specifier, number %s.\\
+MISRA-C:2004 Rule 1.2; REFERENCE - ISO:C90-7.9.6.1 Formatted input/output functions
+
+171    RULE001_2             [U] Unknown length modifier used with 'c' conversion specifier, number %s.\\
+MISRA-C:2004 Rule 1.2; REFERENCE - ISO:C90-7.9.6.1 Formatted input/output functions
+
+172    RULE001_2             [U] Unknown length modifier used with '%%' conversion specifier, number %s.\\
+MISRA-C:2004 Rule 1.2; REFERENCE - ISO:C90-7.9.6.1 Formatted input/output functions
+
+173    RULE001_2             [U] Unknown length modifier used with 's' conversion specifier, number %s.\\
+MISRA-C:2004 Rule 1.2; REFERENCE - ISO:C90-7.9.6.1 Formatted input/output functions
+
+174    RULE001_2             [U] Unknown length modifier used with 'n' conversion specifier, number %s.\\
+MISRA-C:2004 Rule 1.2; REFERENCE - ISO:C90-7.9.6.1 Formatted input/output functions
+
+175    RULE001_2             [U] Unknown length modifier used with 'p' conversion specifier, number %s.\\
+MISRA-C:2004 Rule 1.2; REFERENCE - ISO:C90-7.9.6.1 Formatted input/output functions
+
+176    RULE001_2             [U] Incomplete conversion specifier, number %s.\\
+MISRA-C:2004 Rule 1.2; REFERENCE - ISO:C90-7.9.6.1 Formatted input/output functions
+
+177    RULE001_2             [U] Field width of format conversion specifier exceeds 509 characters.\\
+MISRA-C:2004 Rule 1.2; REFERENCE - ISO:C90-7.9.6.1 Environmental limit
+
+178    RULE001_2             [U] Precision of format conversion specifier exceeds 509 characters.\\
+MISRA-C:2004 Rule 1.2; REFERENCE - ISO:C90-7.9.6.1 Environmental limit
+
+179    RULE001_2             [U] Argument type does not match conversion specifier number %s.\\
+MISRA-C:2004 Rule 1.2; REFERENCE - ISO:C90-7.9.6.1 Formatted input/output functions
+
+184    RULE001_2             [U] Insufficient arguments to satisfy conversion specifier, number %s.\\
+MISRA-C:2004 Rule 1.2; REFERENCE - ISO:C90-7.9.6 Formatted input/output functions
+
+185    RULE001_2             [U] Call contains more arguments than conversion specifiers.\\
+MISRA-C:2004 Rule 1.2; REFERENCE - ISO:C90-7.9.6 Formatted input/output functions
+
+186    RULE001_2             [U] A call to this function must include at least one argument.\\
+MISRA-C:2004 Rule 1.2; REFERENCE - ISO:C90-7.9.6 Formatted input/output functions
+
+190    RULE001_2             [U] Using unsupported conversion specifier number %s.\\
+MISRA-C:2004 Rule 1.2; REFERENCE - ISO:C90-7.9.6.2 Formatted input/output functions
+
+191    RULE001_2             [U] Unknown length modifier used with 'd/i/n' conversion specifier, number %s.\\
+MISRA-C:2004 Rule 1.2; REFERENCE - ISO:C90-7.9.6.2 Formatted input/output functions
+
+192    RULE001_2             [U] Unknown length modifier used with 'o' conversion specifier, number %s.\\
+MISRA-C:2004 Rule 1.2; REFERENCE - ISO:C90-7.9.6.2 Formatted input/output functions
+
+193    RULE001_2             [U] Unknown length modifier used with 'u' conversion specifier, number %s.\\
+MISRA-C:2004 Rule 1.2; REFERENCE - ISO:C90-7.9.6.2 Formatted input/output functions
+
+194    RULE001_2             [U] Unknown length modifier used with 'x/X' conversion specifier, number %s.\\
+MISRA-C:2004 Rule 1.2; REFERENCE - ISO:C90-7.9.6.2 Formatted input/output functions
+
+195    RULE001_2             [U] Unknown length modifier used with 'e/E/f/F/g/G' conversion specifier, number %s.\\
+MISRA-C:2004 Rule 1.2; REFERENCE - ISO:C90-7.9.6.2 Formatted input/output functions
+
+196    RULE001_2             [U] Unknown length modifier used with 's' conversion specifier, number %s.\\
+MISRA-C:2004 Rule 1.2; REFERENCE - ISO:C90-7.9.6.2 Formatted input/output functions
+
+197    RULE001_2             [U] Unknown length modifier used with 'p' conversion specifier, number %s.\\
+MISRA-C:2004 Rule 1.2; REFERENCE - ISO:C90-7.9.6.2 Formatted input/output functions
+
+198    RULE001_2             [U] Unknown length modifier used with '%%' conversion specifier, number %s.\\
+MISRA-C:2004 Rule 1.2; REFERENCE - ISO:C90-7.9.6.2 Formatted input/output functions
+
+199    RULE001_2             [U] Unknown length modifier used with '[' conversion specifier, number %s.\\
+MISRA-C:2004 Rule 1.2; REFERENCE - ISO:C90-7.9.6.2 Formatted input/output functions
+
+200    RULE001_2             [U] Unknown length modifier used with 'c' conversion specifier, number %s.\\
+MISRA-C:2004 Rule 1.2; REFERENCE - ISO:C90-7.9.6.2 Formatted input/output functions
+
+201    RULE001_2             [U] Incomplete conversion specifier, number %s.\\
+MISRA-C:2004 Rule 1.2; REFERENCE - ISO:C90-7.9.6.2 Formatted input/output functions
+
+202    RULE003_1             [I] '-' character in '[]' conversion specification is implementation defined.\\
+MISRA-C:2004 Rule 3.1; REFERENCE - ISO:C90-7.9.6.2 Formatted input/output functions
+
+203    RULE001_2             [U] Value of character prior to '-' in '[]' is greater than following character.\\
+MISRA-C:2004 Rule 1.2; REFERENCE - ISO:C90-7.9.6.2 The fscanf Function
+
+204    RULE001_2             [U] Field width of format conversion specifier exceeds 509 characters.\\
+MISRA-C:2004 Rule 1.2; REFERENCE - ISO:C90-7.9.6.2 Formatted input/output functions
+
+206    RULE001_2             [U] Argument type does not match conversion specifier number %s.\\
+MISRA-C:2004 Rule 1.2; REFERENCE - ISO:C90-7.9.6.2 Formatted input/output functions
+
+207    RULE001_2             [U] 'scanf' expects address of objects being stored into.\\
+MISRA-C:2004 Rule 1.2; REFERENCE - ISO:C90-7.9, ISO:C90-7.9.6.4 - The scanf Function
+
+208    RULE001_2             [U] Same character occurs in scanset more than once.\\
+MISRA-C:2004 Rule 1.2; REFERENCE - ISO:C90-7.9.6.2 Formatted input/output functions
+
+235    RULE004_1             [U] Unknown escape sequence.\\
+MISRA-C:2004 Rules 1.2, 4.1; REFERENCE - ISO:C90-6.1.3.4 Description, ISO:C90-6.9.2 Future Language Directions
+
+275    RULE001_2             [U] Floating value is out of range for conversion to destination type.\\
+MISRA-C:2004 Rule 1.2; REFERENCE - ISO:C90-6.2.1.3 Conversions (Floating and Integral)
+
+284    RULE003_1             [I] Multiple character constants have implementation defined values.\\
+MISRA-C:2004 Rule 3.1; REFERENCE - ISO:C90-6.1.3.4 Character Constants - Semantics
+
+285    RULE003_1             [I] Character constant contains character which is not a member of the basic source character set.\\
+MISRA-C:2004 Rule 3.1; REFERENCE - ISO:C90-5.2.1 Character Sets
+
+286    RULE003_1             [I] String literal contains character which is not a member of the basic source character set.\\
+MISRA-C:2004 Rule 3.1; REFERENCE - ISO:C90-5.2.1 Character Sets
+
+287    RULE003_1             [I] Header name contains character which is not a member of the basic source character set.\\
+MISRA-C:2004 Rule 3.1; REFERENCE - ISO:C90-5.2.1 Character Sets
+
+289    RULE003_1             [I] Source file '%s' has preprocessing tokens containing characters which are not members of the basic source character set.\\
+MISRA-C:2004 Rule 3.1; REFERENCE - ISO:C90-5.2.1 Character Sets
+
+301    RULE011_2             [u] Cast between a pointer to object and a floating type.\\
+MISRA-C:2004 Rules 1.2, 11.2; REFERENCE - ISO:C90-6.3.4 Cast Operators - Semantics
+
+302    RULE011_1             [u] Cast between a pointer to function and a floating type.\\
+MISRA-C:2004 Rules 1.2, 11.1; REFERENCE - ISO:C90-6.3.4 Cast Operators - Semantics
+
+304    RULE001_2             [U] The address of an array declared 'register' may not be computed.\\
+MISRA-C:2004 Rule 1.2; REFERENCE - ISO:C90-6.5.1 Storage-Class Specifiers - Semantics
+
+307    RULE011_1             [u] Cast between a pointer to object and a pointer to function.\\
+MISRA-C:2004 Rules 1.2, 11.1; REFERENCE - ISO:C90-6.3.4 Cast Operators - Semantics
+
+308    RULE003_1             Non-portable cast involving pointer to an incomplete type.\\
+MISRA-C:2004 Rule 3.1; REFERENCE - ISO:C90-6.3.4 Cast Operators - Semantics
+
+309    RULE001_2             [U] Integral type is not large enough to hold a pointer value.\\
+MISRA-C:2004 Rule 1.2; REFERENCE - ISO:C90-6.3.4 Cast Operators - Semantics
+
+310    RULE011_4             Casting to different object pointer type.\\
+MISRA-C:2004 Rule 11.4; REFERENCE - ISO:C90-6.3.4 Cast Operators - Semantics
+
+311    RULE011_5             Dangerous pointer cast results in loss of const qualification.\\
+MISRA-C:2004 Rule 11.5
+
+312    RULE011_5             Dangerous pointer cast results in loss of volatile qualification.\\
+MISRA-C:2004 Rule 11.5
+
+313    RULE011_1             Casting to different function pointer type.\\
+MISRA-C:2004 Rule 11.1; REFERENCE - ISO:C90-6.3.4 Cast Operators - Semantics
+
+316    RULE011_4             [I] Cast from a pointer to void to a pointer to object type.\\
+MISRA-C:2004 Rule 11.4; REFERENCE - ISO:C90-6.3.4 Cast Operators - Semantics
+
+317    RULE011_4             [I] Implicit conversion from a pointer to void to a pointer to object type.\\
+MISRA-C:2004 Rule 11.4; REFERENCE - ISO:C90-6.3.4 Cast Operators - Semantics
+
+336    RULE007_1             Macro defined as an octal constant.\\
+MISRA-C:2004 Rule 7.1
+
+337    RULE001_2             [U] String literal has undefined value. This may be a result of using '#' on \\.\\
+MISRA-C:2004 Rule 1.2; REFERENCE - ISO:C90-6.8.3.2 The # Operator - Semantics
+
+339    RULE007_1             Octal constant used.\\
+MISRA-C:2004 Rule 7.1
+
+341    RULE19_13             Using the stringify operator '#'.\\
+MISRA-C:2004 Rule 19.13; REFERENCE - ISO:C90-6.8.3.2 The # Operator
+
+342    RULE19_13             Using the glue operator '##'.\\
+MISRA-C:2004 Rule 19.13; REFERENCE - ISO:C90-6.8.3.3 The ## Operator
+
+400    RULE012_2             [U] '%s' is modified more than once between sequence points - evaluation order undefined.\\
+MISRA-C:2004 Rules 1.2, 12.2; REFERENCE - ISO:C90-6.3 Expressions
+
+401    RULE012_2             [U] '%s' may be modified more than once between sequence points - evaluation order undefined.\\
+MISRA-C:2004 Rules 1.2, 12.2; REFERENCE - ISO:C90-6.3 Expressions
+
+402    RULE012_2             [U] '%s' is modified and accessed between sequence points - evaluation order undefined.\\
+MISRA-C:2004 Rules 1.2, 12.2; REFERENCE - ISO:C90-6.3 Expressions
+
+403    RULE012_2             [U] '%s' may be modified and accessed between sequence points - evaluation order undefined.\\
+MISRA-C:2004 Rules 1.2, 12.2; REFERENCE - ISO:C90-6.3 Expressions
+
+422    RULE016_6             [C] Function call contains fewer arguments than prototype specifies.\\
+MISRA-C:2004 Rules 1.1, 16.6; REFERENCE - ISO:C90-6.3.2.2 Function calls
+
+423    RULE016_6             [C] Function call contains more arguments than prototype specifies.\\
+MISRA-C:2004 Rules 1.1, 16.6; REFERENCE - ISO:C90-6.3.2.2 Function calls
+
+475    RULE001_2             [u] Operand of 'sizeof' is an expression designating a bit-field.\\
+MISRA-C:2004 Rule 1.2; REFERENCE - ISO:C90-6.3.3.4 The sizeof Operator
+
+488    RULE017_4             Performing pointer arithmetic.\\
+MISRA-C:2004 Rule 17.4; REFERENCE - ISO:C90-6.3.6 Additive Operators - Constraints
+
+489    RULE017_4             The integer value 1 is being added or subtracted from a pointer.\\
+MISRA-C:2004 Rule 17.4; REFERENCE - ISO:C90-6.3.6 Additive Operators - Constraints
+
+491    RULE017_4             Array subscripting applied to an object of pointer type.\\
+MISRA-C:2004 Rule 17.4; REFERENCE - ISO:C90-6.3.2.1 Array Subscripting, ISO:C90 6.2.2.1 Lvalues and Function Designators, ISO:C90 6.7.1 Function Definitions - Semantics
+
+492    RULE017_4             Array subscripting applied to a function parameter declared as a pointer.\\
+MISRA-C:2004 Rule 17.4; REFERENCE - ISO:C90-6.3.2.1 Array Subscripting, ISO:C90 6.2.2.1 Lvalues and Function Designators, ISO:C90 6.7.1 Function Definitions - Semantics
+
+502    RULE012_7             A right shift on signed data may be an arithmetic or a logical shift.\\
+MISRA-C:2004 Rule 12.7
+
+543    RULE001_2             [U] 'void' expressions have no value and may not be used in expressions.\\
+MISRA-C:2004 Rule 1.2; REFERENCE - ISO:C90-6.2.2.2 void
+
+544    RULE018_1             [U] The value of an incomplete 'union' may not be used.\\
+MISRA-C:2004 Rules 1.2, 18.1; REFERENCE - ISO:C90-6.2.2.1 lvalues
+
+545    RULE018_1             [U] The value of an incomplete 'struct' may not be used.\\
+MISRA-C:2004 Rules 1.2, 18.1; REFERENCE - ISO:C90-6.2.2.1 lvalues
+
+581    RULE003_1             [I] Floating-point constant may be too small to be representable.\\
+MISRA-C:2004 Rule 3.1; REFERENCE - ISO:C90-5.2.4.2.2 Characteristics of Floating Types
+
+594    RULE014_1             Negative 'case' label expression is incompatible with unsigned controlling expression in 'switch' statement.\\
+MISRA-C:2004 Rule 14.1
+
+606    RULE008_3             Object '%s' is declared using typedefs which are different to those in a previous declaration.\\
+MISRA-C:2004 Rule 8.3; REFERENCE - ISO:C90-6.1.2.6 Compatible Type and Composite Type
+
+623    RULE018_1             [U] '%s' has incomplete type and no linkage - this is undefined.\\
+MISRA-C:2004 Rules 1.2, 18.1; REFERENCE - ISO:C90-6.5 Declarations - Semantics
+
+624    RULE008_3             Function '%s' is declared using typedefs which are different to those in a previous declaration.\\
+MISRA-C:2004 Rule 8.3; REFERENCE - ISO:C90-6.1.2.6 Compatible Type and Composite Type
+
+625    RULE001_2             [U] '%s' has been declared with both internal and external linkage - the behaviour is undefined.\\
+MISRA-C:2004 Rule 1.2; REFERENCE - ISO:C90-6.1.2.2 Linkages of Identifiers
+
+630    RULE008_9             [U] More than one definition of '%s' (with external linkage).\\
+MISRA-C:2004 Rules 1.2, 8.9; REFERENCE - ISO:C90-6.7 External Definitions - Semantics
+
+632    RULE001_2             [U] Tentative definition of '%s' with internal linkage cannot have unknown size.\\
+MISRA-C:2004 Rule 1.2; REFERENCE - ISO:C90-6.7.2 External Object Definitions
+
+636    RULE018_1             [U] There are no named members in this 'struct' or 'union'.\\
+MISRA-C:2004 Rules 1.2, 18.1; REFERENCE - ISO:C90-6.5.2.1 Structure and Union Specifiers - Semantics
+
+654    RULE001_2             [U] Using 'const' or 'volatile' in a function return type is undefined.\\
+MISRA-C:2004 Rule 1.2; REFERENCE - ISO:C90-6.5.3 Type Qualifiers - Semantics
+
+658    RULE001_2             [U] Parameter cannot have 'void' type.\\
+MISRA-C:2004 Rule 1.2; REFERENCE - ISO:C90-6.5.4.3 Function Declarators - Semantics
+
+661    RULE001_2             [U] '%s()' may not have a storage class specifier of 'static' when declared at block scope.\\
+MISRA-C:2004 Rule 1.2; REFERENCE - ISO:C90-6.5.1 Storage-Class Specifiers - Semantics
+
+667    RULE001_2             [U] '%s' is declared as a typedef and may not be redeclared as an object at an inner scope without an explicit type specifier.\\
+MISRA-C:2004 Rule 1.2; REFERENCE - ISO:C90-6.5.6 Type Definitions - Semantics
+
+668    RULE001_2             [U] '%s' is declared as a typedef and may not be redeclared as a member of a 'struct' or 'union' without an explicit type specifier.\\
+MISRA-C:2004 Rule 1.2; REFERENCE - ISO:C90-6.5.6 Type Definitions - Semantics
+
+672    RULE001_2             [U] The initializer for a 'struct', 'union' or array is not enclosed in braces.\\
+MISRA-C:2004 Rule 1.2; REFERENCE - ISO:C90-6.5.7 Initialization - Semantics
+
+676    RULE001_2             [u] Array element is of function type. Arrays cannot be constructed from function types.\\
+MISRA-C:2004 Rule 1.2; REFERENCE - ISO:C90-6.1.2.5 Types
+
+678    RULE001_2             [u] Array element is array of unknown size. Arrays cannot be constructed from incomplete types.\\
+MISRA-C:2004 Rule 1.2; REFERENCE - ISO:C90-6.1.2.5 Types
+
+680    RULE001_2             [u] Array element is 'void' or an incomplete 'struct' or 'union'. Arrays cannot be constructed from incomplete types.\\
+MISRA-C:2004 Rule 1.2; REFERENCE - ISO:C90-6.1.2.5 Types
+
+686    RULE009_2             Array has fewer initializers than its declared size. Default initialization is applied to the remainder of the array elements.\\
+MISRA-C:2004 Rule 9.2; REFERENCE - ISO:C90-6.5.7 Initialization - Semantics
+
+693    RULE009_2             Struct initializer is missing the optional {.\\
+MISRA-C:2004 Rule 9.2; REFERENCE - ISO:C90-6.5.7 Initialization - Semantics
+
+694    RULE009_2             Array initializer is missing the optional {.\\
+MISRA-C:2004 Rule 9.2; REFERENCE - ISO:C90-6.5.7 Initialization - Semantics
+
+706    RULE001_2             [U] Label '%s' is not unique within this function.\\
+MISRA-C:2004 Rule 1.2; REFERENCE - ISO:C90-6.1.2.1 Scopes of Identifiers
+
+735    RULE015_4             Using relational or logical operators in a 'switch' expression is usually a programming error.\\
+MISRA-C:2004 Rule 15.4
+
+745    RULE016_8             [U] 'return;' found in '%s()', which has been defined with a non-'void' return type.\\
+MISRA-C:2004 Rules 1.2, 16.8; REFERENCE - ISO:C90-6.6.6.4 The return Statement - Semantics
+
+750    RULE018_4             A union type specifier has been defined.\\
+MISRA-C:2004 Rule 18.4
+
+759    RULE018_4             An object of union type has been defined.\\
+MISRA-C:2004 Rule 18.4
+
+771    RULE014_6             More than one 'break' statement has been used to terminate this iteration statement.\\
+MISRA-C:2004 Rule 14.6
+
+777    RULE005_1             [U] External identifier does not differ from other identifier(s) (e.g. '%s') within the specified number of significant characters.\\
+MISRA-C:2004 Rules 1.2, 5.1; REFERENCE - ISO:C90-6.1.2 Identifiers - Implementation Limits
+
+779    RULE005_1             [U] Identifier does not differ from other identifier(s) (e.g. '%s') within the specified number of significant characters.\\
+MISRA-C:2004 Rules 1.2, 5.1; REFERENCE - ISO:C90-6.1.2 Identifiers - Implementation Limits
+
+809    RULE019_3             [U] The '#include' preprocessing directive has not been followed by <h-char-sequence> or "s-char-sequence".\\
+MISRA-C:2004 Rules 1.2, 19.3; REFERENCE - ISO:C90-6.8.2 Source File Inclusion - Semantics
+
+813    RULE019_2             [U] Using any of the characters ' " or /* in '#include <%s>' gives undefined behaviour.\\
+MISRA-C:2004 Rules 1.2, 19.2; REFERENCE - ISO:C90-6.1.7 Header Names
+
+814    RULE019_2             [U] Using the characters ' or /* in '#include "%s"' gives undefined behaviour.\\
+MISRA-C:2004 Rules 1.2, 19.2; REFERENCE - ISO:C90-6.1.7 Header Names
+
+831    RULE019_2             [E] Use of '\\' in this '#include' line is a PC extension - this usage is non-portable.\\
+MISRA-C:2004 Rules 1.1, 19.2; REFERENCE - ISO:C90-6.1.7 Header Names - Semantics
+
+836    RULE020_1             [U] Definition of macro named 'defined'.\\
+MISRA-C:2004 Rules 1.2, 20.1; REFERENCE - ISO:C90-6.8.8 Predefined Macro Names
+
+837    RULE001_2             [U] Use of '#undef' to remove the operator 'defined'.\\
+MISRA-C:2004 Rule 1.2; REFERENCE - ISO:C90-6.8.8 Predefined Macro Names
+
+841    RULE019_6             Using '#undef'.\\
+MISRA-C:2004 Rule 19.6; REFERENCE - ISO:C90-6.8.3.5 Scope of Macro Definitions
+
+842    RULE019_5             Using #define or #undef inside a function.\\
+MISRA-C:2004 Rule 19.5; REFERENCE - ISO:C90-6.8.3.5 Scope of Macro Definitions
+
+848    RULE020_1             [U] Attempting to #undef '%s', which is a predefined macro name.\\
+MISRA-C:2004 Rules 1.2, 20.1; REFERENCE - ISO:C90-6.8.8 Predefined Macro Names
+
+850    RULE019_8             [C99] Macro argument is empty.\\
+MISRA-C:2004 Rules 1.1, 19.8; REFERENCE - ISO:C90-6.8.3 Macro Replacement - Semantics; ISO:C99 6.10.3
+
+853    RULE019_9             [U] Macro arguments contain a sequence of tokens that has the form of a preprocessing directive.\\
+MISRA-C:2004 Rules 1.2, 19.9; REFERENCE - ISO:C90-6.8.3 Macro Replacement - Semantics
+
+854    RULE020_1             [U] Attempting to #define '%s', which is a predefined macro name.\\
+MISRA-C:2004 Rules 1.2, 20.1; REFERENCE - ISO:C90-6.8.8 Predefined Macro Names
+
+856    RULE019_8             [C] Fewer arguments in macro call than specified in definition.\\
+MISRA-C:2004 Rules 1.1, 19.8; REFERENCE - ISO:C90-6.8.3 Macro Replacement - Constraints
+
+864    RULE001_2             [U] '#line' directive specifies line number which is not in the range 1 to 32767.\\
+MISRA-C:2004 Rule 1.2; REFERENCE - ISO:C90-6.8.4 Line Control - Semantics
+
+865    RULE001_2             [U] '#line' directive is badly formed.\\
+MISRA-C:2004 Rule 1.2; REFERENCE - ISO:C90-6.8.4 Line Control - Semantics
+
+867    RULE001_2             [U] '#line' has not been followed by a line number.\\
+MISRA-C:2004 Rule 1.2; REFERENCE - ISO:C90-6.8.4 Line Control - Semantics
+
+872    RULE001_2             [U] Result of '##' operator is not a legal preprocessing token.\\
+MISRA-C:2004 Rule 1.2; REFERENCE - ISO:C90-6.8.3.3 The ## Operator - Semantics
+
+874    RULE001_2             [U] Character string literal and wide character string literal are adjacent.\\
+MISRA-C:2004 Rule 1.2; REFERENCE - ISO:C90-6.1.4 String Literals - Semantics
+
+878    RULE003_1             Using wide character or string literals.\\
+MISRA-C:2004 Rule 3.1
+
+880    RULE19_12             Using # and ## operators in the same macro definition.\\
+MISRA-C:2004 Rule 19.12; REFERENCE - ISO:C90-6.8.3.2 The # Operator - Semantics
+
+881    RULE19_12             Using multiple ## operators in the same macro definition.\\
+MISRA-C:2004 Rule 19.12; REFERENCE - ISO:C90-6.8.3.3 The ## Operator - Semantics
+
+883    RULE19_15             Include file code is not protected against repeated inclusion\\
+MISRA-C:2004 Rule 19.15
+
+884    RULE19_12             Using multiple # operators in the same macro definition.\\
+MISRA-C:2004 Rule 19.12; REFERENCE - ISO:C90-6.8.3.2 The # Operator - Semantics
+
+885    RULE19_14             [U] The token 'defined' is generated in the expansion of this macro.\\
+MISRA-C:2004 Rules 1.2, 19.14; REFERENCE - ISO:C90-6.8.1 Conditional Inclusion - Semantics
+
+887    RULE19_14             [U] Use of 'defined' must match either 'defined(identifier)' or 'defined identifier'.\\
+MISRA-C:2004 Rules 1.2, 19.14; REFERENCE - ISO:C90-6.8.1 Conditional Inclusion - Semantics
+
+888    RULE19_14             [U] 'defined' requires an identifier as an argument.\\
+MISRA-C:2004 Rules 1.2, 19.14; REFERENCE - ISO:C90-6.8.1 Conditional Inclusion - Semantics
+
+914    RULE001_2             [U] Source file does not end with a newline character.\\
+MISRA-C:2004 Rule 1.2; REFERENCE - ISO:C90-5.1.1.2 Translation Phases
+
+915    RULE001_2             [U] Source file ends with a backslash character followed by a newline.\\
+MISRA-C:2004 Rule 1.2; REFERENCE - ISO:C90-5.1.1.2 Translation Phases
+
+942    RULE001_2             [U] A * can only be used to specify array size within function prototype scope.\\
+MISRA-C:2004 Rule 1.2; REFERENCE - ISO:C99-6.7.5.3 Function Declarators - Semantics
+
+1330   RULE016_4             The parameter identifiers in this function declaration differ from those in a previous declaration.\\
+MISRA-C:2004 Rule 16.4
+
+1331   RULE008_3             Type or number of arguments doesn't match previous use of the function.\\
+MISRA-C:2004 Rule 8.3
+
+1332   RULE008_3             Type or number of arguments doesn't match prototype found later.\\
+MISRA-C:2004 Rule 8.3
+
+1333   RULE008_3             Type or number of arguments doesn't match function definition found later.\\
+MISRA-C:2004 Rule 8.3
+
+1334   RULE016_4             The parameter identifiers in the prototypes of these functions/function pointers are different.\\
+MISRA-C:2004 Rule 16.4
+
+1335   RULE016_3             Parameter identifiers missing in function prototype declaration.\\
+MISRA-C:2004 Rule 16.3
+
+1336   RULE016_3             Parameter identifiers missing in declaration of a function type.\\
+MISRA-C:2004 Rule 16.3
+
+1460   RULE014_1             'Switch' label value, %s, not contained in enum type.\\
+MISRA-C:2004 Rule 14.1; REFERENCE - ISO:C90-6.5.2.2 Enumeration Specifiers
+
+1503   RULE014_1             The function '%1s' is defined but is not used within this project.\\
+MISRA-C:2004 Rule 14.1
+
+1504   RULE08_10             The object '%1s' is only referenced in the translation unit where it is defined.\\
+MISRA-C:2004 Rule 8.10
+
+1505   RULE08_10             The function '%1s' is only referenced in the translation unit where it is defined.\\
+MISRA-C:2004 Rule 8.10
+
+1506   RULE005_3             The identifier '%1s' is declared as a typedef and is used elsewhere for a different kind of declaration.\\
+MISRA-C:2004 Rule 5.3
+
+1507   RULE005_3             '%1s' is used as a typedef for different types.\\
+MISRA-C:2004 Rule 5.3
+
+1508   RULE005_3             The typedef '%1s' is declared in more than one location.\\
+MISRA-C:2004 Rule 5.3
+
+1509   RULE008_9             '%1s' has external linkage and has multiple definitions.\\
+MISRA-C:2004 Rules 1.2, 8.9
+
+1513   RULE008_8             Identifier '%1s' with external linkage has separate non-defining declarations in more than one location.\\
+MISRA-C:2004 Rule 8.8
+
+1514   RULE008_7             The object '%1s' is only referenced by function '%2s', in the translation unit where it is defined\\
+MISRA-C:2004 Rule 8.7
+
+1520   RULE016_2             Functions are indirectly recursive.\\
+MISRA-C:2004 Rule 16.2
+
+1525   RULE005_5             Object/function with external linkage has same identifier as another object/function with internal linkage.\\
+MISRA-C:2004 Rule 5.5
+
+1526   RULE005_5             Object with no linkage has same identifier as another object/function with external linkage.\\
+MISRA-C:2004 Rule 5.5
+
+1527   RULE005_5             Object/function with internal linkage has same identifier as another object/function with internal linkage.\\
+MISRA-C:2004 Rule 5.5
+
+1528   RULE005_5             Object with no linkage has same identifier as another object/function with internal linkage.\\
+MISRA-C:2004 Rule 5.5
+
+1529   RULE005_5             Object with no linkage has same identifier as another object with static storage duration but no linkage.\\
+MISRA-C:2004 Rule 5.5
+
+2001   RULE014_4             A 'goto' statement has been used.\\
+MISRA-C:2004 Rule 14.4
+
+2002   RULE015_3             No 'default' label found in this 'switch' statement.\\
+MISRA-C:2004 Rule 15.3
+
+2003   RULE015_2             The preceding 'switch' clause is not empty and does not end with a 'jump' statement. Execution will fall through.\\
+MISRA-C:2004 Rule 15.2
+
+2004   RULE14_10             No concluding 'else' exists in this 'if'-'else'-'if' statement.\\
+MISRA-C:2004 Rule 14.10
+
+2008   RULE014_1             Code statements precede the first label in this 'switch' construct.\\
+MISRA-C:2004 Rule 14.1; REFERENCE - ISO:C90-6.6.4.2 The switch Statement - Semantics
+
+2009   RULE015_3             This 'default' label is not the final 'case' label within the 'switch' block.\\
+MISRA-C:2004 Rule 15.3
+
+2019   RULE015_1             'Switch' label is located within a nested code block.\\
+MISRA-C:2004 Rule 15.1
+
+2020   RULE015_2             Final 'switch' clause does not end with an explicit 'jump' statement.\\
+MISRA-C:2004 Rule 15.2
+
+2050   RULE008_2             The 'int' type specifier has been omitted from a function declaration.\\
+MISRA-C:2004 Rule 8.2
+
+2051   RULE008_2             The 'int' type specifier has been omitted from an object declaration.\\
+MISRA-C:2004 Rule 8.2
+
+2212   RULE014_8             Body of control statement is not enclosed within braces.\\
+MISRA-C:2004 Rules 14.8, 14.9
+
+2214   RULE014_8             Body of control statement is on the same line and is not enclosed within braces.\\
+MISRA-C:2004 Rules 14.8, 14.9
+
+2462   RULE013_5             The variable initialized in the first expression of this 'for' statement is not the variable identified as the 'loop control variable' (%s).\\
+MISRA-C:2004 Rule 13.5
+
+2463   RULE013_5             The variable incremented in the third expression of this 'for' statement is not the variable identified as the 'loop control variable' (%s).\\
+MISRA-C:2004 Rule 13.5
+
+2547   RULE005_2             This declaration of tag '%s' hides a more global declaration.\\
+MISRA-C:2004 Rule 5.2
+
+2744   RULE014_1             This 'while' or 'for' loop controlling expression is a constant expression and and its value is 'false'. The loop will not be entered.\\
+MISRA-C:2004 Rule 14.1
+
+2776   RULE018_2             Definite: Copy between overlapping objects.\\
+MISRA-C:2004 Rule 18.2; REFERENCE - ISO:C90-6.3.6 Additive Operators - Semantics, ISO:C99-6.5.6 Additive Operators - Semantics, REFERENCE - ISO:C90-6.3.8 Relational Operators - Semantics
+
+2777   RULE018_2             Apparent: Copy between overlapping objects.\\
+MISRA-C:2004 Rule 18.2; REFERENCE - ISO:C90-6.3.6 Additive Operators - Semantics, ISO:C99-6.5.6 Additive Operators - Semantics, REFERENCE - ISO:C90-6.3.8 Relational Operators - Semantics
+
+2791   RULE021_1             Definite: Right hand operand of shift operator is negative or too large.\\
+MISRA-C:2004 Rule 21.1
+
+2792   RULE021_1             Apparent: Right hand operand of shift operator is negative or too large.\\
+MISRA-C:2004 Rule 21.1
+
+2800   RULE001_2             Constant: Overflow in signed arithmetic operation.\\
+MISRA-C:2004 Rule 1.2; REFERENCE - ISO:C90-6.4 Constant Expressions
+
+2801   RULE021_1             Definite: Overflow in signed arithmetic operation.\\
+MISRA-C:2004 Rule 21.1
+
+2802   RULE021_1             Apparent: Overflow in signed arithmetic operation.\\
+MISRA-C:2004 Rule 21.1
+
+2810   RULE001_2             Constant: Dereference of NULL pointer.\\
+MISRA-C:2004 Rule 1.2; REFERENCE - ISO:C90-6.3.3.2 Address and Indirection Operators - Semantics
+
+2811   RULE021_1             Definite: Dereference of NULL pointer.\\
+MISRA-C:2004 Rule 21.1
+
+2812   RULE021_1             Apparent: Dereference of NULL pointer.\\
+MISRA-C:2004 Rule 21.1
+
+2820   RULE001_2             Constant: Arithmetic operation on NULL pointer.\\
+MISRA-C:2004 Rule 1.2
+
+2821   RULE021_1             Definite: Arithmetic operation on NULL pointer.\\
+MISRA-C:2004 Rule 21.1
+
+2822   RULE021_1             Apparent: Arithmetic operation on NULL pointer.\\
+MISRA-C:2004 Rule 21.1
+
+2830   RULE001_2             Constant: Division by zero.\\
+MISRA-C:2004 Rule 1.2; REFERENCE - ISO:C90-6.3.5 Multiplicative Operators - Semantics
+
+2831   RULE021_1             Definite: Division by zero.\\
+MISRA-C:2004 Rule 21.1
+
+2832   RULE021_1             Apparent: Division by zero.\\
+MISRA-C:2004 Rule 21.1
+
+2840   RULE001_2             Constant: Dereference of an invalid pointer value.\\
+MISRA-C:2004 Rule 1.2; REFERENCE - ISO:C90-6.3.6 Additive Operators, Semantics
+
+2841   RULE021_1             Definite: Dereference of an invalid pointer value.\\
+MISRA-C:2004 Rule 21.1
+
+2842   RULE021_1             Apparent: Dereference of an invalid pointer value.\\
+MISRA-C:2004 Rule 21.1
+
+2850   RULE003_1             Constant: Implicit conversion to a signed integer type of insufficient size.\\
+MISRA-C:2004 Rule 3.1; REFERENCE - ISO:C90-6.2.1.2 Conversions (to Signed Integers)
+
+2851   RULE003_1             Definite: Implicit conversion to a signed integer type of insufficient size.\\
+MISRA-C:2004 Rule 3.1
+
+2852   RULE003_1             Apparent: Implicit conversion to a signed integer type of insufficient size.\\
+MISRA-C:2004 Rule 3.1
+
+2853   RULE003_1             Suspicious: Implicit conversion to a signed integer type of insufficient size.\\
+MISRA-C:2004 Rule 3.1
+
+2855   RULE003_1             Constant: Casting to a signed integer type of insufficient size.\\
+MISRA-C:2004 Rule 3.1; REFERENCE - ISO:C90-6.2.1.2 Conversions (to Signed Integers)
+
+2856   RULE003_1             Definite: Casting to a signed integer type of insufficient size.\\
+MISRA-C:2004 Rule 3.1
+
+2857   RULE003_1             Apparent: Casting to a signed integer type of insufficient size.\\
+MISRA-C:2004 Rule 3.1
+
+2860   RULE003_1             Constant: Implementation-defined value resulting from left shift operation on expression of signed type.\\
+MISRA-C:2004 Rule 3.1; REFERENCE - ISO:C90-6.3.7 Bitwise Shift Operators, ISO:C90-6.4, ISO:C99-6.5.7 Bitwise shift operators
+
+2861   RULE003_1             Definite: Implementation-defined value resulting from left shift operation on expression of signed type.\\
+MISRA-C:2004 Rule 3.1; REFERENCE - ISO:C90-6.3.7 Bitwise Shift Operators, ISO:C90-6.4, ISO:C99-6.5.7 Bitwise shift operators
+
+2862   RULE003_1             Apparent: Implementation-defined value resulting from left shift operation on expression of signed type.\\
+MISRA-C:2004 Rule 3.1; REFERENCE - ISO:C90-6.3.7 Bitwise Shift Operators, ISO:C90-6.4, ISO:C99-6.5.7 Bitwise shift operators
+
+2871   RULE021_1             Infinite loop identified.\\
+MISRA-C:2004 Rule 21.1
+
+2872   RULE021_1             This loop, if entered, will never terminate.\\
+MISRA-C:2004 Rule 21.1
+
+2877   RULE016_8             This loop will never be executed more than once.\\
+MISRA-C:2004 Rule 16.8
+
+2880   RULE014_1             This code is unreachable.\\
+MISRA-C:2004 Rule 14.1
+
+2882   RULE014_1             This 'switch' statement will bypass the initialization of local variables.\\
+MISRA-C:2004 Rule 14.1
+
+2883   RULE009_1             This 'goto' statement will always bypass the initialization of local variables.\\
+MISRA-C:2004 Rule 9.1
+
+2887   RULE016_8             Function 'main' ends with an implicit 'return' statement.\\
+MISRA-C:2004 Rule 16.8
+
+2888   RULE016_8             This function has been declared with a non-void 'return' type but ends with an implicit 'return ;' statement.\\
+MISRA-C:2004 Rule 16.8
+
+2889   RULE014_7             This function has more than one 'return' path.\\
+MISRA-C:2004 Rule 14.7
+
+2890   RULE003_1             Constant: Negative value implicitly converted to an unsigned type.\\
+MISRA-C:2004 Rule 3.1; REFERENCE - ISO:C90-6.2.1.2 Conversions - Signed and Unsigned Integers
+
+2891   RULE021_1             Definite: Negative value implicitly converted to an unsigned type.\\
+MISRA-C:2004 Rule 21.1
+
+2892   RULE021_1             Apparent: Negative value implicitly converted to an unsigned type.\\
+MISRA-C:2004 Rule 21.1
+
+2895   RULE003_1             Constant: Negative value cast to an unsigned type.\\
+MISRA-C:2004 Rule 3.1; REFERENCE - ISO:C90-6.2.1.2 Conversions - Signed and Unsigned Integers
+
+2896   RULE021_1             Definite: Negative value cast to an unsigned type.\\
+MISRA-C:2004 Rule 21.1
+
+2897   RULE021_1             Apparent: Negative value cast to an unsigned type.\\
+MISRA-C:2004 Rule 21.1
+
+2901   RULE021_1             Definite: Positive integer value truncated by implicit conversion to a smaller unsigned type.\\
+MISRA-C:2004 Rule 21.1
+
+2902   RULE021_1             Apparent: Positive integer value truncated by implicit conversion to a smaller unsigned type.\\
+MISRA-C:2004 Rule 21.1
+
+2910   RULE12_11             Constant: Wraparound in unsigned arithmetic operation.\\
+MISRA-C:2004 Rule 12.11; REFERENCE - ISO:C90-6.1.2.5 Types
+
+2911   RULE021_1             Definite: Wraparound in unsigned arithmetic operation.\\
+MISRA-C:2004 Rule 21.1
+
+2912   RULE021_1             Apparent: Wraparound in unsigned arithmetic operation.\\
+MISRA-C:2004 Rule 21.1
+
+2930   RULE001_2             Constant: Computing an invalid pointer value.\\
+MISRA-C:2004 Rule 1.2; REFERENCE - ISO:C90-6.3.6 Additive Operators, Semantics
+
+2931   RULE021_1             Definite: Computing an invalid pointer value.\\
+MISRA-C:2004 Rule 21.1
+
+2932   RULE021_1             Apparent: Computing an invalid pointer value.\\
+MISRA-C:2004 Rule 21.1
+
+2961   RULE009_1             Definite: Using value of uninitialized automatic object '%s'.\\
+MISRA-C:2004 Rule 9.1
+
+2962   RULE009_1             Apparent: Using value of uninitialized automatic object '%s'.\\
+MISRA-C:2004 Rule 9.1
+
+2971   RULE009_1             Definite: Passing address of uninitialized object '%s' to a function parameter declared as a pointer to const.\\
+MISRA-C:2004 Rule 9.1
+
+2972   RULE009_1             Apparent: Passing address of uninitialized object '%s' to a function parameter declared as a pointer to const.\\
+MISRA-C:2004 Rule 9.1
+
+2980   RULE021_1             The value of function parameter '%1s' is never used before being modified.\\
+MISRA-C:2004 Rule 21.1
+
+2981   RULE021_1             This initialization is redundant. The value of '%1s' is never used before being modified.\\
+MISRA-C:2004 Rule 21.1
+
+2982   RULE021_1             This assignment is redundant. The value of '%1s' is never used before being modified.\\
+MISRA-C:2004 Rule 21.1
+
+2983   RULE021_1             This assignment is redundant. The value of '%1s' is never subsequently used.\\
+MISRA-C:2004 Rule 21.1
+
+2990   RULE013_7             The value of this loop controlling expression is always 'true'.\\
+MISRA-C:2004 Rule 13.7
+
+2991   RULE013_7             The value of this 'if' controlling expression is always 'true'.\\
+MISRA-C:2004 Rule 13.7
+
+2992   RULE013_7             The value of this 'if' controlling expression is always 'false'.\\
+MISRA-C:2004 Rule 13.7
+
+2993   RULE013_7             The value of this 'do - while' loop controlling expression is always 'false'. The loop will only be executed once.\\
+MISRA-C:2004 Rule 13.7
+
+2994   RULE013_7             The value of this 'while' or 'for' loop controlling expression is always 'false'. The loop will not be entered.\\
+MISRA-C:2004 Rule 13.7
+
+2995   RULE013_7             The result of this logical operation is always 'true'.\\
+MISRA-C:2004 Rule 13.7
+
+2996   RULE013_7             The result of this logical operation is always 'false'.\\
+MISRA-C:2004 Rule 13.7
+
+3001   RULE016_5             Function has been declared with an empty parameter list.\\
+MISRA-C:2004 Rule 16.5; REFERENCE - ISO:C90-6.5.4.3 Function Declarators (Including Prototypes) - Semantics, ISO:C90-6.9.4 Future Language Directions
+
+3002   RULE008_1             Defining '%s()' with an identifier list and separate parameter declarations is an obsolescent feature.\\
+MISRA-C:2004 Rule 8.1; REFERENCE - ISO:C90-6.9.5 Future Language Directions
+
+3006   RULE002_1             This function contains a mixture of in-line assembler statements and C statements.\\
+MISRA-C:2004 Rule 2.1
+
+3007   RULE016_5             "void" has been omitted when defining a function with no parameters.\\
+MISRA-C:2004 Rule 16.5; REFERENCE - ISO:C90-6.5.4.3 Function Declarators (Including Prototypes) - Semantics, ISO:C90-6.7.1 Function Definitions - Constraints
+
+3101   RULE012_9             Unary '-' applied to an operand of type unsigned int or unsigned long gives an unsigned result.\\
+MISRA-C:2004 Rule 12.9; REFERENCE - ISO:C90-6.3.3.3 Unary Arithmetic Operators - Semantics
+
+3102   RULE012_9             Unary '-' applied to an operand whose underlying type is unsigned.\\
+MISRA-C:2004 Rule 12.9; REFERENCE - ISO:C90-6.3.3.3 Unary Arithmetic Operators - Semantics
+
+3108   RULE002_3             Nested comments are not recognized in the ISO standard.\\
+MISRA-C:2004 Rule 2.3; REFERENCE - ISO:C90-6.1.9 Comments (footnote 26)
+
+3110   RULE014_2             The left-hand operand of this ',' has no side effects.\\
+MISRA-C:2004 Rule 14.2; REFERENCE - ISO:C90-6.6.3 Expression and Null Statements
+
+3112   RULE014_2             This statement has no side-effect - it can be removed.\\
+MISRA-C:2004 Rule 14.2
+
+3113   RULE016_8             [U] 'return' statement includes no expression but function '%s()' is implicitly of type 'int'.\\
+MISRA-C:2004 Rules 1.2, 16.8; REFERENCE - ISO:C90-6.6.6.4 The return Statement - Semantics
+
+3114   RULE016_8             [U] Function '%s()' is implicitly of type 'int' but ends without returning a value.\\
+MISRA-C:2004 Rules 1.2, 16.8; REFERENCE - ISO:C90-6.6.6.4 The return Statement - Semantics
+
+3115   RULE19_16             Unrecognized preprocessing directive has been ignored because of conditional inclusion directives.\\
+MISRA-C:2004 Rule 19.16
+
+3200   RULE16_10             '%s' returns a value which is not being used.\\
+MISRA-C:2004 Rule 16.10
+
+3217   RULE017_6             Address of automatic object exported to a pointer with linkage or wider scope.\\
+MISRA-C:2004 Rule 17.6; REFERENCE - ISO:C90-6.1.2.4 Storage Durations of Objects
+
+3218   RULE008_7             File scope static, '%s', is only accessed in one function.\\
+MISRA-C:2004 Rule 8.7
+
+3219   RULE014_1             Static function '%s()' is not used within this translation unit.\\
+MISRA-C:2004 Rule 14.1
+
+3221   RULE008_6             Function with external linkage declared at block scope.\\
+MISRA-C:2004 Rule 8.6
+
+3222   RULE008_8             Object with external linkage declared at block scope.\\
+MISRA-C:2004 Rule 8.8
+
+3224   RULE08_11             This identifier has previously been declared with internal linkage but is not declared here with the static storage class specifier.\\
+MISRA-C:2004 Rule 8.11
+
+3225   RULE017_6             Address of automatic object exported using a function parameter.\\
+MISRA-C:2004 Rule 17.6; REFERENCE - ISO:C90-6.1.2.4 Storage Durations of Objects
+
+3230   RULE017_6             Address of automatic object assigned to local pointer with static storage duration.\\
+MISRA-C:2004 Rule 17.6; REFERENCE - ISO:C90-6.1.2.4 Storage Durations of Objects
+
+3260   RULE017_5             Typedef defined with more than 2 levels of indirection.\\
+MISRA-C:2004 Rule 17.5; REFERENCE - ISO:C90-6.5.4.1 Pointer Declarators
+
+3261   RULE017_5             Member of struct/union defined with more than 2 levels of indirection.\\
+MISRA-C:2004 Rule 17.5; REFERENCE - ISO:C90-6.5.4.1 Pointer Declarators
+
+3262   RULE017_5             Object defined or declared with more than 2 levels of indirection.\\
+MISRA-C:2004 Rule 17.5; REFERENCE - ISO:C90-6.5.4.1 Pointer Declarators
+
+3263   RULE017_5             Function defined or declared with a return type which has more than 2 levels of indirection.\\
+MISRA-C:2004 Rule 17.5; REFERENCE - ISO:C90-6.5.4.1 Pointer Declarators
+
+3307   RULE012_3             The operand of 'sizeof' is an expression with implied side effects, but they will not be evaluated.\\
+MISRA-C:2004 Rule 12.3; REFERENCE - ISO:C90-6.3.3.4 The sizeof Operator - Semantics
+
+3311   RULE001_2             [u] An earlier jump to this statement will bypass the initialization of local variables.\\
+MISRA-C:2004 Rule 1.2; REFERENCE - ISO:C90-6.1.2.4 Storage Durations of Objects
+
+3312   RULE001_2             [u] This goto statement will jump into a previous block and bypass the initialization of local variables.\\
+MISRA-C:2004 Rule 1.2; REFERENCE - ISO:C90-6.1.2.4 Storage Durations of Objects
+
+3313   RULE018_1             No definition has been found for structure/union tag '%s'.\\
+MISRA-C:2004 Rule 18.1; REFERENCE - ISO:C90-6.5.2.3 Tags
+
+3315   RULE015_5             This 'switch' statement contains only a single path - it is redundant.\\
+MISRA-C:2004 Rule 15.5; REFERENCE - ISO:C90-6.6.4.2 The switch Statement
+
+3317   RULE19_17             '#if...' not matched by '#endif' in included file. This is probably an error.\\
+MISRA-C:2004 Rule 19.17
+
+3318   RULE19_17             '#else'/'#elif'/'#endif' in included file matched '#if...' in parent file. This is probably an error.\\
+MISRA-C:2004 Rule 19.17
+
+3319   RULE016_6             [U] Function called with number of arguments which differs from number of parameters in definition.\\
+MISRA-C:2004 Rules 1.2, 16.6; REFERENCE - ISO:C90-6.3.2.2 Function Calls
+
+3320   RULE008_3             Type of argument no. %s differs from its type in definition of function.\\
+MISRA-C:2004 Rule 8.3; REFERENCE - ISO:C90-6.3.2.2 Function Calls
+
+3322   RULE012_6             Operand of a logical ! operator is a constant expression which is not a 'Boolean' value.\\
+MISRA-C:2004 Rule 12.6
+
+3326   RULE013_1             The result of an assignment is being used in a logical operation.\\
+MISRA-C:2004 Rule 13.1
+
+3332   RULE19_11             The macro '%s' used in this '#if' or '#elif' expression is not defined.\\
+MISRA-C:2004 Rule 19.11
+
+3334   RULE005_2             This declaration of '%s' hides a more global declaration.\\
+MISRA-C:2004 Rule 5.2
+
+3335   RULE008_1             No function declaration. Implicit declaration inserted: 'extern int %s();'.\\
+MISRA-C:2004 Rule 8.1; REFERENCE - ISO:C90-6.3.2.2 Function Calls - Semantics
+
+3340   RULE013_4             Floating point variable used as 'for' loop control variable.\\
+MISRA-C:2004 Rule 13.4
+
+3341   RULE013_3             Comparing floating point expressions for equality (with '==' or '!=').\\
+MISRA-C:2004 Rule 13.3
+
+3342   RULE013_4             Controlling expression of 'for' loop is a floating point comparison.\\
+MISRA-C:2004 Rule 13.4
+
+3377   RULE012_6             Operand of a logical && or || operator is a constant expression which is not a 'Boolean' value.\\
+MISRA-C:2004 Rule 12.6
+
+3389   RULE012_1             Extra parentheses recommended to clarify the ordering of a % operator and another arithmetic operator (* / % + -).\\
+MISRA-C:2004 Rule 12.1
+
+3391   RULE012_1             Extra parentheses recommended. A conditional operation is the operand of another conditional operator.\\
+MISRA-C:2004 Rule 12.1
+
+3392   RULE012_1             Extra parentheses recommended. A shift, relational or equality operation is the operand of a second identical operator.\\
+MISRA-C:2004 Rule 12.1
+
+3393   RULE012_1             Extra parentheses recommended. An arithmetic operation (* / + -) is the operand of a different operator with the same precedence.\\
+MISRA-C:2004 Rule 12.1
+
+3394   RULE012_1             Extra parentheses recommended. A shift, relational or equality operation is the operand of a different operator with the same precedence.\\
+MISRA-C:2004 Rule 12.1
+
+3395   RULE012_1             Extra parentheses recommended. A * or / operation is the operand of a + or - operator.\\
+MISRA-C:2004 Rule 12.1
+
+3396   RULE012_1             Extra parentheses recommended. A binary operation is the operand of a conditional operator.\\
+MISRA-C:2004 Rule 12.1
+
+3397   RULE012_1             Extra parentheses recommended. A binary operation is the operand of a binary operator with different precedence.\\
+MISRA-C:2004 Rule 12.1
+
+3402   RULE014_9             Braces are needed to clarify the structure of this 'if'-'if'-'else' statement.\\
+MISRA-C:2004 Rule 14.9; REFERENCE - ISO:C90-6.6.4.1 The if statement - Semantics
+
+3406   RULE008_5             Object/function '%s', with external linkage, has been defined in a header file.\\
+MISRA-C:2004 Rule 8.5
+
+3408   RULE008_8             '%s' has external linkage and is being defined without any previous declaration.\\
+MISRA-C:2004 Rule 8.8
+
+3409   RULE019_4             The replacement list of function-like macro '%s' is not enclosed in ().\\
+MISRA-C:2004 Rule 19.4; REFERENCE - ISO:C90-6.8 Preprocessing Directives
+
+3410   RULE19_10             Macro parameter not enclosed in ().\\
+MISRA-C:2004 Rule 19.10
+
+3411   RULE019_4             Macro defined with unbalanced brackets, parentheses or braces.\\
+MISRA-C:2004 Rule 19.4
+
+3412   RULE019_4             Macro defines an unrecognized code-fragment.\\
+MISRA-C:2004 Rule 19.4
+
+3413   RULE019_4             Macro definition could be replaced by a typedef.\\
+MISRA-C:2004 Rule 19.4; REFERENCE - ISO:C90-6.5.6 Type Definitions
+
+3415   RULE012_4             Right hand operand of '&&' or '||' is an expression with possible side effects.\\
+MISRA-C:2004 Rule 12.4; REFERENCE - ISO:C90-5,1,2,3 Program Execution
+
+3425   RULE014_2             One branch of this conditional operation is a redundant expression.\\
+MISRA-C:2004 Rule 14.2
+
+3426   RULE014_2             Right hand side of comma expression has no side effect and its value is not used.\\
+MISRA-C:2004 Rule 14.2
+
+3427   RULE014_2             Right hand side of logical operator has no side effect and its value is not used.\\
+MISRA-C:2004 Rule 14.2
+
+3431   RULE019_4             Macro defines an operator, a punctuator or a control statement keyword,\\
+MISRA-C:2004 Rule 19.4
+
+3437   RULE001_2             [u] The assert macro has been suppressed to call a function of that name.\\
+MISRA-C:2004 Rule 1.2; REFERENCE - ISO:C90-7.2 Diagnostics <assert.h>
+
+3438   RULE001_2             [U] #undef'ing the assert macro to call a function of that name causes undefined behaviour.\\
+MISRA-C:2004 Rule 1.2; REFERENCE - ISO:C90-7.2 Diagnostics <assert.h>
+
+3439   RULE020_1             Macro redefines a keyword.\\
+MISRA-C:2004 Rule 20.1
+
+3447   RULE008_8             '%s' is being declared with external linkage but this declaration is not in a header file.\\
+MISRA-C:2004 Rule 8.8
+
+3448   RULE005_3             Declaration of typedef '%s' is not in a header file although it is used in a definition or declaration with external linkage.\\
+MISRA-C:2004 Rule 5.3
+
+3450   RULE008_1             Function '%s', with internal linkage, is being defined without a previous declaration.\\
+MISRA-C:2004 Rule 8.1
+
+3451   RULE008_8             The global identifier '%s' has been declared in more than one file.\\
+MISRA-C:2004 Rule 8.8
+
+3452   RULE019_4             The replacement list of object-like macro '%s' is not enclosed in ().\\
+MISRA-C:2004 Rule 19.4
+
+3453   RULE019_7             A function could probably be used instead of this function-like macro.\\
+MISRA-C:2004 Rule 19.7
+
+3458   RULE019_4             Macro defines a braced code statement block.\\
+MISRA-C:2004 Rule 19.4
+
+3460   RULE019_4             Macro defines a type specifier keyword.\\
+MISRA-C:2004 Rule 19.4
+
+3461   RULE019_4             Macro defines a storage-class specifier/type qualifier sequence.\\
+MISRA-C:2004 Rule 19.4
+
+3480   RULE008_5             Object/function '%s', with internal linkage, has been defined in a header file.\\
+MISRA-C:2004 Rule 8.5
+
+3601   RULE004_2             Trigraphs (??x) are an ISO feature.\\
+MISRA-C:2004 Rule 4.2; REFERENCE - ISO:C90-5.2.1.1 Trigraph Sequences
+
+3610   RULE004_1             Hexadecimal escape sequence used.\\
+MISRA-C:2004 Rule 4.1
+
+3628   RULE007_1             Octal escape sequences used in a character constant or string literal.\\
+MISRA-C:2004 Rule 7.1
+
+3629   RULE12_12             Union contains member of floating type.\\
+MISRA-C:2004 Rule 12.12
+
+3635   RULE016_9             Function identifier used as a pointer without a preceding & operator.\\
+MISRA-C:2004 Rule 16.9; REFERENCE - ISO:C90-6.2,2,1 Lvalues and Function Designators
+
+3659   RULE006_5             Unnamed zero-width bit-field declared with a signed type.\\
+MISRA-C:2004 Rule 6.5; REFERENCE - ISO:C90-6.5.2.1 Structure and Union Specifiers - Semantics
+
+3660   RULE006_5             Named bit-field consisting of a single bit declared with a signed type.\\
+MISRA-C:2004 Rule 6.5; REFERENCE - ISO:C90-6.5.2.1 Structure and Union Specifiers - Semantics
+
+3665   RULE006_5             Unnamed bit-field consisting of a single bit declared with a signed type.\\
+MISRA-C:2004 Rule 6.5; REFERENCE - ISO:C90-6.5.2.1 Structure and Union Specifiers - Semantics
+
+3670   RULE016_2             Recursive call to function containing this call.\\
+MISRA-C:2004 Rule 16.2
+
+3673   RULE016_7             The object addressed by the pointer parameter '%s' is not modified and so the pointer could be of type 'pointer to const'.\\
+MISRA-C:2004 Rule 16.7
+
+3675   RULE008_3             Function parameter declared with type qualification which differs from previous declaration.\\
+MISRA-C:2004 Rule 8.3
+
+3684   RULE08_12             Array declared with unknown size.\\
+MISRA-C:2004 Rule 8.12
+
+3700   RULE006_2             Implicit conversion: char to signed char.\\
+MISRA-C:2004 Rule 6.2
+
+3701   RULE006_2             Implicit conversion: char to unsigned char.\\
+MISRA-C:2004 Rule 6.2
+
+3702   RULE003_1             Implicit conversion: char to short.\\
+MISRA-C:2004 Rule 3.1
+
+3703   RULE003_1             Implicit conversion: char to unsigned short.\\
+MISRA-C:2004 Rule 3.1
+
+3704   RULE003_1             Implicit conversion: char to int.\\
+MISRA-C:2004 Rule 3.1
+
+3705   RULE003_1             Implicit conversion: char to unsigned int.\\
+MISRA-C:2004 Rule 3.1
+
+3706   RULE003_1             Implicit conversion: char to long.\\
+MISRA-C:2004 Rule 3.1
+
+3707   RULE003_1             Implicit conversion: char to unsigned long.\\
+MISRA-C:2004 Rule 3.1
+
+3711   RULE006_1             Implicit conversion: unsigned char to char.\\
+MISRA-C:2004 Rule 6.1
+
+3722   RULE006_1             Implicit conversion: signed char to char.\\
+MISRA-C:2004 Rule 6.1
+
+3733   RULE006_1             Implicit conversion: short to char.\\
+MISRA-C:2004 Rule 6.1
+
+3744   RULE006_1             Implicit conversion: unsigned short to char.\\
+MISRA-C:2004 Rule 6.1
+
+3755   RULE006_1             Implicit conversion: int to char.\\
+MISRA-C:2004 Rule 6.1
+
+3766   RULE006_1             Implicit conversion: unsigned int to char.\\
+MISRA-C:2004 Rule 6.1
+
+3777   RULE006_1             Implicit conversion: long to char.\\
+MISRA-C:2004 Rule 6.1
+
+3788   RULE006_1             Implicit conversion: unsigned long to char.\\
+MISRA-C:2004 Rule 6.1
+
+3832   RULE003_1             Implicit conversion: char to long long.\\
+MISRA-C:2004 Rule 3.1
+
+3833   RULE003_1             Implicit conversion: char to unsigned long long.\\
+MISRA-C:2004 Rule 3.1
+
+3850   RULE006_1             Implicit conversion: long long to char.\\
+MISRA-C:2004 Rule 6.1
+
+3863   RULE006_1             Implicit conversion: unsigned long long to char.\\
+MISRA-C:2004 Rule 6.1
+
+3900   RULE006_2             char value returned from signed char %s().\\
+MISRA-C:2004 Rule 6.2
+
+3901   RULE006_2             char value returned from unsigned char %s().\\
+MISRA-C:2004 Rule 6.2
+
+3902   RULE003_1             char value returned from short %s().\\
+MISRA-C:2004 Rule 3.1
+
+3903   RULE003_1             char value returned from unsigned short %s().\\
+MISRA-C:2004 Rule 3.1
+
+3904   RULE003_1             char value returned from int %s().\\
+MISRA-C:2004 Rule 3.1
+
+3905   RULE003_1             char value returned from unsigned int %s().\\
+MISRA-C:2004 Rule 3.1
+
+3906   RULE003_1             char value returned from long %s().\\
+MISRA-C:2004 Rule 3.1
+
+3907   RULE003_1             char value returned from unsigned long %s().\\
+MISRA-C:2004 Rule 3.1
+
+3911   RULE006_1             unsigned char value returned from char %s().\\
+MISRA-C:2004 Rule 6.1
+
+3922   RULE006_1             signed char value returned from char %s().\\
+MISRA-C:2004 Rule 6.1
+
+3933   RULE006_1             short value returned from char %s().\\
+MISRA-C:2004 Rule 6.1
+
+3944   RULE006_1             unsigned short value returned from char %s().\\
+MISRA-C:2004 Rule 6.1
+
+3955   RULE006_1             int value returned from char %s().\\
+MISRA-C:2004 Rule 6.1
+
+3966   RULE006_1             unsigned int value returned from char %s().\\
+MISRA-C:2004 Rule 6.1
+
+3977   RULE006_1             long value returned from char %s().\\
+MISRA-C:2004 Rule 6.1
+
+3988   RULE006_1             unsigned long value returned from char %s().\\
+MISRA-C:2004 Rule 6.1
+
+4032   RULE003_1             char value returned from long long %s().\\
+MISRA-C:2004 Rule 3.1
+
+4033   RULE003_1             char value returned from unsigned long long %s().\\
+MISRA-C:2004 Rule 3.1
+
+4050   RULE006_1             long long value returned from char %s().\\
+MISRA-C:2004 Rule 6.1
+
+4063   RULE006_1             unsigned long long value returned from char %s().\\
+MISRA-C:2004 Rule 6.1
+
+4101   RULE012_6             Both operands of & operator are 'Boolean' expressions.\\
+MISRA-C:2004 Rule 12.6; REFERENCE - ISO:C90-6.3.10 Bitwise AND Operator
+
+4102   RULE012_6             Both operands of | operator are 'Boolean' expressions.\\
+MISRA-C:2004 Rule 12.6; REFERENCE - ISO:C90-6.3.12 Bitwise Inclusive OR Operator
+
+4103   RULE012_6             Both operands of arithmetic or bitwise operator are 'Boolean' expressions.\\
+MISRA-C:2004 Rule 12.6
+
+4104   RULE012_6             Left hand operand of arithmetic or bitwise operator is a 'Boolean' expression.\\
+MISRA-C:2004 Rule 12.6
+
+4105   RULE012_6             Right hand operand of arithmetic or bitwise operator is a 'Boolean' expression.\\
+MISRA-C:2004 Rule 12.6
+
+4106   RULE012_6             Both operands of && operator are arithmetic or bitwise expressions.\\
+MISRA-C:2004 Rule 12.6; REFERENCE - ISO:C90-6.3.13 Logical AND Operator
+
+4107   RULE012_6             Both operands of || operator are arithmetic or bitwise expressions.\\
+MISRA-C:2004 Rule 12.6; REFERENCE - ISO:C90-6.3.14 Logical OR Operator
+
+4108   RULE012_6             Left hand operand of logical operator is an arithmetic or bitwise expression.\\
+MISRA-C:2004 Rule 12.6
+
+4109   RULE012_6             Right hand operand of logical operator is an arithmetic or bitwise expression.\\
+MISRA-C:2004 Rule 12.6
+
+4110   RULE012_6             Operand of ! operator is an arithmetic or bitwise expression.\\
+MISRA-C:2004 Rule 12.6; REFERENCE - ISO:C90-6.3.3.3 Unary Arithmetic Operators
+
+4111   RULE012_6             Right hand operand of relational operator is a 'Boolean' expression.\\
+MISRA-C:2004 Rule 12.6
+
+4112   RULE012_6             Left hand operand of relational operator is a 'Boolean' expression.\\
+MISRA-C:2004 Rule 12.6; REFERENCE - ISO:C90-6.3.8 Relational Operators
+
+4113   RULE012_6             Both operands of relational operator are 'Boolean' expressions.\\
+MISRA-C:2004 Rule 12.6; REFERENCE - ISO:C90-6.3.8 Relational Operators
+
+4114   RULE012_6             Operand of ~ operator is a 'Boolean' expression.\\
+MISRA-C:2004 Rule 12.6; REFERENCE - ISO:C90-6.3.3.3 Unary Arithmetic Operators
+
+4115   RULE012_6             Operand of logical && or || operator is not an 'effectively Boolean' expression.\\
+MISRA-C:2004 Rule 12.6; REFERENCE - ISO:C90-6.3.13 Logical AND Operator, ISO:C90-6.3.14 Logical OR Operator
+
+4116   RULE012_6             Operand of logical ! operator is not an 'effectively Boolean' expression.\\
+MISRA-C:2004 Rule 12.6; REFERENCE - ISO:C90-6.3.3.3 Unary Arithmetic Operators
+
+4121   RULE010_3             Cast of complex expression of integral type to wider type.\\
+MISRA-C:2004 Rule 10.3
+
+4130   RULE012_7             Bitwise operations on signed data will give implementation defined results.\\
+MISRA-C:2004 Rule 12.7; REFERENCE - ISO:C90-6.3 Expressions
+
+4131   RULE012_7             Left shift operation on signed operand.\\
+MISRA-C:2004 Rule 12.7
+
+4140   RULE017_6             Address of automatic object exported in function return value.\\
+MISRA-C:2004 Rule 17.6; REFERENCE - ISO:C90-6.1.2.4 Storage Durations of Objects
+
+4600   RULE020_1             The macro '%1s' is also defined in '<%2s>'.\\
+MISRA-C:2004 Rule 20.1; REFERENCE - ISO:C90-7.1.2.1 Reserved Identifiers, ISO:C99-7.1.3 Reserved Identifiers
+
+4601   RULE020_1             The macro '%1s' is the name of an identifier in '<%2s>'.\\
+MISRA-C:2004 Rule 20.1; REFERENCE - ISO:C90-7.1.2.1 Reserved Identifiers, ISO:C99-7.1.3 Reserved Identifiers
+
+4602   RULE020_2             The identifier '%1s' is declared as a macro in '<%2s>'.\\
+MISRA-C:2004 Rule 20.2; REFERENCE - ISO:C90-7.1.2.1 Reserved Identifiers, ISO:C99-7.1.3 Reserved Identifiers
+
+4603   RULE020_2             The object/function '%1s'is being defined with the same name as an ordinary identifier defined in '<%2s>'.\\
+MISRA-C:2004 Rule 20.2; REFERENCE - ISO:C90-7.1.2.1 Reserved Identifiers, ISO:C99-7.1.3 Reserved Identifiers
+
+4604   RULE020_2             The object/function '%1s' is being declared with the same name as an ordinary identifier defined in '<%2s>'.\\
+MISRA-C:2004 Rule 20.2; REFERENCE - ISO:C90-7.1.2.1 Reserved Identifiers, ISO:C99-7.1.3 Reserved Identifiers
+
+4605   RULE020_2             The typedef '%1s' is also defined in '<%2s>'.\\
+MISRA-C:2004 Rule 20.2; REFERENCE - ISO:C90-7.1.2.1 Reserved Identifiers, ISO:C99-7.1.3 Reserved Identifiers
+
+4606   RULE020_2             The typedef '%1s' has the same name as another ordinary identifier in '<%2s>'.\\
+MISRA-C:2004 Rule 20.2; REFERENCE - ISO:C90-7.1.2.1 Reserved Identifiers, ISO:C99-7.1.3 Reserved Identifiers
+
+4607   RULE020_2             The enum constant '%1s' has the same name as another ordinary identifier in '<%2s>'.\\
+MISRA-C:2004 Rule 20.2; REFERENCE - ISO:C90-7.1.2.1 Reserved Identifiers, ISO:C99-7.1.3 Reserved Identifiers
+
+4608   RULE020_2             The tag '%1s' is also defined in '<%2s>'.\\
+MISRA-C:2004 Rule 20.2; REFERENCE - ISO:C90-7.1.2.1 Reserved Identifiers, ISO:C99-7.1.3 Reserved Identifiers
+
+5013   RULE006_3             Use of basic type '%s'.\\
+MISRA-C:2004 Rule 6.3
+
+5087   RULE019_1             #include statements in a file should only be preceded by other preprocessor directives or comments.\\
+MISRA-C:2004 Rule 19.1
+
+5122   RULE020_7             The setjmp macro and the longjmp function shall not be used.\\
+MISRA-C:2004 Rule 20.7
+
+
+
+
+
+*******************************************************************************
+***************************  LSIS Coding Sytle Rule ***************************
+*******************************************************************************
+* 1: 2011.06.01: 이대규K - 최초 사용자 정의 메세지 추가
+* 2: 2013.02.19: 남미현C - move 3205, 3207 messages to RULE 14.1
+*******************************************************************************
+
+2203	LSIS_CodingSytle 	This closing brace is not aligned appropriately with the matching opening brace.
+*2204	LSIS_CodingSytle	'%s' is not aligned to match its controlling 'switch' statement.
+2205	LSIS_CodingSytle	More than one declaration or statement on the same line.
+2216	LSIS_CodingSytle	More than one structure or union member declared on the same line.
+3120	LSIS_CodingSytle	Hard-coded 'magic' integer constant '%s'.
+3132	LSIS_CodingSytle	Hard coded 'magic' number '%s' used to define the size of an array.
+3205	RULE014_1	The identifier '%s' is not used and could be removed.
+3207	RULE014_1	File scope static, '%s', is not used, and could be removed.\\
+REFERENCE - ISO:C90-6.1.2.2 Linkages of Identifiers
+1501	RULE014_1	The function '%1s' is declared but is not used within this project.
+1503	RULE014_1	The function '%1s' is defined but is not used within this project.
+
+
+
+*******************************************************************************
+***************************  LSIS Naming Sytle Rule  **************************
+*******************************************************************************
+* 1: 2011.06.01: 이대규K - 최초 사용자 정의 메세지 추가
+* 2: 2013.02.24: 남미현C - replace entire messages for naming rules which were changed on Feb./19, 2013
+* 3: 2013.12.04: 안수근C - naming rules 변경(팀내 합의)
+*******************************************************************************
+7001	LSIS_NamingStyle	Entity의 이름이 31자를 넘었습니다.
+*-------------------------------------------------------
+* Basic 
+*-------------------------------------------------------
+
+* Basic: scope
+6003    LSIS_NamingStyle   외부 참조(external linkage)를 가지는 전역 변수 이름은 접두어로 g_를 사용하세요. 
+6004    LSIS_NamingStyle   내부 참조(internal linkage)를 가지는 static 변수 이름은 접두어로 t_를 사용하세요.
+
+* Basic: pointer and array
+6010    LSIS_NamingStyle   배열형(array) 변수 이름은 접두어로 a를 사용하세요.
+6011    LSIS_NamingStyle   포인터형(pointer) 변수 이름은 접두어로 p를 사용하세요.
+6012	LSIS_NamingStyle   함수 포인터 변수 이름은 접두어로 pfn로 사용하고, 접두어 다음에는 대문자로 시작하는 함수 이름을 사용하세요.
+
+* Basic: function name
+6020    LSIS_NamingStyle   매크로(macro) 함수 이름은 모두 대문자를 사용하세요.
+6023    LSIS_NamingStyle   대문자로 시작하는 함수 이름을 사용하세요.
+
+* Basic: macro constant
+6030    LSIS_NamingStyle   매크로(macro) 상수 이름은 모두 대문자를 사용하세요.
+
+* Basic: user-defined type
+6040    LSIS_NamingStyle   typedef를 사용하여 선언/정의 필요. 열거형(Enumeration) 타입 이름은 31자가 넘어서는 안되며 접두어로 E_를 사용하고, 이름은 모두 대문자를 사용하세요.
+6041    LSIS_NamingStyle   typedef를 사용하여 선언/정의 필요. 구조체(structure) 타입 이름은 31자가 넘어서는 안되며 접두어로 S_를 사용하고, 이름은 모두 대문자를 사용하세요.
+6042    LSIS_NamingStyle   typedef를 사용하여 선언/정의 필요. 유니온(union) 타입 이름은 31자가 넘어서는 안되며 접두어로 U_를 사용하고, 이름은 모두 대문자를 사용하세요.
+
+*-------------------------------------------------------
+* Block Scope + Auto Storage 
+*-------------------------------------------------------
+
+* Block Scope + Auto Storage: 일반 변수
+6051    LSIS_NamingStyle   signed char형 변수 이름은 접두어로 c를 사용하고, 접두어 다음에는 대문자로 시작하세요. 
+6052    LSIS_NamingStyle   char형 변수 이름은 접두어로 c를 사용하고, 접두어 다음에는 대문자로 시작하세요. 
+6053    LSIS_NamingStyle   unsigned char형 변수 이름은 접두어로 uc 또는 b(b:byte) 또는 bl을 사용하고, 접두어 다음에는 대문자로 시작하세요. 
+6055    LSIS_NamingStyle   short형 변수 이름은 접두어로 s를 사용하고, 접두어 다음에는 대문자로 시작하세요. 
+6056    LSIS_NamingStyle   unsigned short형 변수 이름은 접두어로 us 또는 w(w:WORD)를 사용하고, 접두어 다음에는 대문자로 시작하세요. 
+*6057    LSIS_NamingStyle   int형 변수 이름은 접두어로 i를 사용하고, 접두어 다음에는 대문자로 시작하세요. 
+*6058    LSIS_NamingStyle   unsigned int형 변수 이름은 접두어로 ui를 사용하고, 접두어 다음에는 대문자로 시작하세요. 
+6061    LSIS_NamingStyle   long형 변수 이름은 접두어로 l를 사용하고, 접두어 다음에는 대문자로 시작하세요. 
+6062    LSIS_NamingStyle   unsigned long형 변수 이름은 접두어로 ul 또는 dw(dw:DWORD)를 사용하고, 접두어 다음에는 대문자로 시작하세요. 
+6063    LSIS_NamingStyle   long long형 변수 이름은 접두어로 ll를 사용하고, 접두어 다음에는 대문자로 시작하세요. 
+6064    LSIS_NamingStyle   unsigned long long형 변수 이름은 접두어로 ull를 사용하고, 접두어 다음에는 대문자로 시작하세요. 
+6065    LSIS_NamingStyle   float형 변수 이름은 접두어로 f를 사용하고, 접두어 다음에는 대문자로 시작하세요. 
+6066    LSIS_NamingStyle   double형 변수 이름은 접두어로 d를 사용하고, 접두어 다음에는 대문자로 시작하세요. 
+6067    LSIS_NamingStyle   열거형(Enumeration) 변수 이름은 접두어로 e를 사용하고, 접두어 다음에는 대문자로 시작하세요.
+6068    LSIS_NamingStyle   구조체(structure) 변수 이름은 접두어로 st를 사용하고, 접두어 다음에는 대문자로 시작하세요.
+6069    LSIS_NamingStyle   유니온(union) 변수 이름은 접두어로 u를 사용하고, 접두어 다음에는 대문자로 시작하세요.
+
+* Block Scope + Auto Storage: 포인터 변수
+6151    LSIS_NamingStyle   signed char형 포인터 변수 이름은 접두어로 pc를 사용하고, 접두어 다음에는 대문자로 시작하세요. 
+6152    LSIS_NamingStyle   char형 포인터 변수 이름은 접두어로 pc를 사용하고, 접두어 다음에는 대문자로 시작하세요. 
+6153    LSIS_NamingStyle   unsigned char형 포인터 변수 이름은 접두어로 puc 또는 pb(b:byte) 또는 pbl을 사용하고, 접두어 다음에는 대문자로 시작하세요. 
+6155    LSIS_NamingStyle   short형 포인터 변수 이름은 접두어로 ps를 사용하고, 접두어 다음에는 대문자로 시작하세요. 
+6156    LSIS_NamingStyle   unsigned short형 포인터 변수 이름은 접두어로 pus 또는 pw(w:WORD)를 사용하고, 접두어 다음에는 대문자로 시작하세요. 
+*6157    LSIS_NamingStyle   int형 포인터 변수 이름은 접두어로 pi를 사용하고, 접두어 다음에는 대문자로 시작하세요. 
+*6158    LSIS_NamingStyle   unsigned int형 포인터 변수 이름은 접두어로 pui를 사용하고, 접두어 다음에는 대문자로 시작하세요. 
+6161    LSIS_NamingStyle   long형 포인터 변수 이름은 접두어로 pl를 사용하고, 접두어 다음에는 대문자로 시작하세요. 
+6162    LSIS_NamingStyle   unsigned long형 포인터 변수 이름은 접두어로 pul 또는 pdw(dw:DWORD)를 사용하고, 접두어 다음에는 대문자로 시작하세요. 
+6163    LSIS_NamingStyle   long long형 포인터 변수 이름은 접두어로 pll를 사용하고, 접두어 다음에는 대문자로 시작하세요. 
+6164    LSIS_NamingStyle   unsigned long long형 포인터 변수 이름은 접두어로 pull를 사용하고, 접두어 다음에는 대문자로 시작하세요. 
+6165    LSIS_NamingStyle   float형 포인터 변수 이름은 접두어로 pf를 사용하고, 접두어 다음에는 대문자로 시작하세요. 
+6166    LSIS_NamingStyle   double형 포인터 변수 이름은 접두어로 pd를 사용하고, 접두어 다음에는 대문자로 시작하세요. 
+6167    LSIS_NamingStyle   열거형(Enumeration) 포인터 변수 이름은 접두어로 pe를 사용하고, 접두어 다음에는 대문자로 시작하세요. 
+6168    LSIS_NamingStyle   구조체(structure) 포인터 변수 이름은 접두어로 pst를 사용하고, 접두어 다음에는 대문자로 시작하세요. 
+6169    LSIS_NamingStyle   유니온(union) 포인터 변수 이름은 접두어로 pu를 사용하고, 접두어 다음에는 대문자로 시작하세요. 
+
+* Block Scope + Auto Storage: 배열 변수
+6201    LSIS_NamingStyle   signed char형 배열 변수 이름은 접두어로 ac를 사용하고, 접두어 다음에는 대문자로 시작하세요. 
+6202    LSIS_NamingStyle   char형 배열 변수 이름은 접두어로 ac를 사용하고, 접두어 다음에는 대문자로 시작하세요. 
+6203    LSIS_NamingStyle   unsigned char형 배열 변수 이름은 접두어로 auc 또는 ab(byte 배열) 또는 abl을 사용하고, 접두어 다음에는 대문자로 시작하세요. 
+6205    LSIS_NamingStyle   short형 배열 변수 이름은 접두어로 as를 사용하고, 접두어 다음에는 대문자로 시작하세요. 
+6206    LSIS_NamingStyle   unsigned short형 배열 변수 이름은 접두어로 aus 또는 aw(w:WORD)를 사용하고, 접두어 다음에는 대문자로 시작하세요. 
+*6207    LSIS_NamingStyle   int형 배열 변수 이름은 접두어로 ai를 사용하고, 접두어 다음에는 대문자로 시작하세요. 
+*6208    LSIS_NamingStyle   unsigned int형 배열 변수 이름은 접두어로 aui를 사용하고, 접두어 다음에는 대문자로 시작하세요. 
+6211    LSIS_NamingStyle   long형 배열 변수 이름은 접두어로 al를 사용하고, 접두어 다음에는 대문자로 시작하세요. 
+6212    LSIS_NamingStyle   unsigned long형 배열 변수 이름은 접두어로 aul 또는 adw(dw:DWORD)를 사용하고, 접두어 다음에는 대문자로 시작하세요. 
+6213    LSIS_NamingStyle   long long형 배열 변수 이름은 접두어로 all를 사용하고, 접두어 다음에는 대문자로 시작하세요. 
+6214    LSIS_NamingStyle   unsigned long long형 배열 변수 이름은 접두어로 aull를 사용하고, 접두어 다음에는 대문자로 시작하세요. 
+6215    LSIS_NamingStyle   float형 배열 변수 이름은 접두어로 af를 사용하고, 접두어 다음에는 대문자로 시작하세요. 
+6216    LSIS_NamingStyle   double형 배열 변수 이름은 접두어로 ad를 사용하고, 접두어 다음에는 대문자로 시작하세요. 
+6217    LSIS_NamingStyle   열거형(Enumeration) 배열 변수 이름은 접두어로 ae를 사용하고, 접두어 다음에는 대문자로 시작하세요. 
+6218    LSIS_NamingStyle   구조체(structure) 배열 변수 이름은 접두어로 ast를 사용하고, 접두어 다음에는 대문자로 시작하세요. 
+6219    LSIS_NamingStyle   유니온(union) 배열 변수 이름은 접두어로 au를 사용하고, 접두어 다음에는 대문자로 시작하세요. 
+
+*--------------------------------------------
+* File Scope + External Linkage + Static Storage 
+*-------------------------------------------------------
+
+* File Scope + External Linkage + Static Storage: 일반 변수
+6401    LSIS_NamingStyle   [external linkage] global signed char형 변수 이름은 접두어로 g_c를 사용하고, 접두어 다음에는 대문자로 시작하세요.
+6402    LSIS_NamingStyle   [external linkage] global char형 변수 이름은 접두어로 g_c를 사용하고, 접두어 다음에는 대문자로 시작하세요.
+6403    LSIS_NamingStyle   [external linkage] global unsigned char형 변수 이름은 접두어로 g_uc 또는 g_b(b:byte) 또는 g_bl을 사용하고, 접두어 다음에는 대문자로 시작하세요.
+6405    LSIS_NamingStyle   [external linkage] global short형 변수 이름은 접두어로 g_s를 사용하고, 접두어 다음에는 대문자로 시작하세요.
+6406    LSIS_NamingStyle   [external linkage] global unsigned short형 변수 이름은 접두어로 g_us 또는 g_w(w:WORD)를 사용하고, 접두어 다음에는 대문자로 시작하세요.
+*6407    LSIS_NamingStyle   [external linkage] global int형 변수 이름은 접두어로 g_i를 사용하고, 접두어 다음에는 대문자로 시작하세요.
+*6408    LSIS_NamingStyle   [external linkage] global unsigned int형 변수 이름은 접두어로 g_ui를 사용하고, 접두어 다음에는 대문자로 시작하세요.
+6411    LSIS_NamingStyle   [external linkage] global long형 변수 이름은 접두어로 g_sl를 사용하고, 접두어 다음에는 대문자로 시작하세요.
+6412    LSIS_NamingStyle   [external linkage] global unsigned long형 변수 이름은 접두어로 g_ul 또는 g_dw(dw:DWORD)를 사용하고, 접두어 다음에는 대문자로 시작하세요.
+6413    LSIS_NamingStyle   [external linkage] global long long형 변수 이름은 접두어로 g_ll를 사용하고, 접두어 다음에는 대문자로 시작하세요.
+6414    LSIS_NamingStyle   [external linkage] global unsigned long long형 변수 이름은 접두어로 g_ull를 사용하고, 접두어 다음에는 대문자로 시작하세요.
+6415    LSIS_NamingStyle   [external linkage] global float형 변수 이름은 접두어로 g_f를 사용하고, 접두어 다음에는 대문자로 시작하세요.
+6416    LSIS_NamingStyle   [external linkage] global double형 변수 이름은 접두어로 g_d를 사용하고, 접두어 다음에는 대문자로 시작하세요.
+6417    LSIS_NamingStyle   [external linkage] global 열거형(Enumeration) 변수 이름은 접두어로 g_e를 사용하고, 접두어 다음에는 대문자로 시작하세요.
+6418    LSIS_NamingStyle   [external linkage] global 구조체(structure) 변수 이름은 접두어로 g_st를 사용하고, 접두어 다음에는 대문자로 시작하세요.
+6419    LSIS_NamingStyle   [external linkage] global 유니온(union) 변수 이름은 접두어로 g_u를 사용하고, 접두어 다음에는 대문자로 시작하세요.
+
+* File Scope + External Linkage + Static Storage: 포인터 변수
+6501    LSIS_NamingStyle   [external linkage] global signed char형 포인터 변수 이름은 접두어로 g_pc를 사용하고, 접두어 다음에는 대문자로 시작하세요.
+6502    LSIS_NamingStyle   [external linkage] global char형 포인터 변수 이름은 접두어로 g_pc를 사용하고, 접두어 다음에는 대문자로 시작하세요.
+6503    LSIS_NamingStyle   [external linkage] global unsigned char형 포인터 변수 이름은 접두어로 g_puc 또는 g_pb(b:byte) 또는 g_pbl을 사용하고, 접두어 다음에는 대문자로 시작하세요.
+6505    LSIS_NamingStyle   [external linkage] global short형 포인터 변수 이름은 접두어로 g_ps를 사용하고, 접두어 다음에는 대문자로 시작하세요.
+6506    LSIS_NamingStyle   [external linkage] global unsigned short형 포인터 변수 이름은 접두어로 g_pus 또는 g_pw(w:WORD)를 사용하고, 접두어 다음에는 대문자로 시작하세요.
+*6507    LSIS_NamingStyle   [external linkage] global int형 포인터 변수 이름은 접두어로 g_pi를 사용하고, 접두어 다음에는 대문자로 시작하세요.
+*6508    LSIS_NamingStyle   [external linkage] global unsigned int형 포인터 변수 이름은 접두어로 g_pui를 사용하고, 접두어 다음에는 대문자로 시작하세요.
+6511    LSIS_NamingStyle   [external linkage] global long형 포인터 변수 이름은 접두어로 g_pl를 사용하고, 접두어 다음에는 대문자로 시작하세요.
+6512    LSIS_NamingStyle   [external linkage] global unsigned long형 포인터 변수 이름은 접두어로 g_pul 또는 g_pdw(dw:DWORD)를 사용하고, 접두어 다음에는 대문자로 시작하세요.
+6513    LSIS_NamingStyle   [external linkage] global long long형 포인터 변수 이름은 접두어로 g_pll를 사용하고, 접두어 다음에는 대문자로 시작하세요.
+6514    LSIS_NamingStyle   [external linkage] global unsigned long long형 포인터 변수 이름은 접두어로 g_pull를 사용하고, 접두어 다음에는 대문자로 시작하세요.
+6515    LSIS_NamingStyle   [external linkage] global float형 포인터 변수 이름은 접두어로 g_pf를 사용하고, 접두어 다음에는 대문자로 시작하세요.
+6516    LSIS_NamingStyle   [external linkage] global double형 포인터 변수 이름은 접두어로 g_pd를 사용하고, 접두어 다음에는 대문자로 시작하세요.
+6517    LSIS_NamingStyle   [external linkage] global 열거형(Enumeration) 포인터 변수 이름은 접두어로 g_pe를 사용하고, 접두어 다음에는 대문자로 시작하세요.
+6518    LSIS_NamingStyle   [external linkage] global 구조체(structure) 포인터 변수 이름은 접두어로 g_pst를 사용하고, 접두어 다음에는 대문자로 시작하세요.
+6519    LSIS_NamingStyle   [external linkage] global 유니온(union) 포인터 변수 이름은 접두어로 g_pu를 사용하고, 접두어 다음에는 대문자로 시작하세요.
+
+* File Scope + External Linkage + Static Storage: 배열 변수
+6551    LSIS_NamingStyle   [external linkage] global signed char형 배열 변수 이름은 접두어로 g_ac를 사용하고, 접두어 다음에는 대문자로 시작하세요.
+6552    LSIS_NamingStyle   [external linkage] global char형 배열 변수 이름은 접두어로 g_ac를 사용하고, 접두어 다음에는 대문자로 시작하세요.
+6553    LSIS_NamingStyle   [external linkage] global unsigned chgar형 배열 변수 이름은 접두어로 g_auc 또는 g_ab(b:byte) 또는 g_abl을 사용하고, 접두어 다음에는 대문자로 시작하세요.
+6555    LSIS_NamingStyle   [external linkage] global short형 배열 변수 이름은 접두어로 g_as를 사용하고, 접두어 다음에는 대문자로 시작하세요.
+6556    LSIS_NamingStyle   [external linkage] global unsigned short형 배열 변수 이름은 접두어로 g_aus 또는 g_aw(w:WORD)를 사용하고, 접두어 다음에는 대문자로 시작하세요.
+*6557    LSIS_NamingStyle   [external linkage] global int형 배열 변수 이름은 접두어로 g_ai를 사용하고, 접두어 다음에는 대문자로 시작하세요.
+*6558    LSIS_NamingStyle   [external linkage] global unsigned int형 배열 변수 이름은 접두어로 g_aui를 사용하고, 접두어 다음에는 대문자로 시작하세요.
+6561    LSIS_NamingStyle   [external linkage] global long형 배열 변수 이름은 접두어로 g_al를 사용하고, 접두어 다음에는 대문자로 시작하세요.
+6562    LSIS_NamingStyle   [external linkage] global unsigned long형 배열 변수 이름은 접두어로 g_aul 또는 g_adw(dw:DWORD)를 사용하고, 접두어 다음에는 대문자로 시작하세요.
+6563    LSIS_NamingStyle   [external linkage] global long long형 배열 변수 이름은 접두어로 g_all를 사용하고, 접두어 다음에는 대문자로 시작하세요.
+6564    LSIS_NamingStyle   [external linkage] global unsigned long long형 배열 변수 이름은 접두어로 g_aull를 사용하고, 접두어 다음에는 대문자로 시작하세요.
+6565    LSIS_NamingStyle   [external linkage] global flog_at형 배열 변수 이름은 접두어로 g_af를 사용하고, 접두어 다음에는 대문자로 시작하세요.
+6566    LSIS_NamingStyle   [external linkage] global double형 배열 변수 이름은 접두어로 g_ad를 사용하고, 접두어 다음에는 대문자로 시작하세요.
+6567    LSIS_NamingStyle   [external linkage] global 열거형(Enumeration) 배열 변수 이름은 접두어로 g_ae를 사용하고, 접두어 다음에는 대문자로 시작하세요.
+6568    LSIS_NamingStyle   [external linkage] global 구조체(structure) 배열 변수 이름은 접두어로 g_ast를 사용하고, 접두어 다음에는 대문자로 시작하세요.
+6569    LSIS_NamingStyle   [external linkage] global 유니온(union) 배열 변수 이름은 접두어로 g_au를 사용하고, 접두어 다음에는 대문자로 시작하세요.
+
+*--------------------------------------------
+* File Scope + Internal Linkage + Static Storage 
+*-------------------------------------------------------
+
+* File Scope + Internal Linkage + Static Storage: 일반 변수
+6601    LSIS_NamingStyle   [internal linkage] static signed char형 변수 이름은 접두어로 t_c를 사용하고, 접두어 다음에는 대문자로 시작하세요.
+6602    LSIS_NamingStyle   [internal linkage] static char형 변수 이름은 접두어로 t_c를 사용하고, 접두어 다음에는 대문자로 시작하세요.
+6603    LSIS_NamingStyle   [internal linkage] static unsigned char형 변수 이름은 접두어로 t_uc 또는 t_b(b:byte) 또는 t_bl을 사용하고, 접두어 다음에는 대문자로 시작하세요.
+6605    LSIS_NamingStyle   [internal linkage] static short형 변수 이름은 접두어로 t_s를 사용하고, 접두어 다음에는 대문자로 시작하세요.
+6606    LSIS_NamingStyle   [internal linkage] static unsigned short형 변수 이름은 접두어로 t_us 또는 t_w(w:WORD)를 사용하고, 접두어 다음에는 대문자로 시작하세요.
+*6607    LSIS_NamingStyle   [internal linkage] static int형 변수 이름은 접두어로 t_i를 사용하고, 접두어 다음에는 대문자로 시작하세요.
+*6608    LSIS_NamingStyle   [internal linkage] static unsigned int형 변수 이름은 접두어로 t_ui를 사용하고, 접두어 다음에는 대문자로 시작하세요.
+6611    LSIS_NamingStyle   [internal linkage] static long형 변수 이름은 접두어로 t_l를 사용하고, 접두어 다음에는 대문자로 시작하세요.
+6612    LSIS_NamingStyle   [internal linkage] static unsigned long형 변수 이름은 접두어로 t_ul 또는 t_dw(dw:DWORD)를 사용하고, 접두어 다음에는 대문자로 시작하세요.
+6613    LSIS_NamingStyle   [internal linkage] static long long형 변수 이름은 접두어로 t_ll를 사용하고, 접두어 다음에는 대문자로 시작하세요.
+6614    LSIS_NamingStyle   [internal linkage] static unsigned long long형 변수 이름은 접두어로 t_ull를 사용하고, 접두어 다음에는 대문자로 시작하세요.
+6615    LSIS_NamingStyle   [internal linkage] static float형 변수 이름은 접두어로 t_f를 사용하고, 접두어 다음에는 대문자로 시작하세요.
+6616    LSIS_NamingStyle   [internal linkage] static double형 변수 이름은 접두어로 t_d를 사용하고, 접두어 다음에는 대문자로 시작하세요.
+6617    LSIS_NamingStyle   [internal linkage] static 열거형(Enumeration) 변수 이름은 접두어로 t_e를 사용하고, 접두어 다음에는 대문자로 시작하세요.
+6618    LSIS_NamingStyle   [internal linkage] static 구조체(structure) 변수 이름은 접두어로 t_st를 사용하고, 접두어 다음에는 대문자로 시작하세요.
+6619    LSIS_NamingStyle   [internal linkage] static 유니온(union) 변수 이름은 접두어로 t_u를 사용하고, 접두어 다음에는 대문자로 시작하세요.
+
+* File Scope + External Linkage + Static Storage: 포인터 변수
+6701    LSIS_NamingStyle   [internal linkage] static signed char형 포인터 변수 이름은 접두어로 t_pc를 사용하고, 접두어 다음에는 대문자로 시작하세요.
+6702    LSIS_NamingStyle   [internal linkage] static char형 포인터 변수 이름은 접두어로 t_pc를 사용하고, 접두어 다음에는 대문자로 시작하세요.
+6703    LSIS_NamingStyle   [internal linkage] static unsigned char형 포인터 변수 이름은 접두어로 t_puc 또는 t_pb(b:byte) 또는 t_pbl을 사용하고, 접두어 다음에는 대문자로 시작하세요.
+6705    LSIS_NamingStyle   [internal linkage] static short형 포인터 변수 이름은 접두어로 t_ps를 사용하고, 접두어 다음에는 대문자로 시작하세요.
+6706    LSIS_NamingStyle   [internal linkage] static unsigned short형 포인터 변수 이름은 접두어로 t_pus 또는 t_pw(w:WORD)를 사용하고, 접두어 다음에는 대문자로 시작하세요.
+*6707    LSIS_NamingStyle   [internal linkage] static int형 포인터 변수 이름은 접두어로 t_pi를 사용하고, 접두어 다음에는 대문자로 시작하세요.
+*6708    LSIS_NamingStyle   [internal linkage] static unsigned int형 포인터 변수 이름은 접두어로 t_pui를 사용하고, 접두어 다음에는 대문자로 시작하세요.
+6711    LSIS_NamingStyle   [internal linkage] static long형 포인터 변수 이름은 접두어로 t_pl를 사용하고, 접두어 다음에는 대문자로 시작하세요.
+6712    LSIS_NamingStyle   [internal linkage] static unsigned long형 포인터 변수 이름은 접두어로 t_pul 또는 t_pdw(dw:DWORD)를 사용하고, 접두어 다음에는 대문자로 시작하세요.
+6713    LSIS_NamingStyle   [internal linkage] static long long형 포인터 변수 이름은 접두어로 t_pll를 사용하고, 접두어 다음에는 대문자로 시작하세요.
+6714    LSIS_NamingStyle   [internal linkage] static unsigned long long형 포인터 변수 이름은 접두어로 t_pull를 사용하고, 접두어 다음에는 대문자로 시작하세요.
+6715    LSIS_NamingStyle   [internal linkage] static float형 포인터 변수 이름은 접두어로 t_pf를 사용하고, 접두어 다음에는 대문자로 시작하세요.
+6716    LSIS_NamingStyle   [internal linkage] static double형 포인터 변수 이름은 접두어로 t_pd를 사용하고, 접두어 다음에는 대문자로 시작하세요.
+6717    LSIS_NamingStyle   [internal linkage] static 열거형(Enumeration) 포인터 변수 이름은 접두어로 t_pe를 사용하고, 접두어 다음에는 대문자로 시작하세요.
+6718    LSIS_NamingStyle   [internal linkage] static 구조체(structure) 포인터 변수 이름은 접두어로 t_pst를 사용하고, 접두어 다음에는 대문자로 시작하세요.
+6719    LSIS_NamingStyle   [internal linkage] static 유니온(union) 포인터 변수 이름은 접두어로 t_pu를 사용하고, 접두어 다음에는 대문자로 시작하세요.
+
+* File Scope + External Linkage + Static Storage: 배열 변수
+6751    LSIS_NamingStyle   [internal linkage] static signed char형 배열 변수 이름은 접두어로 t_ac를 사용하고, 접두어 다음에는 대문자로 시작하세요.
+6752    LSIS_NamingStyle   [internal linkage] static char형 배열 변수 이름은 접두어로 t_ac를 사용하고, 접두어 다음에는 대문자로 시작하세요.
+6753    LSIS_NamingStyle   [internal linkage] static unsigned chgar형 배열 변수 이름은 접두어로 t_auc 또는 t_ab(b:byte) 또는 t_abl을 사용하고, 접두어 다음에는 대문자로 시작하세요.
+6755    LSIS_NamingStyle   [internal linkage] static short형 배열 변수 이름은 접두어로 t_as를 사용하고, 접두어 다음에는 대문자로 시작하세요.
+6756    LSIS_NamingStyle   [internal linkage] static unsigned short형 배열 변수 이름은 접두어로 t_aus 또는 t_aw(w:WORD)를 사용하고, 접두어 다음에는 대문자로 시작하세요.
+*6757    LSIS_NamingStyle   [internal linkage] static int형 배열 변수 이름은 접두어로 t_ai를 사용하고, 접두어 다음에는 대문자로 시작하세요.
+*6758    LSIS_NamingStyle   [internal linkage] static unsigned int형 배열 변수 이름은 접두어로 t_aui를 사용하고, 접두어 다음에는 대문자로 시작하세요.
+6761    LSIS_NamingStyle   [internal linkage] static long형 배열 변수 이름은 접두어로 t_asl를 사용하고, 접두어 다음에는 대문자로 시작하세요.
+6762    LSIS_NamingStyle   [internal linkage] static unsigned long형 배열 변수 이름은 접두어로 t_aul 또는 t_adw(dw:DWORD)를 사용하고, 접두어 다음에는 대문자로 시작하세요.
+6763    LSIS_NamingStyle   [internal linkage] static long long형 배열 변수 이름은 접두어로 t_all를 사용하고, 접두어 다음에는 대문자로 시작하세요.
+6764    LSIS_NamingStyle   [internal linkage] static unsigned long long형 배열 변수 이름은 접두어로 t_aull를 사용하고, 접두어 다음에는 대문자로 시작하세요.
+6765    LSIS_NamingStyle   [internal linkage] static flot_at형 배열 변수 이름은 접두어로 t_af를 사용하고, 접두어 다음에는 대문자로 시작하세요.
+6766    LSIS_NamingStyle   [internal linkage] static double형 배열 변수 이름은 접두어로 t_ad를 사용하고, 접두어 다음에는 대문자로 시작하세요.
+6767    LSIS_NamingStyle   [internal linkage] static 열거형(Enumeration) 배열 변수 이름은 접두어로 t_ae를 사용하고, 접두어 다음에는 대문자로 시작하세요.
+6768    LSIS_NamingStyle   [internal linkage] static 구조체(structure) 배열 변수 이름은 접두어로 t_ast를 사용하고, 접두어 다음에는 대문자로 시작하세요.
+6769    LSIS_NamingStyle   [internal linkage] static 유니온(union) 배열 변수 이름은 접두어로 t_au를 사용하고, 접두어 다음에는 대문자로 시작하세요.
+
+7000	LSIS_NamingStyle	integer 형을 사용하면 안됩니다.

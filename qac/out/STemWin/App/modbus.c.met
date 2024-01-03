@@ -1,0 +1,2345 @@
+<DEFINE> EXTERN C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 2 N DF OM - - - O
+<RDEF> I Includes
+<R>I C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c C:/CodeInspection/DisplayUnit/embOS_CortexM_IAR_V6_Src_V438/Start/Inc/RTOS.h 3
+<R>I C:/CodeInspection/DisplayUnit/embOS_CortexM_IAR_V6_Src_V438/Start/Inc/RTOS.h C:/PRQA/QAC-8.1.2-R/include/ansi/string.h 65
+<R>I C:/CodeInspection/DisplayUnit/embOS_CortexM_IAR_V6_Src_V438/Start/Inc/RTOS.h C:/CodeInspection/DisplayUnit/qac/lib/intrinsics.h 66
+<R>I C:/CodeInspection/DisplayUnit/qac/lib/intrinsics.h C:/CodeInspection/DisplayUnit/qac/lib/yvals.h 14
+<R>I C:/CodeInspection/DisplayUnit/qac/lib/yvals.h C:/CodeInspection/DisplayUnit/qac/lib/DLib_Defaults.h 42
+<R>I C:/CodeInspection/DisplayUnit/qac/lib/DLib_Defaults.h C:/CodeInspection/DisplayUnit/qac/lib/DLib_Product.h 50
+<R>I C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c C:/PRQA/QAC-8.1.2-R/include/ansi/string.h 4
+<R>I C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h 5
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h 46
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Inc/main.h 43
+<R>I C:/CodeInspection/DisplayUnit/Inc/main.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI.h 58
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_ConfDefaults.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_ConfDefaults.h C:/CodeInspection/DisplayUnit/STemWin/Target/GUIConf.h 60
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_Type.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_Type.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/LCD.h 60
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/LCD.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_ConfDefaults.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/LCD.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/Global.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_Type.h C:/CodeInspection/DisplayUnit/STemWin/Target/GUIConf.h 61
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_Version.h 58
+<R>I C:/CodeInspection/DisplayUnit/Inc/main.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h 59
+<R>I C:/CodeInspection/DisplayUnit/Inc/main.h C:/PRQA/QAC-8.1.2-R/include/ansi/time.h 60
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h 244
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h 46
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h 149
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cm4.h 183
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cm4.h C:/CodeInspection/DisplayUnit/qac/lib/stdint.h 44
+<R>I C:/CodeInspection/DisplayUnit/qac/lib/stdint.h C:/CodeInspection/DisplayUnit/qac/lib/ycheck.h 10
+<R>I C:/CodeInspection/DisplayUnit/qac/lib/stdint.h C:/CodeInspection/DisplayUnit/qac/lib/yvals.h 11
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cm4.h C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cmInstr.h 210
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cmInstr.h C:/CodeInspection/DisplayUnit/qac/lib/cmsis_iar.h 65
+<R>I C:/CodeInspection/DisplayUnit/qac/lib/cmsis_iar.h C:/CodeInspection/DisplayUnit/qac/lib/intrinsics.h 22
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cm4.h C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cmFunc.h 211
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cmFunc.h C:/CodeInspection/DisplayUnit/qac/lib/cmsis_iar.h 65
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cm4.h C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cmSimd.h 212
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cmSimd.h C:/CodeInspection/DisplayUnit/qac/lib/cmsis_iar.h 69
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h 184
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h C:/CodeInspection/DisplayUnit/qac/lib/stdint.h 185
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h 250
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h 47
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h C:/PRQA/QAC-8.1.2-R/include/ansi/stdio.h 48
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h 49
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h 248
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h 230
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h 252
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h 656
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h 256
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_crc.h 268
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_crc.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h 292
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h 313
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h 314
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_sram.h 296
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_sram.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_fsmc.h 47
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_fsmc.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h 320
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c_ex.h 473
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_iwdg.h 328
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_iwdg.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h 336
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h 290
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc.h 344
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc_ex.h 634
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc_ex.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h 360
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h 364
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h 1289
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h 368
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h 388
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h 49
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 49
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h 121
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 49
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_hcd.h 392
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_hcd.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h 49
+<R>I C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c C:/CodeInspection/DisplayUnit/STemWin/App/modbus.h 6
+<R>I C:/CodeInspection/DisplayUnit/STemWin/App/modbus.h C:/CodeInspection/DisplayUnit/embOS_CortexM_IAR_V6_Src_V438/Start/Inc/RTOS.H 4
+<R>I C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c C:/CodeInspection/DisplayUnit/STemWin/App/GuiData.h 7
+<R>I C:/CodeInspection/DisplayUnit/STemWin/App/GuiData.h C:/PRQA/QAC-8.1.2-R/include/ansi/stdlib.h 4
+<R>I C:/CodeInspection/DisplayUnit/STemWin/App/GuiData.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h 5
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_ConfDefaults.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_Type.h 58
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM_GUI.h 59
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI.h 60
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/BUTTON.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/BUTTON.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/BUTTON.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG_Intern.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG_Intern.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/BUTTON.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WIDGET.h 58
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WIDGET.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM_Intern.h 60
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM_Intern.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM_Intern.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_Private.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_Private.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_Private.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/LCD_Protected.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/LCD_Protected.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/LCD.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_Private.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_Debug.h 58
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_Debug.h C:/PRQA/QAC-8.1.2-R/include/ansi/stddef.h 59
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_Debug.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI.h 61
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_Private.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM_GUI.h 60
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WIDGET.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/SCROLLBAR.h 96
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/SCROLLBAR.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/SCROLLBAR.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG_Intern.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/SCROLLBAR.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WIDGET.h 58
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/CALENDAR.h 58
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/CALENDAR.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/CHECKBOX.h 59
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/CHECKBOX.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/CHECKBOX.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG_Intern.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/CHECKBOX.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WIDGET.h 58
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/CHOOSECOLOR.h 60
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/CHOOSECOLOR.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/CHOOSEFILE.h 61
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/CHOOSEFILE.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DROPDOWN.h 62
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DROPDOWN.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DROPDOWN.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG_Intern.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DROPDOWN.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/LISTBOX.h 58
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/LISTBOX.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/LISTBOX.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WIDGET.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/LISTBOX.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG_Intern.h 58
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/EDIT.h 63
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/EDIT.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/EDIT.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG_Intern.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/FRAMEWIN.h 64
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/FRAMEWIN.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/FRAMEWIN.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WIDGET.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/FRAMEWIN.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG_Intern.h 59
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GRAPH.h 65
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GRAPH.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GRAPH.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG_Intern.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GRAPH.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WIDGET.h 58
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/HEADER.h 66
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/HEADER.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/HEADER.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG_Intern.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/HEADER.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WIDGET.h 58
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/ICONVIEW.h 67
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/ICONVIEW.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/ICONVIEW.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG_Intern.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/ICONVIEW.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WIDGET.h 58
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/IMAGE.h 68
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/IMAGE.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/IMAGE.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG_Intern.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/IMAGE.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WIDGET.h 58
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/LISTBOX.h 69
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/LISTVIEW.h 70
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/LISTVIEW.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/LISTVIEW.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG_Intern.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/LISTVIEW.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/ICONVIEW.h 58
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/LISTVIEW.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/HEADER.h 59
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/LISTWHEEL.h 71
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/LISTWHEEL.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/LISTWHEEL.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG_Intern.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/LISTWHEEL.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WIDGET.h 58
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/MENU.h 72
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/MENU.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/MENU.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WIDGET.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/MENU.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG_Intern.h 58
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/MULTIEDIT.h 73
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/MULTIEDIT.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/MULTIEDIT.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG_Intern.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/MULTIPAGE.h 74
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/MULTIPAGE.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/MULTIPAGE.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/PROGBAR.h 75
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/PROGBAR.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/PROGBAR.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG_Intern.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/PROGBAR.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WIDGET.h 58
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/RADIO.h 76
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/RADIO.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/RADIO.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG_Intern.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/RADIO.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WIDGET.h 58
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/SCROLLBAR.h 77
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/SLIDER.h 78
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/SLIDER.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/SLIDER.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG_Intern.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/SLIDER.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WIDGET.h 58
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/SPINBOX.h 79
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/SPINBOX.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/SPINBOX.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG_Intern.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/SPINBOX.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WIDGET.h 58
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/SPINBOX.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_Debug.h 59
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/SPINBOX.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/EDIT.h 60
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/SWIPELIST.h 80
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/SWIPELIST.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 37
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/SWIPELIST.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG_Intern.h 38
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/SWIPELIST.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WIDGET.h 39
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/SWIPELIST.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_Debug.h 40
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/TEXT.h 81
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/TEXT.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/TEXT.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG_Intern.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/TEXT.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WIDGET.h 58
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/TEXT.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_Debug.h 59
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/TREEVIEW.h 82
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/TREEVIEW.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/TREEVIEW.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG_Intern.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/TREEVIEW.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WIDGET.h 58
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/KNOB.h 83
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/KNOB.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WM.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/KNOB.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/DIALOG_Intern.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/KNOB.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/WIDGET.h 58
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/KNOB.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_Debug.h 59
+<R>I C:/CodeInspection/DisplayUnit/STemWin/App/GuiData.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI.h 6
+<R>I C:/CodeInspection/DisplayUnit/STemWin/App/GuiData.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h 7
+<R>I C:/CodeInspection/DisplayUnit/STemWin/App/GuiData.h C:/CodeInspection/DisplayUnit/STemWin/App/modbus.h 8
+<DEFINE> puchMsg C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 20 N DC OV P N p=uc R
+<DEFINE> usDataLen C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 20 N DC OV P N =us R
+<DEFINE> CRC16 C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 20 N DC OF F I (us,p=uc,=us) -
+<DEFINE> ReadAll C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 21 N DC OF F I (.,.) -
+<DEFINE> ModbusRecvCheck C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 22 N DC OF F I (uc,.) -
+<DEFINE> puchMsg C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 33 N DC OV B N p=uc R
+<DEFINE> usDataLen C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 33 N DC OV B N =us R
+<DEFINE> CRC16 C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 33 N DR OF F I (us,p=uc,=us) -
+<DEFINE> CRC16 C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 33 N DF OF F I (us,p=uc,=us) -
+<DEFINE> uchCRCHi C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 35 N DC OV B N uc -
+<DEFINE> uchCRCHi C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 35 N DF OV B N uc -
+<DEFINE> uchCRCLo C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 36 N DC OV B N uc -
+<DEFINE> uchCRCLo C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 36 N DF OV B N uc -
+<DEFINE> uIndex C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 37 N DC OV B N us -
+<DEFINE> uIndex C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 37 N DF OV B N us -
+<DEFINE> i C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 38 N DC OV B N uc -
+<DEFINE> i C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 38 N DF OV B N uc -
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 38 21 N ON ni B O
+<RDEF> X Refers-to
+<R>X CRC16 auchCRCHi 41 R
+<R>X CRC16 auchCRCLo 42 R
+<DEFINE> ret C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 44 N DC OV B N us -
+<DEFINE> ret C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 44 N DF OV B N us -
+<CTLG> CRC16 1
+<CTLG> 1 2
+<CTLG> 2 3
+<CTLG> 2 5
+<CTLG> 3 4
+<CTLG> 4 2
+<CTLG> 5 6
+<CTLG> 6 8
+<CTLGN> 34 38 38 38 38 46 46 46 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c
+<S>STNAM  CRC16
+<S>STCYC  2
+<S>STMCC  0 (2:2)
+<S>STMIF  1
+<S>STSUB  0
+<S>STAKI  2
+<S>STLIN  12
+<S>STXLN  8
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  5
+<S>STPTH  2
+<S>STPDN  0.25   
+<S>STPBG  0
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  1
+<S>STAV1  7
+<S>STAV2  8
+<S>STAV3  13
+<S>STST1  11
+<S>STST2  10
+<S>STST3  6
+<S>STPAR  2
+<S>STCAL  0
+<S>STFN1  46
+<S>STFN2  34
+
+<DEFINE> ReadAll C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 49 N DR OF F I (.,.) -
+<DEFINE> ReadAll C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 49 N DF OF F I (.,.) -
+<R>X ReadAll g_bRecvVariable 51 W
+<DEFINE> buf C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 52 N DC OV B N uc -
+<DEFINE> buf C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 52 N DF OV B N uc -
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 53 11 N DN ni B X
+<DEFINE> stat C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 55 N DC OV B N {eHAL_StatusTypeDef} -
+<DEFINE> stat C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 55 N DF OV B N {eHAL_StatusTypeDef} -
+<RDEF> C Calls
+<R>C ReadAll HAL_UART_Receive 56
+<R>X ReadAll HAL_UART_Receive 56 R
+<R>X ReadAll huart2 56 R
+<R>X ReadAll huart2 56 W
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 56 48 N DN ni B X
+<R>C ReadAll printf 57
+<R>X ReadAll printf 57 R
+<LIT> "[%02X %02X]" - - C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 57 22 N SN [12,_c] B X
+<CTLG> ReadAll 1
+<CTLG> 1 2
+<CTLG> 2 3
+<CTLG> 2 8
+<CTLG> 3 4
+<CTLG> 4 5
+<CTLG> 4 7
+<CTLG> 5 8
+<CTLG> 7 2
+<CTLG> 8 10
+<CTLGN> 50 53 53 58 58 60 58 53 63 63 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c
+<S>STNAM  ReadAll
+<S>STCYC  3
+<S>STMCC  0 (3:3)
+<S>STMIF  2
+<S>STSUB  2
+<S>STAKI  5
+<S>STLIN  12
+<S>STXLN  6
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  1
+<S>STKDN  0.17   
+<S>STUNV  0
+<S>STLCT  2
+<S>STPTH  3
+<S>STPDN  0.50   
+<S>STPBG  0
+<S>STLOP  0
+<S>STM07  3
+<S>STM19  0
+<S>STAV1  5
+<S>STAV2  7
+<S>STAV3  9
+<S>STST1  10
+<S>STST2  8
+<S>STST3  6
+<S>STPAR  0
+<S>STCAL  2
+<S>STFN1  39
+<S>STFN2  19
+
+<EXTD> ModbusSendFrame C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 65
+<DEFINE> address C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 65 N DC OV B N =uc R
+<DEFINE> functionCode C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 65 N DC OV B N =uc R
+<DEFINE> start C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 65 N DC OV B N =us R
+<DEFINE> no C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 65 N DC OV B N =us R
+<DEFINE> ModbusSendFrame C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 65 N DR OF F X (.,=uc,=uc,=us,=us) -
+<DEFINE> ModbusSendFrame C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 65 N DF OF F X (.,=uc,=uc,=us,=us) -
+<R>X ModbusSendFrame g_modbusRxIndex 67 W
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 67 23 N ON ni B X
+<R>X ModbusSendFrame g_modbusRxDone 68 W
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 68 22 N ON ni B X
+<R>X ModbusSendFrame g_modbusRxError 69 W
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 69 23 N ON ni B X
+<R>X ModbusSendFrame g_modbusAddress 71 W
+<R>X ModbusSendFrame g_functionCode 72 W
+<R>X ModbusSendFrame g_startAddr 73 W
+<R>X ModbusSendFrame g_waitReceiveLen 76 W
+<R>X ModbusSendFrame g_waitReceiveLen 79 R
+<R>X ModbusSendFrame g_waitReceiveLen 79 W
+<R>X ModbusSendFrame g_waitReceiveLen 85 W
+<R>X ModbusSendFrame g_waitReceiveLen 88 R
+<R>X ModbusSendFrame g_wModbusWaitLen 88 W
+<DEFINE> frame C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 91 N DC OV B N [8,uc] -
+<DEFINE> frame C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 91 N DF OV B N [8,uc] -
+<DEFINE> startAddr C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 92 N DC OV B N us -
+<DEFINE> startAddr C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 92 N DF OV B N us -
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 92 34 N DN ni B O
+<DEFINE> crc C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 100 N DC OV B N us -
+<DEFINE> crc C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 100 N DF OV B N us -
+<R>C ModbusSendFrame CRC16 100
+<R>C ModbusSendFrame printf 105
+<R>X ModbusSendFrame printf 105 R
+<LIT> "Send Frame!!!\n" - - C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 105 18 N SN [15,_c] B X
+<DEFINE> i C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 106 N DC OV B N ni -
+<DEFINE> i C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 106 N DF OV B N ni -
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 106 17 N ON ni B O
+<R>C ModbusSendFrame printf 108
+<R>X ModbusSendFrame printf 108 R
+<LIT> "%02X " - - C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 108 22 N SN [6,_c] B X
+<R>C ModbusSendFrame printf 110
+<R>X ModbusSendFrame printf 110 R
+<LIT> "\n" - - C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 110 18 N SN [2,_c] B X
+<R>X ModbusSendFrame g_subFunction 112 W
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 112 21 N ON ni B X
+<R>C ModbusSendFrame ReadAll 114
+<R>C ModbusSendFrame HAL_UART_Transmit 116
+<R>X ModbusSendFrame HAL_UART_Transmit 116 R
+<R>X ModbusSendFrame huart2 116 R
+<R>X ModbusSendFrame huart2 116 W
+<R>X ModbusSendFrame g_AddressRecv 117 W
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 117 21 N ON ni B X
+<R>X ModbusSendFrame sendFlag 118 W
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 118 16 N DN ni B X
+<CTLG> ModbusSendFrame 1
+<CTLG> 1 2
+<CTLG> 2 3
+<CTLG> 2 7
+<CTLG> 3 4
+<CTLG> 4 5
+<CTLG> 4 6
+<CTLG> 5 6
+<CTLG> 6 11
+<CTLG> 7 8
+<CTLG> 7 9
+<CTLG> 8 10
+<CTLG> 9 10
+<CTLG> 10 11
+<CTLG> 11 12
+<CTLG> 12 13
+<CTLG> 13 14
+<CTLG> 13 16
+<CTLG> 14 15
+<CTLG> 15 13
+<CTLG> 16 17
+<CTLG> 17 19
+<CTLGN> 66 74 74 77 77 77 74 83 83 87 82 106 106 106 106 106 122 122 122 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c
+<S>STNAM  ModbusSendFrame
+<S>STCYC  5
+<S>STMCC  2 (5:7)
+<S>STMIF  2
+<S>STSUB  6
+<S>STAKI  11
+<S>STLIN  55
+<S>STXLN  34
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  4
+<S>STPTH  8
+<S>STPDN  0.24   
+<S>STPBG  1
+<S>STLOP  2
+<S>STM07  1
+<S>STM19  0
+<S>STAV1  7
+<S>STAV2  8
+<S>STAV3  9
+<S>STST1  38
+<S>STST2  33
+<S>STST3  30
+<S>STPAR  4
+<S>STCAL  4
+<S>STFN1  183
+<S>STFN2  105
+
+<EXTD> ModbusSendFrameReadTime C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 124
+<DEFINE> address C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 124 N DC OV B N =uc R
+<DEFINE> ModbusSendFrameReadTime C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 124 N DR OF F X (.,=uc) -
+<DEFINE> ModbusSendFrameReadTime C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 124 N DF OF F X (.,=uc) -
+<R>X ModbusSendFrameReadTime g_modbusRxIndex 126 W
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 126 23 N ON ni B X
+<R>X ModbusSendFrameReadTime g_modbusRxDone 127 W
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 127 22 N ON ni B X
+<R>X ModbusSendFrameReadTime g_modbusRxError 128 W
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 128 23 N ON ni B X
+<R>X ModbusSendFrameReadTime g_modbusAddress 130 W
+<R>X ModbusSendFrameReadTime g_functionCode 131 W
+<R>X ModbusSendFrameReadTime g_subFunction 132 W
+<R>X ModbusSendFrameReadTime g_wModbusWaitLen 133 W
+<DEFINE> frame C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 135 N DC OV B N [8,uc] -
+<DEFINE> frame C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 135 N DF OV B N [8,uc] -
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 139 22 N ON ni B X
+<DEFINE> crc C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 141 N DC OV B N us -
+<DEFINE> crc C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 141 N DF OV B N us -
+<R>C ModbusSendFrameReadTime CRC16 141
+<R>C ModbusSendFrameReadTime printf 146
+<R>X ModbusSendFrameReadTime printf 146 R
+<LIT> "Send Frame ReadTime!!!\n" - - C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 146 18 N SN [24,_c] B X
+<DEFINE> i C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 147 N DC OV B N ni -
+<DEFINE> i C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 147 N DF OV B N ni -
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 147 17 N ON ni B O
+<R>C ModbusSendFrameReadTime printf 149
+<R>X ModbusSendFrameReadTime printf 149 R
+<LIT> "%02X " - - C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 149 22 N SN [6,_c] B X
+<R>C ModbusSendFrameReadTime printf 151
+<R>X ModbusSendFrameReadTime printf 151 R
+<LIT> "\n" - - C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 151 18 N SN [2,_c] B X
+<R>C ModbusSendFrameReadTime ReadAll 154
+<R>C ModbusSendFrameReadTime HAL_UART_Transmit 155
+<R>X ModbusSendFrameReadTime HAL_UART_Transmit 155 R
+<R>X ModbusSendFrameReadTime huart2 155 R
+<R>X ModbusSendFrameReadTime huart2 155 W
+<R>X ModbusSendFrameReadTime g_AddressRecv 156 W
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 156 21 N ON ni B X
+<R>X ModbusSendFrameReadTime sendFlag 157 W
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 157 16 N DN ni B X
+<CTLG> ModbusSendFrameReadTime 1
+<CTLG> 1 2
+<CTLG> 2 3
+<CTLG> 3 4
+<CTLG> 3 6
+<CTLG> 4 5
+<CTLG> 5 3
+<CTLG> 6 7
+<CTLG> 7 9
+<CTLGN> 125 147 147 147 147 147 160 160 160 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c
+<S>STNAM  ModbusSendFrameReadTime
+<S>STCYC  2
+<S>STMCC  0 (2:2)
+<S>STMIF  1
+<S>STSUB  6
+<S>STAKI  8
+<S>STLIN  34
+<S>STXLN  22
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  3
+<S>STPTH  2
+<S>STPDN  0.09   
+<S>STPBG  0
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  0
+<S>STAV1  7
+<S>STAV2  7
+<S>STAV3  8
+<S>STST1  24
+<S>STST2  23
+<S>STST3  21
+<S>STPAR  1
+<S>STCAL  4
+<S>STFN1  107
+<S>STFN2  67
+
+<EXTD> ModbusSendFrameDeviceIdentofocation C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 162
+<DEFINE> address C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 162 N DC OV B N =uc R
+<DEFINE> ModbusSendFrameDeviceIdentofocation C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 162 N DR OF F X (.,=uc) -
+<DEFINE> ModbusSendFrameDeviceIdentofocation C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 162 N DF OF F X (.,=uc) -
+<R>X ModbusSendFrameDeviceIdentofocation g_modbusRxIndex 164 W
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 164 23 N ON ni B X
+<R>X ModbusSendFrameDeviceIdentofocation g_modbusRxDone 165 W
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 165 22 N ON ni B X
+<R>X ModbusSendFrameDeviceIdentofocation g_modbusRxError 166 W
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 166 23 N ON ni B X
+<R>X ModbusSendFrameDeviceIdentofocation g_modbusAddress 168 W
+<R>X ModbusSendFrameDeviceIdentofocation g_functionCode 169 W
+<R>X ModbusSendFrameDeviceIdentofocation g_subFunction 170 W
+<R>X ModbusSendFrameDeviceIdentofocation gDeviceIndex 172 R
+<R>X ModbusSendFrameDeviceIdentofocation ConnectSetting 172 R
+<R>X ModbusSendFrameDeviceIdentofocation g_wModbusWaitLen 174 W
+<R>X ModbusSendFrameDeviceIdentofocation g_wModbusWaitLen 178 W
+<DEFINE> frame C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 184 N DC OV B N [8,uc] -
+<DEFINE> frame C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 184 N DF OV B N [8,uc] -
+<DEFINE> crc C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 191 N DC OV B N us -
+<DEFINE> crc C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 191 N DF OV B N us -
+<R>C ModbusSendFrameDeviceIdentofocation CRC16 191
+<R>C ModbusSendFrameDeviceIdentofocation printf 196
+<R>X ModbusSendFrameDeviceIdentofocation printf 196 R
+<LIT> "Send Frame DeviceIdentofocation!!!\n" - - C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 196 18 N SN [36,_c] B X
+<DEFINE> i C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 197 N DC OV B N ni -
+<DEFINE> i C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 197 N DF OV B N ni -
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 197 17 N ON ni B O
+<R>C ModbusSendFrameDeviceIdentofocation printf 199
+<R>X ModbusSendFrameDeviceIdentofocation printf 199 R
+<LIT> "%02X " - - C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 199 22 N SN [6,_c] B X
+<R>C ModbusSendFrameDeviceIdentofocation printf 201
+<R>X ModbusSendFrameDeviceIdentofocation printf 201 R
+<LIT> "\n" - - C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 201 18 N SN [2,_c] B X
+<R>C ModbusSendFrameDeviceIdentofocation ReadAll 204
+<R>C ModbusSendFrameDeviceIdentofocation HAL_UART_Transmit 205
+<R>X ModbusSendFrameDeviceIdentofocation HAL_UART_Transmit 205 R
+<R>X ModbusSendFrameDeviceIdentofocation huart2 205 R
+<R>X ModbusSendFrameDeviceIdentofocation huart2 205 W
+<R>X ModbusSendFrameDeviceIdentofocation g_AddressRecv 206 W
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 206 21 N ON ni B X
+<R>X ModbusSendFrameDeviceIdentofocation sendFlag 207 W
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 207 16 N DN ni B X
+<CTLG> ModbusSendFrameDeviceIdentofocation 1
+<CTLG> 1 2
+<CTLG> 2 3
+<CTLG> 2 4
+<CTLG> 3 5
+<CTLG> 4 5
+<CTLG> 5 6
+<CTLG> 6 7
+<CTLG> 7 8
+<CTLG> 7 10
+<CTLG> 8 9
+<CTLG> 9 7
+<CTLG> 10 11
+<CTLG> 11 13
+<CTLGN> 163 172 172 172 176 197 197 197 197 197 210 210 210 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c
+<S>STNAM  ModbusSendFrameDeviceIdentofocation
+<S>STCYC  3
+<S>STMCC  0 (3:3)
+<S>STMIF  1
+<S>STSUB  6
+<S>STAKI  9
+<S>STLIN  46
+<S>STXLN  26
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  3
+<S>STPTH  4
+<S>STPDN  0.15   
+<S>STPBG  1
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  0
+<S>STAV1  6
+<S>STAV2  7
+<S>STAV3  8
+<S>STST1  31
+<S>STST2  26
+<S>STST3  24
+<S>STPAR  1
+<S>STCAL  4
+<S>STFN1  125
+<S>STFN2  76
+
+<EXTD> ModbusSendFrameDeviceIdentofocation3 C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 212
+<DEFINE> address C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 212 N DC OV B N =uc R
+<DEFINE> deviceID C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 212 N DC OV B N uc R
+<DEFINE> objectID C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 212 N DC OV B N uc R
+<DEFINE> ModbusSendFrameDeviceIdentofocation3 C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 212 N DR OF F X (.,=uc,uc,uc) -
+<DEFINE> ModbusSendFrameDeviceIdentofocation3 C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 212 N DF OF F X (.,=uc,uc,uc) -
+<R>X ModbusSendFrameDeviceIdentofocation3 g_modbusRxIndex 214 W
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 214 23 N ON ni B X
+<R>X ModbusSendFrameDeviceIdentofocation3 g_modbusRxDone 215 W
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 215 22 N ON ni B X
+<R>X ModbusSendFrameDeviceIdentofocation3 g_modbusRxError 216 W
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 216 23 N ON ni B X
+<R>X ModbusSendFrameDeviceIdentofocation3 g_modbusAddress 218 W
+<R>X ModbusSendFrameDeviceIdentofocation3 g_functionCode 219 W
+<R>X ModbusSendFrameDeviceIdentofocation3 g_subFunction 220 W
+<R>X ModbusSendFrameDeviceIdentofocation3 g_wModbusWaitLen 222 W
+<DEFINE> frame C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 227 N DC OV B N [8,uc] -
+<DEFINE> frame C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 227 N DF OV B N [8,uc] -
+<DEFINE> crc C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 234 N DC OV B N us -
+<DEFINE> crc C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 234 N DF OV B N us -
+<R>C ModbusSendFrameDeviceIdentofocation3 CRC16 234
+<R>C ModbusSendFrameDeviceIdentofocation3 printf 239
+<R>X ModbusSendFrameDeviceIdentofocation3 printf 239 R
+<LIT> "Send Frame DeviceIdentofocation3!!!\n" - - C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 239 18 N SN [37,_c] B X
+<DEFINE> i C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 240 N DC OV B N ni -
+<DEFINE> i C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 240 N DF OV B N ni -
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 240 17 N ON ni B O
+<R>C ModbusSendFrameDeviceIdentofocation3 printf 242
+<R>X ModbusSendFrameDeviceIdentofocation3 printf 242 R
+<LIT> "%02X " - - C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 242 22 N SN [6,_c] B X
+<R>C ModbusSendFrameDeviceIdentofocation3 printf 244
+<R>X ModbusSendFrameDeviceIdentofocation3 printf 244 R
+<LIT> "\n" - - C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 244 18 N SN [2,_c] B X
+<R>C ModbusSendFrameDeviceIdentofocation3 ReadAll 247
+<R>X ModbusSendFrameDeviceIdentofocation3 g_bRecvVariable 248 W
+<R>C ModbusSendFrameDeviceIdentofocation3 HAL_UART_Transmit 249
+<R>X ModbusSendFrameDeviceIdentofocation3 HAL_UART_Transmit 249 R
+<R>X ModbusSendFrameDeviceIdentofocation3 huart2 249 R
+<R>X ModbusSendFrameDeviceIdentofocation3 huart2 249 W
+<R>X ModbusSendFrameDeviceIdentofocation3 g_AddressRecv 250 W
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 250 21 N ON ni B X
+<R>X ModbusSendFrameDeviceIdentofocation3 sendFlag 251 W
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 251 16 N DN ni B X
+<CTLG> ModbusSendFrameDeviceIdentofocation3 1
+<CTLG> 1 2
+<CTLG> 2 3
+<CTLG> 3 4
+<CTLG> 3 6
+<CTLG> 4 5
+<CTLG> 5 3
+<CTLG> 6 7
+<CTLG> 7 9
+<CTLGN> 213 240 240 240 240 240 254 254 254 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c
+<S>STNAM  ModbusSendFrameDeviceIdentofocation3
+<S>STCYC  2
+<S>STMCC  0 (2:2)
+<S>STMIF  1
+<S>STSUB  6
+<S>STAKI  8
+<S>STLIN  40
+<S>STXLN  24
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  3
+<S>STPTH  2
+<S>STPDN  0.08   
+<S>STPBG  0
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  0
+<S>STAV1  7
+<S>STAV2  7
+<S>STAV3  8
+<S>STST1  26
+<S>STST2  25
+<S>STST3  23
+<S>STPAR  3
+<S>STCAL  4
+<S>STFN1  113
+<S>STFN2  72
+
+<EXTD> ModbusSendFrameEvent C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 257
+<DEFINE> address C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 257 N DC OV B N =uc R
+<DEFINE> fileNo C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 257 N DC OV B N =uc R
+<DEFINE> recordNumber C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 257 N DC OV B N =us R
+<DEFINE> ModbusSendFrameEvent C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 257 N DR OF F X (.,=uc,=uc,=us) -
+<DEFINE> ModbusSendFrameEvent C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 257 N DF OF F X (.,=uc,=uc,=us) -
+<R>X ModbusSendFrameEvent g_modbusRxIndex 259 W
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 259 23 N ON ni B X
+<R>X ModbusSendFrameEvent g_modbusRxDone 260 W
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 260 22 N ON ni B X
+<R>X ModbusSendFrameEvent g_modbusRxError 261 W
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 261 23 N ON ni B X
+<R>X ModbusSendFrameEvent g_modbusAddress 263 W
+<R>X ModbusSendFrameEvent g_functionCode 264 W
+<R>X ModbusSendFrameEvent g_subFunction 265 W
+<R>X ModbusSendFrameEvent g_wModbusWaitLen 266 W
+<R>X ModbusSendFrameEvent g_wModbusWaitLen 270 W
+<DEFINE> frame C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 272 N DC OV B N [20,uc] -
+<DEFINE> frame C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 272 N DF OV B N [20,uc] -
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 277 22 N ON ni B X
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 281 22 N ON ni B X
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 282 22 N DN ni B X
+<DEFINE> crc C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 284 N DC OV B N us -
+<DEFINE> crc C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 284 N DF OV B N us -
+<R>C ModbusSendFrameEvent CRC16 284
+<R>C ModbusSendFrameEvent printf 289
+<R>X ModbusSendFrameEvent printf 289 R
+<LIT> "Send Frame ModbusSendFrameEvent!!!\n" - - C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 289 18 N SN [36,_c] B X
+<DEFINE> i C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 290 N DC OV B N ni -
+<DEFINE> i C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 290 N DF OV B N ni -
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 290 17 N ON ni B O
+<R>C ModbusSendFrameEvent printf 292
+<R>X ModbusSendFrameEvent printf 292 R
+<LIT> "%02X " - - C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 292 22 N SN [6,_c] B X
+<R>C ModbusSendFrameEvent printf 294
+<R>X ModbusSendFrameEvent printf 294 R
+<LIT> "\n" - - C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 294 18 N SN [2,_c] B X
+<R>C ModbusSendFrameEvent ReadAll 296
+<R>C ModbusSendFrameEvent HAL_UART_Transmit 297
+<R>X ModbusSendFrameEvent HAL_UART_Transmit 297 R
+<R>X ModbusSendFrameEvent huart2 297 R
+<R>X ModbusSendFrameEvent huart2 297 W
+<R>X ModbusSendFrameEvent g_AddressRecv 298 W
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 298 21 N ON ni B X
+<R>X ModbusSendFrameEvent sendFlag 299 W
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 299 16 N DN ni B X
+<CTLG> ModbusSendFrameEvent 1
+<CTLG> 1 2
+<CTLG> 2 3
+<CTLG> 2 4
+<CTLG> 3 4
+<CTLG> 4 5
+<CTLG> 5 6
+<CTLG> 6 7
+<CTLG> 6 9
+<CTLG> 7 8
+<CTLG> 8 6
+<CTLG> 9 10
+<CTLG> 10 12
+<CTLGN> 258 268 268 268 290 290 290 290 290 302 302 302 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c
+<S>STNAM  ModbusSendFrameEvent
+<S>STCYC  3
+<S>STMCC  0 (3:3)
+<S>STMIF  1
+<S>STSUB  6
+<S>STAKI  9
+<S>STLIN  43
+<S>STXLN  31
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  3
+<S>STPTH  4
+<S>STPDN  0.13   
+<S>STPBG  1
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  0
+<S>STAV1  7
+<S>STAV2  7
+<S>STAV3  8
+<S>STST1  33
+<S>STST2  31
+<S>STST3  29
+<S>STPAR  3
+<S>STCAL  4
+<S>STFN1  149
+<S>STFN2  93
+
+<EXTD> ModbusSendFrameFromUsb C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 304
+<DEFINE> sendBuf C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 304 N DC OV B N puc R
+<DEFINE> length C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 304 N DC OV B N ui R
+<DEFINE> ModbusSendFrameFromUsb C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 304 N DR OF F X (.,puc,ui) -
+<DEFINE> ModbusSendFrameFromUsb C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 304 N DF OF F X (.,puc,ui) -
+<R>X ModbusSendFrameFromUsb g_modbusRxIndex 307 W
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 307 23 N ON ni B X
+<R>X ModbusSendFrameFromUsb g_modbusRxDone 308 W
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 308 22 N ON ni B X
+<R>X ModbusSendFrameFromUsb g_modbusRxError 309 W
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 309 23 N ON ni B X
+<R>X ModbusSendFrameFromUsb g_subFunction 311 W
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 311 21 N ON ni B X
+<R>C ModbusSendFrameFromUsb ReadAll 313
+<R>C ModbusSendFrameFromUsb HAL_UART_Transmit 314
+<R>X ModbusSendFrameFromUsb HAL_UART_Transmit 314 R
+<R>X ModbusSendFrameFromUsb huart2 314 R
+<R>X ModbusSendFrameFromUsb huart2 314 W
+<R>X ModbusSendFrameFromUsb g_AddressRecv 315 W
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 315 21 N ON ni B X
+<CTLG> ModbusSendFrameFromUsb 1
+<CTLG> 1 2
+<CTLG> 2 4
+<CTLGN> 305 317 317 317 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c
+<S>STNAM  ModbusSendFrameFromUsb
+<S>STCYC  1
+<S>STMCC  0 (1:1)
+<S>STMIF  0
+<S>STSUB  2
+<S>STAKI  3
+<S>STLIN  11
+<S>STXLN  7
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  0
+<S>STPTH  1
+<S>STPDN  0.14   
+<S>STPBG  0
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  0
+<S>STAV1  6
+<S>STAV2  6
+<S>STAV3  6
+<S>STST1  7
+<S>STST2  7
+<S>STST3  7
+<S>STPAR  2
+<S>STCAL  2
+<S>STFN1  27
+<S>STFN2  17
+
+<EXTD> ModbusCRCCheck C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 319
+<DEFINE> ModbusCRCCheck C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 319 N DR OF F X (uc,.) -
+<DEFINE> ModbusCRCCheck C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 319 N DF OF F X (uc,.) -
+<R>C ModbusCRCCheck printf 321
+<R>X ModbusCRCCheck printf 321 R
+<LIT> "Recv Frame!!!\n" - - C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 321 18 N SN [15,_c] B X
+<DEFINE> i C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 322 N DC OV B N ni -
+<DEFINE> i C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 322 N DF OV B N ni -
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 322 17 N ON ni B O
+<R>X ModbusCRCCheck g_modbusRxIndex 322 R
+<R>C ModbusCRCCheck printf 324
+<R>X ModbusCRCCheck printf 324 R
+<R>X ModbusCRCCheck g_modbusRxBuff 324 R
+<LIT> "%02X " - - C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 324 22 N SN [6,_c] B X
+<R>C ModbusCRCCheck printf 326
+<R>X ModbusCRCCheck printf 326 R
+<LIT> "\n" - - C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 326 18 N SN [2,_c] B X
+<DEFINE> ret C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 329 N DC OV B N uc -
+<DEFINE> ret C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 329 N DF OV B N uc -
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 333 23 N DN ni B X
+<R>X ModbusCRCCheck g_modbusRxBuff 333 R
+<R>C ModbusCRCCheck printf 335
+<R>X ModbusCRCCheck printf 335 R
+<R>X ModbusCRCCheck g_modbusRxBuff 335 R
+<LIT> "-----------------\nModbus Error[%02x]\n" - - C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 335 22 N SN [38,_c] B X
+<DEFINE> p C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 337 N DC OV B N us -
+<DEFINE> p C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 337 N DF OV B N us -
+<R>X ModbusCRCCheck g_modbusRxIndex 337 R
+<R>X ModbusCRCCheck g_modbusRxBuff 337 R
+<R>X ModbusCRCCheck g_modbusRxIndex 337 R
+<R>X ModbusCRCCheck g_modbusRxBuff 337 R
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 337 124 N DN ni B O
+<DEFINE> crc C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 338 N DC OV B N us -
+<DEFINE> crc C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 338 N DF OV B N us -
+<R>C ModbusCRCCheck CRC16 338
+<R>X ModbusCRCCheck g_modbusRxBuff 338 R
+<R>X ModbusCRCCheck g_modbusRxIndex 338 R
+<R>C ModbusCRCCheck printf 342
+<R>X ModbusCRCCheck printf 342 R
+<LIT> "-----------------\nModbus CRC Error[%04x, %04x]\n" - - C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 342 22 N SN [48,_c] B X
+<CTLG> ModbusCRCCheck 1
+<CTLG> 1 2
+<CTLG> 2 3
+<CTLG> 3 4
+<CTLG> 3 6
+<CTLG> 4 5
+<CTLG> 5 3
+<CTLG> 6 7
+<CTLG> 7 8
+<CTLG> 7 9
+<CTLG> 8 9
+<CTLG> 9 10
+<CTLG> 9 11
+<CTLG> 10 11
+<CTLG> 11 13
+<CTLGN> 320 322 322 322 322 322 333 333 333 340 340 345 345 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c
+<S>STNAM  ModbusCRCCheck
+<S>STCYC  4
+<S>STMCC  0 (4:4)
+<S>STMIF  1
+<S>STSUB  6
+<S>STAKI  10
+<S>STLIN  25
+<S>STXLN  13
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  4
+<S>STPTH  8
+<S>STPDN  0.62   
+<S>STPBG  1
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  1
+<S>STAV1  8
+<S>STAV2  10
+<S>STAV3  14
+<S>STST1  16
+<S>STST2  13
+<S>STST3  10
+<S>STPAR  0
+<S>STCAL  2
+<S>STFN1  93
+<S>STFN2  49
+
+<EXTD> ModbusGetUint8_U C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 348
+<DEFINE> address C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 348 N DC OV B N =us R
+<DEFINE> ModbusGetUint8_U C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 348 N DR OF F X (uc,=us) -
+<DEFINE> ModbusGetUint8_U C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 348 N DF OF F X (uc,=us) -
+<R>X ModbusGetUint8_U g_startAddr 350 R
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 352 16 N ON ni B X
+<DEFINE> offset C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 354 N DC OV B N us -
+<DEFINE> offset C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 354 N DF OV B N us -
+<R>X ModbusGetUint8_U g_startAddr 354 R
+<DEFINE> bValue C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 355 N DC OV B N uc -
+<DEFINE> bValue C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 355 N DF OV B N uc -
+<R>X ModbusGetUint8_U g_modbusRxBuff 355 R
+<CTLG> ModbusGetUint8_U 1
+<CTLG> 1 2
+<CTLG> 1 4
+<CTLG> 2 6
+<CTLG> 4 6
+<CTLGN> 349 350 352 350 356 352 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c
+<S>STNAM  ModbusGetUint8_U
+<S>STCYC  2
+<S>STMCC  0 (2:2)
+<S>STMIF  1
+<S>STSUB  0
+<S>STAKI  2
+<S>STLIN  7
+<S>STXLN  5
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  1
+<S>STKDN  0.20   
+<S>STUNV  0
+<S>STLCT  2
+<S>STPTH  2
+<S>STPDN  0.40   
+<S>STPBG  0
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  2
+<S>STAV1  6
+<S>STAV2  7
+<S>STAV3  13
+<S>STST1  6
+<S>STST2  5
+<S>STST3  3
+<S>STPAR  1
+<S>STCAL  0
+<S>STFN1  25
+<S>STFN2  14
+
+<EXTD> ModbusGetUint8_L C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 359
+<DEFINE> address C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 359 N DC OV B N =us R
+<DEFINE> ModbusGetUint8_L C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 359 N DR OF F X (uc,=us) -
+<DEFINE> ModbusGetUint8_L C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 359 N DF OF F X (uc,=us) -
+<R>X ModbusGetUint8_L g_startAddr 361 R
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 363 16 N ON ni B X
+<DEFINE> offset C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 365 N DC OV B N us -
+<DEFINE> offset C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 365 N DF OV B N us -
+<R>X ModbusGetUint8_L g_startAddr 365 R
+<DEFINE> bValue C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 366 N DC OV B N uc -
+<DEFINE> bValue C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 366 N DF OV B N uc -
+<R>X ModbusGetUint8_L g_modbusRxBuff 366 R
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 366 44 N DN ni B O
+<CTLG> ModbusGetUint8_L 1
+<CTLG> 1 2
+<CTLG> 1 4
+<CTLG> 2 6
+<CTLG> 4 6
+<CTLGN> 360 361 363 361 367 363 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c
+<S>STNAM  ModbusGetUint8_L
+<S>STCYC  2
+<S>STMCC  0 (2:2)
+<S>STMIF  1
+<S>STSUB  0
+<S>STAKI  2
+<S>STLIN  7
+<S>STXLN  5
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  1
+<S>STKDN  0.20   
+<S>STUNV  0
+<S>STLCT  2
+<S>STPTH  2
+<S>STPDN  0.40   
+<S>STPBG  0
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  2
+<S>STAV1  6
+<S>STAV2  8
+<S>STAV3  13
+<S>STST1  6
+<S>STST2  5
+<S>STST3  3
+<S>STPAR  1
+<S>STCAL  0
+<S>STFN1  26
+<S>STFN2  15
+
+<EXTD> ModbusGetUint16 C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 370
+<DEFINE> address C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 370 N DC OV B N =us R
+<DEFINE> ModbusGetUint16 C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 370 N DR OF F X (us,=us) -
+<DEFINE> ModbusGetUint16 C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 370 N DF OF F X (us,=us) -
+<R>X ModbusGetUint16 g_startAddr 372 R
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 374 16 N ON ni B X
+<DEFINE> offset C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 376 N DC OV B N us -
+<DEFINE> offset C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 376 N DF OV B N us -
+<R>X ModbusGetUint16 g_startAddr 376 R
+<DEFINE> wValue C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 377 N DC OV B N us -
+<DEFINE> wValue C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 377 N DF OV B N us -
+<R>X ModbusGetUint16 g_modbusRxBuff 377 R
+<R>X ModbusGetUint16 g_modbusRxBuff 377 R
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 377 106 N DN ni B O
+<CTLG> ModbusGetUint16 1
+<CTLG> 1 2
+<CTLG> 1 4
+<CTLG> 2 6
+<CTLG> 4 6
+<CTLGN> 371 372 374 372 378 374 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c
+<S>STNAM  ModbusGetUint16
+<S>STCYC  2
+<S>STMCC  0 (2:2)
+<S>STMIF  1
+<S>STSUB  0
+<S>STAKI  2
+<S>STLIN  7
+<S>STXLN  5
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  1
+<S>STKDN  0.20   
+<S>STUNV  0
+<S>STLCT  2
+<S>STPTH  2
+<S>STPDN  0.40   
+<S>STPBG  0
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  2
+<S>STAV1  10
+<S>STAV2  12
+<S>STAV3  20
+<S>STST1  6
+<S>STST2  5
+<S>STST3  3
+<S>STPAR  1
+<S>STCAL  0
+<S>STFN1  40
+<S>STFN2  20
+
+<EXTD> ModbusGetInt16 C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 381
+<DEFINE> address C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 381 N DC OV B N =us R
+<DEFINE> ModbusGetInt16 C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 381 N DR OF F X (ns,=us) -
+<DEFINE> ModbusGetInt16 C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 381 N DF OF F X (ns,=us) -
+<R>X ModbusGetInt16 g_startAddr 383 R
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 385 16 N ON ni B X
+<DEFINE> offset C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 387 N DC OV B N us -
+<DEFINE> offset C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 387 N DF OV B N us -
+<R>X ModbusGetInt16 g_startAddr 387 R
+<DEFINE> sValue C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 388 N DC OV B N ns -
+<DEFINE> sValue C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 388 N DF OV B N ns -
+<R>X ModbusGetInt16 g_modbusRxBuff 388 R
+<R>X ModbusGetInt16 g_modbusRxBuff 388 R
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 388 104 N DN ni B O
+<CTLG> ModbusGetInt16 1
+<CTLG> 1 2
+<CTLG> 1 4
+<CTLG> 2 6
+<CTLG> 4 6
+<CTLGN> 382 383 385 383 389 385 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c
+<S>STNAM  ModbusGetInt16
+<S>STCYC  2
+<S>STMCC  0 (2:2)
+<S>STMIF  1
+<S>STSUB  0
+<S>STAKI  2
+<S>STLIN  7
+<S>STXLN  5
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  1
+<S>STKDN  0.20   
+<S>STUNV  0
+<S>STLCT  2
+<S>STPTH  2
+<S>STPDN  0.40   
+<S>STPBG  0
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  2
+<S>STAV1  10
+<S>STAV2  12
+<S>STAV3  20
+<S>STST1  6
+<S>STST2  5
+<S>STST3  3
+<S>STPAR  1
+<S>STCAL  0
+<S>STFN1  40
+<S>STFN2  20
+
+<EXTD> ModbusGetFloat C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 392
+<DEFINE> address C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 392 N DC OV B N =us R
+<DEFINE> ModbusGetFloat C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 392 N DR OF F X (fs,=us) -
+<DEFINE> ModbusGetFloat C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 392 N DF OF F X (fs,=us) -
+<R>X ModbusGetFloat g_startAddr 394 R
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 396 16 N ON ni B X
+<DEFINE> offset C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 398 N DC OV B N us -
+<DEFINE> offset C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 398 N DF OV B N us -
+<R>X ModbusGetFloat g_startAddr 398 R
+<DEFINE> val C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 399 N DC OV B N [4,uc] -
+<DEFINE> val C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 399 N DF OV B N [4,uc] -
+<DEFINE> fValue C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 401 N DC OV B N pfs -
+<DEFINE> fValue C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 401 N DF OV B N pfs -
+<R>X ModbusGetFloat g_modbusRxBuff 408 R
+<R>X ModbusGetFloat g_modbusRxBuff 409 R
+<R>X ModbusGetFloat g_modbusRxBuff 410 R
+<R>X ModbusGetFloat g_modbusRxBuff 411 R
+<CTLG> ModbusGetFloat 1
+<CTLG> 1 2
+<CTLG> 1 4
+<CTLG> 2 7
+<CTLG> 4 5
+<CTLG> 5 7
+<CTLGN> 393 394 396 394 412 412 396 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c
+<S>STNAM  ModbusGetFloat
+<S>STCYC  2
+<S>STMCC  0 (2:2)
+<S>STMIF  1
+<S>STSUB  0
+<S>STAKI  2
+<S>STLIN  19
+<S>STXLN  9
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  1
+<S>STKDN  0.11   
+<S>STUNV  0
+<S>STLCT  3
+<S>STPTH  2
+<S>STPDN  0.22   
+<S>STPBG  0
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  2
+<S>STAV1  8
+<S>STAV2  9
+<S>STAV3  13
+<S>STST1  11
+<S>STST2  10
+<S>STST3  7
+<S>STPAR  1
+<S>STCAL  0
+<S>STFN1  60
+<S>STFN2  31
+
+<EXTD> ModbusGetUint32 C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 415
+<DEFINE> address C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 415 N DC OV B N =us R
+<DEFINE> ModbusGetUint32 C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 415 N DR OF F X (ui,=us) -
+<DEFINE> ModbusGetUint32 C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 415 N DF OF F X (ui,=us) -
+<R>X ModbusGetUint32 g_startAddr 417 R
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 419 16 N ON ni B X
+<DEFINE> offset C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 421 N DC OV B N us -
+<DEFINE> offset C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 421 N DF OV B N us -
+<R>X ModbusGetUint32 g_startAddr 421 R
+<DEFINE> val C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 422 N DC OV B N [4,uc] -
+<DEFINE> val C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 422 N DF OV B N [4,uc] -
+<DEFINE> Value C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 424 N DC OV B N pui -
+<DEFINE> Value C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 424 N DF OV B N pui -
+<R>X ModbusGetUint32 g_modbusRxBuff 430 R
+<R>X ModbusGetUint32 g_modbusRxBuff 431 R
+<R>X ModbusGetUint32 g_modbusRxBuff 432 R
+<R>X ModbusGetUint32 g_modbusRxBuff 433 R
+<CTLG> ModbusGetUint32 1
+<CTLG> 1 2
+<CTLG> 1 4
+<CTLG> 2 7
+<CTLG> 4 5
+<CTLG> 5 7
+<CTLGN> 416 417 419 417 435 435 419 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c
+<S>STNAM  ModbusGetUint32
+<S>STCYC  2
+<S>STMCC  0 (2:2)
+<S>STMIF  1
+<S>STSUB  0
+<S>STAKI  2
+<S>STLIN  19
+<S>STXLN  9
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  1
+<S>STKDN  0.11   
+<S>STUNV  0
+<S>STLCT  3
+<S>STPTH  2
+<S>STPDN  0.22   
+<S>STPBG  0
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  2
+<S>STAV1  8
+<S>STAV2  9
+<S>STAV3  13
+<S>STST1  11
+<S>STST2  10
+<S>STST3  7
+<S>STPAR  1
+<S>STCAL  0
+<S>STFN1  58
+<S>STFN2  33
+
+<EXTD> ModbusGetInt32 C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 438
+<DEFINE> address C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 438 N DC OV B N =us R
+<DEFINE> ModbusGetInt32 C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 438 N DR OF F X (ni,=us) -
+<DEFINE> ModbusGetInt32 C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 438 N DF OF F X (ni,=us) -
+<R>X ModbusGetInt32 g_startAddr 440 R
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 442 16 N ON ni B X
+<DEFINE> offset C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 444 N DC OV B N us -
+<DEFINE> offset C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 444 N DF OV B N us -
+<R>X ModbusGetInt32 g_startAddr 444 R
+<DEFINE> val C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 445 N DC OV B N [4,nc] -
+<DEFINE> val C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 445 N DF OV B N [4,nc] -
+<DEFINE> Value C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 447 N DC OV B N pni -
+<DEFINE> Value C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 447 N DF OV B N pni -
+<R>X ModbusGetInt32 g_modbusRxBuff 449 R
+<R>X ModbusGetInt32 g_modbusRxBuff 450 R
+<R>X ModbusGetInt32 g_modbusRxBuff 451 R
+<R>X ModbusGetInt32 g_modbusRxBuff 452 R
+<CTLG> ModbusGetInt32 1
+<CTLG> 1 2
+<CTLG> 1 4
+<CTLG> 2 7
+<CTLG> 4 5
+<CTLG> 5 7
+<CTLGN> 439 440 442 440 454 454 442 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c
+<S>STNAM  ModbusGetInt32
+<S>STCYC  2
+<S>STMCC  0 (2:2)
+<S>STMIF  1
+<S>STSUB  0
+<S>STAKI  2
+<S>STLIN  15
+<S>STXLN  9
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  1
+<S>STKDN  0.11   
+<S>STUNV  0
+<S>STLCT  3
+<S>STPTH  2
+<S>STPDN  0.22   
+<S>STPBG  0
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  2
+<S>STAV1  8
+<S>STAV2  9
+<S>STAV3  13
+<S>STST1  11
+<S>STST2  10
+<S>STST3  7
+<S>STPAR  1
+<S>STCAL  0
+<S>STFN1  58
+<S>STFN2  33
+
+<EXTD> ModbusGetBit C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 457
+<DEFINE> address C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 457 N DC OV B N =us R
+<DEFINE> bit C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 457 N DC OV B N =us R
+<DEFINE> ModbusGetBit C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 457 N DR OF F X (uc,=us,=us) -
+<DEFINE> ModbusGetBit C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 457 N DF OF F X (uc,=us,=us) -
+<R>X ModbusGetBit g_startAddr 459 R
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 461 16 N ON ni B X
+<DEFINE> offset C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 463 N DC OV B N us -
+<DEFINE> offset C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 463 N DF OV B N us -
+<R>X ModbusGetBit g_startAddr 463 R
+<DEFINE> Value C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 464 N DC OV B N us -
+<DEFINE> Value C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 464 N DF OV B N us -
+<R>X ModbusGetBit g_modbusRxBuff 464 R
+<R>X ModbusGetBit g_modbusRxBuff 464 R
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 464 105 N DN ni B O
+<DEFINE> mask C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 465 N DC OV B N us -
+<DEFINE> mask C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 465 N DF OV B N us -
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 465 21 N DN ni B O
+<DEFINE> ret C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 467 N DC OV B N uc -
+<DEFINE> ret C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 467 N DF OV B N uc -
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 467 19 N ON ni B O
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 471 15 N DN ni B X
+<CTLG> ModbusGetBit 1
+<CTLG> 1 2
+<CTLG> 1 4
+<CTLG> 2 9
+<CTLG> 4 5
+<CTLG> 5 6
+<CTLG> 5 7
+<CTLG> 6 7
+<CTLG> 7 9
+<CTLGN> 458 459 461 459 469 469 469 474 461 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c
+<S>STNAM  ModbusGetBit
+<S>STCYC  3
+<S>STMCC  0 (3:3)
+<S>STMIF  1
+<S>STSUB  0
+<S>STAKI  3
+<S>STLIN  16
+<S>STXLN  10
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  1
+<S>STKDN  0.10   
+<S>STUNV  0
+<S>STLCT  4
+<S>STPTH  4
+<S>STPDN  0.40   
+<S>STPBG  1
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  2
+<S>STAV1  7
+<S>STAV2  8
+<S>STAV3  14
+<S>STST1  12
+<S>STST2  10
+<S>STST3  6
+<S>STPAR  2
+<S>STCAL  0
+<S>STFN1  55
+<S>STFN2  33
+
+<EXTD> ModbusGetString C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 499
+<DEFINE> address C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 499 N DC OV B N =us R
+<DEFINE> len C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 499 N DC OV B N =us R
+<DEFINE> buf C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 499 N DC OV B N p_c R
+<DEFINE> ModbusGetString C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 499 N DR OF F X (.,=us,=us,p_c) -
+<DEFINE> ModbusGetString C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 499 N DF OF F X (.,=us,=us,p_c) -
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 501 9 N ON ni B X
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 501 14 N ON ni B X
+<R>X ModbusGetString g_startAddr 502 R
+<DEFINE> offset C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 506 N DC OV B N us -
+<DEFINE> offset C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 506 N DF OV B N us -
+<R>X ModbusGetString g_startAddr 506 R
+<R>C ModbusGetString memcpy 508
+<R>X ModbusGetString memcpy 508 R
+<R>X ModbusGetString g_modbusRxBuff 508 R
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 509 16 N ON ni B X
+<CTLG> ModbusGetString 1
+<CTLG> 1 2
+<CTLG> 2 3
+<CTLG> 2 5
+<CTLG> 3 8
+<CTLG> 5 6
+<CTLG> 6 8
+<CTLGN> 500 502 502 504 502 510 510 504 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c
+<S>STNAM  ModbusGetString
+<S>STCYC  2
+<S>STMCC  0 (2:2)
+<S>STMIF  1
+<S>STSUB  1
+<S>STAKI  3
+<S>STLIN  9
+<S>STXLN  6
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  1
+<S>STKDN  0.17   
+<S>STUNV  0
+<S>STLCT  1
+<S>STPTH  2
+<S>STPDN  0.33   
+<S>STPBG  0
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  1
+<S>STAV1  8
+<S>STAV2  9
+<S>STAV3  11
+<S>STST1  7
+<S>STST2  6
+<S>STST3  5
+<S>STPAR  3
+<S>STCAL  1
+<S>STFN1  38
+<S>STFN2  19
+
+<EXTD> ModbusGetDateTime C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 512
+<DEFINE> dateTime C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 512 N DC OV B N p{ss_Date_Time} R
+<DEFINE> ModbusGetDateTime C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 512 N DR OF F X (.,p{ss_Date_Time}) -
+<DEFINE> ModbusGetDateTime C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 512 N DF OF F X (.,p{ss_Date_Time}) -
+<DEFINE> mSec C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 514 N DC OV B N us -
+<DEFINE> mSec C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 514 N DF OV B N us -
+<DEFINE> offset C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 515 N DC OV B N us -
+<DEFINE> offset C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 515 N DF OV B N us -
+<R>X ModbusGetDateTime g_modbusRxBuff 517 R
+<DEFINE> Year C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 518 N DC OV B N us -
+<DEFINE> Year C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 518 N DF OV B N us -
+<R>X ModbusGetDateTime g_modbusRxBuff 518 R
+<R>X ModbusGetDateTime g_modbusRxBuff 523 R
+<R>X ModbusGetDateTime g_modbusRxBuff 524 R
+<R>X ModbusGetDateTime g_modbusRxBuff 525 R
+<R>X ModbusGetDateTime g_modbusRxBuff 526 R
+<R>X ModbusGetDateTime g_modbusRxBuff 527 R
+<R>X ModbusGetDateTime g_modbusRxBuff 527 R
+<CTLG> ModbusGetDateTime 1
+<CTLG> 1 2
+<CTLG> 2 4
+<CTLGN> 513 530 530 530 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c
+<S>STNAM  ModbusGetDateTime
+<S>STCYC  1
+<S>STMCC  0 (1:1)
+<S>STMIF  0
+<S>STSUB  0
+<S>STAKI  1
+<S>STLIN  16
+<S>STXLN  11
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  3
+<S>STPTH  1
+<S>STPDN  0.09   
+<S>STPBG  0
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  0
+<S>STAV1  11
+<S>STAV2  11
+<S>STAV3  14
+<S>STST1  12
+<S>STST2  12
+<S>STST3  9
+<S>STPAR  1
+<S>STCAL  0
+<S>STFN1  80
+<S>STFN2  52
+
+<EXTD> ModbusGetProductName C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 532
+<DEFINE> buf C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 532 N DC OV B N p_c R
+<DEFINE> ModbusGetProductName C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 532 N DR OF F X (.,p_c) -
+<DEFINE> ModbusGetProductName C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 532 N DF OF F X (.,p_c) -
+<DEFINE> offset C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 534 N DC OV B N us -
+<DEFINE> offset C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 534 N DF OV B N us -
+<DEFINE> len C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 535 N DC OV B N ni -
+<DEFINE> len C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 535 N DF OV B N ni -
+<R>X ModbusGetProductName gDeviceIndex 537 R
+<R>X ModbusGetProductName ConnectSetting 537 R
+<R>C ModbusGetProductName memcpy 549
+<R>X ModbusGetProductName memcpy 549 R
+<R>X ModbusGetProductName gDeviceIndex 549 R
+<R>X ModbusGetProductName gProductInfo 549 R
+<R>X ModbusGetProductName gProductInfo 549 W
+<R>X ModbusGetProductName g_modbusRxBuff 549 R
+<R>X ModbusGetProductName gDeviceIndex 550 R
+<R>X ModbusGetProductName gProductInfo 550 W
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 550 51 N ON ni B X
+<CTLG> ModbusGetProductName 1
+<CTLG> 1 2
+<CTLG> 1 3
+<CTLG> 2 4
+<CTLG> 3 4
+<CTLG> 4 5
+<CTLG> 5 7
+<CTLGN> 533 537 537 542 556 556 556 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c
+<S>STNAM  ModbusGetProductName
+<S>STCYC  2
+<S>STMCC  0 (2:2)
+<S>STMIF  1
+<S>STSUB  1
+<S>STAKI  3
+<S>STLIN  22
+<S>STXLN  8
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  1
+<S>STLCT  2
+<S>STPTH  2
+<S>STPDN  0.25   
+<S>STPBG  0
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  0
+<S>STAV1  7
+<S>STAV2  8
+<S>STAV3  11
+<S>STST1  11
+<S>STST2  9
+<S>STST3  7
+<S>STPAR  1
+<S>STCAL  1
+<S>STFN1  50
+<S>STFN2  27
+
+<EXTD> ModbusGetId1 C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 558
+<DEFINE> ModbusGetId1 C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 558 N DR OF F X (.,.) -
+<DEFINE> ModbusGetId1 C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 558 N DF OF F X (.,.) -
+<DEFINE> index C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 560 N DC OV B N ni -
+<DEFINE> index C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 560 N DF OV B N ni -
+<R>C ModbusGetId1 memcpy 563
+<R>X ModbusGetId1 memcpy 563 R
+<R>X ModbusGetId1 VendorName 563 R
+<R>X ModbusGetId1 VendorName 563 W
+<R>X ModbusGetId1 g_modbusRxBuff 563 R
+<R>X ModbusGetId1 g_modbusRxBuff 563 R
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 563 52 N DN ni B X
+<R>X ModbusGetId1 g_modbusRxBuff 564 R
+<R>X ModbusGetId1 VendorName 564 W
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 564 41 N ON ni B X
+<R>C ModbusGetId1 printf 565
+<R>X ModbusGetId1 printf 565 R
+<R>X ModbusGetId1 g_modbusRxBuff 565 R
+<LIT> "[%d,%x]" - - C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 565 18 N SN [8,_c] B X
+<R>X ModbusGetId1 g_modbusRxBuff 566 R
+<R>C ModbusGetId1 printf 567
+<R>X ModbusGetId1 printf 567 R
+<R>X ModbusGetId1 g_modbusRxBuff 567 R
+<LIT> "[%d,%x]" - - C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 567 18 N SN [8,_c] B X
+<R>X ModbusGetId1 g_modbusRxBuff 568 R
+<R>C ModbusGetId1 printf 569
+<R>X ModbusGetId1 printf 569 R
+<R>X ModbusGetId1 g_modbusRxBuff 569 R
+<LIT> "[%d,%x]" - - C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 569 18 N SN [8,_c] B X
+<R>C ModbusGetId1 memcpy 570
+<R>X ModbusGetId1 memcpy 570 R
+<R>X ModbusGetId1 ModbusVersion 570 R
+<R>X ModbusGetId1 ModbusVersion 570 W
+<R>X ModbusGetId1 g_modbusRxBuff 570 R
+<R>X ModbusGetId1 g_modbusRxBuff 570 R
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 570 55 N DN ni B X
+<R>X ModbusGetId1 g_modbusRxBuff 571 R
+<R>X ModbusGetId1 ModbusVersion 571 W
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 571 44 N ON ni B X
+<R>C ModbusGetId1 printf 572
+<R>X ModbusGetId1 printf 572 R
+<R>X ModbusGetId1 VendorName 572 R
+<R>X ModbusGetId1 VendorName 572 W
+<R>X ModbusGetId1 ModbusVersion 572 R
+<R>X ModbusGetId1 ModbusVersion 572 W
+<LIT> "\n\n\nVendor=%s, Ver=%s\n" - - C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 572 18 N SN [22,_c] B X
+<CTLG> ModbusGetId1 1
+<CTLG> 1 2
+<CTLG> 2 4
+<CTLGN> 559 574 574 574 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c
+<S>STNAM  ModbusGetId1
+<S>STCYC  1
+<S>STMCC  0 (1:1)
+<S>STMIF  0
+<S>STSUB  6
+<S>STAKI  7
+<S>STLIN  14
+<S>STXLN  11
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  1
+<S>STPTH  1
+<S>STPDN  0.09   
+<S>STPBG  0
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  0
+<S>STAV1  13
+<S>STAV2  13
+<S>STAV3  14
+<S>STST1  11
+<S>STST2  11
+<S>STST3  10
+<S>STPAR  0
+<S>STCAL  2
+<S>STFN1  97
+<S>STFN2  51
+
+<EXTD> ModbusGetId2 C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 576
+<DEFINE> productName C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 576 N DC OV B N p_c R
+<DEFINE> ModbusGetId2 C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 576 N DR OF F X (.,p_c) -
+<DEFINE> ModbusGetId2 C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 576 N DF OF F X (.,p_c) -
+<DEFINE> index C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 578 N DC OV B N ni -
+<DEFINE> index C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 578 N DF OV B N ni -
+<R>X ModbusGetId2 g_modbusRxBuff 579 R
+<R>C ModbusGetId2 memcpy 581
+<R>X ModbusGetId2 memcpy 581 R
+<R>X ModbusGetId2 g_modbusRxBuff 581 R
+<R>X ModbusGetId2 g_modbusRxBuff 581 R
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 581 53 N DN ni B X
+<R>X ModbusGetId2 g_modbusRxBuff 582 R
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 582 42 N ON ni B X
+<R>X ModbusGetId2 g_modbusRxBuff 583 R
+<CTLG> ModbusGetId2 1
+<CTLG> 1 2
+<CTLG> 2 4
+<CTLGN> 577 584 584 584 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c
+<S>STNAM  ModbusGetId2
+<S>STCYC  1
+<S>STMCC  0 (1:1)
+<S>STMIF  0
+<S>STSUB  1
+<S>STAKI  2
+<S>STLIN  6
+<S>STXLN  5
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  1
+<S>STPTH  1
+<S>STPDN  0.20   
+<S>STPBG  0
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  0
+<S>STAV1  12
+<S>STAV2  12
+<S>STAV3  15
+<S>STST1  5
+<S>STST2  5
+<S>STST3  4
+<S>STPAR  1
+<S>STCAL  1
+<S>STFN1  39
+<S>STFN2  21
+
+<EXTD> ModbusGetId3 C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 587
+<DEFINE> ModbusGetId3 C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 587 N DR OF F X (.,.) -
+<DEFINE> ModbusGetId3 C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 587 N DF OF F X (.,.) -
+<DEFINE> index C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 589 N DC OV B N ni -
+<DEFINE> index C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 589 N DF OV B N ni -
+<R>C ModbusGetId3 memcpy 591
+<R>X ModbusGetId3 memcpy 591 R
+<R>X ModbusGetId3 serialNo 591 R
+<R>X ModbusGetId3 serialNo 591 W
+<R>X ModbusGetId3 g_modbusRxBuff 591 R
+<R>X ModbusGetId3 g_modbusRxBuff 591 R
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 591 50 N DN ni B X
+<R>X ModbusGetId3 g_modbusRxBuff 592 R
+<R>X ModbusGetId3 serialNo 592 W
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 592 39 N ON ni B X
+<R>X ModbusGetId3 g_modbusRxBuff 593 R
+<R>C ModbusGetId3 memcpy 595
+<R>X ModbusGetId3 memcpy 595 R
+<R>X ModbusGetId3 productCode 595 R
+<R>X ModbusGetId3 productCode 595 W
+<R>X ModbusGetId3 g_modbusRxBuff 595 R
+<R>X ModbusGetId3 g_modbusRxBuff 595 R
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 595 53 N DN ni B X
+<R>X ModbusGetId3 g_modbusRxBuff 596 R
+<R>X ModbusGetId3 productCode 596 W
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 596 42 N ON ni B X
+<R>X ModbusGetId3 g_modbusRxBuff 597 R
+<R>C ModbusGetId3 memcpy 599
+<R>X ModbusGetId3 memcpy 599 R
+<R>X ModbusGetId3 hardwarVersion 599 R
+<R>X ModbusGetId3 hardwarVersion 599 W
+<R>X ModbusGetId3 g_modbusRxBuff 599 R
+<R>X ModbusGetId3 g_modbusRxBuff 599 R
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 599 56 N DN ni B X
+<R>X ModbusGetId3 g_modbusRxBuff 600 R
+<R>X ModbusGetId3 hardwarVersion 600 W
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 600 45 N ON ni B X
+<R>X ModbusGetId3 g_modbusRxBuff 601 R
+<R>C ModbusGetId3 memcpy 603
+<R>X ModbusGetId3 memcpy 603 R
+<R>X ModbusGetId3 softwareVersion 603 R
+<R>X ModbusGetId3 softwareVersion 603 W
+<R>X ModbusGetId3 g_modbusRxBuff 603 R
+<R>X ModbusGetId3 g_modbusRxBuff 603 R
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 603 57 N DN ni B X
+<R>X ModbusGetId3 g_modbusRxBuff 604 R
+<R>X ModbusGetId3 softwareVersion 604 W
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 604 46 N ON ni B X
+<R>C ModbusGetId3 printf 606
+<R>X ModbusGetId3 printf 606 R
+<R>X ModbusGetId3 serialNo 606 R
+<R>X ModbusGetId3 serialNo 606 W
+<R>X ModbusGetId3 productCode 606 R
+<R>X ModbusGetId3 productCode 606 W
+<R>X ModbusGetId3 hardwarVersion 606 R
+<R>X ModbusGetId3 hardwarVersion 606 W
+<R>X ModbusGetId3 softwareVersion 606 R
+<R>X ModbusGetId3 softwareVersion 606 W
+<LIT> "serial=%s, code=%s, hVer=%s, sVer=%s\n" - - C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 606 18 N SN [38,_c] B X
+<CTLG> ModbusGetId3 1
+<CTLG> 1 2
+<CTLG> 2 4
+<CTLGN> 588 607 607 607 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c
+<S>STNAM  ModbusGetId3
+<S>STCYC  1
+<S>STMCC  0 (1:1)
+<S>STMIF  0
+<S>STSUB  5
+<S>STAKI  6
+<S>STLIN  18
+<S>STXLN  13
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  1
+<S>STPTH  1
+<S>STPDN  0.08   
+<S>STPBG  0
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  0
+<S>STAV1  13
+<S>STAV2  13
+<S>STAV3  15
+<S>STST1  13
+<S>STST2  13
+<S>STST3  12
+<S>STPAR  0
+<S>STCAL  2
+<S>STFN1  116
+<S>STFN2  64
+
+<DEFINE> ModbusRecvCheck C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 644 N DR OF F I (uc,.) -
+<DEFINE> ModbusRecvCheck C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 644 N DF OF F I (uc,.) -
+<R>C ModbusRecvCheck OS_Delay 647
+<R>X ModbusRecvCheck OS_Delay 647 R
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 647 14 N DN ni B X
+<DEFINE> startTimer C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 648 N DC OV B N ui -
+<DEFINE> startTimer C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 648 N DF OV B N ui -
+<R>C ModbusRecvCheck HAL_GetTick 648
+<R>X ModbusRecvCheck HAL_GetTick 648 R
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 649 11 N DN ni B X
+<R>X ModbusRecvCheck g_modbusRxDone 651 R
+<DEFINE> ret C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 653 N DC OV B N uc -
+<DEFINE> ret C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 653 N DF OV B N uc -
+<R>C ModbusRecvCheck ModbusCRCCheck 653
+<R>X ModbusRecvCheck ModbusCRCCheck 653 R
+<R>X ModbusRecvCheck g_modbusRxDone 654 W
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 654 30 N ON ni B X
+<R>X ModbusRecvCheck g_modbusRxError 655 W
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 655 31 N ON ni B X
+<R>C ModbusRecvCheck printf 658
+<R>X ModbusRecvCheck printf 658 R
+<LIT> "CRC OK\n" - - C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 658 30 N SN [8,_c] B X
+<R>C ModbusRecvCheck printf 664
+<R>X ModbusRecvCheck printf 664 R
+<LIT> "Modbus Error\n" - - C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 664 30 N SN [14,_c] B X
+<R>C ModbusRecvCheck printf 669
+<R>X ModbusRecvCheck printf 669 R
+<LIT> "CRC BAD\n" - - C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 669 30 N SN [9,_c] B X
+<DEFINE> timer C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 674 N DC OV B N ui -
+<DEFINE> timer C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 674 N DF OV B N ui -
+<R>C ModbusRecvCheck HAL_GetTick 674
+<R>X ModbusRecvCheck HAL_GetTick 674 R
+<DEFINE> diff C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 675 N DC OV B N ui -
+<DEFINE> diff C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 675 N DF OV B N ui -
+<R>C ModbusRecvCheck printf 678
+<R>X ModbusRecvCheck printf 678 R
+<LIT> "Time Out....\n" - - C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 678 26 N SN [14,_c] B X
+<R>C ModbusRecvCheck OS_Delay 681
+<R>X ModbusRecvCheck OS_Delay 681 R
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 681 18 N DN ni B X
+<CTLG> ModbusRecvCheck 1
+<CTLG> 1 2
+<CTLG> 2 3
+<CTLG> 2 23
+<CTLG> 3 4
+<CTLG> 3 18
+<CTLG> 4 5
+<CTLG> 5 6
+<CTLG> 5 9
+<CTLG> 6 7
+<CTLG> 7 25
+<CTLG> 9 10
+<CTLG> 9 11
+<CTLG> 10 15
+<CTLG> 11 12
+<CTLG> 11 13
+<CTLG> 12 14
+<CTLG> 13 14
+<CTLG> 14 15
+<CTLG> 15 16
+<CTLG> 16 25
+<CTLG> 18 19
+<CTLG> 18 22
+<CTLG> 19 20
+<CTLG> 20 23
+<CTLG> 22 2
+<CTLG> 23 25
+<CTLGN> 645 649 649 651 656 656 659 659 656 662 662 667 667 671 666 661 672 651 676 679 679 676 649 684 659 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c
+<S>STNAM  ModbusRecvCheck
+<S>STCYC  7
+<S>STMCC  0 (7:7)
+<S>STMIF  5
+<S>STSUB  9
+<S>STAKI  16
+<S>STLIN  39
+<S>STXLN  25
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  3
+<S>STKDN  0.12   
+<S>STUNV  0
+<S>STLCT  4
+<S>STPTH  11
+<S>STPDN  0.44   
+<S>STPBG  1
+<S>STLOP  0
+<S>STM07  4
+<S>STM19  3
+<S>STAV1  4
+<S>STAV2  6
+<S>STAV3  7
+<S>STST1  29
+<S>STST2  22
+<S>STST3  18
+<S>STPAR  0
+<S>STCAL  4
+<S>STFN1  98
+<S>STFN2  42
+
+<EXTD> ModbusControl C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 688
+<DEFINE> address C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 688 N DC OV B N =uc R
+<DEFINE> offset C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 688 N DC OV B N =ni R
+<DEFINE> pos C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 688 N DC OV B N =ni R
+<DEFINE> onoffStatus C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 688 N DC OV B N =uc R
+<DEFINE> bSBO C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 688 N DC OV B N uc R
+<DEFINE> ModbusControl C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 688 N DR OF F X (uc,=uc,=ni,=ni,=uc,uc) -
+<DEFINE> ModbusControl C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 688 N DF OF F X (uc,=uc,=ni,=ni,=uc,uc) -
+<DEFINE> frame C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 690 N DC OV B N [8,uc] -
+<DEFINE> frame C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 690 N DF OV B N [8,uc] -
+<DEFINE> startAddr C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 691 N DC OV B N us -
+<DEFINE> startAddr C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 691 N DF OV B N us -
+<DEFINE> ret C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 692 N DC OV B N uc -
+<DEFINE> ret C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 692 N DF OV B N uc -
+<R>X ModbusControl g_functionCode 694 W
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 696 35 N DN ni B X
+<R>X ModbusControl gDeviceIndex 696 R
+<R>X ModbusControl mLinkMode 696 R
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 698 18 N DN ni B X
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 701 29 N DN ni B X
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 709 29 N DN ni B X
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 717 20 N DN ni B X
+<R>C ModbusControl printf 726
+<R>X ModbusControl printf 726 R
+<LIT> "ModbusControl : address:%d, offset:%d, pos=%d, onoffStatus = %d, bSBO=%d\n" - - C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 726 18 N SN [74,_c] B X
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 732 22 N HN ni B X
+<DEFINE> crc C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 734 N DC OV B N us -
+<DEFINE> crc C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 734 N DF OV B N us -
+<R>C ModbusControl CRC16 734
+<R>C ModbusControl printf 739
+<R>X ModbusControl printf 739 R
+<LIT> "Send Frame!!!\n" - - C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 739 18 N SN [15,_c] B X
+<DEFINE> i C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 740 N DC OV B N ni -
+<DEFINE> i C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 740 N DF OV B N ni -
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 740 17 N ON ni B O
+<R>C ModbusControl printf 742
+<R>X ModbusControl printf 742 R
+<LIT> "%02X " - - C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 742 22 N SN [6,_c] B X
+<R>C ModbusControl printf 744
+<R>X ModbusControl printf 744 R
+<LIT> "\n" - - C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 744 18 N SN [2,_c] B X
+<R>X ModbusControl g_subFunction 746 W
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 746 21 N ON ni B X
+<R>X ModbusControl g_wModbusWaitLen 747 W
+<R>X ModbusControl g_bRecvVariable 748 W
+<R>C ModbusControl HAL_UART_Transmit 749
+<R>X ModbusControl HAL_UART_Transmit 749 R
+<R>X ModbusControl huart2 749 R
+<R>X ModbusControl huart2 749 W
+<R>X ModbusControl sendFlag 750 W
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 750 16 N DN ni B X
+<R>C ModbusControl ModbusRecvCheck 752
+<R>C ModbusControl printf 757
+<R>X ModbusControl printf 757 R
+<LIT> "control ok...\n" - - C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 757 18 N SN [15,_c] B X
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 758 16 N DN ni B X
+<LIT> 0x00 - P C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 767 26 N HN ni B X
+<R>C ModbusControl CRC16 769
+<R>C ModbusControl printf 774
+<R>X ModbusControl printf 774 R
+<LIT> "Send Frame!!!\n" - - C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 774 22 N SN [15,_c] B X
+<DEFINE> i C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 775 N DC OV B N ni -
+<DEFINE> i C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 775 N DF OV B N ni -
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 775 21 N ON ni B O
+<R>C ModbusControl printf 777
+<R>X ModbusControl printf 777 R
+<LIT> "%02X " - - C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 777 26 N SN [6,_c] B X
+<R>C ModbusControl printf 779
+<R>X ModbusControl printf 779 R
+<LIT> "\n" - - C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 779 22 N SN [2,_c] B X
+<R>X ModbusControl g_subFunction 781 W
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 781 25 N ON ni B X
+<R>X ModbusControl g_wModbusWaitLen 782 W
+<R>X ModbusControl g_bRecvVariable 783 W
+<R>C ModbusControl HAL_UART_Transmit 784
+<R>X ModbusControl HAL_UART_Transmit 784 R
+<R>X ModbusControl huart2 784 R
+<R>X ModbusControl huart2 784 W
+<R>X ModbusControl sendFlag 785 W
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 785 20 N DN ni B X
+<R>C ModbusControl ModbusRecvCheck 787
+<R>C ModbusControl printf 793
+<R>X ModbusControl printf 793 R
+<LIT> "control ok...\n" - - C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 793 18 N SN [15,_c] B X
+<CTLG> ModbusControl 1
+<CTLG> 1 2
+<CTLG> 2 3
+<CTLG> 2 13
+<CTLG> 3 4
+<CTLG> 3 8
+<CTLG> 4 5
+<CTLG> 5 6
+<CTLG> 5 7
+<CTLG> 6 7
+<CTLG> 7 12
+<CTLG> 8 9
+<CTLG> 9 10
+<CTLG> 9 11
+<CTLG> 10 11
+<CTLG> 11 12
+<CTLG> 12 17
+<CTLG> 13 14
+<CTLG> 13 15
+<CTLG> 14 16
+<CTLG> 15 16
+<CTLG> 16 17
+<CTLG> 17 18
+<CTLG> 18 19
+<CTLG> 19 20
+<CTLG> 19 22
+<CTLG> 20 21
+<CTLG> 21 19
+<CTLG> 22 23
+<CTLG> 23 24
+<CTLG> 23 26
+<CTLG> 24 41
+<CTLG> 26 27
+<CTLG> 27 28
+<CTLG> 27 38
+<CTLG> 28 29
+<CTLG> 29 30
+<CTLG> 30 31
+<CTLG> 30 33
+<CTLG> 31 32
+<CTLG> 32 30
+<CTLG> 33 34
+<CTLG> 34 35
+<CTLG> 34 37
+<CTLG> 35 41
+<CTLG> 37 38
+<CTLG> 38 39
+<CTLG> 39 41
+<CTLGN> 689 696 696 698 701 701 701 698 709 709 709 706 696 717 717 721 715 740 740 740 740 740 753 753 755 753 758 758 775 775 775 775 775 788 788 790 788 758 794 794 755 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c
+<S>STNAM  ModbusControl
+<S>STCYC  11
+<S>STMCC  0 (11:11)
+<S>STMIF  3
+<S>STSUB  15
+<S>STAKI  26
+<S>STLIN  105
+<S>STXLN  63
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  2
+<S>STKDN  0.03   
+<S>STUNV  0
+<S>STLCT  6
+<S>STPTH  120
+<S>STPDN  1.90   
+<S>STPBG  2
+<S>STLOP  0
+<S>STM07  4
+<S>STM19  3
+<S>STAV1  7
+<S>STAV2  8
+<S>STAV3  9
+<S>STST1  76
+<S>STST2  63
+<S>STST3  59
+<S>STPAR  5
+<S>STCAL  4
+<S>STFN1  346
+<S>STFN2  188
+
+<EXTD> ModbusSetTime C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 797
+<DEFINE> address C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 797 N DC OV B N =uc R
+<DEFINE> dateTime C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 797 N DC OV B N p={ss_Date_Time} R
+<DEFINE> ModbusSetTime C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 797 N DR OF F X (.,=uc,p={ss_Date_Time}) -
+<DEFINE> ModbusSetTime C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 797 N DF OF F X (.,=uc,p={ss_Date_Time}) -
+<DEFINE> frame C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 799 N DC OV B N [20,uc] -
+<DEFINE> frame C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 799 N DF OV B N [20,uc] -
+<DEFINE> mSec C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 800 N DC OV B N us -
+<DEFINE> mSec C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 800 N DF OV B N us -
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 804 22 N ON ni B X
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 805 22 N ON ni B X
+<DEFINE> crc C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 814 N DC OV B N us -
+<DEFINE> crc C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 814 N DF OV B N us -
+<R>C ModbusSetTime CRC16 814
+<R>C ModbusSetTime printf 819
+<R>X ModbusSetTime printf 819 R
+<LIT> "ModbusSetTime Send Frame!!!\n" - - C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 819 18 N SN [29,_c] B X
+<DEFINE> i C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 820 N DC OV B N ni -
+<DEFINE> i C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 820 N DF OV B N ni -
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 820 17 N ON ni B O
+<R>C ModbusSetTime printf 822
+<R>X ModbusSetTime printf 822 R
+<LIT> "%02X " - - C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 822 22 N SN [6,_c] B X
+<R>C ModbusSetTime printf 824
+<R>X ModbusSetTime printf 824 R
+<LIT> "\n" - - C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 824 18 N SN [2,_c] B X
+<R>X ModbusSetTime g_bRecvVariable 826 W
+<R>C ModbusSetTime HAL_UART_Transmit 827
+<R>X ModbusSetTime HAL_UART_Transmit 827 R
+<R>X ModbusSetTime huart2 827 R
+<R>X ModbusSetTime huart2 827 W
+<R>X ModbusSetTime g_subFunction 828 W
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 828 21 N ON ni B X
+<R>X ModbusSetTime sendFlag 829 W
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 829 16 N DN ni B X
+<CTLG> ModbusSetTime 1
+<CTLG> 1 2
+<CTLG> 2 3
+<CTLG> 3 4
+<CTLG> 3 6
+<CTLG> 4 5
+<CTLG> 5 3
+<CTLG> 6 7
+<CTLG> 7 9
+<CTLGN> 798 820 820 820 820 820 831 831 831 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c
+<S>STNAM  ModbusSetTime
+<S>STCYC  2
+<S>STMCC  0 (2:2)
+<S>STMIF  1
+<S>STSUB  5
+<S>STAKI  7
+<S>STLIN  32
+<S>STXLN  24
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  4
+<S>STPTH  2
+<S>STPDN  0.08   
+<S>STPBG  0
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  0
+<S>STAV1  9
+<S>STAV2  9
+<S>STAV3  11
+<S>STST1  26
+<S>STST2  25
+<S>STST3  22
+<S>STPAR  2
+<S>STCAL  3
+<S>STFN1  150
+<S>STFN2  95
+
+<EXTD> ModbusSetTimeAndWait C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 833
+<DEFINE> address C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 833 N DC OV B N =uc R
+<DEFINE> dateTime C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 833 N DC OV B N p={ss_Date_Time} R
+<DEFINE> ModbusSetTimeAndWait C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 833 N DR OF F X (.,=uc,p={ss_Date_Time}) -
+<DEFINE> ModbusSetTimeAndWait C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 833 N DF OF F X (.,=uc,p={ss_Date_Time}) -
+<R>C ModbusSetTimeAndWait ModbusSetTime 835
+<R>X ModbusSetTimeAndWait ModbusSetTime 835 R
+<R>X ModbusSetTimeAndWait g_wModbusWaitLen 836 W
+<R>C ModbusSetTimeAndWait ModbusRecvCheck 837
+<CTLG> ModbusSetTimeAndWait 1
+<CTLG> 1 2
+<CTLG> 2 4
+<CTLGN> 834 838 838 838 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c
+<S>STNAM  ModbusSetTimeAndWait
+<S>STCYC  1
+<S>STMCC  0 (1:1)
+<S>STMIF  0
+<S>STSUB  2
+<S>STAKI  3
+<S>STLIN  3
+<S>STXLN  3
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  0
+<S>STPTH  1
+<S>STPDN  0.33   
+<S>STPBG  0
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  0
+<S>STAV1  6
+<S>STAV2  6
+<S>STAV3  6
+<S>STST1  3
+<S>STST2  3
+<S>STST3  3
+<S>STPAR  2
+<S>STCAL  2
+<S>STFN1  14
+<S>STFN2  6
+
+<EXTD> ModbusAcbSystemEventGet C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 844
+<DEFINE> dateTime C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 844 N DC OV B N p{ss_Date_Time} R
+<DEFINE> mainCategory C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 844 N DC OV B N pus R
+<DEFINE> middleCategory C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 844 N DC OV B N pus R
+<DEFINE> smallCategory C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 844 N DC OV B N pus R
+<DEFINE> Status C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 844 N DC OV B N pus R
+<DEFINE> Value C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 844 N DC OV B N pfs R
+<DEFINE> ModbusAcbSystemEventGet C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 844 N DR OF F X (.,p{ss_Date_Time},pus,pus,pus,pus,pfs) -
+<DEFINE> ModbusAcbSystemEventGet C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 844 N DF OF F X (.,p{ss_Date_Time},pus,pus,pus,pus,pfs) -
+<DEFINE> mSec C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 846 N DC OV B N us -
+<DEFINE> mSec C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 846 N DF OV B N us -
+<DEFINE> offset C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 848 N DC OV B N us -
+<DEFINE> offset C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 848 N DF OV B N us -
+<R>X ModbusAcbSystemEventGet g_modbusRxBuff 850 R
+<R>X ModbusAcbSystemEventGet g_modbusRxBuff 855 R
+<R>X ModbusAcbSystemEventGet g_modbusRxBuff 855 R
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 855 97 N DN ni B X
+<R>X ModbusAcbSystemEventGet g_modbusRxBuff 856 R
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 856 45 N DN ni B X
+<R>X ModbusAcbSystemEventGet g_modbusRxBuff 859 R
+<R>X ModbusAcbSystemEventGet g_modbusRxBuff 859 R
+<R>X ModbusAcbSystemEventGet gReadIndex 859 W
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 859 100 N DN ni B X
+<R>X ModbusAcbSystemEventGet g_modbusRxBuff 863 R
+<R>X ModbusAcbSystemEventGet g_modbusRxBuff 864 R
+<R>X ModbusAcbSystemEventGet g_modbusRxBuff 865 R
+<R>X ModbusAcbSystemEventGet g_modbusRxBuff 866 R
+<R>X ModbusAcbSystemEventGet g_modbusRxBuff 867 R
+<R>X ModbusAcbSystemEventGet g_modbusRxBuff 868 R
+<R>X ModbusAcbSystemEventGet g_modbusRxBuff 868 R
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 868 95 N DN ni B X
+<R>X ModbusAcbSystemEventGet g_modbusRxBuff 874 R
+<R>X ModbusAcbSystemEventGet g_modbusRxBuff 874 R
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 874 85 N DN ni B X
+<DEFINE> val C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 880 N DC OV B N [4,uc] -
+<DEFINE> val C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 880 N DF OV B N [4,uc] -
+<DEFINE> fValue C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 881 N DC OV B N pfs -
+<DEFINE> fValue C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 881 N DF OV B N pfs -
+<R>X ModbusAcbSystemEventGet g_modbusRxBuff 892 R
+<R>X ModbusAcbSystemEventGet g_modbusRxBuff 893 R
+<R>X ModbusAcbSystemEventGet g_modbusRxBuff 894 R
+<R>X ModbusAcbSystemEventGet g_modbusRxBuff 895 R
+<R>C ModbusAcbSystemEventGet printf 898
+<R>X ModbusAcbSystemEventGet printf 898 R
+<LIT> "mSec=%d,(%d, %d)(%04x, %f)\n\n\n\n\n" - - C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c 898 18 N SN [32,_c] B X
+<CTLG> ModbusAcbSystemEventGet 1
+<CTLG> 1 2
+<CTLG> 2 4
+<CTLGN> 845 900 900 900 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c
+<S>STNAM  ModbusAcbSystemEventGet
+<S>STCYC  1
+<S>STMCC  0 (1:1)
+<S>STMIF  0
+<S>STSUB  1
+<S>STAKI  2
+<S>STLIN  54
+<S>STXLN  25
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  4
+<S>STPTH  1
+<S>STPDN  0.04   
+<S>STPBG  0
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  0
+<S>STAV1  11
+<S>STAV2  11
+<S>STAV3  13
+<S>STST1  28
+<S>STST2  28
+<S>STST3  24
+<S>STPAR  6
+<S>STCAL  1
+<S>STFN1  208
+<S>STFN2  124
+
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c
+<S>STNAM  C:/CodeInspection/DisplayUnit/STemWin/App/modbus.c
+<S>STNTB  NON-TOKEN BASED STATISTICS...
+<S>STSCT  3
+<S>STECT  27
+<S>STFNC  28
+<S>STFCO  65
+<S>STTKB  TOKEN BASED STATISTICS...
+<S>STVAR  180
+<S>STOPT  44
+<S>STOPN  332
+<S>STTOT  4804
+<S>STZIP  2447
+<S>STHAL  3021
+<S>STSHN  11408
+<S>STDIF  30.08  
+<S>STEFF  1236006
+<S>STVOL  41096
+<S>STDEV  206.00 
+<S>STBUG  12
+<S>STTPP  900
+<S>STTLN  628
+<S>STM20  1556
+<S>STM21  3246
+<S>STM22  392
+<S>STM28  125
+<S>STM33  79
+<S>STBCS  BASIC COCOMO STATISTICS...
+<S>STBMO  2.149  
+<S>STBMS  2.666  
+<S>STBME  3.172  
+<S>STTDO  3.343  
+<S>STTDS  3.524  
+<S>STTDE  3.617  
+<S>STCOM  COMMENT BASED STATISTICS...
+<S>STCDN  0.238  
+

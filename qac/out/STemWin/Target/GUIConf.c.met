@@ -1,0 +1,102 @@
+<RDEF> I Includes
+<R>I C:/CodeInspection/DisplayUnit/STemWin/Target/GUIConf.c C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI.h 75
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_ConfDefaults.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_ConfDefaults.h C:/CodeInspection/DisplayUnit/STemWin/Target/GUIConf.h 60
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_Type.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_Type.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/LCD.h 60
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/LCD.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_ConfDefaults.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/LCD.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/Global.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_Type.h C:/CodeInspection/DisplayUnit/STemWin/Target/GUIConf.h 61
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_Version.h 58
+<DEFINE> GUI_NUMBYTES C:/CodeInspection/DisplayUnit/STemWin/Target/GUIConf.c 86 N DF OM - - - O
+<LIT> 56320 - P C:/CodeInspection/DisplayUnit/STemWin/Target/GUIConf.c 86 33 N DN - F M
+<DEFINE> GUI_NUMBYTES_DIV C:/CodeInspection/DisplayUnit/STemWin/Target/GUIConf.c 87 N DF OM - - - O
+<LIT> 4 - P C:/CodeInspection/DisplayUnit/STemWin/Target/GUIConf.c 87 33 N DN - F M
+<EXTD> GUI_X_Config C:/CodeInspection/DisplayUnit/STemWin/Target/GUIConf.c 104
+<DEFINE> GUI_X_Config C:/CodeInspection/DisplayUnit/STemWin/Target/GUIConf.c 104 N DR OF F X (.,.) -
+<DEFINE> GUI_X_Config C:/CodeInspection/DisplayUnit/STemWin/Target/GUIConf.c 104 N DF OF F X (.,.) -
+<DEFINE> aMemory C:/CodeInspection/DisplayUnit/STemWin/Target/GUIConf.c 108 N DC OV B N [14080,ul] S
+<DEFINE> aMemory C:/CodeInspection/DisplayUnit/STemWin/Target/GUIConf.c 108 N DF OV B N [14080,ul] S
+<RDEF> C Calls
+<R>C GUI_X_Config GUI_ALLOC_AssignMemory 112
+<RDEF> X Refers-to
+<R>X GUI_X_Config GUI_ALLOC_AssignMemory 112 R
+<R>C GUI_X_Config GUI_SetDefaultFont 116
+<R>X GUI_X_Config GUI_SetDefaultFont 116 R
+<R>X GUI_X_Config GUI_Font6x8 116 R
+<CTLG> GUI_X_Config 1
+<CTLG> 1 2
+<CTLG> 2 4
+<CTLGN> 104 117 117 117 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/STemWin/Target/GUIConf.c
+<S>STNAM  GUI_X_Config
+<S>STCYC  1
+<S>STMCC  0 (1:1)
+<S>STMIF  0
+<S>STSUB  2
+<S>STAKI  3
+<S>STLIN  12
+<S>STXLN  2
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  1
+<S>STPTH  1
+<S>STPDN  0.50   
+<S>STPBG  0
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  0
+<S>STAV1  7
+<S>STAV2  7
+<S>STAV3  11
+<S>STST1  3
+<S>STST2  3
+<S>STST3  2
+<S>STPAR  0
+<S>STCAL  2
+<S>STFN1  14
+<S>STFN2  9
+
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/STemWin/Target/GUIConf.c
+<S>STNAM  C:/CodeInspection/DisplayUnit/STemWin/Target/GUIConf.c
+<S>STNTB  NON-TOKEN BASED STATISTICS...
+<S>STSCT  0
+<S>STECT  1
+<S>STFNC  1
+<S>STFCO  2
+<S>STTKB  TOKEN BASED STATISTICS...
+<S>STVAR  8
+<S>STOPT  15
+<S>STOPN  8
+<S>STTOT  55
+<S>STZIP  85
+<S>STHAL  83
+<S>STSHN  254
+<S>STDIF  7.49   
+<S>STEFF  1863
+<S>STVOL  249
+<S>STDEV  0.31   
+<S>STBUG  0
+<S>STTPP  119
+<S>STTLN  5
+<S>STM20  10
+<S>STM21  44
+<S>STM22  3
+<S>STM28  18
+<S>STM33  10
+<S>STBCS  BASIC COCOMO STATISTICS...
+<S>STBMO  0.257  
+<S>STBMS  0.277  
+<S>STBME  0.280  
+<S>STTDO  1.491  
+<S>STTDS  1.594  
+<S>STTDE  1.663  
+<S>STCOM  COMMENT BASED STATISTICS...
+<S>STCDN  18.854 
+

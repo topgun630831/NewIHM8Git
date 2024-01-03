@@ -1,0 +1,1449 @@
+<RDEF> I Includes
+<R>I C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c C:/CodeInspection/DisplayUnit/STemWin/Board/Inc/ads7843_ts.h 3
+<R>I C:/CodeInspection/DisplayUnit/STemWin/Board/Inc/ads7843_ts.h C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h 5
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h 149
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cm4.h 183
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cm4.h C:/CodeInspection/DisplayUnit/qac/lib/stdint.h 44
+<R>I C:/CodeInspection/DisplayUnit/qac/lib/stdint.h C:/CodeInspection/DisplayUnit/qac/lib/ycheck.h 10
+<R>I C:/CodeInspection/DisplayUnit/qac/lib/stdint.h C:/CodeInspection/DisplayUnit/qac/lib/yvals.h 11
+<R>I C:/CodeInspection/DisplayUnit/qac/lib/yvals.h C:/CodeInspection/DisplayUnit/qac/lib/DLib_Defaults.h 42
+<R>I C:/CodeInspection/DisplayUnit/qac/lib/DLib_Defaults.h C:/CodeInspection/DisplayUnit/qac/lib/DLib_Product.h 50
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cm4.h C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cmInstr.h 210
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cmInstr.h C:/CodeInspection/DisplayUnit/qac/lib/cmsis_iar.h 65
+<R>I C:/CodeInspection/DisplayUnit/qac/lib/cmsis_iar.h C:/CodeInspection/DisplayUnit/qac/lib/intrinsics.h 22
+<R>I C:/CodeInspection/DisplayUnit/qac/lib/intrinsics.h C:/CodeInspection/DisplayUnit/qac/lib/yvals.h 14
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cm4.h C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cmFunc.h 211
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cmFunc.h C:/CodeInspection/DisplayUnit/qac/lib/cmsis_iar.h 65
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cm4.h C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cmSimd.h 212
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Include/core_cmSimd.h C:/CodeInspection/DisplayUnit/qac/lib/cmsis_iar.h 69
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h 184
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h C:/CodeInspection/DisplayUnit/qac/lib/stdint.h 185
+<R>I C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h 250
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h 46
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Inc/main.h 43
+<R>I C:/CodeInspection/DisplayUnit/Inc/main.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI.h 55
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_ConfDefaults.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_ConfDefaults.h C:/CodeInspection/DisplayUnit/STemWin/Target/GUIConf.h 60
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_Type.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_Type.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/LCD.h 60
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/LCD.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_ConfDefaults.h 56
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/LCD.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/Global.h 57
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_Type.h C:/CodeInspection/DisplayUnit/STemWin/Target/GUIConf.h 61
+<R>I C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI.h C:/CodeInspection/DisplayUnit/Middlewares/ST/STemWin/inc/GUI_Version.h 58
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h 244
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h C:/CodeInspection/DisplayUnit/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h 46
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h 47
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h C:/PRQA/QAC-8.1.2-R/include/ansi/stdio.h 48
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h 49
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h 248
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h 230
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h 252
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h 656
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h 256
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_crc.h 268
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_crc.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h 292
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h 313
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h 314
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_sram.h 296
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_sram.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_fsmc.h 47
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_fsmc.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h 336
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h 290
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc.h 344
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc_ex.h 634
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc_ex.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h 360
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h 364
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h 1289
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h 368
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 45
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h 388
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h 49
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 49
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h 121
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h 49
+<R>I C:/CodeInspection/DisplayUnit/Inc/stm32f4xx_hal_conf.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_hcd.h 392
+<R>I C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_hcd.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h 49
+<R>I C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c C:/CodeInspection/DisplayUnit/STemWin/Board/Inc/lcd.h 4
+<R>I C:/CodeInspection/DisplayUnit/STemWin/Board/Inc/lcd.h C:/CodeInspection/DisplayUnit/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h 4
+<EXTT> matrix C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 7
+<DEFINE> matrix C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 7 N DR OV F X {sMatrix} S
+<EXTT> display C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 8
+<DEFINE> display C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 8 N DR OV F X {sPOINT} S
+<LIT> 3 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 9 25 N DN ni F D
+<EXTT> ScreenSample C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 9
+<DEFINE> ScreenSample C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 9 N DR OV F X [3,{sPOINT}] S
+<LIT> 3 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 10 26 N DN ni F D
+<EXTD> DisplaySample C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 10
+<LIT> 50 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 11 31 N DN ni F A
+<LIT> 45 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 11 36 N DN ni F A
+<LIT> 290 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 12 35 N DN ni F A
+<LIT> 100 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 12 40 N DN ni F A
+<LIT> 160 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 13 31 N DN ni F A
+<LIT> 210 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 13 35 N DN ni F A
+<DEFINE> DisplaySample C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 10 N DR OV F X [3,{sPOINT}] S
+<DEFINE> DisplaySample C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 10 N DF OV F X [3,{sPOINT}] S
+<DEFINE> THRESHOLD C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 19 N DF OM - - - O
+<LIT> 2 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 19 19 N DN - F M
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 24 5 N DN - F P
+<DEFINE> TP_CS_PIN C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 25 N DF OM - - - O
+<DEFINE> TP_CS_PORT C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 26 N DF OM - - - O
+<DEFINE> TP_IRQ_PIN C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 27 N DF OM - - - O
+<DEFINE> TP_IRQ_PORT C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 28 N DF OM - - - O
+<DEFINE> TP_CS C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 31 N DF OM - - - F
+<DEFINE> TP_INT_IN C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 32 N DF OM - - - O
+<EXTD> DelayUS C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 35
+<DEFINE> cnt C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 35 N DC OV B N ui R
+<DEFINE> DelayUS C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 35 N DC OF F X (.,ui) -
+<DEFINE> DelayUS C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 35 N DF OF F X (.,ui) -
+<DEFINE> i C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 37 N DC OV B N ui -
+<DEFINE> i C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 37 N DF OV B N ui -
+<LIT> 4 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 38 13 N DN ni B X
+<CTLG> DelayUS 1
+<CTLG> 1 2
+<CTLG> 2 3
+<CTLG> 2 4
+<CTLG> 3 2
+<CTLG> 4 6
+<CTLGN> 36 39 39 39 40 40 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c
+<S>STNAM  DelayUS
+<S>STCYC  2
+<S>STMCC  0 (2:2)
+<S>STMIF  1
+<S>STSUB  0
+<S>STAKI  2
+<S>STLIN  3
+<S>STXLN  2
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  1
+<S>STPTH  2
+<S>STPDN  1.00   
+<S>STPBG  0
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  0
+<S>STAV1  4
+<S>STAV2  5
+<S>STAV3  8
+<S>STST1  4
+<S>STST2  3
+<S>STST3  2
+<S>STPAR  1
+<S>STCAL  0
+<S>STFN1  11
+<S>STFN2  6
+
+<EXTD> WR_CMD C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 43
+<DEFINE> cmd C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 43 N DC OV B N uc R
+<DEFINE> WR_CMD C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 43 N DC OF F X (.,uc) -
+<DEFINE> WR_CMD C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 43 N DF OF F X (.,uc) -
+<DEFINE> nErrStats C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 45 N DC OV B N {eHAL_StatusTypeDef} -
+<DEFINE> nErrStats C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 45 N DF OV B N {eHAL_StatusTypeDef} -
+<RDEF> C Calls
+<R>C WR_CMD HAL_SPI_Transmit 47
+<RDEF> X Refers-to
+<R>X WR_CMD HAL_SPI_Transmit 47 R
+<R>X WR_CMD hspi3 47 R
+<R>X WR_CMD hspi3 47 W
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 47 48 N DN ni B X
+<LIT> 1000 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 47 51 N DN ni B X
+<R>C WR_CMD printf 48
+<R>X WR_CMD printf 48 R
+<LIT> "wr err : 0x%x\n\r" - - C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 48 36 N SN [16,_c] B X
+<CTLG> WR_CMD 1
+<CTLG> 1 2
+<CTLG> 2 3
+<CTLG> 2 4
+<CTLG> 3 4
+<CTLG> 4 6
+<CTLGN> 44 48 48 48 49 49 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c
+<S>STNAM  WR_CMD
+<S>STCYC  2
+<S>STMCC  0 (2:2)
+<S>STMIF  1
+<S>STSUB  2
+<S>STAKI  4
+<S>STLIN  4
+<S>STXLN  2
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  1
+<S>STPTH  2
+<S>STPDN  1.00   
+<S>STPBG  0
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  0
+<S>STAV1  8
+<S>STAV2  8
+<S>STAV3  11
+<S>STST1  4
+<S>STST2  4
+<S>STST3  3
+<S>STPAR  1
+<S>STCAL  2
+<S>STFN1  20
+<S>STFN2  13
+
+<EXTD> RD_AD C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 51
+<DEFINE> RD_AD C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 51 N DC OF F X (ni,.) -
+<DEFINE> RD_AD C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 51 N DF OF F X (ni,.) -
+<LIT> 2 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 53 15 N DN ni B D
+<DEFINE> buf C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 53 N DC OV B N [2,uc] -
+<DEFINE> buf C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 53 N DF OV B N [2,uc] -
+<DEFINE> value C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 54 N DC OV B N ni -
+<DEFINE> value C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 54 N DF OV B N ni -
+<R>C RD_AD HAL_SPI_Receive 56
+<R>X RD_AD HAL_SPI_Receive 56 R
+<R>X RD_AD hspi3 56 R
+<R>X RD_AD hspi3 56 W
+<LIT> 2 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 56 32 N DN ni B X
+<LIT> 1000 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 56 35 N DN ni B X
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 57 27 N ON ni B X
+<LIT> 8 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 57 33 N DN ni B X
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 57 42 N DN ni B X
+<LIT> 3 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 57 49 N DN ni B X
+<CTLG> RD_AD 1
+<CTLG> 1 2
+<CTLG> 2 4
+<CTLGN> 52 59 59 59 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c
+<S>STNAM  RD_AD
+<S>STCYC  1
+<S>STMCC  0 (1:1)
+<S>STMIF  0
+<S>STSUB  1
+<S>STAKI  2
+<S>STLIN  7
+<S>STXLN  3
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  2
+<S>STPTH  1
+<S>STPDN  0.33   
+<S>STPBG  0
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  1
+<S>STAV1  9
+<S>STAV2  9
+<S>STAV3  16
+<S>STST1  5
+<S>STST2  5
+<S>STST3  3
+<S>STPAR  0
+<S>STCAL  1
+<S>STFN1  31
+<S>STFN2  18
+
+<EXTD> Read_X C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 63
+<DEFINE> Read_X C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 63 N DC OF F X (ni,.) -
+<DEFINE> Read_X C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 63 N DF OF F X (ni,.) -
+<DEFINE> i C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 65 N DC OV B N ni -
+<DEFINE> i C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 65 N DF OV B N ni -
+<R>C Read_X HAL_GPIO_WritePin 68
+<R>X Read_X HAL_GPIO_WritePin 68 R
+<R>C Read_X delayUs 70
+<R>X Read_X delayUs 70 R
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 70 13 N DN ni B X
+<R>C Read_X WR_CMD 71
+<R>X Read_X WR_CMD 71 R
+<R>C Read_X delayUs 72
+<R>X Read_X delayUs 72 R
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 72 13 N DN ni B X
+<R>C Read_X RD_AD 73
+<R>X Read_X RD_AD 73 R
+<R>C Read_X HAL_GPIO_WritePin 76
+<R>X Read_X HAL_GPIO_WritePin 76 R
+<CTLG> Read_X 1
+<CTLG> 1 2
+<CTLG> 2 4
+<CTLGN> 64 78 78 78 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c
+<S>STNAM  Read_X
+<S>STCYC  1
+<S>STMCC  0 (1:1)
+<S>STMIF  0
+<S>STSUB  6
+<S>STAKI  7
+<S>STLIN  14
+<S>STXLN  7
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  1
+<S>STPTH  1
+<S>STPDN  0.14   
+<S>STPBG  0
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  1
+<S>STAV1  5
+<S>STAV2  5
+<S>STAV3  6
+<S>STST1  8
+<S>STST2  8
+<S>STST3  7
+<S>STPAR  0
+<S>STCAL  4
+<S>STFN1  29
+<S>STFN2  18
+
+<EXTD> Read_Y C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 81
+<DEFINE> Read_Y C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 81 N DC OF F X (ni,.) -
+<DEFINE> Read_Y C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 81 N DF OF F X (ni,.) -
+<DEFINE> i C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 83 N DC OV B N ni -
+<DEFINE> i C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 83 N DF OV B N ni -
+<R>C Read_Y HAL_GPIO_WritePin 86
+<R>X Read_Y HAL_GPIO_WritePin 86 R
+<R>C Read_Y delayUs 88
+<R>X Read_Y delayUs 88 R
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 88 13 N DN ni B X
+<R>C Read_Y WR_CMD 89
+<R>X Read_Y WR_CMD 89 R
+<R>C Read_Y delayUs 90
+<R>X Read_Y delayUs 90 R
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 90 13 N DN ni B X
+<R>C Read_Y RD_AD 91
+<R>X Read_Y RD_AD 91 R
+<R>C Read_Y HAL_GPIO_WritePin 94
+<R>X Read_Y HAL_GPIO_WritePin 94 R
+<CTLG> Read_Y 1
+<CTLG> 1 2
+<CTLG> 2 4
+<CTLGN> 82 96 96 96 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c
+<S>STNAM  Read_Y
+<S>STCYC  1
+<S>STMCC  0 (1:1)
+<S>STMIF  0
+<S>STSUB  6
+<S>STAKI  7
+<S>STLIN  14
+<S>STXLN  7
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  1
+<S>STPTH  1
+<S>STPDN  0.14   
+<S>STPBG  0
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  1
+<S>STAV1  5
+<S>STAV2  5
+<S>STAV3  6
+<S>STST1  8
+<S>STST2  8
+<S>STST3  7
+<S>STPAR  0
+<S>STCAL  4
+<S>STFN1  29
+<S>STFN2  18
+
+<EXTD> TP_GetAdXY C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 99
+<DEFINE> x C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 99 N DC OV B N pni R
+<DEFINE> y C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 99 N DC OV B N pni R
+<DEFINE> TP_GetAdXY C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 99 N DC OF F X (.,pni,pni) -
+<DEFINE> TP_GetAdXY C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 99 N DF OF F X (.,pni,pni) -
+<DEFINE> adx C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 101 N DC OV B N ni -
+<DEFINE> adx C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 101 N DF OV B N ni -
+<DEFINE> ady C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 101 N DC OV B N ni -
+<DEFINE> ady C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 101 N DF OV B N ni -
+<R>C TP_GetAdXY Read_X 102
+<R>X TP_GetAdXY Read_X 102 R
+<R>C TP_GetAdXY delayUs 103
+<R>X TP_GetAdXY delayUs 103 R
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 103 13 N DN ni B X
+<R>C TP_GetAdXY Read_Y 104
+<R>X TP_GetAdXY Read_Y 104 R
+<CTLG> TP_GetAdXY 1
+<CTLG> 1 2
+<CTLG> 2 4
+<CTLGN> 100 107 107 107 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c
+<S>STNAM  TP_GetAdXY
+<S>STCYC  1
+<S>STMCC  0 (1:1)
+<S>STMIF  0
+<S>STSUB  3
+<S>STAKI  4
+<S>STLIN  6
+<S>STXLN  5
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  2
+<S>STPTH  1
+<S>STPDN  0.20   
+<S>STPBG  0
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  0
+<S>STAV1  4
+<S>STAV2  4
+<S>STAV3  6
+<S>STST1  7
+<S>STST2  7
+<S>STST3  5
+<S>STPAR  2
+<S>STCAL  3
+<S>STFN1  22
+<S>STFN2  12
+
+<EXTD> TP_DrawPoint C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 109
+<DEFINE> Xpos C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 109 N DC OV B N us R
+<DEFINE> Ypos C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 109 N DC OV B N us R
+<DEFINE> TP_DrawPoint C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 109 N DR OF F X (.,us,us) -
+<DEFINE> TP_DrawPoint C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 109 N DF OF F X (.,us,us) -
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 111 5 N ON - B P
+<R>C TP_DrawPoint DrawCross 117
+<R>X TP_DrawPoint DrawCross 117 R
+<CTLG> TP_DrawPoint 1
+<CTLG> 1 2
+<CTLG> 2 4
+<CTLGN> 110 119 119 119 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c
+<S>STNAM  TP_DrawPoint
+<S>STCYC  1
+<S>STMCC  0 (1:1)
+<S>STMIF  0
+<S>STSUB  1
+<S>STAKI  2
+<S>STLIN  8
+<S>STXLN  1
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  0
+<S>STPTH  1
+<S>STPDN  1.00   
+<S>STPBG  0
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  0
+<S>STAV1  16
+<S>STAV2  16
+<S>STAV3  16
+<S>STST1  1
+<S>STST2  1
+<S>STST3  1
+<S>STPAR  2
+<S>STCAL  1
+<S>STFN1  12
+<S>STFN2  4
+
+<EXTD> DrawCross C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 122
+<DEFINE> Xpos C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 122 N DC OV B N us R
+<DEFINE> Ypos C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 122 N DC OV B N us R
+<DEFINE> DrawCross C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 122 N DR OF F X (.,us,us) -
+<DEFINE> DrawCross C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 122 N DF OF F X (.,us,us) -
+<R>C DrawCross Draw_Line 124
+<R>X DrawCross Draw_Line 124 R
+<LIT> 15 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 124 18 N DN ni B X
+<LIT> 2 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 124 33 N DN ni B X
+<R>C DrawCross Draw_Line 125
+<R>X DrawCross Draw_Line 125 R
+<LIT> 2 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 125 18 N DN ni B X
+<LIT> 15 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 125 32 N DN ni B X
+<R>C DrawCross Draw_Line 126
+<R>X DrawCross Draw_Line 126 R
+<LIT> 15 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 126 24 N DN ni B X
+<LIT> 2 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 126 39 N DN ni B X
+<R>C DrawCross Draw_Line 127
+<R>X DrawCross Draw_Line 127 R
+<LIT> 2 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 127 24 N DN ni B X
+<LIT> 15 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 127 38 N DN ni B X
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 129 5 N ON - B P
+<CTLG> DrawCross 1
+<CTLG> 1 2
+<CTLG> 2 4
+<CTLGN> 123 142 142 142 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c
+<S>STNAM  DrawCross
+<S>STCYC  1
+<S>STMCC  0 (1:1)
+<S>STMIF  0
+<S>STSUB  4
+<S>STAKI  5
+<S>STLIN  18
+<S>STXLN  4
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  0
+<S>STPTH  1
+<S>STPDN  0.25   
+<S>STPBG  0
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  0
+<S>STAV1  18
+<S>STAV2  18
+<S>STAV3  18
+<S>STST1  4
+<S>STST2  4
+<S>STST3  4
+<S>STPAR  2
+<S>STCAL  1
+<S>STFN1  42
+<S>STFN2  33
+
+<EXTD> Read_Ads7843 C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 145
+<DEFINE> Read_Ads7843 C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 145 N DR OF F X (p{sPOINT},.) -
+<DEFINE> Read_Ads7843 C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 145 N DF OF F X (p{sPOINT},.) -
+<DEFINE> screen C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 147 N DC OV B N {sPOINT} S
+<DEFINE> screen C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 147 N DF OV B N {sPOINT} S
+<DEFINE> m0 C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 148 N DC OV B N ni -
+<DEFINE> m0 C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 148 N DF OV B N ni -
+<DEFINE> m1 C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 148 N DC OV B N ni -
+<DEFINE> m1 C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 148 N DF OV B N ni -
+<DEFINE> m2 C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 148 N DC OV B N ni -
+<DEFINE> m2 C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 148 N DF OV B N ni -
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 148 21 N DN ni B D
+<DEFINE> TP_X C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 148 N DC OV B N [1,ni] -
+<DEFINE> TP_X C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 148 N DF OV B N [1,ni] -
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 148 29 N DN ni B D
+<DEFINE> TP_Y C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 148 N DC OV B N [1,ni] -
+<DEFINE> TP_Y C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 148 N DF OV B N [1,ni] -
+<LIT> 3 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 148 37 N DN ni B D
+<DEFINE> temp C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 148 N DC OV B N [3,ni] -
+<DEFINE> temp C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 148 N DF OV B N [3,ni] -
+<DEFINE> count C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 149 N DC OV B N uc -
+<DEFINE> count C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 149 N DF OV B N uc -
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 149 17 N ON ni B O
+<LIT> 2 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 150 14 N DN ni B D
+<LIT> 9 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 150 17 N DN ni B D
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 150 22 N ON ni B A
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 150 26 N ON ni B A
+<DEFINE> buffer C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 150 N DC OV B N [2,[9,ni]] -
+<DEFINE> buffer C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 150 N DF OV B N [2,[9,ni]] -
+<R>C Read_Ads7843 TP_GetAdXY 154
+<R>X Read_Ads7843 TP_GetAdXY 154 R
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 155 12 N ON ni B X
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 155 29 N ON ni B X
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 156 12 N DN ni B X
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 156 29 N ON ni B X
+<LIT> 9 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 159 31 N DN ni B X
+<R>C Read_Ads7843 HAL_GPIO_ReadPin 159
+<R>X Read_Ads7843 HAL_GPIO_ReadPin 159 R
+<LIT> 9 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 162 13 N DN ni B X
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 165 9 N ON ni B X
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 165 20 N ON ni B X
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 165 23 N ON ni B X
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 165 33 N ON ni B X
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 165 36 N DN ni B X
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 165 46 N ON ni B X
+<LIT> 2 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 165 49 N DN ni B X
+<LIT> 3 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 165 53 N DN ni B X
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 166 10 N DN ni B X
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 166 21 N ON ni B X
+<LIT> 3 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 166 24 N DN ni B X
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 166 34 N ON ni B X
+<LIT> 4 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 166 37 N DN ni B X
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 166 47 N ON ni B X
+<LIT> 5 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 166 50 N DN ni B X
+<LIT> 3 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 166 54 N DN ni B X
+<LIT> 2 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 167 10 N DN ni B X
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 167 21 N ON ni B X
+<LIT> 6 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 167 24 N DN ni B X
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 167 34 N ON ni B X
+<LIT> 7 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 167 37 N DN ni B X
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 167 47 N ON ni B X
+<LIT> 8 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 167 50 N DN ni B X
+<LIT> 3 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 167 54 N DN ni B X
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 169 13 N ON ni B X
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 169 21 N DN ni B X
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 170 13 N DN ni B X
+<LIT> 2 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 170 21 N DN ni B X
+<LIT> 2 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 171 13 N DN ni B X
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 171 21 N ON ni B X
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 173 11 N ON ni B X
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 174 11 N ON ni B X
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 175 11 N ON ni B X
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 179 16 N ON ni B X
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 185 24 N ON ni B X
+<LIT> 2 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 185 32 N DN ni B X
+<LIT> 2 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 185 36 N DN ni B X
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 187 24 N ON ni B X
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 187 32 N DN ni B X
+<LIT> 2 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 187 36 N DN ni B X
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 190 22 N ON ni B X
+<LIT> 2 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 190 30 N DN ni B X
+<LIT> 2 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 190 34 N DN ni B X
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 192 22 N DN ni B X
+<LIT> 2 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 192 30 N DN ni B X
+<LIT> 2 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 192 34 N DN ni B X
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 195 8 N ON ni B X
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 195 19 N DN ni B X
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 195 22 N ON ni B X
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 195 32 N DN ni B X
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 195 35 N DN ni B X
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 195 45 N DN ni B X
+<LIT> 2 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 195 48 N DN ni B X
+<LIT> 3 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 195 52 N DN ni B X
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 196 10 N DN ni B X
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 196 21 N DN ni B X
+<LIT> 3 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 196 24 N DN ni B X
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 196 34 N DN ni B X
+<LIT> 4 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 196 37 N DN ni B X
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 196 47 N DN ni B X
+<LIT> 5 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 196 50 N DN ni B X
+<LIT> 3 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 196 54 N DN ni B X
+<LIT> 2 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 197 10 N DN ni B X
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 197 21 N DN ni B X
+<LIT> 6 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 197 24 N DN ni B X
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 197 34 N DN ni B X
+<LIT> 7 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 197 37 N DN ni B X
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 197 47 N DN ni B X
+<LIT> 8 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 197 50 N DN ni B X
+<LIT> 3 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 197 54 N DN ni B X
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 198 13 N ON ni B X
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 198 21 N DN ni B X
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 199 13 N DN ni B X
+<LIT> 2 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 199 21 N DN ni B X
+<LIT> 2 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 200 13 N DN ni B X
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 200 21 N ON ni B X
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 201 11 N ON ni B X
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 202 11 N ON ni B X
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 203 11 N ON ni B X
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 204 57 N ON ni B X
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 209 24 N ON ni B X
+<LIT> 2 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 209 32 N DN ni B X
+<LIT> 2 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 209 36 N DN ni B X
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 211 24 N ON ni B X
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 211 32 N DN ni B X
+<LIT> 2 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 211 36 N DN ni B X
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 214 23 N ON ni B X
+<LIT> 2 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 214 31 N DN ni B X
+<LIT> 2 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 214 35 N DN ni B X
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 216 23 N DN ni B X
+<LIT> 2 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 216 31 N DN ni B X
+<LIT> 2 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 216 35 N DN ni B X
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 220 10 N ON ni B X
+<CTLG> Read_Ads7843 1
+<CTLG> 1 2
+<CTLG> 2 3
+<CTLG> 3 1
+<CTLG> 3 4
+<CTLG> 4 5
+<CTLG> 4 33
+<CTLG> 5 6
+<CTLG> 6 7
+<CTLG> 6 9
+<CTLG> 7 35
+<CTLG> 9 10
+<CTLG> 9 14
+<CTLG> 10 11
+<CTLG> 10 12
+<CTLG> 11 13
+<CTLG> 12 13
+<CTLG> 13 18
+<CTLG> 14 15
+<CTLG> 14 16
+<CTLG> 15 17
+<CTLG> 16 17
+<CTLG> 17 18
+<CTLG> 18 19
+<CTLG> 19 20
+<CTLG> 19 22
+<CTLG> 20 35
+<CTLG> 22 23
+<CTLG> 22 27
+<CTLG> 23 24
+<CTLG> 23 25
+<CTLG> 24 26
+<CTLG> 25 26
+<CTLG> 26 31
+<CTLG> 27 28
+<CTLG> 27 29
+<CTLG> 28 30
+<CTLG> 29 30
+<CTLG> 30 31
+<CTLG> 31 35
+<CTLG> 33 35
+<CTLGN> 146 152 152 152 162 177 177 179 177 182 184 184 186 182 189 189 191 189 204 204 204 204 206 208 208 210 206 213 213 215 213 218 162 220 179 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c
+<S>STNAM  Read_Ads7843
+<S>STCYC  11
+<S>STMCC  5 (11:16)
+<S>STMIF  3
+<S>STSUB  2
+<S>STAKI  13
+<S>STLIN  74
+<S>STXLN  50
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  3
+<S>STKDN  0.06   
+<S>STUNV  0
+<S>STLCT  9
+<S>STPTH  130
+<S>STPDN  2.60   
+<S>STPBG  2
+<S>STLOP  5
+<S>STM07  1
+<S>STM19  4
+<S>STAV1  11
+<S>STAV2  13
+<S>STAV3  15
+<S>STST1  58
+<S>STST2  53
+<S>STST3  44
+<S>STPAR  0
+<S>STCAL  2
+<S>STFN1  438
+<S>STFN2  254
+
+<EXTD> setCalibrationMatrix C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 224
+<DEFINE> displayPtr C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 224 N DC OV B N p{sPOINT} R
+<DEFINE> screenPtr C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 224 N DC OV B N p{sPOINT} R
+<DEFINE> matrixPtr C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 224 N DC OV B N p{sMatrix} R
+<DEFINE> setCalibrationMatrix C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 224 N DR OF F X ({eFunctionalState},p{sPOINT},p{sPOINT},p{sMatrix}) -
+<DEFINE> setCalibrationMatrix C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 224 N DF OF F X ({eFunctionalState},p{sPOINT},p{sPOINT},p{sMatrix}) -
+<DEFINE> retTHRESHOLD C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 227 N DC OV B N {eFunctionalState} -
+<DEFINE> retTHRESHOLD C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 227 N DF OV B N {eFunctionalState} -
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 229 36 N ON ni B X
+<LIT> 2 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 229 53 N DN ni B X
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 229 72 N DN ni B X
+<LIT> 2 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 229 89 N DN ni B X
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 229 110 N DN ni B X
+<LIT> 2 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 229 127 N DN ni B X
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 229 146 N ON ni B X
+<LIT> 2 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 229 163 N DN ni B X
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 230 29 N ON ni B X
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 236 34 N ON ni B X
+<LIT> 2 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 236 52 N DN ni B X
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 236 71 N DN ni B X
+<LIT> 2 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 236 88 N DN ni B X
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 236 110 N DN ni B X
+<LIT> 2 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 236 128 N DN ni B X
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 236 147 N ON ni B X
+<LIT> 2 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 236 164 N DN ni B X
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 237 33 N ON ni B X
+<LIT> 2 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 237 50 N DN ni B X
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 237 70 N DN ni B X
+<LIT> 2 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 237 88 N DN ni B X
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 237 110 N ON ni B X
+<LIT> 2 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 237 128 N DN ni B X
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 237 147 N DN ni B X
+<LIT> 2 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 237 164 N DN ni B X
+<LIT> 2 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 238 32 N DN ni B X
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 238 50 N DN ni B X
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 238 67 N DN ni B X
+<LIT> 2 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 238 85 N DN ni B X
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 238 103 N ON ni B X
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 238 121 N ON ni B X
+<LIT> 2 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 238 139 N DN ni B X
+<LIT> 2 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 238 156 N DN ni B X
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 238 174 N ON ni B X
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 238 192 N DN ni B X
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 238 210 N DN ni B X
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 238 228 N ON ni B X
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 238 245 N ON ni B X
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 238 263 N DN ni B X
+<LIT> 2 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 238 281 N DN ni B X
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 239 34 N ON ni B X
+<LIT> 2 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 239 52 N DN ni B X
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 239 71 N DN ni B X
+<LIT> 2 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 239 88 N DN ni B X
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 239 110 N DN ni B X
+<LIT> 2 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 239 128 N DN ni B X
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 239 147 N ON ni B X
+<LIT> 2 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 239 164 N DN ni B X
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 240 33 N ON ni B X
+<LIT> 2 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 240 50 N DN ni B X
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 240 70 N DN ni B X
+<LIT> 2 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 240 88 N DN ni B X
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 240 110 N ON ni B X
+<LIT> 2 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 240 128 N DN ni B X
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 240 147 N DN ni B X
+<LIT> 2 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 240 164 N DN ni B X
+<LIT> 2 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 241 32 N DN ni B X
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 241 50 N DN ni B X
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 241 67 N DN ni B X
+<LIT> 2 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 241 85 N DN ni B X
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 241 103 N ON ni B X
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 241 122 N ON ni B X
+<LIT> 2 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 241 140 N DN ni B X
+<LIT> 2 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 241 157 N DN ni B X
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 241 175 N ON ni B X
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 241 193 N DN ni B X
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 241 211 N DN ni B X
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 241 229 N ON ni B X
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 241 246 N ON ni B X
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 241 264 N DN ni B X
+<LIT> 2 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 241 282 N DN ni B X
+<CTLG> setCalibrationMatrix 1
+<CTLG> 1 2
+<CTLG> 2 3
+<CTLG> 2 4
+<CTLG> 3 5
+<CTLG> 4 5
+<CTLG> 5 7
+<CTLGN> 225 230 230 230 234 243 243 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c
+<S>STNAM  setCalibrationMatrix
+<S>STCYC  2
+<S>STMCC  0 (2:2)
+<S>STMIF  1
+<S>STSUB  0
+<S>STAKI  2
+<S>STLIN  18
+<S>STXLN  12
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  1
+<S>STPTH  2
+<S>STPDN  0.17   
+<S>STPBG  0
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  1
+<S>STAV1  47
+<S>STAV2  56
+<S>STAV3  61
+<S>STST1  13
+<S>STST2  11
+<S>STST3  10
+<S>STPAR  3
+<S>STCAL  0
+<S>STFN1  386
+<S>STFN2  233
+
+<EXTD> getDisplayPoint C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 246
+<DEFINE> displayPtr C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 246 N DC OV B N p{sPOINT} R
+<DEFINE> screenPtr C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 246 N DC OV B N p{sPOINT} R
+<DEFINE> matrixPtr C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 246 N DC OV B N p{sMatrix} R
+<DEFINE> getDisplayPoint C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 246 N DR OF F X ({eFunctionalState},p{sPOINT},p{sPOINT},p{sMatrix}) -
+<DEFINE> getDisplayPoint C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 246 N DF OF F X ({eFunctionalState},p{sPOINT},p{sPOINT},p{sMatrix}) -
+<DEFINE> retTHRESHOLD C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 248 N DC OV B N {eFunctionalState} -
+<DEFINE> retTHRESHOLD C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 248 N DF OV B N {eFunctionalState} -
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 251 29 N ON ni B X
+<CTLG> getDisplayPoint 1
+<CTLG> 1 2
+<CTLG> 1 3
+<CTLG> 2 4
+<CTLG> 3 4
+<CTLG> 4 6
+<CTLGN> 247 251 251 258 262 262 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c
+<S>STNAM  getDisplayPoint
+<S>STCYC  2
+<S>STMCC  0 (2:2)
+<S>STMIF  1
+<S>STSUB  0
+<S>STAKI  2
+<S>STLIN  15
+<S>STXLN  7
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  1
+<S>STPTH  2
+<S>STPDN  0.29   
+<S>STPBG  0
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  1
+<S>STAV1  13
+<S>STAV2  17
+<S>STAV3  21
+<S>STST1  8
+<S>STST2  6
+<S>STST3  5
+<S>STPAR  3
+<S>STCAL  0
+<S>STFN1  68
+<S>STFN2  39
+
+<EXTD> TouchPanel_Calibrate C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 265
+<DEFINE> TouchPanel_Calibrate C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 265 N DR OF F X (.,.) -
+<DEFINE> TouchPanel_Calibrate C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 265 N DF OF F X (.,.) -
+<DEFINE> i C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 267 N DC OV B N uc -
+<DEFINE> i C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 267 N DF OV B N uc -
+<DEFINE> Ptr C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 268 N DC OV B N p{sPOINT} -
+<DEFINE> Ptr C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 268 N DF OV B N p{sPOINT} -
+<LIT> 60 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 269 17 N DN ni B D
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 269 22 N ON ni B A
+<DEFINE> txtbuf C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 269 N DC OV B N [60,_c] -
+<DEFINE> txtbuf C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 269 N DF OV B N [60,_c] -
+<R>C TouchPanel_Calibrate LCD_Clear 271
+<R>X TouchPanel_Calibrate LCD_Clear 271 R
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 271 15 N ON ni B X
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 271 18 N ON ni B X
+<LIT> 320 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 271 21 N DN ni B X
+<LIT> 480 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 271 26 N DN ni B X
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 273 11 N ON ni B X
+<LIT> 3 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 273 15 N DN ni B X
+<R>C TouchPanel_Calibrate Display_String 275
+<R>X TouchPanel_Calibrate Display_String 275 R
+<LIT> 44 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 275 24 N DN ni B X
+<LIT> 10 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 275 28 N DN ni B X
+<LIT> "Touch crosshair to calibrate" - - C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 275 39 N SN [29,_c] B X
+<R>C TouchPanel_Calibrate HAL_Delay 276
+<R>X TouchPanel_Calibrate HAL_Delay 276 R
+<LIT> 300 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 276 19 N DN ni B X
+<R>C TouchPanel_Calibrate DrawCross 277
+<R>X TouchPanel_Calibrate DrawCross 277 R
+<R>X TouchPanel_Calibrate DisplaySample 277 R
+<R>X TouchPanel_Calibrate DisplaySample 277 R
+<R>C TouchPanel_Calibrate Read_Ads7843 280
+<R>X TouchPanel_Calibrate Read_Ads7843 280 R
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 282 30 N ON ni B X
+<R>X TouchPanel_Calibrate ScreenSample 284 W
+<R>X TouchPanel_Calibrate ScreenSample 285 W
+<R>C TouchPanel_Calibrate sprintf 287
+<R>X TouchPanel_Calibrate sprintf 287 R
+<R>X TouchPanel_Calibrate ScreenSample 287 R
+<R>X TouchPanel_Calibrate ScreenSample 287 W
+<R>X TouchPanel_Calibrate ScreenSample 287 R
+<R>X TouchPanel_Calibrate ScreenSample 287 W
+<LIT> "%d:X:%d, Y:%d" - - C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 287 25 N SN [14,_c] B X
+<R>C TouchPanel_Calibrate Display_String 288
+<R>X TouchPanel_Calibrate Display_String 288 R
+<LIT> 44 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 288 24 N DN ni B X
+<LIT> 30 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 288 29 N DN ni B X
+<LIT> 10 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 288 35 N DN ni B X
+<R>C TouchPanel_Calibrate HAL_Delay 291
+<R>X TouchPanel_Calibrate HAL_Delay 291 R
+<LIT> 3000 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 291 15 N DN ni B X
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 293 45 N ON ni B X
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 293 62 N ON ni B X
+<R>C TouchPanel_Calibrate setCalibrationMatrix 293
+<R>X TouchPanel_Calibrate setCalibrationMatrix 293 R
+<R>X TouchPanel_Calibrate DisplaySample 293 R
+<R>X TouchPanel_Calibrate DisplaySample 293 W
+<R>X TouchPanel_Calibrate ScreenSample 293 R
+<R>X TouchPanel_Calibrate ScreenSample 293 W
+<R>X TouchPanel_Calibrate matrix 293 R
+<R>X TouchPanel_Calibrate matrix 293 W
+<R>C TouchPanel_Calibrate LCD_Clear 295
+<R>X TouchPanel_Calibrate LCD_Clear 295 R
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 295 19 N ON ni B X
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 295 22 N ON ni B X
+<LIT> 320 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 295 25 N DN ni B X
+<LIT> 480 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 295 30 N DN ni B X
+<R>C TouchPanel_Calibrate LCD_Clear 299
+<R>X TouchPanel_Calibrate LCD_Clear 299 R
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 299 19 N ON ni B X
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 299 22 N ON ni B X
+<LIT> 320 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 299 25 N DN ni B X
+<LIT> 480 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 299 30 N DN ni B X
+<CTLG> TouchPanel_Calibrate 1
+<CTLG> 1 2
+<CTLG> 2 3
+<CTLG> 3 4
+<CTLG> 3 10
+<CTLG> 4 5
+<CTLG> 5 6
+<CTLG> 6 7
+<CTLG> 7 5
+<CTLG> 7 8
+<CTLG> 8 9
+<CTLG> 9 3
+<CTLG> 10 11
+<CTLG> 11 12
+<CTLG> 11 13
+<CTLG> 12 14
+<CTLG> 13 14
+<CTLG> 14 16
+<CTLGN> 266 273 273 273 278 278 278 278 273 273 293 293 293 297 302 302 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c
+<S>STNAM  TouchPanel_Calibrate
+<S>STCYC  4
+<S>STMCC  0 (4:4)
+<S>STMIF  2
+<S>STSUB  11
+<S>STAKI  15
+<S>STLIN  35
+<S>STXLN  18
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  3
+<S>STPTH  6
+<S>STPDN  0.33   
+<S>STPBG  1
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  0
+<S>STAV1  10
+<S>STAV2  12
+<S>STAV3  15
+<S>STST1  22
+<S>STST2  18
+<S>STST3  15
+<S>STPAR  0
+<S>STCAL  7
+<S>STFN1  143
+<S>STFN2  84
+
+<EXTD> tempx C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 305
+<DEFINE> tempx C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 305 N DC OV F X us S
+<DEFINE> tempx C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 305 N DF OV F X us S
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 305 16 N ON ni F O
+<EXTD> tempy C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 305
+<DEFINE> tempy C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 305 N DC OV F X us S
+<DEFINE> tempy C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 305 N DF OV F X us S
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 305 25 N ON ni F O
+<EXTD> TS_Get_Coordinate_Display C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 306
+<DEFINE> TS_Get_Coordinate_Display C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 306 N DR OF F X (.,) -
+<DEFINE> TS_Get_Coordinate_Display C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 306 N DF OF F X (.,) -
+<LIT> 20 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 308 18 N DN ni B D
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 308 23 N ON ni B A
+<DEFINE> temp C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 308 N DC OV B N [20,_c] -
+<DEFINE> temp C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 308 N DF OV B N [20,_c] -
+<R>C TS_Get_Coordinate_Display getDisplayPoint 310
+<R>X TS_Get_Coordinate_Display getDisplayPoint 310 R
+<R>X TS_Get_Coordinate_Display display 310 R
+<R>X TS_Get_Coordinate_Display display 310 W
+<R>C TS_Get_Coordinate_Display Read_Ads7843 310
+<R>X TS_Get_Coordinate_Display Read_Ads7843 310 R
+<R>X TS_Get_Coordinate_Display matrix 310 R
+<R>X TS_Get_Coordinate_Display matrix 310 W
+<R>C TS_Get_Coordinate_Display TP_DrawPoint 311
+<R>X TS_Get_Coordinate_Display TP_DrawPoint 311 R
+<R>X TS_Get_Coordinate_Display display 311 R
+<R>X TS_Get_Coordinate_Display display 311 R
+<R>X TS_Get_Coordinate_Display tempx 312 R
+<R>X TS_Get_Coordinate_Display display 312 R
+<R>X TS_Get_Coordinate_Display tempy 312 R
+<R>X TS_Get_Coordinate_Display display 312 R
+<R>C TS_Get_Coordinate_Display sprintf 314
+<R>X TS_Get_Coordinate_Display sprintf 314 R
+<R>X TS_Get_Coordinate_Display tempx 314 R
+<R>X TS_Get_Coordinate_Display tempy 314 R
+<LIT> "X:%3d, Y:%3d" - - C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 314 22 N SN [13,_c] B X
+<R>C TS_Get_Coordinate_Display LCD_Clear 315
+<R>X TS_Get_Coordinate_Display LCD_Clear 315 R
+<LIT> 10 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 315 19 N DN ni B X
+<LIT> 10 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 315 23 N DN ni B X
+<LIT> 100 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 315 27 N DN ni B X
+<LIT> 100 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 315 32 N DN ni B X
+<R>C TS_Get_Coordinate_Display Display_String 316
+<R>X TS_Get_Coordinate_Display Display_String 316 R
+<LIT> 10 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 316 24 N DN ni B X
+<LIT> 10 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 316 28 N DN ni B X
+<R>X TS_Get_Coordinate_Display display 317 R
+<R>X TS_Get_Coordinate_Display tempx 317 W
+<R>X TS_Get_Coordinate_Display display 318 R
+<R>X TS_Get_Coordinate_Display tempy 318 W
+<CTLG> TS_Get_Coordinate_Display 1
+<CTLG> 1 2
+<CTLG> 2 3
+<CTLG> 2 4
+<CTLG> 3 4
+<CTLG> 4 6
+<CTLGN> 307 312 312 312 320 320 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c
+<S>STNAM  TS_Get_Coordinate_Display
+<S>STCYC  2
+<S>STMCC  1 (2:3)
+<S>STMIF  1
+<S>STSUB  6
+<S>STAKI  8
+<S>STLIN  12
+<S>STXLN  9
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  1
+<S>STPTH  2
+<S>STPDN  0.22   
+<S>STPBG  0
+<S>STLOP  1
+<S>STM07  1
+<S>STM19  0
+<S>STAV1  10
+<S>STAV2  11
+<S>STAV3  13
+<S>STST1  10
+<S>STST2  9
+<S>STST3  8
+<S>STPAR  0
+<S>STCAL  6
+<S>STFN1  64
+<S>STFN2  40
+
+<DEFINE> emWin_Use C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 326 N DF OM - - - O
+<EXTD> BSP_TS_DetectTouch C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 335
+<DEFINE> BSP_TS_DetectTouch C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 335 N DC OF F X (uc,) -
+<DEFINE> BSP_TS_DetectTouch C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 335 N DF OF F X (uc,) -
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 337 5 N ON - B P
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 344 12 N DN ni B X
+<CTLG> BSP_TS_DetectTouch 1
+<CTLG> 1 3
+<CTLGN> 336 344 344 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c
+<S>STNAM  BSP_TS_DetectTouch
+<S>STCYC  1
+<S>STMCC  0 (1:1)
+<S>STMIF  0
+<S>STSUB  0
+<S>STAKI  1
+<S>STLIN  9
+<S>STXLN  1
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  0
+<S>STPTH  1
+<S>STPDN  1.00   
+<S>STPBG  0
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  1
+<S>STAV1  12
+<S>STAV2  12
+<S>STAV3  12
+<S>STST1  1
+<S>STST2  1
+<S>STST3  1
+<S>STPAR  0
+<S>STCAL  0
+<S>STFN1  10
+<S>STFN2  2
+
+<EXTD> BSP_TS_GetXY C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 348
+<DEFINE> X C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 348 N DC OV B N pus R
+<DEFINE> Y C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 348 N DC OV B N pus R
+<DEFINE> BSP_TS_GetXY C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 348 N DC OF F X (.,pus,pus) -
+<DEFINE> BSP_TS_GetXY C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 348 N DF OF F X (.,pus,pus) -
+<R>C BSP_TS_GetXY TP_GetAdXY 350
+<R>X BSP_TS_GetXY TP_GetAdXY 350 R
+<CTLG> BSP_TS_GetXY 1
+<CTLG> 1 2
+<CTLG> 2 4
+<CTLGN> 349 351 351 351 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c
+<S>STNAM  BSP_TS_GetXY
+<S>STCYC  1
+<S>STMCC  0 (1:1)
+<S>STMIF  0
+<S>STSUB  1
+<S>STAKI  2
+<S>STLIN  1
+<S>STXLN  1
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  0
+<S>STPTH  1
+<S>STPDN  1.00   
+<S>STPBG  0
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  0
+<S>STAV1  17
+<S>STAV2  17
+<S>STAV3  17
+<S>STST1  1
+<S>STST2  1
+<S>STST3  1
+<S>STPAR  2
+<S>STCAL  1
+<S>STFN1  14
+<S>STFN2  3
+
+<EXTD> BSP_TS_GetState C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 357
+<DEFINE> TsState C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 357 N DC OV B N p{sTS_StateTypeDef} R
+<DEFINE> BSP_TS_GetState C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 357 N DR OF F X (.,p{sTS_StateTypeDef}) -
+<DEFINE> BSP_TS_GetState C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 357 N DF OF F X (.,p{sTS_StateTypeDef}) -
+<DEFINE> _x C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 359 N DC OV B N ui S
+<DEFINE> _x C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 359 N DF OV B N ui S
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 359 24 N ON ni B O
+<DEFINE> _y C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 359 N DC OV B N ui S
+<DEFINE> _y C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 359 N DF OV B N ui S
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 359 32 N ON ni B O
+<DEFINE> xDiff C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 360 N DC OV B N us -
+<DEFINE> xDiff C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 360 N DF OV B N us -
+<DEFINE> yDiff C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 360 N DC OV B N us -
+<DEFINE> yDiff C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 360 N DF OV B N us -
+<DEFINE> x C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 360 N DC OV B N us -
+<DEFINE> x C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 360 N DF OV B N us -
+<DEFINE> y C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 360 N DC OV B N us -
+<DEFINE> y C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 360 N DF OV B N us -
+<DEFINE> xr C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 360 N DC OV B N us -
+<DEFINE> xr C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 360 N DF OV B N us -
+<DEFINE> yr C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 360 N DC OV B N us -
+<DEFINE> yr C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 360 N DF OV B N us -
+<R>C BSP_TS_GetState BSP_TS_DetectTouch 362
+<R>X BSP_TS_GetState BSP_TS_DetectTouch 362 R
+<R>C BSP_TS_GetState BSP_TS_GetXY 366
+<R>X BSP_TS_GetState BSP_TS_GetXY 366 R
+<LIT> 360 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 369 10 N DN ni B X
+<LIT> 11 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 372 14 N DN ni B X
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 375 14 N ON ni B X
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 377 12 N ON ni B X
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 381 26 N DN ni B X
+<LIT> 3000 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 388 13 N DN ni B X
+<LIT> 3870 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 390 11 N DN ni B X
+<LIT> 3800 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 394 11 N DN ni B X
+<LIT> 15 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 398 14 N DN ni B X
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 401 14 N ON ni B X
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 403 12 N ON ni B X
+<LIT> 1 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 407 26 N DN ni B X
+<LIT> 5 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 416 25 N DN ni B X
+<CTLG> BSP_TS_GetState 1
+<CTLG> 1 2
+<CTLG> 2 3
+<CTLG> 2 25
+<CTLG> 3 4
+<CTLG> 4 5
+<CTLG> 4 6
+<CTLG> 5 10
+<CTLG> 6 7
+<CTLG> 6 8
+<CTLG> 7 9
+<CTLG> 8 9
+<CTLG> 9 10
+<CTLG> 10 11
+<CTLG> 11 12
+<CTLG> 11 13
+<CTLG> 12 14
+<CTLG> 13 14
+<CTLG> 14 15
+<CTLG> 15 16
+<CTLG> 15 17
+<CTLG> 16 21
+<CTLG> 17 18
+<CTLG> 17 19
+<CTLG> 18 20
+<CTLG> 19 20
+<CTLG> 20 21
+<CTLG> 21 22
+<CTLG> 22 23
+<CTLG> 22 24
+<CTLG> 23 24
+<CTLG> 24 25
+<CTLG> 25 27
+<CTLGN> 358 364 364 375 375 375 379 379 383 379 388 388 388 392 401 401 401 405 405 409 405 416 416 416 364 428 428 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c
+<S>STNAM  BSP_TS_GetState
+<S>STCYC  8
+<S>STMCC  0 (8:8)
+<S>STMIF  3
+<S>STSUB  2
+<S>STAKI  10
+<S>STLIN  69
+<S>STXLN  30
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  8
+<S>STPTH  37
+<S>STPDN  1.23   
+<S>STPBG  2
+<S>STLOP  0
+<S>STM07  1
+<S>STM19  0
+<S>STAV1  5
+<S>STAV2  6
+<S>STAV3  8
+<S>STST1  44
+<S>STST2  34
+<S>STST3  26
+<S>STPAR  1
+<S>STCAL  2
+<S>STFN1  138
+<S>STFN2  85
+
+<EXTD> BSP_Pointer_Update C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 435
+<DEFINE> BSP_Pointer_Update C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 435 N DR OF F X (.,.) -
+<DEFINE> BSP_Pointer_Update C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 435 N DF OF F X (.,.) -
+<DEFINE> TS_State C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 437 N DC OV B N {sGUI_PID_STATE} -
+<DEFINE> TS_State C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 437 N DF OV B N {sGUI_PID_STATE} -
+<DEFINE> prev_state C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 438 N DC OV B N {sTS_StateTypeDef} S
+<DEFINE> prev_state C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 438 N DF OV B N {sTS_StateTypeDef} S
+<DEFINE> ts C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 439 N DC OV B N {sTS_StateTypeDef} -
+<DEFINE> ts C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 439 N DF OV B N {sTS_StateTypeDef} -
+<DEFINE> xDiff C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 441 N DC OV B N us -
+<DEFINE> xDiff C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 441 N DF OV B N us -
+<DEFINE> yDiff C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 441 N DC OV B N us -
+<DEFINE> yDiff C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 441 N DF OV B N us -
+<R>C BSP_Pointer_Update BSP_TS_GetState 444
+<R>X BSP_Pointer_Update BSP_TS_GetState 444 R
+<LIT> 3 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 452 15 N DN ni B X
+<LIT> 3 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 453 17 N DN ni B X
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 457 17 N ON ni B X
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 457 33 N ON ni B X
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 463 5 N ON - B P
+<LIT> 0 - P C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 473 24 N ON ni B X
+<R>C BSP_Pointer_Update GUI_TOUCH_StoreStateEx 478
+<R>X BSP_Pointer_Update GUI_TOUCH_StoreStateEx 478 R
+<CTLG> BSP_Pointer_Update 1
+<CTLG> 1 2
+<CTLG> 2 3
+<CTLG> 2 7
+<CTLG> 3 4
+<CTLG> 4 5
+<CTLG> 4 6
+<CTLG> 5 6
+<CTLG> 6 7
+<CTLG> 7 9
+<CTLGN> 436 453 453 457 457 457 453 480 480 
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c
+<S>STNAM  BSP_Pointer_Update
+<S>STCYC  3
+<S>STMCC  3 (3:6)
+<S>STMIF  2
+<S>STSUB  2
+<S>STAKI  5
+<S>STLIN  43
+<S>STXLN  15
+<S>STBAK  0
+<S>STELF  0
+<S>STGTO  0
+<S>STKNT  0
+<S>STKDN  0.00   
+<S>STUNV  0
+<S>STLCT  5
+<S>STPTH  3
+<S>STPDN  0.20   
+<S>STPBG  0
+<S>STLOP  3
+<S>STM07  1
+<S>STM19  0
+<S>STAV1  9
+<S>STAV2  11
+<S>STAV3  15
+<S>STST1  21
+<S>STST2  18
+<S>STST3  13
+<S>STPAR  0
+<S>STCAL  2
+<S>STFN1  119
+<S>STFN2  81
+
+<EXTD> ScreenSample C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 9
+<DEFINE> ScreenSample C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 9 N DI OV F X [3,{sPOINT}] S
+<EXTD> display C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 8
+<DEFINE> display C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 8 N DI OV F X {sPOINT} S
+<EXTD> matrix C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 7
+<DEFINE> matrix C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c 7 N DI OV F X {sMatrix} S
+<S>
+<S>STFIL  C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c
+<S>STNAM  C:/CodeInspection/DisplayUnit/STemWin/Board/ts/ads7843_ts.c
+<S>STNTB  NON-TOKEN BASED STATISTICS...
+<S>STSCT  0
+<S>STECT  7
+<S>STFNC  17
+<S>STFCO  37
+<S>STTKB  TOKEN BASED STATISTICS...
+<S>STVAR  119
+<S>STOPT  47
+<S>STOPN  396
+<S>STTOT  3116
+<S>STZIP  2955
+<S>STHAL  3678
+<S>STSHN  14073
+<S>STDIF  32.72  
+<S>STEFF  896329
+<S>STVOL  27393
+<S>STDEV  149.39 
+<S>STBUG  9
+<S>STTPP  486
+<S>STTLN  302
+<S>STM20  1045
+<S>STM21  2069
+<S>STM22  159
+<S>STM28  52
+<S>STM33  36
+<S>STBCS  BASIC COCOMO STATISTICS...
+<S>STBMO  1.125  
+<S>STBMS  1.337  
+<S>STBME  1.514  
+<S>STTDO  2.614  
+<S>STTDS  2.768  
+<S>STTDE  2.855  
+<S>STCOM  COMMENT BASED STATISTICS...
+<S>STCDN  0.240  
+
