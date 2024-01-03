@@ -18,7 +18,7 @@
 //PRQA S 1505 EOF
 
 void MasterModbusSend(uint8_t *pData, uint16_t Sze);
-static uint16_t CRC16(const uint8_t *puchMsg, const uint16_t usDataLen);
+uint16_t CRC16(const uint8_t *puchMsg, const uint16_t usDataLen);
 static void ReadAll(void);
 static uint8_t ModbusRecvCheck(void);
 
@@ -32,7 +32,7 @@ extern uint8_t gDebug;
 
 * @return °è»êµÈ CRC16 
 */
-static uint16_t CRC16(const uint8_t puchMsg[], const uint16_t usDataLen)
+uint16_t CRC16(const uint8_t puchMsg[], const uint16_t usDataLen)
 { 
 	uint8_t uchCRCHi = MASK_FF ;   /**< high byte of CRC initialized */ 
 	uint8_t uchCRCLo = MASK_FF ;   /**< low byte of CRC initialized */ 

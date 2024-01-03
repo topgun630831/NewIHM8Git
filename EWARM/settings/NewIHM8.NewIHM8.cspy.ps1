@@ -23,9 +23,9 @@
 
 if ($debugfile -eq "")
 {
-& "C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\common\bin\cspybat" -f "D:\STM32F4\NewIHM8\EWARM\settings\NewIHM8.NewIHM8.general.xcl" --backend -f "D:\STM32F4\NewIHM8\EWARM\settings\NewIHM8.NewIHM8.driver.xcl" 
+& "C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\common\bin\cspybat" -f "D:\STM32F4\NewIHM8Git\EWARM\settings\NewIHM8.NewIHM8.general.xcl" --backend -f "D:\STM32F4\NewIHM8Git\EWARM\settings\NewIHM8.NewIHM8.driver.xcl" 
 }
 else
 {
-& "C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\common\bin\cspybat" -f "D:\STM32F4\NewIHM8\EWARM\settings\NewIHM8.NewIHM8.general.xcl" --debug_file=$debugfile --backend -f "D:\STM32F4\NewIHM8\EWARM\settings\NewIHM8.NewIHM8.driver.xcl" 
+& "C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\common\bin\cspybat" -f "D:\STM32F4\NewIHM8Git\EWARM\settings\NewIHM8.NewIHM8.general.xcl" --debug_file=$debugfile --backend -f "D:\STM32F4\NewIHM8Git\EWARM\settings\NewIHM8.NewIHM8.driver.xcl" 
 }

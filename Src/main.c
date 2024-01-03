@@ -250,6 +250,7 @@ void HAL_UART_ErrorCallback(UART_HandleTypeDef *huart)
 	}
 }
 
+uint16_t CRC16(const uint8_t *puchMsg, const uint16_t usDataLen);
 static uint8_t SlaveModbusCRCCheck(void)
 {
 	if(gDebug)
@@ -303,7 +304,7 @@ static void ModbusSlaveCheck(void)
 			memcpy(&g_modbusSlaveRxBuff[g_modbusSlaveRxIndex], &uart1_dma_rx_buff[0], remainder);
 			g_modbusSlaveRxIndex += remainder;
 		}
-		if(SlaveModbusCRCCheck()) == MODBUS_OK)
+		if(SlaveModbusCRCCheck() == MODBUS_OK)
 		{
 		}
 		g_modbusSlaveRxIndex = 0;
