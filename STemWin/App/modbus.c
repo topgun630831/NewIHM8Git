@@ -63,20 +63,23 @@ static void ReadAll(void)
 		}
 	}		
 }
-#define TX_BUFF_MAX 256
-uint8_t txBuffer[TX_BUFF_MAX];
+#define MASTER_TX_BUFF_MAX 20
+#define SLAVE_TX_BUFF_MAX 256
+uint8_t MasterTxBuffer[MASTER_TX_BUFF_MAX];
+uint8_t SlaveTxBuffer[SLAVE_TX_BUFF_MAX];
+uint16_t SlaveSendLength;
 extern uint32_t masterSendTick;
+extern uint32_t slaveSendTick;
 void MasterModbusSend(uint8_t *pData, uint16_t Length)
 {
 	g_bRecvVariable = FALSE;
 	g_modbusRxIndex = 0;
 	g_modbusRxDone = 0;
 	g_modbusRxError = 0;
-	memcpy(txBuffer, pData, Length);
 
 	if(gDebug)
 	{
-	  (void)printf("Send Frame!!!(statusSendStep:%d)\n",statusSendStep);
+	  (void)printf("Master Send Frame!!!(statusSendStep:%d)\n",statusSendStep);
 	  for(int i = 0; i < Length; i++)
 	  {
 		  (void)printf("%02X ", pData[i]);
@@ -86,14 +89,38 @@ void MasterModbusSend(uint8_t *pData, uint16_t Length)
 	
 	uint16_t len;
 	
-	if(Length > TX_BUFF_MAX)
-		len = TX_BUFF_MAX;
+	if(Length > MASTER_TX_BUFF_MAX)
+		len = MASTER_TX_BUFF_MAX;
 	else
 		len = Length;
 	masterSendTick = HAL_GetTick();
-	HAL_UART_Transmit_DMA(&huart2, txBuffer, len);
+	memcpy(MasterTxBuffer, pData, len);
+	HAL_UART_Transmit_DMA(&huart2, MasterTxBuffer, len);
 }
 	
+void SlaveModbusSend(void)
+{
+	g_bRecvVariable = FALSE;
+	g_modbusSlaveRxIndex = 0;
+	g_modbusSlaveRxDone = 0;
+	g_modbusSlaveRxError = 0;
+
+	if(gDebug)
+	{
+	  (void)printf("Slave Send Frame!!!(statusSendStep:%d)\n",statusSendStep);
+	  for(int i = 0; i < SlaveSendLength; i++)
+	  {
+		  (void)printf("%02X ", SlaveTxBuffer[i]);
+	  }
+	  (void)printf("\n");
+	}
+	
+	if(SlaveSendLength > SLAVE_TX_BUFF_MAX)
+		SlaveSendLength = SLAVE_TX_BUFF_MAX;
+	slaveSendTick = HAL_GetTick();
+	HAL_UART_Transmit_DMA(&huart1, SlaveTxBuffer, SlaveSendLength);
+}
+
 void ModbusSendFrame(const uint8_t address, const uint8_t functionCode, const uint16_t start, const uint16_t no)
 {
 	g_modbusAddress = address;

@@ -220,6 +220,7 @@ static uint32_t uart2LastNDTR;
 uint8_t uart1_dma_rx_buff[UART1_DMA_RX_BUFF_SIZE];
 uint8_t uart2_dma_rx_buff[UART2_DMA_RX_BUFF_SIZE];
 uint32_t masterSendTick;
+uint32_t slaveSendTick;
 uint8_t gDebug;
 
 void HAL_UART_ErrorCallback(UART_HandleTypeDef *huart)
