@@ -1557,49 +1557,5 @@ E_KEY GetKey(void)
 		GUI_Delay(INDEX_10);
 	}
 }
-#define KEY_CHECK_WAIT_TIME		100
-// PRQA S 1503 1
-void KeyCheck(void)
-{
-	
-	static  uint16_t KeyChangeOnCount[KEY_MAX];
-	static  uint16_t KeyChangeOffCount[KEY_MAX];
-	
-	for(E_KEY i = KEY_SETUP; i < KEY_MAX; i++)
-	{
-		if(KeyChanged[i] == 1)
-		{
-			return;
-		}
-		GPIO_PinState status = HAL_GPIO_ReadPin(KEY_GPIO_Port, KeyPin[i]);
-		if(KeyStatus[i] != status)
-		{
-			if((status == GPIO_PIN_SET))
-			{
-				if(++KeyChangeOffCount[i] >= KEY_CHECK_WAIT_TIME)
-				{
-					KeyChangeOffCount[i] = 0;
-					KeyChangeOnCount[i] = 0;
-					KeyStatus[i] = status;
-				}
-			}
-			else
-			if((status == GPIO_PIN_RESET))
-			{
-				if(++KeyChangeOnCount[i] >= KEY_CHECK_WAIT_TIME)
-				{
-					KeyChanged[i] = 1;
-					KeyStatus[i] = status;
-					printf("Press %d\n\n", i);
-					return;
-				}
-			}
-			else
-			{
-			}
-		}
-		else {}
-	}
-}
 
 /*************************** End of file ****************************/

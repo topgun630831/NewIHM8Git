@@ -2,6 +2,8 @@
 #define MODBUS_H
 
 #include "RTOS.H"
+#include <stdbool.h>
+
 #define DEVICE_MAX 			8
 
 #define MODBUS_BUFF_SIZE 							512
@@ -51,6 +53,9 @@
 #define UNIT_BUF_SIZE					10
 #define DATE_BUF_SIZE					30
 #define RESULT_BUF_SIZE					100
+
+#define MASTER_TX_BUFF_MAX 20
+#define SLAVE_TX_BUFF_MAX 256
 
 typedef enum e_function_code
 {
@@ -209,6 +214,18 @@ EXTERN int g_nStatusNoUpdate;
 
 EXTERN int g_bRecvVariable;
 EXTERN int g_bRecvAllDone;
+
+EXTERN uint8_t MasterTxBuffer[MASTER_TX_BUFF_MAX];
+EXTERN uint8_t SlaveTxBuffer[SLAVE_TX_BUFF_MAX];
+EXTERN uint16_t SlaveSendLength;
+EXTERN uint32_t masterSendTick;
+EXTERN uint32_t slaveSendTick;
+
+EXTERN bool gDebug;
+EXTERN bool gbSlaveSend;
+
+EXTERN uint32_t masterSendTick;
+EXTERN uint32_t slaveSendTick;
 
 #define VENDOR_NAME_MAX		32+1
 #define MODBUS_VERSION_MAX	32+1

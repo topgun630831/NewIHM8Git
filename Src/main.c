@@ -211,17 +211,12 @@ static void Pcf2129AT_init(void);
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE END PV */
-////////////////////////////////////////////////////////////////////
-//static uint8_t RcvBuf[RECV_BUF_SIZE];
 static uint32_t uart1LastNDTR;
 static uint32_t uart2LastNDTR;
 #define UART1_DMA_RX_BUFF_SIZE 20
 #define UART2_DMA_RX_BUFF_SIZE 512
 uint8_t uart1_dma_rx_buff[UART1_DMA_RX_BUFF_SIZE];
 uint8_t uart2_dma_rx_buff[UART2_DMA_RX_BUFF_SIZE];
-uint32_t masterSendTick;
-uint32_t slaveSendTick;
-uint8_t gDebug;
 
 void HAL_UART_ErrorCallback(UART_HandleTypeDef *huart)
 {
@@ -272,7 +267,13 @@ static uint8_t SlaveModbusCRCCheck(void)
 	uint16_t p = (uint16_t)(g_modbusSlaveRxBuff[g_modbusSlaveRxIndex-INDEX_2] << INDEX_8) | (uint16_t)g_modbusSlaveRxBuff[g_modbusSlaveRxIndex-1];
 	uint16_t crc = CRC16(g_modbusSlaveRxBuff, g_modbusSlaveRxIndex-INDEX_2);
 	
-	if(crc != p)
+	if(crc == p)
+	{
+		SlaveSendLength = g_modbusSlaveRxIndex;
+		memcpy(SlaveTxBuffer, g_modbusSlaveRxBuff, SlaveSendLength);
+		gbSlaveSend = true;
+	}
+	else
 	{
 		(void)printf("-----------------\nModbus CRC Error[%04x, %04x]\n", crc, p);
 		ret = MODBUS_CRC_ERROR;
@@ -317,6 +318,7 @@ static void ReceiveTask(void)
 {
 	int time_cnt_led=0;
 	sendFlag = 0;
+	gbSlaveSend = false;
 
 	HAL_UART_Receive_DMA(&huart1, uart1_dma_rx_buff, UART1_DMA_RX_BUFF_SIZE);
 	HAL_UART_Receive_DMA(&huart2, uart2_dma_rx_buff, UART2_DMA_RX_BUFF_SIZE);
@@ -473,9 +475,9 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 	{
 		HAL_UART_Receive_IT(&huart6, &rx6_data, 1);
 		if(rx6_data == '1')
-			gDebug = 1;
+			gDebug = true;
 		else if(rx6_data == '0')
-			gDebug = 0;
+			gDebug = false;
 		printf("\n\ngDebug : %d\n", gDebug); 
 	}
 }

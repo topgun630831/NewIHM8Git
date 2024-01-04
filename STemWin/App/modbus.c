@@ -22,7 +22,6 @@ uint16_t CRC16(const uint8_t *puchMsg, const uint16_t usDataLen);
 static void ReadAll(void);
 static uint8_t ModbusRecvCheck(void);
 
-extern uint8_t gDebug;
 /** 
 * @fn CRC16 
 * @brief Modbus CRC16 °è»ê 
@@ -63,13 +62,6 @@ static void ReadAll(void)
 		}
 	}		
 }
-#define MASTER_TX_BUFF_MAX 20
-#define SLAVE_TX_BUFF_MAX 256
-uint8_t MasterTxBuffer[MASTER_TX_BUFF_MAX];
-uint8_t SlaveTxBuffer[SLAVE_TX_BUFF_MAX];
-uint16_t SlaveSendLength;
-extern uint32_t masterSendTick;
-extern uint32_t slaveSendTick;
 void MasterModbusSend(uint8_t *pData, uint16_t Length)
 {
 	g_bRecvVariable = FALSE;
