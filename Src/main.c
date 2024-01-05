@@ -506,11 +506,8 @@ static void EmWinTask(void)
 //    __HAL_IWDG_START(&hiwdg);
 #endif //]] by kys.2018.06.17_END -- watchdog
 
-	//GUI_UC_SetEncodeUTF8();
-
     GUI_UC_SetEncodeUTF8();
 
-//	KeyCheck();
 	GuiMain();
 
 }

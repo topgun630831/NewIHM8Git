@@ -1,0 +1,16 @@
+*.prj
+.mxproject
+mx.scratch
+*.dep
+*.ewp
+*.ewt
+*.eww
+*.sim
+*.log
+*.pbi
+*.xcl
+*.o
+*.dbgdt
+*.dnx
+*.wsdt
+
