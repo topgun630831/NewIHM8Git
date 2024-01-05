@@ -85,14 +85,9 @@ static uint16_t PCF2129_set_register( uint8_t addr, uint8_t data );
 static uint16_t PCF2129_read_register( uint8_t addr );
 static uint8_t i2bcd( uint8_t n );
 static uint8_t bcd2i( uint8_t bcd );
-//static void UserDelay(int ms);
-
 
 /* Private variables ---------------------------------------------------------*/
 static I2C_HandleTypeDef hi2c2;
-//RTC_HandleTypeDef hrtc;
-//static RTC_TimeTypeDef sTime;
-//static RTC_DateTypeDef sDate;
 
 // PRQA S 1514 ++
 SPI_HandleTypeDef hspi3;
@@ -163,14 +158,6 @@ PUTCHAR_PROTOTYPE
 // PRQA S 1503 --
 #endif
 
-//static OS_STACKPTR int StackUSBDEV[256];
-//static OS_TASK         TCBCDCDEV;         /* Task-control-blocks */
-
-//static OS_STACKPTR int StackUartDBG[256];
-//static OS_TASK         TCBUARTDBG;         /* Task-control-blocks */
-
-
-
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -191,11 +178,6 @@ static void MX_NVIC_Init(void);
 /* USER CODE BEGIN 0 */
 #define RX_BUFF_SIZE  (1*1024)    /* Max Received data 1KB */
 #define TX_BUFF_SIZE  (1*1024)
-//static uint8_t CDC_TX_Buffer[TX_BUFF_SIZE];
-//static uint8_t CDC_RX_Buffer[RX_BUFF_SIZE];
-
-
-//OS_U32 g_nSysTick;
 
 static void Pcf2129AT_init(void);
 
