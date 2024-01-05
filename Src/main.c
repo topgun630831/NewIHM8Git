@@ -182,14 +182,6 @@ static void MX_TIM4_Init(void);
 static void MX_SPI3_Init(void);
 static void MX_CRC_Init(void);
 static void MX_NVIC_Init(void);
-//static void MX_ADC1_Init(void);
-
-//ADC_HandleTypeDef hadc1;
-//DMA_HandleTypeDef hdma_adc1;
-
-//void MX_USB_HOST_Process(void);
-
-//void Host_byp_PowerRly_Comm();
 
 /* USER CODE BEGIN PFP */
 /* Private function prototypes -----------------------------------------------*/
