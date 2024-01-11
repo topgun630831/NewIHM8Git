@@ -25,7 +25,7 @@ if not "%~1" == "" goto debugFile
 
 @echo on 
 
-"C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\common\bin\cspybat" -f "D:\STM32F4\NewIHM8\DFU_Standalone\EWARM\settings\USBD_DFU.STM324xG-EVAL_USBD-FS.general.xcl" --backend -f "D:\STM32F4\NewIHM8\DFU_Standalone\EWARM\settings\USBD_DFU.STM324xG-EVAL_USBD-FS.driver.xcl" 
+"C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\common\bin\cspybat" -f "D:\STM32F4\NewIHM8Git\DFU_Standalone\EWARM\settings\USBD_DFU.STM324xG-EVAL_USBD-FS.general.xcl" --backend -f "D:\STM32F4\NewIHM8Git\DFU_Standalone\EWARM\settings\USBD_DFU.STM324xG-EVAL_USBD-FS.driver.xcl" 
 
 @echo off 
 goto end 
@@ -34,7 +34,7 @@ goto end
 
 @echo on 
 
-"C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\common\bin\cspybat" -f "D:\STM32F4\NewIHM8\DFU_Standalone\EWARM\settings\USBD_DFU.STM324xG-EVAL_USBD-FS.general.xcl" "--debug_file=%~1" --backend -f "D:\STM32F4\NewIHM8\DFU_Standalone\EWARM\settings\USBD_DFU.STM324xG-EVAL_USBD-FS.driver.xcl" 
+"C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\common\bin\cspybat" -f "D:\STM32F4\NewIHM8Git\DFU_Standalone\EWARM\settings\USBD_DFU.STM324xG-EVAL_USBD-FS.general.xcl" "--debug_file=%~1" --backend -f "D:\STM32F4\NewIHM8Git\DFU_Standalone\EWARM\settings\USBD_DFU.STM324xG-EVAL_USBD-FS.driver.xcl" 
 
 @echo off 
 :end

@@ -113,6 +113,14 @@ int main(void)
 			//__disable_irq();
 			HAL_RCC_DeInit();
 			// HAL_DeInit();
+			/*   yskim  추가할 부분*
+			for(int i = 0; i < 8; i++)
+			{
+				NVIC->ICER[i] = 0xFFFFFFFF;
+				_DSB();
+				_ISB();
+			}
+			*/
 			
 			SysTick->CTRL = 0;
 			SysTick->LOAD = 0;

@@ -38,7 +38,7 @@ static void AcbMccbOverView(void);
 static void AcbMccbOverViewValue(int flag);
 static void PageDisp(int page);
 static void CommStatusDisp(void);
-static void Overview(int newDisp);
+static void Overview(bool newDisp);
 static void ScreenTimerInit(void);
 static uint32_t GetTimerDiff(void);
 
@@ -613,7 +613,7 @@ void CommTimerInit(void)
 	commTimer = 0;
 }
 
-static void Overview(int newDisp)
+static void Overview(bool newDisp)
 {
 	if(newDisp)
 	{
@@ -1182,11 +1182,21 @@ static void ScreenTimerInit(void)
 	gReturnToScreen = timer + (SettingValue[SETUP_RETURN_TO_SCREEN] * THOUSAND);
 }
 
+void MasterModbusProcess(void)
+{
+	static float gPTAValue[DEVICE_MAX];
+}
+
+void SlaveModbusProcess(void)
+{
+	static bool bTurnSlave = false;
+}
+
 // PRQA S 1503 1
 void GuiMain(void)
 {
 	static float gPTAValue[DEVICE_MAX];
-	
+
 	commTimer = HAL_GetTick();
 	readTimeTimer = HAL_GetTick();
 	g_bRecvAllDone = FALSE;
@@ -1212,7 +1222,7 @@ void GuiMain(void)
 
 	g_nStatusNoUpdate = 0;
 	nSendStep = 0;
-	Overview(TRUE);
+	Overview(true);
 	OverviewSend();
 
 	gbInMainMenu = TRUE;
@@ -1235,7 +1245,7 @@ void GuiMain(void)
 		{
 			//if(gCommStatus[gDeviceIndex] == COMM_ERROR)
 			{
-				Overview(FALSE);
+				Overview(false);
 			}
 			curCommStat = gCommStatus[gDeviceIndex];
 		}
@@ -1254,7 +1264,7 @@ void GuiMain(void)
 			gbInMainMenu = TRUE;
 			nSendStep = 0;
 			OverviewSend();
-			Overview(TRUE);
+			Overview(true);
 //			OverViewValue(0);
 		}
 		else
@@ -1272,7 +1282,7 @@ void GuiMain(void)
 			statusSendStep = 0;
 			nSendStep = 0;
 			OverviewSend();
-			Overview(TRUE);
+			Overview(true);
 			curCommStat = gCommStatus[gDeviceIndex];
 //			OverViewValue(0);
 		}
@@ -1291,7 +1301,7 @@ void GuiMain(void)
 			statusSendStep = 0;
 			nSendStep = 0;
 			OverviewSend();
-			Overview(TRUE);
+			Overview(true);
 			curCommStat = gCommStatus[gDeviceIndex];
 //			OverViewValue(0);
 		}
@@ -1307,7 +1317,7 @@ void GuiMain(void)
 				gbInMainMenu = TRUE;
 
 				OverviewSend();
-				Overview(FALSE);
+				Overview(false);
 				CommTimerInit();
 //				OverViewValue(0);
 			}

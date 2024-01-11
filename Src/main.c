@@ -280,6 +280,7 @@ static void ModbusSlaveCheck(void)
 			memcpy(&g_modbusSlaveRxBuff[g_modbusSlaveRxIndex], &uart1_dma_rx_buff[0], remainder);
 			g_modbusSlaveRxIndex += remainder;
 		}
+		printf("g_modbusSlaveRxIndex : %d\n", g_modbusSlaveRxIndex);
 		if(SlaveModbusCRCCheck() == MODBUS_OK)
 		{
 		}
@@ -379,13 +380,14 @@ static void ReceiveTask(void)
 					if(g_bRecvVariable == FALSE)
 					{
 					  g_modbusRxIndex = g_wModbusWaitLen;
-					  g_modbusRxDone=1;
+					  g_modbusRxDone = 1;
 					  gCommStatus[gDeviceIndex] = COMM_OK;
 					  gCommErrorCount[gDeviceIndex] = 0;
 					  if(gDebug)
 						  (void)printf("Recv Done!!!!\n");
 					  sendFlag = 0;
 					  bRecvOk = TRUE;
+				      ModbusSlaveCheck();
 					}
 					else
 					{
@@ -420,6 +422,7 @@ static void ReceiveTask(void)
 							if(gDebug)
 								(void)printf("[g_bRecvVariable]Recv Done!!!!\n");
 					  	    sendFlag = 0;
+							ModbusSlaveCheck();
 						}
 					}
 				}
@@ -437,7 +440,6 @@ static void ReceiveTask(void)
 				(void)printf("Time out!!!\n");
 			}
 		}
-		ModbusSlaveCheck();
 		OS_Delay(50);
 	}
 }
@@ -720,7 +722,7 @@ int main(void)
 	Pcf2129AT_init();
 	(void)printf("\n\r");
 	(void)printf("\n\r*************************");
-	(void)printf("\n\r Smart LV Panel Display Unit   2.0");
+	(void)printf("\n\r New IHM8   2.0");
 	(void)printf("\n\r Modbus Version\n\r%s\n\r", _acinfo_modebus_version);
 	(void)printf("\n\r Devie Count : %d", SettingValue[SETUP_DEVICE_COUNT]);
 	(void)printf("\n\r starting..");
