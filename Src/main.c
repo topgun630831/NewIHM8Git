@@ -223,6 +223,8 @@ void HAL_UART_ErrorCallback(UART_HandleTypeDef *huart)
 uint16_t CRC16(const uint8_t *puchMsg, const uint16_t usDataLen);
 static uint8_t SlaveModbusCRCCheck(void)
 {
+	if(g_modbusSlaveRxIndex < 5 || g_modbusSlaveRxIndex > MODBUS_SLAVE_BUFF_SIZE)
+		return MODBUS_CRC_ERROR;
 	if(gDebug)
 	{
 	  (void)printf("Recv Frame!!!\n");
@@ -313,7 +315,7 @@ static void ReceiveTask(void)
 			uint32_t uart2NewNDTR = huart2.hdmarx->Instance->NDTR;
 			HAL_StatusTypeDef stat;
 			int nTimeOut = MODBUS_TIMEOUT;
-			int bRecvOk = FALSE;
+			bool bRecvOk = false;
 			uint32_t count;
 
 			if(uart2LastNDTR != uart2NewNDTR)
@@ -362,13 +364,11 @@ static void ReceiveTask(void)
 					g_modbusRxError = 1;
 					if(g_modbusRxBuff[1] & INDEX_0x80)
 					{
-						if(gDebug)
-							(void)printf("Header Exception Error!!!!\n");
+						(void)printf("Header Exception Error!!!!\n");
 					}
 					else
 					{
-						if(gDebug)
-							(void)printf("Header Comm Error!!!!\n");
+						(void)printf("Header Comm Error!!!!\n");
 					}
 					sendFlag = 0;
 					g_modbusRxIndex = 0;
@@ -379,41 +379,43 @@ static void ReceiveTask(void)
 					uint16_t pos = 8;
 					if(g_bRecvVariable == FALSE)
 					{
-					  g_modbusRxIndex = g_wModbusWaitLen;
 					  g_modbusRxDone = 1;
 					  gCommStatus[gDeviceIndex] = COMM_OK;
 					  gCommErrorCount[gDeviceIndex] = 0;
 					  if(gDebug)
 						  (void)printf("Recv Done!!!!\n");
 					  sendFlag = 0;
-					  bRecvOk = TRUE;
-				      ModbusSlaveCheck();
+					  bRecvOk = true;
+					  if(SlaveModbusCRCCheck() == MODBUS_OK)
+					  {
+					  }
+					  g_modbusSlaveRxIndex = 0;
 					}
 					else
 					{
 						uint16_t index = g_wModbusWaitLen;
 						uint8_t cnt = g_modbusRxBuff[INDEX_7];
-						bRecvOk = TRUE;
+						bRecvOk = true;
 						for(uint8_t i = 0; i < cnt; i++)
 						{
 							if(g_modbusRxIndex < (pos + 2))		// Object ID + Object Length
 							{
-								bRecvOk = FALSE;
+								bRecvOk = false;
 								break;
 							}
 							uint8_t len = g_modbusRxBuff[pos+1];
 							if(g_modbusRxIndex < (pos + g_modbusRxBuff[pos+1] + 1))
 							{
-								bRecvOk = FALSE;
+								bRecvOk = false;
 								break;
 							}
 							pos += g_modbusRxBuff[pos] + 2;
 						}
-						if(bRecvOk == TRUE)
+						if(bRecvOk == true)
 						{
 							if(g_modbusRxIndex < (pos + 2))		// CRC
 							{
-								bRecvOk = FALSE;
+								bRecvOk = false;
 								continue;
 							}
 							g_modbusRxDone=1;
@@ -422,13 +424,16 @@ static void ReceiveTask(void)
 							if(gDebug)
 								(void)printf("[g_bRecvVariable]Recv Done!!!!\n");
 					  	    sendFlag = 0;
-							ModbusSlaveCheck();
+							if(SlaveModbusCRCCheck() == MODBUS_OK)
+							{
+							}
+							g_modbusSlaveRxIndex = 0;
 						}
 					}
 				}
 			}
 			uint32_t tick = HAL_GetTick() - masterSendTick;
-			if(bRecvOk == FALSE && tick > 500)
+			if(bRecvOk == false && tick > 500)
 			{
 				if(++gCommErrorCount[gDeviceIndex] >= COMM_ERROR_COUNT)
 				{
@@ -1914,6 +1919,18 @@ static void MX_NVIC_Init(void)
   /* USART6_IRQn interrupt configuration */
   HAL_NVIC_SetPriority(USART6_IRQn, 0, 0);
   HAL_NVIC_EnableIRQ(USART6_IRQn);
+}
+
+void HAL_UART_TxCpltCallback(UART_HandleTypeDef *huart)
+{
+	if(huart->Instance == USART1)
+	{
+	}
+	else
+ 	if(huart->Instance == USART2)
+	{
+		HAL_GPIO_WritePin(GPIOB, GPIO_PIN_14, GPIO_PIN_RESET);
+	}
 }
 
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

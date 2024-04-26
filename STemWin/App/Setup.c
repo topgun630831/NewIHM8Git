@@ -634,6 +634,7 @@ static void FactoryRest(void)
 					gDeviceCount = 1;
 					if(SettingValue[SETUP_SPEED] != nSpeed)
 					{
+						MX_USART1_UART_Init();
 						MX_USART2_UART_Init();
 					}
 					BacklightBrghtness(SettingValue[SETUP_BRIGHTNESS], FALSE);
@@ -735,6 +736,7 @@ static void SettingMenuExec(int nPage, int nPos)
 			if(SettingInputString(&SettingValue[SETUP_SPEED], SETUP_SPEED_MAX, _acsetup_speed, FALSE) == TRUE)
 			{
 				FlashWrite();
+				MX_USART1_UART_Init();
 				MX_USART2_UART_Init();
 			}
 		}

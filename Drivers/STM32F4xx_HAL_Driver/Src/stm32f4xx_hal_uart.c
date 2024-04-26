@@ -678,8 +678,14 @@ HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, u
     
     if(UART_WaitOnFlagUntilTimeout(huart, UART_FLAG_TC, RESET, tickstart, Timeout) != HAL_OK)
     { 
-		if(huart->Instance == USART2)
+		if(huart->Instance == USART1)
+		{
+			//yskkim HAL_GPIO_WritePin(GPIOB, GPIO_PIN_14, GPIO_PIN_RESET);
+		}
+		else if(huart->Instance == USART2)
+		{
 			HAL_GPIO_WritePin(GPIOB, GPIO_PIN_14, GPIO_PIN_RESET);
+		}
         return HAL_TIMEOUT;
     }
     
@@ -688,9 +694,14 @@ HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, u
 	
 	// 
 	
-	if(huart->Instance == USART2)
+	if(huart->Instance == USART1)
+	{
+		// yskim HAL_GPIO_WritePin(GPIOB, GPIO_PIN_14, GPIO_PIN_RESET);
+	}
+	else if(huart->Instance == USART2)
+	{
 		HAL_GPIO_WritePin(GPIOB, GPIO_PIN_14, GPIO_PIN_RESET);
-
+	}
     
     /* Process Unlocked */
     __HAL_UNLOCK(huart);

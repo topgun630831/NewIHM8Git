@@ -32,7 +32,7 @@ static uint8_t ModbusRecvCheck(void);
 * @return °è»êµÈ CRC16 
 */
 uint16_t CRC16(const uint8_t puchMsg[], const uint16_t usDataLen)
-{ 
+{
 	uint8_t uchCRCHi = MASK_FF ;   /**< high byte of CRC initialized */ 
 	uint8_t uchCRCLo = MASK_FF ;   /**< low byte of CRC initialized */ 
 	uint16_t uIndex;            /**< will index into CRC lookup table */
@@ -60,8 +60,9 @@ static void ReadAll(void)
 		{
 			break;
 		}
-	}		
+	}	
 }
+
 void MasterModbusSend(uint8_t *pData, uint16_t Length)
 {
 	g_bRecvVariable = FALSE;
@@ -87,12 +88,13 @@ void MasterModbusSend(uint8_t *pData, uint16_t Length)
 		len = Length;
 	masterSendTick = HAL_GetTick();
 	memcpy(MasterTxBuffer, pData, len);
+	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_14, GPIO_PIN_SET);
 	HAL_UART_Transmit_DMA(&huart2, MasterTxBuffer, len);
 }
-	
+
 void SlaveModbusSend(void)
 {
-	g_bRecvVariable = FALSE;
+//	g_bRecvVariable = FALSE;
 	g_modbusSlaveRxIndex = 0;
 	g_modbusSlaveRxDone = 0;
 	g_modbusSlaveRxError = 0;
@@ -145,7 +147,7 @@ void ModbusSendFrame(const uint8_t address, const uint8_t functionCode, const ui
 	
 	uint16_t crc = CRC16(frame, INDEX_6);
 	
-	frame[INDEX_6] = (uint8_t) (crc >> INDEX_8);
+	frame[INDEX_6] = (uint8_t)(crc >> INDEX_8);
 	frame[INDEX_7] = (uint8_t)(crc & MASK_FF);
 	
 	g_subFunction = 0;
