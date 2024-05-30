@@ -17,7 +17,7 @@
 //PRQA S 1503 EOF
 //PRQA S 1505 EOF
 
-void MasterModbusSend(uint8_t *pData, uint16_t Sze);
+void MasterModbusBufferPut(uint8_t *pData, uint16_t Sze);
 uint16_t CRC16(const uint8_t *puchMsg, const uint16_t usDataLen);
 static void ReadAll(void);
 static uint8_t ModbusRecvCheck(void);
@@ -65,7 +65,8 @@ static void ReadAll(void)
 
 void MasterModbusSend(uint8_t *pData, uint16_t Length)
 {
-	g_bRecvVariable = FALSE;
+	//g_bRecvVariable = FALSE;
+    g_sendOwner = OWNER_MASTER;
 	g_modbusRxIndex = 0;
 	g_modbusRxDone = 0;
 	g_modbusRxError = 0;
@@ -73,28 +74,34 @@ void MasterModbusSend(uint8_t *pData, uint16_t Length)
 	if(gDebug)
 	{
 	  (void)printf("Master Send Frame!!!(statusSendStep:%d)\n",statusSendStep);
-	  for(int i = 0; i < Length; i++)
+	  for(int i = 0; i < MasterSendLength; i++)
 	  {
-		  (void)printf("%02X ", pData[i]);
+		  (void)printf("%02X ", MasterTxBuffer[i]);
 	  }
 	  (void)printf("\n");
 	}
 	
+	masterSendTick = HAL_GetTick();
+	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_14, GPIO_PIN_SET);
+	HAL_UART_Transmit_DMA(&huart2, MasterTxBuffer, MasterSendLength);
+}
+
+void MasterModbusBufferPut(uint8_t *pData, uint16_t Length)
+{
 	uint16_t len;
-	
+
 	if(Length > MASTER_TX_BUFF_MAX)
 		len = MASTER_TX_BUFF_MAX;
 	else
 		len = Length;
-	masterSendTick = HAL_GetTick();
 	memcpy(MasterTxBuffer, pData, len);
-	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_14, GPIO_PIN_SET);
-	HAL_UART_Transmit_DMA(&huart2, MasterTxBuffer, len);
+	MasterSendLength = len;
 }
 
 void SlaveModbusSend(void)
 {
 //	g_bRecvVariable = FALSE;
+        g_sendOwner = OWNER_SLAVE;
 	g_modbusSlaveRxIndex = 0;
 	g_modbusSlaveRxDone = 0;
 	g_modbusSlaveRxError = 0;
@@ -112,7 +119,20 @@ void SlaveModbusSend(void)
 	if(SlaveSendLength > SLAVE_TX_BUFF_MAX)
 		SlaveSendLength = SLAVE_TX_BUFF_MAX;
 	slaveSendTick = HAL_GetTick();
+	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_15, GPIO_PIN_SET);
 	HAL_UART_Transmit_DMA(&huart1, SlaveTxBuffer, SlaveSendLength);
+}
+
+void SlaveModbusBufferPut(uint8_t *pData, uint16_t Length)
+{
+	uint16_t len;
+
+	if(Length > SLAVE_TX_BUFF_MAX)
+		len = SLAVE_TX_BUFF_MAX;
+	else
+		len = Length;
+	memcpy(SlaveTxBuffer, pData, len);
+	SlaveSendLength = len;
 }
 
 void ModbusSendFrame(const uint8_t address, const uint8_t functionCode, const uint16_t start, const uint16_t no)
@@ -152,7 +172,7 @@ void ModbusSendFrame(const uint8_t address, const uint8_t functionCode, const ui
 	
 	g_subFunction = 0;
 	
-	MasterModbusSend(frame, INDEX_8);
+	MasterModbusBufferPut(frame, INDEX_8);
 	g_AddressRecv = 0;
 	sendFlag = 1;
 }
@@ -175,7 +195,7 @@ void ModbusSendFrameReadTime(const uint8_t address)
 	frame[INDEX_4] = (uint8_t) (crc >> INDEX_8);
 	frame[INDEX_5] = (uint8_t)(crc & MASK_FF);
 	
-	MasterModbusSend(frame, INDEX_6);
+	MasterModbusBufferPut(frame, INDEX_6);
 	g_AddressRecv = 0;
 	sendFlag = 1;
 }
@@ -207,7 +227,7 @@ void ModbusSendFrameDeviceIdentofocation(const uint8_t address)
 	frame[INDEX_5] = (uint8_t) (crc >> INDEX_8);
 	frame[INDEX_6] = (uint8_t)(crc & MASK_FF);
 	
-	MasterModbusSend(frame, INDEX_7);
+	MasterModbusBufferPut(frame, INDEX_7);
 	g_AddressRecv = 0;
 	sendFlag = 1;
 }
@@ -231,7 +251,7 @@ void ModbusSendFrameDeviceIdentofocation3(const uint8_t address, uint8_t deviceI
 	frame[INDEX_5] = (uint8_t) (crc >> INDEX_8);
 	frame[INDEX_6] = (uint8_t)(crc & MASK_FF);
 	
-	MasterModbusSend(frame, INDEX_7);
+	MasterModbusBufferPut(frame, INDEX_7);
 	g_bRecvVariable = TRUE;
 	g_AddressRecv = 0;
 	sendFlag = 1;
@@ -266,7 +286,7 @@ void ModbusSendFrameEvent(const uint8_t address, const uint8_t fileNo, const uin
 	frame[INDEX_10] = (uint8_t) (crc >> INDEX_8);
 	frame[INDEX_11] = (uint8_t)(crc & MASK_FF);
 	
-	MasterModbusSend(frame, INDEX_12);
+	MasterModbusBufferPut(frame, INDEX_12);
 	g_AddressRecv = 0;
 	sendFlag = 1;
 }
@@ -279,7 +299,7 @@ void ModbusSendFrameFromUsb(uint8_t* sendBuf, uint32_t length)
 
 //	ReadAll();
 //	(void)HAL_UART_Transmit(&huart2, sendBuf, (uint8_t)length, UART_TIMEOUT);
-	MasterModbusSend(sendBuf, (uint8_t)length);
+	MasterModbusBufferPut(sendBuf, (uint8_t)length);
 	g_AddressRecv = 0;
 //	return ret;
 }
@@ -697,7 +717,7 @@ uint8_t ModbusControl(const uint8_t address, const int offset, const int pos, co
 	
 	g_subFunction = 0;
 	g_wModbusWaitLen = MODBUS_FRAME_COUNT;
-	MasterModbusSend(frame, INDEX_8);
+	MasterModbusBufferPut(frame, INDEX_8);
 	sendFlag = 1;
 
 	ret = ModbusRecvCheck();
@@ -724,7 +744,7 @@ uint8_t ModbusControl(const uint8_t address, const int offset, const int pos, co
 		
 		g_subFunction = 0;
 		g_wModbusWaitLen = INDEX_8;
-		MasterModbusSend(frame, INDEX_8);
+		MasterModbusBufferPut(frame, INDEX_8);
 		sendFlag = 1;
 		
 		ret = ModbusRecvCheck();
@@ -759,7 +779,7 @@ void ModbusSetTime(const uint8_t address, const S_DATE_TIME *dateTime)
 	frame[INDEX_12] = (uint8_t) (crc >> INDEX_8);
 	frame[INDEX_13] = (uint8_t)(crc & MASK_FF);
 	
-	MasterModbusSend(frame, INDEX_14);
+	MasterModbusBufferPut(frame, INDEX_14);
 	g_subFunction = 0;
 	sendFlag = 1;
 }

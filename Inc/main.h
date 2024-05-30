@@ -49,7 +49,9 @@
 #ifndef __MAIN_H
 #define __MAIN_H
 
-#define __WATCHDOG__					0			// 0=wd off, 1=wd on
+#define PCF2131			0			// New RTC			
+
+#define __WATCHDOG__		0			// 0=wd off, 1=wd on
 
 /* Includes ------------------------------------------------------------------*/
 
@@ -140,16 +142,22 @@ void _Error_Handler(char *, int);
 }
 #endif
 
-// PCF2129AT RTC
-#define     PCF2127_I2C_SLAVE_ADDRESS   0xA2
-
+#if PCF2131
+#define     PCF2127_I2C_SLAVE_ADDRESS   0xA6		// PCF2131
+#else
+#define     PCF2127_I2C_SLAVE_ADDRESS   0xA2		// PCF2129AT
+#endif
 
 /** name of the PCF2127 registers */
 typedef enum {
 	Control_1,
 	Control_2,
 	Control_3,
+#if PCF2131
+	Seconds = 0x07,
+#else
 	Seconds,
+#endif
 	Minutes,
 	Hours,
 	Days,
@@ -181,8 +189,11 @@ typedef enum {
 #define	Cntl1   0x03
 #define Cntl2  	0x00
 #define	Cntl3   0x00
-#define	ClkOut  0x46
-
+#if PCF2131
+#define	ClkOut  0xC6		// Temperature measurement period 4Min(0xC6) 
+#else
+#define	ClkOut  0x46		// Temperature measurement period 2Min(0x46) 
+#endif
 /** Error code */
 #define	NO_ERROR                0
 #define	CLOCK_INTEGRITY_FAIL    1
@@ -195,6 +206,8 @@ void FlashRead(void);
 void FlashWrite(void);
 void FaultCountRead(void);
 void FaultCountWrite(void);
+void MX_USART1_UART_Init(void);
+void MX_USART2_UART_Init(void);
 
 #endif /* __MAIN_H */
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

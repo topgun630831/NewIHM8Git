@@ -932,7 +932,6 @@ void EventDataRecv(void);
 void PCF2127_readTime(uint8_t flag);
 uint16_t PCF2127_set_time();
 uint16_t RTCBatteryStatus(void);
-void MX_USART2_UART_Init(void);
 void SystemClock_Config(void);
 void BSP_Background(void);
 void Module_Req_Data();

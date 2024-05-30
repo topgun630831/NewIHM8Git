@@ -162,7 +162,6 @@ PUTCHAR_PROTOTYPE
 
 /* Private function prototypes -----------------------------------------------*/
 static void MX_GPIO_Init(void);
-static void MX_USART1_UART_Init(void);
 static void MX_USART6_UART_Init(void);
 static void MX_FSMC_Init(void);
 static void MX_TIM4_Init(void);
@@ -202,6 +201,7 @@ void HAL_UART_ErrorCallback(UART_HandleTypeDef *huart)
 		HAL_UART_Receive_DMA(huart, uart1_dma_rx_buff, UART1_DMA_RX_BUFF_SIZE);
 		uart1LastNDTR = huart1.hdmarx->Instance->NDTR;
 		g_modbusSlaveRxError = 1;
+		sendFlag = 0;
 		g_modbusSlaveRxIndex = 0;
 	}
 	else if(huart->Instance==USART2)
@@ -445,6 +445,10 @@ static void ReceiveTask(void)
 				(void)printf("Time out!!!\n");
 			}
 		}
+                else
+                {
+                    ModbusSlaveCheck();
+                }
 		OS_Delay(50);
 	}
 }
@@ -691,6 +695,9 @@ int main(void)
 
 	MX_USART1_UART_Init();
 	MX_USART2_UART_Init();
+        
+        MasterSendLength = SlaveSendLength = 0;
+
 
 	BacklightBrghtness(SettingValue[SETUP_BRIGHTNESS], FALSE);
 #else	
@@ -733,6 +740,8 @@ int main(void)
 	(void)printf("\n\r starting..");
 	(void)printf("\n\r*************************");
 	(void)printf("\n\r");
+        
+        g_orderOwner = OWNER_MASTER;
 
 	OS_CREATETASK(&TCBRECEIVE, "Receive Task", &ReceiveTask,  RECV_PRORITY, StackReceive);										// System
 	OS_CREATETASK(&TCBEMWIN, "emWin Task", &EmWinTask,  EMWIN_PRORITY, StackEmWin);									// emWin
@@ -952,7 +961,7 @@ static void MX_TIM4_Init(void)
 
 #ifdef COMM_TEST
 /* USART1 init function */
-static void MX_USART1_UART_Init(void)
+void MX_USART1_UART_Init(void)
 {
 
 	huart1.Instance = USART1;
@@ -1135,13 +1144,14 @@ static void MX_GPIO_Init(void)
 //
 //	HAL_GPIO_WritePin(BACKLIGHT_GPIO_Port, BACKLIGHT_Pin, GPIO_PIN_SET);
 
-	GPIO_InitStruct.Pin = GPIO_PIN_14;
+	GPIO_InitStruct.Pin = GPIO_PIN_14 | GPIO_PIN_15;
 	GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;		// Output Open Drain Mode
 	GPIO_InitStruct.Pull = GPIO_NOPULL;
 	GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
 	HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
 	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_14, GPIO_PIN_RESET);
+	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_15, GPIO_PIN_RESET);
 
   /* EXTI interrupt init*/
   HAL_NVIC_SetPriority(EXTI4_IRQn, 15, 0);
@@ -1925,6 +1935,7 @@ void HAL_UART_TxCpltCallback(UART_HandleTypeDef *huart)
 {
 	if(huart->Instance == USART1)
 	{
+		HAL_GPIO_WritePin(GPIOB, GPIO_PIN_15, GPIO_PIN_RESET);
 	}
 	else
  	if(huart->Instance == USART2)

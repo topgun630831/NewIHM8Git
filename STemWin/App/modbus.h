@@ -81,6 +81,12 @@ typedef enum e_comm_status
     COMM_OK = 1,
 } E_COMM_ERROR;
 
+typedef enum e_owner
+{
+    OWNER_MASTER = 0,
+    OWNER_SLAVE = 1,
+} E_OWNER;
+
 typedef struct s_Event_Record {
 	uint16_t L_Category:4;
 	uint16_t M_Category:6;
@@ -145,6 +151,7 @@ typedef struct s_Product_Info {
 	char ModelName[MODEL_NAME_COUNT+1];
 } S_PRODUCT_INFO;
 
+void SlaveModbusBufferPut(uint8_t *pData, uint16_t Length);
 void ModbusSendFrame(const uint8_t address, const uint8_t functionCode, const uint16_t start, const uint16_t no);
 void ModbusSendFrameReadTime(const uint8_t address);
 void ModbusSendFrameDeviceIdentofocation(const uint8_t address);
@@ -197,6 +204,8 @@ EXTERN uint16_t g_startAddr;
 EXTERN uint16_t g_waitReceiveLen;
 EXTERN uint8_t g_AddressRecv;
 EXTERN uint8_t sendFlag;
+EXTERN uint8_t g_sendOwner;
+EXTERN uint8_t g_orderOwner;
 EXTERN uint16_t gSystemEventIndex[DEVICE_MAX];
 EXTERN uint16_t gFaultEventIndex[DEVICE_MAX];
 EXTERN uint16_t gOldSystemEventIndex[DEVICE_MAX];
@@ -217,6 +226,7 @@ EXTERN int g_bRecvAllDone;
 
 EXTERN uint8_t MasterTxBuffer[MASTER_TX_BUFF_MAX];
 EXTERN uint8_t SlaveTxBuffer[SLAVE_TX_BUFF_MAX];
+EXTERN uint16_t MasterSendLength;
 EXTERN uint16_t SlaveSendLength;
 EXTERN uint32_t masterSendTick;
 EXTERN uint32_t slaveSendTick;
