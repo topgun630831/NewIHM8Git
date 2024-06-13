@@ -151,7 +151,7 @@ typedef struct s_Product_Info {
 	char ModelName[MODEL_NAME_COUNT+1];
 } S_PRODUCT_INFO;
 
-void SlaveModbusBufferPut(uint8_t *pData, uint16_t Length);
+void MasterModbusSend(void);
 void ModbusSendFrame(const uint8_t address, const uint8_t functionCode, const uint16_t start, const uint16_t no);
 void ModbusSendFrameReadTime(const uint8_t address);
 void ModbusSendFrameDeviceIdentofocation(const uint8_t address);
@@ -222,6 +222,8 @@ EXTERN int gCommErrorCount[DEVICE_MAX];
 EXTERN int g_nStatusNoUpdate;
 
 EXTERN int g_bRecvVariable;
+EXTERN int g_bMasterRecvVariable;
+EXTERN int g_bSlaveRecvVariable;
 EXTERN int g_bRecvAllDone;
 
 EXTERN uint8_t MasterTxBuffer[MASTER_TX_BUFF_MAX];
@@ -624,7 +626,7 @@ typedef enum e_index_value
 #define	EMWIN_PRORITY					50
 #define	RECV_PRORITY					60
 #define	DEBUG_PRORITY					100
-#define	LED_TIMER						500
+#define	LED_TIMER						10
 #define	RECV_BUF_SIZE					256
 #define	USER_PROG_VECTOR				0x0800c000
 #define	CLOCK_PLLN						168

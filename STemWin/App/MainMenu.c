@@ -1436,7 +1436,6 @@ E_KEY GetKey(void)
 #if __WATCHDOG__ //[[ by kys.2018.06.17_BEGIN -- watchdog
             __HAL_IWDG_RELOAD_COUNTER(&hiwdg);
 #endif //]] by kys.2018.06.17_END -- watchdog
-
 			
 		CommStatusDisp();
 		uint32_t timer = HAL_GetTick();
@@ -1446,7 +1445,7 @@ E_KEY GetKey(void)
 		{
 			if((g_bRecvAllDone == TRUE) || (diff >= TIMER_DIFF_10SEC))
 			{
-				//(void)printf("commTimer-1=%d, Tick=%d, Diff=%d\n", commTimer, timer, diff);
+				(void)printf("commTimer-1=%d, Tick=%d, Diff=%d\n", commTimer, timer, diff);
 				CommTimerClear();
 				return TIME_OUT;
 			}
@@ -1534,29 +1533,43 @@ E_KEY GetKey(void)
 				return i;
 			}
 		}
+
+		if(MasterSendLength != 0)
+		{
+			MasterModbusSend();
+			MasterSendLength = 0;
+		}
+			
 		if (g_modbusRxDone)
 		{
 			CommStatusDisp();
-			uint8_t ret = ModbusCRCCheck();
+			if(g_modbusRxIndex > INDEX_5)
+			{
+			  uint8_t ret = ModbusCRCCheck();
+			  if(ret == MODBUS_OK)
+			  {
+				  //(void)printf("CRC OK\n");
+				  return DATA_RECV;
+			  }
+			  else
+			  if(ret == MODBUS_ERROR)
+			  {
+				  //(void)printf("Modbus Error\n");
+				  return KEY_COMM_ERROR;
+			  }
+			  else
+			  if(ret == MODBUS_CRC_ERROR)
+			  {
+				  //(void)printf("CRC BAD\n");
+				  return KEY_COMM_ERROR;
+			  }
+			  else {}
+			}
+			else
+			{
+				printf("g_modbusRxIndex = %d, g_wModbusWaitLen = %d\n", g_modbusRxIndex, g_wModbusWaitLen);
+			}
 			g_modbusRxDone = 0;
-			if(ret == MODBUS_OK)
-			{
-				//(void)printf("CRC OK\n");
-				return DATA_RECV;
-			}
-			else
-			if(ret == MODBUS_ERROR)
-			{
-				//(void)printf("Modbus Error\n");
-				return KEY_COMM_ERROR;
-			}
-			else
-			if(ret == MODBUS_CRC_ERROR)
-			{
-				//(void)printf("CRC BAD\n");
-				return KEY_COMM_ERROR;
-			}
-			else {}
 		}
 		if(g_modbusRxError)
 		{
@@ -1564,7 +1577,7 @@ E_KEY GetKey(void)
 			g_modbusRxError = 0;
 			return KEY_COMM_ERROR;
 		}
-		GUI_Delay(INDEX_10);
+		GUI_Delay(INDEX_1);
 	}
 }
 
