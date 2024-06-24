@@ -250,9 +250,10 @@ uint16_t SetupSpeed[SETUP_SPEED_MAX] = {
 };
 
 S_DATE_TIME gDateTime = {
-	2001,
+	0,
 	1,
 	1,
+	0,
 	0,
 	0,
 	0

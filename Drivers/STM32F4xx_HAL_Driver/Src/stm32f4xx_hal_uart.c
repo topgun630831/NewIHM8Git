@@ -604,6 +604,13 @@ HAL_StatusTypeDef HAL_UART_DeInit(UART_HandleTypeDef *huart)
   * @{
   */
 
+__STATIC_INLINE void Pol_Delay_us(volatile uint32_t microseconds)
+{
+	/* Go to number of cycles for system */  
+	microseconds *= (SystemCoreClock / 1000000);   /* Delay till end */  
+	while (microseconds--);
+}
+
 /**
   * @brief  Sends an amount of data in blocking mode. 
   * @param  huart pointer to a UART_HandleTypeDef structure that contains
@@ -627,7 +634,9 @@ HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, u
     }
     
 	
-	if(huart->Instance == USART2)
+	if(huart->Instance == USART1)
+		HAL_GPIO_WritePin(GPIOB, GPIO_PIN_15, GPIO_PIN_SET);
+	else if(huart->Instance == USART2)
 		HAL_GPIO_WritePin(GPIOB, GPIO_PIN_14, GPIO_PIN_SET);
 	
 	
@@ -649,8 +658,14 @@ HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, u
       {
         if(UART_WaitOnFlagUntilTimeout(huart, UART_FLAG_TXE, RESET, tickstart, Timeout) != HAL_OK)
         { 
-			if(huart->Instance == USART2)
+			if(huart->Instance == USART1)
+			{
+				HAL_GPIO_WritePin(GPIOB, GPIO_PIN_15, GPIO_PIN_RESET);
+			}
+			else if(huart->Instance == USART2)
+			{
 				HAL_GPIO_WritePin(GPIOB, GPIO_PIN_14, GPIO_PIN_RESET);
+			}
         	return HAL_TIMEOUT;
         }
         tmp = (uint16_t*) pData;
@@ -668,8 +683,14 @@ HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, u
       {
         if(UART_WaitOnFlagUntilTimeout(huart, UART_FLAG_TXE, RESET, tickstart, Timeout) != HAL_OK)
         {
-			if(huart->Instance == USART2)
+			if(huart->Instance == USART1)
+			{
+				HAL_GPIO_WritePin(GPIOB, GPIO_PIN_15, GPIO_PIN_RESET);
+			}
+			else if(huart->Instance == USART2)
+			{
 				HAL_GPIO_WritePin(GPIOB, GPIO_PIN_14, GPIO_PIN_RESET);
+			}
         	return HAL_TIMEOUT;
         }
         huart->Instance->DR = (*pData++ & (uint8_t)0xFF);
@@ -680,7 +701,7 @@ HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, u
     { 
 		if(huart->Instance == USART1)
 		{
-			//yskkim HAL_GPIO_WritePin(GPIOB, GPIO_PIN_14, GPIO_PIN_RESET);
+			HAL_GPIO_WritePin(GPIOB, GPIO_PIN_15, GPIO_PIN_RESET);
 		}
 		else if(huart->Instance == USART2)
 		{
@@ -693,6 +714,7 @@ HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, u
       huart->gState = HAL_UART_STATE_READY;
 	
 	// 
+//	Pol_Delay_us(500);
 	
 	if(huart->Instance == USART1)
 	{

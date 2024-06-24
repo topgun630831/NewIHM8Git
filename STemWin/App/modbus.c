@@ -83,7 +83,7 @@ void MasterModbusSend(void)
 	  (void)printf("\n");
 	}
 	
-	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_14, GPIO_PIN_SET);
+//	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_14, GPIO_PIN_SET);
 	masterSendTick = HAL_GetTick();
 	HAL_UART_Transmit(&huart2, MasterTxBuffer, MasterSendLength, UART_TIMEOUT);
 	g_bRecvVariable = g_bMasterRecvVariable;
@@ -149,9 +149,9 @@ void SlaveModbusSend(uint8_t *pData, uint16_t Length)
 	}
 	slaveSendTick = HAL_GetTick();
 	  printf("{1,1}(%d)",slaveSendTick);
-	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_15, GPIO_PIN_SET);
-	OS_Delay(1);
-	HAL_UART_Transmit_DMA(&huart1, pData, len);
+//	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_15, GPIO_PIN_SET);
+//	OS_Delay(1);
+	HAL_UART_Transmit(&huart1, pData, len, UART_TIMEOUT);
 }
 
 void ModbusSendFrame(const uint8_t address, const uint8_t functionCode, const uint16_t start, const uint16_t no)

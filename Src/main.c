@@ -191,7 +191,7 @@ static uint32_t uart2LastNDTR;
 #define UART2_DMA_RX_BUFF_SIZE 120
 uint8_t uart1_dma_rx_buff[UART1_DMA_RX_BUFF_SIZE];
 uint8_t uart2_dma_rx_buff[UART2_DMA_RX_BUFF_SIZE];
-
+uint32_t slave_last_recv;
 
 __STATIC_INLINE void Pol_Delay_us(volatile uint32_t microseconds)
 {
@@ -214,10 +214,10 @@ void HAL_UART_ErrorCallback(UART_HandleTypeDef *huart)
 		HAL_UART_MspDeInit(&huart1);
 		HAL_UART_MspInit(&huart1);
 		HAL_UART_Receive_DMA(&huart1, uart1_dma_rx_buff, UART1_DMA_RX_BUFF_SIZE);
-		uart1LastNDTR = huart1.hdmarx->Instance->NDTR;
-		g_modbusSlaveRxError = 1;
-		sendFlag = 0;
-		g_modbusSlaveRxIndex = 0;
+//		uart1LastNDTR = huart1.hdmarx->Instance->NDTR;
+//		g_modbusSlaveRxError = 1;
+//		sendFlag = 0;
+//		g_modbusSlaveRxIndex = 0;
 	}
 	else if(huart->Instance==USART2)
 	{
@@ -230,7 +230,7 @@ void HAL_UART_ErrorCallback(UART_HandleTypeDef *huart)
 		HAL_UART_MspDeInit(&huart2);
 		HAL_UART_MspInit(&huart2);
 		HAL_UART_Receive_DMA(&huart2, uart2_dma_rx_buff, UART2_DMA_RX_BUFF_SIZE);
-		uart2LastNDTR = huart2.hdmarx->Instance->NDTR;
+//		uart2LastNDTR = huart2.hdmarx->Instance->NDTR;
 /*
 		if(++gCommErrorCount[gDeviceIndex] >= COMM_ERROR_COUNT)
 		{
@@ -291,13 +291,14 @@ static uint8_t SlaveModbusCRCCheck(void)
 	return ret;
 }
 
+
 static void ModbusSlaveCheck(void)
 {
 	uint32_t uart1NewNDTR = huart1.hdmarx->Instance->NDTR;
 	int nTimeOut = MODBUS_TIMEOUT;
 	int bRecvOk = FALSE;
 	uint32_t count;
-
+	
 	if(uart1LastNDTR != uart1NewNDTR)
 	{
 		uint32_t pos = UART1_DMA_RX_BUFF_SIZE - uart1LastNDTR;
@@ -317,7 +318,7 @@ static void ModbusSlaveCheck(void)
 			g_modbusSlaveRxIndex += remainder;
 		}
 		printf("g_modbusSlaveRxIndex : %d\n", g_modbusSlaveRxIndex);
-		if(g_modbusSlaveRxIndex == INDEX_8)
+		if(g_modbusSlaveRxIndex >= INDEX_8)
 		{
 		  if(SlaveModbusCRCCheck() == MODBUS_OK)
 		  {
@@ -526,10 +527,7 @@ static void ReceiveTask(void)
 				(void)printf("(%d)Time out!!!(%d)\n", HAL_GetTick(), tick);
 			}
 		}
-		//else
-		{
-			//ModbusSlaveCheck();
-		}
+		ModbusSlaveCheck();
 		OS_Delay(50);
 	}
 }
@@ -788,7 +786,7 @@ int main(void)
 	MX_USART1_UART_Init();
 	MX_USART2_UART_Init();
         
-        MasterSendLength = SlaveSendLength = 0;
+    MasterSendLength = SlaveSendLength = 0;
 
 
 	BacklightBrghtness(SettingValue[SETUP_BRIGHTNESS], FALSE);
@@ -1788,16 +1786,31 @@ static uint8_t bcd2i( uint8_t bcd )
 
 uint16_t PCF2127_set_time(void)
 {
-    uint8_t        data[INDEX_8];
+    uint8_t        data[INDEX_10];
     uint8_t        err;
 
-    data[0]    = Seconds;
+	/* Write access to time registers:
+	 * PCF2127/29: no special action required.
+	 * PCF2131:    requires setting the STOP and CPR bits. STOP bit needs to
+	 *             be cleared after time registers are updated.
+	 */
+	if(PCF2131)
+	{
+	  data[ INDEX_0 ]   = Control_1; //  access start register address
+	  data[ INDEX_1 ]   = 0x23;
+	  err = HAL_I2C_Master_Transmit(&hi2c2, PCF2127_I2C_SLAVE_ADDRESS, data, INDEX_2, PCF2129_TIMEOUT);
+
+	  data[ INDEX_0 ]   = 0x05; //  access start register address
+	  data[ INDEX_1 ]   = 0xa4;
+	  err = HAL_I2C_Master_Transmit(&hi2c2, PCF2127_I2C_SLAVE_ADDRESS, data, INDEX_2, PCF2129_TIMEOUT);
+	}
+	data[0]    = Seconds;
 
     data[ INDEX_1 ]    = i2bcd(gDateTime.Sec);
     data[ INDEX_2 ]    = i2bcd(gDateTime.Min);
     data[ INDEX_3 ]    = i2bcd(gDateTime.Hour);
     data[ INDEX_4 ]    = i2bcd(gDateTime.Day);
-    data[ INDEX_5 ]    = 0; //Week
+    data[ INDEX_5 ]    = 1; //Week
     data[ INDEX_6 ]    = i2bcd(gDateTime.Month);
     data[ INDEX_7 ]    = i2bcd(gDateTime.Year-YEAR_BASE);
 	
@@ -1810,6 +1823,14 @@ uint16_t PCF2127_set_time(void)
 
 	err = HAL_I2C_Master_Transmit(&hi2c2, PCF2127_I2C_SLAVE_ADDRESS, data, INDEX_8, PCF2129_TIMEOUT);
 
+	if(PCF2131)
+	{
+	
+		data[ INDEX_0 ]   = Control_1; //  access start register address
+		data[ INDEX_1 ]   = Cntl1;
+
+		err = HAL_I2C_Master_Transmit(&hi2c2, PCF2127_I2C_SLAVE_ADDRESS, data, INDEX_2, PCF2129_TIMEOUT);
+	}	
     return ( err ? I2C_ACCESS_FAIL : NO_ERROR );
 }
 
@@ -1817,40 +1838,51 @@ static void Pcf2129AT_init(void)
 {
 	uint8_t		data[INDEX_4];
 
-	OS_Delay(INDEX_50);
+//	OS_Delay(INDEX_50);
+	HAL_Delay(INDEX_50);
+	uint8_t error;
 	
     data[ INDEX_0 ]   = Control_1; //  access start register address
     data[ INDEX_1 ]   = Cntl1;
+//    data[ INDEX_1 ]   = 0x13;
     data[ INDEX_2 ]   = Cntl2;
     data[ INDEX_3 ]   = Cntl3;
 
-	(void)HAL_I2C_Master_Transmit(&hi2c2, PCF2127_I2C_SLAVE_ADDRESS, data, sizeof(data), PCF2129_TIMEOUT);
-    (void)PCF2129_set_register( CLKOUT_ctl, ClkOut );
+	error = HAL_I2C_Master_Transmit(&hi2c2, PCF2127_I2C_SLAVE_ADDRESS, data, sizeof(data), PCF2129_TIMEOUT);
+//	error = HAL_I2C_Master_Transmit(&hi2c2, PCF2127_I2C_SLAVE_ADDRESS, data, 1, PCF2129_TIMEOUT);
+//	error = HAL_I2C_Master_Receive(&hi2c2, PCF2127_I2C_SLAVE_ADDRESS, data, INDEX_4, PCF2129_TIMEOUT);
+    error = PCF2129_set_register( CLKOUT_ctl, ClkOut );
 
 }
 
 //PRQA S 1503 1
 void PCF2127_readTime(uint8_t flag)
 {
-    uint8_t     buf[ INDEX_8 ];
+    uint8_t     buf[ INDEX_9 ];
 	
-	OS_Delay(INDEX_5);
+	//OS_Delay(INDEX_5);
+	HAL_Delay(INDEX_5);
+    buf[ 0 ]    = Seconds-1;  //  read start register address+
 
-    buf[ 0 ]    = Seconds;  //  read start register address
+	uint8_t err;
+	err = HAL_I2C_Master_Transmit(&hi2c2, PCF2127_I2C_SLAVE_ADDRESS, buf, 1, PCF2129_TIMEOUT);
 
-	(void)HAL_I2C_Master_Transmit(&hi2c2, PCF2127_I2C_SLAVE_ADDRESS, buf, 1, PCF2129_TIMEOUT);
-
-	uint8_t err = HAL_I2C_Master_Receive(&hi2c2, PCF2127_I2C_SLAVE_ADDRESS, buf, INDEX_7, PCF2129_TIMEOUT);
+	err = HAL_I2C_Master_Receive(&hi2c2, PCF2127_I2C_SLAVE_ADDRESS, buf, INDEX_8, PCF2129_TIMEOUT);
 
 	if((flag == 1) && (err == HAL_OK))
 	{
-	  gDateTime.Year 	= bcd2i(buf[INDEX_6])+YEAR_BASE;
-	  gDateTime.Month	= bcd2i(buf[INDEX_5]);
-	  gDateTime.Day	= bcd2i(buf[INDEX_3]);
-	  gDateTime.Hour	= bcd2i(buf[INDEX_2]);
-	  gDateTime.Min	= bcd2i(buf[INDEX_1]);
-	  gDateTime.Sec	= bcd2i(buf[INDEX_0]);
+	  if((buf[INDEX_1] & 0x80) == 0)
+	  {
+		gDateTime.Year 	= bcd2i(buf[INDEX_7])+YEAR_BASE;
+		gDateTime.Month	= bcd2i(buf[INDEX_6]);
+		gDateTime.Day		= bcd2i(buf[INDEX_4]);
+		gDateTime.Hour	= bcd2i(buf[INDEX_3]);
+		gDateTime.Min		= bcd2i(buf[INDEX_2]);
+		gDateTime.Sec		= bcd2i(buf[INDEX_1]);
+		gDateTime.mSec	= bcd2i(buf[0]);
+	  }
 	}
+	
 	if((gDateTime.Year > YEAR_MAX) ||
 	   			(gDateTime.Year < YEAR_MIN) ||
 				(gDateTime.Month < 1) ||
@@ -1864,13 +1896,13 @@ void PCF2127_readTime(uint8_t flag)
 		gDateTime.Year = YEAR_MIN;
 		gDateTime.Month = 1;
 		gDateTime.Day = 1;
-		gDateTime.Hour = 1;
-		gDateTime.Min = 1;
-		gDateTime.Sec = 1;
+		gDateTime.Hour = 0;
+		gDateTime.Min = 0;
+		gDateTime.Sec = 0;
 		(void)PCF2127_set_time();
 		(void)printf("PCF2127_set_time....\n");
 	}
-	(void)printf("%d/%d/%d %d:%d:%d(%d)\n", gDateTime.Year, gDateTime.Month, gDateTime.Day, gDateTime.Hour, gDateTime.Min, gDateTime.Sec, HAL_GetTick());
+	(void)printf("%d/%d/%d %d:%d:%d.%d(%d)\n", gDateTime.Year, gDateTime.Month, gDateTime.Day, gDateTime.Hour, gDateTime.Min, gDateTime.Sec, gDateTime.mSec, HAL_GetTick());
 }
 //PRQA S 1503 1
 uint16_t RTCBatteryStatus(void)

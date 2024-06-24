@@ -330,6 +330,15 @@ __weak uint32_t HAL_GetTick(void)
   return uwTick;
 }
 
+__STATIC_INLINE void Pol_Delay_us2(volatile uint32_t microseconds)
+{
+	/* Go to number of cycles for system */  
+	microseconds *= (SystemCoreClock / 1000000);   /* Delay till end */  
+	while (microseconds--);
+}
+
+
+
 /**
   * @brief This function provides minimum delay (in milliseconds) based 
   *        on variable incremented.
@@ -352,9 +361,14 @@ __weak void HAL_Delay(__IO uint32_t Delay)
      wait++;
   }
   
-  while((HAL_GetTick() - tickstart) < wait)
+  if(HAL_GetTick() > 10)
   {
+	  while((HAL_GetTick() - tickstart) < wait)
+  	{
+  	}
   }
+  else
+	Pol_Delay_us2(Delay*10);
 }
 
 /**

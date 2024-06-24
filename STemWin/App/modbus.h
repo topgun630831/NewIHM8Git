@@ -313,7 +313,7 @@ typedef enum e_index_value
 #define	TENTHOUSAND					10000
 #define	PER_MAX						100.0 
 #define	MCCB_TIME					1000.0 
-#define	YEAR_MIN					2018
+#define	YEAR_MIN					2024
 #define	YEAR_MAX					2099
 #define	YEAR_BASE					2000
 #define	MONTH_MAX					12
@@ -634,7 +634,7 @@ typedef enum e_index_value
 #define	DEFAULT_COMM_SPEED				9600
 #define	DEBUG_COMM_SPEED				115200
 #define	ASCII_BASE						0x30
-#define	PCF2129_TIMEOUT					50
+#define	PCF2129_TIMEOUT					200
 #define	BCD_MASK						0x0F
 #define	RTCBATTERYSTATUS_MASK			0x04
 #define	TIMING_ADDRESSSETUPTIME_CONST	4

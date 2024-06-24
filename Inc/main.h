@@ -49,9 +49,9 @@
 #ifndef __MAIN_H
 #define __MAIN_H
 
-#define PCF2131			0			// New RTC			
+#define PCF2131			1			// New RTC			
 
-#define __WATCHDOG__		0			// 0=wd off, 1=wd on
+#define __WATCHDOG__	0			// 0=wd off, 1=wd on
 
 /* Includes ------------------------------------------------------------------*/
 
@@ -190,7 +190,7 @@ typedef enum {
 #define Cntl2  	0x00
 #define	Cntl3   0x00
 #if PCF2131
-#define	ClkOut  0xC6		// Temperature measurement period 4Min(0xC6) 
+#define	ClkOut  0x46		// Temperature measurement period 4Min(0xC6) 
 #else
 #define	ClkOut  0x46		// Temperature measurement period 2Min(0x46) 
 #endif
