@@ -301,9 +301,9 @@ void HAL_CRC_MspDeInit(CRC_HandleTypeDef* hcrc)
 
 }
 
+#if 0
 void HAL_SPI_MspInit(SPI_HandleTypeDef* hspi)
 {
-
   GPIO_InitTypeDef GPIO_InitStruct;
   if(hspi->Instance==SPI3)
   {
@@ -332,12 +332,10 @@ void HAL_SPI_MspInit(SPI_HandleTypeDef* hspi)
 
   /* USER CODE END SPI3_MspInit 1 */
   }
-
 }
 
 void HAL_SPI_MspDeInit(SPI_HandleTypeDef* hspi)
 {
-
   if(hspi->Instance==SPI3)
   {
   /* USER CODE BEGIN SPI3_MspDeInit 0 */
@@ -363,8 +361,8 @@ void HAL_SPI_MspDeInit(SPI_HandleTypeDef* hspi)
 
   /* USER CODE END SPI3_MspDeInit 1 */
   }
-
 }
+#endif
 
 void HAL_TIM_PWM_MspInit(TIM_HandleTypeDef* htim)
 {

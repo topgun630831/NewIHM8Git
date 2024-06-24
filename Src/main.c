@@ -539,10 +539,35 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 	{
 		HAL_UART_Receive_IT(&huart6, &rx6_data, 1);
 		if(rx6_data == '1')
+		{
 			gDebug = true;
+			printf("\n\ngDebug : %d\n", gDebug); 
+		}
 		else if(rx6_data == '0')
+		{
 			gDebug = false;
-		printf("\n\ngDebug : %d\n", gDebug); 
+			printf("\n\ngDebug : %d\n", gDebug); 
+		}
+		else if(rx6_data == '3')
+		{
+        	HAL_GPIO_WritePin(RS485_TERM_Port, RS485_TERM1, GPIO_PIN_SET);
+			printf("\n\ngUart1 Terminate ON\n"); 
+		}
+		else if(rx6_data == '4')
+		{
+        	HAL_GPIO_WritePin(RS485_TERM_Port, RS485_TERM1, GPIO_PIN_RESET);
+			printf("\n\ngUart1 Terminate OFF\n"); 
+		}
+		else if(rx6_data == '5')
+		{
+        	HAL_GPIO_WritePin(RS485_TERM_Port, RS485_TERM2, GPIO_PIN_SET);
+			printf("\n\ngUart2 Terminate ON\n"); 
+		}
+		else if(rx6_data == '6')
+		{
+        	HAL_GPIO_WritePin(RS485_TERM_Port, RS485_TERM2, GPIO_PIN_RESET);
+			printf("\n\ngUart2 Terminate OFF\n"); 
+		}
 	}
 }
 
@@ -1237,12 +1262,23 @@ static void MX_GPIO_Init(void)
 	GPIO_InitStruct.Pin = GPIO_PIN_14 | GPIO_PIN_15;
 	GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;		// Output Open Drain Mode
 	GPIO_InitStruct.Pull = GPIO_NOPULL;
-	GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+	GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
 	HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
 	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_14, GPIO_PIN_RESET);
 	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_15, GPIO_PIN_RESET);
 
+	/*Configure GPIO pin : RS-485 Terminate_Pin */
+	GPIO_InitStruct.Pin = RS485_TERM1 | RS485_TERM2;
+	GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+	GPIO_InitStruct.Pull = GPIO_NOPULL;
+	GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+	HAL_GPIO_Init(RS485_TERM_Port, &GPIO_InitStruct);
+
+	HAL_GPIO_WritePin(RS485_TERM_Port, RS485_TERM1, GPIO_PIN_RESET);
+	HAL_GPIO_WritePin(RS485_TERM_Port, RS485_TERM2, GPIO_PIN_RESET);
+	
+	
   /* EXTI interrupt init*/
   HAL_NVIC_SetPriority(EXTI4_IRQn, 15, 0);
   HAL_NVIC_EnableIRQ(EXTI4_IRQn);

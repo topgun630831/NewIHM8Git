@@ -75,12 +75,14 @@
 #define USER_LED_GPIO_Port 		GPIOC
 #define LCDTS_CS_Pin 			GPIO_PIN_15
 #define LCDTS_CS_GPIO_Port 		GPIOA
+/*
 #define LCDTS_CLK_Pin 			GPIO_PIN_10
 #define LCDTS_CLK_GPIO_Port 	GPIOC
 #define LCDTS_DOUT_Pin 			GPIO_PIN_11
 #define LCDTS_DOUT_GPIO_Port 	GPIOC
 #define LCDTS_DIN_Pin 			GPIO_PIN_12
 #define LCDTS_DIN_GPIO_Port 	GPIOC
+*/
 #define BLE_RESET_Pin 			GPIO_PIN_0
 #define BLE_RESET_GPIO_Port 	GPIOE
 #define L_reset_Pin 			GPIO_PIN_1
@@ -88,7 +90,7 @@
 
 #define KEY_GPIO_Port 			GPIOA
 #define BEEP_GPIO_Port 			GPIOE
-#define BACKLIGHT_GPIO_Port			GPIOB
+#define BACKLIGHT_GPIO_Port		GPIOB
 
 #define SETUP_KEY_Pin 			GPIO_PIN_4
 #define UP_KEY_Pin 				GPIO_PIN_5
@@ -98,6 +100,10 @@
 
 #define BEEP_Pin	 			GPIO_PIN_6
 #define BACKLIGHT_Pin 			GPIO_PIN_8
+
+#define RS485_TERM_Port		GPIOC
+#define RS485_TERM1			GPIO_PIN_11
+#define RS485_TERM2			GPIO_PIN_10
 
 #define	SETUP_WRITE_ID					0x5599
 
