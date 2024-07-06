@@ -31,6 +31,7 @@
 #include "string.h"
 #include "RTOS.h"
 #include "string.h"
+#include "modbus.h"
 
 #define __SAVING_MODE__					1			// 0=disable, 1=enable
 
@@ -46,6 +47,8 @@ static uint32_t GetTimerDiff(void);
 static uint8_t gTimeSyncDay;
 
 uint8_t KeyChanged[KEY_MAX];
+
+extern UART_HandleTypeDef huart6;
 
 /*********************************************************************
 *
@@ -359,7 +362,7 @@ static void AcbMccbOverViewValue(int flag)
 	  	//(void)printf("Value %d => %f\n", i, Ampare[gDeviceIndex][i]);
 	  }
 	}
-	
+
 	for(int i = 0; i < gPols[gDeviceIndex]; i++)
 	{
 		double v;
@@ -450,7 +453,7 @@ static void AcbMccbOverViewValue(int flag)
 //			{
 //				barGraphPer[i] = PER105;		// 적색
 //			}
-//		}				
+//		}
 		else
 		{
 			barGraphPer[i] = (uint16_t)((Ampare[gDeviceIndex][i] * HUNDRED) / compare);
@@ -855,7 +858,7 @@ void StatusRecv(void)
 				PCF2127_readTime(1);
 				ModbusSetTimeAndWait(ConnectSetting[gDeviceIndex].Address, &gDateTime);
 			}
-			
+
 			for(uint16_t i = 0; i < MLINK_DO_MAX; i++)
 			{
 				doStatus[gDeviceIndex][i] = ModbusGetBit(I_REGISTER_210, i);
@@ -901,7 +904,7 @@ void StatusRecv(void)
 		{
 //			ModbusGetString(H_REGISTER_507, INDEX_32, gProductName[gDeviceIndex]);
 			ModbusGetId2(gProductName[gDeviceIndex]);
-			
+
 			//(void)printf("gProductName = %s\n", gProductName[gDeviceIndex]);
 			statusSendStep = INDEX_2;
 		}
@@ -927,7 +930,7 @@ void StatusRecv(void)
 			{
 				(void)sprintf(buf, "%s #%d", gProductName[gDeviceIndex], ConnectSetting[gDeviceIndex].Address);
 			}
-			
+
 			GUI_ClearRectEx(&rectDesc);
 			GUI_DispStringInRect(buf, &rectDesc, GUI_TA_HCENTER | GUI_TA_VCENTER);
 			uint16_t pols;
@@ -1015,7 +1018,7 @@ void StatusRecv(void)
 			uint16_t FaultEventRolloverCount = rolloverCount & ROLLOVER_COUNT_MASK;
 			gSystemEventIndex[gDeviceIndex] = ModbusGetUint16(I_REGISTER_195);
 			uint16_t faultCount = ModbusGetUint16(I_REGISTER_196);
-			
+
 			if((faultCount == 0))
 			{
 				int flag = FALSE;
@@ -1072,7 +1075,7 @@ void StatusRecv(void)
 			}
 			else {}
 	   		GUI_ClearRectEx(&rectLocal);
-			
+
 			if(gFaultEventIndex[gDeviceIndex] == gOldFaultEventIndex[gDeviceIndex])
 			{
 				GUI_SetColor(STATUS_LINE_COLOR);
@@ -1086,7 +1089,7 @@ void StatusRecv(void)
 				value = ModbusGetUint16(I_REGISTER_205); // 1:선박용, 2:일반용(Default), 3:Hynix용, 4:SK용
 				gAcbType[gDeviceIndex] = (E_ACB_TYPE)(value & ACB_TYPE_MASK);
 			}
-			
+
 			value = ModbusGetUint16(I_REGISTER_206);
 			if(value & TIME_SYNC_MASK)
 			{
@@ -1119,7 +1122,7 @@ void StatusRecv(void)
 
 			gLrValue[gDeviceIndex] = ModbusGetUint16(I_REGISTER_203);
 			//(void)printf("ACB/MCCB lr=%f, groupoffset=%d\n", gLrValue[gDeviceIndex], gGroupOffset[gDeviceIndex]);
-			
+
 			statusSendStep = 0;
 			gStatusSendEnd = STATUS_SEND_END;
 		}
@@ -1182,16 +1185,6 @@ static void ScreenTimerInit(void)
 	gReturnToScreen = timer + (SettingValue[SETUP_RETURN_TO_SCREEN] * THOUSAND);
 }
 
-void MasterModbusProcess(void)
-{
-	static float gPTAValue[DEVICE_MAX];
-}
-
-void SlaveModbusProcess(void)
-{
-	static bool bTurnSlave = false;
-}
-
 // PRQA S 1503 1
 void GuiMain(void)
 {
@@ -1216,7 +1209,7 @@ void GuiMain(void)
 		}
 		gCommOldStatus[d] = -1;
 	}
-	
+
 	_acImage[COMM_ERROR] = (const uint8_t *)_acImageStatusDisconnected;
 	_acImage[COMM_OK] = (const uint8_t *)_acImageStatusConnected;
 
@@ -1234,11 +1227,20 @@ void GuiMain(void)
 
 	ScreenTimerInit();
 
-	
+	sendFlag = 0;
+	gbSlaveSend = false;
+
+	HAL_UART_Receive_DMA(&huart1, uart1_dma_rx_buff, UART1_DMA_RX_BUFF_SIZE);
+	HAL_UART_Receive_DMA(&huart2, uart2_dma_rx_buff, UART2_DMA_RX_BUFF_SIZE);
+
+	uart1LastNDTR = huart1.hdmarx->Instance->NDTR;
+	uart2LastNDTR = huart2.hdmarx->Instance->NDTR;
+
 	int curCommStat = gCommStatus[gDeviceIndex];
-	
+
 	while (1)
     {
+
 		E_KEY key = GetKey();
 
 		if(curCommStat != gCommStatus[gDeviceIndex])
@@ -1371,7 +1373,7 @@ void GuiMain(void)
 		else
 		if(key == KEY_COMM_ERROR)
 		{
-			//(void)printf("COMM Error!!! gStatusSendEnd=%d, statusSendStep=%d, nSendStep=%d\n",gStatusSendEnd,statusSendStep,nSendStep); 
+			//(void)printf("COMM Error!!! gStatusSendEnd=%d, statusSendStep=%d, nSendStep=%d\n",gStatusSendEnd,statusSendStep,nSendStep);
 			if(gStatusSendEnd == STATUS_SEND_END)
 			{
 				nSendStep++;
@@ -1391,7 +1393,7 @@ void GuiMain(void)
 				{
 					nStepMax = INDEX_2;
 				}
-				
+
 				if(nSendStep < nStepMax)
 				{
 					OverviewSend();
@@ -1399,7 +1401,7 @@ void GuiMain(void)
 				else
 				{
 					g_bRecvAllDone = TRUE;
-			
+
 					//(void)printf("All done!!!\n");
 					gStatusSendEnd = STATUS_SEND_ING;
 					statusSendStep = 0;
@@ -1425,10 +1427,345 @@ static uint32_t GetTimerDiff(void)
 	}
 }
 
+__STATIC_INLINE void Pol_Delay_us(volatile uint32_t microseconds)
+{
+	/* Go to number of cycles for system */
+	microseconds *= (SystemCoreClock / 1000000);   /* Delay till end */
+	while (microseconds--);
+}
+
+
+static uint8_t MasterModbusCRCCheck(void)
+{
+	if(g_modbusRxIndex < 5 || g_modbusRxIndex > MODBUS_BUFF_SIZE)
+		return MODBUS_CRC_ERROR;
+	if(gDebug)
+	{
+		(void)printf("Master Recv Frame!!!(%d)\n", HAL_GetTick());
+		for(int i = 0; i < g_modbusRxIndex; i++)
+		{
+			(void)printf("%02X ", g_modbusRxBuff[i]);
+		}
+		(void)printf("\n");
+	}
+	bool exception = false;
+	if(g_modbusRxBuff[1] & MASK_80)
+	{
+		exception = true;
+		(void)printf("-----------------\nModbus Exception Error[%02x]\n", g_modbusRxBuff[INDEX_2]);
+	}
+
+	uint8_t ret = MODBUS_OK;
+	uint16_t p, crc;
+	if(exception == true)
+	{
+		p = (uint16_t)(g_modbusRxBuff[INDEX_3] << INDEX_8) | (uint16_t)g_modbusRxBuff[INDEX_4];
+		crc = CRC16(g_modbusRxBuff, INDEX_3);
+	}
+	else
+	{
+		p = (uint16_t)(g_modbusRxBuff[g_modbusRxIndex-INDEX_2] << INDEX_8) | (uint16_t)g_modbusRxBuff[g_modbusRxIndex-1];
+		crc = CRC16(g_modbusRxBuff, g_modbusRxIndex-INDEX_2);
+	}
+	if(crc == p)
+	{
+		SlaveSendLength = g_modbusRxIndex;
+		memcpy(SlaveTxBuffer, g_modbusRxBuff, SlaveSendLength);
+		g_modbusRxIndex = 0;
+		//		gbMasterSend = true;
+	}
+	else
+	{
+		(void)printf("-----------------\nModbus CRC Error[%04x, %04x]\n", crc, p);
+		ret = MODBUS_CRC_ERROR;
+	}
+	return ret;
+}
+
+void MasterModbusProcess(void)
+{
+//	if(sendFlag == 1)
+	{
+		uint32_t uart2NewNDTR = huart2.hdmarx->Instance->NDTR;
+		HAL_StatusTypeDef stat;
+		int nTimeOut = MODBUS_TIMEOUT;
+		bool bRecvOk = false;
+		uint32_t count;
+
+		uint32_t last_recv = HAL_GetTick();
+
+		if(uart2LastNDTR != uart2NewNDTR)
+		{
+			last_recv = HAL_GetTick();
+			uint16_t readExceptionLen = NORMAL_EXCEPTION_LEN;
+			if(g_functionCode == MODBUS_EXTEND_FUNCTION)
+			{
+			//					readExceptionLen = EXTEND_EXCEPTION_LEN;
+			  readExceptionLen = NORMAL_EXCEPTION_LEN;
+			}
+			uint32_t pos = UART2_DMA_RX_BUFF_SIZE - uart2LastNDTR;
+			if(uart2LastNDTR > uart2NewNDTR)
+			{
+				count = (uart2LastNDTR - uart2NewNDTR);
+				memcpy(&g_modbusRxBuff[g_modbusRxIndex], &uart2_dma_rx_buff[pos], count);
+				g_modbusRxIndex += count;
+				if(gDebug)
+				{
+				  (void)printf("(%d)Recv, new=%d, last=%d,  rx index=%d, wait=%d\n",HAL_GetTick(), uart2NewNDTR, uart2LastNDTR, g_modbusRxIndex, g_wModbusWaitLen);
+				  for(int i = 0; i < count; i++)
+				  {
+				//		  (void)printf("%02X ", uart2_dma_rx_buff[pos+i]);
+				  }
+				  (void)printf("\n");
+				}
+		  	}
+			else
+			{
+				count = (UART2_DMA_RX_BUFF_SIZE - uart2NewNDTR) + uart2LastNDTR;
+				//memcpy(&g_modbusRxBuff[g_modbusRxIndex], &uart2_dma_rx_buff[pos], uart2LastNDTR);
+				memcpy(&g_modbusRxBuff[g_modbusRxIndex], &uart2_dma_rx_buff[pos], uart2LastNDTR);
+				g_modbusRxIndex += uart2LastNDTR;
+				uint32_t remainder = UART2_DMA_RX_BUFF_SIZE- uart2NewNDTR;
+				memcpy(&g_modbusRxBuff[g_modbusRxIndex], &uart2_dma_rx_buff[0], remainder);
+				g_modbusRxIndex += remainder;
+			}
+			uart2LastNDTR = uart2NewNDTR;
+
+			if(g_modbusRxIndex < readExceptionLen)
+				return;
+			if((((g_modbusRxBuff[1] & INDEX_0x80) == INDEX_0x80) || (g_modbusRxBuff[0] != g_modbusAddress)) || (g_functionCode != g_modbusRxBuff[1]))
+			{
+				(void)printf("Exception Frame Read!!!\n");
+				for(int i = 0; i < readExceptionLen; i++)
+				{
+					  (void)printf("%02X ", g_modbusRxBuff[i]);
+				}
+				(void)printf("\n");
+				if(++gCommErrorCount[gDeviceIndex] >= COMM_ERROR_COUNT)
+				{
+				  gCommStatus[gDeviceIndex] = COMM_ERROR;
+				  gCommErrorCount[gDeviceIndex] = 0;
+				}
+				g_modbusRxError = 1;
+				if(g_modbusRxBuff[1] & INDEX_0x80)
+				{
+				  (void)printf("Header Exception Error!!!!\n");
+				}
+				else
+				{
+				  (void)printf("Header Comm Error!!!!\n");
+				}
+				sendFlag = 0;
+				g_modbusRxIndex = 0;
+				return;
+			}
+			if(g_modbusRxIndex >= g_wModbusWaitLen)
+			{
+				uint16_t pos = 8;
+				if(g_bRecvVariable == FALSE)
+				{
+					g_modbusRxDone = 1;
+//yskim					gCommStatus[gDeviceIndex] = COMM_OK;
+//yskim					gCommErrorCount[gDeviceIndex] = 0;
+					if(gDebug)
+						(void)printf("Recv Done!!!!(%d)\n",HAL_GetTick());
+					sendFlag = 0;
+					bRecvOk = true;
+					if(MasterModbusCRCCheck() == MODBUS_OK)
+					{
+					}
+					g_modbusSlaveRxIndex = 0;
+				}
+				else
+				{
+					uint16_t index = g_wModbusWaitLen;
+					uint8_t cnt = g_modbusRxBuff[INDEX_7];
+					bRecvOk = true;
+					for(uint8_t i = 0; i < cnt; i++)
+					{
+						if(g_modbusRxIndex < (pos + 2))		// Object ID + Object Length
+						{
+							bRecvOk = false;
+							break;
+						}
+						uint8_t len = g_modbusRxBuff[pos+1];
+						if(g_modbusRxIndex < (pos + g_modbusRxBuff[pos+1] + 1))
+						{
+							bRecvOk = false;
+							break;
+						}
+						pos += g_modbusRxBuff[pos] + 2;
+					}
+					if(bRecvOk == true)
+					{
+						if(g_modbusRxIndex < (pos + 2))		// CRC
+						{
+							bRecvOk = false;
+							return;
+						}
+						g_modbusRxDone=1;
+						gCommStatus[gDeviceIndex] = COMM_OK;
+						gCommErrorCount[gDeviceIndex] = 0;
+						if(gDebug)
+							(void)printf("[g_bRecvVariable]Recv Done!!!!(%d)\n", HAL_GetTick());
+						sendFlag = 0;
+						if(MasterModbusCRCCheck() == MODBUS_OK)
+						{
+						}
+						g_modbusSlaveRxIndex = 0;
+					}
+				}
+			}
+		}
+		else
+		{
+			if((HAL_GetTick() - last_recv) > 1000)
+			{
+				printf("Recv Timeout Reset(%d,last=%d)------------------------\n", HAL_GetTick(), last_recv);
+				HAL_UART_DMAStop(&huart2);
+				HAL_UART_MspDeInit(&huart2);
+				Pol_Delay_us(15000);
+				HAL_UART_MspInit(&huart2);
+				HAL_UART_Receive_DMA(&huart2, uart2_dma_rx_buff, UART2_DMA_RX_BUFF_SIZE);
+				uart2LastNDTR = huart2.hdmarx->Instance->NDTR;
+				last_recv = HAL_GetTick();
+			}
+		}
+		uint32_t tick = HAL_GetTick() - masterSendTick;
+		if(bRecvOk == false && tick > 500)
+		{
+			if(++gCommErrorCount[gDeviceIndex] >= COMM_ERROR_COUNT)
+			{
+				gCommStatus[gDeviceIndex] = COMM_ERROR;
+				gCommErrorCount[gDeviceIndex] = 0;
+				//					(void)printf("Comm Error!!!!\n");
+			}
+			g_modbusRxError = 1;
+		}
+	}
+
+	if(huart2.gState == HAL_UART_STATE_READY)
+	{
+	}
+	uint32_t stat = HAL_UART_GetState(&huart2);
+	uint32_t error = HAL_UART_GetError(&huart6);
+	if(error != HAL_UART_ERROR_NONE)
+		printf("\n\n\n\n Error!!!\n\n\n\n");
+}
+
+static uint8_t SlaveModbusCRCCheck(void)
+{
+	if(g_modbusSlaveRxIndex < 5 || g_modbusSlaveRxIndex > MODBUS_SLAVE_BUFF_SIZE)
+		return MODBUS_CRC_ERROR;
+	if(gDebug)
+	{
+		(void)printf("Slave Recv Frame!!!(%d)\n", HAL_GetTick());
+		for(int i = 0; i < g_modbusSlaveRxIndex; i++)
+		{
+			(void)printf("%02X ", g_modbusSlaveRxBuff[i]);
+		}
+		(void)printf("\n");
+	}
+	bool exception = false;
+	if(g_modbusSlaveRxBuff[1] & MASK_80)
+	{
+		exception = true;
+		(void)printf("-----------------\nModbus Exception Error[%02x]\n", g_modbusSlaveRxBuff[INDEX_2]);
+	}
+
+	uint8_t ret = MODBUS_OK;
+	uint16_t p, crc;
+	if(exception == true)
+	{
+		p = (uint16_t)(g_modbusSlaveRxBuff[INDEX_3] << INDEX_8) | (uint16_t)g_modbusSlaveRxBuff[INDEX_4];
+		crc = CRC16(g_modbusSlaveRxBuff, INDEX_3);
+	}
+	else
+	{
+		p = (uint16_t)(g_modbusSlaveRxBuff[g_modbusSlaveRxIndex-INDEX_2] << INDEX_8) | (uint16_t)g_modbusSlaveRxBuff[g_modbusSlaveRxIndex-1];
+		crc = CRC16(g_modbusSlaveRxBuff, g_modbusSlaveRxIndex-INDEX_2);
+	}
+	if(crc == p)
+	{
+		g_modbusSlaveAddress  = g_modbusSlaveRxBuff[0];
+		g_SlavefunctionCode   = g_modbusSlaveRxBuff[1];
+		g_wModbusSlaveWaitLen = (g_modbusSlaveRxBuff[4] << 8) | g_modbusSlaveRxBuff[5];
+		g_wModbusSlaveWaitLen = g_wModbusSlaveWaitLen * 2 + 5;
+		MasterSendLength = g_modbusSlaveRxIndex;
+		memcpy(MasterTxBuffer, g_modbusSlaveRxBuff, MasterSendLength);
+		g_modbusSlaveRxIndex = 0;
+		//		gbSlaveSend = true;
+	}
+	else
+	{
+		(void)printf("-----------------\nModbus CRC Error[%04x, %04x]\n", crc, p);
+		ret = MODBUS_CRC_ERROR;
+	}
+	g_modbusSlaveRxIndex = 0;
+	return ret;
+}
+
+
+void SlaveModbusProcess(void)
+{
+	static bool bTurnSlave = false;
+	uint32_t uart1NewNDTR = huart1.hdmarx->Instance->NDTR;
+	int nTimeOut = MODBUS_TIMEOUT;
+	int bRecvOk = FALSE;
+	uint32_t count;
+	static uint32_t slave_last_recv = 0;
+
+
+	if(uart1LastNDTR != uart1NewNDTR)
+	{
+		uint32_t pos = UART1_DMA_RX_BUFF_SIZE - uart1LastNDTR;
+		if(uart1LastNDTR > uart1NewNDTR)
+		{
+		  count = (uart1LastNDTR - uart1NewNDTR);
+		  memcpy(&g_modbusSlaveRxBuff[g_modbusSlaveRxIndex], &uart1_dma_rx_buff[pos], count);
+		  g_modbusSlaveRxIndex += count;
+		}
+		else
+		{
+			count = (UART1_DMA_RX_BUFF_SIZE - uart1NewNDTR) + uart1LastNDTR;
+			memcpy(&g_modbusSlaveRxBuff[g_modbusSlaveRxIndex], &uart1_dma_rx_buff[pos], uart1LastNDTR);
+			g_modbusSlaveRxIndex += uart1LastNDTR;
+			uint32_t remainder = UART1_DMA_RX_BUFF_SIZE- uart1NewNDTR;
+			memcpy(&g_modbusSlaveRxBuff[g_modbusSlaveRxIndex], &uart1_dma_rx_buff[0], remainder);
+			g_modbusSlaveRxIndex += remainder;
+		}
+		slave_last_recv = HAL_GetTick();
+		printf("g_modbusSlaveRxIndex : %d\n", g_modbusSlaveRxIndex);
+		if(g_modbusSlaveRxIndex >= INDEX_8)
+		{
+
+			if(SlaveModbusCRCCheck() == MODBUS_OK)
+			{
+				// SlaveModbusSend(g_modbusSlaveRxBuff, g_modbusSlaveRxIndex);
+			}
+
+	//			g_modbusSlaveRxIndex = 0;
+			slave_last_recv = 0;
+
+		}
+		uart1LastNDTR = uart1NewNDTR;
+	}
+	else
+	{
+		if((slave_last_recv != 0) && ((HAL_GetTick() - slave_last_recv) > 500))
+		{
+		  printf("Slave Recv Wait Time Out!!!\n");
+		  g_modbusSlaveRxIndex = 0;
+		  slave_last_recv = 0;
+		}
+	}
+}
+
 // PRQA S 1503 1
 E_KEY GetKey(void)
 {
 	static  int gCommCheckStatus[DEVICE_MAX];
+	uint32_t LedTickCount = HAL_GetTick();
 
     while (1)
     {
@@ -1436,11 +1773,19 @@ E_KEY GetKey(void)
 #if __WATCHDOG__ //[[ by kys.2018.06.17_BEGIN -- watchdog
             __HAL_IWDG_RELOAD_COUNTER(&hiwdg);
 #endif //]] by kys.2018.06.17_END -- watchdog
-			
+
 		CommStatusDisp();
 		uint32_t timer = HAL_GetTick();
 		uint32_t diff;
 		diff = timer-commTimer;
+
+		if((timer - LedTickCount) > 500)
+		{
+			HAL_GPIO_TogglePin(USER_LED_GPIO_Port, USER_LED_Pin);
+			LedTickCount = timer;
+		}
+		MasterModbusProcess();
+		SlaveModbusProcess();
 		if(diff >= GetTimerDiff())
 		{
 			if((g_bRecvAllDone == TRUE) || (diff >= TIMER_DIFF_10SEC))
@@ -1534,12 +1879,23 @@ E_KEY GetKey(void)
 			}
 		}
 
+		SlaveModbusProcess();
+
 		if(MasterSendLength != 0)
 		{
+			g_modbusAddress = g_modbusSlaveAddress;
+			g_functionCode = g_SlavefunctionCode;
+			g_wModbusWaitLen = g_wModbusSlaveWaitLen;
 			MasterModbusSend();
-			MasterSendLength = 0;
+			printf("MasterModbusSend(%d)\n", HAL_GetTick());
 		}
-			
+		MasterModbusProcess();
+		if(SlaveSendLength != 0)
+		{
+			SlaveModbusSend();
+			printf("MasterModbusSend(%d)\n", HAL_GetTick());
+		}
+#if 0
 		if (g_modbusRxDone)
 		{
 			CommStatusDisp();
@@ -1571,6 +1927,7 @@ E_KEY GetKey(void)
 			}
 			g_modbusRxDone = 0;
 		}
+#endif
 		if(g_modbusRxError)
 		{
 			//(void)printf("g_modbusRxError\n");

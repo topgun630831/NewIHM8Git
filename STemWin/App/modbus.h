@@ -57,6 +57,10 @@
 #define MASTER_TX_BUFF_MAX 20
 #define SLAVE_TX_BUFF_MAX 256
 
+#define UART1_DMA_RX_BUFF_SIZE 20
+//#define UART2_DMA_RX_BUFF_SIZE 512
+#define UART2_DMA_RX_BUFF_SIZE 120
+
 typedef enum e_function_code
 {
     COIL = 1,
@@ -200,6 +204,12 @@ EXTERN uint16_t g_wModbusWaitLen;
 EXTERN uint8_t g_modbusAddress;
 EXTERN uint8_t g_functionCode;
 EXTERN uint8_t g_subFunction;
+
+EXTERN uint16_t g_wModbusSlaveWaitLen;
+EXTERN uint8_t g_modbusSlaveAddress;
+EXTERN uint8_t g_SlavefunctionCode;
+EXTERN uint8_t g_SlavesubFunction;
+
 EXTERN uint16_t g_startAddr;
 EXTERN uint16_t g_waitReceiveLen;
 EXTERN uint8_t g_AddressRecv;
@@ -261,6 +271,15 @@ EXTERN char gProductName[DEVICE_MAX][MESSAGE_BUF_SIZE];
 EXTERN uint16_t mLinkMode[DEVICE_MAX];
 EXTERN uint16_t mLinkSBO[DEVICE_MAX];
 
+#define UART1_DMA_RX_BUFF_SIZE 20
+//#define UART2_DMA_RX_BUFF_SIZE 512
+#define UART2_DMA_RX_BUFF_SIZE 120
+EXTERN uint8_t uart1_dma_rx_buff[UART1_DMA_RX_BUFF_SIZE];
+EXTERN uint8_t uart2_dma_rx_buff[UART2_DMA_RX_BUFF_SIZE];
+EXTERN uint32_t slave_last_recv;
+EXTERN uint32_t uart1LastNDTR;
+EXTERN uint32_t uart2LastNDTR;
+
 
 #define	PER90		90
 #define	PER105		105
@@ -311,8 +330,8 @@ typedef enum e_index_value
 #define	HUNDRED						100
 #define	THOUSAND					1000
 #define	TENTHOUSAND					10000
-#define	PER_MAX						100.0 
-#define	MCCB_TIME					1000.0 
+#define	PER_MAX						100.0
+#define	MCCB_TIME					1000.0
 #define	YEAR_MIN					2024
 #define	YEAR_MAX					2099
 #define	YEAR_BASE					2000
@@ -361,7 +380,7 @@ typedef enum e_index_value
 #define I_REGISTER_208				208
 #define I_REGISTER_209				209
 #define I_REGISTER_210				210
-			
+
 #define I_REGISTER_215				215
 #define I_REGISTER_216				216
 #define I_REGISTER_217				217

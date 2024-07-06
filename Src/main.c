@@ -150,7 +150,9 @@ PUTCHAR_PROTOTYPE
 	/* e.g. write a character to the USART2 and Loop until the end of
 	transmission */
 // PRQA S 0310 1
+	HAL_NVIC_DisableIRQ(USART6_IRQn); //Rx Callback 함수 Disable
 	(void)HAL_UART_Transmit(&huart6, (uint8_t *)&ch, 1, UART_TIMEOUT);
+	HAL_NVIC_EnableIRQ(USART6_IRQn); //Rx Callback 함수 Disable
 	return ch;
 }
 // PRQA S 1330 --
@@ -184,19 +186,11 @@ static void Pcf2129AT_init(void);
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE END PV */
-static uint32_t uart1LastNDTR;
-static uint32_t uart2LastNDTR;
-#define UART1_DMA_RX_BUFF_SIZE 20
-//#define UART2_DMA_RX_BUFF_SIZE 512
-#define UART2_DMA_RX_BUFF_SIZE 120
-uint8_t uart1_dma_rx_buff[UART1_DMA_RX_BUFF_SIZE];
-uint8_t uart2_dma_rx_buff[UART2_DMA_RX_BUFF_SIZE];
-uint32_t slave_last_recv;
 
 __STATIC_INLINE void Pol_Delay_us(volatile uint32_t microseconds)
 {
-	/* Go to number of cycles for system */  
-	microseconds *= (SystemCoreClock / 1000000);   /* Delay till end */  
+	/* Go to number of cycles for system */
+	microseconds *= (SystemCoreClock / 1000000);   /* Delay till end */
 	while (microseconds--);
 }
 
@@ -224,7 +218,7 @@ void HAL_UART_ErrorCallback(UART_HandleTypeDef *huart)
 		printf("(uart2)HAL_UART_ErrorCallback!(%x)\n", huart->ErrorCode);
 		//HAL_GPIO_WritePin(GPIOB, GPIO_PIN_14, GPIO_PIN_RESET);
 		__HAL_UART_CLEAR_PEFLAG(&huart2);
-		
+
 		HAL_UART_DMAStop(&huart2);
 		Pol_Delay_us(15000);
 		HAL_UART_MspDeInit(&huart2);
@@ -244,6 +238,7 @@ void HAL_UART_ErrorCallback(UART_HandleTypeDef *huart)
 	}
 }
 
+#if 0
 uint16_t CRC16(const uint8_t *puchMsg, const uint16_t usDataLen);
 static uint8_t SlaveModbusCRCCheck(void)
 {
@@ -281,7 +276,7 @@ static uint8_t SlaveModbusCRCCheck(void)
 	{
 		SlaveSendLength = g_modbusSlaveRxIndex;
 		memcpy(SlaveTxBuffer, g_modbusSlaveRxBuff, SlaveSendLength);
-		gbSlaveSend = true;
+//		gbSlaveSend = true;
 	}
 	else
 	{
@@ -292,13 +287,15 @@ static uint8_t SlaveModbusCRCCheck(void)
 }
 
 
-static void ModbusSlaveCheck(void)
+void ModbusSlaveCheck(void)
 {
 	uint32_t uart1NewNDTR = huart1.hdmarx->Instance->NDTR;
 	int nTimeOut = MODBUS_TIMEOUT;
 	int bRecvOk = FALSE;
 	uint32_t count;
-	
+	static uint32_t slave_last_recv = 0;
+
+
 	if(uart1LastNDTR != uart1NewNDTR)
 	{
 		uint32_t pos = UART1_DMA_RX_BUFF_SIZE - uart1LastNDTR;
@@ -317,16 +314,30 @@ static void ModbusSlaveCheck(void)
 			memcpy(&g_modbusSlaveRxBuff[g_modbusSlaveRxIndex], &uart1_dma_rx_buff[0], remainder);
 			g_modbusSlaveRxIndex += remainder;
 		}
+		slave_last_recv = HAL_GetTick();
 		printf("g_modbusSlaveRxIndex : %d\n", g_modbusSlaveRxIndex);
 		if(g_modbusSlaveRxIndex >= INDEX_8)
 		{
-		  if(SlaveModbusCRCCheck() == MODBUS_OK)
-		  {
-			SlaveModbusSend(g_modbusSlaveRxBuff, g_modbusSlaveRxIndex);
-		  }
-		  g_modbusSlaveRxIndex = 0;
+
+			if(SlaveModbusCRCCheck() == MODBUS_OK)
+			{
+				// SlaveModbusSend(g_modbusSlaveRxBuff, g_modbusSlaveRxIndex);
+			}
+
+//			g_modbusSlaveRxIndex = 0;
+			slave_last_recv = 0;
+
 		}
 		uart1LastNDTR = uart1NewNDTR;
+	}
+	else
+	{
+		if((slave_last_recv != 0) && ((HAL_GetTick() - slave_last_recv) > 500))
+		{
+		  printf("Slave Recv Wait Time Out!!!\n");
+		  g_modbusSlaveRxIndex = 0;
+		  slave_last_recv = 0;
+		}
 	}
 }
 
@@ -341,8 +352,8 @@ static void ReceiveTask(void)
 
 	uart1LastNDTR = huart1.hdmarx->Instance->NDTR;
 	uart2LastNDTR = huart2.hdmarx->Instance->NDTR;
-	
-	
+
+
 	uint32_t last_recv = HAL_GetTick();
 	while (1)
 	{
@@ -389,27 +400,9 @@ static void ReceiveTask(void)
 					count = (UART2_DMA_RX_BUFF_SIZE - uart2NewNDTR) + uart2LastNDTR;
 					//memcpy(&g_modbusRxBuff[g_modbusRxIndex], &uart2_dma_rx_buff[pos], uart2LastNDTR);
 					memcpy(&g_modbusRxBuff[g_modbusRxIndex], &uart2_dma_rx_buff[pos], uart2LastNDTR);
-//	if(gDebug)
-//	{
-//	  (void)printf("(%d)Recv new=%d, last=%d, count=%d\n",HAL_GetTick(), uart2NewNDTR, uart2LastNDTR, count);
-//	  for(int i = 0; i < uart2LastNDTR; i++)
-//	  {
-//		  (void)printf("%02X ", uart2_dma_rx_buff[pos+i]);
-//	  }
-//	  (void)printf("\n");
-//	}
 				  	g_modbusRxIndex += uart2LastNDTR;
 					uint32_t remainder = UART2_DMA_RX_BUFF_SIZE- uart2NewNDTR;
 					memcpy(&g_modbusRxBuff[g_modbusRxIndex], &uart2_dma_rx_buff[0], remainder);
-//	if(gDebug)
-//	{
-//	  (void)printf("(%d)Recv remainder %d\n",HAL_GetTick(), remainder);
-//	  for(int i = 0; i < remainder; i++)
-//	  {
-//		  (void)printf("%02X ", uart2_dma_rx_buff[0+i]);
-//	  }
-//	  (void)printf("\n");
-//	}
 					g_modbusRxIndex += remainder;
 				}
 				uart2LastNDTR = uart2NewNDTR;
@@ -521,17 +514,25 @@ static void ReceiveTask(void)
 				{
 					gCommStatus[gDeviceIndex] = COMM_ERROR;
 					gCommErrorCount[gDeviceIndex] = 0;
-					(void)printf("Comm Error!!!!\n");
+//					(void)printf("Comm Error!!!!\n");
 				}
 				g_modbusRxError = 1;
-				(void)printf("(%d)Time out!!!(%d)\n", HAL_GetTick(), tick);
 			}
 		}
 		ModbusSlaveCheck();
+
+		if(huart2.gState == HAL_UART_STATE_READY)
+		{
+		}
+		uint32_t stat = HAL_UART_GetState(&huart2);
+		uint32_t error = HAL_UART_GetError(&huart6);
+		if(error != HAL_UART_ERROR_NONE)
+		  printf("\n\n\n\n Error!!!\n\n\n\n");
+
 		OS_Delay(50);
 	}
 }
-
+#endif
 uint8_t rx6_data;
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 {
@@ -541,34 +542,38 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 		if(rx6_data == '1')
 		{
 			gDebug = true;
-			printf("\n\ngDebug : %d\n", gDebug); 
+			printf("\n\ngDebug : %d\n", gDebug);
 		}
 		else if(rx6_data == '0')
 		{
 			gDebug = false;
-			printf("\n\ngDebug : %d\n", gDebug); 
+			printf("\n\ngDebug : %d\n", gDebug);
 		}
 		else if(rx6_data == '3')
 		{
         	HAL_GPIO_WritePin(RS485_TERM_Port, RS485_TERM1, GPIO_PIN_SET);
-			printf("\n\ngUart1 Terminate ON\n"); 
+			printf("\n\ngUart1 Terminate ON\n");
 		}
 		else if(rx6_data == '4')
 		{
         	HAL_GPIO_WritePin(RS485_TERM_Port, RS485_TERM1, GPIO_PIN_RESET);
-			printf("\n\ngUart1 Terminate OFF\n"); 
+			printf("\n\ngUart1 Terminate OFF\n");
 		}
 		else if(rx6_data == '5')
 		{
         	HAL_GPIO_WritePin(RS485_TERM_Port, RS485_TERM2, GPIO_PIN_SET);
-			printf("\n\ngUart2 Terminate ON\n"); 
+			printf("\n\ngUart2 Terminate ON\n");
 		}
 		else if(rx6_data == '6')
 		{
         	HAL_GPIO_WritePin(RS485_TERM_Port, RS485_TERM2, GPIO_PIN_RESET);
-			printf("\n\ngUart2 Terminate OFF\n"); 
+			printf("\n\ngUart2 Terminate OFF\n");
 		}
 	}
+	if(huart->Instance == USART1)
+		printf("\n\n uart1 RxCallback\n\n");
+	if(huart->Instance == USART2)
+		printf("\n\n uart2 RxCallback\n\n");
 }
 
 static void EmWinTask(void)
@@ -673,7 +678,7 @@ static void OS_Sysclock_Config(void)
 		_Error_Handler(__FILE__, __LINE__);
 	}
 
-	
+
 	//HAL_RCC_MCOConfig(RCC_MCO2, RCC_MCO2SOURCE_SYSCLK, RCC_MCODIV_4); // for test
 }
 
@@ -719,10 +724,10 @@ static void Board_Init(void)
 /* USER CODE END 0 */
 //static int gDnFlag = 0;
 
-//#define BOR_LEVEL OB_BOR_OFF /*!< BOR Reset threshold levels for 1.62V - 2.10V VDD power supply  */ 
-//#define BOR_LEVEL OB_BOR_LEVEL1  /*!< BOR Reset threshold levels for 2.10V - 2.40V VDD power supply */ 
-#define BOR_LEVEL OB_BOR_LEVEL2  /*!< BOR Reset threshold levels for 2.40V - 2.70V VDD power supply */ 
-//#define BOR_LEVEL OB_BOR_LEVEL3  /*!< BOR Reset threshold levels for 2.70V - 3.60V VDD power supply */ 
+//#define BOR_LEVEL OB_BOR_OFF /*!< BOR Reset threshold levels for 1.62V - 2.10V VDD power supply  */
+//#define BOR_LEVEL OB_BOR_LEVEL1  /*!< BOR Reset threshold levels for 2.10V - 2.40V VDD power supply */
+#define BOR_LEVEL OB_BOR_LEVEL2  /*!< BOR Reset threshold levels for 2.40V - 2.70V VDD power supply */
+//#define BOR_LEVEL OB_BOR_LEVEL3  /*!< BOR Reset threshold levels for 2.70V - 3.60V VDD power supply */
 #define BOR_LEVEL_MASK	0x0c
 int main(void)
 {
@@ -743,12 +748,12 @@ int main(void)
     MX_DMA_Init();
 	MX_USART6_UART_Init();
 	MX_NVIC_Init();
-	
+
 	FLASH_OBProgramInitTypeDef FLASH_Handle;
-	
+
 	/* Read option bytes */
 	HAL_FLASHEx_OBGetConfig(&FLASH_Handle);
-	
+
 	MX_CRC_Init();
 	MX_FSMC_Init();
 
@@ -769,18 +774,18 @@ int main(void)
 
 		/* Unlocks the option bytes block access */
 		HAL_FLASH_OB_Unlock();
-		
+
 		/* Set value */
-		HAL_FLASHEx_OBProgram(&FLASH_Handle); 
+		HAL_FLASHEx_OBProgram(&FLASH_Handle);
 
 //		HAL_StatusTypeDef status;
 		/* Launch the option byte loading */
 		(void)HAL_FLASH_OB_Launch();
-		
+
 		/* Lock access to registers */
 		HAL_FLASH_OB_Lock();
 	}
-	
+
 #if __WATCHDOG__ //[[ by kys.2018.06.17_BEGIN -- watchdog
     MX_IWDG_Init();
     // iwdg reset 확인
@@ -795,9 +800,9 @@ int main(void)
     }
     // iwdg start
     __HAL_IWDG_START(&hiwdg);
-#endif	
+#endif
 #ifndef COMM_TEST
-	
+
 	HAL_GPIO_TogglePin(USER_LED_GPIO_Port, USER_LED_Pin);
 	MX_I2C2_Init();
 
@@ -810,15 +815,15 @@ int main(void)
 
 	MX_USART1_UART_Init();
 	MX_USART2_UART_Init();
-        
+
     MasterSendLength = SlaveSendLength = 0;
 
 
 	BacklightBrghtness(SettingValue[SETUP_BRIGHTNESS], FALSE);
-#else	
+#else
 	MX_USART2_UART_Init();
 	uint8_t c;
-	
+
 	printf("IHM8 CommTest.......................\n");
 	while(1)
 	{
@@ -829,23 +834,23 @@ int main(void)
 			volatile int i,j;
 			for(i = 0; i < 1000; i++) 	//1mS Delay
 			for(j = 0; j < 15; j++) ;	//1mS Delay
-			
+
 			HAL_UART_Transmit(&huart2, &c, 1, 1);
 		}
 	}
-	
+
 #endif
 	OS_InitKern();                   /* Initialize OS                 */
 	OS_InitHW();                     /* Initialize Hardware for OS    */
 
 //	while(1)
 //	{
-//		
+//
 //		HAL_GPIO_TogglePin(USER_LED_GPIO_Port, USER_LED_Pin);
 //		OS_Delay(100);
 //	}
-//	
-	
+//
+
 	Pcf2129AT_init();
 	(void)printf("\n\r");
 	(void)printf("\n\r*************************");
@@ -855,10 +860,10 @@ int main(void)
 	(void)printf("\n\r starting..");
 	(void)printf("\n\r*************************");
 	(void)printf("\n\r");
-        
+
         g_orderOwner = OWNER_MASTER;
 
-	OS_CREATETASK(&TCBRECEIVE, "Receive Task", &ReceiveTask,  RECV_PRORITY, StackReceive);										// System
+//	OS_CREATETASK(&TCBRECEIVE, "Receive Task", &ReceiveTask,  RECV_PRORITY, StackReceive);										// System
 	OS_CREATETASK(&TCBEMWIN, "emWin Task", &EmWinTask,  EMWIN_PRORITY, StackEmWin);									// emWin
 // PRQA S 3200 ++
 // PRQA S 3335 ++
@@ -1208,7 +1213,7 @@ static void MX_GPIO_Init(void)
 
 	/*Configure GPIO pin Output Level */
 	HAL_GPIO_WritePin(GPIOE, LCD_RESET_Pin|LCD_POWER_Pin, GPIO_PIN_SET);
-	
+
 	/*Configure GPIO pins : TEST_TS_IRQ_Pin L_reset_Pin */
 //	GPIO_InitStruct.Pin = TEST_TS_IRQ_Pin|L_reset_Pin;
 //	GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
@@ -1277,8 +1282,8 @@ static void MX_GPIO_Init(void)
 
 	HAL_GPIO_WritePin(RS485_TERM_Port, RS485_TERM1, GPIO_PIN_RESET);
 	HAL_GPIO_WritePin(RS485_TERM_Port, RS485_TERM2, GPIO_PIN_RESET);
-	
-	
+
+
   /* EXTI interrupt init*/
   HAL_NVIC_SetPriority(EXTI4_IRQn, 15, 0);
   HAL_NVIC_EnableIRQ(EXTI4_IRQn);
@@ -1773,7 +1778,7 @@ void FaultCountWrite(void)
 	else
 	{
 		(void)printf("Write Fail FAULT SETUP_WRITE_ID\n");
-		
+
 	}
 
 	Address = FLASH_FAULT_START_ADDR+ASCII_BASE;
@@ -1849,7 +1854,7 @@ uint16_t PCF2127_set_time(void)
     data[ INDEX_5 ]    = 1; //Week
     data[ INDEX_6 ]    = i2bcd(gDateTime.Month);
     data[ INDEX_7 ]    = i2bcd(gDateTime.Year-YEAR_BASE);
-	
+
 	// printf("RTC Set time");
 	// for(int i = 0; i < 8; i++)
 	// {
@@ -1861,12 +1866,12 @@ uint16_t PCF2127_set_time(void)
 
 	if(PCF2131)
 	{
-	
+
 		data[ INDEX_0 ]   = Control_1; //  access start register address
 		data[ INDEX_1 ]   = Cntl1;
 
 		err = HAL_I2C_Master_Transmit(&hi2c2, PCF2127_I2C_SLAVE_ADDRESS, data, INDEX_2, PCF2129_TIMEOUT);
-	}	
+	}
     return ( err ? I2C_ACCESS_FAIL : NO_ERROR );
 }
 
@@ -1877,7 +1882,7 @@ static void Pcf2129AT_init(void)
 //	OS_Delay(INDEX_50);
 	HAL_Delay(INDEX_50);
 	uint8_t error;
-	
+
     data[ INDEX_0 ]   = Control_1; //  access start register address
     data[ INDEX_1 ]   = Cntl1;
 //    data[ INDEX_1 ]   = 0x13;
@@ -1895,7 +1900,7 @@ static void Pcf2129AT_init(void)
 void PCF2127_readTime(uint8_t flag)
 {
     uint8_t     buf[ INDEX_9 ];
-	
+
 	//OS_Delay(INDEX_5);
 	HAL_Delay(INDEX_5);
     buf[ 0 ]    = Seconds-1;  //  read start register address+
@@ -1918,7 +1923,7 @@ void PCF2127_readTime(uint8_t flag)
 		gDateTime.mSec	= bcd2i(buf[0]);
 	  }
 	}
-	
+
 	if((gDateTime.Year > YEAR_MAX) ||
 	   			(gDateTime.Year < YEAR_MIN) ||
 				(gDateTime.Month < 1) ||
@@ -1969,7 +1974,7 @@ static void MX_ADC1_Init(void)
 
   ADC_ChannelConfTypeDef sConfig;
 
-    /**Configure the global features of the ADC (Clock, Resolution, Data Alignment and number of conversion) 
+    /**Configure the global features of the ADC (Clock, Resolution, Data Alignment and number of conversion)
     */
   hadc1.Instance = ADC1;
   hadc1.Init.ClockPrescaler = ADC_CLOCK_SYNC_PCLK_DIV4;
@@ -1988,7 +1993,7 @@ static void MX_ADC1_Init(void)
     _Error_Handler(__FILE__, __LINE__);
   }
 
-    /**Configure for the selected ADC regular channel its corresponding rank in the sequencer and its sample time. 
+    /**Configure for the selected ADC regular channel its corresponding rank in the sequencer and its sample time.
     */
   sConfig.Channel = ADC_CHANNEL_1;
   sConfig.Rank = 1;
@@ -2010,19 +2015,19 @@ void PVD_Config(void)
 
   /* Configure one bit for preemption priority */
   NVIC_PriorityGroupConfig(NVIC_PriorityGroup_1);
-  
+
   /* Enable the PVD Interrupt */
   NVIC_InitStructure.NVIC_IRQChannel = PVD_IRQn;
   NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 0;
   NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0;
   NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
   NVIC_Init(&NVIC_InitStructure);
-      
+
   /* Configure the PVD Level to 3 (2.5V) */
   PWR_PVDLevelConfig(PWR_PVDLevel_3);
 
   /* Enable the PVD Output */
-  PWR_PVDCmd(ENABLE);  
+  PWR_PVDCmd(ENABLE);
 }
 #endif
 
@@ -2034,9 +2039,9 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
   GPIO_PinState status = HAL_GPIO_ReadPin(GPIOA, GPIO_Pin);
   if(status != GPIO_PIN_RESET)
 	  return;
-  static uint32_t last = 0;
+  volatile static uint32_t last = 0;
   uint32_t curr = HAL_GetTick();
-  if(( curr - last) < 300)
+  if(( curr - last) < 50)
 	  return;
   last = curr;
 
@@ -2051,7 +2056,7 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 			KeyChanged[i] = 1;
 			break;
 		}
-	} 
+	}
   /* NOTE: This function Should not be modified, when the callback is needed,
            the HAL_GPIO_EXTI_Callback could be implemented in the user file
    */
@@ -2099,7 +2104,7 @@ void HAL_UART_TxCpltCallback(UART_HandleTypeDef *huart)
 	    Pol_Delay_us(3000);
 		printf("{1,0}(%d)",HAL_GetTick());
 		HAL_GPIO_WritePin(GPIOB, GPIO_PIN_15, GPIO_PIN_RESET);
-		
+
 	}
 	else
  	if(huart->Instance == USART2)
