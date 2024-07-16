@@ -61,7 +61,7 @@ extern UART_HandleTypeDef huart6;
 //extern HCD_HandleTypeDef hhcd_USB_OTG_HS;
 
 /******************************************************************************/
-/*            Cortex-M4 Processor Interruption and Exception Handlers         */ 
+/*            Cortex-M4 Processor Interruption and Exception Handlers         */
 /******************************************************************************/
 
 /**
@@ -290,6 +290,7 @@ void USART1_IRQHandler(void)
 /**
 * @brief This function handles USART2 global interrupt.
 */
+#if 1
 void USART2_IRQHandler(void)
 {
   /* USER CODE BEGIN USART2_IRQn 0 */
@@ -300,7 +301,7 @@ void USART2_IRQHandler(void)
 
   /* USER CODE END USART2_IRQn 1 */
 }
-
+#endif
 /******************************************************************************/
 /* STM32F4xx Peripheral Interrupt Handlers                                    */
 /* Add here the Interrupt Handlers for the used peripherals.                  */
@@ -322,6 +323,7 @@ void EXTI4_IRQHandler(void)
   /* USER CODE END EXTI4_IRQn 1 */
 }
 
+#if 1
 /**
   * @brief This function handles DMA1 stream5 global interrupt.
   */
@@ -349,7 +351,7 @@ void DMA1_Stream6_IRQHandler(void)
 
   /* USER CODE END DMA1_Stream6_IRQn 1 */
 }
-
+#endif
 /**
   * @brief This function handles EXTI line[9:5] interrupts.
   */

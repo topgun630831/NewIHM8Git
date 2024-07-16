@@ -91,13 +91,13 @@ S/W   Version 01.00.10
 2. uint8_t doStatus[MLINK_DO_MAX] -> uint8_t doStatus[DEVICE_MAX][MLINK_DO_MAX] 수정
 3. uint8_t diStatus[MLINK_DI_MAX] -> uint8_t diStatus[DEVICE_MAX][MLINK_DI_MAX] 수정
 4. M-Link 제어후 화면업데이트 문제 ->MLinkControlValueDisp(nPointPos); 추가
-5. 
+5.
 
 2019/2/8 통신 에러시 처리
 1. 통신 에러시 다음 스텝으로 넘어감
 2. 통신 5회연속 에러시 상태바 및 Overview 화면 초기화
 3. M-Link IO SET에서 DI  표시추가
-   - Contact NO(AX), Contact NO(AL), Contact, Contact NC(AX)(4), Contact NC(AL)(5), 
+   - Contact NO(AX), Contact NO(AL), Contact, Contact NC(AX)(4), Contact NC(AL)(5),
 
 
 2019/2/12 기능시험용 최종(Rev 86)
@@ -184,7 +184,7 @@ S/W   Version 01.00.18
 S/W   Version 01.00.19
 1. EVENT 간혹 못읽는 문제
 
-2019/03/21 
+2019/03/21
 한길배포 IHM8_010019_010007(20190320).dfu
 
 2019/03/22 Rev100
@@ -195,7 +195,7 @@ S/W   Version 01.00.20
 2019/3/28 Rev 101
 S/W Version 01.00.21
 1. Factory Reset 시 기존 gDeviceCount 초기화 안되는 문제
-2. Factory Reset 시 통신속도 초기화 문제 
+2. Factory Reset 시 통신속도 초기화 문제
 
 
 2019/3/29 Rev 102
@@ -229,9 +229,9 @@ S/W Version 01.00.23
 2019/5/10 Rev 114
 S/W Version 01.00.24
 1. MCCB Overview
-   - 4(OSN): Ir < 0.63In 인 경우에는 Inr = 1.6*Ir, 
+   - 4(OSN): Ir < 0.63In 인 경우에는 Inr = 1.6*Ir,
    - Ir > 0.63In 인 경우에는 Inr = In
-     Inr을 Ir로 잘못대입 
+     Inr을 Ir로 잘못대입
 
 2019/5/10 Rev 115
 S/W Version 01.00.25
@@ -243,21 +243,21 @@ S/W Version 01.00.26
 
 2019/5/13 Rev 117
 S/W Version 01.00.27
-1. ACB Operation Info 
-   1) Number fo On/Off E/M 바뀜 
+1. ACB Operation Info
+   1) Number fo On/Off E/M 바뀜
    2) M = E+M => M=M, E=E
 
 2019/5/15 Rev 118
 S/W Version 01.00.28
-1. ACB/MCCB HW SET 에서 화면표시 겹치는 문제 
-2. M-LINK HW SET 에서 화면표시 겹치는 문제 
+1. ACB/MCCB HW SET 에서 화면표시 겹치는 문제
+2. M-LINK HW SET 에서 화면표시 겹치는 문제
 3. ACB/MCCB Measurement Energy 표시문제
 
 2019/5/17 Rev 119
 S/W Version 01.00.29
-1. BOR Reset threshold levels for 1.62V - 2.10V VDD power supply 
-  => BOR Reset threshold levels for 2.40V - 2.70V VDD power supply 
-  
+1. BOR Reset threshold levels for 1.62V - 2.10V VDD power supply
+  => BOR Reset threshold levels for 2.40V - 2.70V VDD power supply
+
 2019/10/17 Rev121
 S/W Version 01.00.30
 1. Product Code IHM8(5277 1172 570) 로 fix
@@ -265,6 +265,8 @@ S/W Version 01.00.30
 2019/11/29 Rev122
 S/W Version 01.00.31
 1. ACB OCR용 LCD 호환문제-LCD 초기화 코드 변경
+
+
 
 
 =================================================================================
@@ -289,8 +291,16 @@ Flash Memory Map
 0x0800 0000	: Bootloader
 0x0800 c000 : 사용자 Code
 0x080c 0000 : Parameter 저장 영역
-0x080e 0000 : 최종 Fault Index 저장 영역  
-0x080e 0030 : HW Version 정보  
+0x080e 0000 : 최종 Fault Index 저장 영역
+0x080e 0030 : HW Version 정보
 
-
+ Git
 ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAxBJrYYwQD1Q+0vkukmQ3goPTy3NdiCIYPjQskpFm6chcPvhF83V+UCd/wf7W1n+0smFscPQSpiOmuwJn3MLfw+faRy7nuTLPJP4oCgtoNccMTsTPjtlMYawshpI+P17gAcY3buPW++TAzpJq4OluKg+cpMuKeavcyZjYonKzNoMcUZXMDI0YiLF/xLyWI74oQY/CVyb781LGJ7ax2CaHs4N3WRwuJko1mgUjbYLOHlFxcR4hs7XAFGOQYwxvI6CV4mh8k34pPxmSuewy89JHhgQhREmhRe8Ls1IFkVSA4r0v2wm+m/TsnqTL/k4UxthFW1p6xC2zMzZlz0sPgwqNnw== rsa-key-20240103
+
+2024/07/06  Timing 정보
+Slave Recv Frame!!!(10107)
+MasterModbusSend(10127)
+Recv Done!!!!(10194)
+Master To Slave Send Frame!!!(10201)
+MasterModbusSend(10217)
+

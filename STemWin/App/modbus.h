@@ -74,9 +74,10 @@ typedef enum e_function_code
 
 typedef enum e_modbus_error
 {
-    MODBUS_OK = 0,
-    MODBUS_CRC_ERROR = 1,
-    MODBUS_ERROR = 2
+    MODBUS_NONE = 0,
+    MODBUS_OK = 1,
+    MODBUS_CRC_ERROR = 2,
+    MODBUS_ERROR = 3
 } E_MODBUS_ERROR;
 
 typedef enum e_comm_status
@@ -155,7 +156,10 @@ typedef struct s_Product_Info {
 	char ModelName[MODEL_NAME_COUNT+1];
 } S_PRODUCT_INFO;
 
-void MasterModbusSend(void);
+uint16_t CRC16(const uint8_t *puchMsg, const uint16_t usDataLen);
+void MasterModbusBufferPut(uint8_t *pData, uint16_t Size, E_OWNER MasterSlave);
+void MasterModbusSend(E_OWNER MasterSlave);
+void SlaveModbusSend(void);
 void ModbusSendFrame(const uint8_t address, const uint8_t functionCode, const uint16_t start, const uint16_t no);
 void ModbusSendFrameReadTime(const uint8_t address);
 void ModbusSendFrameDeviceIdentofocation(const uint8_t address);
@@ -214,8 +218,8 @@ EXTERN uint16_t g_startAddr;
 EXTERN uint16_t g_waitReceiveLen;
 EXTERN uint8_t g_AddressRecv;
 EXTERN uint8_t sendFlag;
-EXTERN uint8_t g_sendOwner;
-EXTERN uint8_t g_orderOwner;
+EXTERN E_OWNER g_sendOwner;
+//EXTERN uint8_t g_orderOwner;
 EXTERN uint16_t gSystemEventIndex[DEVICE_MAX];
 EXTERN uint16_t gFaultEventIndex[DEVICE_MAX];
 EXTERN uint16_t gOldSystemEventIndex[DEVICE_MAX];
@@ -236,9 +240,9 @@ EXTERN int g_bMasterRecvVariable;
 EXTERN int g_bSlaveRecvVariable;
 EXTERN int g_bRecvAllDone;
 
-EXTERN uint8_t MasterTxBuffer[MASTER_TX_BUFF_MAX];
+EXTERN uint8_t MasterTxBuffer[2][MASTER_TX_BUFF_MAX];
 EXTERN uint8_t SlaveTxBuffer[SLAVE_TX_BUFF_MAX];
-EXTERN uint16_t MasterSendLength;
+EXTERN uint16_t MasterSendLength[2];
 EXTERN uint16_t SlaveSendLength;
 EXTERN uint32_t masterSendTick;
 EXTERN uint32_t slaveSendTick;
