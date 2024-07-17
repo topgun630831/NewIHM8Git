@@ -68,7 +68,11 @@ void MasterModbusSend(E_OWNER MasterSlave)
 
 //	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_14, GPIO_PIN_SET);
 	masterSendTick = HAL_GetTick();
+
+	HAL_NVIC_DisableIRQ(USART2_IRQn); //Rx Callback 함수 Disable
 	HAL_UART_Transmit(&huart2, MasterTxBuffer[MasterSlave], MasterSendLength[MasterSlave], UART_TIMEOUT);
+	HAL_NVIC_EnableIRQ(USART2_IRQn);  //Rx callback 함수 enable
+
 	g_bRecvVariable = g_bMasterRecvVariable;
 	MasterSendLength[MasterSlave] = 0;
 	sendFlag = 1;
@@ -124,7 +128,11 @@ void SlaveModbusSend(void)
 		SlaveSendLength = SLAVE_TX_BUFF_MAX;
 	slaveSendTick = HAL_GetTick();
 //	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_15, GPIO_PIN_SET);
+
+	HAL_NVIC_DisableIRQ(USART1_IRQn); //Rx Callback 함수 Disable
 	HAL_UART_Transmit(&huart1, SlaveTxBuffer, SlaveSendLength,UART_TIMEOUT);
+	HAL_NVIC_EnableIRQ(USART1_IRQn);  //Rx callback 함수 enable
+
 	g_modbusSlaveRxIndex = 0;
 	SlaveSendLength = 0;
 	// gbSlaveSend = false;

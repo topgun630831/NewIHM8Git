@@ -1678,16 +1678,16 @@ void MasterModbusProcess(void)
 				uint32_t stat = HAL_UART_GetState(&huart2);
 				uint32_t error = HAL_UART_GetError(&huart6);
 				printf("stat:%x. error=%x\n", stat, error);
-//					if(stat == 0x20)
-				{
-					HAL_UART_DMAStop(&huart2);
-					HAL_UART_MspDeInit(&huart2);
-					Pol_Delay_us(15000);
-					HAL_UART_MspInit(&huart2);
-					MX_USART2_UART_Init();
-					HAL_UART_Receive_DMA(&huart2, uart2_dma_rx_buff, UART2_DMA_RX_BUFF_SIZE);
-					uart2LastNDTR = huart2.hdmarx->Instance->NDTR;
-				}
+//				__HAL_DMA_DISABLE(&huart2);
+				HAL_UART_DMAStop(&huart2);
+				HAL_UART_MspDeInit(&huart2);
+				Pol_Delay_us(15000);
+				HAL_UART_MspInit(&huart2);
+				MX_USART2_UART_Init();
+//				__HAL_DMA_ENABLE(&huart2);
+				HAL_GPIO_WritePin(GPIOB, GPIO_PIN_14, GPIO_PIN_RESET);
+				HAL_UART_Receive_DMA(&huart2, uart2_dma_rx_buff, UART2_DMA_RX_BUFF_SIZE);
+				uart2LastNDTR = huart2.hdmarx->Instance->NDTR;
 				last_recv = HAL_GetTick();
 				sendFlag = 0;
 				if(g_sendOwner == OWNER_MASTER)
@@ -1965,7 +1965,7 @@ E_KEY GetKey(void)
 		if(sendFlag == 0)
 		{
 			uint32_t tm = HAL_GetTick();
-			if((tm-master_send_timer) > 100)
+//			if((tm-master_send_timer) > 100)
 			{
 				if(MasterSendLength[g_sendOwner] != 0)
 				{

@@ -195,12 +195,10 @@ __STATIC_INLINE void Pol_Delay_us(volatile uint32_t microseconds)
 }
 void HAL_UART_ErrorCallback(UART_HandleTypeDef *huart)
 {
-	//__HAL_UART_CLEAR_PEFLAG(huart);
-	//HAL_UART_DMAStop(huart);
 	if(huart->Instance==USART1)
 	{
 		printf("(uart1)HAL_UART_ErrorCallback!(%x)\n", huart->ErrorCode);
-		//HAL_GPIO_WritePin(GPIOB, GPIO_PIN_15, GPIO_PIN_RESET);
+		HAL_GPIO_WritePin(GPIOB, GPIO_PIN_15, GPIO_PIN_RESET);
 		__HAL_UART_CLEAR_PEFLAG(&huart1);
 		__HAL_UART_CLEAR_OREFLAG(&huart1);
 		__HAL_UART_CLEAR_FEFLAG(&huart1);
@@ -211,234 +209,28 @@ void HAL_UART_ErrorCallback(UART_HandleTypeDef *huart)
 		HAL_UART_MspDeInit(&huart1);
 		HAL_UART_MspInit(&huart1);
 		HAL_UART_Receive_DMA(&huart1, uart1_dma_rx_buff, UART1_DMA_RX_BUFF_SIZE);
-//		uart1LastNDTR = huart1.hdmarx->Instance->NDTR;
-//		g_modbusSlaveRxError = 1;
-//		sendFlag = 0;
-//		g_modbusSlaveRxIndex = 0;
+		uart1LastNDTR = huart1.hdmarx->Instance->NDTR;
+		g_modbusSlaveRxIndex = 0;
 	}
 	else if(huart->Instance==USART2)
 	{
 		printf("(uart2)HAL_UART_ErrorCallback!(%x)\n", huart->ErrorCode);
-		//HAL_GPIO_WritePin(GPIOB, GPIO_PIN_14, GPIO_PIN_RESET);
+		HAL_GPIO_WritePin(GPIOB, GPIO_PIN_14, GPIO_PIN_RESET);
 		__HAL_UART_CLEAR_PEFLAG(&huart2);
-
 		__HAL_UART_CLEAR_OREFLAG(&huart2);
 		__HAL_UART_CLEAR_FEFLAG(&huart2);
 		__HAL_UART_CLEAR_NEFLAG(&huart2);
 		__HAL_UART_CLEAR_IDLEFLAG(&huart2);
-//		__HAL_UART_CLEAR_TXFECF(&huart2);
-//		HAL_UART_DMAStop(&huart2);
+		HAL_UART_DMAStop(&huart2);
 		Pol_Delay_us(15000);
 		HAL_UART_MspDeInit(&huart2);
 		HAL_UART_MspInit(&huart2);
-
-//		HAL_UART_Receive_DMA(&huart2, uart2_dma_rx_buff, UART2_DMA_RX_BUFF_SIZE);
-/*
-		if(++gCommErrorCount[gDeviceIndex] >= COMM_ERROR_COUNT)
-		{
-			gCommStatus[gDeviceIndex] = COMM_ERROR;
-			gCommErrorCount[gDeviceIndex] = 0;
-		}
-		g_modbusRxError = 1;
-		sendFlag = 0;
+		HAL_UART_Receive_DMA(&huart2, uart2_dma_rx_buff, UART2_DMA_RX_BUFF_SIZE);
+		uart2LastNDTR = huart2.hdmarx->Instance->NDTR;
 		g_modbusRxIndex = 0;
-*/
 	}
 }
 
-#if 0
-static void ReceiveTask(void)
-{
-	int time_cnt_led=0;
-	sendFlag = 0;
-	gbSlaveSend = false;
-
-	HAL_UART_Receive_DMA(&huart1, uart1_dma_rx_buff, UART1_DMA_RX_BUFF_SIZE);
-	HAL_UART_Receive_DMA(&huart2, uart2_dma_rx_buff, UART2_DMA_RX_BUFF_SIZE);
-
-	uart1LastNDTR = huart1.hdmarx->Instance->NDTR;
-	uart2LastNDTR = huart2.hdmarx->Instance->NDTR;
-
-
-	uint32_t last_recv = HAL_GetTick();
-	while (1)
-	{
-		if(time_cnt_led++ >= LED_TIMER)
-		{
-			time_cnt_led = 0;
-			HAL_GPIO_TogglePin(USER_LED_GPIO_Port, USER_LED_Pin);
-		}
-		if(sendFlag == 1)
-		{
-			uint32_t uart2NewNDTR = huart2.hdmarx->Instance->NDTR;
-			HAL_StatusTypeDef stat;
-			int nTimeOut = MODBUS_TIMEOUT;
-			bool bRecvOk = false;
-			uint32_t count;
-
-			if(uart2LastNDTR != uart2NewNDTR)
-			{
-				last_recv = HAL_GetTick();
-				uint16_t readExceptionLen = NORMAL_EXCEPTION_LEN;
-				if(g_functionCode == MODBUS_EXTEND_FUNCTION)
-				{
-//					readExceptionLen = EXTEND_EXCEPTION_LEN;
-					readExceptionLen = NORMAL_EXCEPTION_LEN;
-				}
-				uint32_t pos = UART2_DMA_RX_BUFF_SIZE - uart2LastNDTR;
-				if(uart2LastNDTR > uart2NewNDTR)
-				{
-				  count = (uart2LastNDTR - uart2NewNDTR);
-				  memcpy(&g_modbusRxBuff[g_modbusRxIndex], &uart2_dma_rx_buff[pos], count);
-				  g_modbusRxIndex += count;
-/*				  if(gDebug)
-				  {
-					(void)printf("(%d)Recv, new=%d, last=%d,  rx index=%d, wait=%d\n",HAL_GetTick(), uart2NewNDTR, uart2LastNDTR, g_modbusRxIndex, g_wModbusWaitLen);
-					for(int i = 0; i < g_modbusRxIndex; i++)
-					{
-			  		  (void)printf("%02X ", g_modbusRxBuff[i]);
-					}
-					(void)printf("\n");
-*/				  }
-				}
-				else
-				{
-					count = (UART2_DMA_RX_BUFF_SIZE - uart2NewNDTR) + uart2LastNDTR;
-					//memcpy(&g_modbusRxBuff[g_modbusRxIndex], &uart2_dma_rx_buff[pos], uart2LastNDTR);
-					memcpy(&g_modbusRxBuff[g_modbusRxIndex], &uart2_dma_rx_buff[pos], uart2LastNDTR);
-				  	g_modbusRxIndex += uart2LastNDTR;
-					uint32_t remainder = UART2_DMA_RX_BUFF_SIZE- uart2NewNDTR;
-					memcpy(&g_modbusRxBuff[g_modbusRxIndex], &uart2_dma_rx_buff[0], remainder);
-					g_modbusRxIndex += remainder;
-				}
-				uart2LastNDTR = uart2NewNDTR;
-
-				if(g_modbusRxIndex < readExceptionLen)
-					continue;
-				if((((g_modbusRxBuff[1] & INDEX_0x80) == INDEX_0x80) || (g_modbusRxBuff[0] != g_modbusAddress)) || (g_functionCode != g_modbusRxBuff[1]))
-				{
-					(void)printf("Exception Frame Read!!!\n");
-					for(int i = 0; i < readExceptionLen; i++)
-					{
-							(void)printf("%02X ", g_modbusRxBuff[i]);
-					}
-					(void)printf("\n");
-					if(++gCommErrorCount[gDeviceIndex] >= COMM_ERROR_COUNT)
-					{
-						gCommStatus[gDeviceIndex] = COMM_ERROR;
-						gCommErrorCount[gDeviceIndex] = 0;
-					}
-					g_modbusRxError = 1;
-					if(g_modbusRxBuff[1] & INDEX_0x80)
-					{
-						(void)printf("Header Exception Error!!!!\n");
-					}
-					else
-					{
-						(void)printf("Header Comm Error!!!!\n");
-					}
-					sendFlag = 0;
-					g_modbusRxIndex = 0;
-					continue;
-				}
-				if(g_modbusRxIndex >= g_wModbusWaitLen)
-				{
-					uint16_t pos = 8;
-					if(g_bRecvVariable == FALSE)
-					{
-					  g_modbusRxDone = 1;
-					  gCommStatus[gDeviceIndex] = COMM_OK;
-					  gCommErrorCount[gDeviceIndex] = 0;
-					  if(gDebug)
-						  (void)printf("Recv Done!!!!(%d)\n",HAL_GetTick());
-					  sendFlag = 0;
-					  bRecvOk = true;
-					  if(SlaveModbusCRCCheck() == MODBUS_OK)
-					  {
-					  }
-					  g_modbusSlaveRxIndex = 0;
-					}
-					else
-					{
-						uint16_t index = g_wModbusWaitLen;
-						uint8_t cnt = g_modbusRxBuff[INDEX_7];
-						bRecvOk = true;
-						for(uint8_t i = 0; i < cnt; i++)
-						{
-							if(g_modbusRxIndex < (pos + 2))		// Object ID + Object Length
-							{
-								bRecvOk = false;
-								break;
-							}
-							uint8_t len = g_modbusRxBuff[pos+1];
-							if(g_modbusRxIndex < (pos + g_modbusRxBuff[pos+1] + 1))
-							{
-								bRecvOk = false;
-								break;
-							}
-							pos += g_modbusRxBuff[pos] + 2;
-						}
-						if(bRecvOk == true)
-						{
-							if(g_modbusRxIndex < (pos + 2))		// CRC
-							{
-								bRecvOk = false;
-								continue;
-							}
-							g_modbusRxDone=1;
-							gCommStatus[gDeviceIndex] = COMM_OK;
-							gCommErrorCount[gDeviceIndex] = 0;
-							if(gDebug)
-								(void)printf("[g_bRecvVariable]Recv Done!!!!(%d)\n", HAL_GetTick());
-					  	    sendFlag = 0;
-							if(SlaveModbusCRCCheck() == MODBUS_OK)
-							{
-							}
-							g_modbusSlaveRxIndex = 0;
-						}
-					}
-				}
-			}
-			else
-			{
-				if((HAL_GetTick() - last_recv) > 1000)
-				{
-					printf("Recv Timeout Reset(%d,last=%d)------------------------\n", HAL_GetTick(), last_recv);
-					HAL_UART_DMAStop(&huart2);
-					HAL_UART_MspDeInit(&huart2);
-					Pol_Delay_us(15000);
-					HAL_UART_MspInit(&huart2);
-					HAL_UART_Receive_DMA(&huart2, uart2_dma_rx_buff, UART2_DMA_RX_BUFF_SIZE);
-					uart2LastNDTR = huart2.hdmarx->Instance->NDTR;
-					last_recv = HAL_GetTick();
-				}
-			}
-			uint32_t tick = HAL_GetTick() - masterSendTick;
-			if(bRecvOk == false && tick > 500)
-			{
-				if(++gCommErrorCount[gDeviceIndex] >= COMM_ERROR_COUNT)
-				{
-					gCommStatus[gDeviceIndex] = COMM_ERROR;
-					gCommErrorCount[gDeviceIndex] = 0;
-//					(void)printf("Comm Error!!!!\n");
-				}
-				g_modbusRxError = 1;
-			}
-		}
-		ModbusSlaveCheck();
-
-		if(huart2.gState == HAL_UART_STATE_READY)
-		{
-		}
-		uint32_t stat = HAL_UART_GetState(&huart2);
-		uint32_t error = HAL_UART_GetError(&huart6);
-		if(error != HAL_UART_ERROR_NONE)
-		  printf("\n\n\n\n Error!!!\n\n\n\n");
-
-		OS_Delay(50);
-	}
-}
-#endif
 uint8_t rx6_data;
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 {
