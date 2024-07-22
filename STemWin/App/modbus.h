@@ -58,8 +58,7 @@
 #define SLAVE_TX_BUFF_MAX 256
 
 #define UART1_DMA_RX_BUFF_SIZE 20
-//#define UART2_DMA_RX_BUFF_SIZE 512
-#define UART2_DMA_RX_BUFF_SIZE 120
+#define UART2_DMA_RX_BUFF_SIZE 512
 
 typedef enum e_function_code
 {
@@ -249,6 +248,8 @@ EXTERN uint32_t slaveSendTick;
 
 EXTERN bool gDebug;
 EXTERN bool gbSlaveSend;
+EXTERN uint8_t gbSBO;
+EXTERN bool gbForControl;
 
 EXTERN uint32_t masterSendTick;
 EXTERN uint32_t slaveSendTick;
@@ -276,8 +277,8 @@ EXTERN uint16_t mLinkMode[DEVICE_MAX];
 EXTERN uint16_t mLinkSBO[DEVICE_MAX];
 
 #define UART1_DMA_RX_BUFF_SIZE 20
-//#define UART2_DMA_RX_BUFF_SIZE 512
-#define UART2_DMA_RX_BUFF_SIZE 120
+#define UART2_DMA_RX_BUFF_SIZE 512
+//#define UART2_DMA_RX_BUFF_SIZE 120
 EXTERN uint8_t uart1_dma_rx_buff[UART1_DMA_RX_BUFF_SIZE];
 EXTERN uint8_t uart2_dma_rx_buff[UART2_DMA_RX_BUFF_SIZE];
 EXTERN uint32_t slave_last_recv;

@@ -46,9 +46,41 @@ uint16_t CRC16(const uint8_t puchMsg[], const uint16_t usDataLen)
 	return (ret) ;
 }
 
+void AllRead(int port)
+{
+	uint32_t NewNDTR;
+	if(port == 1)
+	{
+		g_modbusSlaveRxIndex = 0;
+		uart1LastNDTR = huart1.hdmarx->Instance->NDTR;
+		while(1)
+		{
+			NewNDTR = huart1.hdmarx->Instance->NDTR;
+			if(uart1LastNDTR == NewNDTR)
+				break;
+			GUI_Delay(10);
+			uart1LastNDTR = NewNDTR;
+			printf("uart2 fush\n");
+		}
+	}
+	else
+	if(port == 2)
+	{
+		g_modbusRxIndex = 0;
+		uart2LastNDTR = huart2.hdmarx->Instance->NDTR;
+		while(1)
+		{
+			NewNDTR = huart2.hdmarx->Instance->NDTR;
+			if(uart2LastNDTR == NewNDTR)
+				break;
+			GUI_Delay(10);
+			uart2LastNDTR = NewNDTR;
+			printf("uart2 fush\n");
+		}
+	}
+}
 void MasterModbusSend(E_OWNER MasterSlave)
 {
-	//g_bMasterRecvVariable = FALSE;
     g_sendOwner = MasterSlave;
 	g_modbusRxIndex = 0;
 	g_modbusRxDone = 0;
@@ -65,15 +97,14 @@ void MasterModbusSend(E_OWNER MasterSlave)
 	  (void)printf("\n");
 	}
 
+	AllRead(2);
 
-//	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_14, GPIO_PIN_SET);
 	masterSendTick = HAL_GetTick();
 
 	HAL_NVIC_DisableIRQ(USART2_IRQn); //Rx Callback 함수 Disable
 	HAL_UART_Transmit(&huart2, MasterTxBuffer[MasterSlave], MasterSendLength[MasterSlave], UART_TIMEOUT);
 	HAL_NVIC_EnableIRQ(USART2_IRQn);  //Rx callback 함수 enable
 
-	g_bRecvVariable = g_bMasterRecvVariable;
 	MasterSendLength[MasterSlave] = 0;
 	sendFlag = 1;
 }
@@ -97,12 +128,13 @@ void MasterModbusBufferPut(uint8_t *pData, uint16_t Length, E_OWNER MasterSlave)
 		len = Length;
 	memcpy(MasterTxBuffer[MasterSlave], pData, len);
 	MasterSendLength[MasterSlave] = len;
-	if(MasterSlave == OWNER_SLAVE)
+	if(MasterSlave == OWNER_SLAVE)    // yskim
 	{
 		g_modbusSlaveAddress  = MasterTxBuffer[MasterSlave][0];
 		g_SlavefunctionCode	  = MasterTxBuffer[MasterSlave][1];
 		g_wModbusSlaveWaitLen = (MasterTxBuffer[MasterSlave][4] << 8) | MasterTxBuffer[MasterSlave][5];
 		g_wModbusSlaveWaitLen = g_wModbusSlaveWaitLen * 2 + 5;
+		g_bSlaveRecvVariable = FALSE;
 	}
 }
 
@@ -124,10 +156,11 @@ void SlaveModbusSend(void)
 	  (void)printf("\n");
 	}
 
+	AllRead(1);
+
 	if(SlaveSendLength > SLAVE_TX_BUFF_MAX)
 		SlaveSendLength = SLAVE_TX_BUFF_MAX;
 	slaveSendTick = HAL_GetTick();
-//	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_15, GPIO_PIN_SET);
 
 	HAL_NVIC_DisableIRQ(USART1_IRQn); //Rx Callback 함수 Disable
 	HAL_UART_Transmit(&huart1, SlaveTxBuffer, SlaveSendLength,UART_TIMEOUT);
@@ -135,37 +168,7 @@ void SlaveModbusSend(void)
 
 	g_modbusSlaveRxIndex = 0;
 	SlaveSendLength = 0;
-	// gbSlaveSend = false;
 }
-/*
-void SlaveModbusSend(uint8_t *pData, uint16_t Length)
-{
-	uint16_t len;
-	g_sendOwner = OWNER_SLAVE;
-	g_modbusSlaveRxIndex = 0;
-	g_modbusSlaveRxDone = 0;
-	g_modbusSlaveRxError = 0;
-
-	if(Length > SLAVE_TX_BUFF_MAX)
-		len = SLAVE_TX_BUFF_MAX;
-	else
-		len = Length;
-	if(gDebug)
-	{
-	  (void)printf("Slave Send Frame!!!(statusSendStep:%d)\n",statusSendStep);
-	  for(int i = 0; i < SlaveSendLength; i++)
-	  {
-		  (void)printf("%02X ", SlaveTxBuffer[i]);
-	  }
-	  (void)printf("\n");
-	}
-	slaveSendTick = HAL_GetTick();
-	  printf("{1,1}(%d)",slaveSendTick);
-//	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_15, GPIO_PIN_SET);
-//	OS_Delay(1);
-	HAL_UART_Transmit(&huart1, pData, len, UART_TIMEOUT);
-}
-*/
 
 void ModbusSendFrame(const uint8_t address, const uint8_t functionCode, const uint16_t start, const uint16_t no)
 {
@@ -286,8 +289,8 @@ void ModbusSendFrameDeviceIdentofocation3(const uint8_t address, uint8_t deviceI
 	frame[INDEX_5] = (uint8_t) (crc >> INDEX_8);
 	frame[INDEX_6] = (uint8_t)(crc & MASK_FF);
 
-	MasterModbusBufferPut(frame, INDEX_7, OWNER_MASTER);
 	g_bMasterRecvVariable = TRUE;
+	MasterModbusBufferPut(frame, INDEX_7, OWNER_MASTER);
 	g_AddressRecv = 0;
 //	sendFlag = 1;
 }
@@ -613,14 +616,12 @@ void ModbusGetId3(void)
 //	}
 //}
 //extern IWDG_HandleTypeDef hiwdg;
-#if 0
 static uint8_t ModbusRecvCheck(void)
 {
-//	int flagBreak = FALSE;
-	OS_Delay(1);
 	uint32_t startTimer = HAL_GetTick();
 	while(1)
 	{
+		E_KEY ret = GetKey();
 		if (g_modbusRxDone)
 		{
 			uint8_t ret = ModbusCRCCheck();
@@ -657,13 +658,15 @@ static uint8_t ModbusRecvCheck(void)
 	}
 	return CONTROL_FAIL;
 }
-#endif
 
 uint8_t ModbusControl(const uint8_t address, const int offset, const int pos, const uint8_t onoffStatus, uint8_t bSBO)
 {
 	uint8_t frame[MODBUS_FRAME_COUNT];
 	uint16_t startAddr;
 	uint8_t ret;
+
+	gbSBO = bSBO;
+	gbForControl = true;
 
 	g_functionCode = INDEX_5;
 
@@ -719,6 +722,7 @@ uint8_t ModbusControl(const uint8_t address, const int offset, const int pos, co
 //yskim	ret = ModbusRecvCheck();
 	if(ret == CONTROL_FAIL)
 	{
+		gbForControl = false;
 		return ret;
 	}
 	(void)printf("control ok...\n");
@@ -746,10 +750,12 @@ uint8_t ModbusControl(const uint8_t address, const int offset, const int pos, co
 //yskim		ret = ModbusRecvCheck();
 		if(ret == CONTROL_FAIL)
 		{
+			gbForControl = false;
 			return ret;
 		}
 	}
 	(void)printf("control ok...\n");
+	gbForControl = false;
 	return CONTROL_OK;
 }
 

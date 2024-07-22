@@ -565,7 +565,7 @@ extern S_CONNECT_SETTING ConnectSetting[DEVICE_MAX];
 #define SETUP_SETTING_X1				((SETUP_SETTING_X0 + 265) - 1)
 
 #define SETUP_UPDOWN_X					240
-#define SETUP_SETTING_NUM				10
+#define SETUP_SETTING_NUM				12
 
 #define SETUP_TIMESET_COUNT				6
 #define SETUP_INPUT_Y0					96

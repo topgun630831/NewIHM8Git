@@ -1194,6 +1194,9 @@ void GuiMain(void)
 {
 	static float gPTAValue[DEVICE_MAX];
 
+	gbSBO = 0;
+	gbForControl = false;
+
 	last_recv = HAL_GetTick();
 	commTimer = HAL_GetTick();
 	readTimeTimer = HAL_GetTick();
@@ -1518,8 +1521,6 @@ void MasterModbusProcess(void)
 		if(uart2LastNDTR != uart2NewNDTR)
 		{
 			last_recv = HAL_GetTick();
-			if(gDebug == true)
-				printf("recv:%d\n",  last_recv);
 			uint16_t readExceptionLen = NORMAL_EXCEPTION_LEN;
 			if(g_functionCode == MODBUS_EXTEND_FUNCTION)
 			{
@@ -1542,7 +1543,19 @@ void MasterModbusProcess(void)
 				memcpy(&g_modbusRxBuff[g_modbusRxIndex], &uart2_dma_rx_buff[0], remainder);
 				g_modbusRxIndex += remainder;
 			}
+			if(gDebug == true)
+				printf("recv:%u, last=%u, new=%u, cnt=%u\n",  last_recv, uart2LastNDTR, uart2NewNDTR, count);
 			uart2LastNDTR = uart2NewNDTR;
+
+	//		if(g_bRecvVariable == TRUE)
+			{
+				(void)printf("Read!!!(%u, %u) g_bRecvVariable:%d, readExceptionLen:%d\n", g_sendOwner, g_modbusRxIndex, g_bRecvVariable, readExceptionLen);
+				for(int i = 0; i < g_modbusRxIndex; i++)
+				{
+					  (void)printf("%02X ", g_modbusRxBuff[i]);
+				}
+				(void)printf("\n");
+			}
 
 			if(g_modbusRxIndex < readExceptionLen)
 				return;
@@ -1554,12 +1567,14 @@ void MasterModbusProcess(void)
 				modbusAddress		= g_modbusSlaveAddress;
 				functionCode		= g_SlavefunctionCode;
 				wModbusWaitLen 		= g_wModbusSlaveWaitLen;
+				g_bRecvVariable		= g_bSlaveRecvVariable;
 			}
 			else
 			{
 				modbusAddress		= g_modbusAddress;
 				functionCode		= g_functionCode;
 				wModbusWaitLen 		= g_wModbusWaitLen;
+				g_bRecvVariable		= g_bMasterRecvVariable;
 			}
 
 			if((((g_modbusRxBuff[1] & INDEX_0x80) == INDEX_0x80) || (g_modbusRxBuff[0] != modbusAddress)) || (functionCode != g_modbusRxBuff[1]))
@@ -1608,6 +1623,7 @@ void MasterModbusProcess(void)
 				g_modbusRxIndex = 0;
 				return;
 			}
+			printf("g_bRecvVariable=%d, g_modbusRxIndex=%d, wModbusWaitLen=%d\n", g_bRecvVariable, g_modbusRxIndex, wModbusWaitLen);
 			if(g_modbusRxIndex >= wModbusWaitLen)
 			{
 				uint16_t pos = 8;
@@ -1628,6 +1644,12 @@ void MasterModbusProcess(void)
 				}
 				else
 				{
+					(void)printf("g_bRecvVariable  Read!!!(%u, %d)\n", g_sendOwner, g_modbusRxIndex);
+					for(int i = 0; i < g_modbusRxIndex; i++)
+					{
+						  (void)printf("%02X ", g_modbusRxBuff[i]);
+					}
+					(void)printf("\n");
 					uint16_t index = wModbusWaitLen;
 					uint8_t cnt = g_modbusRxBuff[INDEX_7];
 					bRecvOk = true;
@@ -1636,21 +1658,26 @@ void MasterModbusProcess(void)
 						if(g_modbusRxIndex < (pos + 2))		// Object ID + Object Length
 						{
 							bRecvOk = false;
+							printf("111111111\n");
 							break;
 						}
 						uint8_t len = g_modbusRxBuff[pos+1];
-						if(g_modbusRxIndex < (pos + g_modbusRxBuff[pos+1] + 1))
+						if(g_modbusRxIndex < (pos + len + 1))
 						{
 							bRecvOk = false;
+							printf("2222222\n");
 							break;
 						}
-						pos += g_modbusRxBuff[pos] + 2;
+						printf("pos=%d, len=%d, %x .......", pos, len, len);
+						pos += len + 2;
+						printf("pos=%d \n", pos);
 					}
 					if(bRecvOk == true)
 					{
 						if(g_modbusRxIndex < (pos + 2))		// CRC
 						{
 							bRecvOk = false;
+							printf("33333333333");
 							return;
 						}
 						if(g_sendOwner == OWNER_MASTER)
@@ -1662,13 +1689,14 @@ void MasterModbusProcess(void)
 						if(gDebug)
 							(void)printf("[g_bRecvVariable]Recv Done!!!!(%d)\n", HAL_GetTick());
 						sendFlag = 0;
-						if(MasterModbusCRCCheck() == MODBUS_OK)
-						{
-						}
-						g_modbusRxIndex = 0;
+						g_modbusRxIndex = pos+2;
+						nMasterStatus = MasterModbusCRCCheck();
+						sendFlag = 0;
 					}
 				}
 			}
+			else
+				printf("wait more.......\n");
 		}
 		else
 		{
@@ -1705,6 +1733,8 @@ void MasterModbusProcess(void)
 			uint32_t tick = HAL_GetTick() - masterSendTick;
 			if(sendFlag == 1 && bRecvOk == false && tick > 500)		//Send 후 500ms 이내 응답없으면
 			{
+
+				printf("Send And Recv timeout!!!(g_sendOwner:%d)\n",  g_sendOwner);
 				if(g_sendOwner == OWNER_MASTER)
 				{
 					if(++gCommErrorCount[gDeviceIndex] >= COMM_ERROR_COUNT)
@@ -1865,134 +1895,133 @@ E_KEY GetKey(void)
 			HAL_GPIO_TogglePin(USER_LED_GPIO_Port, USER_LED_Pin);
 			LedTickCount = timer;
 		}
-		if(diff >= GetTimerDiff())
+		if(gbForControl == false)
 		{
-			if((g_bRecvAllDone == TRUE) || (diff >= TIMER_DIFF_10SEC))          //  모든 데이터 수집 완료하거나 타임아웃이면
+			if(diff >= GetTimerDiff())
 			{
-				if(gDebug)
-					(void)printf("g_bRecvAllDone=%d, commTimer-1=%d, Tick=%d, Diff=%d\n", g_bRecvAllDone, commTimer, timer, diff);
-				CommTimerClear();
-				return TIME_OUT;
-			}
-		}
-		diff = timer-readTimeTimer;
-		if(diff >= TIMER_DIFF)
-		{
-//			printf("commTimer-2=%d, Tick=%d, Diff=%d\n", commTimer, timer, diff);
-//			printf("readTimeTimer=%d, Tick=%d, Diff=%d\n", readTimeTimer, timer, diff);
-			if(gbSettingTime == FALSE)
-			{
-				PCF2127_readTime(1);
-//				printf("gDateTime.Day=%d ,gTimeSyncDay=%d, gDateTime.Hour=%d, TIMESYNC_HOUR=%d, gDateTime.Min=%d,TIMESYNC_MIN=%d\n", gDateTime.Day ,gTimeSyncDay, gDateTime.Hour, TIMESYNC_HOUR, gDateTime.Min,TIMESYNC_MIN);
-				if((gDateTime.Day != gTimeSyncDay) && (gDateTime.Hour == TIMESYNC_HOUR) && (gDateTime.Min == TIMESYNC_MIN))
+				if((g_bRecvAllDone == TRUE) || (diff >= TIMER_DIFF_10SEC))          //  모든 데이터 수집 완료하거나 타임아웃이면
 				{
-					//(void)printf("TimeSync.....\n\n\n\n\n\n\n\n\n\n");
-					gTimeSyncDay = gDateTime.Day;
-					for(int i = 0; i < gDeviceCount; i++)
+					if(gDebug)
+						(void)printf("g_bRecvAllDone=%d, commTimer-1=%d, Tick=%d, Diff=%d\n", g_bRecvAllDone, commTimer, timer, diff);
+					CommTimerClear();
+					return TIME_OUT;
+				}
+			}
+			diff = timer-readTimeTimer;
+			if(diff >= TIMER_DIFF)
+			{
+	//			printf("commTimer-2=%d, Tick=%d, Diff=%d\n", commTimer, timer, diff);
+	//			printf("readTimeTimer=%d, Tick=%d, Diff=%d\n", readTimeTimer, timer, diff);
+				if(gbSettingTime == FALSE)
+				{
+					PCF2127_readTime(1);
+	//				printf("gDateTime.Day=%d ,gTimeSyncDay=%d, gDateTime.Hour=%d, TIMESYNC_HOUR=%d, gDateTime.Min=%d,TIMESYNC_MIN=%d\n", gDateTime.Day ,gTimeSyncDay, gDateTime.Hour, TIMESYNC_HOUR, gDateTime.Min,TIMESYNC_MIN);
+					if((gDateTime.Day != gTimeSyncDay) && (gDateTime.Hour == TIMESYNC_HOUR) && (gDateTime.Min == TIMESYNC_MIN))
 					{
-						OS_Delay(TIMESYNC_DELAY);
-						ModbusSetTime(ConnectSetting[i].Address, &gDateTime);
-#if __WATCHDOG__ //[[ by kys.2018.06.17_BEGIN -- watchdog
-	            		__HAL_IWDG_RELOAD_COUNTER(&hiwdg);
-#endif //]] by kys.2018.06.17_END -- watchdog
+						//(void)printf("TimeSync.....\n\n\n\n\n\n\n\n\n\n");
+						gTimeSyncDay = gDateTime.Day;
+						for(int i = 0; i < gDeviceCount; i++)
+						{
+							OS_Delay(TIMESYNC_DELAY);
+							ModbusSetTime(ConnectSetting[i].Address, &gDateTime);    // yskim
+	#if __WATCHDOG__ //[[ by kys.2018.06.17_BEGIN -- watchdog
+							__HAL_IWDG_RELOAD_COUNTER(&hiwdg);
+	#endif //]] by kys.2018.06.17_END -- watchdog
+						}
 					}
 				}
-			}
-			readTimeTimer = timer;
-			if(gDebug)
-				(void)printf("SECOND_TIMER return(%d)\n", SECOND_TIMER);
-			return SECOND_TIMER;
-		}
-		if(gCommStatus[gDeviceIndex] != gCommCheckStatus[gDeviceIndex])
-		{
-			if(gCommStatus[gDeviceIndex] == COMM_ERROR)
-			{
-				gCommCheckStatus[gDeviceIndex] = gCommStatus[gDeviceIndex];
+				readTimeTimer = timer;
 				if(gDebug)
-					(void)printf("\n\n\n\n\n gCommStatus[gDeviceIndex] == COMM_ERROR\n\n\n\n\n\n");
-				return COMM_STAT_ERROR;
+					(void)printf("SECOND_TIMER return(%d)\n", SECOND_TIMER);
+				return SECOND_TIMER;
 			}
-			gCommCheckStatus[gDeviceIndex] = gCommStatus[gDeviceIndex];
-		}
-		if(gbSavingMode == FALSE)
-		{
-			if((SettingValue[SETUP_SAVING_MODE] != 0) && (timer >= gSavingModeCounter))
+			if(gCommStatus[gDeviceIndex] != gCommCheckStatus[gDeviceIndex])
 			{
-				BacklightBrghtness(SettingValue[SETUP_BRIGHTNESS], TRUE);
-				LCD_OnOff(0);
-				gbSavingMode = TRUE;
-			}
-		}
-		if(gbInMainMenu == TRUE)
-		{
-			if((SettingValue[SETUP_DEVICE_COUNT] != 1) && (SettingValue[SETUP_SCREEN_SWITCHING] != 0) && (timer >= gScreenSwitchingCounter))
-			{
-				gScreenSwitchingCounter = timer + (SettingValue[SETUP_SCREEN_SWITCHING] * THOUSAND);
-				if(gbSavingMode == FALSE)
-					return KEY_DOWN;
-			}
-		}
-		else
-		{
-			if((SettingValue[SETUP_RETURN_TO_SCREEN] != 0) && (timer >= gReturnToScreen))
-			{
-//				gReturnToScreen = timer + (SettingValue[SETUP_RETURN_TO_SCREEN] * 1000);
-				if(gbSavingMode == FALSE)
-					return KEY_CANCEL;
-			}
-		}
-		for(E_KEY i = KEY_SETUP; i < KEY_MAX; i++)
-		{
-			if(KeyChanged[i] == 1)
-			{
-				KeyChanged[i] = 0;
-				uint8_t bContinue = FALSE;
-				if(gbSavingMode == TRUE)
+				if(gCommStatus[gDeviceIndex] == COMM_ERROR)
 				{
-					BacklightBrghtness(SettingValue[SETUP_BRIGHTNESS], 0);
-					LCD_OnOff(1);
-					bContinue = TRUE;
-					gbSavingMode = FALSE;
+					gCommCheckStatus[gDeviceIndex] = gCommStatus[gDeviceIndex];
+					if(gDebug)
+						(void)printf("\n\n\n\n\n gCommStatus[gDeviceIndex] == COMM_ERROR\n\n\n\n\n\n");
+					return COMM_STAT_ERROR;
 				}
-				ScreenTimerInit();
-				if(bContinue == TRUE)
+				gCommCheckStatus[gDeviceIndex] = gCommStatus[gDeviceIndex];
+			}
+			if(gbSavingMode == FALSE)
+			{
+				if((SettingValue[SETUP_SAVING_MODE] != 0) && (timer >= gSavingModeCounter))
 				{
-					continue;
+					BacklightBrghtness(SettingValue[SETUP_BRIGHTNESS], TRUE);
+					LCD_OnOff(0);
+					gbSavingMode = TRUE;
 				}
-				return i;
+			}
+			if(gbInMainMenu == TRUE)
+			{
+				if((SettingValue[SETUP_DEVICE_COUNT] != 1) && (SettingValue[SETUP_SCREEN_SWITCHING] != 0) && (timer >= gScreenSwitchingCounter))
+				{
+					gScreenSwitchingCounter = timer + (SettingValue[SETUP_SCREEN_SWITCHING] * THOUSAND);
+					if(gbSavingMode == FALSE)
+						return KEY_DOWN;
+				}
+			}
+			else
+			{
+				if((SettingValue[SETUP_RETURN_TO_SCREEN] != 0) && (timer >= gReturnToScreen))
+				{
+					if(gbSavingMode == FALSE)
+						return KEY_CANCEL;
+				}
+			}
+			for(E_KEY i = KEY_SETUP; i < KEY_MAX; i++)
+			{
+				if(KeyChanged[i] == 1)
+				{
+					KeyChanged[i] = 0;
+					uint8_t bContinue = FALSE;
+					if(gbSavingMode == TRUE)
+					{
+						BacklightBrghtness(SettingValue[SETUP_BRIGHTNESS], 0);
+						LCD_OnOff(1);
+						bContinue = TRUE;
+						gbSavingMode = FALSE;
+					}
+					ScreenTimerInit();
+					if(bContinue == TRUE)
+					{
+						continue;
+					}
+					return i;
+				}
 			}
 		}
 		if(sendFlag == 0)
 		{
 			uint32_t tm = HAL_GetTick();
-//			if((tm-master_send_timer) > 100)
+			if(MasterSendLength[g_sendOwner] != 0)
 			{
-				if(MasterSendLength[g_sendOwner] != 0)
+				if(gDebug)
+					printf("MasterModbusSend(%d, %d)\n", HAL_GetTick(), g_sendOwner);
+				MasterModbusSend(g_sendOwner);
+				master_send_timer = tm;
+			}
+			else
+			{
+				if(g_sendOwner == OWNER_MASTER)
 				{
-					if(gDebug)
-						printf("MasterModbusSend(%d, %d)\n", HAL_GetTick(), g_sendOwner);
-					MasterModbusSend(g_sendOwner);
-					master_send_timer = tm;
+					if(MasterSendLength[OWNER_SLAVE] != 0)
+						g_sendOwner = OWNER_SLAVE;
 				}
 				else
 				{
-					if(g_sendOwner == OWNER_MASTER)
-					{
-						if(MasterSendLength[OWNER_SLAVE] != 0)
-							g_sendOwner = OWNER_SLAVE;
-					}
-					else
-					{
-						if(gbSavingMode == FALSE)
-							g_sendOwner = OWNER_MASTER;
-					}
-					if(MasterSendLength[g_sendOwner] != 0)
-					{
-						if(gDebug)
-							printf("MasterModbusSend2(%d, %d)\n", HAL_GetTick(), g_sendOwner);
-						MasterModbusSend(g_sendOwner);
-						master_send_timer = tm;
-					}
+					if(gbSavingMode == FALSE)
+						g_sendOwner = OWNER_MASTER;
+				}
+				if(MasterSendLength[g_sendOwner] != 0)
+				{
+					if(gDebug)
+						printf("MasterModbusSend2(%d, %d)\n", HAL_GetTick(), g_sendOwner);
+					MasterModbusSend(g_sendOwner);
+					master_send_timer = tm;
 				}
 			}
 		}
@@ -2012,18 +2041,18 @@ E_KEY GetKey(void)
 		}
 		if (g_modbusRxDone)
 		{
-//				printf("g_modbusRxDone!!\n");
+			printf("g_modbusRxDone!!\n");
 			CommStatusDisp();
 			if(nMasterStatus == MODBUS_OK)
 			{
-//				if(gDebug)
-//					(void)printf("[MODBUS_OK]\n");
+				if(gDebug)
+					(void)printf("[MODBUS_OK]\n");
 			  return DATA_RECV;
 			}
 			else
 			if(nMasterStatus == MODBUS_ERROR)
 			{
-//			  (void)printf("[Modbus Error]\n");
+			  (void)printf("[Modbus Error]\n");
 			  return KEY_COMM_ERROR;
 			}
 			else
@@ -2041,7 +2070,7 @@ E_KEY GetKey(void)
 			g_modbusRxError = 0;
 			return KEY_COMM_ERROR;
 		}
-		GUI_Delay(50);
+		GUI_Delay(30);
 	}
 }
 

@@ -698,7 +698,7 @@ char const* _actrip_text[SETUP_LANGUAGE_MAX][STATUS_COUNT] = {
 	},
 };
 
-char const* 
+char const*
 _accontrol_confirm_text[SETUP_LANGUAGE_MAX][STATUS_COUNT] = {
 	{
 		"If you want to turn On,\nChecking your password",
@@ -979,6 +979,8 @@ char const* _acsetup_disp_setting_label_text[SETUP_LANGUAGE_MAX][SETUP_SETTING_N
 		"Language",
 		"Password",
 		"Comm. Speed",
+		"Terminate(UP)",
+		"Terminate(DOWN)",
 		"Gateway Use",
 		"Factory Reset"
 	},
@@ -991,6 +993,8 @@ char const* _acsetup_disp_setting_label_text[SETUP_LANGUAGE_MAX][SETUP_SETTING_N
 		"语言",
 		"密码",
 		"通信速度",
+		"Terminate(UP)",
+		"Terminate(DOWN)",
 		"网关使用",
 		"工厂重置"
 	},
@@ -1003,6 +1007,8 @@ char const* _acsetup_disp_setting_label_text[SETUP_LANGUAGE_MAX][SETUP_SETTING_N
 		"Language",
 		"Password",
 		"Comm. Speed",
+		"Terminate(UP)",
+		"Terminate(DOWN)",
 		"Gateway Use",
 		"Factory Reset"
 	},
@@ -1018,6 +1024,8 @@ char const* _acsetup_disp_setting_value_text[SETUP_LANGUAGE_MAX][SETUP_SETTING_N
 		"****",
 		"%s",
 		"%s",
+		"%s",
+		"%s",
 		""
 	},
 	{
@@ -1030,6 +1038,8 @@ char const* _acsetup_disp_setting_value_text[SETUP_LANGUAGE_MAX][SETUP_SETTING_N
 		"****",
 		"%s",
 		"%s",
+		"%s",
+		"%s",
 		""
 	},
 	{
@@ -1040,6 +1050,8 @@ char const* _acsetup_disp_setting_value_text[SETUP_LANGUAGE_MAX][SETUP_SETTING_N
 		"Return to Screen  : %d s",
 		"%s",
 		"****",
+		"%s",
+		"%s",
 		"%s",
 		"%s",
 		""

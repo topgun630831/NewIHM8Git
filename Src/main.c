@@ -215,7 +215,7 @@ void HAL_UART_ErrorCallback(UART_HandleTypeDef *huart)
 	else if(huart->Instance==USART2)
 	{
 		printf("(uart2)HAL_UART_ErrorCallback!(%x)\n", huart->ErrorCode);
-		HAL_GPIO_WritePin(GPIOB, GPIO_PIN_14, GPIO_PIN_RESET);
+  		HAL_GPIO_WritePin(GPIOB, GPIO_PIN_14, GPIO_PIN_RESET);
 		__HAL_UART_CLEAR_PEFLAG(&huart2);
 		__HAL_UART_CLEAR_OREFLAG(&huart2);
 		__HAL_UART_CLEAR_FEFLAG(&huart2);
@@ -228,6 +228,7 @@ void HAL_UART_ErrorCallback(UART_HandleTypeDef *huart)
 		HAL_UART_Receive_DMA(&huart2, uart2_dma_rx_buff, UART2_DMA_RX_BUFF_SIZE);
 		uart2LastNDTR = huart2.hdmarx->Instance->NDTR;
 		g_modbusRxIndex = 0;
+//		sendFlag = 0;
 	}
 }
 
@@ -271,6 +272,15 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 		{
 			printf("\n\n\n\naaaaaaaaaaaa\n\n\n\n");
 		}
+	}
+	if(huart->Instance == USART1)
+	{
+		printf("UART1 HAL_UART_RxCpltCallback\n");
+	}
+	else
+	if(huart->Instance == USART2)
+	{
+		printf("UART2 HAL_UART_RxCpltCallback\n");
 	}
 }
 
