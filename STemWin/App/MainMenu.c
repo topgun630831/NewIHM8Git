@@ -1639,6 +1639,7 @@ void MasterModbusProcess(void)
 						(void)printf("Recv Done!!!!(%d)\n",HAL_GetTick());
 					sendFlag = 0;
 					bRecvOk = true;
+					g_modbusRxIndex = wModbusWaitLen;
 					nMasterStatus = MasterModbusCRCCheck();
 					g_modbusRxIndex = 0;
 				}
