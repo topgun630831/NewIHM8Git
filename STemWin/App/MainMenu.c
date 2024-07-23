@@ -904,7 +904,6 @@ void StatusRecv(void)
 		else
 		if(statusSendStep == INDEX_1)
 		{
-//			ModbusGetString(H_REGISTER_507, INDEX_32, gProductName[gDeviceIndex]);
 			ModbusGetId2(gProductName[gDeviceIndex]);
 
 			//(void)printf("gProductName = %s\n", gProductName[gDeviceIndex]);
@@ -1639,7 +1638,7 @@ void MasterModbusProcess(void)
 						(void)printf("Recv Done!!!!(%d)\n",HAL_GetTick());
 					sendFlag = 0;
 					bRecvOk = true;
-					g_modbusRxIndex = wModbusWaitLen;
+					g_modbusRxIndex = wModbusWaitLen;		// Recv frame 뒤에 Garbage 처리
 					nMasterStatus = MasterModbusCRCCheck();
 					g_modbusRxIndex = 0;
 				}

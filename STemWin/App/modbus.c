@@ -548,9 +548,12 @@ void ModbusGetId2(char productName[MESSAGE_BUF_SIZE])
 	int index = INDEX_9;
 	index += (g_modbusRxBuff[index] + INDEX_2);
 
-	(void)memcpy(productName, &g_modbusRxBuff[index+1], g_modbusRxBuff[index]);
-	productName[g_modbusRxBuff[index]] = 0;
-	index += (g_modbusRxBuff[index] + INDEX_2);
+	int len = g_modbusRxBuff[index];
+	if(len >= MESSAGE_BUF_SIZE-1)
+		len = MESSAGE_BUF_SIZE - 1;
+	(void)memcpy(productName, &g_modbusRxBuff[index+1], len);
+	productName[len] = 0;
+//	index += (g_modbusRxBuff[index] + INDEX_2);
 }
 
 //void ModbusGetId3(char serialNo[DEFAULT_BUF_SIZE], char productCode[DEFAULT_BUF_SIZE], char hardwarVersion[DEFAULT_BUF_SIZE], char softwareVersion[DEFAULT_BUF_SIZE])

@@ -26,10 +26,10 @@ const char * _acinfo_modebus_version = {
 char _acHardwareVersion[HARDWAREVERSION_SIZE];
 
 char const* _acinfo_value_text[LINECOUNT_CONTENTS] = {
-		"LSIS",
+		"LSE",
 		"IHM8(5277 1172 570)",		// Product
-		"01.00.07",					// HW Version
-		"01.00.31",					// SW Version
+		"02.00.01",					// HW Version
+		"02.00.01",					// SW Version
 		"01.00.12",					// Comm. Version
 		"Normal"
 };
@@ -217,6 +217,8 @@ uint16_t SettingValue[SETUP_COUNT] = {
 	0,		// Language
 	1111,	// Password
 	0,		// Gatwway Use
+	0,		// Terminate 저항 Up
+	0,		// Terminate 저항 Down
 };
 
 uint16_t DefaultSettingValue[SETUP_COUNT] = {
@@ -229,6 +231,8 @@ uint16_t DefaultSettingValue[SETUP_COUNT] = {
 	0,		// Language
 	1111,	// Password
 	0,		// Gatwway Use
+	0,		// Terminate 저항 Up
+	0,		// Terminate 저항 Down
 };
 
 S_CONNECT_SETTING ConnectSetting[DEVICE_MAX] = {
@@ -976,7 +980,7 @@ char const* _acsetup_disp_setting_label_text[SETUP_LANGUAGE_MAX][SETUP_SETTING_N
 		"",
 		"",
 		"",
-		"Language",
+//		"Language",
 		"Password",
 		"Comm. Speed",
 		"Terminate(UP)",
@@ -990,7 +994,7 @@ char const* _acsetup_disp_setting_label_text[SETUP_LANGUAGE_MAX][SETUP_SETTING_N
 		"",
 		"",
 		"",
-		"语言",
+//		"语言",
 		"密码",
 		"通信速度",
 		"Terminate(UP)",
@@ -1004,7 +1008,7 @@ char const* _acsetup_disp_setting_label_text[SETUP_LANGUAGE_MAX][SETUP_SETTING_N
 		"",
 		"",
 		"",
-		"Language",
+//		"Language",
 		"Password",
 		"Comm. Speed",
 		"Terminate(UP)",
@@ -1020,7 +1024,7 @@ char const* _acsetup_disp_setting_value_text[SETUP_LANGUAGE_MAX][SETUP_SETTING_N
 		"Saving Mode         : %d s",
 		"Screen Switching : %d s",
 		"Return to Screen  : %d s",
-		"%s",
+//		"%s",
 		"****",
 		"%s",
 		"%s",
@@ -1034,7 +1038,7 @@ char const* _acsetup_disp_setting_value_text[SETUP_LANGUAGE_MAX][SETUP_SETTING_N
 		"储存模式      : %d s",
 		"屏幕转换      : %d s",
 		"返回到屏幕  : %d s",
-		"%s",
+//		"%s",
 		"****",
 		"%s",
 		"%s",
@@ -1048,7 +1052,7 @@ char const* _acsetup_disp_setting_value_text[SETUP_LANGUAGE_MAX][SETUP_SETTING_N
 		"Saving Mode         : %d s",
 		"Screen Switching : %d s",
 		"Return to Screen  : %d s",
-		"%s",
+//		"%s",
 		"****",
 		"%s",
 		"%s",

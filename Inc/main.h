@@ -49,7 +49,7 @@
 #ifndef __MAIN_H
 #define __MAIN_H
 
-#define PCF2131			1			// New RTC			
+#define PCF2131			1			// New RTC
 
 #define __WATCHDOG__	0			// 0=wd off, 1=wd on
 
@@ -105,7 +105,7 @@
 #define RS485_TERM1			GPIO_PIN_11
 #define RS485_TERM2			GPIO_PIN_10
 
-#define	SETUP_WRITE_ID					0x5599
+#define	SETUP_WRITE_ID					0x55AA
 
 
 /* ########################## Assert Selection ############################## */
@@ -196,9 +196,9 @@ typedef enum {
 #define Cntl2  	0x00
 #define	Cntl3   0x00
 #if PCF2131
-#define	ClkOut  0x46		// Temperature measurement period 4Min(0xC6) 
+#define	ClkOut  0x46		// Temperature measurement period 4Min(0xC6)
 #else
-#define	ClkOut  0x46		// Temperature measurement period 2Min(0x46) 
+#define	ClkOut  0x46		// Temperature measurement period 2Min(0x46)
 #endif
 /** Error code */
 #define	NO_ERROR                0

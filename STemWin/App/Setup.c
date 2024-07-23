@@ -39,7 +39,7 @@ static void SetInfoMenu(int menu, int pos, int count, int flag);
 
 static char deviceDescription[MESSAGE_BUF_SIZE];
 
-static void FactoryRest(void);
+static void FactoryReset(void);
 static void FactoryResetInitDisp(void);
 static void DisplayDeviceDispValue(void);
 
@@ -103,6 +103,8 @@ static void DeviceDescriptionDisp(uint16_t device)
 //	GUI_ClearRectEx(&rect2);
 //	GUI_DispStringInRect(buf, &rect2, GUI_TA_LEFT | GUI_TA_VCENTER);
 }
+
+void TerminateSet(void);
 
 static void DisplayConnectSettingMenu(int pos, uint16_t device, uint8_t flag)
 {
@@ -357,7 +359,8 @@ static void DisplaySettingMenu(int page, int pos, int flag)
 	rect2.x1 = SETUP_SETTING_X1;
 	rect2.y1 = (SETTING_STARTY_LABEL + SETTING_SUB_HEIGHT) - 1;
 
-	if(page == 1)
+
+	if(page == 1 || page == INDEX_2)
 	{
 		GUI_SetColor(GUI_WHITE);
 		GUI_FillPolygon(UP_POINT, INDEX_3, SETUP_UPDOWN_X, y0);
@@ -366,8 +369,16 @@ static void DisplaySettingMenu(int page, int pos, int flag)
 		rect2.y0 += SETTING_SUB_HEIGHT;
 		rect2.y1 += SETTING_SUB_HEIGHT;
 		y0 += SETTING_SUB_HEIGHT + 1;
-		count = INDEX_5;
-		offset = INDEX_5;
+		if(page == INDEX_2)
+		{
+			count = INDEX_2;
+			offset = INDEX_9;
+		}
+		else
+		{
+			count = INDEX_4;
+			offset = INDEX_5;
+		}
 	}
 
 	GUI_SetColor(COLOR_LABEL);
@@ -450,7 +461,7 @@ static void DisplaySettingMenu(int page, int pos, int flag)
 				(void)sprintf(buf, _acsetup_disp_setting_value_text[SettingValue[SETUP_LANGUAGE]][index], SettingValue[SETUP_RETURN_TO_SCREEN]);
 			}
 		}
-		else
+/*		else
 		if(index == INDEX_5)
 		{
 			(void)sprintf(buf, _acsetup_disp_setting_value_text[SettingValue[SETUP_LANGUAGE]][index], _acsetup_language[SettingValue[SETUP_LANGUAGE]]);
@@ -468,18 +479,36 @@ static void DisplaySettingMenu(int page, int pos, int flag)
 				(void)GUI_SetFont(&GUI_Font20B_ASCII);
 			}
 		}
-		else
-		if(index == INDEX_6)
+*/		else
+		if(index == INDEX_5)
 		{
 			(void)sprintf(buf, _acsetup_disp_setting_value_text[SettingValue[SETUP_LANGUAGE]][index]);
 		}
 		else
-		if(index == INDEX_7)
+		if(index == INDEX_6)
 		{
 			(void)sprintf(buf, _acsetup_disp_setting_value_text[SettingValue[SETUP_LANGUAGE]][index], _acsetup_speed[SettingValue[SETUP_SPEED]]);
 		}
 		else
+		if(index == INDEX_7)
+		{
+			if(SettingValue[SETUP_TERM1_USE] != 1)
+			{
+				SettingValue[SETUP_TERM1_USE] = 0;
+			}
+			(void)sprintf(buf, _acsetup_disp_setting_value_text[SettingValue[SETUP_LANGUAGE]][index], _aconoff_text[SettingValue[SETUP_LANGUAGE]][SettingValue[SETUP_TERM1_USE]]);
+		}
+		else
 		if(index == INDEX_8)
+		{
+			if(SettingValue[SETUP_TERM2_USE] != 1)
+			{
+				SettingValue[SETUP_TERM2_USE] = 0;
+			}
+			(void)sprintf(buf, _acsetup_disp_setting_value_text[SettingValue[SETUP_LANGUAGE]][index], _aconoff_text[SettingValue[SETUP_LANGUAGE]][SettingValue[SETUP_TERM2_USE]]);
+		}
+		else
+		if(index == INDEX_9)
 		{
 			if(SettingValue[SETUP_GATEWAY_USE] != 1)
 			{
@@ -493,6 +522,8 @@ static void DisplaySettingMenu(int page, int pos, int flag)
 		}
 		GUI_DispStringInRect(buf, &rect2, GUI_TA_LEFT | GUI_TA_VCENTER);
 
+		printf("(%d,%d %d,%d) %s\n", rect2.x0, rect2.y0,rect2.x1, rect2.y1, buf);
+
 //		GUI_DispStringInRect(_acsetup_disp_setting_value_text[offset + i], &rect2, GUI_TA_LEFT | GUI_TA_VCENTER);
 		rect.y0 += SETTING_SUB_HEIGHT;
 		rect.y1 += SETTING_SUB_HEIGHT;
@@ -500,7 +531,7 @@ static void DisplaySettingMenu(int page, int pos, int flag)
 		rect2.y1 += SETTING_SUB_HEIGHT;
 		y0 += SETTING_SUB_HEIGHT + 1;
 	}
-	if(page == 0)
+	if(page == 0 || page == INDEX_1)
 	{
 	  GUI_SetColor(GUI_WHITE);
 	  GUI_FillPolygon(DOWN_POINT, INDEX_3, SETUP_UPDOWN_X, y0);
@@ -529,9 +560,9 @@ static void FactoryResetInitDisp(void)
 	MLinkButtonDisp(CONTROL_BUTTON_NOSELECT);
 }
 
-static void FactoryRest(void)
+static void FactoryReset(void)
 {
-	int flagBreak;
+	int flagBreak = FALSE;
 	int nPos = 0;
 	char password[CONTROL_PASSWORD_DIGIT+1];
 
@@ -623,7 +654,7 @@ static void FactoryRest(void)
 						gFaultEventReaded[i] = 0;
 						ConnectSetting[i].DeviceType = DEVICE_NO;
 						ConnectSetting[i].Address = i + 1;
-						gCommStatus[i] = COMM_ERROR;					
+						gCommStatus[i] = COMM_ERROR;
 					}
 					for(int i = 0; i < SETUP_COUNT; i++)
 					{
@@ -715,7 +746,7 @@ static void SettingMenuExec(int nPage, int nPos)
 	else
 	if(nPage == INDEX_1)
 	{
-		if(nPos == INDEX_0)
+/*		if(nPos == INDEX_0)
 		{
 			if(SettingInputString(&SettingValue[SETUP_LANGUAGE], SETUP_LANGUAGE_INPUT_MAX, _acsetup_language, TRUE) == TRUE)
 			{
@@ -723,7 +754,7 @@ static void SettingMenuExec(int nPage, int nPos)
 			}
 		}
 		else
-		if(nPos == INDEX_1)
+*/		if(nPos == INDEX_0)
 		{
 			if(PasswordChange() == TRUE)
 			{
@@ -731,7 +762,7 @@ static void SettingMenuExec(int nPage, int nPos)
 			}
 		}
 		else
-		if(nPos == INDEX_2)
+		if(nPos == INDEX_1)
 		{
 			if(SettingInputString(&SettingValue[SETUP_SPEED], SETUP_SPEED_MAX, _acsetup_speed, FALSE) == TRUE)
 			{
@@ -741,7 +772,29 @@ static void SettingMenuExec(int nPage, int nPos)
 			}
 		}
 		else
+		if(nPos == INDEX_2)
+		{
+			if(SettingInputString(&SettingValue[SETUP_TERM1_USE], STATUS_COUNT, _aconoff_text[SettingValue[SETUP_LANGUAGE]], FALSE) == TRUE)
+			{
+				TerminateSet();
+				FlashWrite();
+			}
+		}
+		else
 		if(nPos == INDEX_3)
+		{
+			if(SettingInputString(&SettingValue[SETUP_TERM2_USE], STATUS_COUNT, _aconoff_text[SettingValue[SETUP_LANGUAGE]], FALSE) == TRUE)
+			{
+				TerminateSet();
+				FlashWrite();
+			}
+		}
+		else {}
+	}
+	else
+	if(nPage == INDEX_2)
+	{
+		if(nPos == INDEX_0)
 		{
 			if(SettingInputString(&SettingValue[SETUP_GATEWAY_USE], SETUP_GATEWAY_USE_MAX, _acsetup_gateway_use[SettingValue[SETUP_LANGUAGE]], FALSE) == TRUE)
 			{
@@ -749,9 +802,9 @@ static void SettingMenuExec(int nPage, int nPos)
 			}
 		}
 		else
-		if(nPos == INDEX_4)
+		if(nPos == INDEX_1)
 		{
-			FactoryRest();
+			FactoryReset();
 		}
 		else {}
 	}
@@ -820,8 +873,8 @@ static void DisplaySetting(void)
 				}
 				else
 				{
-					nPage = 1;
-					nPos = INDEX_4;
+					nPage = 2;
+					nPos = INDEX_1;
 					DisplaySettingMenu(nPage, nPos, 1);
 				}
 			}
@@ -838,6 +891,22 @@ static void DisplaySetting(void)
 				{
 					nPos = INDEX_4;
 					nPage = 0;
+					DisplaySettingMenu(nPage, nPos, 1);
+				}
+			}
+			else
+			if(nPage == INDEX_2)
+			{
+				if(nPos > 0)
+				{
+					nPos--;
+					DisplaySettingMenu(nPage, nPos, 0);
+				}
+				else
+//				if(nPos == 1)
+				{
+					nPos = INDEX_3;
+					nPage = 1;
 					DisplaySettingMenu(nPage, nPos, 1);
 				}
 			}
@@ -865,13 +934,30 @@ static void DisplaySetting(void)
 			else
 			if(nPage == 1)
 			{
-				if(nPos < INDEX_4)
+				if(nPos < INDEX_3)
 				{
 					nPos++;
 					DisplaySettingMenu(nPage, nPos, 0);
 				}
 				else
-				if(nPos == INDEX_4)
+				if(nPos == INDEX_3)
+				{
+					nPos = 0;
+					nPage = INDEX_2;
+					DisplaySettingMenu(nPage, nPos, 1);
+				}
+				else {}
+			}
+			else
+			if(nPage == INDEX_2)
+			{
+				if(nPos < INDEX_1)
+				{
+					nPos++;
+					DisplaySettingMenu(nPage, nPos, 0);
+				}
+				else
+				if(nPos == INDEX_1)
 				{
 					nPos = 0;
 					nPage = 0;

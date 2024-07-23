@@ -429,6 +429,18 @@ static void Board_Init(void)
 	LCD_Clear(0, 0, MAX_HEIGHT, MAX_WIDTH, Black);
 }
 
+void TerminateSet(void)
+{
+	if(SettingValue[SETUP_TERM1_USE] == 1)
+		HAL_GPIO_WritePin(RS485_TERM_Port, RS485_TERM1, GPIO_PIN_SET);
+	else
+		HAL_GPIO_WritePin(RS485_TERM_Port, RS485_TERM1, GPIO_PIN_RESET);
+
+	if(SettingValue[SETUP_TERM2_USE] == 1)
+		HAL_GPIO_WritePin(RS485_TERM_Port, RS485_TERM2, GPIO_PIN_SET);
+	else
+		HAL_GPIO_WritePin(RS485_TERM_Port, RS485_TERM2, GPIO_PIN_RESET);
+}
 /* USER CODE END 0 */
 //static int gDnFlag = 0;
 
@@ -519,6 +531,10 @@ int main(void)
 	User_Pwm_Setup();
 
 	FlashRead();
+	SettingValue[SETUP_LANGUAGE] = 0;
+
+	TerminateSet();
+
 	FaultCountRead();
 
 	MX_USART1_UART_Init();
@@ -1276,10 +1292,11 @@ void FlashRead(void)
 	{
 		(void)printf("Read Falsh.............\n");
 		Address += INDEX_2;
-		for(int i = 0; i < (SETUP_COUNT-1); i++)
+		for(int i = 0; i < SETUP_COUNT; i++)
 		{
 			SettingValue[i] = *(__IO uint16_t*)Address;
 			Address += INDEX_2;
+			printf("SettingValue[%i] : %d\n", i, SettingValue[i]);
 		}
 		for(int i = 0; i < DEVICE_MAX; i++)
 		{
@@ -1287,6 +1304,7 @@ void FlashRead(void)
 			Address += INDEX_2;
 			ConnectSetting[i].Address = *(__IO uint16_t*)Address;
 			Address += INDEX_2;
+			printf("Device:%d Type:%d, Address:%d\n", i, ConnectSetting[i].DeviceType, ConnectSetting[i].Address);
 		}
 		SettingValue[SETUP_GATEWAY_USE] = *(__IO uint16_t*)Address;
 		gDeviceCount = SettingValue[SETUP_DEVICE_COUNT];
@@ -1352,13 +1370,14 @@ void FlashWrite(void)
 	if (HAL_FLASH_Program(FLASH_TYPEPROGRAM_HALFWORD, Address, SETUP_WRITE_ID) == HAL_OK)
 	{
 		Address += INDEX_2;
-		for(int i = 0; i < (SETUP_COUNT-1); i++)
+		for(int i = 0; i < SETUP_COUNT; i++)
 		{
 			if(HAL_FLASH_Program(FLASH_TYPEPROGRAM_HALFWORD, Address, SettingValue[i]) != HAL_OK)
 			{
 				(void)printf("Write Fail SettingValue[%d]\n", i);
 			}
 			Address += INDEX_2;
+			printf("SettingValue[%i] : %d\n", i, SettingValue[i]);
 		}
 		for(int i = 0; i < DEVICE_MAX; i++)
 		{

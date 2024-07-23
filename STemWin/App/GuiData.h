@@ -107,6 +107,7 @@ extern int statusSendStep;
 #define	PASSWORD_INPUT_BUF_SIZE			2
 #define	PULSE_UNIT_COUNT				5
 
+#define SETUP_COUNT						11
 typedef enum e_setting
 {
 	SETUP_SPEED = 0,
@@ -118,7 +119,9 @@ typedef enum e_setting
 	SETUP_LANGUAGE = 6,
 	SETUP_PASSWORD = 7,
 	SETUP_GATEWAY_USE = 8,
-	SETUP_COUNT = 9
+	SETUP_TERM1_USE = 9,
+	SETUP_TERM2_USE = 10,
+	SETUP_MAX = 11
 } E_SETTING;
 
 extern uint16_t SettingValue[SETUP_COUNT];
@@ -565,7 +568,7 @@ extern S_CONNECT_SETTING ConnectSetting[DEVICE_MAX];
 #define SETUP_SETTING_X1				((SETUP_SETTING_X0 + 265) - 1)
 
 #define SETUP_UPDOWN_X					240
-#define SETUP_SETTING_NUM				12
+#define SETUP_SETTING_NUM				11
 
 #define SETUP_TIMESET_COUNT				6
 #define SETUP_INPUT_Y0					96
