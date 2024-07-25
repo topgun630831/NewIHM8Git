@@ -106,7 +106,7 @@ void MLinkOverviewValue(int flag)
 			nSendStep = 0;
 		}
 	}
-	
+
 	(void)GUI_SetFont(&GUI_Font24B_1);
 	GUI_SetColor(GUI_WHITE);
 	GUI_SetBkColor(COLOR_MAIN_BG);
@@ -119,7 +119,7 @@ void MLinkOverviewValue(int flag)
 	(void)sprintf(buf, "%4.2f", aiValue);
 	GUI_ClearRectEx(&rect);
 	GUI_DispStringInRect(buf, &rect, GUI_TA_RIGHT | GUI_TA_VCENTER);
-	
+
 	(void)GUI_SetPenSize(PENSIZE_LINE);
 
 	rect.x0 = MLINK_OVERVIEW_STATUS_X0;
@@ -156,13 +156,13 @@ void MLinkOverviewValue(int flag)
 		rect.x0 += MLINK_OVERVIEW_STATUS_DISTANCE;
 		rect.x1 += MLINK_OVERVIEW_STATUS_DISTANCE;
 	}
-	
+
 	rect.y0 += MLINK_OVERVIEW_Y_DISTANCE;
 	rect.y1 += MLINK_OVERVIEW_Y_DISTANCE;
 
 	rect.x0 = MLINK_OVERVIEW_STATUS_X0;
 	rect.x1 = MLINK_OVERVIEW_STATUS_X1;
-	
+
 	int do_count = MLINK_DO_MAX;
 	if(mLinkMode[gDeviceIndex] == INDEX_5)
 	{
@@ -174,7 +174,7 @@ void MLinkOverviewValue(int flag)
 		do_count = INDEX_2;
 	}
 	else {}
-	
+
 	for(int i = 0; i < MLINK_DI_MAX; i++)
 	{
 		if(i < do_count)
@@ -202,7 +202,7 @@ void MLinkOverviewValue(int flag)
 
 		GUI_SetColor(GUI_WHITE);
 		GUI_DispStringInRect(buf, &rect, GUI_TA_HCENTER | GUI_TA_VCENTER);
-		
+
 		rect.x0 += MLINK_OVERVIEW_STATUS_DISTANCE;
 		rect.x1 += MLINK_OVERVIEW_STATUS_DISTANCE;
 	}
@@ -227,7 +227,7 @@ void MLinkOverview(void)
 	int y1 = MLINK_OVERVIEW_DI_BOX_Y1;
 
 	GUI_RECT rect = {
-						STARTX_CONTENTS, 
+						STARTX_CONTENTS,
 						MLINK_OVERVIEW_DI_BOX_Y0,
 						MLINK_OVERVIEW_VLINE_X,
 						MLINK_OVERVIEW_DI_BOX_Y1

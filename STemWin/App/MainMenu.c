@@ -854,12 +854,6 @@ void StatusRecv(void)
 			{
 				gSystemEventTotalCount[gDeviceIndex] = gSystemEventIndex[gDeviceIndex];
 			}
-			if(ModbusGetUint16(I_REGISTER_208) & TIME_SYNC_MASK)
-			{
-				//(void)printf("M-LINK Time Invalid................\n\n\n\n");
-				PCF2127_readTime(1);
-				ModbusSetTimeAndWait(ConnectSetting[gDeviceIndex].Address, &gDateTime);
-			}
 
 			for(uint16_t i = 0; i < MLINK_DO_MAX; i++)
 			{
@@ -868,6 +862,13 @@ void StatusRecv(void)
 			for(uint16_t i = 0; i < MLINK_DI_MAX; i++)
 			{
 				diStatus[gDeviceIndex][i] = ModbusGetBit(I_REGISTER_209, i);
+			}
+
+//			if(ModbusGetUint16(I_REGISTER_208) & TIME_SYNC_MASK)
+			{
+				(void)printf("M-LINK Time Invalid................\n\n\n\n");
+				PCF2127_readTime(1);
+				ModbusSetTimeAndWait(ConnectSetting[gDeviceIndex].Address, &gDateTime);
 			}
 
 			statusSendStep = 0;
@@ -1091,13 +1092,6 @@ void StatusRecv(void)
 				gAcbType[gDeviceIndex] = (E_ACB_TYPE)(value & ACB_TYPE_MASK);
 			}
 
-			value = ModbusGetUint16(I_REGISTER_206);
-			if(value & TIME_SYNC_MASK)
-			{
-				//(void)printf("ACB/MCCB Time Invalid................\n\n\n\n");
-				PCF2127_readTime(1);
-				ModbusSetTimeAndWait(ConnectSetting[gDeviceIndex].Address, &gDateTime);
-			}
 			value = ModbusGetUint16(I_REGISTER_208);
 			uint8_t cbStatus;
 			if(value & CB_USE_UNUSE_MASK)			// 차단기 모드 사용/사용안함
@@ -1123,6 +1117,14 @@ void StatusRecv(void)
 
 			gLrValue[gDeviceIndex] = ModbusGetUint16(I_REGISTER_203);
 			//(void)printf("ACB/MCCB lr=%f, groupoffset=%d\n", gLrValue[gDeviceIndex], gGroupOffset[gDeviceIndex]);
+
+			value = ModbusGetUint16(I_REGISTER_206);
+			if(value & TIME_SYNC_MASK)
+			{
+				(void)printf("ACB/MCCB Time Invalid................\n\n\n\n");
+				PCF2127_readTime(1);
+				ModbusSetTimeAndWait(ConnectSetting[gDeviceIndex].Address, &gDateTime);
+			}
 
 			statusSendStep = 0;
 			gStatusSendEnd = STATUS_SEND_END;
@@ -1441,7 +1443,7 @@ __STATIC_INLINE void Pol_Delay_us(volatile uint32_t microseconds)
 	while (microseconds--);
 }
 
-static uint8_t MasterModbusCRCCheck(void)
+static uint8_t MasterModbusCRCCheck(bool bInChecking)
 {
 	if(g_modbusRxIndex < 5 || g_modbusRxIndex > MODBUS_BUFF_SIZE)
 		return MODBUS_CRC_ERROR;
@@ -1495,7 +1497,7 @@ static uint8_t MasterModbusCRCCheck(void)
 			g_sendOwner = OWNER_MASTER;
 	}
 	else
-	if(g_sendOwner == OWNER_MASTER)
+	if(bInChecking == false && g_sendOwner == OWNER_MASTER)
 	{
 		if(MasterSendLength[OWNER_SLAVE] != 0)
 			g_sendOwner = OWNER_SLAVE;
@@ -1505,7 +1507,7 @@ static uint8_t MasterModbusCRCCheck(void)
 }
 
 E_MODBUS_ERROR nMasterStatus;
-void MasterModbusProcess(void)
+void MasterModbusProcess(bool bInChecking)
 {
 	nMasterStatus = MODBUS_NONE;
 	if(sendFlag == 1)
@@ -1610,8 +1612,11 @@ void MasterModbusProcess(void)
 				if(g_sendOwner == OWNER_MASTER)
 				{
 					g_modbusRxError = 1;
-					if(MasterSendLength[OWNER_SLAVE] != 0)
-						g_sendOwner = OWNER_SLAVE;
+					if(bInChecking == false)
+					{
+						if(MasterSendLength[OWNER_SLAVE] != 0)
+							g_sendOwner = OWNER_SLAVE;
+					}
 				}
 				else
 				{
@@ -1639,7 +1644,7 @@ void MasterModbusProcess(void)
 					sendFlag = 0;
 					bRecvOk = true;
 					g_modbusRxIndex = wModbusWaitLen;		// Recv frame 뒤에 Garbage 처리
-					nMasterStatus = MasterModbusCRCCheck();
+					nMasterStatus = MasterModbusCRCCheck(bInChecking);
 					g_modbusRxIndex = 0;
 				}
 				else
@@ -1690,7 +1695,7 @@ void MasterModbusProcess(void)
 							(void)printf("[g_bRecvVariable]Recv Done!!!!(%d)\n", HAL_GetTick());
 						sendFlag = 0;
 						g_modbusRxIndex = pos+2;
-						nMasterStatus = MasterModbusCRCCheck();
+						nMasterStatus = MasterModbusCRCCheck(bInChecking);
 						sendFlag = 0;
 					}
 				}
@@ -1721,8 +1726,11 @@ void MasterModbusProcess(void)
 				if(g_sendOwner == OWNER_MASTER)
 				{
 					g_modbusRxError = 1;
-					if(MasterSendLength[OWNER_SLAVE] != 0)
-						g_sendOwner = OWNER_SLAVE;
+					if(bInChecking == false)
+					{
+						if(MasterSendLength[OWNER_SLAVE] != 0)
+							g_sendOwner = OWNER_SLAVE;
+					}
 				}
 				else
 				{
@@ -1743,8 +1751,11 @@ void MasterModbusProcess(void)
 						gCommErrorCount[gDeviceIndex] = 0;
 						(void)printf("Comm Error!!!!\n");
 					}
-					if(MasterSendLength[OWNER_SLAVE] != 0)
-						g_sendOwner = OWNER_SLAVE;
+					if(bInChecking == false)
+					{
+						if(MasterSendLength[OWNER_SLAVE] != 0)
+							g_sendOwner = OWNER_SLAVE;
+					}
 					g_modbusRxError = 1;
 				}
 				else
@@ -2030,8 +2041,96 @@ E_KEY GetKey(void)
 			if(gDebug)
 				printf("{1}");
 		}
-		MasterModbusProcess();
+		MasterModbusProcess(false);
 		SlaveModbusProcess();
+
+		if(SlaveSendLength != 0)
+		{
+			if(gDebug)
+				printf("SlaveModbusSend(%d)\n", HAL_GetTick());
+			SlaveModbusSend();
+		}
+		if (g_modbusRxDone)
+		{
+			printf("g_modbusRxDone!!\n");
+			CommStatusDisp();
+			if(nMasterStatus == MODBUS_OK)
+			{
+				if(gDebug)
+					(void)printf("[MODBUS_OK]\n");
+			  return DATA_RECV;
+			}
+			else
+			if(nMasterStatus == MODBUS_ERROR)
+			{
+			  (void)printf("[Modbus Error]\n");
+			  return KEY_COMM_ERROR;
+			}
+			else
+			if(nMasterStatus == MODBUS_CRC_ERROR)
+			{
+			  (void)printf("[CRC BAD]\n");
+			  return KEY_COMM_ERROR;
+			}
+			g_modbusRxDone = 0;
+		}
+		if(g_modbusRxError)
+		{
+			(void)printf("[g_modbusRxError(%d)]\n", g_sendOwner);
+			CommStatusDisp();
+			g_modbusRxError = 0;
+			return KEY_COMM_ERROR;
+		}
+		GUI_Delay(30);
+	}
+}
+
+uint8_t ModbusRecvCheck(void)
+{
+	uint32_t tick = HAL_GetTick();
+
+	uint32_t timer;
+	while (1)
+    {
+		timer = HAL_GetTick();
+		if(sendFlag == 0)
+		{
+			uint32_t tm = HAL_GetTick();
+			if(MasterSendLength[g_sendOwner] != 0)
+			{
+				if(gDebug)
+					printf("[RecvCheck] MasterModbusSend(%d, %d)\n", HAL_GetTick(), g_sendOwner);
+				MasterModbusSend(g_sendOwner);
+				master_send_timer = tm;
+			}
+			else
+			{
+				if(g_sendOwner == OWNER_MASTER)
+				{
+					if(MasterSendLength[OWNER_SLAVE] != 0)
+						g_sendOwner = OWNER_SLAVE;
+				}
+				else
+				{
+					if(gbSavingMode == FALSE)
+						g_sendOwner = OWNER_MASTER;
+				}
+				if(MasterSendLength[g_sendOwner] != 0)
+				{
+					if(gDebug)
+						printf("MasterModbusSend2(%d, %d)\n", HAL_GetTick(), g_sendOwner);
+					MasterModbusSend(g_sendOwner);
+					master_send_timer = tm;
+				}
+			}
+		}
+		else
+		{
+			if(gDebug)
+				printf("{1}");
+		}
+		MasterModbusProcess(true);
+//		SlaveModbusProcess();
 
 		if(SlaveSendLength != 0)
 		{

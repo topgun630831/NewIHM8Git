@@ -17,7 +17,7 @@
 //PRQA S 1503 EOF
 //PRQA S 1505 EOF
 
-//yskim static uint8_t ModbusRecvCheck(void);
+uint8_t ModbusRecvCheck(void);
 
 /**
 * @fn CRC16
@@ -619,6 +619,7 @@ void ModbusGetId3(void)
 //	}
 //}
 //extern IWDG_HandleTypeDef hiwdg;
+/*
 static uint8_t ModbusRecvCheck(void)
 {
 	uint32_t startTimer = HAL_GetTick();
@@ -661,7 +662,7 @@ static uint8_t ModbusRecvCheck(void)
 	}
 	return CONTROL_FAIL;
 }
-
+*/
 uint8_t ModbusControl(const uint8_t address, const int offset, const int pos, const uint8_t onoffStatus, uint8_t bSBO)
 {
 	uint8_t frame[MODBUS_FRAME_COUNT];
@@ -784,6 +785,10 @@ void ModbusSetTime(const uint8_t address, const S_DATE_TIME *dateTime)
 	frame[INDEX_12] = (uint8_t) (crc >> INDEX_8);
 	frame[INDEX_13] = (uint8_t)(crc & MASK_FF);
 
+	g_bMasterRecvVariable = FALSE;
+	g_modbusAddress = address;
+	g_functionCode = MODBUS_EXTEND_FUNCTION;
+
 	MasterModbusBufferPut(frame, INDEX_14, OWNER_MASTER);
 	g_subFunction = 0;
 //	sendFlag = 1;
@@ -791,9 +796,9 @@ void ModbusSetTime(const uint8_t address, const S_DATE_TIME *dateTime)
 
 void ModbusSetTimeAndWait(const uint8_t address, const S_DATE_TIME *dateTime)
 {
-	ModbusSetTime(address, dateTime);
 	g_wModbusWaitLen = INDEX_14;
-//yskim	(void)ModbusRecvCheck();
+	ModbusSetTime(address, dateTime);
+	uint8_t ret = ModbusRecvCheck();
 }
 //union TempVal {
 //	uint8_t val[4];
