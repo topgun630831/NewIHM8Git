@@ -908,7 +908,7 @@ void MLinkControl(void)
 		else
 		if(key == KEY_COMM_ERROR)
 		{
-			(void)printf("COMM Error!!! gStatusSendEnd=%d, statusSendStep=%d, nSendStep=%d\n",gStatusSendEnd,statusSendStep,nSendStep); 
+			(void)printf("COMM Error!!! gStatusSendEnd=%d, statusSendStep=%d, nSendStep=%d\n",gStatusSendEnd,statusSendStep,nSendStep);
 			if(StatusRecvErrorProcess() == STATUS_SEND_ING)
 			{
 				nSendStep = 0;

@@ -670,7 +670,6 @@ uint8_t ModbusControl(const uint8_t address, const int offset, const int pos, co
 	uint8_t ret;
 
 	gbSBO = bSBO;
-	gbForControl = true;
 
 	g_functionCode = INDEX_5;
 
@@ -721,13 +720,13 @@ uint8_t ModbusControl(const uint8_t address, const int offset, const int pos, co
 	g_subFunction = 0;
 	g_wModbusWaitLen = MODBUS_FRAME_COUNT;
 	MasterModbusBufferPut(frame, INDEX_8, OWNER_MASTER);
-	sendFlag = 1;
+	sendFlag = 0;
 
-//yskim	ret = ModbusRecvCheck();
-	if(ret == CONTROL_FAIL)
+	ret = ModbusRecvCheck();
+	if(ret != DATA_RECV)
 	{
-		gbForControl = false;
-		return ret;
+		printf(" ModbusRecvCheck ret = %d\n", ret);
+		return CONTROL_FAIL;
 	}
 	(void)printf("control ok...\n");
 	if(bSBO == 1)			// SBO
@@ -749,17 +748,16 @@ uint8_t ModbusControl(const uint8_t address, const int offset, const int pos, co
 		g_subFunction = 0;
 		g_wModbusWaitLen = INDEX_8;
 		MasterModbusBufferPut(frame, INDEX_8, OWNER_MASTER);
-		sendFlag = 1;
+		sendFlag = 0;
 
-//yskim		ret = ModbusRecvCheck();
-		if(ret == CONTROL_FAIL)
+		ret = ModbusRecvCheck();
+		if(ret != DATA_RECV)
 		{
-			gbForControl = false;
-			return ret;
+			printf(" ModbusRecvCheck ret = %d\n", ret);
+			return CONTROL_FAIL;
 		}
 	}
 	(void)printf("control ok...\n");
-	gbForControl = false;
 	return CONTROL_OK;
 }
 
@@ -800,11 +798,7 @@ void ModbusSetTimeAndWait(const uint8_t address, const S_DATE_TIME *dateTime)
 	ModbusSetTime(address, dateTime);
 	uint8_t ret = ModbusRecvCheck();
 }
-//union TempVal {
-//	uint8_t val[4];
-//	uint32_t lVal;
-//	float fVal;
-//};
+
 void ModbusAcbSystemEventGet(S_DATE_TIME *dateTime, uint16_t *mainCategory, uint16_t *middleCategory, uint16_t *smallCategory, uint16_t *Status, float *Value)
 {
 	uint16_t mSec;

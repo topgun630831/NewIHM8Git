@@ -388,8 +388,7 @@ void SettingTime(void)
 				(void)PCF2127_set_time();
 				for(int i = 0; i < gDeviceCount; i++)
 				{
-					ModbusSetTime(ConnectSetting[i].Address, &gDateTime);
-					OS_Delay(INDEX_10);
+					ModbusSetTimeAndWait(ConnectSetting[i].Address, &gDateTime);
 				}
 				flagBreak = TRUE;
 			}

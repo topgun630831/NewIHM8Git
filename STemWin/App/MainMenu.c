@@ -864,7 +864,7 @@ void StatusRecv(void)
 				diStatus[gDeviceIndex][i] = ModbusGetBit(I_REGISTER_209, i);
 			}
 
-//			if(ModbusGetUint16(I_REGISTER_208) & TIME_SYNC_MASK)
+			if(ModbusGetUint16(I_REGISTER_208) & TIME_SYNC_MASK)
 			{
 				(void)printf("M-LINK Time Invalid................\n\n\n\n");
 				PCF2127_readTime(1);
@@ -1196,7 +1196,6 @@ void GuiMain(void)
 	static float gPTAValue[DEVICE_MAX];
 
 	gbSBO = 0;
-	gbForControl = false;
 
 	last_recv = HAL_GetTick();
 	commTimer = HAL_GetTick();
@@ -1599,6 +1598,11 @@ void MasterModbusProcess(bool bInChecking)
 					}
 					g_modbusRxError = 1;
 				}
+				else
+				{
+					SlaveSendLength = g_modbusRxIndex;
+					memcpy(SlaveTxBuffer, g_modbusRxBuff, SlaveSendLength);
+				}
 				if(g_modbusRxBuff[1] & INDEX_0x80)
 				{
 					if(gDebug == true)
@@ -1880,8 +1884,6 @@ void SlaveModbusProcess(void)
 	}
 }
 
-uint32_t master_send_timer = 0;
-
 // PRQA S 1503 1
 E_KEY GetKey(void)
 {
@@ -1906,103 +1908,97 @@ E_KEY GetKey(void)
 			HAL_GPIO_TogglePin(USER_LED_GPIO_Port, USER_LED_Pin);
 			LedTickCount = timer;
 		}
-		if(gbForControl == false)
+		if(diff >= GetTimerDiff())
 		{
-			if(diff >= GetTimerDiff())
+			if((g_bRecvAllDone == TRUE) || (diff >= TIMER_DIFF_10SEC))          //  모든 데이터 수집 완료하거나 타임아웃이면
 			{
-				if((g_bRecvAllDone == TRUE) || (diff >= TIMER_DIFF_10SEC))          //  모든 데이터 수집 완료하거나 타임아웃이면
-				{
-					if(gDebug)
-						(void)printf("g_bRecvAllDone=%d, commTimer-1=%d, Tick=%d, Diff=%d\n", g_bRecvAllDone, commTimer, timer, diff);
-					CommTimerClear();
-					return TIME_OUT;
-				}
-			}
-			diff = timer-readTimeTimer;
-			if(diff >= TIMER_DIFF)
-			{
-	//			printf("commTimer-2=%d, Tick=%d, Diff=%d\n", commTimer, timer, diff);
-	//			printf("readTimeTimer=%d, Tick=%d, Diff=%d\n", readTimeTimer, timer, diff);
-				if(gbSettingTime == FALSE)
-				{
-					PCF2127_readTime(1);
-	//				printf("gDateTime.Day=%d ,gTimeSyncDay=%d, gDateTime.Hour=%d, TIMESYNC_HOUR=%d, gDateTime.Min=%d,TIMESYNC_MIN=%d\n", gDateTime.Day ,gTimeSyncDay, gDateTime.Hour, TIMESYNC_HOUR, gDateTime.Min,TIMESYNC_MIN);
-					if((gDateTime.Day != gTimeSyncDay) && (gDateTime.Hour == TIMESYNC_HOUR) && (gDateTime.Min == TIMESYNC_MIN))
-					{
-						//(void)printf("TimeSync.....\n\n\n\n\n\n\n\n\n\n");
-						gTimeSyncDay = gDateTime.Day;
-						for(int i = 0; i < gDeviceCount; i++)
-						{
-							OS_Delay(TIMESYNC_DELAY);
-							ModbusSetTime(ConnectSetting[i].Address, &gDateTime);    // yskim
-	#if __WATCHDOG__ //[[ by kys.2018.06.17_BEGIN -- watchdog
-							__HAL_IWDG_RELOAD_COUNTER(&hiwdg);
-	#endif //]] by kys.2018.06.17_END -- watchdog
-						}
-					}
-				}
-				readTimeTimer = timer;
 				if(gDebug)
-					(void)printf("SECOND_TIMER return(%d)\n", SECOND_TIMER);
-				return SECOND_TIMER;
+					(void)printf("g_bRecvAllDone=%d, commTimer-1=%d, Tick=%d, Diff=%d\n", g_bRecvAllDone, commTimer, timer, diff);
+				CommTimerClear();
+				return TIME_OUT;
 			}
-			if(gCommStatus[gDeviceIndex] != gCommCheckStatus[gDeviceIndex])
+		}
+		diff = timer-readTimeTimer;
+		if(diff >= TIMER_DIFF)
+		{
+//			printf("commTimer-2=%d, Tick=%d, Diff=%d\n", commTimer, timer, diff);
+//			printf("readTimeTimer=%d, Tick=%d, Diff=%d\n", readTimeTimer, timer, diff);
+			if(gbSettingTime == FALSE)
 			{
-				if(gCommStatus[gDeviceIndex] == COMM_ERROR)
+				PCF2127_readTime(1);
+//				printf("gDateTime.Day=%d ,gTimeSyncDay=%d, gDateTime.Hour=%d, TIMESYNC_HOUR=%d, gDateTime.Min=%d,TIMESYNC_MIN=%d\n", gDateTime.Day ,gTimeSyncDay, gDateTime.Hour, TIMESYNC_HOUR, gDateTime.Min,TIMESYNC_MIN);
+				if((gDateTime.Day != gTimeSyncDay) && (gDateTime.Hour == TIMESYNC_HOUR) && (gDateTime.Min == TIMESYNC_MIN))
 				{
-					gCommCheckStatus[gDeviceIndex] = gCommStatus[gDeviceIndex];
-					if(gDebug)
-						(void)printf("\n\n\n\n\n gCommStatus[gDeviceIndex] == COMM_ERROR\n\n\n\n\n\n");
-					return COMM_STAT_ERROR;
+					(void)printf("TimeSync.....\n\n\n\n\n\n\n\n\n\n");
+					gTimeSyncDay = gDateTime.Day;
+					for(int i = 0; i < gDeviceCount; i++)
+					{
+//							OS_Delay(TIMESYNC_DELAY);
+						ModbusSetTimeAndWait(ConnectSetting[i].Address, &gDateTime);    // yskim
+					}
 				}
+			}
+			readTimeTimer = timer;
+			if(gDebug)
+				(void)printf("SECOND_TIMER return(%d)\n", SECOND_TIMER);
+			return SECOND_TIMER;
+		}
+		if(gCommStatus[gDeviceIndex] != gCommCheckStatus[gDeviceIndex])
+		{
+			if(gCommStatus[gDeviceIndex] == COMM_ERROR)
+			{
 				gCommCheckStatus[gDeviceIndex] = gCommStatus[gDeviceIndex];
+				if(gDebug)
+					(void)printf("\n\n\n\n\n gCommStatus[gDeviceIndex] == COMM_ERROR\n\n\n\n\n\n");
+				return COMM_STAT_ERROR;
 			}
-			if(gbSavingMode == FALSE)
+			gCommCheckStatus[gDeviceIndex] = gCommStatus[gDeviceIndex];
+		}
+		if(gbSavingMode == FALSE)
+		{
+			if((SettingValue[SETUP_SAVING_MODE] != 0) && (timer >= gSavingModeCounter))
 			{
-				if((SettingValue[SETUP_SAVING_MODE] != 0) && (timer >= gSavingModeCounter))
-				{
-					BacklightBrghtness(SettingValue[SETUP_BRIGHTNESS], TRUE);
-					LCD_OnOff(0);
-					gbSavingMode = TRUE;
-				}
+				BacklightBrghtness(SettingValue[SETUP_BRIGHTNESS], TRUE);
+				LCD_OnOff(0);
+				gbSavingMode = TRUE;
 			}
-			if(gbInMainMenu == TRUE)
+		}
+		if(gbInMainMenu == TRUE)
+		{
+			if((SettingValue[SETUP_DEVICE_COUNT] != 1) && (SettingValue[SETUP_SCREEN_SWITCHING] != 0) && (timer >= gScreenSwitchingCounter))
 			{
-				if((SettingValue[SETUP_DEVICE_COUNT] != 1) && (SettingValue[SETUP_SCREEN_SWITCHING] != 0) && (timer >= gScreenSwitchingCounter))
-				{
-					gScreenSwitchingCounter = timer + (SettingValue[SETUP_SCREEN_SWITCHING] * THOUSAND);
-					if(gbSavingMode == FALSE)
-						return KEY_DOWN;
-				}
+				gScreenSwitchingCounter = timer + (SettingValue[SETUP_SCREEN_SWITCHING] * THOUSAND);
+				if(gbSavingMode == FALSE)
+					return KEY_DOWN;
 			}
-			else
+		}
+		else
+		{
+			if((SettingValue[SETUP_RETURN_TO_SCREEN] != 0) && (timer >= gReturnToScreen))
 			{
-				if((SettingValue[SETUP_RETURN_TO_SCREEN] != 0) && (timer >= gReturnToScreen))
-				{
-					if(gbSavingMode == FALSE)
-						return KEY_CANCEL;
-				}
+				if(gbSavingMode == FALSE)
+					return KEY_CANCEL;
 			}
-			for(E_KEY i = KEY_SETUP; i < KEY_MAX; i++)
+		}
+		for(E_KEY i = KEY_SETUP; i < KEY_MAX; i++)
+		{
+			if(KeyChanged[i] == 1)
 			{
-				if(KeyChanged[i] == 1)
+				KeyChanged[i] = 0;
+				uint8_t bContinue = FALSE;
+				if(gbSavingMode == TRUE)
 				{
-					KeyChanged[i] = 0;
-					uint8_t bContinue = FALSE;
-					if(gbSavingMode == TRUE)
-					{
-						BacklightBrghtness(SettingValue[SETUP_BRIGHTNESS], 0);
-						LCD_OnOff(1);
-						bContinue = TRUE;
-						gbSavingMode = FALSE;
-					}
-					ScreenTimerInit();
-					if(bContinue == TRUE)
-					{
-						continue;
-					}
-					return i;
+					BacklightBrghtness(SettingValue[SETUP_BRIGHTNESS], 0);
+					LCD_OnOff(1);
+					bContinue = TRUE;
+					gbSavingMode = FALSE;
 				}
+				ScreenTimerInit();
+				if(bContinue == TRUE)
+				{
+					continue;
+				}
+				return i;
 			}
 		}
 		if(sendFlag == 0)
@@ -2013,7 +2009,6 @@ E_KEY GetKey(void)
 				if(gDebug)
 					printf("MasterModbusSend(%d, %d)\n", HAL_GetTick(), g_sendOwner);
 				MasterModbusSend(g_sendOwner);
-				master_send_timer = tm;
 			}
 			else
 			{
@@ -2032,7 +2027,6 @@ E_KEY GetKey(void)
 					if(gDebug)
 						printf("MasterModbusSend2(%d, %d)\n", HAL_GetTick(), g_sendOwner);
 					MasterModbusSend(g_sendOwner);
-					master_send_timer = tm;
 				}
 			}
 		}
@@ -2090,47 +2084,17 @@ uint8_t ModbusRecvCheck(void)
 	uint32_t tick = HAL_GetTick();
 
 	uint32_t timer;
+
+	g_sendOwner = OWNER_MASTER;
+	if(gDebug)
+		printf("[RecvCheck] MasterModbusSend(%d, %d)\n", HAL_GetTick(), g_sendOwner);
+	MasterModbusSend(g_sendOwner);
+	last_recv = tick;
+
 	while (1)
     {
 		timer = HAL_GetTick();
-		if(sendFlag == 0)
-		{
-			uint32_t tm = HAL_GetTick();
-			if(MasterSendLength[g_sendOwner] != 0)
-			{
-				if(gDebug)
-					printf("[RecvCheck] MasterModbusSend(%d, %d)\n", HAL_GetTick(), g_sendOwner);
-				MasterModbusSend(g_sendOwner);
-				master_send_timer = tm;
-			}
-			else
-			{
-				if(g_sendOwner == OWNER_MASTER)
-				{
-					if(MasterSendLength[OWNER_SLAVE] != 0)
-						g_sendOwner = OWNER_SLAVE;
-				}
-				else
-				{
-					if(gbSavingMode == FALSE)
-						g_sendOwner = OWNER_MASTER;
-				}
-				if(MasterSendLength[g_sendOwner] != 0)
-				{
-					if(gDebug)
-						printf("MasterModbusSend2(%d, %d)\n", HAL_GetTick(), g_sendOwner);
-					MasterModbusSend(g_sendOwner);
-					master_send_timer = tm;
-				}
-			}
-		}
-		else
-		{
-			if(gDebug)
-				printf("{1}");
-		}
 		MasterModbusProcess(true);
-//		SlaveModbusProcess();
 
 		if(SlaveSendLength != 0)
 		{

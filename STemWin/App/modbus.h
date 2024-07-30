@@ -249,7 +249,6 @@ EXTERN uint32_t slaveSendTick;
 EXTERN bool gDebug;
 EXTERN bool gbSlaveSend;
 EXTERN uint8_t gbSBO;
-EXTERN bool gbForControl;
 
 EXTERN uint32_t masterSendTick;
 EXTERN uint32_t slaveSendTick;
