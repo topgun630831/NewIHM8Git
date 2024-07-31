@@ -157,8 +157,10 @@ typedef struct s_Product_Info {
 
 uint16_t CRC16(const uint8_t *puchMsg, const uint16_t usDataLen);
 void MasterModbusBufferPut(uint8_t *pData, uint16_t Size, E_OWNER MasterSlave);
+void ControlModbusBufferPut(uint8_t *pData, uint16_t Size, E_OWNER MasterSlave);
 void MasterModbusSend(E_OWNER MasterSlave);
 void SlaveModbusSend(void);
+void ControlModbusSend(void);
 void ModbusSendFrame(const uint8_t address, const uint8_t functionCode, const uint16_t start, const uint16_t no);
 void ModbusSendFrameReadTime(const uint8_t address);
 void ModbusSendFrameDeviceIdentofocation(const uint8_t address);
@@ -191,6 +193,43 @@ void ModbusSetTime(const uint8_t address, const S_DATE_TIME *dateTime);
 void ModbusSetTimeAndWait(const uint8_t address, const S_DATE_TIME *dateTime);
 void ModbusAcbSystemEventGet(S_DATE_TIME *dateTime, uint16_t *mainCategory, uint16_t *middleCategory, uint16_t *smallCategory, uint16_t *Status, float *Value);
 
+typedef enum e_index_value
+{
+	INDEX_0 = 0,
+	INDEX_1 = 1,
+	INDEX_2 = 2,
+	INDEX_3 = 3,
+	INDEX_4 = 4,
+	INDEX_5 = 5,
+	INDEX_6 = 6,
+	INDEX_7 = 7,
+	INDEX_8 = 8,
+	INDEX_9 = 9,
+	INDEX_10 = 10,
+	INDEX_11 = 11,
+	INDEX_12 = 12,
+	INDEX_13 = 13,
+	INDEX_14 = 14,
+	INDEX_15 = 15,
+	INDEX_16 = 16,
+	INDEX_17 = 17,
+	INDEX_18 = 18,
+	INDEX_19 = 19,
+	INDEX_20 = 20,
+	INDEX_21 = 21,
+	INDEX_22 = 22,
+	INDEX_23 = 23,
+	INDEX_28 = 28,
+	INDEX_29 = 29,
+	INDEX_30 = 30,
+	INDEX_31 = 31,
+	INDEX_32 = 32,
+	INDEX_50 = 50,
+	INDEX_80 = 80,
+	INDEX_0x80 = 0x80,
+	INDEX_400 = 400,
+} E_index_value;
+
 EXTERN uint8_t g_UartRx[1];
 
 EXTERN uint8_t g_modbusRxIndex;
@@ -212,6 +251,11 @@ EXTERN uint16_t g_wModbusSlaveWaitLen;
 EXTERN uint8_t g_modbusSlaveAddress;
 EXTERN uint8_t g_SlavefunctionCode;
 EXTERN uint8_t g_SlavesubFunction;
+
+EXTERN uint16_t g_wModbusControlWaitLen;
+EXTERN uint8_t g_modbusControlAddress;
+EXTERN uint16_t g_wModbusControlWaitLen;
+EXTERN uint8_t g_ControlfunctionCode;
 
 EXTERN uint16_t g_startAddr;
 EXTERN uint16_t g_waitReceiveLen;
@@ -241,8 +285,10 @@ EXTERN int g_bRecvAllDone;
 
 EXTERN uint8_t MasterTxBuffer[2][MASTER_TX_BUFF_MAX];
 EXTERN uint8_t SlaveTxBuffer[SLAVE_TX_BUFF_MAX];
+EXTERN uint8_t ControlTxBuffer[INDEX_10];
 EXTERN uint16_t MasterSendLength[2];
 EXTERN uint16_t SlaveSendLength;
+EXTERN uint16_t ControlSendLength;
 EXTERN uint32_t masterSendTick;
 EXTERN uint32_t slaveSendTick;
 
@@ -290,43 +336,6 @@ EXTERN uint32_t uart2LastNDTR;
 
 #define	TIME_SYNC_MASK	0x0008
 #define	ACB_TYPE_MASK	0x000f
-
-typedef enum e_index_value
-{
-	INDEX_0 = 0,
-	INDEX_1 = 1,
-	INDEX_2 = 2,
-	INDEX_3 = 3,
-	INDEX_4 = 4,
-	INDEX_5 = 5,
-	INDEX_6 = 6,
-	INDEX_7 = 7,
-	INDEX_8 = 8,
-	INDEX_9 = 9,
-	INDEX_10 = 10,
-	INDEX_11 = 11,
-	INDEX_12 = 12,
-	INDEX_13 = 13,
-	INDEX_14 = 14,
-	INDEX_15 = 15,
-	INDEX_16 = 16,
-	INDEX_17 = 17,
-	INDEX_18 = 18,
-	INDEX_19 = 19,
-	INDEX_20 = 20,
-	INDEX_21 = 21,
-	INDEX_22 = 22,
-	INDEX_23 = 23,
-	INDEX_28 = 28,
-	INDEX_29 = 29,
-	INDEX_30 = 30,
-	INDEX_31 = 31,
-	INDEX_32 = 32,
-	INDEX_50 = 50,
-	INDEX_80 = 80,
-	INDEX_0x80 = 0x80,
-	INDEX_400 = 400,
-} E_index_value;
 
 #define	OPEN_CLOSE_TRIP				3
 #define	TEN							10

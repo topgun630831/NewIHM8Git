@@ -1188,7 +1188,7 @@ static void ScreenTimerInit(void)
 	gReturnToScreen = timer + (SettingValue[SETUP_RETURN_TO_SCREEN] * THOUSAND);
 }
 
-static uint32_t last_recv;
+uint32_t last_recv;
 
 // PRQA S 1503 1
 void GuiMain(void)
@@ -1442,6 +1442,9 @@ __STATIC_INLINE void Pol_Delay_us(volatile uint32_t microseconds)
 	while (microseconds--);
 }
 
+uint32_t inControlTick = 0;
+bool bInControl = false;
+
 static uint8_t MasterModbusCRCCheck(bool bInChecking)
 {
 	if(g_modbusRxIndex < 5 || g_modbusRxIndex > MODBUS_BUFF_SIZE)
@@ -1482,24 +1485,43 @@ static uint8_t MasterModbusCRCCheck(bool bInChecking)
 			SlaveSendLength = g_modbusRxIndex;
 			memcpy(SlaveTxBuffer, g_modbusRxBuff, SlaveSendLength);
 		}
-		//		gbMasterSend = true;
+		if(g_modbusRxBuff[INDEX_1] == FORCE_SINGLE_COIL)
+		{
+			if(bInControl == false)
+			{
+				bInControl = true;
+				last_recv = inControlTick = HAL_GetTick();
+				if(gDebug)
+					printf("In Control Start......\n");
+			}
+			else
+			{
+				bInControl = false;
+				if(gDebug)
+					printf("In Control End......\n");
+			}
+		}
 	}
 	else
 	{
 		if(gDebug == true)
 			(void)printf("-----------------\nModbus CRC Error[%04x, %04x]\n", crc, p);
 		ret = MODBUS_CRC_ERROR;
+		bInControl = false;
 	}
-	if(g_sendOwner == OWNER_SLAVE)
+	if(bInControl == false)
 	{
-		if(gbSavingMode == FALSE)
-			g_sendOwner = OWNER_MASTER;
-	}
-	else
-	if(bInChecking == false && g_sendOwner == OWNER_MASTER)
-	{
-		if(MasterSendLength[OWNER_SLAVE] != 0)
-			g_sendOwner = OWNER_SLAVE;
+		if(g_sendOwner == OWNER_SLAVE)
+		{
+			if(gbSavingMode == FALSE)
+				g_sendOwner = OWNER_MASTER;
+		}
+		else
+		if(bInChecking == false && g_sendOwner == OWNER_MASTER)
+		{
+			if(MasterSendLength[OWNER_SLAVE] != 0)
+				g_sendOwner = OWNER_SLAVE;
+		}
 	}
 	g_modbusRxIndex = 0;
 	return ret;
@@ -1547,7 +1569,7 @@ void MasterModbusProcess(bool bInChecking)
 				printf("recv:%u, last=%u, new=%u, cnt=%u\n",  last_recv, uart2LastNDTR, uart2NewNDTR, count);
 			uart2LastNDTR = uart2NewNDTR;
 
-	//		if(g_bRecvVariable == TRUE)
+			if(gDebug == true)
 			{
 				(void)printf("Read!!!(%u, %u) g_bRecvVariable:%d, readExceptionLen:%d\n", g_sendOwner, g_modbusRxIndex, g_bRecvVariable, readExceptionLen);
 				for(int i = 0; i < g_modbusRxIndex; i++)
@@ -1627,6 +1649,7 @@ void MasterModbusProcess(bool bInChecking)
 					if(gbSavingMode == FALSE)
 						g_sendOwner = OWNER_MASTER;
 				}
+				bInControl = false;
 				sendFlag = 0;
 				g_modbusRxIndex = 0;
 				return;
@@ -1653,13 +1676,13 @@ void MasterModbusProcess(bool bInChecking)
 				}
 				else
 				{
-					(void)printf("g_bRecvVariable  Read!!!(%u, %d)\n", g_sendOwner, g_modbusRxIndex);
+/*					(void)printf("g_bRecvVariable  Read!!!(%u, %d)\n", g_sendOwner, g_modbusRxIndex);
 					for(int i = 0; i < g_modbusRxIndex; i++)
 					{
 						  (void)printf("%02X ", g_modbusRxBuff[i]);
 					}
 					(void)printf("\n");
-					uint16_t index = wModbusWaitLen;
+*/					uint16_t index = wModbusWaitLen;
 					uint8_t cnt = g_modbusRxBuff[INDEX_7];
 					bRecvOk = true;
 					for(uint8_t i = 0; i < cnt; i++)
@@ -1667,17 +1690,17 @@ void MasterModbusProcess(bool bInChecking)
 						if(g_modbusRxIndex < (pos + 2))		// Object ID + Object Length
 						{
 							bRecvOk = false;
-							printf("111111111\n");
+//							printf("111111111\n");
 							break;
 						}
 						uint8_t len = g_modbusRxBuff[pos+1];
 						if(g_modbusRxIndex < (pos + len + 1))
 						{
 							bRecvOk = false;
-							printf("2222222\n");
+//							printf("2222222\n");
 							break;
 						}
-						printf("pos=%d, len=%d, %x .......", pos, len, len);
+//						printf("pos=%d, len=%d, %x .......", pos, len, len);
 						pos += len + 2;
 						printf("pos=%d \n", pos);
 					}
@@ -1686,7 +1709,7 @@ void MasterModbusProcess(bool bInChecking)
 						if(g_modbusRxIndex < (pos + 2))		// CRC
 						{
 							bRecvOk = false;
-							printf("33333333333");
+//							printf("33333333333");
 							return;
 						}
 						if(g_sendOwner == OWNER_MASTER)
@@ -1727,6 +1750,7 @@ void MasterModbusProcess(bool bInChecking)
 				uart2LastNDTR = huart2.hdmarx->Instance->NDTR;
 				last_recv = HAL_GetTick();
 				sendFlag = 0;
+				bInControl = false;
 				if(g_sendOwner == OWNER_MASTER)
 				{
 					g_modbusRxError = 1;
@@ -1768,6 +1792,7 @@ void MasterModbusProcess(bool bInChecking)
 						g_sendOwner = OWNER_MASTER;
 				}
 				sendFlag = 0;
+				bInControl = false;
 			}
 		}
 	}
@@ -1818,9 +1843,17 @@ static uint8_t SlaveModbusCRCCheck(void)
 	}
 	if(crc == p)
 	{
-		MasterModbusBufferPut(g_modbusSlaveRxBuff, g_modbusSlaveRxIndex, OWNER_SLAVE);
-		g_modbusSlaveRxIndex = 0;
-		//		gbSlaveSend = true;
+		if(bInControl == true && g_modbusSlaveRxBuff[1] == FORCE_SINGLE_COIL)
+		{
+			ControlModbusBufferPut(g_modbusSlaveRxBuff, g_modbusSlaveRxIndex, OWNER_SLAVE);
+			g_modbusSlaveRxIndex = 0;
+		}
+		else
+		{
+			MasterModbusBufferPut(g_modbusSlaveRxBuff, g_modbusSlaveRxIndex, OWNER_SLAVE);
+			g_modbusSlaveRxIndex = 0;
+			bInControl = false;
+		}
 	}
 	else
 	{
@@ -2001,32 +2034,54 @@ E_KEY GetKey(void)
 				return i;
 			}
 		}
+		if(bInControl == true && (timer - inControlTick) > 5000)
+		{
+			if(gDebug)
+				printf("Control Timeout....\n");
+			bInControl = false;
+		}
 		if(sendFlag == 0)
 		{
 			uint32_t tm = HAL_GetTick();
-			if(MasterSendLength[g_sendOwner] != 0)
+
+			if(bInControl == true)
 			{
-				if(gDebug)
-					printf("MasterModbusSend(%d, %d)\n", HAL_GetTick(), g_sendOwner);
-				MasterModbusSend(g_sendOwner);
+				if(ControlSendLength != 0)
+				{
+					if(gDebug)
+						printf("ControlModbusSend(%d, %d)\n", HAL_GetTick(), g_sendOwner);
+					ControlModbusSend();
+				}
 			}
 			else
 			{
-				if(g_sendOwner == OWNER_MASTER)
-				{
-					if(MasterSendLength[OWNER_SLAVE] != 0)
-						g_sendOwner = OWNER_SLAVE;
-				}
-				else
-				{
-					if(gbSavingMode == FALSE)
-						g_sendOwner = OWNER_MASTER;
-				}
 				if(MasterSendLength[g_sendOwner] != 0)
 				{
 					if(gDebug)
-						printf("MasterModbusSend2(%d, %d)\n", HAL_GetTick(), g_sendOwner);
+						printf("MasterModbusSend(%d, %d)\n", HAL_GetTick(), g_sendOwner);
 					MasterModbusSend(g_sendOwner);
+				}
+				else
+				{
+					if(bInControl == false)
+					{
+						if(g_sendOwner == OWNER_MASTER)
+						{
+							if(MasterSendLength[OWNER_SLAVE] != 0)
+								g_sendOwner = OWNER_SLAVE;
+						}
+						else
+						{
+							if(gbSavingMode == FALSE)
+								g_sendOwner = OWNER_MASTER;
+						}
+						if(MasterSendLength[g_sendOwner] != 0)
+						{
+							if(gDebug)
+								printf("MasterModbusSend2(%d, %d)\n", HAL_GetTick(), g_sendOwner);
+							MasterModbusSend(g_sendOwner);
+						}
+					}
 				}
 			}
 		}
@@ -2046,7 +2101,8 @@ E_KEY GetKey(void)
 		}
 		if (g_modbusRxDone)
 		{
-			printf("g_modbusRxDone!!\n");
+			if(gDebug)
+				printf("g_modbusRxDone!!\n");
 			CommStatusDisp();
 			if(nMasterStatus == MODBUS_OK)
 			{

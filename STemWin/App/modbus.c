@@ -79,6 +79,10 @@ void AllRead(int port)
 		}
 	}
 }
+
+extern uint32_t last_recv;
+extern bool bInControl;
+
 void MasterModbusSend(E_OWNER MasterSlave)
 {
     g_sendOwner = MasterSlave;
@@ -109,10 +113,17 @@ void MasterModbusSend(E_OWNER MasterSlave)
 	sendFlag = 1;
 }
 
+
 void MasterModbusBufferPut(uint8_t *pData, uint16_t Length, E_OWNER MasterSlave)
 {
 	uint16_t len;
 
+	if(bInControl == true)
+	{
+		if(gDebug)
+			printf("(%d) MasterModbusBufferPut Reject!!!!(%d)\n",  HAL_GetTick(), MasterSlave);
+		return;
+	}
 	if(gDebug)
 	{
 		printf("(%d) MasterModbusBufferPut (%d)\n",  HAL_GetTick(), MasterSlave);
@@ -133,9 +144,67 @@ void MasterModbusBufferPut(uint8_t *pData, uint16_t Length, E_OWNER MasterSlave)
 		g_modbusSlaveAddress  = MasterTxBuffer[MasterSlave][0];
 		g_SlavefunctionCode	  = MasterTxBuffer[MasterSlave][1];
 		g_wModbusSlaveWaitLen = (MasterTxBuffer[MasterSlave][4] << 8) | MasterTxBuffer[MasterSlave][5];
-		g_wModbusSlaveWaitLen = g_wModbusSlaveWaitLen * 2 + 5;
+		if(g_SlavefunctionCode == FORCE_SINGLE_COIL)
+			g_wModbusSlaveWaitLen = INDEX_8;
+		else
+			g_wModbusSlaveWaitLen = g_wModbusSlaveWaitLen * 2 + 5;
 		g_bSlaveRecvVariable = FALSE;
 	}
+}
+
+void ControlModbusSend(void)
+{
+	g_modbusRxIndex = 0;
+	g_modbusRxDone = 0;
+	g_modbusRxError = 0;
+	g_modbusRxDone = 0;
+
+	if(gDebug)
+	{
+	  (void)printf("(%d)Control Send Frame!!!g_ControlfunctionCode=%d, g_wModbusControlWaitLen=%d\n",HAL_GetTick(),  g_ControlfunctionCode, g_wModbusControlWaitLen);
+	  for(int i = 0; i < ControlSendLength; i++)
+	  {
+		  (void)printf("%02X ", ControlTxBuffer[i]);
+	  }
+	  (void)printf("\n");
+	}
+
+	AllRead(2);
+
+	last_recv = masterSendTick = HAL_GetTick();
+
+	HAL_NVIC_DisableIRQ(USART2_IRQn); //Rx Callback 함수 Disable
+	HAL_UART_Transmit(&huart2, ControlTxBuffer, ControlSendLength, UART_TIMEOUT);
+	HAL_NVIC_EnableIRQ(USART2_IRQn);  //Rx callback 함수 enable
+
+	ControlSendLength = 0;
+	sendFlag = 1;
+}
+
+void ControlModbusBufferPut(uint8_t *pData, uint16_t Length, E_OWNER MasterSlave)
+{
+	uint16_t len;
+
+	if(gDebug)
+	{
+		printf("(%d) ControlModbusBufferPut (%d)\n",  HAL_GetTick(), MasterSlave);
+		for(int i = 0; i < Length; i++)
+		{
+		  (void)printf("%02X ", pData[i]);
+		}
+		(void)printf("\n");
+	}
+	if(Length > INDEX_10)
+		len = INDEX_10;
+	else
+		len = Length;
+	memcpy(ControlTxBuffer, pData, len);
+	ControlSendLength = len;
+
+	g_modbusControlAddress  = MasterTxBuffer[MasterSlave][0];
+	g_ControlfunctionCode	  = MasterTxBuffer[MasterSlave][1];
+	g_wModbusControlWaitLen = INDEX_8;
+//	g_bSlaveRecvVariable = FALSE;
 }
 
 void SlaveModbusSend(void)
