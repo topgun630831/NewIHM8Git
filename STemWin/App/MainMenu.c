@@ -1261,7 +1261,6 @@ void GuiMain(void)
 		}
 		if(key == TIME_OUT)
 		{
-			(void)printf("TIME_OUT\n");
 			statusSendStep = 0;
 			gStatusSendEnd = STATUS_SEND_ING;
 			OverviewSend();
@@ -1524,6 +1523,7 @@ static uint8_t MasterModbusCRCCheck(bool bInChecking)
 		}
 	}
 	g_modbusRxIndex = 0;
+	GUI_Delay(10);
 	return ret;
 }
 
@@ -1598,6 +1598,8 @@ void MasterModbusProcess(bool bInChecking)
 				wModbusWaitLen 		= g_wModbusWaitLen;
 				g_bRecvVariable		= g_bMasterRecvVariable;
 			}
+			//printf("(%u)cnt=%u[%02X%02X}\n", last_recv, count, modbusAddress, functionCode);
+//printf("{%u}", last_recv);
 
 			if((((g_modbusRxBuff[1] & INDEX_0x80) == INDEX_0x80) || (g_modbusRxBuff[0] != modbusAddress)) || (functionCode != g_modbusRxBuff[1]))
 			{
@@ -1654,7 +1656,7 @@ void MasterModbusProcess(bool bInChecking)
 				g_modbusRxIndex = 0;
 				return;
 			}
-			printf("g_bRecvVariable=%d, g_modbusRxIndex=%d, wModbusWaitLen=%d\n", g_bRecvVariable, g_modbusRxIndex, wModbusWaitLen);
+//			printf("g_bRecvVariable=%d, g_modbusRxIndex=%d, wModbusWaitLen=%d\n", g_bRecvVariable, g_modbusRxIndex, wModbusWaitLen);
 			if(g_modbusRxIndex >= wModbusWaitLen)
 			{
 				uint16_t pos = 8;
@@ -1672,6 +1674,7 @@ void MasterModbusProcess(bool bInChecking)
 					bRecvOk = true;
 					g_modbusRxIndex = wModbusWaitLen;		// Recv frame 뒤에 Garbage 처리
 					nMasterStatus = MasterModbusCRCCheck(bInChecking);
+//					(void)printf("(((%d)))\n", HAL_GetTick());
 					g_modbusRxIndex = 0;
 				}
 				else
@@ -1690,26 +1693,21 @@ void MasterModbusProcess(bool bInChecking)
 						if(g_modbusRxIndex < (pos + 2))		// Object ID + Object Length
 						{
 							bRecvOk = false;
-//							printf("111111111\n");
 							break;
 						}
 						uint8_t len = g_modbusRxBuff[pos+1];
 						if(g_modbusRxIndex < (pos + len + 1))
 						{
 							bRecvOk = false;
-//							printf("2222222\n");
 							break;
 						}
-//						printf("pos=%d, len=%d, %x .......", pos, len, len);
 						pos += len + 2;
-						printf("pos=%d \n", pos);
 					}
 					if(bRecvOk == true)
 					{
 						if(g_modbusRxIndex < (pos + 2))		// CRC
 						{
 							bRecvOk = false;
-//							printf("33333333333");
 							return;
 						}
 						if(g_sendOwner == OWNER_MASTER)
@@ -1718,17 +1716,15 @@ void MasterModbusProcess(bool bInChecking)
 							gCommStatus[gDeviceIndex] = COMM_OK;
 							gCommErrorCount[gDeviceIndex] = 0;
 						}
+//						(void)printf("((((%d))))\n", HAL_GetTick());
 						if(gDebug)
 							(void)printf("[g_bRecvVariable]Recv Done!!!!(%d)\n", HAL_GetTick());
-						sendFlag = 0;
 						g_modbusRxIndex = pos+2;
 						nMasterStatus = MasterModbusCRCCheck(bInChecking);
 						sendFlag = 0;
 					}
 				}
 			}
-			else
-				printf("wait more.......\n");
 		}
 		else
 		{
@@ -1767,7 +1763,7 @@ void MasterModbusProcess(bool bInChecking)
 				}
 			}
 			uint32_t tick = HAL_GetTick() - masterSendTick;
-			if(sendFlag == 1 && bRecvOk == false && tick > 500)		//Send 후 500ms 이내 응답없으면
+			if(sendFlag == 1 && bRecvOk == false && tick > 1000)		//Send 후 500ms 이내 응답없으면
 			{
 
 				printf("Send And Recv timeout!!!(g_sendOwner:%d)\n",  g_sendOwner);
@@ -1908,10 +1904,10 @@ void SlaveModbusProcess(void)
 	}
 	else
 	{
-		if((slave_last_recv != 0) && ((HAL_GetTick() - slave_last_recv) > 1000))
+		if((slave_last_recv != 0) && ((HAL_GetTick() - slave_last_recv) > 2000))
 		{
 		  printf("Slave Recv Wait Time Out!!!(%d,%d)\n", slave_last_recv, HAL_GetTick());
-		  g_modbusSlaveRxIndex = 0;
+//		  g_modbusSlaveRxIndex = 0;
 		  slave_last_recv = HAL_GetTick();
 		}
 	}
@@ -2189,7 +2185,7 @@ uint8_t ModbusRecvCheck(void)
 			g_modbusRxError = 0;
 			return KEY_COMM_ERROR;
 		}
-		GUI_Delay(30);
+		GUI_Delay(50);
 	}
 }
 

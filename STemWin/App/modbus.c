@@ -109,6 +109,7 @@ void MasterModbusSend(E_OWNER MasterSlave)
 	HAL_UART_Transmit(&huart2, MasterTxBuffer[MasterSlave], MasterSendLength[MasterSlave], UART_TIMEOUT);
 	HAL_NVIC_EnableIRQ(USART2_IRQn);  //Rx callback ÇÔ¼ö enable
 
+//printf("2:[%d,%d(%02X%02X)](%d) ", MasterSlave, MasterSendLength[MasterSlave], MasterTxBuffer[MasterSlave][0], MasterTxBuffer[MasterSlave][1], HAL_GetTick());
 	MasterSendLength[MasterSlave] = 0;
 	sendFlag = 1;
 }
@@ -139,6 +140,7 @@ void MasterModbusBufferPut(uint8_t *pData, uint16_t Length, E_OWNER MasterSlave)
 		len = Length;
 	memcpy(MasterTxBuffer[MasterSlave], pData, len);
 	MasterSendLength[MasterSlave] = len;
+//printf("1:[%d,%d(%02X%02X)](%d) ", MasterSlave, MasterSendLength[MasterSlave], MasterTxBuffer[MasterSlave][0], MasterTxBuffer[MasterSlave][1],HAL_GetTick());
 	if(MasterSlave == OWNER_SLAVE)    // yskim
 	{
 		g_modbusSlaveAddress  = MasterTxBuffer[MasterSlave][0];

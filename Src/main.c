@@ -275,12 +275,10 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 	}
 	if(huart->Instance == USART1)
 	{
-		printf("UART1 HAL_UART_RxCpltCallback\n");
 	}
 	else
 	if(huart->Instance == USART2)
 	{
-		printf("UART2 HAL_UART_RxCpltCallback\n");
 	}
 }
 
@@ -1670,7 +1668,8 @@ void PCF2127_readTime(uint8_t flag)
 		(void)PCF2127_set_time();
 		(void)printf("PCF2127_set_time....\n");
 	}
-	(void)printf("%d/%d/%d %d:%d:%d.%d(%d)\n", gDateTime.Year, gDateTime.Month, gDateTime.Day, gDateTime.Hour, gDateTime.Min, gDateTime.Sec, gDateTime.mSec, HAL_GetTick());
+	if(gDebug)
+		(void)printf("%d/%d/%d %d:%d:%d.%d(%d)\n", gDateTime.Year, gDateTime.Month, gDateTime.Day, gDateTime.Hour, gDateTime.Min, gDateTime.Sec, gDateTime.mSec, HAL_GetTick());
 }
 //PRQA S 1503 1
 uint16_t RTCBatteryStatus(void)
