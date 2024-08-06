@@ -45,6 +45,7 @@ static uint32_t GetTimerDiff(void);
 
 // PRQA S 1514 2
 static uint8_t gTimeSyncDay;
+static uint8_t gTimeSyncHour;
 
 uint8_t KeyChanged[KEY_MAX];
 
@@ -75,6 +76,7 @@ static float gNPHASE_PROTECTION_Value[DEVICE_MAX];
 int gAmpareFrame[DEVICE_MAX];
 static uint32_t commTimer;
 static uint32_t readTimeTimer;
+static uint32_t timeSyncTimer;
 // PRQA S 1514 --
 
 
@@ -1200,6 +1202,7 @@ void GuiMain(void)
 	last_recv = HAL_GetTick();
 	commTimer = HAL_GetTick();
 	readTimeTimer = HAL_GetTick();
+	timeSyncTimer = readTimeTimer;
 	g_bRecvAllDone = FALSE;
 	for(int i = 0; i < KEY_MAX; i++)
 	{
@@ -1231,6 +1234,7 @@ void GuiMain(void)
 
 	PCF2127_readTime(1);
 	gTimeSyncDay = gDateTime.Day;
+	gTimeSyncHour = gDateTime.Hour;
 	gbSettingTime = FALSE;
 
 	ScreenTimerInit();
@@ -1443,9 +1447,11 @@ __STATIC_INLINE void Pol_Delay_us(volatile uint32_t microseconds)
 
 uint32_t inControlTick = 0;
 bool bInControl = false;
+uint32_t recvTick = 0;
 
 static uint8_t MasterModbusCRCCheck(bool bInChecking)
 {
+	last_recv = HAL_GetTick();
 	if(g_modbusRxIndex < 5 || g_modbusRxIndex > MODBUS_BUFF_SIZE)
 		return MODBUS_CRC_ERROR;
 	if(gDebug)
@@ -1489,7 +1495,7 @@ static uint8_t MasterModbusCRCCheck(bool bInChecking)
 			if(bInControl == false)
 			{
 				bInControl = true;
-				last_recv = inControlTick = HAL_GetTick();
+				inControlTick = HAL_GetTick();
 				if(gDebug)
 					printf("In Control Start......\n");
 			}
@@ -1523,7 +1529,7 @@ static uint8_t MasterModbusCRCCheck(bool bInChecking)
 		}
 	}
 	g_modbusRxIndex = 0;
-	GUI_Delay(10);
+	recvTick = HAL_GetTick();
 	return ret;
 }
 
@@ -1654,6 +1660,7 @@ void MasterModbusProcess(bool bInChecking)
 				bInControl = false;
 				sendFlag = 0;
 				g_modbusRxIndex = 0;
+				recvTick = HAL_GetTick();
 				return;
 			}
 //			printf("g_bRecvVariable=%d, g_modbusRxIndex=%d, wModbusWaitLen=%d\n", g_bRecvVariable, g_modbusRxIndex, wModbusWaitLen);
@@ -1716,7 +1723,6 @@ void MasterModbusProcess(bool bInChecking)
 							gCommStatus[gDeviceIndex] = COMM_OK;
 							gCommErrorCount[gDeviceIndex] = 0;
 						}
-//						(void)printf("((((%d))))\n", HAL_GetTick());
 						if(gDebug)
 							(void)printf("[g_bRecvVariable]Recv Done!!!!(%d)\n", HAL_GetTick());
 						g_modbusRxIndex = pos+2;
@@ -1730,7 +1736,8 @@ void MasterModbusProcess(bool bInChecking)
 		{
 			if((HAL_GetTick() - last_recv) > 1000)
 			{
-				printf("Recv Timeout Reset(%d,last=%d)------------------------\n", HAL_GetTick(), last_recv);
+				(void)printf("%d/%d/%d %d:%d:%d.%d(%d)\n", gDateTime.Year, gDateTime.Month, gDateTime.Day, gDateTime.Hour, gDateTime.Min, gDateTime.Sec, gDateTime.mSec, HAL_GetTick());
+				printf("Recv Timeout Reset(%d,last=%d, recvTick=%d, masterSendTick=%d)------------------------\n", HAL_GetTick(), last_recv, recvTick, masterSendTick);
 				uint32_t stat = HAL_UART_GetState(&huart2);
 				uint32_t error = HAL_UART_GetError(&huart6);
 				printf("stat:%x. error=%x\n", stat, error);
@@ -1952,21 +1959,7 @@ E_KEY GetKey(void)
 		{
 //			printf("commTimer-2=%d, Tick=%d, Diff=%d\n", commTimer, timer, diff);
 //			printf("readTimeTimer=%d, Tick=%d, Diff=%d\n", readTimeTimer, timer, diff);
-			if(gbSettingTime == FALSE)
-			{
-				PCF2127_readTime(1);
-//				printf("gDateTime.Day=%d ,gTimeSyncDay=%d, gDateTime.Hour=%d, TIMESYNC_HOUR=%d, gDateTime.Min=%d,TIMESYNC_MIN=%d\n", gDateTime.Day ,gTimeSyncDay, gDateTime.Hour, TIMESYNC_HOUR, gDateTime.Min,TIMESYNC_MIN);
-				if((gDateTime.Day != gTimeSyncDay) && (gDateTime.Hour == TIMESYNC_HOUR) && (gDateTime.Min == TIMESYNC_MIN))
-				{
-					(void)printf("TimeSync.....\n\n\n\n\n\n\n\n\n\n");
-					gTimeSyncDay = gDateTime.Day;
-					for(int i = 0; i < gDeviceCount; i++)
-					{
-//							OS_Delay(TIMESYNC_DELAY);
-						ModbusSetTimeAndWait(ConnectSetting[i].Address, &gDateTime);    // yskim
-					}
-				}
-			}
+			PCF2127_readTime(1);
 			readTimeTimer = timer;
 			if(gDebug)
 				(void)printf("SECOND_TIMER return(%d)\n", SECOND_TIMER);
@@ -2038,6 +2031,26 @@ E_KEY GetKey(void)
 		}
 		if(sendFlag == 0)
 		{
+			diff = timer-timeSyncTimer;
+			if(diff >= TIMER_DIFF)
+			{
+				if(gbSettingTime == FALSE)
+				{
+					PCF2127_readTime(1);
+	//				if((gDateTime.Day != gTimeSyncDay) && (gDateTime.Hour == TIMESYNC_HOUR) && (gDateTime.Min == TIMESYNC_MIN))
+					if((gDateTime.Min != gTimeSyncHour))
+					{
+						(void)printf("TimeSync.....(%d)\n", HAL_GetTick());
+						gTimeSyncDay = gDateTime.Day;
+						gTimeSyncHour = gDateTime.Min;
+
+						ModbusSetTimeAndNoWait(0, &gDateTime);
+					}
+				}
+				timeSyncTimer = timer;
+			}
+
+
 			uint32_t tm = HAL_GetTick();
 
 			if(bInControl == true)
@@ -2127,20 +2140,23 @@ E_KEY GetKey(void)
 			g_modbusRxError = 0;
 			return KEY_COMM_ERROR;
 		}
-		GUI_Delay(30);
+		GUI_Delay(10);
 	}
 }
 
-uint8_t ModbusRecvCheck(void)
+uint8_t ModbusRecvCheck(bool bSend)
 {
 	uint32_t tick = HAL_GetTick();
 
 	uint32_t timer;
 
-	g_sendOwner = OWNER_MASTER;
 	if(gDebug)
 		printf("[RecvCheck] MasterModbusSend(%d, %d)\n", HAL_GetTick(), g_sendOwner);
-	MasterModbusSend(g_sendOwner);
+	if(bSend == true && MasterSendLength[g_sendOwner] != 0)
+	{
+		g_sendOwner = OWNER_MASTER;
+		MasterModbusSend(g_sendOwner);
+	}
 	last_recv = tick;
 
 	while (1)
@@ -2154,9 +2170,10 @@ uint8_t ModbusRecvCheck(void)
 				printf("SlaveModbusSend(%d)\n", HAL_GetTick());
 			SlaveModbusSend();
 		}
+		if(nMasterStatus == MODBUS_NONE)
+
 		if (g_modbusRxDone)
 		{
-			printf("g_modbusRxDone!!\n");
 			CommStatusDisp();
 			if(nMasterStatus == MODBUS_OK)
 			{

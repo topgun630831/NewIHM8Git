@@ -191,6 +191,7 @@ uint16_t StatusRecvErrorProcess(void);
 void StatusRecv(void);
 void ModbusSetTime(const uint8_t address, const S_DATE_TIME *dateTime);
 void ModbusSetTimeAndWait(const uint8_t address, const S_DATE_TIME *dateTime);
+bool ModbusSetTimeAndNoWait(const uint8_t address, const S_DATE_TIME *dateTime);
 void ModbusAcbSystemEventGet(S_DATE_TIME *dateTime, uint16_t *mainCategory, uint16_t *middleCategory, uint16_t *smallCategory, uint16_t *Status, float *Value);
 
 typedef enum e_index_value

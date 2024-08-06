@@ -17,7 +17,7 @@
 //PRQA S 1503 EOF
 //PRQA S 1505 EOF
 
-uint8_t ModbusRecvCheck(void);
+uint8_t ModbusRecvCheck(bool);
 
 /**
 * @fn CRC16
@@ -82,6 +82,7 @@ void AllRead(int port)
 
 extern uint32_t last_recv;
 extern bool bInControl;
+extern uint32_t recvTick;
 
 void MasterModbusSend(E_OWNER MasterSlave)
 {
@@ -91,6 +92,12 @@ void MasterModbusSend(E_OWNER MasterSlave)
 	g_modbusRxError = 0;
 	g_modbusRxDone = 0;
 
+	uint32_t tick = HAL_GetTick();
+	if((recvTick+20) > tick)
+	{
+//		printf("{{%d}}", (recvTick+20) - tick);
+		GUI_Delay((recvTick+20) - tick);
+	}
 	if(gDebug)
 	{
 	  (void)printf("(%d)Master Send Frame!!!(%d)g_functionCode=%d, g_wModbusWaitLen=%d\n",HAL_GetTick(), MasterSlave, g_functionCode, g_wModbusWaitLen);
@@ -104,6 +111,9 @@ void MasterModbusSend(E_OWNER MasterSlave)
 	AllRead(2);
 
 	masterSendTick = HAL_GetTick();
+
+
+//	printf("(%d)[%02X %02X]", tick, MasterTxBuffer[MasterSlave][0], MasterTxBuffer[MasterSlave][1]);
 
 	HAL_NVIC_DisableIRQ(USART2_IRQn); //Rx Callback 함수 Disable
 	HAL_UART_Transmit(&huart2, MasterTxBuffer[MasterSlave], MasterSendLength[MasterSlave], UART_TIMEOUT);
@@ -793,7 +803,7 @@ uint8_t ModbusControl(const uint8_t address, const int offset, const int pos, co
 	MasterModbusBufferPut(frame, INDEX_8, OWNER_MASTER);
 	sendFlag = 0;
 
-	ret = ModbusRecvCheck();
+	ret = ModbusRecvCheck(true);
 	if(ret != DATA_RECV)
 	{
 		printf(" ModbusRecvCheck ret = %d\n", ret);
@@ -821,7 +831,7 @@ uint8_t ModbusControl(const uint8_t address, const int offset, const int pos, co
 		MasterModbusBufferPut(frame, INDEX_8, OWNER_MASTER);
 		sendFlag = 0;
 
-		ret = ModbusRecvCheck();
+		ret = ModbusRecvCheck(true);
 		if(ret != DATA_RECV)
 		{
 			printf(" ModbusRecvCheck ret = %d\n", ret);
@@ -865,9 +875,72 @@ void ModbusSetTime(const uint8_t address, const S_DATE_TIME *dateTime)
 
 void ModbusSetTimeAndWait(const uint8_t address, const S_DATE_TIME *dateTime)
 {
-	g_wModbusWaitLen = INDEX_14;
+/*	printf("[[%d]]", sendFlag);
+	if(sendFlag == 1)
+	{
+		printf("==========\n");
+		uint32_t tick = HAL_GetTick();
+		while(sendFlag == 1)
+		{
+			ModbusRecvCheck(false);
+			if(HAL_GetTick() > (tick+500))
+			{
+				printf(" sendFlag wait timeout!!!\n");
+				break;
+			}
+		}
+	}
+*/	g_wModbusWaitLen = INDEX_14;
 	ModbusSetTime(address, dateTime);
-	uint8_t ret = ModbusRecvCheck();
+	MasterModbusSend(OWNER_MASTER);
+	uint8_t ret = ModbusRecvCheck(true);
+	last_recv = HAL_GetTick();
+}
+
+void ModbusSetTimeAndSend(const uint8_t address, const S_DATE_TIME *dateTime)
+{
+	uint8_t frame[DEFAULT_BUF_SIZE];
+	uint16_t mSec = (uint16_t)dateTime->Sec * THOUSAND;
+	frame[INDEX_0] = address;
+	frame[INDEX_1] = MODBUS_EXTEND_FUNCTION;
+	frame[INDEX_2] = MODBUS_SUBFUCTION_SETTIME;
+	frame[INDEX_3] = 0;
+	frame[INDEX_4] = 0;
+	frame[INDEX_5] = (uint8_t)(dateTime->Year-YEAR_BASE);
+	frame[INDEX_6] = dateTime->Month;
+	frame[INDEX_7] = dateTime->Day;
+	frame[INDEX_8] = dateTime->Hour;
+	frame[INDEX_9] = dateTime->Min;
+	frame[INDEX_10] = (uint8_t)(mSec >> INDEX_8);
+	frame[INDEX_11] = (uint8_t)(mSec & MASK_FF);
+
+	uint16_t crc = CRC16(frame, INDEX_12);
+
+	frame[INDEX_12] = (uint8_t) (crc >> INDEX_8);
+	frame[INDEX_13] = (uint8_t)(crc & MASK_FF);
+
+	uint32_t tick = HAL_GetTick();
+	if((recvTick+20) > tick)
+	{
+//		printf("{{%d}}", (recvTick+20) - tick);
+		GUI_Delay((recvTick+20) - tick);
+	}
+
+
+	HAL_NVIC_DisableIRQ(USART2_IRQn); //Rx Callback 함수 Disable
+	HAL_UART_Transmit(&huart2, frame, INDEX_14, UART_TIMEOUT);
+	HAL_NVIC_EnableIRQ(USART2_IRQn);  //Rx callback 함수 enable
+	recvTick = HAL_GetTick();
+	//	sendFlag = 1;
+}
+
+ extern E_MODBUS_ERROR nMasterStatus;
+
+bool ModbusSetTimeAndNoWait(const uint8_t address, const S_DATE_TIME *dateTime)
+{
+	bool ret = false;
+	ModbusSetTimeAndSend(address, dateTime);
+	return ret;
 }
 
 void ModbusAcbSystemEventGet(S_DATE_TIME *dateTime, uint16_t *mainCategory, uint16_t *middleCategory, uint16_t *smallCategory, uint16_t *Status, float *Value)
