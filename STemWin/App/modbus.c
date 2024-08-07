@@ -17,7 +17,7 @@
 //PRQA S 1503 EOF
 //PRQA S 1505 EOF
 
-uint8_t ModbusRecvCheck(bool);
+uint8_t ModbusRecvCheck(void);
 
 /**
 * @fn CRC16
@@ -93,10 +93,10 @@ void MasterModbusSend(E_OWNER MasterSlave)
 	g_modbusRxDone = 0;
 
 	uint32_t tick = HAL_GetTick();
-	if((recvTick+20) > tick)
+	if((recvTick+TX_WAIT_TIME) > tick)
 	{
-//		printf("{{%d}}", (recvTick+20) - tick);
-		GUI_Delay((recvTick+20) - tick);
+//		printf("{{%d}}", (recvTick+TX_WAIT_TIME) - tick);
+		GUI_Delay((recvTick+TX_WAIT_TIME) - tick);
 	}
 	if(gDebug)
 	{
@@ -129,13 +129,13 @@ void MasterModbusBufferPut(uint8_t *pData, uint16_t Length, E_OWNER MasterSlave)
 {
 	uint16_t len;
 
-	if(bInControl == true)
+/*	if(bInControl == true)
 	{
 		if(gDebug)
 			printf("(%d) MasterModbusBufferPut Reject!!!!(%d)\n",  HAL_GetTick(), MasterSlave);
 		return;
 	}
-	if(gDebug)
+*/	if(gDebug)
 	{
 		printf("(%d) MasterModbusBufferPut (%d)\n",  HAL_GetTick(), MasterSlave);
 		for(int i = 0; i < Length; i++)
@@ -803,7 +803,7 @@ uint8_t ModbusControl(const uint8_t address, const int offset, const int pos, co
 	MasterModbusBufferPut(frame, INDEX_8, OWNER_MASTER);
 	sendFlag = 0;
 
-	ret = ModbusRecvCheck(true);
+	ret = ModbusRecvCheck();
 	if(ret != DATA_RECV)
 	{
 		printf(" ModbusRecvCheck ret = %d\n", ret);
@@ -831,7 +831,7 @@ uint8_t ModbusControl(const uint8_t address, const int offset, const int pos, co
 		MasterModbusBufferPut(frame, INDEX_8, OWNER_MASTER);
 		sendFlag = 0;
 
-		ret = ModbusRecvCheck(true);
+		ret = ModbusRecvCheck();
 		if(ret != DATA_RECV)
 		{
 			printf(" ModbusRecvCheck ret = %d\n", ret);
@@ -890,10 +890,19 @@ void ModbusSetTimeAndWait(const uint8_t address, const S_DATE_TIME *dateTime)
 			}
 		}
 	}
-*/	g_wModbusWaitLen = INDEX_14;
+*/
+	g_sendOwner = OWNER_MASTER;
+	g_wModbusWaitLen = INDEX_14;
 	ModbusSetTime(address, dateTime);
+
+	uint32_t tick = HAL_GetTick();
+	if((recvTick+TX_WAIT_TIME) > tick)
+	{
+		GUI_Delay((recvTick+TX_WAIT_TIME) - tick);
+	}
+
 	MasterModbusSend(OWNER_MASTER);
-	uint8_t ret = ModbusRecvCheck(true);
+	uint8_t ret = ModbusRecvCheck();
 	last_recv = HAL_GetTick();
 }
 
@@ -920,12 +929,20 @@ void ModbusSetTimeAndSend(const uint8_t address, const S_DATE_TIME *dateTime)
 	frame[INDEX_13] = (uint8_t)(crc & MASK_FF);
 
 	uint32_t tick = HAL_GetTick();
-	if((recvTick+20) > tick)
+	if((recvTick+TX_WAIT_TIME) > tick)
 	{
-//		printf("{{%d}}", (recvTick+20) - tick);
-		GUI_Delay((recvTick+20) - tick);
+		GUI_Delay((recvTick+TX_WAIT_TIME) - tick);
 	}
 
+	if(gDebug)
+	{
+	  (void)printf("(%d)ModbusSetTimeAndSend Frame!!!\n",HAL_GetTick());
+	  for(int i = 0; i < INDEX_14; i++)
+	  {
+		  (void)printf("%02X ", frame[i]);
+	  }
+	  (void)printf("\n");
+	}
 
 	HAL_NVIC_DisableIRQ(USART2_IRQn); //Rx Callback ÇÔ¼ö Disable
 	HAL_UART_Transmit(&huart2, frame, INDEX_14, UART_TIMEOUT);
@@ -933,8 +950,6 @@ void ModbusSetTimeAndSend(const uint8_t address, const S_DATE_TIME *dateTime)
 	recvTick = HAL_GetTick();
 	//	sendFlag = 1;
 }
-
- extern E_MODBUS_ERROR nMasterStatus;
 
 bool ModbusSetTimeAndNoWait(const uint8_t address, const S_DATE_TIME *dateTime)
 {

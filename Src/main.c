@@ -182,6 +182,8 @@ static void MX_NVIC_Init(void);
 
 static void Pcf2129AT_init(void);
 
+extern S_DATE_TIME changeDateTime;
+
 
 /* Private variables ---------------------------------------------------------*/
 
@@ -1572,13 +1574,13 @@ uint16_t PCF2127_set_time(void)
 	}
 	data[0]    = Seconds;
 
-    data[ INDEX_1 ]    = i2bcd(gDateTime.Sec);
-    data[ INDEX_2 ]    = i2bcd(gDateTime.Min);
-    data[ INDEX_3 ]    = i2bcd(gDateTime.Hour);
-    data[ INDEX_4 ]    = i2bcd(gDateTime.Day);
+    data[ INDEX_1 ]    = i2bcd(changeDateTime.Sec);
+    data[ INDEX_2 ]    = i2bcd(changeDateTime.Min);
+    data[ INDEX_3 ]    = i2bcd(changeDateTime.Hour);
+    data[ INDEX_4 ]    = i2bcd(changeDateTime.Day);
     data[ INDEX_5 ]    = 1; //Week
-    data[ INDEX_6 ]    = i2bcd(gDateTime.Month);
-    data[ INDEX_7 ]    = i2bcd(gDateTime.Year-YEAR_BASE);
+    data[ INDEX_6 ]    = i2bcd(changeDateTime.Month);
+    data[ INDEX_7 ]    = i2bcd(changeDateTime.Year-YEAR_BASE);
 
 	// printf("RTC Set time");
 	// for(int i = 0; i < 8; i++)
@@ -1659,12 +1661,12 @@ void PCF2127_readTime(uint8_t flag)
 				(gDateTime.Min >= MIN_MAX) ||
 				(gDateTime.Sec >= MIN_MAX))
 	{
-		gDateTime.Year = YEAR_MIN;
-		gDateTime.Month = 1;
-		gDateTime.Day = 1;
-		gDateTime.Hour = 0;
-		gDateTime.Min = 0;
-		gDateTime.Sec = 0;
+		gDateTime.Year = changeDateTime.Year = YEAR_MIN;
+		gDateTime.Month = changeDateTime.Month = 1;
+		gDateTime.Day = changeDateTime.Day = 1;
+		gDateTime.Hour = changeDateTime.Hour = 0;
+		gDateTime.Min = changeDateTime.Min = 0;
+		gDateTime.Sec = changeDateTime.Sec = 0;
 		(void)PCF2127_set_time();
 		(void)printf("PCF2127_set_time....\n");
 	}

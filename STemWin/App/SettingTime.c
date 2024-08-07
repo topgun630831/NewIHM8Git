@@ -30,6 +30,8 @@ static void DateTimeDisp(int pos);
 static int LeapYear(uint16_t year);
 static uint16_t GetDaysInMonth(uint16_t year, uint16_t month);
 
+S_DATE_TIME changeDateTime;
+
 static int LeapYear(uint16_t year)	// 올해가 윤년인가 ?
 {
     if((((year % INDEX_4) == 0) && ((year % HUNDRED) != 0)) || ((year % INDEX_400) == 0))
@@ -74,7 +76,7 @@ static void DateTimeDisp(int pos)
 	rect.y1 = SETUP_INPUT_Y1;
 
 	char buf[MESSAGE_BUF_SIZE];
-	(void)sprintf(buf, "%04d - %02d - %02d  %02d : %02d : %02d", gDateTime.Year, gDateTime.Month, gDateTime.Day, gDateTime.Hour, gDateTime.Min, gDateTime.Sec);
+	(void)sprintf(buf, "%04d - %02d - %02d  %02d : %02d : %02d", changeDateTime.Year, changeDateTime.Month, changeDateTime.Day, changeDateTime.Hour, changeDateTime.Min, changeDateTime.Sec);
 	GUI_DispStringInRect(buf, &rect, GUI_TA_HCENTER | GUI_TA_VCENTER);
 
 	if(pos >= SETUP_TIMESET_COUNT)
@@ -90,32 +92,32 @@ static void DateTimeDisp(int pos)
 	GUI_ClearRect(rect.x0, rect.y0, rect.x1, rect.y1);
 	if(pos == INDEX_0)
 	{
-	   (void)sprintf(buf, "%04d", gDateTime.Year);
+	   (void)sprintf(buf, "%04d", changeDateTime.Year);
 	}
 	else
 	if(pos == INDEX_1)
 	{
-	   (void)sprintf(buf, "%02d", gDateTime.Month);
+	   (void)sprintf(buf, "%02d", changeDateTime.Month);
 	}
 	else
 	if(pos == INDEX_2)
 	{
-	   (void)sprintf(buf, "%02d", gDateTime.Day);
+	   (void)sprintf(buf, "%02d", changeDateTime.Day);
 	}
 	else
 	if(pos == INDEX_3)
 	{
-	   (void)sprintf(buf, "%02d", gDateTime.Hour);
+	   (void)sprintf(buf, "%02d", changeDateTime.Hour);
 	}
 	else
 	if(pos == INDEX_4)
 	{
-	   (void)sprintf(buf, "%02d", gDateTime.Min);
+	   (void)sprintf(buf, "%02d", changeDateTime.Min);
 	}
 	else
 	if(pos == INDEX_5)
 	{
-	   (void)sprintf(buf, "%02d", gDateTime.Sec);
+	   (void)sprintf(buf, "%02d", changeDateTime.Sec);
 	}
 	else {}
 
@@ -178,10 +180,16 @@ void SettingTime(void)
 	GUI_SetColor(SELECTED_TEXT_COLOR);
 	(void)GUI_SetFont(&GUI_Font32B_ASCII);
 
+	changeDateTime.Year = gDateTime.Year;
+	changeDateTime.Month = gDateTime.Month;
+	changeDateTime.Day = gDateTime.Day;
+	changeDateTime.Hour = gDateTime.Hour;
+	changeDateTime.Min = gDateTime.Min;
+	changeDateTime.Sec = gDateTime.Sec;
 	DateTimeDisp(nPos);
 	ButtonDisp(CONTROL_BUTTON_NOSELECT);
 
-	uint16_t year = (uint16_t)gDateTime.Year;
+	uint16_t year = (uint16_t)changeDateTime.Year;
 	uint16_t days;
 	while (1)
 	{
@@ -201,72 +209,72 @@ void SettingTime(void)
 				else
 				if(nPos == INDEX_1)
 				{
-					if(gDateTime.Month < MONTH_MAX)
+					if(changeDateTime.Month < MONTH_MAX)
 					{
-						gDateTime.Month++;
+						changeDateTime.Month++;
 					}
 					else
 					{
-						gDateTime.Month = 1;
+						changeDateTime.Month = 1;
 					}
-					days = GetDaysInMonth(year, gDateTime.Month);
-					if(gDateTime.Day > days)
+					days = GetDaysInMonth(year, changeDateTime.Month);
+					if(changeDateTime.Day > days)
 					{
-						gDateTime.Day = days;
+						changeDateTime.Day = days;
 					}
 				}
 				else
 				if(nPos == INDEX_2)
 				{
 					days = DAY_MAX;
-					days = GetDaysInMonth(year, gDateTime.Month);
-					if(gDateTime.Day < days)
+					days = GetDaysInMonth(year, changeDateTime.Month);
+					if(changeDateTime.Day < days)
 					{
-						gDateTime.Day++;
+						changeDateTime.Day++;
 					}
 					else
 					{
-						gDateTime.Day = 1;
+						changeDateTime.Day = 1;
 					}
 				}
 				else
 				if(nPos == INDEX_3)
 				{
-					if(gDateTime.Hour < (HOUR_MAX - 1))
+					if(changeDateTime.Hour < (HOUR_MAX - 1))
 					{
-						gDateTime.Hour++;
+						changeDateTime.Hour++;
 					}
 					else
 					{
-						gDateTime.Hour = 0;
+						changeDateTime.Hour = 0;
 					}
 				}
 				else
 				if(nPos == INDEX_4)
 				{
-					if(gDateTime.Min < (MIN_MAX - 1))
+					if(changeDateTime.Min < (MIN_MAX - 1))
 					{
-						gDateTime.Min++;
+						changeDateTime.Min++;
 					}
 					else
 					{
-						gDateTime.Min = 0;
+						changeDateTime.Min = 0;
 					}
 				}
 				else
 				if(nPos == INDEX_5)
 				{
-					if(gDateTime.Sec < (MIN_MAX - 1))
+					if(changeDateTime.Sec < (MIN_MAX - 1))
 					{
-						gDateTime.Sec++;
+						changeDateTime.Sec++;
 					}
 					else
 					{
-						gDateTime.Sec = 0;
+						changeDateTime.Sec = 0;
 					}
 				}
 				else {}
-				gDateTime.Year = year;
+				changeDateTime.Year = year;
 				DateTimeDisp(nPos);
 			}
 			else
@@ -292,72 +300,72 @@ void SettingTime(void)
 				else
 				if(nPos == INDEX_1)
 				{
-					if(gDateTime.Month > 1)
+					if(changeDateTime.Month > 1)
 					{
-						gDateTime.Month--;
+						changeDateTime.Month--;
 					}
 					else
 					{
-						gDateTime.Month = MONTH_MAX;
+						changeDateTime.Month = MONTH_MAX;
 					}
-					days = GetDaysInMonth(year, gDateTime.Month);
-					if(gDateTime.Day > days)
+					days = GetDaysInMonth(year, changeDateTime.Month);
+					if(changeDateTime.Day > days)
 					{
-						gDateTime.Day = days;
+						changeDateTime.Day = days;
 					}
 				}
 				else
 				if(nPos == INDEX_2)
 				{
 					days = DAY_MAX;
-					days = GetDaysInMonth(year, gDateTime.Month);
-					if(gDateTime.Day > 1)
+					days = GetDaysInMonth(year, changeDateTime.Month);
+					if(changeDateTime.Day > 1)
 					{
-						gDateTime.Day--;
+						changeDateTime.Day--;
 					}
 					else
 					{
-						gDateTime.Day = days;
+						changeDateTime.Day = days;
 					}
 				}
 				else
 				if(nPos == INDEX_3)
 				{
-					if(gDateTime.Hour > 0)
+					if(changeDateTime.Hour > 0)
 					{
-						gDateTime.Hour--;
+						changeDateTime.Hour--;
 					}
 					else
 					{
-						gDateTime.Hour = HOUR_MAX - 1;
+						changeDateTime.Hour = HOUR_MAX - 1;
 					}
 				}
 				else
 				if(nPos == INDEX_4)
 				{
-					if(gDateTime.Min > 0)
+					if(changeDateTime.Min > 0)
 					{
-						gDateTime.Min--;
+						changeDateTime.Min--;
 					}
 					else
 					{
-						gDateTime.Min = MIN_MAX - 1;
+						changeDateTime.Min = MIN_MAX - 1;
 					}
 				}
 				else
 				if(nPos == INDEX_5)
 				{
-					if(gDateTime.Sec > 0)
+					if(changeDateTime.Sec > 0)
 					{
-						gDateTime.Sec--;
+						changeDateTime.Sec--;
 					}
 					else
 					{
-						gDateTime.Sec = MIN_MAX - 1;
+						changeDateTime.Sec = MIN_MAX - 1;
 					}
 				}
 				else {}
-				gDateTime.Year = year;
+				changeDateTime.Year = year;
 				DateTimeDisp(nPos);
 			}
 			else
@@ -374,7 +382,7 @@ void SettingTime(void)
 			if(nPos < SETUP_TIMESET_COUNT)
 			{
 				nPos++;
-				gDateTime.Year = year;
+				changeDateTime.Year = year;
 				DateTimeDisp(nPos);
 				if(nPos == SETUP_TIMESET_COUNT)
 				{
@@ -386,10 +394,13 @@ void SettingTime(void)
 			{
 				(void)printf("===============\nOK\n");
 				(void)PCF2127_set_time();
+				gbSetTime = true;
+/*
 				for(int i = 0; i < gDeviceCount; i++)
 				{
 					ModbusSetTimeAndWait(ConnectSetting[i].Address, &gDateTime);
 				}
+*/
 				flagBreak = TRUE;
 			}
 			else

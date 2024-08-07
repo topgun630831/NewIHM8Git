@@ -293,9 +293,10 @@ EXTERN uint16_t ControlSendLength;
 EXTERN uint32_t masterSendTick;
 EXTERN uint32_t slaveSendTick;
 
-EXTERN bool gDebug;
-EXTERN bool gbSlaveSend;
-EXTERN uint8_t gbSBO;
+EXTERN bool		gDebug;
+EXTERN bool		gbSlaveSend;
+EXTERN uint8_t	gbSBO;
+EXTERN bool		gbSetTime;
 
 EXTERN uint32_t masterSendTick;
 EXTERN uint32_t slaveSendTick;
@@ -650,6 +651,7 @@ EXTERN uint32_t uart2LastNDTR;
 //#define	TIMER_DIFF						500
 #define	TIMER_DIFF						1000
 #define	TIMER_DIFF_10SEC				10000
+#define TX_WAIT_TIME					20
 
 //main.c
 #define	UART_TIMEOUT					0xFFFF

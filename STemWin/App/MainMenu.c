@@ -1198,6 +1198,7 @@ void GuiMain(void)
 	static float gPTAValue[DEVICE_MAX];
 
 	gbSBO = 0;
+	gbSetTime = false;
 
 	last_recv = HAL_GetTick();
 	commTimer = HAL_GetTick();
@@ -2037,14 +2038,18 @@ E_KEY GetKey(void)
 				if(gbSettingTime == FALSE)
 				{
 					PCF2127_readTime(1);
-	//				if((gDateTime.Day != gTimeSyncDay) && (gDateTime.Hour == TIMESYNC_HOUR) && (gDateTime.Min == TIMESYNC_MIN))
-					if((gDateTime.Min != gTimeSyncHour))
+					if(gbSetTime == true || (gDateTime.Day != gTimeSyncDay) && (gDateTime.Hour == TIMESYNC_HOUR) && (gDateTime.Min == TIMESYNC_MIN))
+					//if((gDateTime.Min != gTimeSyncHour))
 					{
 						(void)printf("TimeSync.....(%d)\n", HAL_GetTick());
 						gTimeSyncDay = gDateTime.Day;
-						gTimeSyncHour = gDateTime.Min;
+						gTimeSyncHour = gDateTime.Hour;
 
-						ModbusSetTimeAndNoWait(0, &gDateTime);
+						for(int i = 0; i < gDeviceCount; i++)
+						{
+							ModbusSetTimeAndWait(ConnectSetting[i].Address, &gDateTime);
+						}
+						gbSetTime = false;
 					}
 				}
 				timeSyncTimer = timer;
@@ -2144,7 +2149,7 @@ E_KEY GetKey(void)
 	}
 }
 
-uint8_t ModbusRecvCheck(bool bSend)
+uint8_t ModbusRecvCheck(void)
 {
 	uint32_t tick = HAL_GetTick();
 
@@ -2152,7 +2157,7 @@ uint8_t ModbusRecvCheck(bool bSend)
 
 	if(gDebug)
 		printf("[RecvCheck] MasterModbusSend(%d, %d)\n", HAL_GetTick(), g_sendOwner);
-	if(bSend == true && MasterSendLength[g_sendOwner] != 0)
+	if(MasterSendLength[g_sendOwner] != 0)
 	{
 		g_sendOwner = OWNER_MASTER;
 		MasterModbusSend(g_sendOwner);
@@ -2162,6 +2167,12 @@ uint8_t ModbusRecvCheck(bool bSend)
 	while (1)
     {
 		timer = HAL_GetTick();
+		if(timer > (tick+1000))
+		{
+			printf("ModbusRecvCheck Timeout.....\n");
+			return KEY_COMM_ERROR;
+		}
+
 		MasterModbusProcess(true);
 
 		if(SlaveSendLength != 0)
@@ -2170,7 +2181,6 @@ uint8_t ModbusRecvCheck(bool bSend)
 				printf("SlaveModbusSend(%d)\n", HAL_GetTick());
 			SlaveModbusSend();
 		}
-		if(nMasterStatus == MODBUS_NONE)
 
 		if (g_modbusRxDone)
 		{

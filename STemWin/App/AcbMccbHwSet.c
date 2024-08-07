@@ -249,7 +249,7 @@ void AcbMccbHwSet(void)
 			{
 				RecvHwSetDisp();
 				g_bRecvAllDone = TRUE;
-				(void)printf("g_bRecvAllDone=0\n");
+//				(void)printf("g_bRecvAllDone=0\n");
 			}
 		}
 		else
@@ -260,9 +260,9 @@ void AcbMccbHwSet(void)
 		else
 		if(key == KEY_COMM_ERROR)
 		{
-			(void)printf("COMM Error!! gStatusSendEnd=%d, statusSendStep=%d\n",gStatusSendEnd,statusSendStep); 
-			
-			
+			(void)printf("COMM Error!! gStatusSendEnd=%d, statusSendStep=%d\n",gStatusSendEnd,statusSendStep);
+
+
 			if(StatusRecvErrorProcess() == STATUS_SEND_ING)
 			{
 				nSendStep = 0;
@@ -276,8 +276,8 @@ void AcbMccbHwSet(void)
 				else
 				{
 					g_bRecvAllDone = TRUE;
-			
-					(void)printf("All done!!!\n");
+
+//					(void)printf("All done!!!\n");
 					gStatusSendEnd = STATUS_SEND_ING;
 					statusSendStep = 0;
 					nSendStep = 0;

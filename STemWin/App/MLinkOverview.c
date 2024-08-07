@@ -86,13 +86,13 @@ void MLinkOverviewValue(int flag)
 		return;
 	}
 	char buf[MESSAGE_BUF_SIZE];
-	(void)printf("\n\n\n\n\n MLinkOverviewValue sendStep=%d\n\n\n\n\n", nSendStep);
 	if(flag)
 	{
 		if(nSendStep == 0)
 		{
 		  aiValue =  ModbusGetFloat(I_REGISTER_219);
-		  (void)printf("aiValue=%f\n", aiValue);
+		  if(gDebug)
+		  	(void)printf("aiValue=%f\n", aiValue);
 		  return;
 		}
 		else
@@ -206,7 +206,8 @@ void MLinkOverviewValue(int flag)
 		rect.x0 += MLINK_OVERVIEW_STATUS_DISTANCE;
 		rect.x1 += MLINK_OVERVIEW_STATUS_DISTANCE;
 	}
-	(void)printf("g_bRecvAllDone.......\n");
+	if(gDebug)
+		(void)printf("g_bRecvAllDone.......\n");
 	g_bRecvAllDone = TRUE;
 }
 

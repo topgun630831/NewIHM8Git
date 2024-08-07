@@ -822,7 +822,7 @@ static void DisplaySetting(void)
 
 		if(key == SECOND_TIMER)
 		{
-			(void)printf("SECOND_TIMER\n\n\n\n");
+			// (void)printf("SECOND_TIMER\n\n\n\n");
 			if(nPage == 0)
 			{
 				PCF2127_readTime(1);
