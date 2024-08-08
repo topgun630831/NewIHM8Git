@@ -1608,7 +1608,7 @@ static void Pcf2129AT_init(void)
 
 //	OS_Delay(INDEX_50);
 	HAL_Delay(INDEX_50);
-	uint8_t error;
+//	uint8_t error;
 
     data[ INDEX_0 ]   = Control_1; //  access start register address
     data[ INDEX_1 ]   = Cntl1;
@@ -1616,10 +1616,10 @@ static void Pcf2129AT_init(void)
     data[ INDEX_2 ]   = Cntl2;
     data[ INDEX_3 ]   = Cntl3;
 
-	error = HAL_I2C_Master_Transmit(&hi2c2, PCF2127_I2C_SLAVE_ADDRESS, data, sizeof(data), PCF2129_TIMEOUT);
+	(void)HAL_I2C_Master_Transmit(&hi2c2, PCF2127_I2C_SLAVE_ADDRESS, data, sizeof(data), PCF2129_TIMEOUT);
 //	error = HAL_I2C_Master_Transmit(&hi2c2, PCF2127_I2C_SLAVE_ADDRESS, data, 1, PCF2129_TIMEOUT);
 //	error = HAL_I2C_Master_Receive(&hi2c2, PCF2127_I2C_SLAVE_ADDRESS, data, INDEX_4, PCF2129_TIMEOUT);
-    error = PCF2129_set_register( CLKOUT_ctl, ClkOut );
+    (void)PCF2129_set_register( CLKOUT_ctl, ClkOut );
 
 }
 

@@ -955,6 +955,7 @@ bool ModbusSetTimeAndNoWait(const uint8_t address, const S_DATE_TIME *dateTime)
 {
 	bool ret = false;
 	ModbusSetTimeAndSend(address, dateTime);
+	recvTick = HAL_GetTick();
 	return ret;
 }
 

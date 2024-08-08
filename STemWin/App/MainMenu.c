@@ -45,7 +45,6 @@ static uint32_t GetTimerDiff(void);
 
 // PRQA S 1514 2
 static uint8_t gTimeSyncDay;
-static uint8_t gTimeSyncHour;
 
 uint8_t KeyChanged[KEY_MAX];
 
@@ -1235,7 +1234,6 @@ void GuiMain(void)
 
 	PCF2127_readTime(1);
 	gTimeSyncDay = gDateTime.Day;
-	gTimeSyncHour = gDateTime.Hour;
 	gbSettingTime = FALSE;
 
 	ScreenTimerInit();
@@ -1450,7 +1448,7 @@ uint32_t inControlTick = 0;
 bool bInControl = false;
 uint32_t recvTick = 0;
 
-static uint8_t MasterModbusCRCCheck(bool bInChecking)
+static E_MODBUS_ERROR MasterModbusCRCCheck(bool bInChecking)
 {
 	last_recv = HAL_GetTick();
 	if(g_modbusRxIndex < 5 || g_modbusRxIndex > MODBUS_BUFF_SIZE)
@@ -1472,7 +1470,7 @@ static uint8_t MasterModbusCRCCheck(bool bInChecking)
 			(void)printf("-----------------\nModbus Exception Error[%02x]\n", g_modbusRxBuff[INDEX_2]);
 	}
 
-	uint8_t ret = MODBUS_OK;
+	E_MODBUS_ERROR ret = MODBUS_OK;
 	uint16_t p, crc;
 	if(exception == true)
 	{
@@ -1541,8 +1539,8 @@ void MasterModbusProcess(bool bInChecking)
 	if(sendFlag == 1)
 	{
 		uint32_t uart2NewNDTR = huart2.hdmarx->Instance->NDTR;
-		HAL_StatusTypeDef stat;
-		int nTimeOut = MODBUS_TIMEOUT;
+//		HAL_StatusTypeDef stat;
+//		int nTimeOut = MODBUS_TIMEOUT;
 		bool bRecvOk = false;
 		uint32_t count;
 
@@ -1687,26 +1685,30 @@ void MasterModbusProcess(bool bInChecking)
 				}
 				else
 				{
-/*					(void)printf("g_bRecvVariable  Read!!!(%u, %d)\n", g_sendOwner, g_modbusRxIndex);
+/*	*/				(void)printf("g_bRecvVariable  Read!!!(%u, %d)\n", g_sendOwner, g_modbusRxIndex);
 					for(int i = 0; i < g_modbusRxIndex; i++)
 					{
 						  (void)printf("%02X ", g_modbusRxBuff[i]);
 					}
 					(void)printf("\n");
-*/					uint16_t index = wModbusWaitLen;
+/* */					// uint16_t index = wModbusWaitLen;
 					uint8_t cnt = g_modbusRxBuff[INDEX_7];
+printf("cnt=%d\n", cnt);
 					bRecvOk = true;
 					for(uint8_t i = 0; i < cnt; i++)
 					{
 						if(g_modbusRxIndex < (pos + 2))		// Object ID + Object Length
 						{
 							bRecvOk = false;
+printf("[1]\n");
 							break;
 						}
 						uint8_t len = g_modbusRxBuff[pos+1];
+printf("i=%d, len=%d\n", i, len);
 						if(g_modbusRxIndex < (pos + len + 1))
 						{
 							bRecvOk = false;
+printf("[2]\n");
 							break;
 						}
 						pos += len + 2;
@@ -1735,7 +1737,7 @@ void MasterModbusProcess(bool bInChecking)
 		}
 		else
 		{
-			if((HAL_GetTick() - last_recv) > 1000)
+			if((HAL_GetTick() - last_recv) > 5000)
 			{
 				(void)printf("%d/%d/%d %d:%d:%d.%d(%d)\n", gDateTime.Year, gDateTime.Month, gDateTime.Day, gDateTime.Hour, gDateTime.Min, gDateTime.Sec, gDateTime.mSec, HAL_GetTick());
 				printf("Recv Timeout Reset(%d,last=%d, recvTick=%d, masterSendTick=%d)------------------------\n", HAL_GetTick(), last_recv, recvTick, masterSendTick);
@@ -1771,7 +1773,7 @@ void MasterModbusProcess(bool bInChecking)
 				}
 			}
 			uint32_t tick = HAL_GetTick() - masterSendTick;
-			if(sendFlag == 1 && bRecvOk == false && tick > 1000)		//Send 후 500ms 이내 응답없으면
+			if(sendFlag == 1 && bRecvOk == false && tick > 2000)		//Send 후 500ms 이내 응답없으면
 			{
 
 				printf("Send And Recv timeout!!!(g_sendOwner:%d)\n",  g_sendOwner);
@@ -1872,10 +1874,7 @@ static uint8_t SlaveModbusCRCCheck(void)
 
 void SlaveModbusProcess(void)
 {
-	static bool bTurnSlave = false;
 	uint32_t uart1NewNDTR = huart1.hdmarx->Instance->NDTR;
-	int nTimeOut = MODBUS_TIMEOUT;
-	int bRecvOk = FALSE;
 	uint32_t count;
 	static uint32_t slave_last_recv = 0;
 
@@ -2043,12 +2042,14 @@ E_KEY GetKey(void)
 					{
 						(void)printf("TimeSync.....(%d)\n", HAL_GetTick());
 						gTimeSyncDay = gDateTime.Day;
-						gTimeSyncHour = gDateTime.Hour;
 
+							ModbusSetTimeAndNoWait(0x00, &gDateTime);
+#if 0
 						for(int i = 0; i < gDeviceCount; i++)
 						{
 							ModbusSetTimeAndWait(ConnectSetting[i].Address, &gDateTime);
 						}
+#endif
 						gbSetTime = false;
 					}
 				}

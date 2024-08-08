@@ -99,7 +99,7 @@ static void DispFormat2(float value, const char* baseUnit, char result[RESULT_BU
 void EventSend(int bEvent)
 {
 	uint16_t SendIndex;
-	
+
 	if(bEvent == TRUE)
 	{
 		(void)printf("Event Send.....\n");
@@ -484,7 +484,7 @@ static void EventMenu(int pos)
 		else
 		if(key == KEY_COMM_ERROR)
 		{
-			(void)printf("COMM Error!!! gStatusSendEnd=%d, statusSendStep=%d, nSendStep=%d\n",gStatusSendEnd,statusSendStep,nSendStep); 
+			(void)printf("COMM Error!!! gStatusSendEnd=%d, statusSendStep=%d, nSendStep=%d\n",gStatusSendEnd,statusSendStep,nSendStep);
 			if(StatusRecvErrorProcess() == STATUS_SEND_ING)
 			{
 				nSendStep = 0;
@@ -509,6 +509,142 @@ static void EventMenu(int pos)
 			nSendStep = 0;
 		}
 		else {}
+		if(flagBreak == TRUE)
+		{
+			break;
+		}
+	}
+}
+
+
+static void FaultResetInitDisp(void)
+{
+	GUI_RECT rect;
+
+	(void)GUI_SetPenSize(PENSIZE_LINE);
+	GUI_SetColor(COLOR_MENU_SELECTED);
+	GUI_SetBkColor(COLOR_MENU_NORMAL);
+
+	GUI_ClearRect(POPUP_WINDOW_X0, POPUP_WINDOW_Y0, POPUP_WINDOW_X1, POPUP_WINDOW_Y1);
+	GUI_DrawRect(POPUP_WINDOW_X0, POPUP_WINDOW_Y0, POPUP_WINDOW_X1, POPUP_WINDOW_Y1);
+
+	GUI_SetColor(SELECTED_TEXT_COLOR);
+	LanguageSelect(FONT24);
+	rect.x0 = CONTROL_MSG_X0 - INDEX_20;
+	rect.y0 = CONTROL_MSG_Y0;
+	rect.x1 = CONTROL_MSG_X1 + INDEX_20;
+	rect.y1 = CONTROL_MSG_Y1;
+	GUI_DispStringInRect(_aFaultReset_confirm_text[SettingValue[SETUP_LANGUAGE]], &rect, GUI_TA_HCENTER | GUI_TA_VCENTER);
+
+	MLinkButtonDisp(CONTROL_BUTTON_NOSELECT);
+}
+
+static void FaultReset(void)
+{
+	int flagBreak = FALSE;
+	int nPos = 0;
+	char password[CONTROL_PASSWORD_DIGIT+1];
+
+	(void)sprintf(password, "0000");
+	FaultResetInitDisp();
+	PasswordDisp(nPos, password[nPos]);
+
+	while (1)
+	{
+		E_KEY key = GetKey();
+
+		if(key == KEY_UP)
+		{
+			if(nPos < CONTROL_PASSWORD_DIGIT)
+			{
+				if(password[nPos] < '9')
+				{
+					password[nPos]++;
+				}
+				else
+				{
+					password[nPos] = '0';
+				}
+				PasswordDisp(nPos, password[nPos]);
+			}
+			else
+			if(nPos == (CONTROL_PASSWORD_DIGIT + 1))
+			{
+				MLinkButtonDisp(CONTROL_BUTTON_OK);
+				nPos = CONTROL_PASSWORD_DIGIT;
+			}
+			else {}
+		}
+		else
+		if(key == KEY_DOWN)
+		{
+			if(nPos < CONTROL_PASSWORD_DIGIT)
+			{
+				if(password[nPos] > '0')
+				{
+					password[nPos]--;
+				}
+				else
+				{
+					password[nPos] = '9';
+				}
+				PasswordDisp(nPos, password[nPos]);
+			}
+			else
+			if(nPos == CONTROL_PASSWORD_DIGIT)
+			{
+				MLinkButtonDisp(CONTROL_BUTTON_CANCEL);
+				nPos = CONTROL_PASSWORD_DIGIT + 1;
+			}
+			else {}
+		}
+		else
+		if(key == KEY_ENTER)
+		{
+			if(nPos < CONTROL_PASSWORD_DIGIT)
+			{
+				nPos++;
+				PasswordDisp(nPos, password[nPos]);
+				if(nPos == CONTROL_PASSWORD_DIGIT)
+				{
+					MLinkButtonDisp(CONTROL_BUTTON_OK);
+				}
+			}
+			else
+			if(nPos == CONTROL_PASSWORD_DIGIT)	// OK 이면
+			{
+				uint16_t  iPassword = atoi(password);
+				if(iPassword != SettingValue[SETUP_PASSWORD])
+				{
+				   if(QuestionMessage() == FALSE)
+				   {
+						flagBreak = TRUE;
+				   }
+					nPos = 0;
+					FaultResetInitDisp();
+					PasswordDisp(nPos, password[nPos]);
+					MLinkButtonDisp(CONTROL_BUTTON_NOSELECT);
+				}
+				else
+				{
+					//yskim faultreset 실행
+					flagBreak = TRUE;
+				}
+			}
+			else
+			if(nPos == (CONTROL_PASSWORD_DIGIT + 1))	// Cancel 이면
+			{
+				flagBreak = TRUE;
+			}
+			else {}
+		}
+		else
+		if(key == KEY_CANCEL)
+		{
+			flagBreak = TRUE;
+		}
+		else {}
+
 		if(flagBreak == TRUE)
 		{
 			break;
@@ -593,12 +729,19 @@ void AcbMccbEvent(void)
 		else
 		if(key == KEY_ENTER)
 		{
-			if((nMenuPos == 1) && (gOldFaultEventIndex[gDeviceIndex] != gFaultEventIndex[gDeviceIndex]))
+			if(nMenuPos == INDEX_2)
 			{
-				gOldFaultEventIndex[gDeviceIndex] = gFaultEventIndex[gDeviceIndex];
-				FaultCountWrite();
+				FaultReset();
 			}
-			EventMenu(nMenuPos);
+			else
+			{
+				if((nMenuPos == 1) && (gOldFaultEventIndex[gDeviceIndex] != gFaultEventIndex[gDeviceIndex]))
+				{
+					gOldFaultEventIndex[gDeviceIndex] = gFaultEventIndex[gDeviceIndex];
+					FaultCountWrite();
+				}
+				EventMenu(nMenuPos);
+			}
 			InfoMenu(EVENT_MENU, nMenuPos, EVENT_MENU_COUNT);
 		}
 		else
@@ -627,7 +770,7 @@ void AcbMccbEvent(void)
 		else
 		if(key == KEY_COMM_ERROR)
 		{
-			(void)printf("COMM Error!!! gStatusSendEnd=%d, statusSendStep=%d, nSendStep=%d\n",gStatusSendEnd,statusSendStep,nSendStep); 
+			(void)printf("COMM Error!!! gStatusSendEnd=%d, statusSendStep=%d, nSendStep=%d\n",gStatusSendEnd,statusSendStep,nSendStep);
 			if(StatusRecvErrorProcess() == STATUS_SEND_ING)
 			{
 				nSendStep = 0;

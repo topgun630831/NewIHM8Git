@@ -651,7 +651,7 @@ EXTERN uint32_t uart2LastNDTR;
 //#define	TIMER_DIFF						500
 #define	TIMER_DIFF						1000
 #define	TIMER_DIFF_10SEC				10000
-#define TX_WAIT_TIME					20
+#define TX_WAIT_TIME					30
 
 //main.c
 #define	UART_TIMEOUT					0xFFFF

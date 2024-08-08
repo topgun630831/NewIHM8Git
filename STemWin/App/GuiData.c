@@ -284,7 +284,7 @@ char const* _achwset_label_text[SETUP_LANGUAGE_MAX][LINECOUNT_CONTENTS] = {
 	"Rated Current(In)",
 	"Comm. Address",
 	"Comm. Speed",
-	"Remote Control"
+	"Remote Status"
 	},
 	{
 	//"本地 / 远程",
@@ -301,7 +301,7 @@ char const* _achwset_label_text[SETUP_LANGUAGE_MAX][LINECOUNT_CONTENTS] = {
 	"Rated Current(In)",
 	"Comm. Address",
 	"Comm. Speed",
-	"Remote Control"
+	"Remote Status"
 	},
 };
 
@@ -312,7 +312,7 @@ char const* _achwset_MCCB_label_text[SETUP_LANGUAGE_MAX][LINECOUNT_CONTENTS] = {
 	"Rated Current(In)",
 	"Comm. Address",
 	"Comm. Speed",
-	"Remote Control"
+	"Remote Status"
 	},
 	{
 	//"本地 / 远程",
@@ -329,7 +329,7 @@ char const* _achwset_MCCB_label_text[SETUP_LANGUAGE_MAX][LINECOUNT_CONTENTS] = {
 	"Rated Current(In)",
 	"Comm. Address",
 	"Comm. Speed",
-	"Remote Control"
+	"Remote Status"
 	},
 };
 
@@ -491,13 +491,13 @@ char const* _acinfo_menu_text[SETUP_LANGUAGE_MAX][MENU_COUNT][MENU_ITEM_COUNT] =
 	{
 		{
 			"Device Info.",
-			"Operation Info."
-				""
+			"Operation Info.",
+			"Relay Status"
 		},
 		{
 			"System Event",
 			"Fault",
-			""
+			"Fault Reset"
 		},
 		{
 			"Display Infomation",
@@ -514,7 +514,7 @@ char const* _acinfo_menu_text[SETUP_LANGUAGE_MAX][MENU_COUNT][MENU_ITEM_COUNT] =
 		{
 			"系统事件",
 			"故障",
-			""
+			"Fault Reset"
 		},
 		{
 			"显示信息",
@@ -531,7 +531,7 @@ char const* _acinfo_menu_text[SETUP_LANGUAGE_MAX][MENU_COUNT][MENU_ITEM_COUNT] =
 		{
 			"System Event",
 			"Fault",
-			""
+			"Fault Reset"
 		},
 		{
 			"Display Infomation",
@@ -730,6 +730,12 @@ char const* _aFactoryReset_confirm_text[SETUP_LANGUAGE_MAX] = {
 	"Do you want to factory reset?",
 };
 
+char const* _aFaultReset_confirm_text[SETUP_LANGUAGE_MAX] = {
+	"Do you want to fault reset?",
+	"工厂重置?",
+	"Do you want to fault reset?",
+};
+
 char const* _accontrol_button_text[SETUP_LANGUAGE_MAX][STATUS_COUNT] = {
 	{
 		"OK",
@@ -767,7 +773,7 @@ char const* _acmlink_hwset_label_text[SETUP_LANGUAGE_MAX][MLINK_HWSET_COUNT] = {
 	{
 		"Comm. Address",
 		"Comm. Speed",
-		"Remote Control"
+		"Remote Status"
 	},
 	{
 		"通信地址",
@@ -777,7 +783,7 @@ char const* _acmlink_hwset_label_text[SETUP_LANGUAGE_MAX][MLINK_HWSET_COUNT] = {
 	{
 		"Comm. Address",
 		"Comm. Speed",
-		"Remote Control"
+		"Remote Status"
 	},
 };
 
@@ -985,7 +991,7 @@ char const* _acsetup_disp_setting_label_text[SETUP_LANGUAGE_MAX][SETUP_SETTING_N
 		"Comm. Speed",
 		"Terminate(UP)",
 		"Terminate(DOWN)",
-		"Gateway Use",
+//		"Gateway Use",
 		"Factory Reset"
 	},
 	{
@@ -999,7 +1005,7 @@ char const* _acsetup_disp_setting_label_text[SETUP_LANGUAGE_MAX][SETUP_SETTING_N
 		"通信速度",
 		"Terminate(UP)",
 		"Terminate(DOWN)",
-		"网关使用",
+//		"网关使用",
 		"工厂重置"
 	},
 	{
@@ -1013,7 +1019,7 @@ char const* _acsetup_disp_setting_label_text[SETUP_LANGUAGE_MAX][SETUP_SETTING_N
 		"Comm. Speed",
 		"Terminate(UP)",
 		"Terminate(DOWN)",
-		"Gateway Use",
+//		"Gateway Use",
 		"Factory Reset"
 	},
 };
@@ -1029,7 +1035,7 @@ char const* _acsetup_disp_setting_value_text[SETUP_LANGUAGE_MAX][SETUP_SETTING_N
 		"%s",
 		"%s",
 		"%s",
-		"%s",
+//		"%s",
 		""
 	},
 	{
@@ -1043,7 +1049,7 @@ char const* _acsetup_disp_setting_value_text[SETUP_LANGUAGE_MAX][SETUP_SETTING_N
 		"%s",
 		"%s",
 		"%s",
-		"%s",
+//		"%s",
 		""
 	},
 	{
@@ -1057,7 +1063,7 @@ char const* _acsetup_disp_setting_value_text[SETUP_LANGUAGE_MAX][SETUP_SETTING_N
 		"%s",
 		"%s",
 		"%s",
-		"%s",
+//		"%s",
 		""
 	},
 };

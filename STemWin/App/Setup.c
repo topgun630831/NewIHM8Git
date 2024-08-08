@@ -371,7 +371,7 @@ static void DisplaySettingMenu(int page, int pos, int flag)
 		y0 += SETTING_SUB_HEIGHT + 1;
 		if(page == INDEX_2)
 		{
-			count = INDEX_2;
+			count = INDEX_1;
 			offset = INDEX_9;
 		}
 		else
@@ -507,7 +507,7 @@ static void DisplaySettingMenu(int page, int pos, int flag)
 			}
 			(void)sprintf(buf, _acsetup_disp_setting_value_text[SettingValue[SETUP_LANGUAGE]][index], _aconoff_text[SettingValue[SETUP_LANGUAGE]][SettingValue[SETUP_TERM2_USE]]);
 		}
-		else
+/*		else
 		if(index == INDEX_9)
 		{
 			if(SettingValue[SETUP_GATEWAY_USE] != 1)
@@ -516,7 +516,7 @@ static void DisplaySettingMenu(int page, int pos, int flag)
 			}
 			(void)sprintf(buf, _acsetup_disp_setting_value_text[SettingValue[SETUP_LANGUAGE]][index], _acsetup_gateway_use[SettingValue[SETUP_LANGUAGE]][SettingValue[SETUP_GATEWAY_USE]]);
 		}
-		else
+*/		else
 		{
 			buf[0] = 0;
 		}
@@ -794,7 +794,7 @@ static void SettingMenuExec(int nPage, int nPos)
 	else
 	if(nPage == INDEX_2)
 	{
-		if(nPos == INDEX_0)
+/*		if(nPos == INDEX_0)
 		{
 			if(SettingInputString(&SettingValue[SETUP_GATEWAY_USE], SETUP_GATEWAY_USE_MAX, _acsetup_gateway_use[SettingValue[SETUP_LANGUAGE]], FALSE) == TRUE)
 			{
@@ -802,7 +802,7 @@ static void SettingMenuExec(int nPage, int nPos)
 			}
 		}
 		else
-		if(nPos == INDEX_1)
+*/		if(nPos == INDEX_0)
 		{
 			FactoryReset();
 		}
@@ -874,7 +874,7 @@ static void DisplaySetting(void)
 				else
 				{
 					nPage = 2;
-					nPos = INDEX_1;
+					nPos = 0;
 					DisplaySettingMenu(nPage, nPos, 1);
 				}
 			}
@@ -897,12 +897,13 @@ static void DisplaySetting(void)
 			else
 			if(nPage == INDEX_2)
 			{
-				if(nPos > 0)
+/*				if(nPos > 0)
 				{
 					nPos--;
 					DisplaySettingMenu(nPage, nPos, 0);
 				}
 				else
+*/
 //				if(nPos == 1)
 				{
 					nPos = INDEX_3;
@@ -951,13 +952,13 @@ static void DisplaySetting(void)
 			else
 			if(nPage == INDEX_2)
 			{
-				if(nPos < INDEX_1)
+/*				if(nPos < INDEX_1)
 				{
 					nPos++;
 					DisplaySettingMenu(nPage, nPos, 0);
 				}
 				else
-				if(nPos == INDEX_1)
+*/				if(nPos == INDEX_1)
 				{
 					nPos = 0;
 					nPage = 0;

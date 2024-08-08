@@ -406,8 +406,8 @@ extern S_CONNECT_SETTING ConnectSetting[DEVICE_MAX];
 #define INFO_MENU_WIDTH					460
 #define INFO_MENU_HEIGHT				88
 #define INFO_MENU_X0					50
-#define INFO_MENU_COUNT					2
-#define EVENT_MENU_COUNT				2
+#define INFO_MENU_COUNT					3
+#define EVENT_MENU_COUNT				3
 #define SETTING_MENU_COUNT				3
 #define	INFO_VALUE_X0					((STARTX_CONTENTS + WIDTH_LABEL) + 50)
 #define	INFO_VALUE_X1					((STARTX_VALUE + WIDTH_VALUE) - 1)
@@ -568,7 +568,7 @@ extern S_CONNECT_SETTING ConnectSetting[DEVICE_MAX];
 #define SETUP_SETTING_X1				((SETUP_SETTING_X0 + 265) - 1)
 
 #define SETUP_UPDOWN_X					240
-#define SETUP_SETTING_NUM				11
+#define SETUP_SETTING_NUM				10
 
 #define SETUP_TIMESET_COUNT				6
 #define SETUP_INPUT_Y0					96
@@ -726,6 +726,7 @@ extern char const* _actrip_text[SETUP_LANGUAGE_MAX][STATUS_COUNT];
 extern char const* _accontrol_confirm_text[SETUP_LANGUAGE_MAX][STATUS_COUNT];
 extern char const* _acacbMccbcontrol_confirm_text[SETUP_LANGUAGE_MAX];
 extern char const* _aFactoryReset_confirm_text[SETUP_LANGUAGE_MAX];
+extern char const* _aFaultReset_confirm_text[SETUP_LANGUAGE_MAX];
 extern char const* _accontrol_button_text[SETUP_LANGUAGE_MAX][STATUS_COUNT];
 extern char const* _acpassword_input_text;
 
