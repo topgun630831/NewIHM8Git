@@ -73,8 +73,8 @@ static void EnglishInitButton(WM_HWIN hWin)
 	WINDOW_SetBkColor(hWin, GUI_MAKE_COLOR(COLOR_MAIN_BG));
 	hItem = WM_GetDialogItem(hWin, ID_BUTTON_0);
 	(void)BUTTON_SetText(hItem, "");
-	BUTTON_SetBitmap(hItem, BUTTON_BI_UNPRESSED, &bmbtn_hwset_normal);
-	BUTTON_SetBitmap(hItem, BUTTON_BI_PRESSED, &bmbtn_hwset_selected);
+	BUTTON_SetBitmap(hItem, BUTTON_BI_UNPRESSED, &bmHWINFO_enable);
+	BUTTON_SetBitmap(hItem, BUTTON_BI_PRESSED, &bmHWINFO_Focus);
 //	BUTTON_SetPressed(hItem, 1);
 	ButtonItem[HW_SET] = hItem;
 
@@ -108,8 +108,8 @@ static void EnglishInitButton(WM_HWIN hWin)
 	}
 	else
 	{
-		BUTTON_SetBitmap(hItem, BUTTON_BI_UNPRESSED, &bmbtn_relayset_normal);
-		BUTTON_SetBitmap(hItem, BUTTON_BI_PRESSED, &bmbtn_relayset_selected);
+		BUTTON_SetBitmap(hItem, BUTTON_BI_UNPRESSED, &bmRELAYINFO_enable);
+		BUTTON_SetBitmap(hItem, BUTTON_BI_PRESSED, &bmRELAYINFO_Focus);
 		ButtonItem[RELAY_SET] = hItem;
 	}
 
@@ -210,8 +210,8 @@ static void RussianInitButton(WM_HWIN hWin)
 	WINDOW_SetBkColor(hWin, GUI_MAKE_COLOR(COLOR_MAIN_BG));
 	hItem = WM_GetDialogItem(hWin, ID_BUTTON_0);
 	(void)BUTTON_SetText(hItem, "");
-	BUTTON_SetBitmap(hItem, BUTTON_BI_UNPRESSED, &bmbtn_hwset_normal);
-	BUTTON_SetBitmap(hItem, BUTTON_BI_PRESSED, &bmbtn_hwset_selected);
+	BUTTON_SetBitmap(hItem, BUTTON_BI_UNPRESSED, &bmHWINFO_enable);
+	BUTTON_SetBitmap(hItem, BUTTON_BI_PRESSED, &bmHWINFO_Focus);
 //	BUTTON_SetPressed(hItem, 1);
 	ButtonItem[HW_SET] = hItem;
 
@@ -245,8 +245,8 @@ static void RussianInitButton(WM_HWIN hWin)
 	}
 	else
 	{
-		BUTTON_SetBitmap(hItem, BUTTON_BI_UNPRESSED, &bmbtn_relayset_normal);
-		BUTTON_SetBitmap(hItem, BUTTON_BI_PRESSED, &bmbtn_relayset_selected);
+		BUTTON_SetBitmap(hItem, BUTTON_BI_UNPRESSED, &bmRELAYINFO_enable);
+		BUTTON_SetBitmap(hItem, BUTTON_BI_PRESSED, &bmRELAYINFO_Focus);
 		ButtonItem[RELAY_SET] = hItem;
 	}
 
@@ -358,7 +358,6 @@ static void AcbMccbMenu(int nPos)
 	if(nPos == CONTROL)
 	{
 		AcbMccbControl();
-		(void)printf("AcbMccbControl end....\n");
 	}
 	else {}
 }
@@ -431,7 +430,7 @@ static void MlinkMenu(int nPos)
 			else
 			if(key == KEY_COMM_ERROR)
 			{
-				(void)printf("COMM Error!! gStatusSendEnd=%d, statusSendStep=%d\n",gStatusSendEnd,statusSendStep); 
+				(void)printf("COMM Error!! gStatusSendEnd=%d, statusSendStep=%d\n",gStatusSendEnd,statusSendStep);
 				if(StatusRecvErrorProcess() == STATUS_SEND_ING)
 				{
 					nSendStep = 0;
@@ -644,7 +643,7 @@ WM_HWIN CreateMenu(E_DEVICE_TYPE DeviceType)
 		else
 		if(key == KEY_COMM_ERROR)
 		{
-			(void)printf("COMM Error!! gStatusSendEnd=%d, statusSendStep=%d\n",gStatusSendEnd,statusSendStep); 
+			(void)printf("COMM Error!! gStatusSendEnd=%d, statusSendStep=%d\n",gStatusSendEnd,statusSendStep);
 			if(StatusRecvErrorProcess() == STATUS_SEND_ING)
 			{
 				nSendStep = 0;
@@ -665,7 +664,7 @@ WM_HWIN CreateMenu(E_DEVICE_TYPE DeviceType)
 			break;
 		}
 	}
-	
+
 	(void)printf("\nExit\n");
 	return hWin;
 }

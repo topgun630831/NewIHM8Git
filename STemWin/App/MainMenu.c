@@ -294,7 +294,6 @@ static void AcbMccbOverView(void)
 
 	(void)GUI_SetFont(&GUI_Font32B_ASCII);
 	GUI_SetColor(COLOR_LABEL);
-	GUI_SetColor(COLOR_LABEL);
 	rect.x0 = ACBMCCB_LABEL_X0;
 	rect.y0 = ACBMCCB_LABEL_Y0;
 	rect.x1 = ACBMCCB_LABEL_X1;
@@ -1685,30 +1684,30 @@ void MasterModbusProcess(bool bInChecking)
 				}
 				else
 				{
-/*	*/				(void)printf("g_bRecvVariable  Read!!!(%u, %d)\n", g_sendOwner, g_modbusRxIndex);
+/*					(void)printf("g_bRecvVariable  Read!!!(%u, %d)\n", g_sendOwner, g_modbusRxIndex);
 					for(int i = 0; i < g_modbusRxIndex; i++)
 					{
 						  (void)printf("%02X ", g_modbusRxBuff[i]);
 					}
 					(void)printf("\n");
-/* */					// uint16_t index = wModbusWaitLen;
+ */					// uint16_t index = wModbusWaitLen;
 					uint8_t cnt = g_modbusRxBuff[INDEX_7];
-printf("cnt=%d\n", cnt);
+//printf("cnt=%d\n", cnt);
 					bRecvOk = true;
 					for(uint8_t i = 0; i < cnt; i++)
 					{
 						if(g_modbusRxIndex < (pos + 2))		// Object ID + Object Length
 						{
 							bRecvOk = false;
-printf("[1]\n");
+//printf("[1]\n");
 							break;
 						}
 						uint8_t len = g_modbusRxBuff[pos+1];
-printf("i=%d, len=%d\n", i, len);
+//printf("i=%d, len=%d\n", i, len);
 						if(g_modbusRxIndex < (pos + len + 1))
 						{
 							bRecvOk = false;
-printf("[2]\n");
+//printf("[2]\n");
 							break;
 						}
 						pos += len + 2;

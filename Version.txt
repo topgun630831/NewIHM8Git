@@ -304,3 +304,11 @@ Recv Done!!!!(10194)
 Master To Slave Send Frame!!!(10201)
 MasterModbusSend(10217)
 
+
+
+Bitmap Conversion 방법
+1)png -> bmp로 변환
+2)D:\STM32F4\DisplayUnit\Middlewares\ST\STemWin\Software\BmpCvtST.exe 로 열어
+3)Save As...
+4) "C" bitmap file (*.c) 선택
+5) format을 High color (565) compressed 선택

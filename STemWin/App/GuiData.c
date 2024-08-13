@@ -503,6 +503,11 @@ char const* _acinfo_menu_text[SETUP_LANGUAGE_MAX][MENU_COUNT][MENU_ITEM_COUNT] =
 			"Display Infomation",
 			"Display Setting",
 			"Display Connect Setting"
+		},
+		{
+			"STU IO",
+			"TRIO IO",
+			"TRIO TEMP"
 		}
 	},
 	{

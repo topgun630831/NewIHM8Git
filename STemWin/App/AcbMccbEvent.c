@@ -732,6 +732,9 @@ void AcbMccbEvent(void)
 			if(nMenuPos == INDEX_2)
 			{
 				FaultReset();
+				DispStatus();
+				gCommOldStatus[gDeviceIndex] = -1;
+				CommTimerInit();
 			}
 			else
 			{

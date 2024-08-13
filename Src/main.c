@@ -1676,8 +1676,10 @@ void PCF2127_readTime(uint8_t flag)
 //PRQA S 1503 1
 uint16_t RTCBatteryStatus(void)
 {
-	(void)printf("RTCBatteryStatus => ");
-	return(PCF2129_read_register(Control_3) & RTCBATTERYSTATUS_MASK);
+	uint16_t ret = PCF2129_read_register(Control_3);
+	if(gDebug)
+		(void)printf("RTCBatteryStatus => %04X", ret);
+	return(ret & RTCBATTERYSTATUS_MASK);
 }
 
 #if __WATCHDOG__ //[[ by kys.2018.06.17_BEGIN -- watchdog

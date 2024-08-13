@@ -54,6 +54,12 @@ static void AcbMccbControlSend(void);
 static int ControlCheck(void);
 static void AcbMccbIoValueDisp(void);
 static void AcbMccbControlDisp(void);
+static void StuIo(void);
+
+static void TrioTempValueDisp(void);
+static void TrioTempSend(void);
+static void TrioTempDisp(void);
+static void TrioTemp(void);
 
 static GUI_COLOR colorOffFillColor[OPEN_CLOSE_TRIP] = {
 	CB_OPEN_OFF_COLOR,
@@ -393,7 +399,7 @@ static void AcbMccbControlDisp(void)
 		GUI_DrawRectEx(&rect);
 		LanguageSelect(FONT20);
 	}
-			
+
 //	(void)GUI_SetFont(&GUI_Font20B_ASCII);
 //	GUI_DispStringInRect(_acacbmccb_cbstatus_control_text[ConnectSetting[gDeviceIndex].DeviceType], &rectDescLocal, GUI_TA_LEFT | GUI_TA_VCENTER);
 	GUI_DispStringInRect(_acacbmccb_cbstatus_control_text[SettingValue[SETUP_LANGUAGE]], &rectDescLocal, GUI_TA_LEFT | GUI_TA_VCENTER);
@@ -524,7 +530,7 @@ static void AcbMccbControlDisp(void)
 //};
 
 // PRQA S 1503 1
-void AcbMccbControl(void)
+void StuIo(void)
 {
 	uint8_t bRecvData;
 	int flagBreak = FALSE;
@@ -558,7 +564,7 @@ void AcbMccbControl(void)
 					char buf[MESSAGE_BUF_SIZE];
 					uint8_t status = AcbMccbcbStatus;
 					uint16_t address=CB_STATUS_NOT_TRIO_ADDR;
-					
+
 					if(ConnectSetting[gDeviceIndex].DeviceType == DEVICE_MCCB)
 					{
 						if(status == CB_STATUS_INPUT_FAULT)
@@ -637,7 +643,7 @@ void AcbMccbControl(void)
 		if(key == KEY_COMM_ERROR)
 		{
 
-			(void)printf("COMM Error!!! gStatusSendEnd=%d, statusSendStep=%d, nSendStep=%d\n",gStatusSendEnd,statusSendStep,nSendStep); 
+			(void)printf("COMM Error!!! gStatusSendEnd=%d, statusSendStep=%d, nSendStep=%d\n",gStatusSendEnd,statusSendStep,nSendStep);
 			if(StatusRecvErrorProcess() == STATUS_SEND_ING)
 			{
 				nSendStep = 0;
@@ -651,14 +657,14 @@ void AcbMccbControl(void)
 					statusSendStep = 0;
 					nSendStep = 0;
 			}
-/*			
-			(void)printf("COMM Error!!! gStatusSendEnd=%d, statusSendStep=%d, nSendStep=%d\n",gStatusSendEnd,statusSendStep,nSendStep); 
+/*
+			(void)printf("COMM Error!!! gStatusSendEnd=%d, statusSendStep=%d, nSendStep=%d\n",gStatusSendEnd,statusSendStep,nSendStep);
 			if(gAcbMccbSend == TRUE)
 			{
 				gAcbMccbSend =FALSE;
 				statusSendStep = 0;
 				gStatusSendEnd = STATUS_SEND_ING;
-			}				
+			}
 			if(StatusRecvErrorProcess() == STATUS_SEND_ING)
 			{
 				nSendStep = 0;
@@ -686,4 +692,486 @@ void AcbMccbControl(void)
 	}
 }
 
+#define TRIO_TEMP_MAX					4
+
+#define TRIO_TEMP_LABEL_HEIGHT			34
+#define TRIO_TEMP_LABEL_WIDTH			30
+#define TRIO_TEMP_LABEL_DISTANCE		57
+
+#define TRIO_TEMP_LABEL_X0				29
+#define TRIO_TEMP_LABEL_X1				((TRIO_TEMP_LABEL_X0 + TRIO_TEMP_LABEL_WIDTH) - 1)
+#define TRIO_TEMP_LABEL_Y0				90
+#define TRIO_TEMP_LABEL_Y1				((TRIO_TEMP_LABEL_Y0 + TRIO_TEMP_LABEL_HEIGHT) - 1)
+
+
+
+#define TRIO_TEMP_DIVITION_LINE_X0		85
+#define TRIO_TEMP_DIVITION_LINE_Y0		74
+#define TRIO_TEMP_DIVITION_LINE_Y1		TRIO_TEMP_DIVITION_LINE_Y0 + 226
+#define TRIO_TEMP_DIVITION_LINE_X_INC	64
+#define TRIO_TEMP_DIVITION_LINE_CNT		5
+
+#define TRIO_TEMP_TEMP_TEXT_X0			24
+#define TRIO_TEMP_TEMP_TEXT_X1			38
+#define TRIO_TEMP_TEMP_TEXT_Y1			14
+
+#define TRIO_TEMP_X_TEXT_X0				137
+#define TRIO_TEMP_X_TEXT_Y				52
+#define TRIO_TEMP_X_TEXT_X1				24
+#define TRIO_TEMP_X_TEXT_Y1				14
+
+#define TRIO_TEMP_BAR_X0				88
+#define TRIO_TEMP_BAR_Y0				84
+#define TRIO_TEMP_BAR_X1				TRIO_TEMP_BAR_X0 + 10
+#define TRIO_TEMP_BAR_Y1				TRIO_TEMP_BAR_Y0 + 35
+#define TRIO_TEMP_BAR_X_DISTANCE		12
+#define TRIO_TEMP_BAR_Y_DISTANCE		56
+
+#define TRIO_TEMP_UNIT_X				435
+#define TRIO_TEMP_UNIT_Y				95
+
+#define TRIO_TEMP_VALUE_X0				366
+#define TRIO_TEMP_VALUE_Y0				86
+#define TRIO_TEMP_VALUE_X1				TRIO_TEMP_VALUE_X0 + 65
+#define TRIO_TEMP_VALUE_Y1				TRIO_TEMP_VALUE_Y0 + 35
+
+#define TRIO_TEMP_READ_ADDR				186
+#define TRIO_TEMP_READ_LEN				26
+#define I_REGISTER_186					186
+
+#define	VALUE150						150
+#define	VALUE100						100
+
+static void TrioValueValueDisp(void)
+{
+	static const GUI_COLOR _BarColor[INDEX_4] = {
+		0x0000ff, 0x00deff, 0x0fce00, 0x3a3939
+	};
+	static float	aiValue[TRIO_TEMP_MAX];
+	uint16_t		barGraph[TRIO_TEMP_MAX];
+
+	if(gCommStatus[gDeviceIndex] == COMM_ERROR)
+	{
+		return;
+	}
+	int index =  I_REGISTER_186;
+	GUI_SetBkColor(COLOR_MAIN_BG);
+	(void)GUI_SetFont(&GUI_Font32B_ASCII);
+	GUI_SetColor(COLOR_VALUE);
+	GUI_RECT rect;
+	rect.x0 = TRIO_TEMP_VALUE_X0;
+	rect.x1 = TRIO_TEMP_VALUE_X1;
+	rect.y0 = TRIO_TEMP_VALUE_Y0;
+	rect.y1 = TRIO_TEMP_VALUE_Y1;
+
+	aiValue[0] = 59.9;
+	aiValue[1] = 99.999;
+	aiValue[2] = 100.1;
+	aiValue[3] = 150;
+	for(int i = 0; i < TRIO_TEMP_MAX; i++)
+	{
+		char buf[20];
+//		aiValue[i] =  ModbusGetFloat(index);
+printf("i=%d, value=%f\n",i, aiValue[i]);
+		GUI_ClearRect(rect.x0, rect.y0, rect.x1, rect.y1);
+		sprintf(buf, "%3d",(int)aiValue[i]);
+		GUI_DispStringInRect(buf, &rect, (GUI_TA_RIGHT | GUI_TA_VCENTER));
+		rect.y0 += TRIO_TEMP_LABEL_DISTANCE;
+		rect.y1 += TRIO_TEMP_LABEL_DISTANCE;
+		index +=  INDEX_2;
+		if(aiValue == 0)
+			barGraph[i] = 0;
+		else
+			barGraph[i] = (int)(aiValue[i] / INDEX_10) + 1;
+	}
+	int y0 = TRIO_TEMP_BAR_Y0;
+	int y1 = TRIO_TEMP_BAR_Y1;
+	for(int i = 0; i < TRIO_TEMP_MAX; i++)
+	{
+		if(aiValue[i] >= VALUE150)
+		{
+			GUI_SetColor(_BarColor[INDEX_0]);
+		}
+		else
+		if(aiValue[i] >= VALUE100)
+		{
+			GUI_SetColor(_BarColor[INDEX_1]);
+		}
+		else
+		{
+			GUI_SetColor(_BarColor[INDEX_2]);
+		}
+		int x0 = TRIO_TEMP_BAR_X0;
+		int x1 = TRIO_TEMP_BAR_X1;
+		for(int j = 0; j < INDEX_20; j++)
+		{
+			if(barGraph[i] <= j)
+			{
+				GUI_SetColor(_BarColor[INDEX_3]);
+			}
+			GUI_FillRect(x0, y0, x1, y1);
+			x0 += TRIO_TEMP_BAR_X_DISTANCE;
+			x1 += TRIO_TEMP_BAR_X_DISTANCE;
+			if((j == INDEX_4) || (j ==INDEX_9) || (j ==INDEX_14))
+			{
+				x0 += INDEX_4;
+				x1 += INDEX_4;
+			}
+		}
+		y0 += TRIO_TEMP_BAR_Y_DISTANCE;
+		y1 += TRIO_TEMP_BAR_Y_DISTANCE;
+	}
+}
+
+static void TrioTempSend(void)
+{
+	if(StatusSend() == STATUS_SEND_ING)
+	{
+		return;
+	}
+	ModbusSendFrame(ConnectSetting[gDeviceIndex].Address, INPUT_REGISTER, ACB_CONTROL_READ_ADDR, ACB_CONTROL_READ_LEN);	// 30183 ~ 30208
+}
+
+
+static void TrioTempDisp(void)
+{
+	GUI_SetBkColor(COLOR_MAIN_BG);
+	GUI_ClearRect(X0_MAIN, Y0_MAIN, X1_MAIN, Y1_MAIN);
+	(void)GUI_SetFont(&GUI_Font13_ASCII);
+
+	GUI_SetColor(COLOR_LABEL);
+	GUI_RECT rect;
+	rect.x0 = TRIO_TEMP_TEMP_TEXT_X0;
+	rect.x1 = TRIO_TEMP_TEMP_TEXT_X0 + TRIO_TEMP_TEMP_TEXT_X1;
+	rect.y0 = TRIO_TEMP_X_TEXT_Y;
+	rect.y1 = TRIO_TEMP_X_TEXT_Y + TRIO_TEMP_TEMP_TEXT_Y1;
+	GUI_DispStringInRect("TEMP", &rect, (GUI_TA_HCENTER | GUI_TA_VCENTER));
+
+	GUI_SetColor(GUI_WHITE);
+	rect.x0 = TRIO_TEMP_X_TEXT_X0;
+	rect.x1 = TRIO_TEMP_X_TEXT_X0 + TRIO_TEMP_X_TEXT_X1;
+ 	for(int i = 0; i < TRIO_TEMP_DIVITION_LINE_CNT-1; i++)
+	{
+		char buf[10];
+		sprintf(buf, "%d", (i+1)*50);
+		GUI_DispStringInRect(buf, &rect, (GUI_TA_HCENTER | GUI_TA_VCENTER));
+		rect.x0 += TRIO_TEMP_DIVITION_LINE_X_INC;
+		rect.x1 += TRIO_TEMP_DIVITION_LINE_X_INC;
+	}
+
+	GUI_SetColor(COLOR_LINE);
+	rect.x0 = TRIO_TEMP_DIVITION_LINE_X0;
+	rect.y0 = TRIO_TEMP_DIVITION_LINE_Y0;
+	rect.y1 = TRIO_TEMP_DIVITION_LINE_Y1;
+	(void)GUI_SetPenSize(PENSIZE_LINE);
+	for(int i = 0; i < TRIO_TEMP_DIVITION_LINE_CNT; i++)
+	{
+		GUI_DrawVLine(rect.x0, rect.y0, rect.y1);
+		rect.x0 += TRIO_TEMP_DIVITION_LINE_X_INC;
+	}
+
+	(void)GUI_SetFont(&GUI_Font32B_ASCII);
+	GUI_SetColor(COLOR_LABEL);
+	rect.x0 = TRIO_TEMP_LABEL_X0;
+	rect.y0 = TRIO_TEMP_LABEL_Y0;
+	rect.x1 = TRIO_TEMP_LABEL_X1;
+	rect.y1 = TRIO_TEMP_LABEL_Y1;
+
+	for(int i = 0; i < TRIO_TEMP_MAX; i++)
+	{
+		char buf[10];
+		sprintf(buf,"#%d", i+1);
+		GUI_DispStringInRect(buf,  &rect, GUI_TA_HCENTER | GUI_TA_VCENTER);
+		rect.y0 += TRIO_TEMP_LABEL_DISTANCE;
+		rect.y1 += TRIO_TEMP_LABEL_DISTANCE;
+	}
+
+	(void)GUI_SetFont(&GUI_Font16B_1);
+	GUI_SetColor(COLOR_DISABLE);
+	int y0 = TRIO_TEMP_BAR_Y0;
+	int y1 = TRIO_TEMP_BAR_Y1;
+
+	printf("Bar \n");
+	for(int i = 0; i < TRIO_TEMP_MAX; i++)
+	{
+		int x0 = TRIO_TEMP_BAR_X0;
+		int x1 = TRIO_TEMP_BAR_X1;
+		for(int j = 0; j < INDEX_20; j++)
+		{
+			GUI_FillRect(x0, y0, x1, y1);
+			x0 += TRIO_TEMP_BAR_X_DISTANCE;
+			x1 += TRIO_TEMP_BAR_X_DISTANCE;
+			if((j == INDEX_4) || (j ==INDEX_9) || (j ==INDEX_14))
+			{
+				x0 += INDEX_4;
+				x1 += INDEX_4;
+			}
+		}
+		y0 += TRIO_TEMP_BAR_Y_DISTANCE;
+		y1 += TRIO_TEMP_BAR_Y_DISTANCE;
+	}
+
+	int x = TRIO_TEMP_UNIT_X;
+	int y = TRIO_TEMP_UNIT_Y;
+	for(int i = 0; i < TRIO_TEMP_MAX; i++)
+	{
+		GUI_DrawBitmap(&bmCelsius, x, y);
+		y += TRIO_TEMP_LABEL_DISTANCE;
+	}
+
+}
+
+void TrioTemp(void)
+{
+	uint8_t bRecvData;
+	int flagBreak = FALSE;
+	bRecvData = FALSE;
+	bUpdateFirst = TRUE;
+	TrioTempDisp();
+	gStatusSendEnd = STATUS_SEND_ING;
+	statusSendStep = 0;
+	nSendStep = 0;
+	TrioTempSend();
+	int bCommError = gCommStatus[gDeviceIndex];
+	while (1)
+    {
+		E_KEY key = GetKey();
+
+		if(key == TIME_OUT)
+		{
+			gStatusSendEnd = STATUS_SEND_ING;
+			nSendStep = 0;
+			TrioTempSend();
+		}
+		else
+		if(key == KEY_SETUP)
+		{
+			if(Setup() == SETUP_CHANGED)
+			{
+				flagBreak = TRUE;
+			}
+			AcbMccbControlDisp();
+			gCommOldStatus[gDeviceIndex] = -1;
+			TrioTempSend();
+		}
+		else
+		if(key == DATA_RECV)
+		{
+			(void)printf("DATA_RECV gStatusSendEnd=%d\n",gStatusSendEnd);
+			if(bCommError == COMM_ERROR)
+			{
+				TrioTempDisp();
+				bCommError = COMM_OK;
+			}
+			if(gStatusSendEnd == STATUS_SEND_ING)
+			{
+				StatusRecv();
+				TrioTempSend();
+			}
+			else
+			{
+				TrioValueValueDisp();
+				g_bRecvAllDone = TRUE;
+				nSendStep = 0;
+				statusSendStep = 0;
+				gStatusSendEnd = STATUS_SEND_ING;
+				bRecvData = TRUE;
+			}
+		}
+		else
+		if(key == KEY_CANCEL)
+		{
+			flagBreak = TRUE;
+		}
+		else
+		if(key == KEY_COMM_ERROR)
+		{
+
+			(void)printf("COMM Error!!! gStatusSendEnd=%d, statusSendStep=%d, nSendStep=%d\n",gStatusSendEnd,statusSendStep,nSendStep);
+			if(StatusRecvErrorProcess() == STATUS_SEND_ING)
+			{
+				nSendStep = 0;
+			}
+			else
+			{
+					TrioTempSend();
+					g_bRecvAllDone = TRUE;
+					(void)printf("All done!!!\n");
+					gStatusSendEnd = STATUS_SEND_ING;
+					statusSendStep = 0;
+					nSendStep = 0;
+			}
+/*
+			(void)printf("COMM Error!!! gStatusSendEnd=%d, statusSendStep=%d, nSendStep=%d\n",gStatusSendEnd,statusSendStep,nSendStep);
+			if(gAcbMccbSend == TRUE)
+			{
+				gAcbMccbSend =FALSE;
+				statusSendStep = 0;
+				gStatusSendEnd = STATUS_SEND_ING;
+			}
+			if(StatusRecvErrorProcess() == STATUS_SEND_ING)
+			{
+				nSendStep = 0;
+			}
+			else
+			{
+				gAcbMccbSend = TRUE;
+				TrioTempSend();
+			}
+*/
+		}
+		else
+		if(key == COMM_STAT_ERROR)
+		{
+			bUpdateFirst = TRUE;
+			(void)printf("COMM_STAT_ERROR\n\n");
+			bCommError = COMM_ERROR;
+			TrioTempDisp();
+		}
+		else {}
+		if(flagBreak == TRUE)
+		{
+			break;
+		}
+	}
+}
+
+/*********************************************************************
+*
+*       Public code
+*
+**********************************************************************
+*/
+/*********************************************************************
+*
+*       Createstatus_window
+*/
+
+// PRQA S 1503 2
+// PRQA S 1505 1
+void AcbMccbControl(void)
+{
+	int flagBreak = FALSE;
+	nMenuPos = 0;
+
+	GUI_ClearRect(X0_MAIN, Y0_MAIN, X1_MAIN, Y1_MAIN);
+	InfoMenu(CONTROL_MENU, nMenuPos, EVENT_MENU_COUNT);
+
+	//(void)StatusSend();
+
+	nSendStep = 0;
+
+	while (1)
+    {
+		E_KEY key = GetKey();
+
+		if(key == TIME_OUT)
+		{
+			nSendStep = 0;
+			statusSendStep = 0;
+			gStatusSendEnd = STATUS_SEND_ING;
+			(void)StatusSend();
+		}
+		else
+		if(key == KEY_SETUP)
+		{
+			if(Setup() == SETUP_CHANGED)
+			{
+				flagBreak = TRUE;
+			}
+			GUI_ClearRect(X0_MAIN, Y0_MAIN, X1_MAIN, Y1_MAIN);
+			InfoMenu(CONTROL_MENU, nMenuPos, EVENT_MENU_COUNT);
+			gCommOldStatus[gDeviceIndex] = -1;
+		}
+		else
+		if(key == KEY_UP)
+		{
+			if(nMenuPos > 0)
+			{
+				nMenuPos--;
+			}
+			else
+			{
+				nMenuPos = EVENT_MENU_COUNT - 1;
+			}
+			InfoMenu(CONTROL_MENU, nMenuPos, EVENT_MENU_COUNT);
+		}
+		else
+		if(key == KEY_DOWN)
+		{
+			if(nMenuPos < (EVENT_MENU_COUNT-1))
+			{
+				nMenuPos++;
+			}
+			else
+			{
+				nMenuPos = 0;
+			}
+			InfoMenu(CONTROL_MENU, nMenuPos, EVENT_MENU_COUNT);
+		}
+		else
+		if(key == KEY_ENTER)
+		{
+			if(nMenuPos == INDEX_0)
+			{
+				StuIo();
+			}
+			else
+			if(nMenuPos == INDEX_1)
+			{
+				StuIo();
+			}
+			if(nMenuPos == INDEX_2)
+			{
+				TrioTemp();
+			}
+			InfoMenu(CONTROL_MENU, nMenuPos, EVENT_MENU_COUNT);
+		}
+		else
+		if(key == DATA_RECV)
+		{
+//			(void)printf("DATA_RECV\n");
+			StatusRecv();
+			if(gStatusSendEnd == STATUS_SEND_ING)
+			{
+				(void)EventSend(FALSE);
+			}
+			else
+			{
+				g_bRecvAllDone = TRUE;
+//				(void)printf("All done!!!\n");
+				nSendStep = 0;
+				statusSendStep = 0;
+				gStatusSendEnd = STATUS_SEND_ING;
+			}
+		}
+		else
+		if(key == KEY_CANCEL)
+		{
+			flagBreak = TRUE;
+		}
+		else
+		if(key == KEY_COMM_ERROR)
+		{
+			(void)printf("COMM Error!!! gStatusSendEnd=%d, statusSendStep=%d, nSendStep=%d\n",gStatusSendEnd,statusSendStep,nSendStep);
+			if(StatusRecvErrorProcess() == STATUS_SEND_ING)
+			{
+				nSendStep = 0;
+			}
+			else
+			{
+				g_bRecvAllDone = TRUE;
+				(void)printf("All done!!!\n");
+				gStatusSendEnd = STATUS_SEND_ING;
+				statusSendStep = 0;
+				nSendStep = 0;
+			}
+		}
+		else {}
+		if(flagBreak == TRUE)
+		{
+			break;
+		}
+	}
+}
 /*************************** End of file ****************************/

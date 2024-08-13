@@ -1088,7 +1088,7 @@ static void DisplayDeviceDisp(void)
 	while (1)
 	{
 		E_KEY key = GetKey();
-		if(key == TIME_OUT)
+		if(key == SECOND_TIMER)
 		{
 //			GUI_RECT rect;
 			rect.x0 = SETTING_STARTX_LABEL;

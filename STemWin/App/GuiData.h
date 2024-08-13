@@ -314,7 +314,8 @@ extern S_CONNECT_SETTING ConnectSetting[DEVICE_MAX];
 #define INFO_MENU				0
 #define EVENT_MENU				1
 #define SETTING_MENU			2
-#define MENU_COUNT				3
+#define CONTROL_MENU			3
+#define MENU_COUNT				4
 #define MENU_ITEM_COUNT			3
 
 // Status
@@ -790,14 +791,14 @@ extern const U8 _acImageStatusDisconnected[CONNECT_IMAGE_SIZE];
 extern const U8 _acUp[UPDOWN_IMAGE_SIZE];
 extern const U8 _acDown[UPDOWN_IMAGE_SIZE];
 
-extern GUI_CONST_STORAGE GUI_BITMAP bmbtn_hwset_selected;
-extern GUI_CONST_STORAGE GUI_BITMAP bmbtn_hwset_normal;
+extern GUI_CONST_STORAGE GUI_BITMAP bmHWINFO_enable;
+extern GUI_CONST_STORAGE GUI_BITMAP bmHWINFO_Focus;
 extern GUI_CONST_STORAGE GUI_BITMAP bmbtn_measurement_selected;
 extern GUI_CONST_STORAGE GUI_BITMAP bmbtn_measurement_normal;
 extern GUI_CONST_STORAGE GUI_BITMAP bmbtn_systeminfo_selected;
 extern GUI_CONST_STORAGE GUI_BITMAP bmbtn_systeminfo_normal;
-extern GUI_CONST_STORAGE GUI_BITMAP bmbtn_relayset_selected;
-extern GUI_CONST_STORAGE GUI_BITMAP bmbtn_relayset_normal;
+extern GUI_CONST_STORAGE GUI_BITMAP bmRELAYINFO_enable;
+extern GUI_CONST_STORAGE GUI_BITMAP bmRELAYINFO_Focus;
 extern GUI_CONST_STORAGE GUI_BITMAP bmbtn_events_selected;
 extern GUI_CONST_STORAGE GUI_BITMAP bmbtn_events_normal;
 extern GUI_CONST_STORAGE GUI_BITMAP bmcontrol_selected;
@@ -831,6 +832,7 @@ extern GUI_CONST_STORAGE GUI_BITMAP bmbtn_IOset_normal_ch;
 extern GUI_CONST_STORAGE GUI_BITMAP bmbtn_IOset_selected_ch;
 extern GUI_CONST_STORAGE GUI_BITMAP bmcontrol_btn_normal_ch;
 extern GUI_CONST_STORAGE GUI_BITMAP bmcontrol_btn_selected_ch;
+extern GUI_CONST_STORAGE GUI_BITMAP bmCelsius;
 
 
 extern GPIO_PinState KeyStatus[KEY_MAX];
@@ -855,7 +857,6 @@ extern char const* acSystemEventSettingChange[SETUP_LANGUAGE_MAX][SYSTEM_EVENT_S
 extern char const* acSystemEventSettingChangeSmall[SETUP_LANGUAGE_MAX][SYSTEM_EVENT_SETTING_CHANGE_COUNT][SYSTEM_EVENT_SETTING_CHANGE_SMALL_COUNT];
 extern char const* acSystemEventSystemChange[SETUP_LANGUAGE_MAX][SYSTEM_EVENT_SYSTEM_CHANGE_COUNT];
 extern char const* acSystemEventSystemChangeSmall[SETUP_LANGUAGE_MAX][SYSTEM_EVENT_SYSTEM_CHANGE_COUNT][SYSTEM_EVENT_SYSTEM_CHANGE_SMALL_COUNT];
-
 
 E_KEY GetKey(void);
 
