@@ -711,9 +711,9 @@ void StuIo(void)
 #define TRIO_TEMP_DIVITION_LINE_X_INC	64
 #define TRIO_TEMP_DIVITION_LINE_CNT		5
 
-#define TRIO_TEMP_TEMP_TEXT_X0			24
-#define TRIO_TEMP_TEMP_TEXT_X1			38
-#define TRIO_TEMP_TEMP_TEXT_Y1			14
+#define TRIO_TEMP_TEXT_X0				24
+#define TRIO_TEMP_TEXT_X1				38
+#define TRIO_TEMP_TEXT_Y1				14
 
 #define TRIO_TEMP_X_TEXT_X0				137
 #define TRIO_TEMP_X_TEXT_Y				52
@@ -742,7 +742,8 @@ void StuIo(void)
 #define	VALUE150						150
 #define	VALUE100						100
 
-static void TrioValueValueDisp(void)
+
+static void TrioTempValueDisp(void)
 {
 	static const GUI_COLOR _BarColor[INDEX_4] = {
 		0x0000ff, 0x00deff, 0x0fce00, 0x3a3939
@@ -764,10 +765,11 @@ static void TrioValueValueDisp(void)
 	rect.y0 = TRIO_TEMP_VALUE_Y0;
 	rect.y1 = TRIO_TEMP_VALUE_Y1;
 
-	aiValue[0] = 59.9;
+/*	aiValue[0] = 59.9;
 	aiValue[1] = 99.999;
 	aiValue[2] = 100.1;
 	aiValue[3] = 150;
+*/
 	for(int i = 0; i < TRIO_TEMP_MAX; i++)
 	{
 		char buf[20];
@@ -841,10 +843,10 @@ static void TrioTempDisp(void)
 
 	GUI_SetColor(COLOR_LABEL);
 	GUI_RECT rect;
-	rect.x0 = TRIO_TEMP_TEMP_TEXT_X0;
-	rect.x1 = TRIO_TEMP_TEMP_TEXT_X0 + TRIO_TEMP_TEMP_TEXT_X1;
+	rect.x0 = TRIO_TEMP_TEXT_X0;
+	rect.x1 = TRIO_TEMP_TEXT_X0 + TRIO_TEMP_TEXT_X1;
 	rect.y0 = TRIO_TEMP_X_TEXT_Y;
-	rect.y1 = TRIO_TEMP_X_TEXT_Y + TRIO_TEMP_TEMP_TEXT_Y1;
+	rect.y1 = TRIO_TEMP_X_TEXT_Y + TRIO_TEMP_TEXT_Y1;
 	GUI_DispStringInRect("TEMP", &rect, (GUI_TA_HCENTER | GUI_TA_VCENTER));
 
 	GUI_SetColor(GUI_WHITE);
@@ -923,9 +925,7 @@ static void TrioTempDisp(void)
 
 void TrioTemp(void)
 {
-	uint8_t bRecvData;
 	int flagBreak = FALSE;
-	bRecvData = FALSE;
 	bUpdateFirst = TRUE;
 	TrioTempDisp();
 	gStatusSendEnd = STATUS_SEND_ING;
@@ -970,12 +970,11 @@ void TrioTemp(void)
 			}
 			else
 			{
-				TrioValueValueDisp();
+				TrioTempValueDisp();
 				g_bRecvAllDone = TRUE;
 				nSendStep = 0;
 				statusSendStep = 0;
 				gStatusSendEnd = STATUS_SEND_ING;
-				bRecvData = TRUE;
 			}
 		}
 		else

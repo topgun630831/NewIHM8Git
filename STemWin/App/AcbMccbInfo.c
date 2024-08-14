@@ -39,6 +39,9 @@ static void InfoSend(int menu);
 static void InfoValueDisp(int pos, int count);
 static void InfoInitDisp(int pos);
 static void InfoDisp(int pos);
+static void RelayStatusSend(void);
+static void RelayStatusDisp(int nPage);
+static void RelayStatus(void);
 // USER END
 
 /*********************************************************************
@@ -170,7 +173,7 @@ static void InfoValueDisp(int pos, int count)
 		if(ConnectSetting[gDeviceIndex].DeviceType == DEVICE_ACB)
 		{
 			dValue = (ModbusGetUint32(I_REGISTER_1759));		// Running Time
-			(void)sprintf(buf[INDEX_0], "%dh", dValue);			
+			(void)sprintf(buf[INDEX_0], "%dh", dValue);
 			dValue = (ModbusGetUint32(I_REGISTER_1761));		// Energizing Cycle
 			(void)sprintf(buf[INDEX_1], "%dh", dValue);
 			dValue = (ModbusGetUint32(I_REGISTER_1765));		// M
@@ -221,7 +224,7 @@ static void InfoValueDisp(int pos, int count)
 	rect2.y0 = STARTY_VALUE + INDEX_2;
 	rect2.x1 = INFO_VALUE_X1;
 	rect2.y1 = (STARTY_VALUE + HEIGHT_VALUE) - INDEX_4;
-		
+
 	(void)GUI_SetFont(&GUI_Font20B_ASCII);
 	for(int i = 0 ; i < count; i++)
 	{
@@ -362,7 +365,7 @@ static void InfoDisp(int pos)
 			{
 				nSendStep++;
 			}
-			(void)printf("COMM Error!!! gStatusSendEnd=%d, statusSendStep=%d, nSendStep=%d\n",gStatusSendEnd,statusSendStep,nSendStep); 
+			(void)printf("COMM Error!!! gStatusSendEnd=%d, statusSendStep=%d, nSendStep=%d\n",gStatusSendEnd,statusSendStep,nSendStep);
 			if(StatusRecvErrorProcess() == STATUS_SEND_ING)
 			{
 				nSendStep = 0;
@@ -374,7 +377,7 @@ static void InfoDisp(int pos)
 				{
 					stepMax = 1;
 				}
-				
+
 				if(nSendStep < stepMax)
 				{
 					InfoSend(pos);
@@ -403,6 +406,534 @@ static void InfoDisp(int pos)
 		GUI_Delay(1);
 	}
 }
+
+#define RELAY_STATUS_TEXT_X0			36
+#define RELAY_STATUS_TEXT_X1			RELAY_STATUS_TEXT_X0 + 134
+#define RELAY_STATUS_TEXT_Y0			50
+#define RELAY_STATUS_TEXT_Y1			RELAY_STATUS_TEXT_Y0 + 20
+
+#define RELAY_STATUS_PAGE_TEXT_X0		380
+#define RELAY_STATUS_PAGE_TEXT_X1		RELAY_STATUS_PAGE_TEXT_X0 + 64
+
+#define RELAY_STATUS_LINE_X				10
+#define RELAY_STATUS_LINE_Y				78
+#define RELAY_STATUS_LINE_X_INC			230
+#define RELAY_STATUS_LINE_Y_INC			58
+
+#define RELAY_STATUS_PAGE_MAX			7
+#define RELAY_STATUS_COUNT				8
+
+#define RELAY_STATUS_READ_ADDR			211
+#define RELAY_STATUS_READ_LEN			4
+
+#define RELAY_STATUS_LABEL_X0			RELAY_STATUS_LINE_X + 26
+#define RELAY_STATUS_LABEL_Y0			RELAY_STATUS_LINE_Y + 14
+#define RELAY_STATUS_LABEL_X1			RELAY_STATUS_LABEL_X0 + 158
+#define RELAY_STATUS_LABEL_Y1			RELAY_STATUS_LABEL_Y0 + 30
+
+#define RELAY_STATUS_BOX_X0				RELAY_STATUS_LABEL_X1
+#define RELAY_STATUS_BOX_Y0				RELAY_STATUS_LINE_Y + 19
+#define RELAY_STATUS_BOX_X1				RELAY_STATUS_BOX_X0 + 20
+#define RELAY_STATUS_BOX_Y1				RELAY_STATUS_BOX_Y0 + 20
+
+char const* _acacbmccb_relay_status_text[RELAY_STATUS_PAGE_MAX][RELAY_STATUS_COUNT] = {
+	{
+		"Pre Alarm",
+		"L A",
+		"L B",
+		"L C",
+		"L N",
+		"S1 A",
+		"S1 B",
+		"S1 C"
+	},
+	{
+		"S2 A",
+		"S2 B",
+		"S2 C",
+		"PTA A",
+		"PTA B",
+		"PTA C",
+		"",
+		""
+	},
+	{
+		"I A",
+		"I B",
+		"I C",
+		"G",
+		"Gext",
+		"D A",
+		"D B",
+		"D C",
+	},
+	{
+		"S(V)1 A",
+		"S(V)1 B",
+		"S(V)1 C",
+		"S(V)2 A",
+		"S(V)2 B",
+		"S(V)2 C",
+		"OF1",
+		"OF2",
+	},
+	{
+		"UF1",
+		"UF2",
+		"RQ1",
+		"RQ2",
+		"OQ",
+		"UP",
+		"ROCF",
+		"RV",
+	},
+	{
+		"OV1 A",
+		"OV1 B",
+		"OV1 C",
+		"OV2 A",
+		"OV2 B",
+		"OV2 C",
+		"UV1 A",
+		"UV1 B"
+	},
+	{
+		"UV1 C",
+		"UV2 A",
+		"UV2 B",
+		"UV2 C",
+		"VU",
+		"IU",
+		"RP",
+		"OP"
+	}
+};
+
+int const relay_status_register[RELAY_STATUS_PAGE_MAX][RELAY_STATUS_COUNT] = {
+	{					// page 1
+		211,
+		211,
+		211,
+		211,
+		211,
+		211,
+		211,
+		211
+	},
+	{					// page 2
+		211,
+		211,
+		211,
+		211,
+		211,
+		211,
+		211,
+		211
+	},
+	{					// page 3
+		212,
+		212,
+		212,
+		212,
+		212,
+		212,
+		212,
+		212
+	},
+	{					// page 4
+		212,
+		212,
+		212,
+		212,
+		212,
+		212,
+		213,
+		213
+	},
+	{					// page 5
+		213,
+		213,
+		213,
+		213,
+		213,
+		213,
+		213,
+		213
+	},
+	{					// page 6
+		214,
+		214,
+		214,
+		214,
+		214,
+		214,
+		214,
+		214
+	},
+	{					// page 7
+		214,
+		214,
+		214,
+		214,
+		214,
+		214,
+		214,
+		214
+	}
+};
+
+int const relay_status_bit[RELAY_STATUS_PAGE_MAX][RELAY_STATUS_COUNT] = {
+	{					// page 1
+		0,
+		5,
+		6,
+		7,
+		8,
+		9,
+		10,
+		11
+	},
+	{					// page 2
+		12,
+		13,
+		14,
+		2,
+		3,
+		4,
+		0,
+		0
+	},
+	{					// page 3
+		0,
+		1,
+		2,
+		3,
+		4,
+		5,
+		6,
+		7
+	},
+	{					// page 4
+		8,
+		9,
+		10,
+		11,
+		12,
+		13,
+		0,
+		1
+	},
+	{					// page 5
+		2,
+		3,
+		4,
+		5,
+		6,
+		7,
+		8,
+		9
+	},
+	{					// page 6
+		0,
+		1,
+		2,
+		3,
+		4,
+		5,
+		6,
+		7
+	},
+	{					// page 7
+		8,
+		9,
+		10,
+		11,
+		12,
+		13,
+		14,
+		14
+	}
+};
+
+static void RelayStatusValueDisp(int nPage)
+{
+	GUI_RECT rect;
+	uint8_t status[RELAY_STATUS_COUNT];
+
+	int cnt = RELAY_STATUS_COUNT;
+	int row_cnt = INDEX_4;
+	if(nPage == 1)
+	{
+		row_cnt = INDEX_3;
+		cnt = INDEX_6;
+	}
+
+	for(int i = 0; i < cnt; i++)
+	{
+		status[i] = ModbusGetBit(relay_status_register[nPage][i], relay_status_bit[nPage][i]);
+	}
+	if(nPage == 0)
+	{
+		uint8_t status1 = ModbusGetBit(relay_status_register[0][0], 0);
+		uint8_t status2 = ModbusGetBit(relay_status_register[0][0], 1);
+		if(status1 == 0 && status2 == 0)
+			status[0] = 0;
+		else
+		if(status1 == 1 && status2 == 0)
+			status[0] = 1;
+		else
+			status[0] = 2;
+	}
+
+	rect.y0 = RELAY_STATUS_BOX_Y0;
+	rect.y1 = RELAY_STATUS_BOX_Y1;
+	int pos = 0;
+	for(int i = 0; i < row_cnt; i++)
+	{
+		rect.x0 = RELAY_STATUS_BOX_X0;
+		rect.x1 = RELAY_STATUS_BOX_X1;
+		for(int j = 0 ; j < INDEX_2; j++)
+		{
+			if(status[pos] == 0)
+			{
+				GUI_SetColor(COLOR_NORMAL);
+			}
+			else
+			if(status[pos] == 1)
+			{
+				GUI_SetColor(COLOR_ALARM);
+			}
+			else
+			{
+				GUI_SetColor(COLOR_WARNING);
+			}
+			GUI_FillRectEx(&rect);
+			rect.x0 += RELAY_STATUS_LINE_X_INC;
+			rect.x1 += RELAY_STATUS_LINE_X_INC;
+			pos++;
+		}
+		rect.y0 += RELAY_STATUS_LINE_Y_INC;
+		rect.y1 += RELAY_STATUS_LINE_Y_INC;
+	}
+}
+
+static void RelayStatusSend(void)
+{
+	if(StatusSend() == STATUS_SEND_ING)
+	{
+		return;
+	}
+	ModbusSendFrame(ConnectSetting[gDeviceIndex].Address, INPUT_REGISTER, RELAY_STATUS_READ_ADDR, RELAY_STATUS_READ_LEN);
+}
+
+
+static void RelayStatusDisp(int nPage)
+{
+	GUI_SetBkColor(COLOR_MAIN_BG);
+	GUI_ClearRect(X0_MAIN, Y0_MAIN, X1_MAIN, Y1_MAIN);
+	(void)GUI_SetFont(&GUI_Font20_ASCII);
+
+	GUI_SetColor(COLOR_LABEL);
+	GUI_RECT rect;
+	rect.x0 = RELAY_STATUS_TEXT_X0;
+	rect.x1 = RELAY_STATUS_TEXT_X1;
+	rect.y0 = RELAY_STATUS_TEXT_Y0;
+	rect.y1 = RELAY_STATUS_TEXT_Y1;
+	GUI_DispStringInRect("Relay Status", &rect, (GUI_TA_LEFT | GUI_TA_VCENTER));
+
+	GUI_SetColor(GUI_WHITE);
+	rect.x0 = RELAY_STATUS_PAGE_TEXT_X0;
+	rect.x1 = RELAY_STATUS_PAGE_TEXT_X1;
+
+	int row_cnt = INDEX_4;
+	if(nPage == 1)
+		row_cnt = INDEX_3;
+	char buf[INDEX_10];
+	sprintf(buf, "%d/%d", nPage+1, RELAY_STATUS_PAGE_MAX);
+	GUI_DispStringInRect(buf, &rect, (GUI_TA_RIGHT | GUI_TA_VCENTER));
+
+	GUI_SetColor(COLOR_LINE);
+	rect.x0 = RELAY_STATUS_LINE_X;
+	rect.y0 = RELAY_STATUS_LINE_Y;
+	rect.x1 = RELAY_STATUS_LINE_X + (INDEX_2 * RELAY_STATUS_LINE_X_INC);
+	(void)GUI_SetPenSize(PENSIZE_LINE);
+	for(int i = 0; i < row_cnt+1; i++)
+	{
+		GUI_DrawHLine(rect.y0, rect.x0, rect.x1);
+		rect.y0 += RELAY_STATUS_LINE_Y_INC;
+	}
+
+	rect.x0 = RELAY_STATUS_LINE_X;
+	rect.y0 = RELAY_STATUS_LINE_Y;
+	rect.y1 = RELAY_STATUS_LINE_Y + ((row_cnt) * RELAY_STATUS_LINE_Y_INC);
+	(void)GUI_SetPenSize(PENSIZE_LINE);
+	for(int i = 0; i < row_cnt+1; i++)
+	{
+		GUI_DrawVLine(rect.x0, rect.y0, rect.y1);
+		rect.x0 += RELAY_STATUS_LINE_X_INC;
+	}
+
+	GUI_SetColor(COLOR_LABEL);
+	(void)GUI_SetFont(&GUI_Font20_ASCII);
+	rect.y0 = RELAY_STATUS_LABEL_Y0;
+	rect.y1 = RELAY_STATUS_LABEL_Y1;
+	int pos = 0;
+	for(int i = 0; i < row_cnt; i++)
+	{
+		rect.x0 = RELAY_STATUS_LABEL_X0;
+		rect.x1 = RELAY_STATUS_LABEL_X1;
+		for(int j = 0 ; j < INDEX_2; j++)
+		{
+			GUI_DispStringInRect(_acacbmccb_relay_status_text[nPage][pos], &rect, (GUI_TA_LEFT | GUI_TA_VCENTER));
+			rect.x0 += RELAY_STATUS_LINE_X_INC;
+			rect.x1 += RELAY_STATUS_LINE_X_INC;
+			pos++;
+		}
+		rect.y0 += RELAY_STATUS_LINE_Y_INC;
+		rect.y1 += RELAY_STATUS_LINE_Y_INC;
+	}
+	rect.y0 = RELAY_STATUS_BOX_Y0;
+	rect.y1 = RELAY_STATUS_BOX_Y1;
+	GUI_SetColor(COLOR_DISABLE);
+	for(int i = 0; i < row_cnt; i++)
+	{
+		rect.x0 = RELAY_STATUS_BOX_X0;
+		rect.x1 = RELAY_STATUS_BOX_X1;
+		for(int j = 0 ; j < INDEX_2; j++)
+		{
+			GUI_FillRectEx(&rect);
+			rect.x0 += RELAY_STATUS_LINE_X_INC;
+			rect.x1 += RELAY_STATUS_LINE_X_INC;
+			pos++;
+		}
+		rect.y0 += RELAY_STATUS_LINE_Y_INC;
+		rect.y1 += RELAY_STATUS_LINE_Y_INC;
+	}
+}
+
+void RelayStatus(void)
+{
+	uint8_t bRecvData;
+	int flagBreak = FALSE;
+	bRecvData = FALSE;
+	int nPage = 0;
+	RelayStatusDisp(nPage);
+	gStatusSendEnd = STATUS_SEND_ING;
+	statusSendStep = 0;
+	nSendStep = 0;
+	RelayStatusSend();
+	int bCommError = gCommStatus[gDeviceIndex];
+
+	while (1)
+    {
+		E_KEY key = GetKey();
+
+		if(key == TIME_OUT)
+		{
+			gStatusSendEnd = STATUS_SEND_ING;
+			nSendStep = 0;
+			RelayStatusSend();
+		}
+		else
+		if(key == KEY_SETUP)
+		{
+			if(Setup() == SETUP_CHANGED)
+			{
+				flagBreak = TRUE;
+			}
+			RelayStatusDisp(nPage);
+			gCommOldStatus[gDeviceIndex] = -1;
+			RelayStatusSend();
+		}
+		else
+		if(key == KEY_UP)
+		{
+			if(nPage > 0)
+			{
+				nPage--;
+			}
+			else
+			{
+				nPage = RELAY_STATUS_PAGE_MAX - 1;
+			}
+			RelayStatusDisp(nPage);
+		}
+		else
+		if(key == KEY_DOWN)
+		{
+			if(nPage < (RELAY_STATUS_PAGE_MAX-1))
+			{
+				nPage++;
+			}
+			else
+			{
+				nPage = 0;
+			}
+			RelayStatusDisp(nPage);
+		}
+		else
+		if(key == DATA_RECV)
+		{
+			(void)printf("DATA_RECV gStatusSendEnd=%d\n",gStatusSendEnd);
+			if(bCommError == COMM_ERROR)
+			{
+				bCommError = COMM_OK;
+			}
+			if(gStatusSendEnd == STATUS_SEND_ING)
+			{
+				StatusRecv();
+				RelayStatusSend();
+			}
+			else
+			{
+				RelayStatusValueDisp(nPage);
+				g_bRecvAllDone = TRUE;
+				nSendStep = 0;
+				statusSendStep = 0;
+				gStatusSendEnd = STATUS_SEND_ING;
+				bRecvData = TRUE;
+			}
+		}
+		else
+		if(key == KEY_CANCEL)
+		{
+			flagBreak = TRUE;
+		}
+		else
+		if(key == KEY_COMM_ERROR)
+		{
+
+			(void)printf("COMM Error!!! gStatusSendEnd=%d, statusSendStep=%d, nSendStep=%d\n",gStatusSendEnd,statusSendStep,nSendStep);
+			if(StatusRecvErrorProcess() == STATUS_SEND_ING)
+			{
+				nSendStep = 0;
+			}
+			else
+			{
+				RelayStatusSend();
+				g_bRecvAllDone = TRUE;
+				(void)printf("All done!!!\n");
+				gStatusSendEnd = STATUS_SEND_ING;
+				statusSendStep = 0;
+				nSendStep = 0;
+			}
+		}
+		else
+		if(key == COMM_STAT_ERROR)
+		{
+			(void)printf("COMM_STAT_ERROR\n\n");
+			bCommError = COMM_ERROR;
+			RelayStatusDisp(nPage);
+		}
+		else {}
+		if(flagBreak == TRUE)
+		{
+			break;
+		}
+	}
+}
+
+
 
 /*********************************************************************
 *
@@ -476,8 +1007,15 @@ void AcbMccbInfomation(void)
 		else
 		if(key == KEY_ENTER)
 		{
-			InfoSend(nMenuPos);
-			InfoDisp(nMenuPos);
+			if(nMenuPos == INDEX_2)
+			{
+				RelayStatus();
+			}
+			else
+			{
+				InfoSend(nMenuPos);
+				InfoDisp(nMenuPos);
+			}
 			InfoMenu(INFO_MENU, nMenuPos, INFO_MENU_COUNT);
 		}
 		else
@@ -504,7 +1042,7 @@ void AcbMccbInfomation(void)
 		else
 		if(key == KEY_COMM_ERROR)
 		{
-			(void)printf("COMM Error!! gStatusSendEnd=%d, statusSendStep=%d\n",gStatusSendEnd,statusSendStep); 
+			(void)printf("COMM Error!! gStatusSendEnd=%d, statusSendStep=%d\n",gStatusSendEnd,statusSendStep);
 			if(StatusRecvErrorProcess() == STATUS_SEND_ING)
 			{
 				nSendStep = 0;

@@ -266,6 +266,8 @@ extern S_CONNECT_SETTING ConnectSetting[DEVICE_MAX];
 #define COLOR_WARNING			0x00deff
 #define COLOR_MESSAGE 			0x494949
 #define COLOR_DO_DISBLE 		0x504f4f
+#define COLOR_ALARM 			0x0202fa
+#define COLOR_NORMAL 			0xc8c8c8
 
 #define	PAGE_X					465
 #define	PAGE_Y					121
