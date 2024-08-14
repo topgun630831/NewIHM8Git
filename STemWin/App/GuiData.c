@@ -736,9 +736,9 @@ char const* _aFactoryReset_confirm_text[SETUP_LANGUAGE_MAX] = {
 };
 
 char const* _aFaultReset_confirm_text[SETUP_LANGUAGE_MAX] = {
-	"Do you want to fault reset?",
+	"Reset the fault of the device?",
 	"工厂重置?",
-	"Do you want to fault reset?",
+	"Reset the fault of the device?",
 };
 
 char const* _accontrol_button_text[SETUP_LANGUAGE_MAX][STATUS_COUNT] = {

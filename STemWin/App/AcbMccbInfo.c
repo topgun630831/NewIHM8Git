@@ -34,6 +34,35 @@
 **********************************************************************
 */
 
+#define RELAY_STATUS_TEXT_X0			36
+#define RELAY_STATUS_TEXT_X1			RELAY_STATUS_TEXT_X0 + 134
+#define RELAY_STATUS_TEXT_Y0			50
+#define RELAY_STATUS_TEXT_Y1			RELAY_STATUS_TEXT_Y0 + 20
+
+#define RELAY_STATUS_PAGE_TEXT_X0		380
+#define RELAY_STATUS_PAGE_TEXT_X1		RELAY_STATUS_PAGE_TEXT_X0 + 64
+
+#define RELAY_STATUS_LINE_X				10
+#define RELAY_STATUS_LINE_Y				78
+#define RELAY_STATUS_LINE_X_INC			230
+#define RELAY_STATUS_LINE_Y_INC			58
+
+#define RELAY_STATUS_PAGE_MAX			7
+#define RELAY_STATUS_COUNT				8
+
+#define RELAY_STATUS_READ_ADDR			211
+#define RELAY_STATUS_READ_LEN			4
+
+#define RELAY_STATUS_LABEL_X0			RELAY_STATUS_LINE_X + 26
+#define RELAY_STATUS_LABEL_Y0			RELAY_STATUS_LINE_Y + 14
+#define RELAY_STATUS_LABEL_X1			RELAY_STATUS_LABEL_X0 + 158
+#define RELAY_STATUS_LABEL_Y1			RELAY_STATUS_LABEL_Y0 + 30
+
+#define RELAY_STATUS_BOX_X0				RELAY_STATUS_LABEL_X1
+#define RELAY_STATUS_BOX_Y0				RELAY_STATUS_LINE_Y + 19
+#define RELAY_STATUS_BOX_X1				RELAY_STATUS_BOX_X0 + 20
+#define RELAY_STATUS_BOX_Y1				RELAY_STATUS_BOX_Y0 + 20
+
 // USER START (Optionally insert additional defines)
 static void InfoSend(int menu);
 static void InfoValueDisp(int pos, int count);
@@ -50,6 +79,224 @@ static void RelayStatus(void);
 *
 **********************************************************************
 */
+char const* _acacbmccb_relay_status_text[RELAY_STATUS_PAGE_MAX][RELAY_STATUS_COUNT] = {
+	{
+		"Pre Alarm",
+		"L A",
+		"L B",
+		"L C",
+		"L N",
+		"S1 A",
+		"S1 B",
+		"S1 C"
+	},
+	{
+		"S2 A",
+		"S2 B",
+		"S2 C",
+		"PTA A",
+		"PTA B",
+		"PTA C",
+		"",
+		""
+	},
+	{
+		"I A",
+		"I B",
+		"I C",
+		"G",
+		"Gext",
+		"D A",
+		"D B",
+		"D C",
+	},
+	{
+		"S(V)1 A",
+		"S(V)1 B",
+		"S(V)1 C",
+		"S(V)2 A",
+		"S(V)2 B",
+		"S(V)2 C",
+		"OF1",
+		"OF2",
+	},
+	{
+		"UF1",
+		"UF2",
+		"RQ1",
+		"RQ2",
+		"OQ",
+		"UP",
+		"ROCF",
+		"RV",
+	},
+	{
+		"OV1 A",
+		"OV1 B",
+		"OV1 C",
+		"OV2 A",
+		"OV2 B",
+		"OV2 C",
+		"UV1 A",
+		"UV1 B"
+	},
+	{
+		"UV1 C",
+		"UV2 A",
+		"UV2 B",
+		"UV2 C",
+		"VU",
+		"IU",
+		"RP",
+		"OP"
+	}
+};
+
+static int const relay_status_register[RELAY_STATUS_PAGE_MAX][RELAY_STATUS_COUNT] = {
+	{					// page 1
+		211,
+		211,
+		211,
+		211,
+		211,
+		211,
+		211,
+		211
+	},
+	{					// page 2
+		211,
+		211,
+		211,
+		211,
+		211,
+		211,
+		211,
+		211
+	},
+	{					// page 3
+		212,
+		212,
+		212,
+		212,
+		212,
+		212,
+		212,
+		212
+	},
+	{					// page 4
+		212,
+		212,
+		212,
+		212,
+		212,
+		212,
+		213,
+		213
+	},
+	{					// page 5
+		213,
+		213,
+		213,
+		213,
+		213,
+		213,
+		213,
+		213
+	},
+	{					// page 6
+		214,
+		214,
+		214,
+		214,
+		214,
+		214,
+		214,
+		214
+	},
+	{					// page 7
+		214,
+		214,
+		214,
+		214,
+		214,
+		214,
+		214,
+		214
+	}
+};
+
+static int const relay_status_bit[RELAY_STATUS_PAGE_MAX][RELAY_STATUS_COUNT] = {
+	{					// page 1
+		0,
+		5,
+		6,
+		7,
+		8,
+		9,
+		10,
+		11
+	},
+	{					// page 2
+		12,
+		13,
+		14,
+		2,
+		3,
+		4,
+		0,
+		0
+	},
+	{					// page 3
+		0,
+		1,
+		2,
+		3,
+		4,
+		5,
+		6,
+		7
+	},
+	{					// page 4
+		8,
+		9,
+		10,
+		11,
+		12,
+		13,
+		0,
+		1
+	},
+	{					// page 5
+		2,
+		3,
+		4,
+		5,
+		6,
+		7,
+		8,
+		9
+	},
+	{					// page 6
+		0,
+		1,
+		2,
+		3,
+		4,
+		5,
+		6,
+		7
+	},
+	{					// page 7
+		8,
+		9,
+		10,
+		11,
+		12,
+		13,
+		14,
+		14
+	}
+};
 
 /*********************************************************************
 *
@@ -406,254 +653,6 @@ static void InfoDisp(int pos)
 		GUI_Delay(1);
 	}
 }
-
-#define RELAY_STATUS_TEXT_X0			36
-#define RELAY_STATUS_TEXT_X1			RELAY_STATUS_TEXT_X0 + 134
-#define RELAY_STATUS_TEXT_Y0			50
-#define RELAY_STATUS_TEXT_Y1			RELAY_STATUS_TEXT_Y0 + 20
-
-#define RELAY_STATUS_PAGE_TEXT_X0		380
-#define RELAY_STATUS_PAGE_TEXT_X1		RELAY_STATUS_PAGE_TEXT_X0 + 64
-
-#define RELAY_STATUS_LINE_X				10
-#define RELAY_STATUS_LINE_Y				78
-#define RELAY_STATUS_LINE_X_INC			230
-#define RELAY_STATUS_LINE_Y_INC			58
-
-#define RELAY_STATUS_PAGE_MAX			7
-#define RELAY_STATUS_COUNT				8
-
-#define RELAY_STATUS_READ_ADDR			211
-#define RELAY_STATUS_READ_LEN			4
-
-#define RELAY_STATUS_LABEL_X0			RELAY_STATUS_LINE_X + 26
-#define RELAY_STATUS_LABEL_Y0			RELAY_STATUS_LINE_Y + 14
-#define RELAY_STATUS_LABEL_X1			RELAY_STATUS_LABEL_X0 + 158
-#define RELAY_STATUS_LABEL_Y1			RELAY_STATUS_LABEL_Y0 + 30
-
-#define RELAY_STATUS_BOX_X0				RELAY_STATUS_LABEL_X1
-#define RELAY_STATUS_BOX_Y0				RELAY_STATUS_LINE_Y + 19
-#define RELAY_STATUS_BOX_X1				RELAY_STATUS_BOX_X0 + 20
-#define RELAY_STATUS_BOX_Y1				RELAY_STATUS_BOX_Y0 + 20
-
-char const* _acacbmccb_relay_status_text[RELAY_STATUS_PAGE_MAX][RELAY_STATUS_COUNT] = {
-	{
-		"Pre Alarm",
-		"L A",
-		"L B",
-		"L C",
-		"L N",
-		"S1 A",
-		"S1 B",
-		"S1 C"
-	},
-	{
-		"S2 A",
-		"S2 B",
-		"S2 C",
-		"PTA A",
-		"PTA B",
-		"PTA C",
-		"",
-		""
-	},
-	{
-		"I A",
-		"I B",
-		"I C",
-		"G",
-		"Gext",
-		"D A",
-		"D B",
-		"D C",
-	},
-	{
-		"S(V)1 A",
-		"S(V)1 B",
-		"S(V)1 C",
-		"S(V)2 A",
-		"S(V)2 B",
-		"S(V)2 C",
-		"OF1",
-		"OF2",
-	},
-	{
-		"UF1",
-		"UF2",
-		"RQ1",
-		"RQ2",
-		"OQ",
-		"UP",
-		"ROCF",
-		"RV",
-	},
-	{
-		"OV1 A",
-		"OV1 B",
-		"OV1 C",
-		"OV2 A",
-		"OV2 B",
-		"OV2 C",
-		"UV1 A",
-		"UV1 B"
-	},
-	{
-		"UV1 C",
-		"UV2 A",
-		"UV2 B",
-		"UV2 C",
-		"VU",
-		"IU",
-		"RP",
-		"OP"
-	}
-};
-
-int const relay_status_register[RELAY_STATUS_PAGE_MAX][RELAY_STATUS_COUNT] = {
-	{					// page 1
-		211,
-		211,
-		211,
-		211,
-		211,
-		211,
-		211,
-		211
-	},
-	{					// page 2
-		211,
-		211,
-		211,
-		211,
-		211,
-		211,
-		211,
-		211
-	},
-	{					// page 3
-		212,
-		212,
-		212,
-		212,
-		212,
-		212,
-		212,
-		212
-	},
-	{					// page 4
-		212,
-		212,
-		212,
-		212,
-		212,
-		212,
-		213,
-		213
-	},
-	{					// page 5
-		213,
-		213,
-		213,
-		213,
-		213,
-		213,
-		213,
-		213
-	},
-	{					// page 6
-		214,
-		214,
-		214,
-		214,
-		214,
-		214,
-		214,
-		214
-	},
-	{					// page 7
-		214,
-		214,
-		214,
-		214,
-		214,
-		214,
-		214,
-		214
-	}
-};
-
-int const relay_status_bit[RELAY_STATUS_PAGE_MAX][RELAY_STATUS_COUNT] = {
-	{					// page 1
-		0,
-		5,
-		6,
-		7,
-		8,
-		9,
-		10,
-		11
-	},
-	{					// page 2
-		12,
-		13,
-		14,
-		2,
-		3,
-		4,
-		0,
-		0
-	},
-	{					// page 3
-		0,
-		1,
-		2,
-		3,
-		4,
-		5,
-		6,
-		7
-	},
-	{					// page 4
-		8,
-		9,
-		10,
-		11,
-		12,
-		13,
-		0,
-		1
-	},
-	{					// page 5
-		2,
-		3,
-		4,
-		5,
-		6,
-		7,
-		8,
-		9
-	},
-	{					// page 6
-		0,
-		1,
-		2,
-		3,
-		4,
-		5,
-		6,
-		7
-	},
-	{					// page 7
-		8,
-		9,
-		10,
-		11,
-		12,
-		13,
-		14,
-		14
-	}
-};
 
 static void RelayStatusValueDisp(int nPage)
 {
