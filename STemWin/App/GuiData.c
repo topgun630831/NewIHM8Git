@@ -405,27 +405,30 @@ char const* _acrelayset_label_text[SETUP_LANGUAGE_MAX][ACBMCCB_RELAYSET_COL_CNT]
 	},
 };
 
-char const* _acmeasurement_menu_text[SETUP_LANGUAGE_MAX][ACBMCCB_MEASUR_MENU_COUNT] = {
+char const* _acmeasurement_menu_text[SETUP_LANGUAGE_MAX][STU_MEASUR_MENU_COUNT] = {
 	{
-	"V&I&P",
+	"V&I",
+	"P&PF&F",
 	"Energy",
 	"PQ",
 	"Max\nDemand"
 	},
 	{
-	"V&I&P",
+	"V&I&",
+	"P&PF&F",
 	"电量",
 	"电能\n质量",
 	"最大\n需求"
 	},
 	{
-	"V&I&P",
+	"V&I",
+	"P&PF&F",
 	"Energy",
 	"PQ",
 	"Max\nDemand"
 	},
 };
-
+/*
 char const* _acmeasurementVI_LNLL_label_text[ACBMCCB_MESURE_VI_LNLL_CNT][LINECOUNT_CONTENTS] = {
 	{
 		"VA",
@@ -444,13 +447,44 @@ char const* _acmeasurementVI_LNLL_label_text[ACBMCCB_MESURE_VI_LNLL_CNT][LINECOU
 		"S"
 	}
 };
-
+*/
+char const* _acmeasurementVI_LNLL_label_text[ACBMCCB_MESURE_VI_LNLL_CNT][LINECOUNT_CONTENTS] = {
+	{
+		"VA",
+		"VB",
+		"VC",
+		"VAB",
+		"VBC",
+		"VCA",
+	},
+	{
+		"VAB",
+		"VBC",
+		"VCA",
+		"P",
+		"Q",
+		"S"
+	}
+};
 
 char const* _acmeasurementVI_A_label_text[ACBMCCB_MESURE_VI_A_CNT] = {
 		"IA",
 		"IB",
 		"IC",
 		"IN",
+};
+
+char const* _acmeasurementP_PF_F_label_text[ACBMCCB_MESURE_VI_LNLL_CNT][INDEX_3] = {
+	{
+		"P",
+		"Q",
+		"S",
+	},
+	{
+		"PF",
+		"F",
+		"",
+	}
 };
 
 char const* _acmeasurementEnergy_unit[ACBMCCB_MESURE_ENERGY_CNT] = {

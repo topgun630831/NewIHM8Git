@@ -99,7 +99,7 @@ static void AcbMccbMeasurementSend(void)
 	{
 		return;
 	}
-	if(nMenuPos == INDEX_3)		// Max Demand
+	if(nMenuPos == INDEX_4)		// Max Demand
 	{
 		if(ConnectSetting[gDeviceIndex].DeviceType == DEVICE_ACB)
 		{
@@ -123,12 +123,12 @@ static void AcbMccbMeasurementSend(void)
 		}
 	}
 	else
-	if(nSendStep == INDEX_1)
+	if(nSendStep == INDEX_2)
 	{
 		ModbusSendFrame(ConnectSetting[gDeviceIndex].Address, INPUT_REGISTER, ACBMCCB_ENERGY_READ_ADDR, ACBMCCB_ENERGY_READ_LEN);		// 284까지
 	}
 	else
-	if(nSendStep == INDEX_2)
+	if(nSendStep == INDEX_3)
 	{
 		ModbusSendFrame(ConnectSetting[gDeviceIndex].Address, INPUT_REGISTER, ACBMCCB_PQ_READ_ADDR, ACBMCCB_PQ_READ_LEN);		// 366까지
 	}
@@ -210,7 +210,7 @@ static void AcbMccbMeasurementRecv(void)
 	uint16_t index;
 
 	(void)printf("\n\n\n AcbMccbMeasurementRecv(%d)\n", nSendStep);
-	if(nMenuPos == INDEX_3)
+	if(nMenuPos == INDEX_4)
 	{
 		AcbMccbValueDispDemand();
 		nSendStep = 0;
@@ -233,7 +233,7 @@ static void AcbMccbMeasurementRecv(void)
 		nSendStep = 1;
 	}
 	else
-	if(nSendStep == INDEX_1)
+	if(nSendStep == INDEX_2)
 	{
 		if(gPols[gDeviceIndex] == P3)
 		{
@@ -261,7 +261,6 @@ static void AcbMccbMeasurementRecv(void)
 			P[i] = ModbusGetFloat(index);
 			index += INDEX_2;
 		}
-(void)printf("[va] = %f\n", ModbusGetFloat(I_REGISTER_269));
 		Energy[INDEX_0] = ModbusGetFloat(I_REGISTER_265) + ((double)(ModbusGetUint32(I_REGISTER_267) * (double)MAX_EP_EQ));	//EP
 		Energy[INDEX_1] = ModbusGetFloat(I_REGISTER_269) + ((double)(ModbusGetUint32(I_REGISTER_271) * (double)MAX_EP_EQ));	//EQ
 		Energy[INDEX_2] = ModbusGetFloat(I_REGISTER_273) + ((double)(ModbusGetUint32(I_REGISTER_275) * (double)MAX_EP_EQ));	//rEP
@@ -273,7 +272,7 @@ static void AcbMccbMeasurementRecv(void)
 		nSendStep = INDEX_2;
 	}
 	else
-	if(nSendStep == INDEX_2)
+	if(nSendStep == INDEX_3)
 	{
 		index = I_REGISTER_321;
 		if(gPols[gDeviceIndex] == P3)
@@ -382,13 +381,18 @@ static void AcbMccbMeasurementRecv(void)
 static void AcbMccbMeasurementMenu(int pos)
 {
 	GUI_RECT rect;
-	rect.x0 = ACBMCCB_MEASUR_TEXT_x0;
-	rect.x1 = ACBMCCB_MEASUR_TEXT_x1;
-	rect.y0 = STARTY_CONTENTS;
-	rect.y1 = (STARTY_CONTENTS + ACBMCCB_MEASUR_MENU_HEIGHT) - 1;
+	rect.x0 = STU_MEASUR_BOX_X0;
+	rect.x1 = STU_MEASUR_BOX_X1;
+	rect.y0 = STU_MEASUR_BOX_Y0;
+	rect.y1 = STU_MEASUR_BOX_Y1;
 
-	int y0 = STARTY_CONTENTS;
-	for(int i = 0; i < ACBMCCB_MEASUR_MENU_COUNT; i++)
+	GUI_RECT rect2;
+	rect2.x0 = STU_MEASUR_TEXT_X0;
+	rect2.x1 = STU_MEASUR_TEXT_X1;
+	rect2.y0 = STU_MEASUR_BOX_Y0;
+	rect2.y1 = STU_MEASUR_BOX_Y1;
+
+	for(int i = 0; i < STU_MEASUR_MENU_COUNT; i++)
 	{
 		if(i == pos)
 		{
@@ -398,27 +402,26 @@ static void AcbMccbMeasurementMenu(int pos)
 		{
 			GUI_SetColor(COLOR_MENU_NORMAL);
 		}
-		GUI_FillRect(STARTX_CONTENTS, y0, (STARTX_CONTENTS + ACBMCCB_MEASUR_MENU_WIDTH) - 1, (y0 + ACBMCCB_MEASUR_MENU_HEIGHT) - 1);
+		GUI_FillRectEx(&rect);
 
 		if(i == pos)
 		{
 			GUI_SetColor(COLOR_VALUE);
 			GUI_SetBkColor(COLOR_MENU_SELECTED);
-		//	(void)GUI_SetFont(&GUI_Font20B_ASCII);
 			LanguageSelect(FONT20B);
 		}
 		else
 		{
 			GUI_SetColor(COLOR_LABEL);
 			GUI_SetBkColor(COLOR_MENU_NORMAL);
-		//	(void)GUI_SetFont(&GUI_Font20_ASCII);
 			LanguageSelect(FONT20);
 		}
 
-		GUI_DispStringInRect(_acmeasurement_menu_text[SettingValue[SETUP_LANGUAGE]][i], &rect, GUI_TA_LEFT | GUI_TA_VCENTER);
-		rect.y0 += ACBMCCB_MEASUR_MENU_HEIGHT + 1;
-		rect.y1 += ACBMCCB_MEASUR_MENU_HEIGHT + 1;
-		y0 += ACBMCCB_MEASUR_MENU_HEIGHT + 1;;
+		GUI_DispStringInRect(_acmeasurement_menu_text[SettingValue[SETUP_LANGUAGE]][i], &rect2, GUI_TA_LEFT | GUI_TA_VCENTER);
+		rect.y0 += STU_MEASUR_MENU_HEIGHT + 1;
+		rect.y1 += STU_MEASUR_MENU_HEIGHT + 1;
+		rect2.y0 += STU_MEASUR_MENU_HEIGHT + 1;
+		rect2.y1 += STU_MEASUR_MENU_HEIGHT + 1;
 	}
 }
 
@@ -574,7 +577,7 @@ static void AcbMccbMeasurementDispVIP(void)
 	GUI_DrawRect(ACBMCCB_MEASURE_GRID_X0, ACBMCCB_RELAYSET_GRID_Y0, ACBMCCB_MEASURE_GRID_X1, ACBMCCB_RELAYSET_GRID_Y0 + (INDEX_6 * HEIGHT_VALUE));
 
 	gLocalPols = gPols[gDeviceIndex];
-	
+
 	for(int i = 0; i < (LINECOUNT_CONTENTS-1); i++)
 	{
 		int y0 = ACBMCCB_RELAYSET_GRID_Y0 + ((i + 1) * HEIGHT_VALUE);
@@ -727,7 +730,7 @@ static void AcbMccbValueDispPQ(void)
 		GUI_ClearRect(ACBMCCB_MEASURE_GRID_X0, ACBMCCB_RELAYSET_GRID_Y0, ACBMCCB_MEASURE_GRID_X1, Y1_MAIN);
 		AcbMccbMeasurementDispPQ();
 	}
-	
+
 	char buf[DEFAULT_BUF_SIZE];
 
 	GUI_SetColor(COLOR_VALUE);
@@ -763,7 +766,7 @@ static void AcbMccbValueDispPQ(void)
 //				printf("value3 = %f\n", val);
 //				val = val / TEN;
 //				printf("value4 = %f\n", val);
-				
+
 				if(nPfDisplay == PF_DISPLAY_LS)
 				{
 					if(PQ1[i] >= 0)
@@ -849,7 +852,7 @@ static void AcbMccbMeasurementDispPQ(void)
 	GUI_DrawRect(ACBMCCB_MEASURE_GRID_X0, ACBMCCB_RELAYSET_GRID_Y0, ACBMCCB_MEASURE_GRID_X1, ACBMCCB_RELAYSET_GRID_Y0 + (INDEX_5 * HEIGHT_VALUE));
 
 	gLocalPols = gPols[gDeviceIndex];
-	
+
 	for(int i = 0; i < (LINECOUNT_CONTENTS-1); i++)
 	{
 		if(i == INDEX_2)
@@ -986,15 +989,20 @@ static void AcbMccbMeasurementDisp(int pos, int clear)
 	else
 	if(pos == INDEX_1)
 	{
-		AcbMccbMeasurementDispEnergy();
+		AcbMccbMeasurementDispVIP();
 	}
 	else
 	if(pos == INDEX_2)
 	{
-		AcbMccbMeasurementDispPQ();
+		AcbMccbMeasurementDispEnergy();
 	}
 	else
 	if(pos == INDEX_3)
+	{
+		AcbMccbMeasurementDispPQ();
+	}
+	else
+	if(pos == INDEX_4)
 	{
 		AcbMccbMeasurementDispDemand();
 	}
@@ -1010,10 +1018,15 @@ static void AcbMccbValueDisp(int pos)
 	else
 	if(pos == INDEX_1)
 	{
-		AcbMccbValueDispEnergy();
+		AcbMccbValueDispVIP();
 	}
 	else
 	if(pos == INDEX_2)
+	{
+		AcbMccbValueDispEnergy();
+	}
+	else
+	if(pos == INDEX_3)
 	{
 		AcbMccbValueDispPQ();
 	}
@@ -1080,7 +1093,7 @@ void AcbMccbMeasurement(void)
 			}
 			else
 			{
-				nMenuPos = ACBMCCB_MEASUR_MENU_COUNT - 1;
+				nMenuPos = STU_MEASUR_MENU_COUNT - 1;
 			}
 			AcbMccbMeasurementDisp(nMenuPos, 0);
 			AcbMccbValueDisp(nMenuPos);
@@ -1093,7 +1106,7 @@ void AcbMccbMeasurement(void)
 		else
 		if(key == KEY_DOWN)
 		{
-			if(nMenuPos < (ACBMCCB_MEASUR_MENU_COUNT-1))
+			if(nMenuPos < (STU_MEASUR_MENU_COUNT-1))
 			{
 				nMenuPos++;
 			}
@@ -1142,7 +1155,7 @@ void AcbMccbMeasurement(void)
 			{
 				nSendStep++;
 			}
-			(void)printf("COMM Error!!! gStatusSendEnd=%d, statusSendStep=%d, nSendStep=%d\n",gStatusSendEnd,statusSendStep,nSendStep); 
+			(void)printf("COMM Error!!! gStatusSendEnd=%d, statusSendStep=%d, nSendStep=%d\n",gStatusSendEnd,statusSendStep,nSendStep);
 			if(StatusRecvErrorProcess() == STATUS_SEND_ING)
 			{
 				nSendStep = 0;
