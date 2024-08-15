@@ -718,7 +718,7 @@ extern char const* _acinfo_modebus_version;
 extern char const* _achwset_label_text[SETUP_LANGUAGE_MAX][LINECOUNT_CONTENTS];
 extern char const* _achwset_MCCB_label_text[SETUP_LANGUAGE_MAX][LINECOUNT_CONTENTS];
 extern char const* _acrelayset_label_text[SETUP_LANGUAGE_MAX][ACBMCCB_RELAYSET_COL_CNT][LINECOUNT_CONTENTS-1];
-extern char const* _acmeasurement_menu_text[SETUP_LANGUAGE_MAX][STU_MEASUR_MENU_COUNT];
+extern char const* _acmeasurement_menu_text[SETUP_LANGUAGE_MAX][ACBMCCB_MEASUR_MENU_COUNT];
 extern char const* _acmeasurementVI_LNLL_label_text[ACBMCCB_MESURE_VI_LNLL_CNT][LINECOUNT_CONTENTS];
 extern char const* _acmeasurementVI_A_label_text[ACBMCCB_MESURE_VI_A_CNT];
 extern char const* _acmeasurementP_PF_F_label_text[ACBMCCB_MESURE_VI_LNLL_CNT][INDEX_3];
@@ -744,6 +744,10 @@ extern char const* _aFactoryReset_confirm_text[SETUP_LANGUAGE_MAX];
 extern char const* _aFaultReset_confirm_text[SETUP_LANGUAGE_MAX];
 extern char const* _accontrol_button_text[SETUP_LANGUAGE_MAX][STATUS_COUNT];
 extern char const* _acpassword_input_text;
+
+extern char const* _actrio_io_cbstatus_control_text[SETUP_LANGUAGE_MAX];
+extern char const* _actrio_io_iostatus_text[IO_STATUS_COUNT];
+
 
 // MLink
 extern char const* _acmlink_overview_label_text[MLINK_TYPE_MAX];

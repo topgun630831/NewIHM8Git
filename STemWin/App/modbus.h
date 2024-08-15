@@ -519,6 +519,10 @@ EXTERN uint32_t uart2LastNDTR;
 #define	CB_ACB_TRIO_MASK			0x003
 #define	CB_ACB_TRIO_REMOTE_MASK		0x0400
 
+#define TRIO_IO_READ_ADDR			183
+#define TRIO_IO_READ_LEN			4
+
+
 //AcbMccbEvent.c
 #define	SOURCE_MASK					0x000f
 #define	PHASE_MASK					0x0f00

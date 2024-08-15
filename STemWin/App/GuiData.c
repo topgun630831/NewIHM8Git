@@ -405,6 +405,7 @@ char const* _acrelayset_label_text[SETUP_LANGUAGE_MAX][ACBMCCB_RELAYSET_COL_CNT]
 	},
 };
 
+/*
 char const* _acmeasurement_menu_text[SETUP_LANGUAGE_MAX][STU_MEASUR_MENU_COUNT] = {
 	{
 	"V&I",
@@ -428,7 +429,27 @@ char const* _acmeasurement_menu_text[SETUP_LANGUAGE_MAX][STU_MEASUR_MENU_COUNT] 
 	"Max\nDemand"
 	},
 };
-/*
+
+char const* _acmeasurement_menu_text[SETUP_LANGUAGE_MAX][ACBMCCB_MEASUR_MENU_COUNT] = {
+	{
+	"V&I&P",
+	"Energy",
+	"PQ",
+	"Max\nDemand"
+	},
+	{
+	"V&I&P",
+	"电量",
+	"电能\n质量",
+	"最大\n需求"
+	},
+	{
+	"V&I&P",
+	"Energy",
+	"PQ",
+	"Max\nDemand"
+	},
+};
 char const* _acmeasurementVI_LNLL_label_text[ACBMCCB_MESURE_VI_LNLL_CNT][LINECOUNT_CONTENTS] = {
 	{
 		"VA",
@@ -447,15 +468,52 @@ char const* _acmeasurementVI_LNLL_label_text[ACBMCCB_MESURE_VI_LNLL_CNT][LINECOU
 		"S"
 	}
 };
+
+
+char const* _acmeasurementP_PF_F_label_text[ACBMCCB_MESURE_VI_LNLL_CNT][INDEX_3] = {
+	{
+		"P",
+		"Q",
+		"S",
+	},
+	{
+		"PF",
+		"F",
+		"",
+	}
+};
+
 */
+
+char const* _acmeasurement_menu_text[SETUP_LANGUAGE_MAX][ACBMCCB_MEASUR_MENU_COUNT] = {
+	{
+	"V&I&P",
+	"Energy",
+	"PQ",
+	"Max\nDemand"
+	},
+	{
+	"V&I&P",
+	"电量",
+	"电能\n质量",
+	"最大\n需求"
+	},
+	{
+	"V&I&P",
+	"Energy",
+	"PQ",
+	"Max\nDemand"
+	},
+};
+
 char const* _acmeasurementVI_LNLL_label_text[ACBMCCB_MESURE_VI_LNLL_CNT][LINECOUNT_CONTENTS] = {
 	{
 		"VA",
 		"VB",
 		"VC",
-		"VAB",
-		"VBC",
-		"VCA",
+		"P",
+		"Q",
+		"S"
 	},
 	{
 		"VAB",
@@ -472,19 +530,6 @@ char const* _acmeasurementVI_A_label_text[ACBMCCB_MESURE_VI_A_CNT] = {
 		"IB",
 		"IC",
 		"IN",
-};
-
-char const* _acmeasurementP_PF_F_label_text[ACBMCCB_MESURE_VI_LNLL_CNT][INDEX_3] = {
-	{
-		"P",
-		"Q",
-		"S",
-	},
-	{
-		"PF",
-		"F",
-		"",
-	}
 };
 
 char const* _acmeasurementEnergy_unit[ACBMCCB_MESURE_ENERGY_CNT] = {
@@ -694,6 +739,21 @@ char const* _acacbmccb_iostatus_text[IO_STATUS_COUNT] = {
 	"DO #1",
 	"DO #2",
 	"DO #3"
+};
+
+char const* _actrio_io_cbstatus_control_text[SETUP_LANGUAGE_MAX] = {
+	"CB STATUS",
+	"CB 状态控制",
+	"CB STATUS",
+};
+
+char const* _actrio_io_iostatus_text[IO_STATUS_COUNT] = {
+	"CB ERROR",
+	"DI #1",
+	"DI #2",
+	"DI #3",
+	"DI #4",
+	"DO #1"
 };
 
 char const* _aconoff_text[SETUP_LANGUAGE_MAX][STATUS_COUNT] = {
