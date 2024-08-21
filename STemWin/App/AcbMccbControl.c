@@ -49,12 +49,12 @@
 
 static uint8_t AcbMccbcbStatus;
 static uint8_t bUpdateFirst;
+static uint8_t TrioIocbStatus;
 
 static void AcbMccbControlSend(void);
 static int ControlCheck(void);
 static void AcbMccbIoValueDisp(void);
 static void AcbMccbControlDisp(void);
-static void StuIo(void);
 
 static void TrioIoSend(void);
 static void TrioIoValueDisp(void);
@@ -99,7 +99,6 @@ static void AcbMccbControlSend(void)
 
 static uint8_t nDoSetting[CB_STATUS_DO_MAX];
 static uint8_t nRemote;
-static uint8_t nTrio;
 static int ControlCheck(void)
 {
 	int ret = FALSE;
@@ -123,7 +122,7 @@ static int ControlCheck(void)
 		}
 	}
 	else {}
-	(void)printf("===============================\ncbStatus=%d, com=%d, nTrio=%d\n", AcbMccbcbStatus, comp, nTrio);
+	(void)printf("===============================\ncbStatus=%d, com=%d, nTrio=%d\n", AcbMccbcbStatus, comp, nTrio[gDeviceIndex]);
 	for(int i = 0; i < CB_STATUS_DO_MAX; i++)
 	{
 		(void)printf("i=%d, nDoSetting=%d\n", i, nDoSetting[i]);
@@ -177,7 +176,7 @@ static void AcbMccbIoValueDisp(void)
 	nDoSetting[INDEX_1] = ModbusGetUint8_L(I_REGISTER_204);
 	nDoSetting[INDEX_2] = ModbusGetUint8_U(I_REGISTER_205);
 
-	nTrio = INDEX_0;
+//	nTrio = INDEX_0;
 
 //	(void)GUI_SetFont(&GUI_Font20B_ASCII);
 	LanguageSelect(FONT20B);
@@ -186,9 +185,9 @@ static void AcbMccbIoValueDisp(void)
 	uint8_t status = (ModbusGetUint16(I_REGISTER_208) >> CB_STATUS_SHIFT) & CB_STATUS_MASK;		// 0x00: Open(ACB OCR 사용) 0x01: Close(ACB OCR 사용) 0x02: Trip 0x03: Intermediate
 	if(ConnectSetting[gDeviceIndex].DeviceType == DEVICE_ACB)
 	{
-		nTrio = (ModbusGetUint16(I_REGISTER_183) >> CB_TRIO_SHIFT) & CB_TRIO_MASK;	// TRIO 결선 000b: TRIO Only 001b: TRIO+ACB_OCR 010b: TRIO+MCCB 111b: ACB OCR Only
-		(void)printf("nTrio=%d\n", nTrio);
-		if(nTrio != INDEX_7)		// ACB Only가 아니면
+		nTrio[gDeviceIndex] = (ModbusGetUint16(I_REGISTER_183) >> CB_TRIO_SHIFT) & CB_TRIO_MASK;	// TRIO 결선 000b: TRIO Only 001b: TRIO+ACB_OCR 010b: TRIO+MCCB 111b: ACB OCR Only
+//		(void)printf("nTrio=%d\n", nTrio[gDeviceIndex]);
+		if(nTrio[gDeviceIndex] != INDEX_7)		// ACB Only가 아니면
 		{
 			status = (ModbusGetUint16(I_REGISTER_184) >> CB_ACB_TRIO_SHIFT) & CB_ACB_TRIO_MASK;
 			nDoSetting[INDEX_0] = INDEX_2;		//CB CLose
@@ -535,7 +534,7 @@ static void AcbMccbControlDisp(void)
 //};
 
 // PRQA S 1503 1
-void StuIo(void)
+void StuMccbIo(void)
 {
 	uint8_t bRecvData;
 	int flagBreak = FALSE;
@@ -545,6 +544,8 @@ void StuIo(void)
 	gStatusSendEnd = STATUS_SEND_ING;
 	statusSendStep = 0;
 	nSendStep = 0;
+
+	(void)ReadyToSend();
 	AcbMccbControlSend();
 	int bCommError = gCommStatus[gDeviceIndex];
 	while (1)
@@ -584,7 +585,7 @@ void StuIo(void)
 					}
 					else
 					{
-						if(nTrio != INDEX_7)		// TRIO 결선000b: TRIO Only, 001b: TRIO+ACB_OCR, 010b: TRIO+MCCB, 111b: ACB OCR Only
+						if(nTrio[gDeviceIndex] != INDEX_7)		// TRIO 결선000b: TRIO Only, 001b: TRIO+ACB_OCR, 010b: TRIO+MCCB, 111b: ACB OCR Only
 						{
 							address = CB_STATUS_TRIO_ADDR;
 						}
@@ -707,35 +708,29 @@ static void TrioIoSend(void)
 	{
 		ModbusSendFrame(ConnectSetting[gDeviceIndex].Address, INPUT_REGISTER, TRIO_IO_READ_ADDR, TRIO_IO_READ_LEN);	// 30183 ~ 30185
 	}
-	else
-	{
-//		if(ConnectSetting[gDeviceIndex].DeviceType == DEVICE_MCCB)
-//		{
-//			ModbusSendFrame(ConnectSetting[gDeviceIndex].Address, INPUT_REGISTER, MCCB_CONTROL_READ_ADDR, MCCB_CONTROL_READ_LEN);	// 30204 ~ 30208
-//		}
-	}
 }
 
 static void TrioIoValueDisp(void)
 {
-	uint16_t nDioStatus[DIO_STATUS_MAX];
+	uint16_t nDioValue[DIO_STATUS_MAX];
+	bool	 bDioStatus[IO_STATUS_COUNT];
 	static const uint16_t IoStatus_Offset[IO_STATUS_COUNT] =
 	{
 			0,
-			1,
 			0,
-			1,
-			1,
+			0,
+			0,
+			0,
 			1
 	};
 	static const uint16_t IoStatus_bit[IO_STATUS_COUNT] =
 	{
-			0x8000,
-			0x8000,
-			0x4000,
+			0x0000,
 			0x0001,
 			0x0002,
-			0x0004
+			0x0004,
+			0x0008,
+			0x0001
 	};
 	static GUI_COLOR colorOnFillColor[OPEN_CLOSE_TRIP] =
 	{
@@ -744,105 +739,55 @@ static void TrioIoValueDisp(void)
 			TRIP_ON_COLOR
 	};
 
-	nDioStatus[INDEX_0] = ModbusGetUint16(I_REGISTER_207);
-	nDioStatus[INDEX_1] = ModbusGetUint16(I_REGISTER_208);
-	if(ModbusGetUint16(I_REGISTER_206) & CB_REMOTE_MASK)
+	nDioValue[INDEX_0] = ModbusGetUint16(I_REGISTER_184);
+	nDioValue[INDEX_1] = ModbusGetUint16(I_REGISTER_185);
+	for(int i = 0; i < IO_STATUS_COUNT; i++)
 	{
-		nRemote = TRUE;
+		if((nDioValue[IoStatus_Offset[i]] & IoStatus_bit[i]) == 0)
+			bDioStatus[i] = false;
+		else
+			bDioStatus[i] = true;
+	}
+
+	if((nDioValue[INDEX_1] & CB_REMOTE_MASK) == 0)
+	{
+		bDioStatus[0] = false;
 	}
 	else
 	{
-		nRemote = FALSE;
+		bDioStatus[0] = true;
 	}
-	nDoSetting[INDEX_0] = ModbusGetUint8_U(I_REGISTER_204);
-	nDoSetting[INDEX_1] = ModbusGetUint8_L(I_REGISTER_204);
-	nDoSetting[INDEX_2] = ModbusGetUint8_U(I_REGISTER_205);
 
-	nTrio = INDEX_0;
-
-//	(void)GUI_SetFont(&GUI_Font20B_ASCII);
 	LanguageSelect(FONT20B);
 	GUI_SetColor(GUI_BLACK);
 
-	uint8_t status = (ModbusGetUint16(I_REGISTER_208) >> CB_STATUS_SHIFT) & CB_STATUS_MASK;		// 0x00: Open(ACB OCR 사용) 0x01: Close(ACB OCR 사용) 0x02: Trip 0x03: Intermediate
-	if(ConnectSetting[gDeviceIndex].DeviceType == DEVICE_ACB)
-	{
-		nTrio = (ModbusGetUint16(I_REGISTER_183) >> CB_TRIO_SHIFT) & CB_TRIO_MASK;	// TRIO 결선 000b: TRIO Only 001b: TRIO+ACB_OCR 010b: TRIO+MCCB 111b: ACB OCR Only
-		(void)printf("nTrio=%d\n", nTrio);
-		if(nTrio != INDEX_7)		// ACB Only가 아니면
-		{
-			status = (ModbusGetUint16(I_REGISTER_184) >> CB_ACB_TRIO_SHIFT) & CB_ACB_TRIO_MASK;
-			nDoSetting[INDEX_0] = INDEX_2;		//CB CLose
-			nDoSetting[INDEX_1] = INDEX_3;		// CB Open
+	uint8_t status = (nDioValue[INDEX_1] >> CB_STATUS_SHIFT) & CB_STATUS_MASK;		// 0x00: Open 0x01: Close  0x03: Error
 
-			if(ModbusGetUint16(I_REGISTER_183) & CB_ACB_TRIO_REMOTE_MASK)
+	if(status != 0x03 && (bUpdateFirst == TRUE) || (TrioIocbStatus != status))
+	{
+		TrioIocbStatus = status;
+		GUI_FillRectEx(&rectAcbBox);
+		for(uint8_t i = 0; i < INDEX_2; i++)
+		{
+			if(i == TrioIocbStatus)
 			{
-				nRemote = TRUE;
+				GUI_SetColor(colorOnFillColor[i]);
+				GUI_FillRectEx(&rectAcbStatus[i]);
+
+				GUI_SetBkColor(colorOnFillColor[i]);
+				GUI_SetColor(GUI_WHITE);
 			}
 			else
 			{
-				nRemote = FALSE;
+				GUI_SetColor(colorOffFillColor[i]);
+				GUI_FillRectEx(&rectAcbStatus[i]);
+
+				GUI_SetBkColor(colorOffFillColor[i]);
+				GUI_SetColor(colorOffTextColor[i]);
 			}
-		}
-	}
-	else
-	{
-		nDoSetting[INDEX_2] = 0;
-	}
-	if((bUpdateFirst == TRUE) || (AcbMccbcbStatus != status))
-	{
-		AcbMccbcbStatus = status;
-		if(ConnectSetting[gDeviceIndex].DeviceType == DEVICE_MCCB)
-		{
-			GUI_FillRectEx(&rectMccbBox);
-			for(uint8_t i = 0; i < INDEX_3; i++)
-			{
-				if(i == AcbMccbcbStatus)
-				{
-					GUI_SetColor(colorOnFillColor[i]);
-					GUI_FillRectEx(&rectMccbStatus[i]);
+			LanguageSelect(FONT20B);
+			GUI_DispStringInRect(_accb_status[SettingValue[SETUP_LANGUAGE]][i], &rectAcbStatus[i], GUI_TA_HCENTER | GUI_TA_VCENTER);
 
-					GUI_SetBkColor(colorOnFillColor[i]);
-					GUI_SetColor(GUI_WHITE);
-				}
-				else
-				{
-					GUI_SetColor(colorOffFillColor[i]);
-					GUI_FillRectEx(&rectMccbStatus[i]);
-
-					GUI_SetBkColor(colorOffFillColor[i]);
-					GUI_SetColor(colorOffTextColor[i]);
-				}
-				LanguageSelect(FONT20B);
-				GUI_DispStringInRect(_accb_status[SettingValue[SETUP_LANGUAGE]][i], &rectMccbStatus[i], GUI_TA_HCENTER | GUI_TA_VCENTER);
-
-			}
-		}
-		else
-		{
-			GUI_FillRectEx(&rectAcbBox);
-			for(uint8_t i = 0; i < INDEX_2; i++)
-			{
-				if(i == AcbMccbcbStatus)
-				{
-					GUI_SetColor(colorOnFillColor[i]);
-					GUI_FillRectEx(&rectAcbStatus[i]);
-
-					GUI_SetBkColor(colorOnFillColor[i]);
-					GUI_SetColor(GUI_WHITE);
-				}
-				else
-				{
-					GUI_SetColor(colorOffFillColor[i]);
-					GUI_FillRectEx(&rectAcbStatus[i]);
-
-					GUI_SetBkColor(colorOffFillColor[i]);
-					GUI_SetColor(colorOffTextColor[i]);
-				}
-				LanguageSelect(FONT20B);
-				GUI_DispStringInRect(_accb_status[SettingValue[SETUP_LANGUAGE]][i], &rectAcbStatus[i], GUI_TA_HCENTER | GUI_TA_VCENTER);
-
-			}
 		}
 	}
 	bUpdateFirst = FALSE;
@@ -853,80 +798,47 @@ static void TrioIoValueDisp(void)
 	rect.y0 = ACBMCCB_IOSTATUS_START_Y + ACBMCCB_IOSTATUS_Y_DISTANCE;
 	rect.y1 = (rect.y0 + ACBMCCB_IOSTATUS_BOX_HEIGHT) - 1;
 
-	GUI_RECT rectDescLocal;
-	rectDescLocal.x0 = ACBMCCB_IOSTATUS_START_X + ACBMCCB_IOSTATUS_DESC_X;
-	rectDescLocal.x1 = ACBMCCB_IOSTATUS_STATUS_X - 1;
-	rectDescLocal.y0 = ACBMCCB_IOSTATUS_START_Y + ACBMCCB_IOSTATUS_Y_DISTANCE;
-	rectDescLocal.y1 = (rectDescLocal.y0 + ACBMCCB_IOSTATUS_BOX_HEIGHT) - 1;
-
 	GUI_RECT rectOnOff;
 	rectOnOff.x0 = ACBMCCB_IOSTATUS_START_X + ACBMCCB_IOSTATUS_STATUS_X;
 	rectOnOff.x1 = (rectOnOff.x0 + ACBMCCB_IOSTATUS_STATUS_WIDTH) - 1;
 	rectOnOff.y0 = ACBMCCB_IOSTATUS_START_Y + ACBMCCB_IOSTATUS_STATUS_Y + ACBMCCB_IOSTATUS_Y_DISTANCE;
 	rectOnOff.y1 = (rectOnOff.y0 + ACBMCCB_IOSTATUS_STATUS_HEIGHT) - 1;
 
-	char *disableStatus = "-";
-
 	for(int i = 0; i < IO_STATUS_COUNT; i++)
 	{
 		GUI_SetColor(COLOR_LINE);
 		GUI_DrawRectEx(&rect);
 
-//		(void)GUI_SetFont(&GUI_Font20_ASCII);
-		if(((ConnectSetting[gDeviceIndex].DeviceType == DEVICE_MCCB) &&
-		   (((i == ZSI_IN) && (gAmpareFrame[gDeviceIndex] <= AF250)) 				// 250AF
-			|| (i == ERMS)														// ERMS
-			|| (i == DO3)))) //	||													// DO #3
+		GUI_SetBkColor(COLOR_MAIN_BG);
+		GUI_SetColor(COLOR_LABEL);
+		LanguageSelect(FONT20);
+		if(bDioStatus[i] == true)
 		{
-			GUI_SetBkColor(COLOR_MAIN_BG);
-			GUI_SetColor(OFF_ON_BOX_COLOR);
-			LanguageSelect(FONT20);
-			GUI_DispStringInRect(_actrio_io_iostatus_text[i], &rectDescLocal, GUI_TA_LEFT | GUI_TA_VCENTER);
-
-			GUI_SetColor(OFF_ON_BOX_COLOR);
+			GUI_SetColor(COLOR_ON);
+			GUI_SetBkColor(COLOR_ON);
 			GUI_FillRectEx(&rectOnOff);
-			GUI_SetColor(COLOR_LABEL);
-			GUI_SetBkColor(OFF_ON_BOX_COLOR);
-			GUI_DispStringInRect(disableStatus, &rectOnOff, GUI_TA_HCENTER | GUI_TA_VCENTER);
+			GUI_SetColor(GUI_WHITE);
+			LanguageSelect(FONT20B);
+			GUI_DispStringInRect(_aconoff_text[SettingValue[SETUP_LANGUAGE]][ON], &rectOnOff, GUI_TA_HCENTER | GUI_TA_VCENTER);
 		}
 		else
 		{
-			GUI_SetBkColor(COLOR_MAIN_BG);
-			GUI_SetColor(COLOR_LABEL);
-			LanguageSelect(FONT20);
-			GUI_DispStringInRect(_actrio_io_iostatus_text[i], &rectDescLocal, GUI_TA_LEFT | GUI_TA_VCENTER);
-			if(nDioStatus[IoStatus_Offset[i]] & IoStatus_bit[i])
-			{
-				GUI_SetColor(COLOR_ON);
-				GUI_SetBkColor(COLOR_ON);
-				GUI_FillRectEx(&rectOnOff);
-				GUI_SetColor(GUI_WHITE);
-				LanguageSelect(FONT20B);
-				GUI_DispStringInRect(_aconoff_text[SettingValue[SETUP_LANGUAGE]][ON], &rectOnOff, GUI_TA_HCENTER | GUI_TA_VCENTER);
-			}
-			else
-			{
-				GUI_SetColor(COLOR_OFF);
-				GUI_SetBkColor(COLOR_OFF);
-				GUI_FillRectEx(&rectOnOff);
-				GUI_SetColor(GUI_WHITE);
-				LanguageSelect(FONT20B);
-				GUI_DispStringInRect(_aconoff_text[SettingValue[SETUP_LANGUAGE]][OFF], &rectOnOff, GUI_TA_HCENTER | GUI_TA_VCENTER);
-			}
+			GUI_SetColor(COLOR_OFF);
+			GUI_SetBkColor(COLOR_OFF);
+			GUI_FillRectEx(&rectOnOff);
+			GUI_SetColor(GUI_WHITE);
+			LanguageSelect(FONT20B);
+			GUI_DispStringInRect(_aconoff_text[SettingValue[SETUP_LANGUAGE]][OFF], &rectOnOff, GUI_TA_HCENTER | GUI_TA_VCENTER);
 		}
-		if(i == ERMS)
+		if(i == INDEX_2)
 		{
 			rect.x0 += ACBMCCB_IOSTATUS_X_DISTANCE;
 			rect.x1 += ACBMCCB_IOSTATUS_X_DISTANCE;
-			rectDescLocal.x0 += ACBMCCB_IOSTATUS_X_DISTANCE;
-			rectDescLocal.x1 += ACBMCCB_IOSTATUS_X_DISTANCE;
 			rectOnOff.x0 += ACBMCCB_IOSTATUS_X_DISTANCE;
 			rectOnOff.x1 += ACBMCCB_IOSTATUS_X_DISTANCE;
 
 			rect.y0 = ACBMCCB_IOSTATUS_START_Y + ACBMCCB_IOSTATUS_Y_DISTANCE;
 			rect.y1 = (rect.y0 + ACBMCCB_IOSTATUS_BOX_HEIGHT) - 1;
-			rectDescLocal.y0 = ACBMCCB_IOSTATUS_START_Y + ACBMCCB_IOSTATUS_Y_DISTANCE;
-			rectDescLocal.y1 = (rectDescLocal.y0 + ACBMCCB_IOSTATUS_BOX_HEIGHT) - 1;
 			rectOnOff.y0 = ACBMCCB_IOSTATUS_START_Y + ACBMCCB_IOSTATUS_STATUS_Y + ACBMCCB_IOSTATUS_Y_DISTANCE;
 			rectOnOff.y1 = (rectOnOff.y0 + ACBMCCB_IOSTATUS_STATUS_HEIGHT) - 1;
 		}
@@ -934,9 +846,6 @@ static void TrioIoValueDisp(void)
 		{
 			rect.y0 += ACBMCCB_IOSTATUS_Y_DISTANCE;
 			rect.y1 += ACBMCCB_IOSTATUS_Y_DISTANCE;
-
-			rectDescLocal.y0 += ACBMCCB_IOSTATUS_Y_DISTANCE;
-			rectDescLocal.y1 += ACBMCCB_IOSTATUS_Y_DISTANCE;
 
 			rectOnOff.y0 += ACBMCCB_IOSTATUS_Y_DISTANCE;
 			rectOnOff.y1 += ACBMCCB_IOSTATUS_Y_DISTANCE;
@@ -989,33 +898,16 @@ static void TrioIoDisp(void)
 
 	GUI_SetColor(GUI_BLACK);
 
-	if(ConnectSetting[gDeviceIndex].DeviceType == DEVICE_MCCB)
+	GUI_FillRectEx(&rectAcbBox);
+	for(int i = 0; i < INDEX_2; i++)
 	{
-		GUI_FillRectEx(&rectMccbBox);
-		for(int i = 0; i < INDEX_3; i++)
-		{
-			GUI_SetColor(colorOffFillColor[i]);
-			GUI_FillRectEx(&rectMccbStatus[i]);
+		GUI_SetColor(colorOffFillColor[i]);
+		GUI_FillRectEx(&rectAcbStatus[i]);
 
-			GUI_SetBkColor(colorOffFillColor[i]);
-			GUI_SetColor(colorOffTextColor[i]);
-			GUI_DispStringInRect(_accb_status[SettingValue[SETUP_LANGUAGE]][i], &rectMccbStatus[i], GUI_TA_HCENTER | GUI_TA_VCENTER);
+		GUI_SetBkColor(colorOffFillColor[i]);
+		GUI_SetColor(colorOffTextColor[i]);
+		GUI_DispStringInRect(_accb_status[SettingValue[SETUP_LANGUAGE]][i], &rectAcbStatus[i], GUI_TA_HCENTER | GUI_TA_VCENTER);
 
-		}
-	}
-	else
-	{
-		GUI_FillRectEx(&rectAcbBox);
-		for(int i = 0; i < INDEX_2; i++)
-		{
-			GUI_SetColor(colorOffFillColor[i]);
-			GUI_FillRectEx(&rectAcbStatus[i]);
-
-			GUI_SetBkColor(colorOffFillColor[i]);
-			GUI_SetColor(colorOffTextColor[i]);
-			GUI_DispStringInRect(_accb_status[SettingValue[SETUP_LANGUAGE]][i], &rectAcbStatus[i], GUI_TA_HCENTER | GUI_TA_VCENTER);
-
-		}
 	}
 	rect.x0 = ACBMCCB_IOSTATUS_START_X;
 	rect.x1 = (ACBMCCB_IOSTATUS_START_X + ACBMCCB_IOSTATUS_BOX_WIDTH) - 1;
@@ -1049,17 +941,11 @@ static void TrioIoDisp(void)
 		GUI_FillRectEx(&rectOnOff);
 		GUI_SetColor(COLOR_LABEL);
 		GUI_SetBkColor(OFF_ON_BOX_COLOR);
-		if(ConnectSetting[gDeviceIndex].DeviceType == DEVICE_MCCB)
-		{
-			LanguageSelect(FONT20B);
-		}
-		else
-		{
-			LanguageSelect(FONT20);
-		}
+
+		LanguageSelect(FONT20);
 		GUI_DispStringInRect(disableStatus, &rectOnOff, GUI_TA_HCENTER | GUI_TA_VCENTER);
 
-		if(i == ERMS)
+		if(i == INDEX_2)
 		{
 			rect.x0 += ACBMCCB_IOSTATUS_X_DISTANCE;
 			rect.x1 += ACBMCCB_IOSTATUS_X_DISTANCE;
@@ -1096,11 +982,11 @@ static void TrioIo(void)
 	int flagBreak = FALSE;
 	bRecvData = FALSE;
 	bUpdateFirst = TRUE;
-	AcbMccbControlDisp();
+	TrioIoDisp();
 	gStatusSendEnd = STATUS_SEND_ING;
 	statusSendStep = 0;
 	nSendStep = 0;
-	AcbMccbControlSend();
+	TrioIoSend();
 	int bCommError = gCommStatus[gDeviceIndex];
 	while (1)
     {
@@ -1110,54 +996,7 @@ static void TrioIo(void)
 		{
 			gStatusSendEnd = STATUS_SEND_ING;
 			nSendStep = 0;
-			AcbMccbControlSend();
-		}
-		else
-		if(key == KEY_ENTER)
-		{
-			if(bRecvData == TRUE)
-			{
-				int flag = ControlCheck();
-				(void)printf("nRemote=%d, flag=%d\n", nRemote, flag);
-				if((nRemote == TRUE) && (flag == TRUE))
-				{
-					char buf[MESSAGE_BUF_SIZE];
-					uint8_t status = AcbMccbcbStatus;
-					uint16_t address=CB_STATUS_NOT_TRIO_ADDR;
-
-					if(ConnectSetting[gDeviceIndex].DeviceType == DEVICE_MCCB)
-					{
-						if(status == CB_STATUS_INPUT_FAULT)
-						{
-							status = 0;
-							address = CB_STATUS_MCCB_TRIP_ADDR;
-						}
-						else
-						{
-							address = CB_STATUS_MCCB_ADDR;
-						}
-					}
-					else
-					{
-						if(nTrio != INDEX_7)		// TRIO 결선000b: TRIO Only, 001b: TRIO+ACB_OCR, 010b: TRIO+MCCB, 111b: ACB OCR Only
-						{
-							address = CB_STATUS_TRIO_ADDR;
-						}
-					}
-					(void)sprintf(buf, _acacbMccbcontrol_confirm_text[SettingValue[SETUP_LANGUAGE]], _accb_control_status[SettingValue[SETUP_LANGUAGE]][AcbMccbcbStatus]);
-					ControlSet(status, address, 0, buf, 1);
-				}
-				else
-				{
-					ControlErrorMessage(_acCBSetting_invalid_text[SettingValue[SETUP_LANGUAGE]]);
-				}
-				bUpdateFirst = TRUE;
-				DispStatus();
-				AcbMccbControlDisp();
-				AcbMccbControlSend();
-				gCommOldStatus[gDeviceIndex] = -1;
-				CommTimerInit();
-			}
+			TrioIoSend();
 		}
 		else
 		if(key == KEY_SETUP)
@@ -1166,9 +1005,9 @@ static void TrioIo(void)
 			{
 				flagBreak = TRUE;
 			}
-			AcbMccbControlDisp();
+			TrioIoDisp();
 			gCommOldStatus[gDeviceIndex] = -1;
-			AcbMccbControlSend();
+			TrioIoSend();
 		}
 		else
 		if(key == DATA_RECV)
@@ -1176,17 +1015,17 @@ static void TrioIo(void)
 			(void)printf("DATA_RECV gStatusSendEnd=%d\n",gStatusSendEnd);
 			if(bCommError == COMM_ERROR)
 			{
-				AcbMccbControlDisp();
+				TrioIoDisp();
 				bCommError = COMM_OK;
 			}
 			if(gStatusSendEnd == STATUS_SEND_ING)
 			{
 				StatusRecv();
-				AcbMccbControlSend();
+				TrioIoSend();
 			}
 			else
 			{
-				AcbMccbIoValueDisp();
+				TrioIoValueDisp();
 				g_bRecvAllDone = TRUE;
 				nSendStep = 0;
 				statusSendStep = 0;
@@ -1210,31 +1049,13 @@ static void TrioIo(void)
 			}
 			else
 			{
-					AcbMccbControlSend();
+					TrioIoSend();
 					g_bRecvAllDone = TRUE;
 					(void)printf("All done!!!\n");
 					gStatusSendEnd = STATUS_SEND_ING;
 					statusSendStep = 0;
 					nSendStep = 0;
 			}
-/*
-			(void)printf("COMM Error!!! gStatusSendEnd=%d, statusSendStep=%d, nSendStep=%d\n",gStatusSendEnd,statusSendStep,nSendStep);
-			if(gAcbMccbSend == TRUE)
-			{
-				gAcbMccbSend =FALSE;
-				statusSendStep = 0;
-				gStatusSendEnd = STATUS_SEND_ING;
-			}
-			if(StatusRecvErrorProcess() == STATUS_SEND_ING)
-			{
-				nSendStep = 0;
-			}
-			else
-			{
-				gAcbMccbSend = TRUE;
-				AcbMccbControlSend();
-			}
-*/
 		}
 		else
 		if(key == COMM_STAT_ERROR)
@@ -1242,7 +1063,7 @@ static void TrioIo(void)
 			bUpdateFirst = TRUE;
 			(void)printf("COMM_STAT_ERROR\n\n");
 			bCommError = COMM_ERROR;
-			AcbMccbControlDisp();
+			TrioIoDisp();
 		}
 		else {}
 		if(flagBreak == TRUE)
@@ -1333,18 +1154,18 @@ static void TrioTempValueDisp(void)
 	for(int i = 0; i < TRIO_TEMP_MAX; i++)
 	{
 		char buf[20];
-//		aiValue[i] =  ModbusGetFloat(index);
-printf("i=%d, value=%f\n",i, aiValue[i]);
+		aiValue[i] =  ModbusGetFloat(index);
 		GUI_ClearRect(rect.x0, rect.y0, rect.x1, rect.y1);
 		sprintf(buf, "%3d",(int)aiValue[i]);
 		GUI_DispStringInRect(buf, &rect, (GUI_TA_RIGHT | GUI_TA_VCENTER));
 		rect.y0 += TRIO_TEMP_LABEL_DISTANCE;
 		rect.y1 += TRIO_TEMP_LABEL_DISTANCE;
 		index +=  INDEX_2;
-		if(aiValue == 0)
+		if(aiValue[i] <= 0)
 			barGraph[i] = 0;
 		else
 			barGraph[i] = (int)(aiValue[i] / INDEX_10) + 1;
+// printf("i=%d, barGraph[i]=%d, value=%f\n",i, barGraph[i], aiValue[i]);
 	}
 	int y0 = TRIO_TEMP_BAR_Y0;
 	int y1 = TRIO_TEMP_BAR_Y1;
@@ -1391,7 +1212,7 @@ static void TrioTempSend(void)
 	{
 		return;
 	}
-	ModbusSendFrame(ConnectSetting[gDeviceIndex].Address, INPUT_REGISTER, ACB_CONTROL_READ_ADDR, ACB_CONTROL_READ_LEN);	// 30183 ~ 30208
+	ModbusSendFrame(ConnectSetting[gDeviceIndex].Address, INPUT_REGISTER, I_REGISTER_186, INDEX_8);	// 30186~ 30193
 }
 
 
@@ -1517,7 +1338,7 @@ void TrioTemp(void)
 		else
 		if(key == DATA_RECV)
 		{
-			(void)printf("DATA_RECV gStatusSendEnd=%d\n",gStatusSendEnd);
+//			(void)printf("DATA_RECV gStatusSendEnd=%d\n",gStatusSendEnd);
 			if(bCommError == COMM_ERROR)
 			{
 				TrioTempDisp();
@@ -1560,24 +1381,6 @@ void TrioTemp(void)
 					statusSendStep = 0;
 					nSendStep = 0;
 			}
-/*
-			(void)printf("COMM Error!!! gStatusSendEnd=%d, statusSendStep=%d, nSendStep=%d\n",gStatusSendEnd,statusSendStep,nSendStep);
-			if(gAcbMccbSend == TRUE)
-			{
-				gAcbMccbSend =FALSE;
-				statusSendStep = 0;
-				gStatusSendEnd = STATUS_SEND_ING;
-			}
-			if(StatusRecvErrorProcess() == STATUS_SEND_ING)
-			{
-				nSendStep = 0;
-			}
-			else
-			{
-				gAcbMccbSend = TRUE;
-				TrioTempSend();
-			}
-*/
 		}
 		else
 		if(key == COMM_STAT_ERROR)
@@ -1605,21 +1408,36 @@ void TrioTemp(void)
 *
 *       Createstatus_window
 */
-
+//bool bDataRecv;
 // PRQA S 1503 2
 // PRQA S 1505 1
+
 void AcbMccbControl(void)
 {
 	int flagBreak = FALSE;
 	nMenuPos = 0;
+	int nMenuCount;
 
+//	bool bDataRecv = false;
+
+	if(nTrio[gDeviceIndex] == INDEX_7)
+		nMenuCount = 1;
+	else
+		nMenuCount = EVENT_MENU_COUNT;
+							//   TRIO 결선
+							// 000b: TRIO Only
+							// 001b: TRIO+ACB_OCR
+							// 010b: TRIO+MCCB
+							// 111b: ACB OCR Only
 	GUI_ClearRect(X0_MAIN, Y0_MAIN, X1_MAIN, Y1_MAIN);
-	InfoMenu(CONTROL_MENU, nMenuPos, EVENT_MENU_COUNT);
+	InfoMenu(CONTROL_MENU, nMenuPos, nMenuCount);
 
-	//(void)StatusSend();
+	ReadyToSend();
+//	gStatusSendEnd = STATUS_SEND_ING;
+//	g_bRecvAllDone = FALSE;
+	StatusSend();
 
 	nSendStep = 0;
-
 	while (1)
     {
 		E_KEY key = GetKey();
@@ -1639,41 +1457,47 @@ void AcbMccbControl(void)
 				flagBreak = TRUE;
 			}
 			GUI_ClearRect(X0_MAIN, Y0_MAIN, X1_MAIN, Y1_MAIN);
-			InfoMenu(CONTROL_MENU, nMenuPos, EVENT_MENU_COUNT);
+			InfoMenu(CONTROL_MENU, nMenuPos, nMenuCount);
 			gCommOldStatus[gDeviceIndex] = -1;
 		}
 		else
 		if(key == KEY_UP)
 		{
-			if(nMenuPos > 0)
+			if(nMenuCount != INDEX_1)
 			{
-				nMenuPos--;
+				if(nMenuPos > 0)
+				{
+					nMenuPos--;
+				}
+				else
+				{
+					nMenuPos = nMenuCount - 1;
+				}
+				InfoMenu(CONTROL_MENU, nMenuPos, nMenuCount);
 			}
-			else
-			{
-				nMenuPos = EVENT_MENU_COUNT - 1;
-			}
-			InfoMenu(CONTROL_MENU, nMenuPos, EVENT_MENU_COUNT);
 		}
 		else
 		if(key == KEY_DOWN)
 		{
-			if(nMenuPos < (EVENT_MENU_COUNT-1))
+			if(nMenuCount != INDEX_1)
 			{
-				nMenuPos++;
+				if(nMenuPos < (nMenuCount-1))
+				{
+					nMenuPos++;
+				}
+				else
+				{
+					nMenuPos = 0;
+				}
+				InfoMenu(CONTROL_MENU, nMenuPos, nMenuCount);
 			}
-			else
-			{
-				nMenuPos = 0;
-			}
-			InfoMenu(CONTROL_MENU, nMenuPos, EVENT_MENU_COUNT);
 		}
 		else
 		if(key == KEY_ENTER)
 		{
 			if(nMenuPos == INDEX_0)
 			{
-				StuIo();
+				StuMccbIo();
 			}
 			else
 			if(nMenuPos == INDEX_1)
@@ -1684,24 +1508,51 @@ void AcbMccbControl(void)
 			{
 				TrioTemp();
 			}
-			InfoMenu(CONTROL_MENU, nMenuPos, EVENT_MENU_COUNT);
+			InfoMenu(CONTROL_MENU, nMenuPos, nMenuCount);
 		}
 		else
 		if(key == DATA_RECV)
 		{
-//			(void)printf("DATA_RECV\n");
-			StatusRecv();
-			if(gStatusSendEnd == STATUS_SEND_ING)
+/*
+			if(bDataRecv == false)
 			{
-				(void)EventSend(FALSE);
+				if(ConnectSetting[gDeviceIndex].Address == g_modbusRxBuff[0] &&  g_startAddr == I_REGISTER_183)
+				{
+					nTrio = (ModbusGetUint16(I_REGISTER_183) >> CB_TRIO_SHIFT) & CB_TRIO_MASK;	// TRIO 결선 000b: TRIO Only 001b: TRIO+ACB_OCR 010b: TRIO+MCCB 111b: ACB OCR Only
+					if(nTrio == INDEX_7)
+						nMenuCount = 1;
+					else
+						nMenuCount = EVENT_MENU_COUNT;
+
+					if(nTrio == 0)
+					{
+						int kkk = 1;
+					}
+					printf("nTrio = %d\n", nTrio);
+					InfoMenu(CONTROL_MENU, nMenuPos, nMenuCount);
+					bDataRecv = true;
+					nSendStep = 0;
+					statusSendStep = 0;
+					gStatusSendEnd =  STATUS_SEND_ING;
+					StatusSend();
+					gbSettingTime = FALSE;
+				}
+				else
+				{
+					ModbusSendFrame(ConnectSetting[gDeviceIndex].Address, INPUT_REGISTER, I_REGISTER_183, INDEX_1);	// 30183 ~ 30183
+				}
 			}
 			else
-			{
-				g_bRecvAllDone = TRUE;
-//				(void)printf("All done!!!\n");
-				nSendStep = 0;
-				statusSendStep = 0;
-				gStatusSendEnd = STATUS_SEND_ING;
+*/			{
+				StatusRecv();
+				if(StatusSend() != STATUS_SEND_ING)
+				{
+					g_bRecvAllDone = TRUE;
+	//				(void)printf("All done!!!\n");
+					nSendStep = 0;
+					statusSendStep = 0;
+					gStatusSendEnd = STATUS_SEND_ING;
+				}
 			}
 		}
 		else

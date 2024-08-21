@@ -672,7 +672,10 @@ uint16_t StatusSend(void)
 			{
 				ModbusSendFrame(ConnectSetting[gDeviceIndex].Address, INPUT_REGISTER, I_REGISTER_201, INDEX_17);		// Event Count, 시간동기+Local/Remote, DiDo Status, SBO
 			}
-			else {}
+			else
+			{
+				statusSendStep = 0;
+			}
 		}
 		else
 		if((ConnectSetting[gDeviceIndex].DeviceType == DEVICE_ACB) || (ConnectSetting[gDeviceIndex].DeviceType == DEVICE_MCCB))
@@ -2156,7 +2159,7 @@ uint8_t ModbusRecvCheck(void)
 	uint32_t timer;
 
 	if(gDebug)
-		printf("[RecvCheck] MasterModbusSend(%d, %d)\n", HAL_GetTick(), g_sendOwner);
+		printf("[RecvCheck] ModbusRecvCheck(%d, %d)\n", HAL_GetTick(), g_sendOwner);
 	if(MasterSendLength[g_sendOwner] != 0)
 	{
 		g_sendOwner = OWNER_MASTER;
@@ -2210,6 +2213,89 @@ uint8_t ModbusRecvCheck(void)
 			(void)printf("[g_modbusRxError(%d)]\n", g_sendOwner);
 			CommStatusDisp();
 			g_modbusRxError = 0;
+			return KEY_COMM_ERROR;
+		}
+		GUI_Delay(50);
+	}
+}
+
+uint8_t ReadyToSend(void)
+{
+	uint32_t tick = HAL_GetTick();
+
+	uint32_t timer;
+
+	if(gDebug)
+		printf("[RecvCheck] ReadyToSend(%d, %d)\n", HAL_GetTick(), g_sendOwner);
+	if(sendFlag == 0)
+	{
+		g_sendOwner = OWNER_MASTER;
+		return TIME_OUT;			// 수신중이 아님
+	}
+
+//	if(MasterSendLength[g_sendOwner] != 0)
+//	{
+//		g_sendOwner = OWNER_MASTER;
+//		MasterModbusSend(g_sendOwner);
+//	}
+	last_recv = tick;
+
+	while (1)
+    {
+		timer = HAL_GetTick();
+		if(timer > (tick+1000))
+		{
+			printf("ReadyToSend Timeout.....\n");
+			g_sendOwner = OWNER_MASTER;
+			gStatusSendEnd = STATUS_SEND_ING;
+			statusSendStep = 0;
+			return KEY_COMM_ERROR;
+		}
+
+		MasterModbusProcess(true);
+
+		if(SlaveSendLength != 0)
+		{
+			if(gDebug)
+				printf("SlaveModbusSend(%d)\n", HAL_GetTick());
+			SlaveModbusSend();
+		}
+
+		if (g_modbusRxDone)
+		{
+			g_sendOwner = OWNER_MASTER;
+			gStatusSendEnd = STATUS_SEND_ING;
+			statusSendStep = 0;
+			commTimer = HAL_GetTick();
+			CommStatusDisp();
+			if(nMasterStatus == MODBUS_OK)
+			{
+				if(gDebug)
+					(void)printf("[MODBUS_OK]\n");
+			  return DATA_RECV;
+			}
+			else
+			if(nMasterStatus == MODBUS_ERROR)
+			{
+			  (void)printf("[Modbus Error]\n");
+			  return KEY_COMM_ERROR;
+			}
+			else
+			if(nMasterStatus == MODBUS_CRC_ERROR)
+			{
+			  (void)printf("[CRC BAD]\n");
+			  return KEY_COMM_ERROR;
+			}
+			g_modbusRxDone = 0;
+		}
+		if(g_modbusRxError)
+		{
+			(void)printf("[g_modbusRxError(%d)]\n", g_sendOwner);
+			CommStatusDisp();
+			g_modbusRxError = 0;
+			g_sendOwner = OWNER_MASTER;
+			gStatusSendEnd = STATUS_SEND_ING;
+			statusSendStep = 0;
 			return KEY_COMM_ERROR;
 		}
 		GUI_Delay(50);

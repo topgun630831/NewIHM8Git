@@ -357,7 +357,14 @@ static void AcbMccbMenu(int nPos)
 	else
 	if(nPos == CONTROL)
 	{
-		AcbMccbControl();
+		if(ConnectSetting[gDeviceIndex].DeviceType == DEVICE_MCCB || (ConnectSetting[gDeviceIndex].DeviceType == DEVICE_ACB && nTrio[gDeviceIndex] == INDEX_7))   // 111b: ACB OCR Only
+		{
+			StuMccbIo();
+		}
+		else
+		{
+			AcbMccbControl();
+		}
 	}
 	else {}
 }
@@ -481,6 +488,17 @@ static void MlinkMenu(int nPos)
 	else {}
 }
 
+
+static void MainDlgSend(void)
+{
+	if(StatusSend() == STATUS_SEND_ING)
+	{
+		return;
+	}
+	ModbusSendFrame(ConnectSetting[gDeviceIndex].Address, INPUT_REGISTER, I_REGISTER_183, INDEX_1);	// 30183 ~ 30183
+}
+
+
 /*********************************************************************
 *
 *       CreateMenu
@@ -510,9 +528,8 @@ WM_HWIN CreateMenu(E_DEVICE_TYPE DeviceType)
 
 	hWin = GUI_CreateDialogBox(_aDialogCreate, GUI_COUNTOF(_aDialogCreate), &_cbDialog, WM_HBKWIN, 0, Y0_MAIN);
 
-	gStatusSendEnd = STATUS_SEND_ING;
-	statusSendStep = 0;
-	(void)StatusSend();
+	ReadyToSend();
+	MainDlgSend();
 	uint16_t language;
 	while (1)
 	{
@@ -624,15 +641,16 @@ WM_HWIN CreateMenu(E_DEVICE_TYPE DeviceType)
 		else
 		if(key == DATA_RECV)
 		{
-			StatusRecv();
 			if(gStatusSendEnd == STATUS_SEND_ING)
 			{
-				(void)StatusSend();
+				StatusRecv();
+				MainDlgSend();
 			}
 			else
 			{
+				nTrio[gDeviceIndex] = (ModbusGetUint16(I_REGISTER_183) >> CB_TRIO_SHIFT) & CB_TRIO_MASK;	// TRIO °á¼± 000b: TRIO Only 001b: TRIO+ACB_OCR 010b: TRIO+MCCB 111b: ACB OCR Only
 				g_bRecvAllDone = TRUE;
-				(void)printf("g_bRecvAllDone=0\n");
+				//(void)printf("g_bRecvAllDone=0\n");
 			}
 		}
 		else

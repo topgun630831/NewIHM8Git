@@ -332,6 +332,7 @@ EXTERN uint32_t slave_last_recv;
 EXTERN uint32_t uart1LastNDTR;
 EXTERN uint32_t uart2LastNDTR;
 
+EXTERN uint8_t nTrio[DEVICE_MAX];
 
 #define	PER90		90
 #define	PER105		105
@@ -380,6 +381,7 @@ EXTERN uint32_t uart2LastNDTR;
 
 #define I_REGISTER_183				183
 #define I_REGISTER_184				184
+#define I_REGISTER_185				185
 
 #define I_REGISTER_194				194
 #define I_REGISTER_195				195
@@ -518,6 +520,7 @@ EXTERN uint32_t uart2LastNDTR;
 #define	CB_ACB_TRIO_SHIFT			8
 #define	CB_ACB_TRIO_MASK			0x003
 #define	CB_ACB_TRIO_REMOTE_MASK		0x0400
+#define	CB_DO_ERROR_MASK			0x0300
 
 #define TRIO_IO_READ_ADDR			183
 #define TRIO_IO_READ_LEN			4

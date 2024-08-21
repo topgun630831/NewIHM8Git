@@ -106,7 +106,7 @@ void EventSend(int bEvent)
 		uint8_t fileNo = MODBUS_FILE_NO_SYSTEM;
 		if(nMenuPos)
 		{
-		fileNo = MODBUS_FILE_NO_FAULT;
+			fileNo = MODBUS_FILE_NO_FAULT;
 		}
 		if(nCurrIndex <=  nEventIndex)
 		{

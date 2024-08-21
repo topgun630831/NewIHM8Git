@@ -897,6 +897,7 @@ void AcbMccbMeasurement(void);
 void AcbMccbInfomation(void);
 void AcbMccbEvent(void);
 void AcbMccbControl(void);
+void StuMccbIo(void);
 
 void MLinkOverview(void);
 void MLinkOverviewValue(int flag);

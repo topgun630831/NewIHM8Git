@@ -94,7 +94,7 @@ static void DispFormat3(double value, const char* baseUnit, char unit[UNIT_BUF_S
 
 static void AcbMccbMeasurementSend(void)
 {
-	(void)printf("AcbMccbMeasurementSend nSendStep = %d\n", nSendStep);
+	(void)printf("AcbMccbMeasurementSend nSendStep = %d, gStatusSendEnd=%d \n", nSendStep, gStatusSendEnd);
 	if(StatusSend() == STATUS_SEND_ING)
 	{
 		return;
@@ -1047,7 +1047,7 @@ void AcbMccbMeasurement(void)
 	}
 	AcbMccbMeasurementDisp(nMenuPos, 1);
 
-	AcbMccbMeasurementSend();
+//	AcbMccbMeasurementSend();
 
 	while (1)
     {
@@ -1086,7 +1086,7 @@ void AcbMccbMeasurement(void)
 			AcbMccbValueDisp(nMenuPos);
 			if(nMenuPos == INDEX_3)
 			{
-				AcbMccbMeasurementSend();
+//				AcbMccbMeasurementSend();
 				nSendStep = 0;
 			}
 		}
@@ -1105,7 +1105,7 @@ void AcbMccbMeasurement(void)
 			AcbMccbValueDisp(nMenuPos);
 			if(nMenuPos == INDEX_3)
 			{
-				AcbMccbMeasurementSend();
+//				AcbMccbMeasurementSend();
 				nSendStep = 0;
 			}
 		}
@@ -1119,9 +1119,9 @@ void AcbMccbMeasurement(void)
 			}
 			else
 			{
+			  (void)printf("nMenuPos=%d, nSendStep=%d\n", nMenuPos, nSendStep);
 			  AcbMccbMeasurementRecv();
 			  AcbMccbValueDisp(nMenuPos);
-			  (void)printf("nMenuPos=%d, nSendStep=%d\n", nMenuPos, nSendStep);
 			  if(nSendStep != 0)
 			  {
 			  	  AcbMccbMeasurementSend();

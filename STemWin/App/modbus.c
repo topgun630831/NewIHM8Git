@@ -193,6 +193,7 @@ void ControlModbusSend(void)
 	sendFlag = 1;
 }
 
+
 void ControlModbusBufferPut(uint8_t *pData, uint16_t Length, E_OWNER MasterSlave)
 {
 	uint16_t len;
@@ -216,6 +217,8 @@ void ControlModbusBufferPut(uint8_t *pData, uint16_t Length, E_OWNER MasterSlave
 	g_modbusControlAddress  = MasterTxBuffer[MasterSlave][0];
 	g_ControlfunctionCode	  = MasterTxBuffer[MasterSlave][1];
 	g_wModbusControlWaitLen = INDEX_8;
+
+
 //	g_bSlaveRecvVariable = FALSE;
 }
 
