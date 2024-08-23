@@ -296,6 +296,8 @@ Flash Memory Map
 
  Git
 ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAxBJrYYwQD1Q+0vkukmQ3goPTy3NdiCIYPjQskpFm6chcPvhF83V+UCd/wf7W1n+0smFscPQSpiOmuwJn3MLfw+faRy7nuTLPJP4oCgtoNccMTsTPjtlMYawshpI+P17gAcY3buPW++TAzpJq4OluKg+cpMuKeavcyZjYonKzNoMcUZXMDI0YiLF/xLyWI74oQY/CVyb781LGJ7ax2CaHs4N3WRwuJko1mgUjbYLOHlFxcR4hs7XAFGOQYwxvI6CV4mh8k34pPxmSuewy89JHhgQhREmhRe8Ls1IFkVSA4r0v2wm+m/TsnqTL/k4UxthFW1p6xC2zMzZlz0sPgwqNnw== rsa-key-20240103
+topgun630611@gmail.com
+origin git@github.com:topgun630831/NewIHM8Git
 
 2024/07/06  Timing Á¤º¸
 Slave Recv Frame!!!(10107)

@@ -182,6 +182,7 @@ typedef enum e_key
 	KEY_COMM_ERROR = 7,
 	COMM_STAT_ERROR = 8,
 	SECOND_TIMER = 9,
+	KEY_NOINPUT = 10,
 } E_KEY;
 
 typedef enum e_status_send

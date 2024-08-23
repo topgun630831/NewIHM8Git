@@ -341,7 +341,7 @@ static void AcbMccbOverViewValue(int flag)
 	static float Ampare[DEVICE_MAX][PHASE_MAX];
 
 
-	//(void)printf("AcbMccbOverViewValue(%d) gDeviceIndex=%d, gPols[gDeviceIndex]=%d, gLrValue[gDeviceIndex]=%f \n", flag, gDeviceIndex, gPols[gDeviceIndex], gLrValue[gDeviceIndex]);
+	(void)printf("AcbMccbOverViewValue(%d) gDeviceIndex=%d, gPols[gDeviceIndex]=%d, gLrValue[gDeviceIndex]=%f \n", flag, gDeviceIndex, gPols[gDeviceIndex], gLrValue[gDeviceIndex]);
 	if((int)gLrValue[gDeviceIndex] == 0)
 	{
 		return;
@@ -1141,9 +1141,10 @@ void OverviewSend(void)
 {
 	if(StatusSend() == STATUS_SEND_ING)
 	{
+		//printf("OverviewSend return\n");
 		return;
 	}
-	//(void)printf("\n\n\nOverviewSend() nSendStep=%d\n", nSendStep);
+//	(void)printf("\n\n\nOverviewSend() nSendStep=%d\n", nSendStep);
 	if(ConnectSetting[gDeviceIndex].DeviceType == DEVICE_ACB)
 	{
 		if(nSendStep == 0)
@@ -1330,9 +1331,13 @@ void GuiMain(void)
 				WM_DeleteWindow(hWin);
 				gbInMainMenu = TRUE;
 
+				ReadyToSend();
+				gStatusSendEnd = STATUS_SEND_END;
+				statusSendStep = 0;
+				nSendStep = 0;
+
 				OverviewSend();
 				Overview(false);
-				CommTimerInit();
 //				OverViewValue(0);
 			}
 		}
@@ -1921,7 +1926,6 @@ void SlaveModbusProcess(void)
 		}
 	}
 }
-
 // PRQA S 1503 1
 E_KEY GetKey(void)
 {
@@ -2105,7 +2109,7 @@ E_KEY GetKey(void)
 		else
 		{
 			if(gDebug)
-				printf("{1}");
+				printf(".");
 		}
 		MasterModbusProcess(false);
 		SlaveModbusProcess();
@@ -2118,6 +2122,7 @@ E_KEY GetKey(void)
 		}
 		if (g_modbusRxDone)
 		{
+
 			if(gDebug)
 				printf("g_modbusRxDone!!\n");
 			CommStatusDisp();
@@ -2177,12 +2182,14 @@ uint8_t ModbusRecvCheck(void)
 		}
 
 		MasterModbusProcess(true);
+		SlaveModbusProcess();
 
 		if(SlaveSendLength != 0)
 		{
 			if(gDebug)
 				printf("SlaveModbusSend(%d)\n", HAL_GetTick());
 			SlaveModbusSend();
+			return SECOND_TIMER;
 		}
 
 		if (g_modbusRxDone)
@@ -2253,12 +2260,14 @@ uint8_t ReadyToSend(void)
 		}
 
 		MasterModbusProcess(true);
+		SlaveModbusProcess();
 
 		if(SlaveSendLength != 0)
 		{
 			if(gDebug)
 				printf("SlaveModbusSend(%d)\n", HAL_GetTick());
 			SlaveModbusSend();
+			return SECOND_TIMER;
 		}
 
 		if (g_modbusRxDone)
@@ -2298,7 +2307,7 @@ uint8_t ReadyToSend(void)
 			statusSendStep = 0;
 			return KEY_COMM_ERROR;
 		}
-		GUI_Delay(50);
+		GUI_Delay(10);
 	}
 }
 

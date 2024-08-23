@@ -541,11 +541,12 @@ void StuMccbIo(void)
 	bRecvData = FALSE;
 	bUpdateFirst = TRUE;
 	AcbMccbControlDisp();
-	gStatusSendEnd = STATUS_SEND_ING;
+
+	ReadyToSend();
+	gStatusSendEnd = STATUS_SEND_END;
 	statusSendStep = 0;
 	nSendStep = 0;
 
-	(void)ReadyToSend();
 	AcbMccbControlSend();
 	int bCommError = gCommStatus[gDeviceIndex];
 	while (1)
@@ -983,7 +984,8 @@ static void TrioIo(void)
 	bRecvData = FALSE;
 	bUpdateFirst = TRUE;
 	TrioIoDisp();
-	gStatusSendEnd = STATUS_SEND_ING;
+	ReadyToSend();
+	gStatusSendEnd = STATUS_SEND_END;
 	statusSendStep = 0;
 	nSendStep = 0;
 	TrioIoSend();
@@ -1309,7 +1311,8 @@ void TrioTemp(void)
 	int flagBreak = FALSE;
 	bUpdateFirst = TRUE;
 	TrioTempDisp();
-	gStatusSendEnd = STATUS_SEND_ING;
+	ReadyToSend();
+	gStatusSendEnd = STATUS_SEND_END;
 	statusSendStep = 0;
 	nSendStep = 0;
 	TrioTempSend();

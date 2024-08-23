@@ -161,6 +161,8 @@ void ControlModbusBufferPut(uint8_t *pData, uint16_t Size, E_OWNER MasterSlave);
 void MasterModbusSend(E_OWNER MasterSlave);
 void SlaveModbusSend(void);
 void ControlModbusSend(void);
+uint8_t ModbusRecvCheck(void);
+uint8_t ReadyToSend(void);
 void ModbusSendFrame(const uint8_t address, const uint8_t functionCode, const uint16_t start, const uint16_t no);
 void ModbusSendFrameReadTime(const uint8_t address);
 void ModbusSendFrameDeviceIdentofocation(const uint8_t address);
