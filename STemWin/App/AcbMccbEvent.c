@@ -564,6 +564,8 @@ static void FaultReset(void)
 			{
 				sprintf(password, "%04d", SettingValue[SETUP_PASSWORD]);
 				PasswordAllDisp(password);
+				nPos = CONTROL_PASSWORD_DIGIT - 1;
+				SetupKeyCount = 0;
 			}
 		}
 		else

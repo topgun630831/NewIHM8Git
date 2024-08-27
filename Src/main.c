@@ -1846,5 +1846,9 @@ void HAL_UART_TxCpltCallback(UART_HandleTypeDef *huart)
 	}
 }
 
+void Delay_us(uint32_t microseconds)
+{
+	OS_Delay(microseconds);
+}
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
 

@@ -604,12 +604,7 @@ HAL_StatusTypeDef HAL_UART_DeInit(UART_HandleTypeDef *huart)
   * @{
   */
 
-__STATIC_INLINE void Pol_Delay_us(volatile uint32_t microseconds)
-{
-	/* Go to number of cycles for system */
-	microseconds *= (SystemCoreClock / 1000);   /* Delay till end */
-	while (microseconds--);
-}
+void Delay_us(uint32_t microseconds);
 
 /**
   * @brief  Sends an amount of data in blocking mode.
@@ -713,17 +708,14 @@ HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, u
     /* At end of Tx process, restore huart->gState to Ready */
       huart->gState = HAL_UART_STATE_READY;
 
-	//
-//	Pol_Delay_us(5);
-
 	if(huart->Instance == USART1)
 	{
-		OS_Delay(1);
+		Delay_us(1);
 		HAL_GPIO_WritePin(GPIOB, GPIO_PIN_15, GPIO_PIN_RESET);
 	}
 	else if(huart->Instance == USART2)
 	{
-		OS_Delay(1);
+		Delay_us(1);
 		HAL_GPIO_WritePin(GPIOB, GPIO_PIN_14, GPIO_PIN_RESET);
 	}
 

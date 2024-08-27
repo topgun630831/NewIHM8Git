@@ -102,16 +102,16 @@ static uint8_t nRemote;
 static int ControlCheck(void)
 {
 	int ret = FALSE;
-	uint16_t comp=CB_STATUS_OUTPUT_DEFAULT;
+	uint16_t compare=CB_STATUS_OUTPUT_DEFAULT;
 
 	if(AcbMccbcbStatus == CB_STATUS_INPUT_OPEN)	// Open
 	{
-		comp = CB_STATUS_OUTPUT_CLOSE;	// CB Close
+		compare = CB_STATUS_OUTPUT_CLOSE;	// CB Close
 	}
 	else
 	if(AcbMccbcbStatus == CB_STATUS_INPUT_CLOSE)	// Close
 	{
-		comp = CB_STATUS_OUTPUT_OPEN;	// CB Open
+		compare = CB_STATUS_OUTPUT_OPEN;	// CB Open
 	}
 	else
 	if(AcbMccbcbStatus == CB_STATUS_INPUT_FAULT)	// Fault
@@ -121,12 +121,15 @@ static int ControlCheck(void)
 			ret = TRUE;
 		}
 	}
-	else {}
-	(void)printf("===============================\ncbStatus=%d, com=%d, nTrio=%d\n", AcbMccbcbStatus, comp, nTrio[gDeviceIndex]);
+	else
+	{
+		printf("CB DI Status(30184) : %X\n", AcbMccbcbStatus);
+	}
+	(void)printf("===============================\ncbStatus=%d, compare=%d, nTrio=%d\n", AcbMccbcbStatus, compare, nTrio[gDeviceIndex]);
 	for(int i = 0; i < CB_STATUS_DO_MAX; i++)
 	{
 		(void)printf("i=%d, nDoSetting=%d\n", i, nDoSetting[i]);
-		if(nDoSetting[i] == comp)
+		if(nDoSetting[i] == compare)
 		{
 			ret = TRUE;
 		}
@@ -620,7 +623,7 @@ void StuMccbIo(void)
 		else
 		if(key == DATA_RECV)
 		{
-			(void)printf("DATA_RECV gStatusSendEnd=%d\n",gStatusSendEnd);
+			//(void)printf("DATA_RECV gStatusSendEnd=%d\n",gStatusSendEnd);
 			if(bCommError == COMM_ERROR)
 			{
 				AcbMccbControlDisp();

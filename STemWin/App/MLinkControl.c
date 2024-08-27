@@ -298,6 +298,8 @@ void ControlSet(const int pos, const int offset, const int cur_status, const cha
 			{
 				sprintf(password, "%04d", SettingValue[SETUP_PASSWORD]);
 				PasswordAllDisp(password);
+				nPos = CONTROL_PASSWORD_DIGIT - 1;
+				SetupKeyCount = 0;
 			}
 		}
 		else

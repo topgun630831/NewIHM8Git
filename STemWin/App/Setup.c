@@ -560,6 +560,7 @@ static void FactoryResetInitDisp(void)
 	MLinkButtonDisp(CONTROL_BUTTON_NOSELECT);
 }
 
+void PasswordAllDisp(char *password);
 static void FactoryReset(void)
 {
 	int flagBreak = FALSE;
@@ -570,10 +571,21 @@ static void FactoryReset(void)
 	FactoryResetInitDisp();
 	PasswordDisp(nPos, password[nPos]);
 
+	int SetupKeyCount = 0;
 	while (1)
 	{
 		E_KEY key = GetKey();
 
+		if(key == KEY_SETUP)
+		{
+			if(++SetupKeyCount >= 5)
+			{
+				sprintf(password, "%04d", SettingValue[SETUP_PASSWORD]);
+				PasswordAllDisp(password);
+				nPos = CONTROL_PASSWORD_DIGIT - 1;
+				SetupKeyCount = 0;
+			}
+		}
 		if(key == KEY_UP)
 		{
 			if(nPos < CONTROL_PASSWORD_DIGIT)
