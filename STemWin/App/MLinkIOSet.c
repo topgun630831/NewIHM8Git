@@ -332,7 +332,7 @@ static void MLinkIOSetDI(void)
 	rect.y0 = ACBMCCB_RELAYSET_GRID_Y0;
 	rect.y1 = (ACBMCCB_RELAYSET_GRID_Y0 +  HEIGHT_LABEL) - 1;
 
-	
+
 	for(int j= 0 ; j < LINECOUNT_CONTENTS; j++)
 	{
 		GUI_DispStringInRect(_acmlinkiostatusDI_label_text[j], &rect, GUI_TA_LEFT | GUI_TA_VCENTER);
@@ -385,7 +385,7 @@ static void MLinkIOSetDOValue(void)
 	rect.y0 += HEIGHT_VALUE;
 	rect.y1 += HEIGHT_VALUE;
 	LanguageSelect(FONT20B);
-	
+
 	uint16_t doSetting[INDEX_4];
 	for(int i = 0 ; i < INDEX_4; i++)
 	{
@@ -399,7 +399,7 @@ static void MLinkIOSetDOValue(void)
 			doSetting[i] = INDEX_2;
 		}
 	}
-	
+
 	for(int i = 0 ; i < (LINECOUNT_CONTENTS-INDEX_2); i++)
 	{
 		MLinkDoMakeString(doSetting[i], buf);
@@ -507,6 +507,7 @@ void MLinkIOSet(void)
 	GUI_ClearRect(X0_MAIN, Y0_MAIN, X1_MAIN, Y1_MAIN);
 
 	MLinkIOSetDisp(nMenuPos);
+	ReadyToSend();
 	MLinkIOSetSend(nMenuPos);
 
 	while (1)
@@ -543,6 +544,7 @@ void MLinkIOSet(void)
 				nMenuPos = ACBMCCB_MEASUR_MENU_COUNT - INDEX_2;
 			}
 			MLinkIOSetDisp(nMenuPos);
+			ReadyToSend();
 			MLinkIOSetSend(nMenuPos);
 		}
 		else
@@ -557,6 +559,7 @@ void MLinkIOSet(void)
 				nMenuPos = 0;
 			}
 			MLinkIOSetDisp(nMenuPos);
+			ReadyToSend();
 			MLinkIOSetSend(nMenuPos);
 		}
 		else
@@ -582,7 +585,7 @@ void MLinkIOSet(void)
 		else
 		if(key == KEY_COMM_ERROR)
 		{
-			(void)printf("COMM Error!! gStatusSendEnd=%d, statusSendStep=%d\n",gStatusSendEnd,statusSendStep); 
+			(void)printf("COMM Error!! gStatusSendEnd=%d, statusSendStep=%d\n",gStatusSendEnd,statusSendStep);
 			if(StatusRecvErrorProcess() == STATUS_SEND_ING)
 			{
 				nSendStep = 0;
@@ -591,7 +594,7 @@ void MLinkIOSet(void)
 			{
 				MLinkIOSetSend(nMenuPos);
 				g_bRecvAllDone = TRUE;
-			
+
 				(void)printf("All done!!!\n");
 				gStatusSendEnd = STATUS_SEND_ING;
 				statusSendStep = 0;

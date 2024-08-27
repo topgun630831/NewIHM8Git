@@ -146,7 +146,7 @@ static void DeviceInfoValueDisp(void)
 //	rect.y0 = STARTY_VALUE;
 //	rect.x1 = (STARTX_VALUE + WIDTH_VALUE) - 1;
 //	rect.y1 = (STARTY_VALUE + HEIGHT_VALUE) - 1;
-	
+
 	GUI_RECT rect;
 	GUI_RECT rect2;
 	rect.x0 = INFO_VALUE_X0;
@@ -158,7 +158,7 @@ static void DeviceInfoValueDisp(void)
 	rect2.y0 = STARTY_VALUE + INDEX_2;
 	rect2.x1 = INFO_VALUE_X1;
 	rect2.y1 = (STARTY_VALUE + HEIGHT_VALUE) - INDEX_4;
-	
+
 	(void)GUI_SetFont(&GUI_Font20B_ASCII);
 	for(int i = 0 ; i < LINECOUNT_CONTENTS; i++)
 	{
@@ -270,7 +270,7 @@ static void MlinkDeviceDisp(void)
 		else
 		if(key == KEY_COMM_ERROR)
 		{
-			(void)printf("COMM Error!!! gStatusSendEnd=%d, statusSendStep=%d, nSendStep=%d\n",gStatusSendEnd,statusSendStep,nSendStep); 
+			(void)printf("COMM Error!!! gStatusSendEnd=%d, statusSendStep=%d, nSendStep=%d\n",gStatusSendEnd,statusSendStep,nSendStep);
 			if(StatusRecvErrorProcess() == STATUS_SEND_ING)
 			{
 				nSendStep = 0;
@@ -563,7 +563,7 @@ static void OperationDisp(void)
 			{
 				nSendStep++;
 			}
-			(void)printf("COMM Error!!! gStatusSendEnd=%d, statusSendStep=%d, nSendStep=%d\n",gStatusSendEnd,statusSendStep,nSendStep); 
+			(void)printf("COMM Error!!! gStatusSendEnd=%d, statusSendStep=%d, nSendStep=%d\n",gStatusSendEnd,statusSendStep,nSendStep);
 			if(StatusRecvErrorProcess() == STATUS_SEND_ING)
 			{
 				nSendStep = 0;
@@ -622,6 +622,7 @@ void MLinkInfomation(void)
 	(void)GUI_SetPenSize(PENSIZE_LINE);
 	GUI_SetColor(COLOR_LINE);
 	gStatusSendEnd = STATUS_SEND_ING;
+	ReadyToSend();
 	(void)StatusSend();
 
 	while (1)
@@ -701,7 +702,7 @@ void MLinkInfomation(void)
 		else
 		if(key == KEY_COMM_ERROR)
 		{
-			(void)printf("COMM Error!!! gStatusSendEnd=%d, statusSendStep=%d, nSendStep=%d\n",gStatusSendEnd,statusSendStep,nSendStep); 
+			(void)printf("COMM Error!!! gStatusSendEnd=%d, statusSendStep=%d, nSendStep=%d\n",gStatusSendEnd,statusSendStep,nSendStep);
 			if(StatusRecvErrorProcess() == STATUS_SEND_ING)
 			{
 				nSendStep = 0;

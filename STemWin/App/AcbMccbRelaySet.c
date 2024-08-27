@@ -43,7 +43,7 @@ static void RelaySetSend(void)
 	{
 		return;
 	}
-	
+
 	(void)printf("RelaySetSend() nSendStep=%d\n", nSendStep);
 
 	uint16_t len = ACB_RELAYSET_STEP1_READ_LEN;
@@ -137,7 +137,7 @@ static void RelaySetValueDisp(void)
 			}
 			else
 			{
-			}						 
+			}
 			(void)sprintf(ampare[1], 	"%.1f A", l);
 			(void)sprintf(Sec[1], 	"%.2f s", t);
 			if(nPhaseProtect == INDEX_4)
@@ -310,8 +310,8 @@ void AcbMccbRelaySet(void)
 {
 	int flagBreak = FALSE;
 	AcbMccbRelaySetInitDisp();
-//	gGroupOffset[gDeviceIndex] = 0;
 	nSendStep = 0;
+	ReadyToSend();
 	RelaySetSend();
 	while (1)
     {
@@ -346,7 +346,7 @@ void AcbMccbRelaySet(void)
 			else
 			{
 				RelaySetValueDisp();
-				
+
 				if(nSendStep != 0)
 				{
 					RelaySetSend();
@@ -354,7 +354,7 @@ void AcbMccbRelaySet(void)
 				else
 				{
 					g_bRecvAllDone = TRUE;
-			
+
 					(void)printf("All done!!!\n");
 					gStatusSendEnd = STATUS_SEND_ING;
 					statusSendStep = 0;
@@ -370,7 +370,7 @@ void AcbMccbRelaySet(void)
 		else
 		if(key == KEY_COMM_ERROR)
 		{
-			(void)printf("COMM Error!!! gStatusSendEnd=%d, statusSendStep=%d, nSendStep=%d\n",gStatusSendEnd,statusSendStep,nSendStep); 
+			(void)printf("COMM Error!!! gStatusSendEnd=%d, statusSendStep=%d, nSendStep=%d\n",gStatusSendEnd,statusSendStep,nSendStep);
 			if(gStatusSendEnd == STATUS_SEND_END)
 			{
 				nSendStep++;
@@ -390,7 +390,7 @@ void AcbMccbRelaySet(void)
 				{
 					nStepMax = INDEX_2;
 				}
-				
+
 				if(nSendStep < nStepMax)
 				{
 					RelaySetSend();
@@ -398,7 +398,7 @@ void AcbMccbRelaySet(void)
 				else
 				{
 					g_bRecvAllDone = TRUE;
-			
+
 					(void)printf("All done!!!\n");
 					gStatusSendEnd = STATUS_SEND_ING;
 					statusSendStep = 0;

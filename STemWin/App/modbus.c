@@ -845,6 +845,34 @@ uint8_t ModbusControl(const uint8_t address, const int offset, const int pos, co
 	return CONTROL_OK;
 }
 
+void ModbusFaultReset(const uint8_t address)
+{
+	uint8_t frame[MODBUS_FRAME_COUNT];
+	uint16_t startAddr = 100;
+	uint8_t ret;
+
+
+	g_functionCode = INDEX_5;
+
+	if(gDebug)
+		(void)printf("ModbusFaultReset : address:%d, startAddr:%d\n", address, startAddr);
+	frame[INDEX_0] = address;
+	frame[INDEX_1] = INDEX_5;		//Write Single Coil
+	frame[INDEX_2] = (uint8_t)(startAddr >> INDEX_8);
+	frame[INDEX_3] = (uint8_t)(startAddr & MASK_FF);
+	frame[INDEX_4] = MASK_FF;
+	frame[INDEX_5] = 0x00;
+
+	uint16_t crc = CRC16(frame, INDEX_6);
+
+	frame[INDEX_6] = (uint8_t) (crc >> INDEX_8);
+	frame[INDEX_7] = (uint8_t)(crc & MASK_FF);
+
+	g_subFunction = 0;
+	g_wModbusWaitLen = MODBUS_FRAME_COUNT;
+	MasterModbusBufferPut(frame, INDEX_8, OWNER_MASTER);
+}
+
 void ModbusSetTime(const uint8_t address, const S_DATE_TIME *dateTime)
 {
 	uint8_t frame[DEFAULT_BUF_SIZE];

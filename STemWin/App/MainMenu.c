@@ -341,7 +341,7 @@ static void AcbMccbOverViewValue(int flag)
 	static float Ampare[DEVICE_MAX][PHASE_MAX];
 
 
-	(void)printf("AcbMccbOverViewValue(%d) gDeviceIndex=%d, gPols[gDeviceIndex]=%d, gLrValue[gDeviceIndex]=%f \n", flag, gDeviceIndex, gPols[gDeviceIndex], gLrValue[gDeviceIndex]);
+	//(void)printf("AcbMccbOverViewValue(%d) gDeviceIndex=%d, gPols[gDeviceIndex]=%d, gLrValue[gDeviceIndex]=%f \n", flag, gDeviceIndex, gPols[gDeviceIndex], gLrValue[gDeviceIndex]);
 	if((int)gLrValue[gDeviceIndex] == 0)
 	{
 		return;

@@ -1047,7 +1047,8 @@ void AcbMccbMeasurement(void)
 	}
 	AcbMccbMeasurementDisp(nMenuPos, 1);
 
-//	AcbMccbMeasurementSend();
+	ReadyToSend();
+	AcbMccbMeasurementSend();
 
 	while (1)
     {
@@ -1086,7 +1087,8 @@ void AcbMccbMeasurement(void)
 			AcbMccbValueDisp(nMenuPos);
 			if(nMenuPos == INDEX_3)
 			{
-//				AcbMccbMeasurementSend();
+				ReadyToSend();
+				AcbMccbMeasurementSend();
 				nSendStep = 0;
 			}
 		}
@@ -1105,7 +1107,8 @@ void AcbMccbMeasurement(void)
 			AcbMccbValueDisp(nMenuPos);
 			if(nMenuPos == INDEX_3)
 			{
-//				AcbMccbMeasurementSend();
+				ReadyToSend();
+				AcbMccbMeasurementSend();
 				nSendStep = 0;
 			}
 		}

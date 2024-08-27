@@ -216,6 +216,7 @@ void AcbMccbHwSet(void)
 	AcbMccbHwSetDisp();
 	bEventSend = TRUE;
 	nSendStep = 1;
+	ReadyToSend();
 	AcbMccbHwSetSend();
 	while (1)
 	{

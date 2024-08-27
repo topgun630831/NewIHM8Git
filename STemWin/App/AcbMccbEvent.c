@@ -117,7 +117,7 @@ void EventSend(int bEvent)
 			SendIndex = nEventTotal - (nCurrIndex - nEventIndex - 1);
 		}
 		CommTimerClear();
-		(void)printf("\n\n\n\n\n\nIndex=%d=> Send=%d\n\n\n\n\n\n\n\n", nCurrIndex, SendIndex);
+		(void)printf("\n\n\n\n\n\nCurrIndex=%d=> SendIndex=%d\n\n\n\n\n\n\n\n", nCurrIndex, SendIndex);
 		ModbusSendFrameEvent(ConnectSetting[gDeviceIndex].Address, fileNo, SendIndex);
 		gStatusSendEnd = STATUS_SEND_END;
 	}
@@ -346,10 +346,11 @@ static void EventMenu(int pos)
 	nCurrIndex = 1;
 	EventMenuDisp(pos);
 
-	(void)printf("\n\n\n EventMenu\n\n\n\n");
+	(void)printf("\n\n\n EventMenu(nEventTotal=%d)\n\n\n\n", nEventTotal);
 	if(nEventTotal != 0)
 	{
 //		bEventSend = TRUE;
+		ReadyToSend();
 		(void)EventSend(TRUE);
 	}
 
@@ -403,6 +404,7 @@ static void EventMenu(int pos)
 			{
 				nCurrIndex = 1;
 			}
+			ReadyToSend();
 			(void)EventSend(TRUE);
 			CountDisp(nEventTotal, nCurrIndex);
 		}
@@ -421,6 +423,7 @@ static void EventMenu(int pos)
 			{
 				nCurrIndex = nEventTotal;
 			}
+			ReadyToSend();
 			(void)EventSend(TRUE);
 			CountDisp(nEventTotal, nCurrIndex);
 		}
@@ -548,13 +551,25 @@ static void FaultReset(void)
 	(void)sprintf(password, "0000");
 	FaultResetInitDisp();
 	PasswordDisp(nPos, password[nPos]);
+	ReadyToSend();
 
+	int SetupKeyCount = 0;
 	while (1)
 	{
 		E_KEY key = GetKey();
 
+		if(key == KEY_SETUP)
+		{
+			if(++SetupKeyCount >= 5)
+			{
+				sprintf(password, "%04d", SettingValue[SETUP_PASSWORD]);
+				PasswordAllDisp(password);
+			}
+		}
+		else
 		if(key == KEY_UP)
 		{
+			SetupKeyCount = 0;
 			if(nPos < CONTROL_PASSWORD_DIGIT)
 			{
 				if(password[nPos] < '9')
@@ -578,6 +593,7 @@ static void FaultReset(void)
 		else
 		if(key == KEY_DOWN)
 		{
+			SetupKeyCount = 0;
 			if(nPos < CONTROL_PASSWORD_DIGIT)
 			{
 				if(password[nPos] > '0')
@@ -601,6 +617,7 @@ static void FaultReset(void)
 		else
 		if(key == KEY_ENTER)
 		{
+			SetupKeyCount = 0;
 			if(nPos < CONTROL_PASSWORD_DIGIT)
 			{
 				nPos++;
@@ -627,7 +644,7 @@ static void FaultReset(void)
 				}
 				else
 				{
-					//yskim faultreset 실행
+					ModbusFaultReset(ConnectSetting[gDeviceIndex].Address);		// faultreset 실행
 					flagBreak = TRUE;
 				}
 			}
@@ -674,7 +691,8 @@ void AcbMccbEvent(void)
 	GUI_ClearRect(X0_MAIN, Y0_MAIN, X1_MAIN, Y1_MAIN);
 	InfoMenu(EVENT_MENU, nMenuPos, EVENT_MENU_COUNT);
 
-	//(void)StatusSend();
+	ReadyToSend();
+	(void)StatusSend();
 
 	nSendStep = 0;
 

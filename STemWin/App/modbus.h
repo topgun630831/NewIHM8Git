@@ -185,6 +185,7 @@ void ModbusGetId2(char productName[MESSAGE_BUF_SIZE]);
 //void ModbusGetId3(char serialNo[DEFAULT_BUF_SIZE], char productCode[DEFAULT_BUF_SIZE], char hardwarVersion[DEFAULT_BUF_SIZE], char softwareVersion[DEFAULT_BUF_SIZE]);
 void ModbusGetId3(void);
 uint8_t ModbusControl(const uint8_t address, const int offset, const int pos, const uint8_t onoffStatus, uint8_t bSBO);
+void ModbusFaultReset(const uint8_t address);
 void ModbusSendFrameFromUsb(uint8_t* sendBuf, uint32_t length);
 void ModbusGetDateTime(S_DATE_TIME *dateTime);
 void ModbusGetProductName(char *buf);

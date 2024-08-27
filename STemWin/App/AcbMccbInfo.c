@@ -957,6 +957,7 @@ void AcbMccbInfomation(void)
 	(void)GUI_SetPenSize(PENSIZE_LINE);
 	GUI_SetColor(COLOR_LINE);
 	gStatusSendEnd = STATUS_SEND_ING;
+	ReadyToSend();
 	(void)StatusSend();
 
 	while (1)

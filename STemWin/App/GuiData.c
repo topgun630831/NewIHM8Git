@@ -489,7 +489,7 @@ char const* _acmeasurement_menu_text[SETUP_LANGUAGE_MAX][ACBMCCB_MEASUR_MENU_COU
 	{
 	"V&I&P",
 	"Energy",
-	"PQ",
+	"PQ&PF&F",
 	"Max\nDemand"
 	},
 	{
@@ -501,7 +501,7 @@ char const* _acmeasurement_menu_text[SETUP_LANGUAGE_MAX][ACBMCCB_MEASUR_MENU_COU
 	{
 	"V&I&P",
 	"Energy",
-	"PQ",
+	"PQ&PF&F",
 	"Max\nDemand"
 	},
 };

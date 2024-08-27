@@ -145,6 +145,32 @@ static void ControlSucceededMessage(void)
 }
 
 // PRQA S 1505 1
+void PasswordAllDisp(char *password)
+{
+	GUI_RECT rect;
+	GUI_SetBkColor(COLOR_MENU_NORMAL);
+	GUI_ClearRect(PASSWORD_INTPUT_DIGIT_X,
+				  PASSWORD_INTPUT_DIGIT_UP_Y0,
+				  (PASSWORD_INTPUT_DIGIT_X + (PASSWORD_INTPUT_DIGIT_WIDTH * CONTROL_PASSWORD_DIGIT)) - 1,
+				  PASSWORD_INTPUT_DIGIT_DOWN_Y1);
+
+	rect.x0 = PASSWORD_INTPUT_DIGIT_X;
+	rect.y0 = PASSWORD_INTPUT_Y0;
+	rect.x1 = (PASSWORD_INTPUT_DIGIT_X + PASSWORD_INTPUT_DIGIT_WIDTH) - 1;
+	rect.y1 = PASSWORD_INTPUT_Y1;
+	(void)GUI_SetFont(&GUI_Font32B_ASCII);
+	char buf[PASSWORD_INPUT_BUF_SIZE];
+	for(int i = 0; i < CONTROL_PASSWORD_DIGIT; i++)
+	{
+		buf[0] = password[i];
+		buf[1] = 0;
+		GUI_DispStringInRect(buf, &rect, GUI_TA_HCENTER | GUI_TA_VCENTER);
+		rect.x0 += PASSWORD_INTPUT_DIGIT_WIDTH;
+		rect.x1 += PASSWORD_INTPUT_DIGIT_WIDTH;
+	}
+}
+
+// PRQA S 1505 1
 void PasswordDisp(int pos, char password)
 {
 	GUI_RECT rect;
@@ -248,6 +274,7 @@ static void InitDisp(int pos, int cur_status, const char* msg)
 	MLinkButtonDisp(CONTROL_BUTTON_NOSELECT);
 }
 
+extern uint8_t KeyChanged[KEY_MAX];
 
 // PRQA S 1505 1
 void ControlSet(const int pos, const int offset, const int cur_status, const char* msg, const uint8_t nSBO)
@@ -260,12 +287,23 @@ void ControlSet(const int pos, const int offset, const int cur_status, const cha
 	InitDisp(pos, cur_status, msg);
 	PasswordDisp(nPos, password[nPos]);
 
+	int SetupKeyCount = 0;
 	while (1)
 	{
 		E_KEY key = GetKey();
 
+		if(key == KEY_SETUP)
+		{
+			if(++SetupKeyCount >= 5)
+			{
+				sprintf(password, "%04d", SettingValue[SETUP_PASSWORD]);
+				PasswordAllDisp(password);
+			}
+		}
+		else
 		if(key == KEY_UP)
 		{
+			SetupKeyCount = 0;
 			if(nPos < CONTROL_PASSWORD_DIGIT)
 			{
 				if(password[nPos] < '9')
@@ -289,6 +327,7 @@ void ControlSet(const int pos, const int offset, const int cur_status, const cha
 		else
 		if(key == KEY_DOWN)
 		{
+			SetupKeyCount = 0;
 			if(nPos < CONTROL_PASSWORD_DIGIT)
 			{
 				if(password[nPos] > '0')
@@ -312,6 +351,7 @@ void ControlSet(const int pos, const int offset, const int cur_status, const cha
 		else
 		if(key == KEY_ENTER)
 		{
+			SetupKeyCount = 0;
 			if(nPos < CONTROL_PASSWORD_DIGIT)
 			{
 				nPos++;
@@ -668,6 +708,7 @@ void MLinkControl(void)
 	{
 		MLinkControlValueDisp(nPointPos);
 	}
+	ReadyToSend();
 	(void)StatusSend();
 	while (1)
     {
