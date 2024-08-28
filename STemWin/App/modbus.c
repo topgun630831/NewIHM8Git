@@ -849,8 +849,6 @@ void ModbusFaultReset(const uint8_t address)
 {
 	uint8_t frame[MODBUS_FRAME_COUNT];
 	uint16_t startAddr = 100;
-	uint8_t ret;
-
 
 	g_functionCode = INDEX_5;
 

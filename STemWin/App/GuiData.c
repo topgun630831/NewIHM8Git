@@ -219,6 +219,7 @@ uint16_t SettingValue[SETUP_COUNT] = {
 	0,		// Gatwway Use
 	0,		// Terminate 저항 Up
 	0,		// Terminate 저항 Down
+	1		// Password Use
 };
 
 uint16_t DefaultSettingValue[SETUP_COUNT] = {
@@ -233,6 +234,7 @@ uint16_t DefaultSettingValue[SETUP_COUNT] = {
 	0,		// Gatwway Use
 	0,		// Terminate 저항 Up
 	0,		// Terminate 저항 Down
+	1		// Password Use
 };
 
 S_CONNECT_SETTING ConnectSetting[DEVICE_MAX] = {
@@ -489,7 +491,7 @@ char const* _acmeasurement_menu_text[SETUP_LANGUAGE_MAX][ACBMCCB_MEASUR_MENU_COU
 	{
 	"V&I&P",
 	"Energy",
-	"PQ&PF&F",
+	"PQ\nPF&F",
 	"Max\nDemand"
 	},
 	{
@@ -501,7 +503,7 @@ char const* _acmeasurement_menu_text[SETUP_LANGUAGE_MAX][ACBMCCB_MEASUR_MENU_COU
 	{
 	"V&I&P",
 	"Energy",
-	"PQ&PF&F",
+	"PQ\nPF&F",
 	"Max\nDemand"
 	},
 };
@@ -1087,6 +1089,7 @@ char const* _acsetup_disp_setting_label_text[SETUP_LANGUAGE_MAX][SETUP_SETTING_N
 		"",
 //		"Language",
 		"Password",
+		"",
 		"Comm. Speed",
 		"Terminate(UP)",
 		"Terminate(DOWN)",
@@ -1101,6 +1104,7 @@ char const* _acsetup_disp_setting_label_text[SETUP_LANGUAGE_MAX][SETUP_SETTING_N
 		"",
 //		"语言",
 		"密码",
+		""
 		"通信速度",
 		"Terminate(UP)",
 		"Terminate(DOWN)",
@@ -1115,6 +1119,7 @@ char const* _acsetup_disp_setting_label_text[SETUP_LANGUAGE_MAX][SETUP_SETTING_N
 		"",
 //		"Language",
 		"Password",
+		"",
 		"Comm. Speed",
 		"Terminate(UP)",
 		"Terminate(DOWN)",
@@ -1134,6 +1139,7 @@ char const* _acsetup_disp_setting_value_text[SETUP_LANGUAGE_MAX][SETUP_SETTING_N
 		"%s",
 		"%s",
 		"%s",
+		"%s",
 //		"%s",
 		""
 	},
@@ -1148,6 +1154,7 @@ char const* _acsetup_disp_setting_value_text[SETUP_LANGUAGE_MAX][SETUP_SETTING_N
 		"%s",
 		"%s",
 		"%s",
+		"%s",
 //		"%s",
 		""
 	},
@@ -1159,6 +1166,7 @@ char const* _acsetup_disp_setting_value_text[SETUP_LANGUAGE_MAX][SETUP_SETTING_N
 		"Return to Screen  : %d s",
 //		"%s",
 		"****",
+		"%s",
 		"%s",
 		"%s",
 		"%s",

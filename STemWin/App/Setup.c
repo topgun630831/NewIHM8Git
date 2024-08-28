@@ -371,7 +371,7 @@ static void DisplaySettingMenu(int page, int pos, int flag)
 		y0 += SETTING_SUB_HEIGHT + 1;
 		if(page == INDEX_2)
 		{
-			count = INDEX_1;
+			count = INDEX_2;
 			offset = INDEX_9;
 		}
 		else
@@ -487,10 +487,19 @@ static void DisplaySettingMenu(int page, int pos, int flag)
 		else
 		if(index == INDEX_6)
 		{
-			(void)sprintf(buf, _acsetup_disp_setting_value_text[SettingValue[SETUP_LANGUAGE]][index], _acsetup_speed[SettingValue[SETUP_SPEED]]);
+			if(SettingValue[SETUP_PASSWORD_USE] != 0)
+			{
+				SettingValue[SETUP_PASSWORD_USE] = 1;
+			}
+			(void)sprintf(buf, _acsetup_disp_setting_value_text[SettingValue[SETUP_LANGUAGE]][index], _aconoff_text[SettingValue[SETUP_LANGUAGE]][SettingValue[SETUP_PASSWORD_USE]]);
 		}
 		else
 		if(index == INDEX_7)
+		{
+			(void)sprintf(buf, _acsetup_disp_setting_value_text[SettingValue[SETUP_LANGUAGE]][index], _acsetup_speed[SettingValue[SETUP_SPEED]]);
+		}
+		else
+		if(index == INDEX_8)
 		{
 			if(SettingValue[SETUP_TERM1_USE] != 1)
 			{
@@ -499,7 +508,7 @@ static void DisplaySettingMenu(int page, int pos, int flag)
 			(void)sprintf(buf, _acsetup_disp_setting_value_text[SettingValue[SETUP_LANGUAGE]][index], _aconoff_text[SettingValue[SETUP_LANGUAGE]][SettingValue[SETUP_TERM1_USE]]);
 		}
 		else
-		if(index == INDEX_8)
+		if(index == INDEX_9)
 		{
 			if(SettingValue[SETUP_TERM2_USE] != 1)
 			{
@@ -776,6 +785,14 @@ static void SettingMenuExec(int nPage, int nPos)
 		else
 		if(nPos == INDEX_1)
 		{
+			if(SettingInputString(&SettingValue[SETUP_PASSWORD_USE], STATUS_COUNT, _aconoff_text[SettingValue[SETUP_LANGUAGE]], FALSE) == TRUE)
+			{
+				FlashWrite();
+			}
+		}
+		else
+		if(nPos == INDEX_2)
+		{
 			if(SettingInputString(&SettingValue[SETUP_SPEED], SETUP_SPEED_MAX, _acsetup_speed, FALSE) == TRUE)
 			{
 				FlashWrite();
@@ -784,18 +801,9 @@ static void SettingMenuExec(int nPage, int nPos)
 			}
 		}
 		else
-		if(nPos == INDEX_2)
-		{
-			if(SettingInputString(&SettingValue[SETUP_TERM1_USE], STATUS_COUNT, _aconoff_text[SettingValue[SETUP_LANGUAGE]], FALSE) == TRUE)
-			{
-				TerminateSet();
-				FlashWrite();
-			}
-		}
-		else
 		if(nPos == INDEX_3)
 		{
-			if(SettingInputString(&SettingValue[SETUP_TERM2_USE], STATUS_COUNT, _aconoff_text[SettingValue[SETUP_LANGUAGE]], FALSE) == TRUE)
+			if(SettingInputString(&SettingValue[SETUP_TERM1_USE], STATUS_COUNT, _aconoff_text[SettingValue[SETUP_LANGUAGE]], FALSE) == TRUE)
 			{
 				TerminateSet();
 				FlashWrite();
@@ -814,7 +822,17 @@ static void SettingMenuExec(int nPage, int nPos)
 			}
 		}
 		else
-*/		if(nPos == INDEX_0)
+*/
+		if(nPos == INDEX_0)
+		{
+			if(SettingInputString(&SettingValue[SETUP_TERM2_USE], STATUS_COUNT, _aconoff_text[SettingValue[SETUP_LANGUAGE]], FALSE) == TRUE)
+			{
+				TerminateSet();
+				FlashWrite();
+			}
+		}
+		else
+		if(nPos == INDEX_1)
 		{
 			FactoryReset();
 		}
@@ -886,7 +904,7 @@ static void DisplaySetting(void)
 				else
 				{
 					nPage = 2;
-					nPos = 0;
+					nPos = 1;
 					DisplaySettingMenu(nPage, nPos, 1);
 				}
 			}
@@ -899,9 +917,8 @@ static void DisplaySetting(void)
 					DisplaySettingMenu(nPage, nPos, 0);
 				}
 				else
-//				if(nPos == 1)
 				{
-					nPos = INDEX_4;
+					nPos = INDEX_3;
 					nPage = 0;
 					DisplaySettingMenu(nPage, nPos, 1);
 				}
@@ -909,14 +926,13 @@ static void DisplaySetting(void)
 			else
 			if(nPage == INDEX_2)
 			{
-/*				if(nPos > 0)
+				if(nPos > 0)
 				{
 					nPos--;
 					DisplaySettingMenu(nPage, nPos, 0);
 				}
 				else
-*/
-//				if(nPos == 1)
+				if(nPos == 0)
 				{
 					nPos = INDEX_3;
 					nPage = 1;
@@ -964,13 +980,13 @@ static void DisplaySetting(void)
 			else
 			if(nPage == INDEX_2)
 			{
-/*				if(nPos < INDEX_1)
+				if(nPos < INDEX_1)
 				{
 					nPos++;
 					DisplaySettingMenu(nPage, nPos, 0);
 				}
 				else
-*/				if(nPos == INDEX_1)
+				if(nPos == INDEX_1)
 				{
 					nPos = 0;
 					nPage = 0;

@@ -812,9 +812,7 @@ static void RelayStatusDisp(int nPage)
 
 void RelayStatus(void)
 {
-	uint8_t bRecvData;
 	int flagBreak = FALSE;
-	bRecvData = FALSE;
 	int nPage = 0;
 	RelayStatusDisp(nPage);
 	gStatusSendEnd = STATUS_SEND_ING;
@@ -890,7 +888,6 @@ void RelayStatus(void)
 				nSendStep = 0;
 				statusSendStep = 0;
 				gStatusSendEnd = STATUS_SEND_ING;
-				bRecvData = TRUE;
 			}
 		}
 		else

@@ -542,6 +542,7 @@ static void FaultResetInitDisp(void)
 	MLinkButtonDisp(CONTROL_BUTTON_NOSELECT);
 }
 
+void PasswordAllDisp(char *password);
 static void FaultReset(void)
 {
 	int flagBreak = FALSE;

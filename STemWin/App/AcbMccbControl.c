@@ -982,9 +982,7 @@ static void TrioIoDisp(void)
 // PRQA S 1503 1
 static void TrioIo(void)
 {
-	uint8_t bRecvData;
 	int flagBreak = FALSE;
-	bRecvData = FALSE;
 	bUpdateFirst = TRUE;
 	TrioIoDisp();
 	ReadyToSend();
@@ -1035,7 +1033,6 @@ static void TrioIo(void)
 				nSendStep = 0;
 				statusSendStep = 0;
 				gStatusSendEnd = STATUS_SEND_ING;
-				bRecvData = TRUE;
 			}
 		}
 		else

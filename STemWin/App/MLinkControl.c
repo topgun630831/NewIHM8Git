@@ -279,6 +279,19 @@ extern uint8_t KeyChanged[KEY_MAX];
 // PRQA S 1505 1
 void ControlSet(const int pos, const int offset, const int cur_status, const char* msg, const uint8_t nSBO)
 {
+	if(SettingValue[SETUP_PASSWORD_USE] == 0)
+	{
+		uint8_t controlStatus = ModbusControl(ConnectSetting[gDeviceIndex].Address, offset, pos, cur_status, nSBO);
+		if(controlStatus == CONTROL_OK)
+		{
+			ControlSucceededMessage();
+		}
+		else
+		{
+			ControlErrorMessage(_accontrol_failed_text[SettingValue[SETUP_LANGUAGE]]);
+		}
+		return;
+	}
 	int flagBreak = FALSE;
 	int nPos = 0;
 	char password[CONTROL_PASSWORD_DIGIT+1];
