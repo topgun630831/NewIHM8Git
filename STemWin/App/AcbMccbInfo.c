@@ -362,6 +362,7 @@ void InfoMenu(int menu, int pos, int count)
 		{
 			GUI_SetColor(COLOR_MENU_NORMAL);
 		}
+
 		GUI_FillRect(STARTX_CONTENTS, y0, (STARTX_CONTENTS + INFO_MENU_WIDTH) - 1, (y0 + INFO_MENU_HEIGHT) - 1);
 
 		if(i == pos)
@@ -375,6 +376,10 @@ void InfoMenu(int menu, int pos, int count)
 			LanguageSelect(FONT24);
 			GUI_SetColor(COLOR_LABEL);
 			GUI_SetBkColor(COLOR_MENU_NORMAL);
+		}
+		if(menu == CONTROL_MENU && nTrio[gDeviceIndex] == 0 && i == 0)	//000b: TRIO Only
+		{
+			GUI_SetColor(COLOR_LINE);
 		}
 
 		GUI_DispStringInRect(_acinfo_menu_text[SettingValue[SETUP_LANGUAGE]][menu][i], &rect, GUI_TA_LEFT | GUI_TA_VCENTER);

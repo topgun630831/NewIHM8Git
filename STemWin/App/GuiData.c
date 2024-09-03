@@ -215,7 +215,7 @@ uint16_t SettingValue[SETUP_COUNT] = {
 	0,		// Screen Switching
 	0,		// Return to Screen
 	0,		// Language
-	1111,	// Password
+	0000,	// Password
 	0,		// Gatwway Use
 	0,		// Terminate 저항 Up
 	0,		// Terminate 저항 Down
@@ -230,7 +230,7 @@ uint16_t DefaultSettingValue[SETUP_COUNT] = {
 	0,		// Screen Switching
 	0,		// Return to Screen
 	0,		// Language
-	1111,	// Password
+	0000,	// Password
 	0,		// Gatwway Use
 	0,		// Terminate 저항 Up
 	0,		// Terminate 저항 Down
@@ -803,8 +803,7 @@ char const* _actrip_text[SETUP_LANGUAGE_MAX][STATUS_COUNT] = {
 	},
 };
 
-char const*
-_accontrol_confirm_text[SETUP_LANGUAGE_MAX][STATUS_COUNT] = {
+char const* _accontrol_confirm_text[SETUP_LANGUAGE_MAX][STATUS_COUNT] = {
 	{
 		"If you want to turn On,\nChecking your password",
 		"If you want to turn Off,\nChecking your password"
@@ -819,10 +818,31 @@ _accontrol_confirm_text[SETUP_LANGUAGE_MAX][STATUS_COUNT] = {
 	}
 };
 
+char const* _accontrol_confirm_nopassword_text[SETUP_LANGUAGE_MAX][STATUS_COUNT] = {
+	{
+		"Do you want to turn it ON?",
+		"Do you want to turn it OFF?"
+	},
+	{
+		"若要开掉请确认密码。",
+		"若要关掉请确认密码。"
+	},
+	{
+		"Do you want to turn it ON?",
+		"Do you want to turn it OFF?"
+	}
+};
+
 char const* _acacbMccbcontrol_confirm_text[SETUP_LANGUAGE_MAX] = {
 	"If you want to turn %s,\nChecking your password",
 	"若要%s掉请确认密码。",
 	"If you want to turn %s,\nChecking your password",
+};
+
+char const* _acacbMccbcontrol_confirm_nopassword_text[SETUP_LANGUAGE_MAX] = {
+	"Do you want to turn it %s?",
+	"若要%s掉请确认密码。",
+	"Do you want to turn it %s?",
 };
 
 char const* _aFactoryReset_confirm_text[SETUP_LANGUAGE_MAX] = {
@@ -1258,6 +1278,16 @@ GUI_RECT rectAcbStatus[ACB_STATUS_POS_CNT] = {
 	{ 245, 47, (244+112)-2, 47+56},
 	{ 356, 47, (355+112)-2, 47+56},
 };
+
+GUI_RECT rectTrioBox = {
+	224, 46, 334+112, 46+58
+};
+
+GUI_RECT rectTrioStatus[ACB_STATUS_POS_CNT] = {
+	{ 224, 47, (224+112)-3, 47+56},
+	{ 334, 47, (334+112)-3, 47+56},
+};
+
 
 char const* _acsetup_password_text[SETUP_LANGUAGE_MAX][STATUS_COUNT] = {
 	{

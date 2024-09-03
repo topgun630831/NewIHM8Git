@@ -75,6 +75,43 @@ static void PasswordButtonDisp(int button)
 	}
 }
 
+static void PasswordButtonDispNoPassword(int button)
+{
+	GUI_RECT rect;
+	rect.x0 = CONTROL_BUTTON_X;
+	rect.y0 = CONTROL_BUTTON_Y;
+	rect.x1 = (CONTROL_BUTTON_X + CONTROL_BUTTON_WIDTH) - 1;
+	rect.y1 = (CONTROL_BUTTON_Y + CONTROL_BUTTON_HEIGHT) - 1;
+	LanguageSelect(FONT24);
+	for(int i = 0; i < CONTROL_BUTTON_NOSELECT; i++)
+	{
+		if(i == button)
+		{
+			GUI_SetColor(COLOR_MENU_SELECTED);
+			GUI_SetBkColor(COLOR_MENU_SELECTED);
+		}
+		else
+		{
+			GUI_SetColor(CONTROL_NORMAL_BUTTON);
+			GUI_SetBkColor(CONTROL_NORMAL_BUTTON);
+		}
+//		(void)GUI_SetFont(&GUI_Font24B_ASCII);
+		GUI_FillRoundedRect(rect.x0, rect.y0, rect.x1, rect.y1, INDEX_2);
+		if(i == button)
+		{
+			GUI_SetColor(SELECTED_TEXT_COLOR);
+		}
+		else
+		{
+			GUI_SetColor(CONTROL_NORMAL_COLOR);
+		}
+
+		GUI_DispStringInRect(_accontrol_button_text[SettingValue[SETUP_LANGUAGE]][i], &rect, GUI_TA_HCENTER | GUI_TA_VCENTER);
+		rect.x0 += CONTROL_BUTTON_WIDTH + CONTROL_BTTON_DISTANCE;
+		rect.x1 += CONTROL_BUTTON_WIDTH + CONTROL_BTTON_DISTANCE;
+	}
+}
+
 // PRQA S 1505 1
 int QuestionMessage(void)
 {
@@ -120,6 +157,82 @@ int QuestionMessage(void)
 			if(nPos == 0)
 			{
 				PasswordButtonDisp(CONTROL_BUTTON_CANCEL);
+				nPos = 1;
+			}
+		}
+		else
+		if(key == KEY_ENTER)
+		{
+			if(nPos == 0)	// Retry 이면
+			{
+				ret = TRUE;
+				flagBreak = TRUE;
+			}
+			else
+			if(nPos == 1)	// Cancel 이면
+			{
+				flagBreak = TRUE;
+			}
+			else {}
+		}
+		else
+		if(key == KEY_CANCEL)
+		{
+			flagBreak = TRUE;
+		}
+		else {}
+		if(flagBreak == TRUE)
+		{
+			break;
+		}
+	}
+	return ret;
+}
+
+int QuestionMessageNoPassword(const char* msg)
+{
+	int flagBreak = FALSE;
+	int nPos = 0;
+	int ret = FALSE;
+	GUI_RECT rect;
+
+	GUI_SetBkColor(COLOR_MENU_NORMAL);
+
+	(void)GUI_SetPenSize(PENSIZE_LINE);
+	GUI_SetColor(COLOR_MENU_SELECTED);
+
+	GUI_ClearRect(POPUP_WINDOW_X0, POPUP_WINDOW_Y0, POPUP_WINDOW_X1, POPUP_WINDOW_Y1);
+	GUI_DrawRect(POPUP_WINDOW_X0, POPUP_WINDOW_Y0, POPUP_WINDOW_X1, POPUP_WINDOW_Y1);
+
+	GUI_SetColor(SELECTED_TEXT_COLOR);
+//	(void)GUI_SetFont(&GUI_Font24_ASCII);
+	LanguageSelect(FONT24);
+	rect.x0 = PASSWORD_MSG_X0;
+	rect.y0 = PASSWORD_MSG_Y0;
+	rect.x1 = PASSWORD_MSG_X1;
+	rect.y1 = PASSWORD_MSG_Y1;
+	GUI_DispStringInRect(msg, &rect, GUI_TA_HCENTER | GUI_TA_VCENTER);
+
+	PasswordButtonDispNoPassword(CONTROL_BUTTON_OK);
+
+	while (1)
+	{
+		E_KEY key = GetKey();
+
+		if(key == KEY_UP)
+		{
+			if(nPos == 1)
+			{
+				PasswordButtonDispNoPassword(CONTROL_BUTTON_OK);
+				nPos = 0;
+			}
+		}
+		else
+		if(key == KEY_DOWN)
+		{
+			if(nPos == 0)
+			{
+				PasswordButtonDispNoPassword(CONTROL_BUTTON_CANCEL);
 				nPos = 1;
 			}
 		}

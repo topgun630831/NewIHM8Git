@@ -57,8 +57,9 @@ static void AcbMccbIoValueDisp(void);
 static void AcbMccbControlDisp(void);
 
 static void TrioIoSend(void);
+static void TrioPageDisp(int page);
 static void TrioIoValueDisp(void);
-static void TrioIoDisp(void);
+static void TrioIoDisp(int page);
 static void TrioIo(void);
 
 static void TrioTempValueDisp(void);
@@ -594,7 +595,10 @@ void StuMccbIo(void)
 							address = CB_STATUS_TRIO_ADDR;
 						}
 					}
-					(void)sprintf(buf, _acacbMccbcontrol_confirm_text[SettingValue[SETUP_LANGUAGE]], _accb_control_status[SettingValue[SETUP_LANGUAGE]][AcbMccbcbStatus]);
+					if(SettingValue[SETUP_PASSWORD_USE] == 0)
+						(void)sprintf(buf, _acacbMccbcontrol_confirm_nopassword_text[SettingValue[SETUP_LANGUAGE]], _accb_control_status[SettingValue[SETUP_LANGUAGE]][AcbMccbcbStatus]);
+					else
+						(void)sprintf(buf, _acacbMccbcontrol_confirm_text[SettingValue[SETUP_LANGUAGE]], _accb_control_status[SettingValue[SETUP_LANGUAGE]][AcbMccbcbStatus]);
 					ControlSet(status, address, 0, buf, 1);
 				}
 				else
@@ -714,6 +718,26 @@ static void TrioIoSend(void)
 	}
 }
 
+static void TrioPageDisp(int page)
+{
+	int x = PAGE_X;
+	int y = PAGE_Y + (PAGE_HEIGHT*3) + (PAGE_HEIGHT / 2);
+
+	for(int i = 0; i < INDEX_2; i++)
+	{
+		if( i == page)
+		{
+			GUI_SetColor(COLOR_VALUE);
+		}
+		else
+		{
+			GUI_SetColor(COLOR_LINE);
+		}
+		GUI_FillCircle(x, y, PAGE_RADIUS);
+		y += PAGE_HEIGHT;
+	}
+}
+
 static void TrioIoValueDisp(void)
 {
 	uint16_t nDioValue[DIO_STATUS_MAX];
@@ -770,13 +794,13 @@ static void TrioIoValueDisp(void)
 	if(status != 0x03 && (bUpdateFirst == TRUE) || (TrioIocbStatus != status))
 	{
 		TrioIocbStatus = status;
-		GUI_FillRectEx(&rectAcbBox);
+		GUI_FillRectEx(&rectTrioBox);
 		for(uint8_t i = 0; i < INDEX_2; i++)
 		{
 			if(i == TrioIocbStatus)
 			{
 				GUI_SetColor(colorOnFillColor[i]);
-				GUI_FillRectEx(&rectAcbStatus[i]);
+				GUI_FillRectEx(&rectTrioStatus[i]);
 
 				GUI_SetBkColor(colorOnFillColor[i]);
 				GUI_SetColor(GUI_WHITE);
@@ -784,29 +808,29 @@ static void TrioIoValueDisp(void)
 			else
 			{
 				GUI_SetColor(colorOffFillColor[i]);
-				GUI_FillRectEx(&rectAcbStatus[i]);
+				GUI_FillRectEx(&rectTrioStatus[i]);
 
 				GUI_SetBkColor(colorOffFillColor[i]);
 				GUI_SetColor(colorOffTextColor[i]);
 			}
 			LanguageSelect(FONT20B);
-			GUI_DispStringInRect(_accb_status[SettingValue[SETUP_LANGUAGE]][i], &rectAcbStatus[i], GUI_TA_HCENTER | GUI_TA_VCENTER);
+			GUI_DispStringInRect(_accb_status[SettingValue[SETUP_LANGUAGE]][i], &rectTrioStatus[i], GUI_TA_HCENTER | GUI_TA_VCENTER);
 
 		}
 	}
 	bUpdateFirst = FALSE;
 
 	GUI_RECT rect;
-	rect.x0 = ACBMCCB_IOSTATUS_START_X;
-	rect.x1 = (ACBMCCB_IOSTATUS_START_X + ACBMCCB_IOSTATUS_BOX_WIDTH) - 1;
-	rect.y0 = ACBMCCB_IOSTATUS_START_Y + ACBMCCB_IOSTATUS_Y_DISTANCE;
-	rect.y1 = (rect.y0 + ACBMCCB_IOSTATUS_BOX_HEIGHT) - 1;
+	rect.x0 = TRIO_IOSTATUS_START_X;
+	rect.x1 = (TRIO_IOSTATUS_START_X + TRIO_IOSTATUS_BOX_WIDTH) - 1;
+	rect.y0 = TRIO_IOSTATUS_START_Y + TRIO_IOSTATUS_Y_DISTANCE;
+	rect.y1 = (rect.y0 + TRIO_IOSTATUS_BOX_HEIGHT) - 1;
 
 	GUI_RECT rectOnOff;
-	rectOnOff.x0 = ACBMCCB_IOSTATUS_START_X + ACBMCCB_IOSTATUS_STATUS_X;
-	rectOnOff.x1 = (rectOnOff.x0 + ACBMCCB_IOSTATUS_STATUS_WIDTH) - 1;
-	rectOnOff.y0 = ACBMCCB_IOSTATUS_START_Y + ACBMCCB_IOSTATUS_STATUS_Y + ACBMCCB_IOSTATUS_Y_DISTANCE;
-	rectOnOff.y1 = (rectOnOff.y0 + ACBMCCB_IOSTATUS_STATUS_HEIGHT) - 1;
+	rectOnOff.x0 = TRIO_IOSTATUS_START_X + TRIO_IOSTATUS_STATUS_X;
+	rectOnOff.x1 = (rectOnOff.x0 + TRIO_IOSTATUS_STATUS_WIDTH) - 1;
+	rectOnOff.y0 = TRIO_IOSTATUS_START_Y + TRIO_IOSTATUS_STATUS_Y + TRIO_IOSTATUS_Y_DISTANCE;
+	rectOnOff.y1 = (rectOnOff.y0 + TRIO_IOSTATUS_STATUS_HEIGHT) - 1;
 
 	for(int i = 0; i < IO_STATUS_COUNT; i++)
 	{
@@ -836,28 +860,28 @@ static void TrioIoValueDisp(void)
 		}
 		if(i == INDEX_2)
 		{
-			rect.x0 += ACBMCCB_IOSTATUS_X_DISTANCE;
-			rect.x1 += ACBMCCB_IOSTATUS_X_DISTANCE;
-			rectOnOff.x0 += ACBMCCB_IOSTATUS_X_DISTANCE;
-			rectOnOff.x1 += ACBMCCB_IOSTATUS_X_DISTANCE;
+			rect.x0 += TRIO_IOSTATUS_X_DISTANCE;
+			rect.x1 += TRIO_IOSTATUS_X_DISTANCE;
+			rectOnOff.x0 += TRIO_IOSTATUS_X_DISTANCE;
+			rectOnOff.x1 += TRIO_IOSTATUS_X_DISTANCE;
 
-			rect.y0 = ACBMCCB_IOSTATUS_START_Y + ACBMCCB_IOSTATUS_Y_DISTANCE;
-			rect.y1 = (rect.y0 + ACBMCCB_IOSTATUS_BOX_HEIGHT) - 1;
-			rectOnOff.y0 = ACBMCCB_IOSTATUS_START_Y + ACBMCCB_IOSTATUS_STATUS_Y + ACBMCCB_IOSTATUS_Y_DISTANCE;
-			rectOnOff.y1 = (rectOnOff.y0 + ACBMCCB_IOSTATUS_STATUS_HEIGHT) - 1;
+			rect.y0 = TRIO_IOSTATUS_START_Y + TRIO_IOSTATUS_Y_DISTANCE;
+			rect.y1 = (rect.y0 + TRIO_IOSTATUS_BOX_HEIGHT) - 1;
+			rectOnOff.y0 = TRIO_IOSTATUS_START_Y + TRIO_IOSTATUS_STATUS_Y + TRIO_IOSTATUS_Y_DISTANCE;
+			rectOnOff.y1 = (rectOnOff.y0 + TRIO_IOSTATUS_STATUS_HEIGHT) - 1;
 		}
 		else
 		{
-			rect.y0 += ACBMCCB_IOSTATUS_Y_DISTANCE;
-			rect.y1 += ACBMCCB_IOSTATUS_Y_DISTANCE;
+			rect.y0 += TRIO_IOSTATUS_Y_DISTANCE;
+			rect.y1 += TRIO_IOSTATUS_Y_DISTANCE;
 
-			rectOnOff.y0 += ACBMCCB_IOSTATUS_Y_DISTANCE;
-			rectOnOff.y1 += ACBMCCB_IOSTATUS_Y_DISTANCE;
+			rectOnOff.y0 += TRIO_IOSTATUS_Y_DISTANCE;
+			rectOnOff.y1 += TRIO_IOSTATUS_Y_DISTANCE;
 		}
 	}
 }
 
-static void TrioIoDisp(void)
+static void TrioIoDisp(int page)
 {
 	GUI_SetBkColor(COLOR_MAIN_BG);
 	(void)GUI_SetPenSize(PENSIZE_LINE);
@@ -865,17 +889,19 @@ static void TrioIoDisp(void)
 
 	GUI_ClearRect(X0_MAIN, Y0_MAIN, X1_MAIN, Y1_MAIN);
 
+	TrioPageDisp(page);
+
 	GUI_RECT rect;
-	rect.x0 = ACBMCCB_IOSTATUS_START_X;
-	rect.x1 = (ACBMCCB_IOSTATUS_START_X + ACBMCCB_IOSTATUS_X_DISTANCE + ACBMCCB_IOSTATUS_BOX_WIDTH) - 1;
-	rect.y0 = ACBMCCB_IOSTATUS_START_Y;
-	rect.y1 = ACBMCCB_IOSTATUS_START_Y + ACBMCCB_IOSTATUS_BOX_HEIGHT;
+	rect.x0 = TRIO_IOSTATUS_START_X;
+	rect.x1 = (TRIO_IOSTATUS_START_X + TRIO_IOSTATUS_X_DISTANCE + TRIO_IOSTATUS_BOX_WIDTH) - 1;
+	rect.y0 = TRIO_IOSTATUS_START_Y;
+	rect.y1 = TRIO_IOSTATUS_START_Y + TRIO_IOSTATUS_BOX_HEIGHT;
 
 	GUI_RECT rectDescLocal;
-	rectDescLocal.x0 = ACBMCCB_IOSTATUS_START_X + ACBMCCB_IOSTATUS_DESC_X;
-	rectDescLocal.x1 = (rectDescLocal.x0 + ACBMCCB_IOSTATUS_BOX_WIDTH) - 1;
-	rectDescLocal.y0 = ACBMCCB_IOSTATUS_START_Y;
-	rectDescLocal.y1 = (rectDescLocal.y0 + ACBMCCB_IOSTATUS_BOX_HEIGHT) - 1;
+	rectDescLocal.x0 = TRIO_IOSTATUS_START_X + TRIO_IOSTATUS_DESC_X;
+	rectDescLocal.x1 = (rectDescLocal.x0 + TRIO_IOSTATUS_BOX_WIDTH) - 1;
+	rectDescLocal.y0 = TRIO_IOSTATUS_START_Y;
+	rectDescLocal.y1 = (rectDescLocal.y0 + TRIO_IOSTATUS_BOX_HEIGHT) - 1;
 
 	if(gCommStatus[gDeviceIndex] == COMM_OK)
 	{
@@ -902,32 +928,33 @@ static void TrioIoDisp(void)
 
 	GUI_SetColor(GUI_BLACK);
 
-	GUI_FillRectEx(&rectAcbBox);
+	GUI_FillRectEx(&rectTrioBox);
 	for(int i = 0; i < INDEX_2; i++)
 	{
 		GUI_SetColor(colorOffFillColor[i]);
-		GUI_FillRectEx(&rectAcbStatus[i]);
+		GUI_FillRectEx(&rectTrioStatus[i]);
 
 		GUI_SetBkColor(colorOffFillColor[i]);
 		GUI_SetColor(colorOffTextColor[i]);
-		GUI_DispStringInRect(_accb_status[SettingValue[SETUP_LANGUAGE]][i], &rectAcbStatus[i], GUI_TA_HCENTER | GUI_TA_VCENTER);
+		GUI_DispStringInRect(_accb_status[SettingValue[SETUP_LANGUAGE]][i], &rectTrioStatus[i], GUI_TA_HCENTER | GUI_TA_VCENTER);
 
 	}
-	rect.x0 = ACBMCCB_IOSTATUS_START_X;
-	rect.x1 = (ACBMCCB_IOSTATUS_START_X + ACBMCCB_IOSTATUS_BOX_WIDTH) - 1;
-	rect.y0 = ACBMCCB_IOSTATUS_START_Y + ACBMCCB_IOSTATUS_Y_DISTANCE;
-	rect.y1 = (rect.y0 + ACBMCCB_IOSTATUS_BOX_HEIGHT) - 1;
 
-	rectDescLocal.x0 = ACBMCCB_IOSTATUS_START_X + ACBMCCB_IOSTATUS_DESC_X;
-	rectDescLocal.x1 = ACBMCCB_IOSTATUS_STATUS_X - 1;
-	rectDescLocal.y0 = ACBMCCB_IOSTATUS_START_Y + ACBMCCB_IOSTATUS_Y_DISTANCE;
-	rectDescLocal.y1 = (rectDescLocal.y0 + ACBMCCB_IOSTATUS_BOX_HEIGHT) - 1;
+	rect.x0 = TRIO_IOSTATUS_START_X;
+	rect.x1 = (TRIO_IOSTATUS_START_X + TRIO_IOSTATUS_BOX_WIDTH) - 1;
+	rect.y0 = TRIO_IOSTATUS_START_Y + TRIO_IOSTATUS_Y_DISTANCE;
+	rect.y1 = (rect.y0 + TRIO_IOSTATUS_BOX_HEIGHT) - 1;
+
+	rectDescLocal.x0 = TRIO_IOSTATUS_START_X + TRIO_IOSTATUS_DESC_X;
+	rectDescLocal.x1 = TRIO_IOSTATUS_STATUS_X - 1;
+	rectDescLocal.y0 = TRIO_IOSTATUS_START_Y + TRIO_IOSTATUS_Y_DISTANCE;
+	rectDescLocal.y1 = (rectDescLocal.y0 + TRIO_IOSTATUS_BOX_HEIGHT) - 1;
 
 	GUI_RECT rectOnOff;
-	rectOnOff.x0 = ACBMCCB_IOSTATUS_START_X + ACBMCCB_IOSTATUS_STATUS_X;
-	rectOnOff.x1 = (rectOnOff.x0 + ACBMCCB_IOSTATUS_STATUS_WIDTH) - 1;
-	rectOnOff.y0 = ACBMCCB_IOSTATUS_START_Y + ACBMCCB_IOSTATUS_STATUS_Y + ACBMCCB_IOSTATUS_Y_DISTANCE;
-	rectOnOff.y1 = (rectOnOff.y0 + ACBMCCB_IOSTATUS_STATUS_HEIGHT) - 1;
+	rectOnOff.x0 = TRIO_IOSTATUS_START_X + TRIO_IOSTATUS_STATUS_X;
+	rectOnOff.x1 = (rectOnOff.x0 + TRIO_IOSTATUS_STATUS_WIDTH) - 1;
+	rectOnOff.y0 = TRIO_IOSTATUS_START_Y + TRIO_IOSTATUS_STATUS_Y + TRIO_IOSTATUS_Y_DISTANCE;
+	rectOnOff.y1 = (rectOnOff.y0 + TRIO_IOSTATUS_STATUS_HEIGHT) - 1;
 
 	char *disableStatus = "-";
 
@@ -951,30 +978,30 @@ static void TrioIoDisp(void)
 
 		if(i == INDEX_2)
 		{
-			rect.x0 += ACBMCCB_IOSTATUS_X_DISTANCE;
-			rect.x1 += ACBMCCB_IOSTATUS_X_DISTANCE;
-			rectDescLocal.x0 += ACBMCCB_IOSTATUS_X_DISTANCE;
-			rectDescLocal.x1 += ACBMCCB_IOSTATUS_X_DISTANCE;
-			rectOnOff.x0 += ACBMCCB_IOSTATUS_X_DISTANCE;
-			rectOnOff.x1 += ACBMCCB_IOSTATUS_X_DISTANCE;
+			rect.x0 += TRIO_IOSTATUS_X_DISTANCE;
+			rect.x1 += TRIO_IOSTATUS_X_DISTANCE;
+			rectDescLocal.x0 += TRIO_IOSTATUS_X_DISTANCE;
+			rectDescLocal.x1 += TRIO_IOSTATUS_X_DISTANCE;
+			rectOnOff.x0 += TRIO_IOSTATUS_X_DISTANCE;
+			rectOnOff.x1 += TRIO_IOSTATUS_X_DISTANCE;
 
-			rect.y0 = ACBMCCB_IOSTATUS_START_Y + ACBMCCB_IOSTATUS_Y_DISTANCE;
-			rect.y1 = (rect.y0 + ACBMCCB_IOSTATUS_BOX_HEIGHT) - 1;
-			rectDescLocal.y0 = ACBMCCB_IOSTATUS_START_Y + ACBMCCB_IOSTATUS_Y_DISTANCE;
-			rectDescLocal.y1 = (rectDescLocal.y0 + ACBMCCB_IOSTATUS_BOX_HEIGHT) - 1;
-			rectOnOff.y0 = ACBMCCB_IOSTATUS_START_Y + ACBMCCB_IOSTATUS_STATUS_Y + ACBMCCB_IOSTATUS_Y_DISTANCE;
-			rectOnOff.y1 = (rectOnOff.y0 + ACBMCCB_IOSTATUS_STATUS_HEIGHT) - 1;
+			rect.y0 = TRIO_IOSTATUS_START_Y + TRIO_IOSTATUS_Y_DISTANCE;
+			rect.y1 = (rect.y0 + TRIO_IOSTATUS_BOX_HEIGHT) - 1;
+			rectDescLocal.y0 = TRIO_IOSTATUS_START_Y + TRIO_IOSTATUS_Y_DISTANCE;
+			rectDescLocal.y1 = (rectDescLocal.y0 + TRIO_IOSTATUS_BOX_HEIGHT) - 1;
+			rectOnOff.y0 = TRIO_IOSTATUS_START_Y + TRIO_IOSTATUS_STATUS_Y + TRIO_IOSTATUS_Y_DISTANCE;
+			rectOnOff.y1 = (rectOnOff.y0 + TRIO_IOSTATUS_STATUS_HEIGHT) - 1;
 		}
 		else
 		{
-			rect.y0 += ACBMCCB_IOSTATUS_Y_DISTANCE;
-			rect.y1 += ACBMCCB_IOSTATUS_Y_DISTANCE;
+			rect.y0 += TRIO_IOSTATUS_Y_DISTANCE;
+			rect.y1 += TRIO_IOSTATUS_Y_DISTANCE;
 
-			rectDescLocal.y0 += ACBMCCB_IOSTATUS_Y_DISTANCE;
-			rectDescLocal.y1 += ACBMCCB_IOSTATUS_Y_DISTANCE;
+			rectDescLocal.y0 += TRIO_IOSTATUS_Y_DISTANCE;
+			rectDescLocal.y1 += TRIO_IOSTATUS_Y_DISTANCE;
 
-			rectOnOff.y0 += ACBMCCB_IOSTATUS_Y_DISTANCE;
-			rectOnOff.y1 += ACBMCCB_IOSTATUS_Y_DISTANCE;
+			rectOnOff.y0 += TRIO_IOSTATUS_Y_DISTANCE;
+			rectOnOff.y1 += TRIO_IOSTATUS_Y_DISTANCE;
 		}
 	}
 }
@@ -983,8 +1010,9 @@ static void TrioIoDisp(void)
 static void TrioIo(void)
 {
 	int flagBreak = FALSE;
+	int page = 0;
 	bUpdateFirst = TRUE;
-	TrioIoDisp();
+	TrioIoDisp(page);
 	ReadyToSend();
 	gStatusSendEnd = STATUS_SEND_END;
 	statusSendStep = 0;
@@ -1008,7 +1036,7 @@ static void TrioIo(void)
 			{
 				flagBreak = TRUE;
 			}
-			TrioIoDisp();
+			TrioIoDisp(page);
 			gCommOldStatus[gDeviceIndex] = -1;
 			TrioIoSend();
 		}
@@ -1018,7 +1046,7 @@ static void TrioIo(void)
 			(void)printf("DATA_RECV gStatusSendEnd=%d\n",gStatusSendEnd);
 			if(bCommError == COMM_ERROR)
 			{
-				TrioIoDisp();
+				TrioIoDisp(page);
 				bCommError = COMM_OK;
 			}
 			if(gStatusSendEnd == STATUS_SEND_ING)
@@ -1065,7 +1093,7 @@ static void TrioIo(void)
 			bUpdateFirst = TRUE;
 			(void)printf("COMM_STAT_ERROR\n\n");
 			bCommError = COMM_ERROR;
-			TrioIoDisp();
+			TrioIoDisp(page);
 		}
 		else {}
 		if(flagBreak == TRUE)
@@ -1419,19 +1447,15 @@ void AcbMccbControl(void)
 {
 	int flagBreak = FALSE;
 	nMenuPos = 0;
-	int nMenuCount;
+	int nMenuCount = EVENT_MENU_COUNT;
 
-//	bool bDataRecv = false;
-
-	if(nTrio[gDeviceIndex] == INDEX_7)
-		nMenuCount = 1;
-	else
-		nMenuCount = EVENT_MENU_COUNT;
-							//   TRIO 결선
-							// 000b: TRIO Only
-							// 001b: TRIO+ACB_OCR
-							// 010b: TRIO+MCCB
-							// 111b: ACB OCR Only
+	//   TRIO 결선
+	// 000b: TRIO Only
+	// 001b: TRIO+ACB_OCR
+	// 010b: TRIO+MCCB
+	// 111b: ACB OCR Only
+	if(nTrio[gDeviceIndex] == 0)   //000b: TRIO Only
+		nMenuPos = 1;
 	GUI_ClearRect(X0_MAIN, Y0_MAIN, X1_MAIN, Y1_MAIN);
 	InfoMenu(CONTROL_MENU, nMenuPos, nMenuCount);
 
@@ -1476,6 +1500,8 @@ void AcbMccbControl(void)
 				{
 					nMenuPos = nMenuCount - 1;
 				}
+				if(nMenuPos == 0 && nTrio[gDeviceIndex] == 0)   //000b: TRIO Only
+					nMenuPos = 1;
 				InfoMenu(CONTROL_MENU, nMenuPos, nMenuCount);
 			}
 		}
@@ -1491,6 +1517,8 @@ void AcbMccbControl(void)
 				else
 				{
 					nMenuPos = 0;
+					if(nTrio[gDeviceIndex] == 0)   //000b: TRIO Only
+						nMenuPos = 1;
 				}
 				InfoMenu(CONTROL_MENU, nMenuPos, nMenuCount);
 			}

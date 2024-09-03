@@ -281,14 +281,18 @@ void ControlSet(const int pos, const int offset, const int cur_status, const cha
 {
 	if(SettingValue[SETUP_PASSWORD_USE] == 0)
 	{
-		uint8_t controlStatus = ModbusControl(ConnectSetting[gDeviceIndex].Address, offset, pos, cur_status, nSBO);
-		if(controlStatus == CONTROL_OK)
+		if(QuestionMessageNoPassword(msg) == TRUE)
 		{
-			ControlSucceededMessage();
-		}
-		else
-		{
-			ControlErrorMessage(_accontrol_failed_text[SettingValue[SETUP_LANGUAGE]]);
+			uint8_t controlStatus = ModbusControl(ConnectSetting[gDeviceIndex].Address, offset, pos, cur_status, nSBO);
+			if(controlStatus == CONTROL_OK)
+			{
+				ControlSucceededMessage();
+			}
+			else
+			{
+				ControlErrorMessage(_accontrol_failed_text[SettingValue[SETUP_LANGUAGE]]);
+
+			}
 		}
 		return;
 	}
@@ -922,7 +926,10 @@ void MLinkControl(void)
 					status = OFF;			// 무조건 On으로 제어 -> Index 증가 없음
 				}
 				else {}
-				ControlSet(nPoint, address, status, _accontrol_confirm_text[SettingValue[SETUP_LANGUAGE]][dostatus], nSBO);
+				if(SettingValue[SETUP_PASSWORD_USE] == 0)
+					ControlSet(nPoint, address, status, _accontrol_confirm_nopassword_text[SettingValue[SETUP_LANGUAGE]][dostatus], nSBO);
+				else
+					ControlSet(nPoint, address, status, _accontrol_confirm_text[SettingValue[SETUP_LANGUAGE]][dostatus], nSBO);
 				DispMLinkStatus();
 				gCommOldStatus[gDeviceIndex] = -1;
 				MLinkControlDisp(nPointPos, 1);

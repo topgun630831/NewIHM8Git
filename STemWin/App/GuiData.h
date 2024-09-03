@@ -454,6 +454,19 @@ extern S_CONNECT_SETTING ConnectSetting[DEVICE_MAX];
 #define	ACBMCCB_IOSTATUS_X_DISTANCE		232
 #define	ACBMCCB_IOSTATUS_Y_DISTANCE		68
 
+#define	TRIO_IOSTATUS_START_X			10
+#define	TRIO_IOSTATUS_START_Y			44
+#define	TRIO_IOSTATUS_BOX_WIDTH			216
+#define	TRIO_IOSTATUS_BOX_HEIGHT		62
+#define	TRIO_IOSTATUS_STATUS_X			135
+#define	TRIO_IOSTATUS_STATUS_Y			2
+#define	TRIO_IOSTATUS_STATUS_WIDTH		78
+#define	TRIO_IOSTATUS_STATUS_HEIGHT		58
+#define	TRIO_IOSTATUS_DESC_X			22
+#define	TRIO_IOSTATUS_X_DISTANCE		224
+#define	TRIO_IOSTATUS_Y_DISTANCE		68
+
+
 	// Control
 #define SELECTED_TEXT_COLOR				GUI_WHITE
 #define UNSELECTED_TEXT_COLOR			COLOR_LABEL
@@ -741,7 +754,9 @@ extern char const* _aconoff_text[SETUP_LANGUAGE_MAX][STATUS_COUNT];
 extern char const* _acopenclose_text[SETUP_LANGUAGE_MAX][STATUS_COUNT];
 extern char const* _actrip_text[SETUP_LANGUAGE_MAX][STATUS_COUNT];
 extern char const* _accontrol_confirm_text[SETUP_LANGUAGE_MAX][STATUS_COUNT];
+extern char const* _accontrol_confirm_nopassword_text[SETUP_LANGUAGE_MAX][STATUS_COUNT];
 extern char const* _acacbMccbcontrol_confirm_text[SETUP_LANGUAGE_MAX];
+extern char const* _acacbMccbcontrol_confirm_nopassword_text[SETUP_LANGUAGE_MAX];
 extern char const* _aFactoryReset_confirm_text[SETUP_LANGUAGE_MAX];
 extern char const* _aFaultReset_confirm_text[SETUP_LANGUAGE_MAX];
 extern char const* _accontrol_button_text[SETUP_LANGUAGE_MAX][STATUS_COUNT];
@@ -788,6 +803,8 @@ extern  GUI_RECT rectAcbBox;
 extern  GUI_RECT rectMccbBox;
 extern  GUI_RECT rectMccbStatus[MCCB_STATUS_POS_CNT];
 extern  GUI_RECT rectAcbStatus[ACB_STATUS_POS_CNT];
+extern  GUI_RECT rectTrioBox;
+extern  GUI_RECT rectTrioStatus[ACB_STATUS_POS_CNT];
 
 extern char const* _acsetup_language[SETUP_LANGUAGE_MAX];
 extern char const* _acsetup_type[SETUP_TYPE_MAX];
@@ -916,6 +933,7 @@ int SettingInput(uint16_t* orgValue, int const min, int const max, int const not
 int SettingInputString(uint16_t* orgValue, int const max, const char* const text[], int multi_lan);
 int PasswordChange(void);
 int QuestionMessage(void);
+int QuestionMessageNoPassword(const char* msg);
 void DispFormat(float value, const char* baseUnit, char unit[10], char result[20]);
 
 void BacklightBrghtness(const uint16_t brightness, const uint16_t flag);

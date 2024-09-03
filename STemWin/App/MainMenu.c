@@ -680,6 +680,7 @@ uint16_t StatusSend(void)
 		else
 		if((ConnectSetting[gDeviceIndex].DeviceType == DEVICE_ACB) || (ConnectSetting[gDeviceIndex].DeviceType == DEVICE_MCCB))
 		{
+			printf("  \n\nStatusSend statusSendStep:%d\n", statusSendStep);
 			if(statusSendStep == INDEX_0)
 			{
 				CommTimerClear();
@@ -908,9 +909,10 @@ void StatusRecv(void)
 		else
 		if(statusSendStep == INDEX_1)
 		{
-			ModbusGetId2(gProductName[gDeviceIndex]);
+//			ModbusGetId2(gProductName[gDeviceIndex]);
+			ModbusGetProductName();
 
-			//(void)printf("gProductName = %s\n", gProductName[gDeviceIndex]);
+			(void)printf("gProductName = %s\n", gProductName[gDeviceIndex]);
 			statusSendStep = INDEX_2;
 		}
 		else
@@ -1581,15 +1583,15 @@ void MasterModbusProcess(bool bInChecking)
 				printf("recv:%u, last=%u, new=%u, cnt=%u\n",  last_recv, uart2LastNDTR, uart2NewNDTR, count);
 			uart2LastNDTR = uart2NewNDTR;
 
-			if(gDebug == true)
-			{
-				(void)printf("Read!!!(%u, %u) g_bRecvVariable:%d, readExceptionLen:%d\n", g_sendOwner, g_modbusRxIndex, g_bRecvVariable, readExceptionLen);
-				for(int i = 0; i < g_modbusRxIndex; i++)
-				{
-					  (void)printf("%02X ", g_modbusRxBuff[i]);
-				}
-				(void)printf("\n");
-			}
+//			if(gDebug == true)
+//			{
+//				(void)printf("Read!!!(%u, %u) g_bRecvVariable:%d, readExceptionLen:%d\n", g_sendOwner, g_modbusRxIndex, g_bRecvVariable, readExceptionLen);
+//				for(int i = 0; i < g_modbusRxIndex; i++)
+//				{
+//					  (void)printf("%02X ", g_modbusRxBuff[i]);
+//				}
+//				(void)printf("\n");
+//			}
 
 			if(g_modbusRxIndex < readExceptionLen)
 				return;
@@ -1685,7 +1687,9 @@ void MasterModbusProcess(bool bInChecking)
 						(void)printf("Recv Done!!!!(%d)\n",HAL_GetTick());
 					sendFlag = 0;
 					bRecvOk = true;
+
 					g_modbusRxIndex = wModbusWaitLen;		// Recv frame 뒤에 Garbage 처리
+
 					nMasterStatus = MasterModbusCRCCheck(bInChecking);
 //					(void)printf("(((%d)))\n", HAL_GetTick());
 					g_modbusRxIndex = 0;

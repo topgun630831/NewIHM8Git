@@ -314,3 +314,8 @@ Bitmap Conversion 방법
 3)Save As...
 4) "C" bitmap file (*.c) 선택
 5) format을 High color (565) compressed 선택
+
+Slave 응답지연
+1) STU+TRIO : 350ms => 500ms
+2) STU      : 150ms
+3) MCCB     : 120ms

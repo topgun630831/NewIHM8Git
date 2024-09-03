@@ -84,6 +84,8 @@ extern uint32_t last_recv;
 extern bool bInControl;
 extern uint32_t recvTick;
 
+//uint32_t slaveTick;
+
 void MasterModbusSend(E_OWNER MasterSlave)
 {
     g_sendOwner = MasterSlave;
@@ -128,6 +130,12 @@ void MasterModbusSend(E_OWNER MasterSlave)
 void MasterModbusBufferPut(uint8_t *pData, uint16_t Length, E_OWNER MasterSlave)
 {
 	uint16_t len;
+
+//	if(MasterSlave == OWNER_SLAVE)
+//	{
+//		slaveTick = HAL_GetTick();
+//		printf("Slave Bufferput : %d\n", slaveTick);
+//	}
 
 /*	if(bInControl == true)
 	{
@@ -241,6 +249,8 @@ void SlaveModbusSend(void)
 	}
 
 	AllRead(1);
+
+//	printf("Slave Send : %d(%d)\n", slaveTick, HAL_GetTick()-slaveTick);
 
 	if(SlaveSendLength > SLAVE_TX_BUFF_MAX)
 		SlaveSendLength = SLAVE_TX_BUFF_MAX;
@@ -586,6 +596,7 @@ void ModbusGetDateTime(S_DATE_TIME *dateTime)
 	dateTime->mSec = (uint16_t)(mSec % THOUSAND);
 }
 
+#if 0
 void ModbusGetProductName(char *buf)
 {
 	uint16_t offset; // address+func code+bytes
@@ -607,6 +618,7 @@ void ModbusGetProductName(char *buf)
 	gProductInfo[gDeviceIndex].ProductName[len] = 0;
 
 }
+#endif
 
 void ModbusGetId1(void)
 {
@@ -626,7 +638,7 @@ void ModbusGetId1(void)
 	//(void)printf("\n\n\nVendor=%s, Ver=%s\n", VendorName, ModbusVersion);
 
 }
-
+/*
 void ModbusGetId2(char productName[MESSAGE_BUF_SIZE])
 {
 	int index = INDEX_9;
@@ -638,6 +650,26 @@ void ModbusGetId2(char productName[MESSAGE_BUF_SIZE])
 	(void)memcpy(productName, &g_modbusRxBuff[index+1], len);
 	productName[len] = 0;
 //	index += (g_modbusRxBuff[index] + INDEX_2);
+}
+*/
+
+void ModbusGetProductName(void)
+{
+	int count = g_modbusRxBuff[INDEX_7];
+	int index = 8;
+	for(int i = 0; i < count; i++)
+	{
+		int len = g_modbusRxBuff[index+1];
+		if(g_modbusRxBuff[index] == INDEX_4)
+		{
+			if(len >= MESSAGE_BUF_SIZE-1)
+				len = MESSAGE_BUF_SIZE - 1;
+			(void)memcpy(gProductName[gDeviceIndex], &g_modbusRxBuff[index+2], len);
+			gProductName[gDeviceIndex][len] = 0;
+			return;
+		}
+		index = index + len + 2;
+	}
 }
 
 //void ModbusGetId3(char serialNo[DEFAULT_BUF_SIZE], char productCode[DEFAULT_BUF_SIZE], char hardwarVersion[DEFAULT_BUF_SIZE], char softwareVersion[DEFAULT_BUF_SIZE])
