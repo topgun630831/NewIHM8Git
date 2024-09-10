@@ -789,7 +789,7 @@ uint8_t ModbusControl(const uint8_t address, const int offset, const int pos, co
 
 	g_functionCode = INDEX_5;
 
-	if(mLinkMode[gDeviceIndex] == 1)
+	if(ConnectSetting[gDeviceIndex].DeviceType != DEVICE_MLINK || mLinkMode[gDeviceIndex] == 1)
 	{
 	  if(bSBO == 1)			// SBO
 	  {
@@ -835,8 +835,9 @@ uint8_t ModbusControl(const uint8_t address, const int offset, const int pos, co
 
 	g_subFunction = 0;
 	g_wModbusWaitLen = MODBUS_FRAME_COUNT;
+	g_bMasterRecvVariable = 0;
 	MasterModbusBufferPut(frame, INDEX_8, OWNER_MASTER);
-	sendFlag = 0;
+//	sendFlag = 0;
 
 	ret = ModbusRecvCheck();
 	if(ret != DATA_RECV)
@@ -863,8 +864,9 @@ uint8_t ModbusControl(const uint8_t address, const int offset, const int pos, co
 
 		g_subFunction = 0;
 		g_wModbusWaitLen = INDEX_8;
+		g_bMasterRecvVariable = 0;
 		MasterModbusBufferPut(frame, INDEX_8, OWNER_MASTER);
-		sendFlag = 0;
+//		sendFlag = 0;
 
 		ret = ModbusRecvCheck();
 		if(ret != DATA_RECV)

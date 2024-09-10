@@ -306,6 +306,8 @@ Recv Done!!!!(10194)
 Master To Slave Send Frame!!!(10201)
 MasterModbusSend(10217)
 
+Slave timeout : 100ms
+
 
 
 Bitmap Conversion ¹æ¹ý

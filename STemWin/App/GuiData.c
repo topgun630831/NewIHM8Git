@@ -749,13 +749,19 @@ char const* _actrio_io_cbstatus_control_text[SETUP_LANGUAGE_MAX] = {
 	"CB STATUS",
 };
 
-char const* _actrio_io_iostatus_text[IO_STATUS_COUNT] = {
-	"CB ERROR",
-	"DI #1",
-	"DI #2",
-	"DI #3",
-	"DI #4",
-	"DO #1"
+char const* _actrio_io_iostatus_text[INDEX_2][IO_STATUS_COUNT] = {
+	{
+		"CB ERROR",
+		"DI #1",
+		"DI #2",
+		"DI #3",
+		"DI #4",
+		"DO #1"
+	},
+	{
+		"DO #2",
+		"DO #3",
+	}
 };
 
 char const* _aconoff_text[SETUP_LANGUAGE_MAX][STATUS_COUNT] = {
@@ -837,6 +843,12 @@ char const* _acacbMccbcontrol_confirm_text[SETUP_LANGUAGE_MAX] = {
 	"If you want to turn %s,\nChecking your password",
 	"若要%s掉请确认密码。",
 	"If you want to turn %s,\nChecking your password",
+};
+
+char const* _achange_setting_confirm_text[SETUP_LANGUAGE_MAX] = {
+	"To change settings,\nChecking your password",
+	"要更改设置，请确认您的密码。",
+	"To change settings,\nChecking your password",
 };
 
 char const* _acacbMccbcontrol_confirm_nopassword_text[SETUP_LANGUAGE_MAX] = {

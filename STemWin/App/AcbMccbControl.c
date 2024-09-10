@@ -58,14 +58,17 @@ static void AcbMccbControlDisp(void);
 
 static void TrioIoSend(void);
 static void TrioPageDisp(int page);
-static void TrioIoValueDisp(void);
-static void TrioIoDisp(int page);
+static void TrioIoValueDisp(int pos);
+static void TrioIoDisp(int pos);
 static void TrioIo(void);
 
 static void TrioTempValueDisp(void);
 static void TrioTempSend(void);
 static void TrioTempDisp(void);
 static void TrioTemp(void);
+
+#define TRIO_DO_MAX		3
+static uint8_t ControlDoStatus[TRIO_DO_MAX];
 
 static GUI_COLOR colorOffFillColor[OPEN_CLOSE_TRIP] = {
 	CB_OPEN_OFF_COLOR,
@@ -610,7 +613,7 @@ void StuMccbIo(void)
 				AcbMccbControlDisp();
 				AcbMccbControlSend();
 				gCommOldStatus[gDeviceIndex] = -1;
-				CommTimerInit();
+//				CommTimerInit();
 			}
 		}
 		else
@@ -738,27 +741,31 @@ static void TrioPageDisp(int page)
 	}
 }
 
-static void TrioIoValueDisp(void)
+bool	 bDioStatus[TRIO_IO_STATUS_COUNT];
+static void TrioIoValueDisp(int nPos)
 {
 	uint16_t nDioValue[DIO_STATUS_MAX];
-	bool	 bDioStatus[IO_STATUS_COUNT];
-	static const uint16_t IoStatus_Offset[IO_STATUS_COUNT] =
+	static const uint16_t IoStatus_Offset[TRIO_IO_STATUS_COUNT] =
 	{
 			0,
 			0,
 			0,
 			0,
 			0,
-			1
+			1,
+			1,
+			1,
 	};
-	static const uint16_t IoStatus_bit[IO_STATUS_COUNT] =
+	static const uint16_t IoStatus_bit[TRIO_IO_STATUS_COUNT] =
 	{
 			0x0000,
 			0x0001,
 			0x0002,
 			0x0004,
 			0x0008,
-			0x0001
+			0x0001,
+			0x0002,
+			0x0004,
 	};
 	static GUI_COLOR colorOnFillColor[OPEN_CLOSE_TRIP] =
 	{
@@ -767,15 +774,27 @@ static void TrioIoValueDisp(void)
 			TRIP_ON_COLOR
 	};
 
+	if(ModbusGetUint16(I_REGISTER_183) & CB_ACB_TRIO_REMOTE_MASK)
+	{
+		nRemote = TRUE;
+	}
+	else
+	{
+		nRemote = FALSE;
+	}
 	nDioValue[INDEX_0] = ModbusGetUint16(I_REGISTER_184);
 	nDioValue[INDEX_1] = ModbusGetUint16(I_REGISTER_185);
-	for(int i = 0; i < IO_STATUS_COUNT; i++)
+	for(int i = 0; i < TRIO_IO_STATUS_COUNT; i++)
 	{
 		if((nDioValue[IoStatus_Offset[i]] & IoStatus_bit[i]) == 0)
 			bDioStatus[i] = false;
 		else
 			bDioStatus[i] = true;
 	}
+	ControlDoStatus[0] = bDioStatus[INDEX_5];
+	ControlDoStatus[1] = bDioStatus[INDEX_6];
+	ControlDoStatus[2] = bDioStatus[INDEX_7];
+
 
 	if((nDioValue[INDEX_1] & CB_REMOTE_MASK) == 0)
 	{
@@ -789,7 +808,9 @@ static void TrioIoValueDisp(void)
 	LanguageSelect(FONT20B);
 	GUI_SetColor(GUI_BLACK);
 
-	uint8_t status = (nDioValue[INDEX_1] >> CB_STATUS_SHIFT) & CB_STATUS_MASK;		// 0x00: Open 0x01: Close  0x03: Error
+	uint8_t status = (nDioValue[INDEX_0] >> CB_STATUS_SHIFT) & CB_STATUS_MASK;		// 0x00: Open 0x01: Close  0x03: Error
+
+	AcbMccbcbStatus = status;
 
 	if(status != 0x03 && (bUpdateFirst == TRUE) || (TrioIocbStatus != status))
 	{
@@ -832,7 +853,15 @@ static void TrioIoValueDisp(void)
 	rectOnOff.y0 = TRIO_IOSTATUS_START_Y + TRIO_IOSTATUS_STATUS_Y + TRIO_IOSTATUS_Y_DISTANCE;
 	rectOnOff.y1 = (rectOnOff.y0 + TRIO_IOSTATUS_STATUS_HEIGHT) - 1;
 
-	for(int i = 0; i < IO_STATUS_COUNT; i++)
+	int count = IO_STATUS_COUNT;
+	int pos = 0;
+	if(nPos >= INDEX_2)
+	{
+		pos = INDEX_2;
+		count = INDEX_2;
+	}
+
+	for(int i = 0; i < count; i++, pos++)
 	{
 		GUI_SetColor(COLOR_LINE);
 		GUI_DrawRectEx(&rect);
@@ -840,7 +869,7 @@ static void TrioIoValueDisp(void)
 		GUI_SetBkColor(COLOR_MAIN_BG);
 		GUI_SetColor(COLOR_LABEL);
 		LanguageSelect(FONT20);
-		if(bDioStatus[i] == true)
+		if(bDioStatus[pos] == true)
 		{
 			GUI_SetColor(COLOR_ON);
 			GUI_SetBkColor(COLOR_ON);
@@ -881,7 +910,7 @@ static void TrioIoValueDisp(void)
 	}
 }
 
-static void TrioIoDisp(int page)
+static void TrioIoDisp(int nPos)
 {
 	GUI_SetBkColor(COLOR_MAIN_BG);
 	(void)GUI_SetPenSize(PENSIZE_LINE);
@@ -889,6 +918,11 @@ static void TrioIoDisp(int page)
 
 	GUI_ClearRect(X0_MAIN, Y0_MAIN, X1_MAIN, Y1_MAIN);
 
+	int page = 0;
+	if(nPos >= INDEX_2)
+	{
+		page = 1;
+	}
 	TrioPageDisp(page);
 
 	GUI_RECT rect;
@@ -903,7 +937,7 @@ static void TrioIoDisp(int page)
 	rectDescLocal.y0 = TRIO_IOSTATUS_START_Y;
 	rectDescLocal.y1 = (rectDescLocal.y0 + TRIO_IOSTATUS_BOX_HEIGHT) - 1;
 
-	if(gCommStatus[gDeviceIndex] == COMM_OK)
+	if(nPos == 0 && gCommStatus[gDeviceIndex] == COMM_OK)
 	{
 		GUI_SetColor(COLOR_MENU_SELECTED);
 		GUI_FillRectEx(&rect);
@@ -917,10 +951,10 @@ static void TrioIoDisp(int page)
 		GUI_SetColor(COLOR_MAIN_BG);
 		GUI_FillRectEx(&rect);
 
-		GUI_SetColor(OFF_ON_BOX_COLOR);
-
 		GUI_SetColor(COLOR_LINE);
 		GUI_DrawRectEx(&rect);
+
+		GUI_SetColor(GUI_WHITE);
 		LanguageSelect(FONT20);
 	}
 
@@ -958,23 +992,67 @@ static void TrioIoDisp(int page)
 
 	char *disableStatus = "-";
 
-	for(int i = 0; i < IO_STATUS_COUNT; i++)
+	int count = IO_STATUS_COUNT;
+	int pos = 0;
+	if(page == 1)
+	{
+		count = 2;
+		pos = INDEX_2;
+	}
+
+	for(int i = 0; i < count; i++, pos++)
 	{
 		GUI_SetColor(COLOR_LINE);
 		GUI_DrawRectEx(&rect);
 
-		GUI_SetBkColor(COLOR_MAIN_BG);
-		GUI_SetColor(OFF_ON_BOX_COLOR);
+		if((nPos == INDEX_1 && i == INDEX_5 ) || (nPos == INDEX_2 && i == 0) || (nPos == INDEX_3 && i == INDEX_1 ))
+		{
+			GUI_SetColor(COLOR_MENU_SELECTED);
+			GUI_FillRectEx(&rect);
+			GUI_SetBkColor(COLOR_MENU_SELECTED);
+		}
+		else
+		{
+			GUI_SetColor(COLOR_LINE);
+			GUI_DrawRectEx(&rect);
+			GUI_SetBkColor(COLOR_MAIN_BG);
+		}
+//		GUI_SetColor(OFF_ON_BOX_COLOR);
+		GUI_SetColor(GUI_WHITE);
 		LanguageSelect(FONT20);
-		GUI_DispStringInRect(_actrio_io_iostatus_text[i], &rectDescLocal, GUI_TA_LEFT | GUI_TA_VCENTER);
+		GUI_DispStringInRect(_actrio_io_iostatus_text[page][i], &rectDescLocal, GUI_TA_LEFT | GUI_TA_VCENTER);
 
-		GUI_SetColor(OFF_ON_BOX_COLOR);
-		GUI_FillRectEx(&rectOnOff);
-		GUI_SetColor(COLOR_LABEL);
-		GUI_SetBkColor(OFF_ON_BOX_COLOR);
 
 		LanguageSelect(FONT20);
-		GUI_DispStringInRect(disableStatus, &rectOnOff, GUI_TA_HCENTER | GUI_TA_VCENTER);
+		if(bUpdateFirst == TRUE)
+		{
+			GUI_SetColor(OFF_ON_BOX_COLOR);
+			GUI_FillRectEx(&rectOnOff);
+			GUI_SetColor(COLOR_LABEL);
+			GUI_SetBkColor(OFF_ON_BOX_COLOR);
+			GUI_DispStringInRect(disableStatus, &rectOnOff, GUI_TA_HCENTER | GUI_TA_VCENTER);
+		}
+		else
+		{
+			if(bDioStatus[pos] == true)
+			{
+				GUI_SetColor(COLOR_ON);
+				GUI_SetBkColor(COLOR_ON);
+				GUI_FillRectEx(&rectOnOff);
+				GUI_SetColor(GUI_WHITE);
+				LanguageSelect(FONT20B);
+				GUI_DispStringInRect(_aconoff_text[SettingValue[SETUP_LANGUAGE]][ON], &rectOnOff, GUI_TA_HCENTER | GUI_TA_VCENTER);
+			}
+			else
+			{
+				GUI_SetColor(COLOR_OFF);
+				GUI_SetBkColor(COLOR_OFF);
+				GUI_FillRectEx(&rectOnOff);
+				GUI_SetColor(GUI_WHITE);
+				LanguageSelect(FONT20B);
+				GUI_DispStringInRect(_aconoff_text[SettingValue[SETUP_LANGUAGE]][OFF], &rectOnOff, GUI_TA_HCENTER | GUI_TA_VCENTER);
+			}
+		}
 
 		if(i == INDEX_2)
 		{
@@ -1009,10 +1087,11 @@ static void TrioIoDisp(int page)
 // PRQA S 1503 1
 static void TrioIo(void)
 {
+	uint8_t bRecvData = FALSE;
 	int flagBreak = FALSE;
-	int page = 0;
+	int pos = 0;
 	bUpdateFirst = TRUE;
-	TrioIoDisp(page);
+	TrioIoDisp(pos);
 	ReadyToSend();
 	gStatusSendEnd = STATUS_SEND_END;
 	statusSendStep = 0;
@@ -1030,15 +1109,129 @@ static void TrioIo(void)
 			TrioIoSend();
 		}
 		else
+		if(key == KEY_ENTER)
+		{
+			if(bRecvData == TRUE)
+			{
+				if(nRemote == FALSE)
+				{
+					ControlErrorMessage(_acCBSetting_invalid_text[SettingValue[SETUP_LANGUAGE]]);
+					bUpdateFirst = TRUE;
+					DispStatus();
+					TrioIoDisp(pos);
+					TrioIoSend();
+					gCommOldStatus[gDeviceIndex] = -1;
+					continue;
+				}
+				if(pos == 0)
+				{
+					int flag = ControlCheck();
+					(void)printf("nRemote=%d, flag=%d\n", nRemote, flag);
+					if((nRemote == TRUE) && (flag == TRUE))
+					{
+						char buf[MESSAGE_BUF_SIZE];
+						uint8_t status = AcbMccbcbStatus;
+						uint16_t address=CB_STATUS_NOT_TRIO_ADDR;
+
+						if(ConnectSetting[gDeviceIndex].DeviceType == DEVICE_MCCB)
+						{
+							if(status == CB_STATUS_INPUT_FAULT)
+							{
+								status = 0;
+								address = CB_STATUS_MCCB_TRIP_ADDR;
+							}
+							else
+							{
+								address = CB_STATUS_MCCB_ADDR;
+							}
+						}
+						else
+						{
+							if(nTrio[gDeviceIndex] != INDEX_7)		// TRIO 결선000b: TRIO Only, 001b: TRIO+ACB_OCR, 010b: TRIO+MCCB, 111b: ACB OCR Only
+							{
+								address = CB_STATUS_TRIO_ADDR;
+							}
+						}
+						if(SettingValue[SETUP_PASSWORD_USE] == 0)
+							(void)sprintf(buf, _acacbMccbcontrol_confirm_nopassword_text[SettingValue[SETUP_LANGUAGE]], _accb_control_status[SettingValue[SETUP_LANGUAGE]][AcbMccbcbStatus]);
+						else
+							(void)sprintf(buf, _acacbMccbcontrol_confirm_text[SettingValue[SETUP_LANGUAGE]], _accb_control_status[SettingValue[SETUP_LANGUAGE]][AcbMccbcbStatus]);
+						ControlSet(status, address, 0, buf, 1);
+					}
+					else
+					{
+						ControlErrorMessage(_acCBSetting_invalid_text[SettingValue[SETUP_LANGUAGE]]);
+					}
+					bUpdateFirst = TRUE;
+					DispStatus();
+					TrioIoDisp(pos);
+					TrioIoSend();
+					gCommOldStatus[gDeviceIndex] = -1;
+				}
+				else
+				{
+					uint16_t address;
+					uint8_t status = ControlDoStatus[pos-1];
+					uint8_t dostatus = status;
+					uint8_t nSBO = 1;
+					int nPoint = pos - 1;
+
+					address = TRIO_SBO_START_ADDR;
+					if(status == ON)
+					{
+						address += INDEX_2;
+					}
+					status = OFF;			// 무조건 On으로 제어 -> Index 증가 없음
+					if(SettingValue[SETUP_PASSWORD_USE] == 0)
+						ControlSet(nPoint, address, status, _accontrol_confirm_nopassword_text[SettingValue[SETUP_LANGUAGE]][dostatus], nSBO);
+					else
+						ControlSet(nPoint, address, status, _accontrol_confirm_text[SettingValue[SETUP_LANGUAGE]][dostatus], nSBO);
+					bUpdateFirst = TRUE;
+					DispStatus();
+					TrioIoDisp(pos);
+					TrioIoSend();
+					gCommOldStatus[gDeviceIndex] = -1;
+				}
+			}
+		}
+		else
 		if(key == KEY_SETUP)
 		{
 			if(Setup() == SETUP_CHANGED)
 			{
 				flagBreak = TRUE;
 			}
-			TrioIoDisp(page);
+			TrioIoDisp(pos);
 			gCommOldStatus[gDeviceIndex] = -1;
 			TrioIoSend();
+		}
+		else
+		if(key == KEY_UP)
+		{
+			if(pos == 0)
+			{
+				pos = INDEX_3;
+			}
+			else
+			{
+				pos--;
+			}
+			bUpdateFirst = TRUE;
+			TrioIoDisp(pos);
+		}
+		else
+		if(key == KEY_DOWN)
+		{
+			if(pos == INDEX_3)
+			{
+				pos = 0;
+			}
+			else
+			{
+				pos++;
+			}
+			bUpdateFirst = TRUE;
+			TrioIoDisp(pos);
 		}
 		else
 		if(key == DATA_RECV)
@@ -1046,7 +1239,7 @@ static void TrioIo(void)
 			(void)printf("DATA_RECV gStatusSendEnd=%d\n",gStatusSendEnd);
 			if(bCommError == COMM_ERROR)
 			{
-				TrioIoDisp(page);
+				TrioIoDisp(pos);
 				bCommError = COMM_OK;
 			}
 			if(gStatusSendEnd == STATUS_SEND_ING)
@@ -1056,11 +1249,12 @@ static void TrioIo(void)
 			}
 			else
 			{
-				TrioIoValueDisp();
+				TrioIoValueDisp(pos);
 				g_bRecvAllDone = TRUE;
 				nSendStep = 0;
 				statusSendStep = 0;
 				gStatusSendEnd = STATUS_SEND_ING;
+				bRecvData = TRUE;
 			}
 		}
 		else
@@ -1093,7 +1287,7 @@ static void TrioIo(void)
 			bUpdateFirst = TRUE;
 			(void)printf("COMM_STAT_ERROR\n\n");
 			bCommError = COMM_ERROR;
-			TrioIoDisp(page);
+			TrioIoDisp(pos);
 		}
 		else {}
 		if(flagBreak == TRUE)

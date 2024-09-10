@@ -939,7 +939,7 @@ void MLinkControl(void)
 				statusSendStep = 0;
 				gStatusSendEnd = STATUS_SEND_ING;
 			}
-			CommTimerInit();
+//			CommTimerInit();
 		}
 		else
 		if(key == DATA_RECV)
@@ -997,6 +997,134 @@ void MLinkControl(void)
 		}
 		else {}
 	}
+}
+
+bool PasswordForChangeSetting(void)
+{
+	int flagBreak = FALSE;
+	int nPos = 0;
+	char password[CONTROL_PASSWORD_DIGIT+1];
+
+	(void)sprintf(password, "0000");
+	InitDisp(0, 0, _achange_setting_confirm_text[SettingValue[SETUP_LANGUAGE]]);
+	PasswordDisp(nPos, password[nPos]);
+
+	int SetupKeyCount = 0;
+	while (1)
+	{
+		E_KEY key = GetKey();
+
+		if(key == KEY_SETUP)
+		{
+			if(++SetupKeyCount >= 5)
+			{
+				sprintf(password, "%04d", SettingValue[SETUP_PASSWORD]);
+				PasswordAllDisp(password);
+				nPos = CONTROL_PASSWORD_DIGIT - 1;
+				SetupKeyCount = 0;
+			}
+		}
+		else
+		if(key == KEY_UP)
+		{
+			SetupKeyCount = 0;
+			if(nPos < CONTROL_PASSWORD_DIGIT)
+			{
+				if(password[nPos] < '9')
+				{
+					password[nPos]++;
+				}
+				else
+				{
+					password[nPos] = '0';
+				}
+				PasswordDisp(nPos, password[nPos]);
+			}
+			else
+			if(nPos == (CONTROL_PASSWORD_DIGIT + 1))
+			{
+				MLinkButtonDisp(CONTROL_BUTTON_OK);
+				nPos = CONTROL_PASSWORD_DIGIT;
+			}
+			else {}
+		}
+		else
+		if(key == KEY_DOWN)
+		{
+			SetupKeyCount = 0;
+			if(nPos < CONTROL_PASSWORD_DIGIT)
+			{
+				if(password[nPos] > '0')
+				{
+					password[nPos]--;
+				}
+				else
+				{
+					password[nPos] = '9';
+				}
+				PasswordDisp(nPos, password[nPos]);
+			}
+			else
+			if(nPos == CONTROL_PASSWORD_DIGIT)
+			{
+				MLinkButtonDisp(CONTROL_BUTTON_CANCEL);
+				nPos = CONTROL_PASSWORD_DIGIT + 1;
+			}
+			else {}
+		}
+		else
+		if(key == KEY_ENTER)
+		{
+			SetupKeyCount = 0;
+			if(nPos < CONTROL_PASSWORD_DIGIT)
+			{
+				nPos++;
+				PasswordDisp(nPos, password[nPos]);
+				if(nPos == CONTROL_PASSWORD_DIGIT)
+				{
+					MLinkButtonDisp(CONTROL_BUTTON_OK);
+				}
+			}
+			else
+			if(nPos == CONTROL_PASSWORD_DIGIT)	// OK 이면
+			{
+				uint16_t  iPassword = atoi(password);
+				if(iPassword != SettingValue[SETUP_PASSWORD])
+				{
+				   if(QuestionMessage() == FALSE)
+				   {
+						flagBreak = TRUE;
+				   }
+					nPos = 0;
+					InitDisp(0, 0, _achange_setting_confirm_text[SettingValue[SETUP_LANGUAGE]]);
+					PasswordDisp(nPos, password[nPos]);
+					MLinkButtonDisp(CONTROL_BUTTON_NOSELECT);
+				}
+				else
+				{
+					return true;
+				}
+			}
+			else
+			if(nPos == (CONTROL_PASSWORD_DIGIT + 1))	// Cancel 이면
+			{
+				flagBreak = TRUE;
+			}
+			else {}
+		}
+		else
+		if(key == KEY_CANCEL)
+		{
+			flagBreak = TRUE;
+		}
+		else {}
+
+		if(flagBreak == TRUE)
+		{
+			break;
+		}
+	}
+	return false;
 }
 
 /*************************** End of file ****************************/

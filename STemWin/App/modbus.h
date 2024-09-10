@@ -527,7 +527,7 @@ EXTERN uint8_t nTrio[DEVICE_MAX];
 #define	CB_DO_ERROR_MASK			0x0300
 
 #define TRIO_IO_READ_ADDR			183
-#define TRIO_IO_READ_LEN			4
+#define TRIO_IO_READ_LEN			3
 
 
 //AcbMccbEvent.c
@@ -578,6 +578,7 @@ EXTERN uint8_t nTrio[DEVICE_MAX];
 #define	MCCB_RELAYSET_READ_ADDR				61
 #define	MCCB_RELAYSET_READ_LEN				44
 #define	ACB_RELAYSET_GROUPOFFSET			200
+#define	TRIO_SBO_START_ADDR					28
 
 //MLinkControl.c
 #define	MLINK_CONTROL_STEP0_READ_ADDR		2021

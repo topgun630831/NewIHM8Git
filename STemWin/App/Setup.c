@@ -713,6 +713,8 @@ static void FactoryReset(void)
 	}
 }
 
+bool PasswordForChangeSetting(void);
+
 static void SettingMenuExec(int nPage, int nPos)
 {
 	if(nPage == INDEX_0)
@@ -785,9 +787,12 @@ static void SettingMenuExec(int nPage, int nPos)
 		else
 		if(nPos == INDEX_1)
 		{
-			if(SettingInputString(&SettingValue[SETUP_PASSWORD_USE], STATUS_COUNT, _aconoff_text[SettingValue[SETUP_LANGUAGE]], FALSE) == TRUE)
+			if(SettingValue[SETUP_PASSWORD_USE] == 0 || PasswordForChangeSetting() == true)
 			{
-				FlashWrite();
+				if(SettingInputString(&SettingValue[SETUP_PASSWORD_USE], STATUS_COUNT, _aconoff_text[SettingValue[SETUP_LANGUAGE]], FALSE) == TRUE)
+				{
+					FlashWrite();
+				}
 			}
 		}
 		else

@@ -1583,15 +1583,15 @@ void MasterModbusProcess(bool bInChecking)
 				printf("recv:%u, last=%u, new=%u, cnt=%u\n",  last_recv, uart2LastNDTR, uart2NewNDTR, count);
 			uart2LastNDTR = uart2NewNDTR;
 
-//			if(gDebug == true)
-//			{
-//				(void)printf("Read!!!(%u, %u) g_bRecvVariable:%d, readExceptionLen:%d\n", g_sendOwner, g_modbusRxIndex, g_bRecvVariable, readExceptionLen);
-//				for(int i = 0; i < g_modbusRxIndex; i++)
-//				{
-//					  (void)printf("%02X ", g_modbusRxBuff[i]);
-//				}
-//				(void)printf("\n");
-//			}
+			if(gDebug == true)
+			{
+				(void)printf("Read!!!(%u, %u) g_bRecvVariable:%d, readExceptionLen:%d\n", g_sendOwner, g_modbusRxIndex, g_bRecvVariable, readExceptionLen);
+				for(int i = 0; i < g_modbusRxIndex; i++)
+				{
+					  (void)printf("%02X ", g_modbusRxBuff[i]);
+				}
+				(void)printf("\n");
+			}
 
 			if(g_modbusRxIndex < readExceptionLen)
 				return;
@@ -2166,13 +2166,15 @@ uint8_t ModbusRecvCheck(void)
 	uint32_t tick = HAL_GetTick();
 
 	uint32_t timer;
+	bool 	 bSend = false;
 
 	if(gDebug)
 		printf("[RecvCheck] ModbusRecvCheck(%d, %d)\n", HAL_GetTick(), g_sendOwner);
-	if(MasterSendLength[g_sendOwner] != 0)
+	if(sendFlag == 0 && MasterSendLength[g_sendOwner] != 0)
 	{
 		g_sendOwner = OWNER_MASTER;
 		MasterModbusSend(g_sendOwner);
+		bSend = true;
 	}
 	last_recv = tick;
 
@@ -2188,12 +2190,19 @@ uint8_t ModbusRecvCheck(void)
 		MasterModbusProcess(true);
 		SlaveModbusProcess();
 
+		if(bSend == false && sendFlag == 0 && MasterSendLength[g_sendOwner] != 0)
+		{
+			g_sendOwner = OWNER_MASTER;
+			MasterModbusSend(g_sendOwner);
+			bSend = true;
+		}
+
 		if(SlaveSendLength != 0)
 		{
 			if(gDebug)
 				printf("SlaveModbusSend(%d)\n", HAL_GetTick());
 			SlaveModbusSend();
-			return SECOND_TIMER;
+			continue;
 		}
 
 		if (g_modbusRxDone)

@@ -210,7 +210,9 @@ typedef enum e_io_status
 	DO1 = 3,
 	DO2 = 4,
 	DO3 = 5,
-	IO_STATUS_COUNT = 6
+	IO_STATUS_COUNT = 6,
+	IO_STATUS2_COUNT = 7,
+	TRIO_IO_STATUS_COUNT = 8
 } E_IO_STATUS;
 
 //typedef enum e_io_status
@@ -756,6 +758,7 @@ extern char const* _actrip_text[SETUP_LANGUAGE_MAX][STATUS_COUNT];
 extern char const* _accontrol_confirm_text[SETUP_LANGUAGE_MAX][STATUS_COUNT];
 extern char const* _accontrol_confirm_nopassword_text[SETUP_LANGUAGE_MAX][STATUS_COUNT];
 extern char const* _acacbMccbcontrol_confirm_text[SETUP_LANGUAGE_MAX];
+extern char const* _achange_setting_confirm_text[SETUP_LANGUAGE_MAX];
 extern char const* _acacbMccbcontrol_confirm_nopassword_text[SETUP_LANGUAGE_MAX];
 extern char const* _aFactoryReset_confirm_text[SETUP_LANGUAGE_MAX];
 extern char const* _aFaultReset_confirm_text[SETUP_LANGUAGE_MAX];
@@ -763,7 +766,7 @@ extern char const* _accontrol_button_text[SETUP_LANGUAGE_MAX][STATUS_COUNT];
 extern char const* _acpassword_input_text;
 
 extern char const* _actrio_io_cbstatus_control_text[SETUP_LANGUAGE_MAX];
-extern char const* _actrio_io_iostatus_text[IO_STATUS_COUNT];
+extern char const* _actrio_io_iostatus_text[INDEX_2][IO_STATUS_COUNT];
 
 
 // MLink
