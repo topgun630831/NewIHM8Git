@@ -971,7 +971,6 @@ void ModbusSetTimeAndWait(const uint8_t address, const S_DATE_TIME *dateTime)
 
 void ModbusSetTimeAndSend(const uint8_t address, const S_DATE_TIME *dateTime)
 {
-	uint8_t frame[DEFAULT_BUF_SIZE];
 	uint16_t mSec = (uint16_t)dateTime->Sec * THOUSAND;
 	frame[INDEX_0] = address;
 	frame[INDEX_1] = MODBUS_EXTEND_FUNCTION;
@@ -996,6 +995,7 @@ void ModbusSetTimeAndSend(const uint8_t address, const S_DATE_TIME *dateTime)
 	{
 		GUI_Delay((recvTick+TX_WAIT_TIME) - tick);
 	}
+	recvTick = tick;
 
 	if(gDebug)
 	{
@@ -1007,10 +1007,12 @@ void ModbusSetTimeAndSend(const uint8_t address, const S_DATE_TIME *dateTime)
 	  (void)printf("\n");
 	}
 
+
 	HAL_NVIC_DisableIRQ(USART2_IRQn); //Rx Callback 함수 Disable
 	HAL_UART_Transmit(&huart2, frame, INDEX_14, UART_TIMEOUT);
 	HAL_NVIC_EnableIRQ(USART2_IRQn);  //Rx callback 함수 enable
 	recvTick = HAL_GetTick();
+
 	//	sendFlag = 1;
 }
 

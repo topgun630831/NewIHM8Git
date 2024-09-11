@@ -567,14 +567,6 @@ int main(void)
 	OS_InitKern();                   /* Initialize OS                 */
 	OS_InitHW();                     /* Initialize Hardware for OS    */
 
-//	while(1)
-//	{
-//
-//		HAL_GPIO_TogglePin(USER_LED_GPIO_Port, USER_LED_Pin);
-//		OS_Delay(100);
-//	}
-//
-
 	Pcf2129AT_init();
 	(void)printf("\n\r");
 	(void)printf("\n\r*************************");
@@ -584,8 +576,6 @@ int main(void)
 	(void)printf("\n\r starting..");
 	(void)printf("\n\r*************************");
 	(void)printf("\n\r");
-
-//        g_orderOwner = OWNER_MASTER;
 
 //	OS_CREATETASK(&TCBRECEIVE, "Receive Task", &ReceiveTask,  RECV_PRORITY, StackReceive);										// System
 	OS_CREATETASK(&TCBEMWIN, "emWin Task", &EmWinTask,  EMWIN_PRORITY, StackEmWin);									// emWin
@@ -604,73 +594,7 @@ int main(void)
 
 }
 
-/** System Clock Configuration
-*/
-// PRQA S 1503 1
-//void SystemClock_Config(void)
-//{
-//
-//	RCC_OscInitTypeDef RCC_OscInitStruct;
-//	RCC_ClkInitTypeDef RCC_ClkInitStruct;
-//	RCC_PeriphCLKInitTypeDef PeriphClkInitStruct;
-//
-//	/**Configure the main internal regulator output voltage
-//	*/
-//	__HAL_RCC_PWR_CLK_ENABLE();
-//
-//	__HAL_PWR_VOLTAGESCALING_CONFIG(PWR_REGULATOR_VOLTAGE_SCALE1);
-//
-//	/**Initializes the CPU, AHB and APB busses clocks
-//	*/
-//	RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSE | RCC_OSCILLATORTYPE_LSI;
-//	RCC_OscInitStruct.HSEState = RCC_HSE_ON;
-//	RCC_OscInitStruct.LSIState = RCC_LSI_ON;
-//	RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
-//	RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSE;
-////	RCC_OscInitStruct.PLL.PLLM = INDEX_4;
-//	RCC_OscInitStruct.PLL.PLLM = INDEX_7;
-//	RCC_OscInitStruct.PLL.PLLN = CLOCK_PLLN;
-//	RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV2;
-////	RCC_OscInitStruct.PLL.PLLQ = INDEX_7;
-//	RCC_OscInitStruct.PLL.PLLQ = INDEX_4;
-//	if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
-//	{
-//		_Error_Handler(__FILE__, __LINE__);
-//	}
-//
-//	/**Initializes the CPU, AHB and APB busses clocks
-//	*/
-//	RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
-//		|RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
-//	RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
-//	RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
-//	RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV4;
-//	RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV2;
-//
-//	if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_5) != HAL_OK)
-//	{
-//		_Error_Handler(__FILE__, __LINE__);
-//	}
-//
-//	PeriphClkInitStruct.PeriphClockSelection = RCC_PERIPHCLK_RTC;
-//	PeriphClkInitStruct.RTCClockSelection = RCC_RTCCLKSOURCE_LSI;
-//	if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInitStruct) != HAL_OK)
-//	{
-//		_Error_Handler(__FILE__, __LINE__);
-//	}
-//
-//
-//	/**Configure the Systick interrupt time
-//	*/
-//	(void)HAL_SYSTICK_Config(HAL_RCC_GetHCLKFreq()/THOUSAND);
-//
-//	/**Configure the Systick
-//	*/
-//	HAL_SYSTICK_CLKSourceConfig(SYSTICK_CLKSOURCE_HCLK);
-//
-//	/* SysTick_IRQn interrupt configuration */
-//	HAL_NVIC_SetPriority(SysTick_IRQn, 0, 0);
-//}
+
 
 /* I2C2 init function */
 static void MX_I2C2_Init(void)

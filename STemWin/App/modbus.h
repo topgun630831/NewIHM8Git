@@ -197,6 +197,7 @@ void ModbusSetTime(const uint8_t address, const S_DATE_TIME *dateTime);
 void ModbusSetTimeAndWait(const uint8_t address, const S_DATE_TIME *dateTime);
 bool ModbusSetTimeAndNoWait(const uint8_t address, const S_DATE_TIME *dateTime);
 void ModbusAcbSystemEventGet(S_DATE_TIME *dateTime, uint16_t *mainCategory, uint16_t *middleCategory, uint16_t *smallCategory, uint16_t *Status, float *Value);
+void ModbusSetTimeAndSend(const uint8_t address, const S_DATE_TIME *dateTime);
 
 typedef enum e_index_value
 {
@@ -337,6 +338,8 @@ EXTERN uint32_t uart1LastNDTR;
 EXTERN uint32_t uart2LastNDTR;
 
 EXTERN uint8_t nTrio[DEVICE_MAX];
+
+EXTERN uint8_t frame[INDEX_14];
 
 #define	PER90		90
 #define	PER105		105

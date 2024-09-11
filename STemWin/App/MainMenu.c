@@ -645,6 +645,12 @@ uint16_t StatusSend(void)
 {
 	if(gStatusSendEnd == STATUS_SEND_ING)
 	{
+		if(gbSetTime == true)
+		{
+			PCF2127_readTime(1);
+			ModbusSetTimeAndSend(0x00, &gDateTime);
+			gbSetTime = false;
+		}
 		if(ConnectSetting[gDeviceIndex].DeviceType == DEVICE_MLINK)
 		{
 			if(statusSendStep == INDEX_0)
@@ -1822,6 +1828,7 @@ void MasterModbusProcess(bool bInChecking)
 		printf("\n\n\n\n Error!!!(stat:%d, error:%d\n\n\n\n", stat, error);
 }
 
+extern S_DATE_TIME changeDateTime;
 static uint8_t SlaveModbusCRCCheck(void)
 {
 	if(g_modbusSlaveRxIndex < 5 || g_modbusSlaveRxIndex > MODBUS_SLAVE_BUFF_SIZE)
@@ -1829,15 +1836,15 @@ static uint8_t SlaveModbusCRCCheck(void)
 		g_modbusSlaveRxIndex = 0;
 		return MODBUS_CRC_ERROR;
 	}
-	if(gDebug)
-	{
-		(void)printf("Slave Recv Frame!!!(%d)\n", HAL_GetTick());
-		for(int i = 0; i < g_modbusSlaveRxIndex; i++)
-		{
-			(void)printf("%02X ", g_modbusSlaveRxBuff[i]);
-		}
-		(void)printf("\n");
-	}
+//	if(gDebug)
+//	{
+//		(void)printf("Slave Recv Frame!!!(%d)\n", HAL_GetTick());
+//		for(int i = 0; i < g_modbusSlaveRxIndex; i++)
+//		{
+//			(void)printf("%02X ", g_modbusSlaveRxBuff[i]);
+//		}
+//		(void)printf("\n");
+//	}
 	bool exception = false;
 	if(g_modbusSlaveRxBuff[1] & MASK_80)
 	{
@@ -1870,12 +1877,24 @@ static uint8_t SlaveModbusCRCCheck(void)
 			MasterModbusBufferPut(g_modbusSlaveRxBuff, g_modbusSlaveRxIndex, OWNER_SLAVE);
 			g_modbusSlaveRxIndex = 0;
 			bInControl = false;
+			if((g_modbusSlaveRxBuff[INDEX_1] == MODBUS_EXTEND_FUNCTION) && (g_modbusSlaveRxBuff[INDEX_2] == MODBUS_SUBFUCTION_SETTIME))
+			{
+				changeDateTime.Year =  g_modbusSlaveRxBuff[INDEX_5] + YEAR_BASE;
+				changeDateTime.Month =  g_modbusSlaveRxBuff[INDEX_6];
+				changeDateTime.Day =  g_modbusSlaveRxBuff[INDEX_7];
+				changeDateTime.Hour =  g_modbusSlaveRxBuff[INDEX_8];
+				changeDateTime.Min =  g_modbusSlaveRxBuff[INDEX_9];
+				int mSec =  g_modbusSlaveRxBuff[INDEX_10] << 8;
+				mSec += g_modbusSlaveRxBuff[INDEX_11];
+				changeDateTime.Sec = mSec / THOUSAND;
+				(void)PCF2127_set_time();
+				(void)printf("Slave Time Set %d/%d/%d %d:%d:%d.%d(%d)\n", changeDateTime.Year, changeDateTime.Month, changeDateTime.Day, changeDateTime.Hour, changeDateTime.Min, changeDateTime.Sec, changeDateTime.mSec, HAL_GetTick());
+			}
 		}
 	}
 	else
 	{
-		if(gDebug)
-			(void)printf("-----------------\nModbus CRC Error[%04x, %04x]\n", crc, p);
+		(void)printf("-----------------\nModbus CRC Error[%04x, %04x]\n", crc, p);
 		ret = MODBUS_CRC_ERROR;
 	}
 	g_modbusSlaveRxIndex = 0;
@@ -1909,8 +1928,26 @@ void SlaveModbusProcess(void)
 			g_modbusSlaveRxIndex += remainder;
 		}
 		slave_last_recv = HAL_GetTick();
-		if(gDebug)
+//		if(gDebug)
 			printf("(%d)g_modbusSlaveRxIndex : %d\n", slave_last_recv, g_modbusSlaveRxIndex);
+//			if(gDebug == true)
+			{
+				(void)printf("Slave Read!!!(%u) g_modbusSlaveRxIndex:%d\n", slave_last_recv, g_modbusSlaveRxIndex);
+				for(int i = 0; i < g_modbusSlaveRxIndex; i++)
+				{
+					  (void)printf("%02X ", g_modbusSlaveRxBuff[i]);
+				}
+				(void)printf("\n");
+			}
+
+		if(((g_modbusSlaveRxBuff[INDEX_1] == MODBUS_EXTEND_FUNCTION) && (g_modbusSlaveRxBuff[INDEX_2] == MODBUS_SUBFUCTION_SETTIME)) &&
+				g_modbusSlaveRxIndex == INDEX_14)
+		{
+			if(SlaveModbusCRCCheck() == MODBUS_OK)
+			{
+			}
+		}
+		else
 		if(g_modbusSlaveRxIndex >= INDEX_8)
 		{
 
@@ -1924,9 +1961,10 @@ void SlaveModbusProcess(void)
 	{
 		if((slave_last_recv != 0) && ((HAL_GetTick() - slave_last_recv) > 2000))
 		{
-		  printf("Slave Recv Wait Time Out!!!(%d,%d)\n", slave_last_recv, HAL_GetTick());
-//		  g_modbusSlaveRxIndex = 0;
-		  slave_last_recv = HAL_GetTick();
+			printf("Slave Recv Wait Time Out!!!(%d,%d)\n", slave_last_recv, HAL_GetTick());
+			g_modbusSlaveRxIndex = 0;
+			slave_last_recv = HAL_GetTick();
+			uart1LastNDTR = uart1NewNDTR;
 		}
 	}
 }
@@ -2047,20 +2085,12 @@ E_KEY GetKey(void)
 				if(gbSettingTime == FALSE)
 				{
 					PCF2127_readTime(1);
-					if(gbSetTime == true || (gDateTime.Day != gTimeSyncDay) && (gDateTime.Hour == TIMESYNC_HOUR) && (gDateTime.Min == TIMESYNC_MIN))
-					//if((gDateTime.Min != gTimeSyncHour))
+					if((gDateTime.Day != gTimeSyncDay) && (gDateTime.Hour == TIMESYNC_HOUR) && (gDateTime.Min == TIMESYNC_MIN))
 					{
 						(void)printf("TimeSync.....(%d)\n", HAL_GetTick());
 						gTimeSyncDay = gDateTime.Day;
 
-							ModbusSetTimeAndNoWait(0x00, &gDateTime);
-#if 0
-						for(int i = 0; i < gDeviceCount; i++)
-						{
-							ModbusSetTimeAndWait(ConnectSetting[i].Address, &gDateTime);
-						}
-#endif
-						gbSetTime = false;
+						gbSetTime = true;
 					}
 				}
 				timeSyncTimer = timer;
