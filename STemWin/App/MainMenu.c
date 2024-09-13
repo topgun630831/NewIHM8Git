@@ -686,7 +686,6 @@ uint16_t StatusSend(void)
 		else
 		if((ConnectSetting[gDeviceIndex].DeviceType == DEVICE_ACB) || (ConnectSetting[gDeviceIndex].DeviceType == DEVICE_MCCB))
 		{
-			printf("  \n\nStatusSend statusSendStep:%d\n", statusSendStep);
 			if(statusSendStep == INDEX_0)
 			{
 				CommTimerClear();
@@ -797,7 +796,6 @@ void StatusRecv(void)
 		if(statusSendStep == INDEX_1)
 		{
 			ModbusGetString(I_REGISTER_1335, INDEX_32, gProductName[gDeviceIndex]);
-			//(void)printf("gProductName = %s\n", gProductName[gDeviceIndex]);
 			statusSendStep = INDEX_2;
 		}
 		else
@@ -915,10 +913,8 @@ void StatusRecv(void)
 		else
 		if(statusSendStep == INDEX_1)
 		{
-//			ModbusGetId2(gProductName[gDeviceIndex]);
 			ModbusGetProductName();
 
-			(void)printf("gProductName = %s\n", gProductName[gDeviceIndex]);
 			statusSendStep = INDEX_2;
 		}
 		else
@@ -1301,6 +1297,7 @@ void GuiMain(void)
 			{
 				gDeviceIndex = gDeviceCount - 1;
 			}
+			ReadyToSend();
 			gStatusSendEnd = STATUS_SEND_ING;
 			statusSendStep = 0;
 			nSendStep = 0;
@@ -1320,6 +1317,7 @@ void GuiMain(void)
 			{
 				gDeviceIndex = 0;
 			}
+			ReadyToSend();
 			gStatusSendEnd = STATUS_SEND_ING;
 			statusSendStep = 0;
 			nSendStep = 0;

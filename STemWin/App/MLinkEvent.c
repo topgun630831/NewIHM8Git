@@ -125,7 +125,7 @@ void MLinkEvent(void)
 	nEventIndex = gSystemEventIndex[gDeviceIndex];
 	nEventTotal = gSystemEventTotalCount[gDeviceIndex];
 
-	
+
 (void)printf("nEventTotal = %d\n", nEventTotal);
 	MLinkEventInitDisp();
 	if(nEventTotal != 0)
@@ -166,6 +166,7 @@ void MLinkEvent(void)
 			}
 			MLinkEventInitDisp();
 			gCommOldStatus[gDeviceIndex] = -1;
+			ReadyToSend();
 			(void)EventSend(TRUE);
 		}
 		else
@@ -184,6 +185,7 @@ void MLinkEvent(void)
 				nCurrIndex = 1;
 			}
 			bEventSend = TRUE;
+			ReadyToSend();
 			EventSend(TRUE);
 			CountDisp(nEventTotal, nCurrIndex);
 		}
@@ -203,6 +205,7 @@ void MLinkEvent(void)
 				nCurrIndex = nEventTotal;
 			}
 			bEventSend = TRUE;
+			ReadyToSend();
 			EventSend(TRUE);
 			CountDisp(nEventTotal, nCurrIndex);
 		}
@@ -252,7 +255,7 @@ void MLinkEvent(void)
 				statusSendStep = 0;
 				gStatusSendEnd = STATUS_SEND_ING;
 			}
-//			
+//
 //			if(gStatusSendEnd == STATUS_SEND_ING)
 //			{
 //				StatusRecv();
@@ -273,7 +276,7 @@ void MLinkEvent(void)
 		else
 		if(key == KEY_COMM_ERROR)
 		{
-			(void)printf("COMM Error!!! gStatusSendEnd=%d, statusSendStep=%d, nSendStep=%d\n",gStatusSendEnd,statusSendStep,nSendStep); 
+			(void)printf("COMM Error!!! gStatusSendEnd=%d, statusSendStep=%d, nSendStep=%d\n",gStatusSendEnd,statusSendStep,nSendStep);
 			if(StatusRecvErrorProcess() == STATUS_SEND_ING)
 			{
 				nSendStep = 0;

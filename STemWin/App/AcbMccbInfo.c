@@ -951,15 +951,18 @@ void RelayStatus(void)
 void AcbMccbInfomation(void)
 {
 	int flagBreak = FALSE;
+	int nMenuCount = EVENT_MENU_COUNT;
 	nMenuPos = 0;
 
-	InfoMenu(INFO_MENU, nMenuPos, INFO_MENU_COUNT);
+	if(ConnectSetting[gDeviceIndex].DeviceType == DEVICE_MCCB)
+		nMenuCount--;
+
+	InfoMenu(INFO_MENU, nMenuPos, nMenuCount);
 
 	GUI_SetBkColor(COLOR_MAIN_BG);
 	(void)GUI_SetPenSize(PENSIZE_LINE);
 	GUI_SetColor(COLOR_LINE);
 	gStatusSendEnd = STATUS_SEND_ING;
-	ReadyToSend();
 	(void)StatusSend();
 
 	while (1)
@@ -978,7 +981,7 @@ void AcbMccbInfomation(void)
 			{
 				flagBreak = TRUE;
 			}
-			InfoMenu(INFO_MENU, nMenuPos, INFO_MENU_COUNT);
+			InfoMenu(INFO_MENU, nMenuPos, nMenuCount);
 		}
 		else
 		if(key == KEY_UP)
@@ -989,14 +992,14 @@ void AcbMccbInfomation(void)
 			}
 			else
 			{
-				nMenuPos = INFO_MENU_COUNT - 1;
+				nMenuPos = nMenuCount - 1;
 			}
-			InfoMenu(INFO_MENU, nMenuPos, INFO_MENU_COUNT);
+			InfoMenu(INFO_MENU, nMenuPos, nMenuCount);
 		}
 		else
 		if(key == KEY_DOWN)
 		{
-			if(nMenuPos < (INFO_MENU_COUNT-1))
+			if(nMenuPos < (nMenuCount-1))
 			{
 				nMenuPos++;
 			}
@@ -1004,11 +1007,12 @@ void AcbMccbInfomation(void)
 			{
 				nMenuPos = 0;
 			}
-			InfoMenu(INFO_MENU, nMenuPos, INFO_MENU_COUNT);
+			InfoMenu(INFO_MENU, nMenuPos, nMenuCount);
 		}
 		else
 		if(key == KEY_ENTER)
 		{
+			ReadyToSend();
 			if(nMenuPos == INDEX_2)
 			{
 				RelayStatus();
@@ -1018,7 +1022,7 @@ void AcbMccbInfomation(void)
 				InfoSend(nMenuPos);
 				InfoDisp(nMenuPos);
 			}
-			InfoMenu(INFO_MENU, nMenuPos, INFO_MENU_COUNT);
+			InfoMenu(INFO_MENU, nMenuPos, nMenuCount);
 		}
 		else
 		if(key == DATA_RECV)

@@ -1047,7 +1047,6 @@ void AcbMccbMeasurement(void)
 	}
 	AcbMccbMeasurementDisp(nMenuPos, 1);
 
-	ReadyToSend();
 	AcbMccbMeasurementSend();
 
 	while (1)

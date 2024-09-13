@@ -507,7 +507,6 @@ void MLinkIOSet(void)
 	GUI_ClearRect(X0_MAIN, Y0_MAIN, X1_MAIN, Y1_MAIN);
 
 	MLinkIOSetDisp(nMenuPos);
-	ReadyToSend();
 	MLinkIOSetSend(nMenuPos);
 
 	while (1)

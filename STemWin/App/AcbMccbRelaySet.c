@@ -311,7 +311,6 @@ void AcbMccbRelaySet(void)
 	int flagBreak = FALSE;
 	AcbMccbRelaySetInitDisp();
 	nSendStep = 0;
-	ReadyToSend();
 	RelaySetSend();
 	while (1)
     {

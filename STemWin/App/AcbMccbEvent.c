@@ -647,6 +647,7 @@ static void FaultReset(void)
 				}
 				else
 				{
+					ReadyToSend();
 					ModbusFaultReset(ConnectSetting[gDeviceIndex].Address);		// faultreset ½ÇÇà
 					flagBreak = TRUE;
 				}
@@ -694,7 +695,6 @@ void AcbMccbEvent(void)
 	GUI_ClearRect(X0_MAIN, Y0_MAIN, X1_MAIN, Y1_MAIN);
 	InfoMenu(EVENT_MENU, nMenuPos, EVENT_MENU_COUNT);
 
-	ReadyToSend();
 	(void)StatusSend();
 
 	nSendStep = 0;

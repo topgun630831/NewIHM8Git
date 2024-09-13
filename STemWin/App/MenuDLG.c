@@ -603,9 +603,10 @@ WM_HWIN CreateMenu(E_DEVICE_TYPE DeviceType)
 		{
 			WM_HideWindow(hWin);
 			language = SettingValue[SETUP_LANGUAGE];
-			gStatusSendEnd = STATUS_SEND_ING;
-			statusSendStep = 0;
-			nSendStep = 0;
+//			gStatusSendEnd = STATUS_SEND_ING;
+//			statusSendStep = 0;
+//			nSendStep = 0;
+			ReadyToSend();
 			if((DeviceType == DEVICE_ACB) || (DeviceType == DEVICE_MCCB))
 			{
 				AcbMccbMenu(nMainMenuPos);
@@ -636,6 +637,11 @@ WM_HWIN CreateMenu(E_DEVICE_TYPE DeviceType)
 					EnglishInitButton(hWin);
 				}
 			}
+			ReadyToSend();
+			gStatusSendEnd = STATUS_SEND_ING;
+			statusSendStep = 0;
+			nSendStep = 0;
+			(void)StatusSend();
 			WM_ShowWindow(hWin);
 		}
 		else

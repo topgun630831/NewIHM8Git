@@ -879,6 +879,7 @@ uint8_t ModbusControl(const uint8_t address, const int offset, const int pos, co
 	return CONTROL_OK;
 }
 
+extern bool bInControl;
 void ModbusFaultReset(const uint8_t address)
 {
 	uint8_t frame[MODBUS_FRAME_COUNT];
@@ -903,6 +904,9 @@ void ModbusFaultReset(const uint8_t address)
 	g_subFunction = 0;
 	g_wModbusWaitLen = MODBUS_FRAME_COUNT;
 	MasterModbusBufferPut(frame, INDEX_8, OWNER_MASTER);
+	ModbusRecvCheck();
+	bInControl = false;
+
 }
 
 void ModbusSetTime(const uint8_t address, const S_DATE_TIME *dateTime)

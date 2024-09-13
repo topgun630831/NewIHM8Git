@@ -727,7 +727,6 @@ void MLinkControl(void)
 	{
 		MLinkControlValueDisp(nPointPos);
 	}
-	ReadyToSend();
 	(void)StatusSend();
 	while (1)
     {

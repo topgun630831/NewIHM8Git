@@ -549,7 +549,6 @@ void StuMccbIo(void)
 	bUpdateFirst = TRUE;
 	AcbMccbControlDisp();
 
-	ReadyToSend();
 	gStatusSendEnd = STATUS_SEND_END;
 	statusSendStep = 0;
 	nSendStep = 0;
@@ -1092,7 +1091,6 @@ static void TrioIo(void)
 	int pos = 0;
 	bUpdateFirst = TRUE;
 	TrioIoDisp(pos);
-	ReadyToSend();
 	gStatusSendEnd = STATUS_SEND_END;
 	statusSendStep = 0;
 	nSendStep = 0;
@@ -1533,7 +1531,6 @@ void TrioTemp(void)
 	int flagBreak = FALSE;
 	bUpdateFirst = TRUE;
 	TrioTempDisp();
-	ReadyToSend();
 	gStatusSendEnd = STATUS_SEND_END;
 	statusSendStep = 0;
 	nSendStep = 0;
@@ -1653,7 +1650,6 @@ void AcbMccbControl(void)
 	GUI_ClearRect(X0_MAIN, Y0_MAIN, X1_MAIN, Y1_MAIN);
 	InfoMenu(CONTROL_MENU, nMenuPos, nMenuCount);
 
-	ReadyToSend();
 //	gStatusSendEnd = STATUS_SEND_ING;
 //	g_bRecvAllDone = FALSE;
 	StatusSend();
@@ -1720,6 +1716,7 @@ void AcbMccbControl(void)
 		else
 		if(key == KEY_ENTER)
 		{
+			ReadyToSend();
 			if(nMenuPos == INDEX_0)
 			{
 				StuMccbIo();
