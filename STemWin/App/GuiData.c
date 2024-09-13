@@ -211,7 +211,7 @@ uint16_t SettingValue[SETUP_COUNT] = {
 	0,		// Speed
 	1,		// Device count
 	100,	// Brightness
-	0,		// Saving Mode
+	120,	// Saving Mode
 	0,		// Screen Switching
 	0,		// Return to Screen
 	0,		// Language
@@ -226,7 +226,7 @@ uint16_t DefaultSettingValue[SETUP_COUNT] = {
 	0,		// Speed
 	1,		// Device count
 	100,	// Brightness
-	0,		// Saving Mode
+	120,	// Saving Mode
 	0,		// Screen Switching
 	0,		// Return to Screen
 	0,		// Language

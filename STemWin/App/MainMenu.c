@@ -1825,6 +1825,7 @@ void MasterModbusProcess(bool bInChecking)
 	if(error != HAL_UART_ERROR_NONE)
 		printf("\n\n\n\n Error!!!(stat:%d, error:%d\n\n\n\n", stat, error);
 }
+uint32_t slaveTick;
 
 extern S_DATE_TIME changeDateTime;
 static uint8_t SlaveModbusCRCCheck(void)
@@ -1873,6 +1874,7 @@ static uint8_t SlaveModbusCRCCheck(void)
 		else
 		{
 			MasterModbusBufferPut(g_modbusSlaveRxBuff, g_modbusSlaveRxIndex, OWNER_SLAVE);
+			slaveTick = HAL_GetTick();
 			g_modbusSlaveRxIndex = 0;
 			bInControl = false;
 			if((g_modbusSlaveRxBuff[INDEX_1] == MODBUS_EXTEND_FUNCTION) && (g_modbusSlaveRxBuff[INDEX_2] == MODBUS_SUBFUCTION_SETTIME))
@@ -1926,17 +1928,16 @@ void SlaveModbusProcess(void)
 			g_modbusSlaveRxIndex += remainder;
 		}
 		slave_last_recv = HAL_GetTick();
-//		if(gDebug)
+		if(gDebug == true)
+		{
 			printf("(%d)g_modbusSlaveRxIndex : %d\n", slave_last_recv, g_modbusSlaveRxIndex);
-//			if(gDebug == true)
+			(void)printf("Slave Read!!!(%u) g_modbusSlaveRxIndex:%d\n", slave_last_recv, g_modbusSlaveRxIndex);
+			for(int i = 0; i < g_modbusSlaveRxIndex; i++)
 			{
-				(void)printf("Slave Read!!!(%u) g_modbusSlaveRxIndex:%d\n", slave_last_recv, g_modbusSlaveRxIndex);
-				for(int i = 0; i < g_modbusSlaveRxIndex; i++)
-				{
-					  (void)printf("%02X ", g_modbusSlaveRxBuff[i]);
-				}
-				(void)printf("\n");
+				  (void)printf("%02X ", g_modbusSlaveRxBuff[i]);
 			}
+			(void)printf("\n");
+		}
 
 		if(((g_modbusSlaveRxBuff[INDEX_1] == MODBUS_EXTEND_FUNCTION) && (g_modbusSlaveRxBuff[INDEX_2] == MODBUS_SUBFUCTION_SETTIME)) &&
 				g_modbusSlaveRxIndex == INDEX_14)
@@ -2044,8 +2045,7 @@ E_KEY GetKey(void)
 		{
 			if((SettingValue[SETUP_RETURN_TO_SCREEN] != 0) && (timer >= gReturnToScreen))
 			{
-				if(gbSavingMode == FALSE)
-					return KEY_CANCEL;
+				return KEY_CANCEL;
 			}
 		}
 		for(E_KEY i = KEY_SETUP; i < KEY_MAX; i++)
@@ -2148,8 +2148,8 @@ E_KEY GetKey(void)
 
 		if(SlaveSendLength != 0)
 		{
-			if(gDebug)
-				printf("SlaveModbusSend(%d)\n", HAL_GetTick());
+//			if(gDebug)
+				printf("SlaveModbusSend(%d : %d)\n", HAL_GetTick(), HAL_GetTick() - slaveTick);
 			SlaveModbusSend();
 		}
 		if (g_modbusRxDone)
@@ -2281,11 +2281,6 @@ uint8_t ReadyToSend(void)
 		return TIME_OUT;			// 수신중이 아님
 	}
 
-//	if(MasterSendLength[g_sendOwner] != 0)
-//	{
-//		g_sendOwner = OWNER_MASTER;
-//		MasterModbusSend(g_sendOwner);
-//	}
 	last_recv = tick;
 
 	while (1)

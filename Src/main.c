@@ -454,9 +454,6 @@ int main(void)
 	static OS_STACKPTR int StackEmWin[EMWIN_STACK_SIZE];
 	static OS_TASK         TCBEMWIN;         /* Task-control-blocks */
 
-//	static OS_STACKPTR int StackReceive[RECV_TASK_STACK_SIZE];
-//	static OS_TASK         TCBRECEIVE;         /* Task-control-blocks */
-
 	/* USER CODE BEGIN 1 */
 	OS_HAL_Init();
 	OS_Sysclock_Config();
@@ -480,7 +477,7 @@ int main(void)
 	MX_TIM4_Init();
 	MX_SPI3_Init();
 
-	gDebug = true;
+	gDebug = false;
 
 	HAL_UART_Receive_IT(&huart6, &rx6_data, 1);
 

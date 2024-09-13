@@ -620,6 +620,7 @@ static void FaultReset(void)
 		else
 		if(key == KEY_ENTER)
 		{
+
 			SetupKeyCount = 0;
 			if(nPos < CONTROL_PASSWORD_DIGIT)
 			{
@@ -752,7 +753,12 @@ void AcbMccbEvent(void)
 		{
 			if(nMenuPos == INDEX_2)
 			{
-				FaultReset();
+				if(QuestionMessageNoPassword(_aFaultReset_confirm_text[SettingValue[SETUP_LANGUAGE]]) == TRUE)
+				{
+//					FaultReset();
+					ReadyToSend();
+					ModbusFaultReset(ConnectSetting[gDeviceIndex].Address);		// faultReset ½ÇÇà
+				}
 				DispStatus();
 				gCommOldStatus[gDeviceIndex] = -1;
 				CommTimerInit();
@@ -771,7 +777,6 @@ void AcbMccbEvent(void)
 		else
 		if(key == DATA_RECV)
 		{
-			(void)printf("DATA_RECV\n");
 			StatusRecv();
 			if(gStatusSendEnd == STATUS_SEND_ING)
 			{
@@ -780,7 +785,6 @@ void AcbMccbEvent(void)
 			else
 			{
 				g_bRecvAllDone = TRUE;
-				(void)printf("All done!!!\n");
 				nSendStep = 0;
 				statusSendStep = 0;
 				gStatusSendEnd = STATUS_SEND_ING;
