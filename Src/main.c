@@ -109,6 +109,7 @@ IWDG_HandleTypeDef hiwdg;
 /*Variable used for Erase procedure*/
 static FLASH_EraseInitTypeDef EraseInitStruct;
 
+bool gDisplay;
 #if __WATCHDOG__
 static void MX_IWDG_Init(void);
 #define RELOAD_TIME				10000		//1000;	// 5sec // 32khz /32 = 1khz = 1000hz = 1sec
@@ -245,9 +246,16 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 			gDebug = true;
 			printf("\n\ngDebug : %d\n", gDebug);
 		}
+		else
+		if(rx6_data == '2')
+		{
+			gDisplay = true;
+			printf("\n\ngDisplay : %d\n", gDisplay);
+		}
 		else if(rx6_data == '0')
 		{
 			gDebug = false;
+			gDisplay = false;
 			printf("\n\ngDebug : %d\n", gDebug);
 		}
 		else if(rx6_data == '3')

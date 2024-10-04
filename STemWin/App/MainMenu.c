@@ -50,6 +50,9 @@ uint8_t KeyChanged[KEY_MAX];
 
 extern UART_HandleTypeDef huart6;
 
+extern bool gDisplay;
+
+
 /*********************************************************************
 *
 *       Defines
@@ -2148,7 +2151,7 @@ E_KEY GetKey(void)
 
 		if(SlaveSendLength != 0)
 		{
-//			if(gDebug)
+			if(gDisplay)
 				printf("SlaveModbusSend(%d : %d)\n", HAL_GetTick(), HAL_GetTick() - slaveTick);
 			SlaveModbusSend();
 		}
