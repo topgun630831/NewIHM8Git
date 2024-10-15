@@ -666,7 +666,7 @@ EXTERN uint8_t frame[INDEX_14];
 //#define	TIMER_DIFF						500
 #define	TIMER_DIFF						1000
 #define	TIMER_DIFF_10SEC				10000
-#define TX_WAIT_TIME					30
+#define TX_WAIT_TIME					50
 
 //main.c
 #define	UART_TIMEOUT					0xFFFF

@@ -1553,7 +1553,7 @@ void TrioTemp(void)
 			{
 				flagBreak = TRUE;
 			}
-			AcbMccbControlDisp();
+			TrioTempDisp();
 			gCommOldStatus[gDeviceIndex] = -1;
 			TrioTempSend();
 		}

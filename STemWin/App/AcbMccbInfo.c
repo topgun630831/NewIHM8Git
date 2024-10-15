@@ -49,6 +49,7 @@
 
 #define RELAY_STATUS_PAGE_MAX			7
 #define RELAY_STATUS_COUNT				8
+#define MCCB_RELAY_STATUS_PAGE_MAX		2
 
 #define RELAY_STATUS_READ_ADDR			211
 #define RELAY_STATUS_READ_LEN			4
@@ -79,7 +80,7 @@ static void RelayStatus(void);
 *
 **********************************************************************
 */
-char const* _acacbmccb_relay_status_text[RELAY_STATUS_PAGE_MAX][RELAY_STATUS_COUNT] = {
+char const* _acacb_relay_status_text[RELAY_STATUS_PAGE_MAX][RELAY_STATUS_COUNT] = {
 	{
 		"Pre Alarm",
 		"L A",
@@ -295,6 +296,75 @@ static int const relay_status_bit[RELAY_STATUS_PAGE_MAX][RELAY_STATUS_COUNT] = {
 		13,
 		14,
 		14
+	}
+};
+
+char const* _acmccb_relay_status_text[MCCB_RELAY_STATUS_PAGE_MAX][RELAY_STATUS_COUNT] = {
+	{
+		"Pre Alarm",
+		"L A",
+		"L B",
+		"L C",
+		"L N",
+		"S1 A",
+		"S1 B",
+		"S1 C"
+	},
+	{
+		"I A",
+		"I B",
+		"I C",
+		"G",
+		"",
+		"",
+		"",
+		""
+	}
+};
+
+static int const mccb_relay_status_register[MCCB_RELAY_STATUS_PAGE_MAX][RELAY_STATUS_COUNT] = {
+	{					// page 1
+		211,
+		211,
+		211,
+		211,
+		211,
+		211,
+		211,
+		211
+	},
+	{					// page 2
+		212,
+		212,
+		212,
+		212,
+		212,
+		212,
+		212,
+		212
+	}
+};
+
+static int const mccb_relay_status_bit[MCCB_RELAY_STATUS_PAGE_MAX][RELAY_STATUS_COUNT] = {
+	{					// page 1
+		0,
+		5,
+		6,
+		7,
+		8,
+		9,
+		10,
+		11
+	},
+	{					// page 2
+		0,
+		1,
+		2,
+		3,
+		4,
+		5,
+		6,
+		7
 	}
 };
 
@@ -668,13 +738,28 @@ static void RelayStatusValueDisp(int nPage)
 	int row_cnt = INDEX_4;
 	if(nPage == 1)
 	{
-		row_cnt = INDEX_3;
-		cnt = INDEX_6;
+		if(ConnectSetting[gDeviceIndex].DeviceType == DEVICE_MCCB)
+		{
+			row_cnt = INDEX_2;
+			cnt = INDEX_4;
+		}
+		else
+		{
+			row_cnt = INDEX_3;
+			cnt = INDEX_6;
+		}
 	}
 
 	for(int i = 0; i < cnt; i++)
 	{
-		status[i] = ModbusGetBit(relay_status_register[nPage][i], relay_status_bit[nPage][i]);
+		if(ConnectSetting[gDeviceIndex].DeviceType == DEVICE_MCCB)
+		{
+			status[i] = ModbusGetBit(mccb_relay_status_register[nPage][i], mccb_relay_status_bit[nPage][i]);
+		}
+		else
+		{
+			status[i] = ModbusGetBit(relay_status_register[nPage][i], relay_status_bit[nPage][i]);
+		}
 	}
 	if(nPage == 0)
 	{
@@ -683,7 +768,7 @@ static void RelayStatusValueDisp(int nPage)
 		if(status1 == 0 && status2 == 0)
 			status[0] = 0;
 		else
-		if(status1 == 1 && status2 == 0)
+		if(status2 == 1 && status1 == 0)
 			status[0] = 1;
 		else
 			status[0] = 2;
@@ -727,12 +812,22 @@ static void RelayStatusSend(void)
 	{
 		return;
 	}
-	ModbusSendFrame(ConnectSetting[gDeviceIndex].Address, INPUT_REGISTER, RELAY_STATUS_READ_ADDR, RELAY_STATUS_READ_LEN);
+	uint16_t len = RELAY_STATUS_READ_LEN;
+	if(ConnectSetting[gDeviceIndex].DeviceType == DEVICE_MCCB)
+	{
+		len = INDEX_2;
+	}
+
+	ModbusSendFrame(ConnectSetting[gDeviceIndex].Address, INPUT_REGISTER, RELAY_STATUS_READ_ADDR, len);
 }
 
 
 static void RelayStatusDisp(int nPage)
 {
+	int page_max = RELAY_STATUS_PAGE_MAX;
+	if(ConnectSetting[gDeviceIndex].DeviceType == DEVICE_MCCB)
+		page_max = MCCB_RELAY_STATUS_PAGE_MAX;
+
 	GUI_SetBkColor(COLOR_MAIN_BG);
 	GUI_ClearRect(X0_MAIN, Y0_MAIN, X1_MAIN, Y1_MAIN);
 	(void)GUI_SetFont(&GUI_Font20_ASCII);
@@ -750,10 +845,20 @@ static void RelayStatusDisp(int nPage)
 	rect.x1 = RELAY_STATUS_PAGE_TEXT_X1;
 
 	int row_cnt = INDEX_4;
-	if(nPage == 1)
-		row_cnt = INDEX_3;
+
+	if(ConnectSetting[gDeviceIndex].DeviceType == DEVICE_MCCB)
+	{
+		if(nPage == 1)
+			row_cnt = INDEX_2;
+	}
+	else
+	{
+		if(nPage == 1)
+			row_cnt = INDEX_3;
+	}
+
 	char buf[INDEX_10];
-	sprintf(buf, "%d/%d", nPage+1, RELAY_STATUS_PAGE_MAX);
+	sprintf(buf, "%d/%d", nPage+1, page_max);
 	GUI_DispStringInRect(buf, &rect, (GUI_TA_RIGHT | GUI_TA_VCENTER));
 
 	GUI_SetColor(COLOR_LINE);
@@ -761,7 +866,7 @@ static void RelayStatusDisp(int nPage)
 	rect.y0 = RELAY_STATUS_LINE_Y;
 	rect.x1 = RELAY_STATUS_LINE_X + (INDEX_2 * RELAY_STATUS_LINE_X_INC);
 	(void)GUI_SetPenSize(PENSIZE_LINE);
-	for(int i = 0; i < row_cnt+1; i++)
+	for(int i = 0; i <= row_cnt; i++)
 	{
 		GUI_DrawHLine(rect.y0, rect.x0, rect.x1);
 		rect.y0 += RELAY_STATUS_LINE_Y_INC;
@@ -771,7 +876,7 @@ static void RelayStatusDisp(int nPage)
 	rect.y0 = RELAY_STATUS_LINE_Y;
 	rect.y1 = RELAY_STATUS_LINE_Y + ((row_cnt) * RELAY_STATUS_LINE_Y_INC);
 	(void)GUI_SetPenSize(PENSIZE_LINE);
-	for(int i = 0; i < row_cnt+1; i++)
+	for(int i = 0; i <= row_cnt; i++)
 	{
 		GUI_DrawVLine(rect.x0, rect.y0, rect.y1);
 		rect.x0 += RELAY_STATUS_LINE_X_INC;
@@ -788,7 +893,14 @@ static void RelayStatusDisp(int nPage)
 		rect.x1 = RELAY_STATUS_LABEL_X1;
 		for(int j = 0 ; j < INDEX_2; j++)
 		{
-			GUI_DispStringInRect(_acacbmccb_relay_status_text[nPage][pos], &rect, (GUI_TA_LEFT | GUI_TA_VCENTER));
+			if(ConnectSetting[gDeviceIndex].DeviceType == DEVICE_MCCB)
+			{
+				GUI_DispStringInRect(_acmccb_relay_status_text[nPage][pos], &rect, (GUI_TA_LEFT | GUI_TA_VCENTER));
+			}
+			else
+			{
+				GUI_DispStringInRect(_acacb_relay_status_text[nPage][pos], &rect, (GUI_TA_LEFT | GUI_TA_VCENTER));
+			}
 			rect.x0 += RELAY_STATUS_LINE_X_INC;
 			rect.x1 += RELAY_STATUS_LINE_X_INC;
 			pos++;
@@ -825,6 +937,9 @@ void RelayStatus(void)
 	nSendStep = 0;
 	RelayStatusSend();
 	int bCommError = gCommStatus[gDeviceIndex];
+	int page_max = RELAY_STATUS_PAGE_MAX;
+	if(ConnectSetting[gDeviceIndex].DeviceType == DEVICE_MCCB)
+		page_max = MCCB_RELAY_STATUS_PAGE_MAX;
 
 	while (1)
     {
@@ -856,14 +971,14 @@ void RelayStatus(void)
 			}
 			else
 			{
-				nPage = RELAY_STATUS_PAGE_MAX - 1;
+				nPage = page_max - 1;
 			}
 			RelayStatusDisp(nPage);
 		}
 		else
 		if(key == KEY_DOWN)
 		{
-			if(nPage < (RELAY_STATUS_PAGE_MAX-1))
+			if(nPage < (page_max-1))
 			{
 				nPage++;
 			}
@@ -876,7 +991,6 @@ void RelayStatus(void)
 		else
 		if(key == DATA_RECV)
 		{
-			(void)printf("DATA_RECV gStatusSendEnd=%d\n",gStatusSendEnd);
 			if(bCommError == COMM_ERROR)
 			{
 				bCommError = COMM_OK;
@@ -951,11 +1065,8 @@ void RelayStatus(void)
 void AcbMccbInfomation(void)
 {
 	int flagBreak = FALSE;
-	int nMenuCount = EVENT_MENU_COUNT;
+	int nMenuCount = INFO_MENU_COUNT;
 	nMenuPos = 0;
-
-	if(ConnectSetting[gDeviceIndex].DeviceType == DEVICE_MCCB)
-		nMenuCount--;
 
 	InfoMenu(INFO_MENU, nMenuPos, nMenuCount);
 

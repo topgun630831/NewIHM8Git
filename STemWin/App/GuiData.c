@@ -29,7 +29,7 @@ char const* _acinfo_value_text[LINECOUNT_CONTENTS] = {
 		"LSE",
 		"IHM8(5277 1172 570)",		// Product
 		"02.00.01",					// HW Version
-		"02.00.02",					// SW Version
+		"02.00.04",					// SW Version
 		"01.00.12",					// Comm. Version
 		"Normal"
 };
@@ -577,7 +577,7 @@ char const* _acinfo_menu_text[SETUP_LANGUAGE_MAX][MENU_COUNT][MENU_ITEM_COUNT] =
 		},
 		{
 			"System Event",
-			"Fault",
+			"Fault Event",
 			"Fault Reset"
 		},
 		{
@@ -616,7 +616,7 @@ char const* _acinfo_menu_text[SETUP_LANGUAGE_MAX][MENU_COUNT][MENU_ITEM_COUNT] =
 		},
 		{
 			"System Event",
-			"Fault",
+			"Fault Event",
 			"Fault Reset"
 		},
 		{

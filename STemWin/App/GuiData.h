@@ -425,6 +425,7 @@ extern S_CONNECT_SETTING ConnectSetting[DEVICE_MAX];
 #define INFO_MENU_HEIGHT				88
 #define INFO_MENU_X0					50
 #define INFO_MENU_COUNT					3
+#define MLINK_INFO_MENU_COUNT			2
 #define EVENT_MENU_COUNT				3
 #define SETTING_MENU_COUNT				3
 #define	INFO_VALUE_X0					((STARTX_CONTENTS + WIDTH_LABEL) + 50)

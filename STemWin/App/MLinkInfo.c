@@ -616,7 +616,7 @@ void MLinkInfomation(void)
 	int flagBreak = FALSE;
 	nMenuPos = 0;
 
-	InfoMenu(INFO_MENU, nMenuPos, INFO_MENU_COUNT);
+	InfoMenu(INFO_MENU, nMenuPos, MLINK_INFO_MENU_COUNT);
 
 	GUI_SetBkColor(COLOR_MAIN_BG);
 	(void)GUI_SetPenSize(PENSIZE_LINE);
@@ -641,7 +641,7 @@ void MLinkInfomation(void)
 			{
 				flagBreak = TRUE;
 			}
-			InfoMenu(INFO_MENU, nMenuPos, INFO_MENU_COUNT);
+			InfoMenu(INFO_MENU, nMenuPos, MLINK_INFO_MENU_COUNT);
 			gCommOldStatus[gDeviceIndex] = -1;
 		}
 		else
@@ -650,16 +650,16 @@ void MLinkInfomation(void)
 			if(nMenuPos > 0)
 			{
 				nMenuPos--;
-				InfoMenu(INFO_MENU, nMenuPos, INFO_MENU_COUNT);
+				InfoMenu(INFO_MENU, nMenuPos, MLINK_INFO_MENU_COUNT);
 			}
 		}
 		else
 		if(key == KEY_DOWN)
 		{
-			if(nMenuPos < (INFO_MENU_COUNT-1))
+			if(nMenuPos < (MLINK_INFO_MENU_COUNT-1))
 			{
 				nMenuPos++;
-				InfoMenu(INFO_MENU, nMenuPos, INFO_MENU_COUNT);
+				InfoMenu(INFO_MENU, nMenuPos, MLINK_INFO_MENU_COUNT);
 			}
 		}
 		else
@@ -675,7 +675,7 @@ void MLinkInfomation(void)
 				OperationDisp();
 			}
 			else {}
-			InfoMenu(INFO_MENU, nMenuPos, INFO_MENU_COUNT);
+			InfoMenu(INFO_MENU, nMenuPos, MLINK_INFO_MENU_COUNT);
 		}
 		else
 		if(key == DATA_RECV)
