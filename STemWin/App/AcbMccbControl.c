@@ -1393,12 +1393,12 @@ static void TrioTempValueDisp(void)
 	int y1 = TRIO_TEMP_BAR_Y1;
 	for(int i = 0; i < TRIO_TEMP_MAX; i++)
 	{
-		if(aiValue[i] >= VALUE150)
+		if(aiValue[i] >= (TrioTempAlarm[gDeviceIndex]*1.05))
 		{
 			GUI_SetColor(_BarColor[INDEX_0]);
 		}
 		else
-		if(aiValue[i] >= VALUE100)
+		if(aiValue[i] >= (TrioTempAlarm[gDeviceIndex]*0.9))
 		{
 			GUI_SetColor(_BarColor[INDEX_1]);
 		}

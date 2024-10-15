@@ -338,6 +338,7 @@ EXTERN uint32_t uart1LastNDTR;
 EXTERN uint32_t uart2LastNDTR;
 
 EXTERN uint8_t nTrio[DEVICE_MAX];
+EXTERN float TrioTempAlarm[DEVICE_MAX];
 
 EXTERN uint8_t frame[INDEX_14];
 

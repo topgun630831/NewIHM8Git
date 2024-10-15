@@ -657,6 +657,33 @@ WM_HWIN CreateMenu(E_DEVICE_TYPE DeviceType)
 				nTrio[gDeviceIndex] = (ModbusGetUint16(I_REGISTER_183) >> CB_TRIO_SHIFT) & CB_TRIO_MASK;	// TRIO °á¼± 000b: TRIO Only 001b: TRIO+ACB_OCR 010b: TRIO+MCCB 111b: ACB OCR Only
 				g_bRecvAllDone = TRUE;
 				//(void)printf("g_bRecvAllDone=0\n");
+				uint8_t temp1 = ModbusGetBit(I_REGISTER_183, 4);
+				uint8_t temp2 = ModbusGetBit(I_REGISTER_183, 5);
+
+				float alarm = 0;
+				if(temp1 == 1)
+					alarm = 1;
+				if(temp2 == 1)
+					alarm += 2;
+				if(alarm == 1)
+				{
+					TrioTempAlarm[gDeviceIndex] = 120;
+				}
+				else
+				if(alarm == 2)
+				{
+					TrioTempAlarm[gDeviceIndex] = 135;
+				}
+				else
+				if(alarm == 3)
+				{
+					TrioTempAlarm[gDeviceIndex] = 150;
+				}
+				else
+				{
+					TrioTempAlarm[gDeviceIndex] = 105;
+				}
+				printf("TrioTempAlarm = %f\n", TrioTempAlarm[gDeviceIndex]);
 			}
 		}
 		else
