@@ -768,7 +768,7 @@ static void RelayStatusValueDisp(int nPage)
 		if(status1 == 0 && status2 == 0)
 			status[0] = 0;
 		else
-		if(status2 == 1 && status1 == 0)
+		if(status2 == 0 && status1 == 1)
 			status[0] = 1;
 		else
 			status[0] = 2;

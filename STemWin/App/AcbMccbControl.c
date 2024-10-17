@@ -1358,6 +1358,36 @@ static void TrioTempValueDisp(void)
 	{
 		return;
 	}
+
+	uint8_t temp1 = ModbusGetBit(I_REGISTER_183, 4);
+	uint8_t temp2 = ModbusGetBit(I_REGISTER_183, 5);
+
+	float TrioTempAlarm;
+	float alarm = 0;
+	if(temp1 == 1)
+		alarm = 1;
+	if(temp2 == 1)
+		alarm += 2;
+	if(alarm == 1)
+	{
+		TrioTempAlarm = 120;
+	}
+	else
+	if(alarm == 2)
+	{
+		TrioTempAlarm = 135;
+	}
+	else
+	if(alarm == 3)
+	{
+		TrioTempAlarm = 150;
+	}
+	else
+	{
+		TrioTempAlarm = 105;
+	}
+//	printf("TrioTempAlarm = %f\n", TrioTempAlarm);
+
 	int index =  I_REGISTER_186;
 	GUI_SetBkColor(COLOR_MAIN_BG);
 	(void)GUI_SetFont(&GUI_Font32B_ASCII);
@@ -1367,18 +1397,21 @@ static void TrioTempValueDisp(void)
 	rect.x1 = TRIO_TEMP_VALUE_X1;
 	rect.y0 = TRIO_TEMP_VALUE_Y0;
 	rect.y1 = TRIO_TEMP_VALUE_Y1;
-
-/*	aiValue[0] = 59.9;
-	aiValue[1] = 99.999;
-	aiValue[2] = 100.1;
-	aiValue[3] = 150;
-*/
 	for(int i = 0; i < TRIO_TEMP_MAX; i++)
 	{
 		char buf[20];
 		aiValue[i] =  ModbusGetFloat(index);
 		GUI_ClearRect(rect.x0, rect.y0, rect.x1, rect.y1);
-		sprintf(buf, "%3d",(int)aiValue[i]);
+		int value;
+		if(aiValue[i] > 0)
+		{
+			value = (int)(aiValue[i] + 0.5);
+		}
+		else
+		{
+			value = (int)(aiValue[i]);
+		}
+		sprintf(buf, "%3d",value);
 		GUI_DispStringInRect(buf, &rect, (GUI_TA_RIGHT | GUI_TA_VCENTER));
 		rect.y0 += TRIO_TEMP_LABEL_DISTANCE;
 		rect.y1 += TRIO_TEMP_LABEL_DISTANCE;
@@ -1387,18 +1420,18 @@ static void TrioTempValueDisp(void)
 			barGraph[i] = 0;
 		else
 			barGraph[i] = (int)(aiValue[i] / INDEX_10) + 1;
-// printf("i=%d, barGraph[i]=%d, value=%f\n",i, barGraph[i], aiValue[i]);
+ // printf("i=%d, barGraph[i]=%d, value=%f\n",i, barGraph[i], aiValue[i]);
 	}
 	int y0 = TRIO_TEMP_BAR_Y0;
 	int y1 = TRIO_TEMP_BAR_Y1;
 	for(int i = 0; i < TRIO_TEMP_MAX; i++)
 	{
-		if(aiValue[i] >= (TrioTempAlarm[gDeviceIndex]*1.05))
+		if(aiValue[i] >= (TrioTempAlarm * 1.05))
 		{
 			GUI_SetColor(_BarColor[INDEX_0]);
 		}
 		else
-		if(aiValue[i] >= (TrioTempAlarm[gDeviceIndex]*0.9))
+		if(aiValue[i] >= (TrioTempAlarm * 0.9))
 		{
 			GUI_SetColor(_BarColor[INDEX_1]);
 		}
@@ -1434,7 +1467,7 @@ static void TrioTempSend(void)
 	{
 		return;
 	}
-	ModbusSendFrame(ConnectSetting[gDeviceIndex].Address, INPUT_REGISTER, I_REGISTER_186, INDEX_8);	// 30186~ 30193
+	ModbusSendFrame(ConnectSetting[gDeviceIndex].Address, INPUT_REGISTER, I_REGISTER_183, INDEX_11);	// 30186~ 30193
 }
 
 
@@ -1573,6 +1606,7 @@ void TrioTemp(void)
 			}
 			else
 			{
+				printf("DATA_RECV\n");
 				TrioTempValueDisp();
 				g_bRecvAllDone = TRUE;
 				nSendStep = 0;
