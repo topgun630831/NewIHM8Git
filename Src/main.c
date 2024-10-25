@@ -1450,7 +1450,7 @@ void FaultCountWrite(void)
 	to protect the FLASH memory against possible unwanted operation) *********/
 	(void)HAL_FLASH_Lock();
 }
-
+#define RTC_RETRY	3000
 static void rtc_Transmit(uint8_t *pData, uint16_t Size)
 {
 	uint8_t error;
@@ -1462,7 +1462,7 @@ static void rtc_Transmit(uint8_t *pData, uint16_t Size)
 		{
 			break;
 		}
-		if(++count > INDEX_400)
+		if(++count > 2000)
 		{
 			printf("rtc_Transmit error!!!\n");
 			break;
