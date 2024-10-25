@@ -29,7 +29,7 @@ char const* _acinfo_value_text[LINECOUNT_CONTENTS] = {
 		"LSE",
 		"IHM8(5277 1172 570)",		// Product
 		"02.00.01",					// HW Version
-		"02.00.06",					// SW Version
+		"02.00.08",					// SW Version
 		"01.00.12",					// Comm. Version
 		"Normal"
 };
@@ -238,7 +238,7 @@ uint16_t DefaultSettingValue[SETUP_COUNT] = {
 };
 
 S_CONNECT_SETTING ConnectSetting[DEVICE_MAX] = {
-	{DEVICE_MLINK, 1 },
+	{DEVICE_ACB, 1 },
 	{DEVICE_NO, 2 },
 	{DEVICE_NO, 3 },
 	{DEVICE_NO, 4 },

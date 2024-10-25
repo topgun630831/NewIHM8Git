@@ -978,7 +978,7 @@ extern const uint8_t auchCRCLo[];
 void EventSend(int bEvent);
 void EventDataRecv(void);
 void PCF2127_readTime(uint8_t flag);
-uint16_t PCF2127_set_time();
+void PCF2127_set_time();
 uint16_t RTCBatteryStatus(void);
 void SystemClock_Config(void);
 void BSP_Background(void);

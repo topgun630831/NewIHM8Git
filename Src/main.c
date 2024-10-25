@@ -81,8 +81,9 @@ static void OS_HAL_Init(void);
 static void OS_Sysclock_Config(void);
 static void Board_Init(void);
 static uint32_t GetSector(uint32_t Address);
-static uint16_t PCF2129_set_register( uint8_t addr, uint8_t data );
-static uint16_t PCF2129_read_register( uint8_t addr );
+static void rtc_Transmit(uint8_t *pData, uint16_t Size);
+static void PCF2129_set_register( uint8_t addr, uint8_t data );
+static uint8_t PCF2129_read_register( uint8_t addr );
 static uint8_t i2bcd( uint8_t n );
 static uint8_t bcd2i( uint8_t bcd );
 
@@ -1450,22 +1451,44 @@ void FaultCountWrite(void)
 	(void)HAL_FLASH_Lock();
 }
 
-static uint16_t PCF2129_set_register( uint8_t addr, uint8_t data )
+static void rtc_Transmit(uint8_t *pData, uint16_t Size)
+{
+	uint8_t error;
+	int count = 0;
+	while(1)
+	{
+		error = HAL_I2C_Master_Transmit(&hi2c2, PCF2127_I2C_SLAVE_ADDRESS, pData, Size, PCF2129_TIMEOUT);
+		if(error == 0)
+		{
+			break;
+		}
+		if(++count > INDEX_400)
+		{
+			printf("rtc_Transmit error!!!\n");
+			break;
+		}
+	}
+	if(count > 0)
+		printf("rtc_Transmit Count(%d)\n", count);
+}
+
+
+static void PCF2129_set_register( uint8_t addr, uint8_t data )
 {
     uint8_t    b[ INDEX_2 ];
 
     b[ 0 ]    = addr;
     b[ 1 ]    = data;
 
-	return (HAL_I2C_Master_Transmit(&hi2c2, PCF2127_I2C_SLAVE_ADDRESS, b, sizeof(b), PCF2129_TIMEOUT));
+	rtc_Transmit(b, sizeof(b));
 }
 
-static uint16_t PCF2129_read_register( uint8_t addr )
+static uint8_t PCF2129_read_register( uint8_t addr )
 {
     uint8_t    data;
 
     data    = addr;
-	(void)HAL_I2C_Master_Transmit(&hi2c2, PCF2127_I2C_SLAVE_ADDRESS, &data, 1, PCF2129_TIMEOUT);
+	rtc_Transmit(&data, 1);
     (void)HAL_I2C_Master_Receive(&hi2c2, PCF2127_I2C_SLAVE_ADDRESS, &data, 1, PCF2129_TIMEOUT);
 
     return ( data );
@@ -1481,26 +1504,24 @@ static uint8_t bcd2i( uint8_t bcd )
     return ( ((bcd >> INDEX_4) * INDEX_10) + (bcd & BCD_MASK) );
 }
 
-uint16_t PCF2127_set_time(void)
+void PCF2127_set_time(void)
 {
     uint8_t        data[INDEX_10];
-    uint8_t        err;
 
 	/* Write access to time registers:
 	 * PCF2127/29: no special action required.
 	 * PCF2131:    requires setting the STOP and CPR bits. STOP bit needs to
 	 *             be cleared after time registers are updated.
 	 */
-	if(PCF2131)
-	{
+#ifdef PCF2131
 	  data[ INDEX_0 ]   = Control_1; //  access start register address
 	  data[ INDEX_1 ]   = 0x23;
-	  err = HAL_I2C_Master_Transmit(&hi2c2, PCF2127_I2C_SLAVE_ADDRESS, data, INDEX_2, PCF2129_TIMEOUT);
+	  rtc_Transmit(data, INDEX_2);
 
 	  data[ INDEX_0 ]   = 0x05; //  access start register address
 	  data[ INDEX_1 ]   = 0xa4;
-	  err = HAL_I2C_Master_Transmit(&hi2c2, PCF2127_I2C_SLAVE_ADDRESS, data, INDEX_2, PCF2129_TIMEOUT);
-	}
+	  rtc_Transmit(data, INDEX_2);
+#endif
 	data[0]    = Seconds;
 
     data[ INDEX_1 ]    = i2bcd(changeDateTime.Sec);
@@ -1511,40 +1532,60 @@ uint16_t PCF2127_set_time(void)
     data[ INDEX_6 ]    = i2bcd(changeDateTime.Month);
     data[ INDEX_7 ]    = i2bcd(changeDateTime.Year-YEAR_BASE);
 
-	// printf("RTC Set time");
-	// for(int i = 0; i < 8; i++)
-	// {
-		// printf("%02x ", data[i]);
-	// }
-	// printf("\n");
 
-	err = HAL_I2C_Master_Transmit(&hi2c2, PCF2127_I2C_SLAVE_ADDRESS, data, INDEX_8, PCF2129_TIMEOUT);
+	rtc_Transmit(data, INDEX_8);
 
-	if(PCF2131)
-	{
+#ifdef PCF2131
 
-		data[ INDEX_0 ]   = Control_1; //  access start register address
-		data[ INDEX_1 ]   = Cntl1;
+	data[ INDEX_0 ]   = Control_1; //  access start register address
+	data[ INDEX_1 ]   = Cntl1;
 
-		err = HAL_I2C_Master_Transmit(&hi2c2, PCF2127_I2C_SLAVE_ADDRESS, data, INDEX_2, PCF2129_TIMEOUT);
-	}
-    return ( err ? I2C_ACCESS_FAIL : NO_ERROR );
+	rtc_Transmit(data, INDEX_2);
+#endif
+ //   return ( err ? I2C_ACCESS_FAIL : NO_ERROR );
 }
 
 static void Pcf2129AT_init(void)
 {
-	uint8_t		data[INDEX_4];
+	uint8_t		data[INDEX_4], err;
 
 //	OS_Delay(INDEX_50);
-	HAL_Delay(INDEX_50);
+
+	HAL_Delay(INDEX_400);
+
+
+    data[ 0 ]    = Control_1;  //  read start register address+
+
+	rtc_Transmit(data, 1);
+
+	err = HAL_I2C_Master_Receive(&hi2c2, PCF2127_I2C_SLAVE_ADDRESS, data, INDEX_3, PCF2129_TIMEOUT);
+	printf("  HAL_I2C_Master_Receive = %d\n", err);
+
+	for(int i = 0; i < 3; i++)
+	{
+		printf("[%02X]", data[i]);
+	}
+	printf("\n");
 
     data[ INDEX_0 ]   = Control_1; //  access start register address
     data[ INDEX_1 ]   = Cntl1;
     data[ INDEX_2 ]   = Cntl2;
     data[ INDEX_3 ]   = Cntl3;
 
-	(void)HAL_I2C_Master_Transmit(&hi2c2, PCF2127_I2C_SLAVE_ADDRESS, data, sizeof(data), PCF2129_TIMEOUT);
-    (void)PCF2129_set_register( CLKOUT_ctl, ClkOut );
+	rtc_Transmit(data, sizeof(data));
+    PCF2129_set_register( CLKOUT_ctl, ClkOut );
+
+	rtc_Transmit(data, 1);
+
+	err = HAL_I2C_Master_Receive(&hi2c2, PCF2127_I2C_SLAVE_ADDRESS, data, INDEX_3, PCF2129_TIMEOUT);
+	printf("  HAL_I2C_Master_Receive = %d\n", err);
+
+	for(int i = 0; i < 3; i++)
+	{
+		printf("[%02X]", data[i]);
+	}
+	printf("\n");
+
 
 }
 
@@ -1558,7 +1599,7 @@ void PCF2127_readTime(uint8_t flag)
     buf[ 0 ]    = Seconds-1;  //  read start register address+
 
 	uint8_t err;
-	err = HAL_I2C_Master_Transmit(&hi2c2, PCF2127_I2C_SLAVE_ADDRESS, buf, 1, PCF2129_TIMEOUT);
+	rtc_Transmit(buf, 1);
 
 	err = HAL_I2C_Master_Receive(&hi2c2, PCF2127_I2C_SLAVE_ADDRESS, buf, INDEX_8, PCF2129_TIMEOUT);
 
@@ -1574,6 +1615,9 @@ void PCF2127_readTime(uint8_t flag)
 		gDateTime.Sec		= bcd2i(buf[INDEX_1]);
 		gDateTime.mSec	= bcd2i(buf[0]);
 	  }
+	  else
+		printf(" PCF2127_readTime error!!!\n");
+
 	}
 
 	if((gDateTime.Year > YEAR_MAX) ||
@@ -1593,7 +1637,7 @@ void PCF2127_readTime(uint8_t flag)
 		gDateTime.Min = changeDateTime.Min = 0;
 		gDateTime.Sec = changeDateTime.Sec = 0;
 		(void)PCF2127_set_time();
-		(void)printf("PCF2127_set_time....\n");
+		(void)printf("PCF2127_set_time!!!!!....\n");
 	}
 	if(gDebug)
 		(void)printf("%d/%d/%d %d:%d:%d.%d(%d)\n", gDateTime.Year, gDateTime.Month, gDateTime.Day, gDateTime.Hour, gDateTime.Min, gDateTime.Sec, gDateTime.mSec, HAL_GetTick());
@@ -1601,7 +1645,7 @@ void PCF2127_readTime(uint8_t flag)
 //PRQA S 1503 1
 uint16_t RTCBatteryStatus(void)
 {
-	uint16_t ret = PCF2129_read_register(Control_3);
+	uint16_t ret = (uint16_t)PCF2129_read_register(Control_3);
 	if(gDebug)
 		(void)printf("RTCBatteryStatus => %04X", ret);
 	return(ret & RTCBATTERYSTATUS_MASK);
