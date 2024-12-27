@@ -2074,6 +2074,7 @@ E_KEY GetKey(void)
 					BacklightBrghtness(SettingValue[SETUP_BRIGHTNESS], 0);
 					LCD_OnOff(1);
 					bContinue = TRUE;
+					last_recv = HAL_GetTick();
 					gbSavingMode = FALSE;
 				}
 				ScreenTimerInit();
