@@ -52,6 +52,7 @@ extern UART_HandleTypeDef huart6;
 
 extern bool gDisplay;
 
+static uint16_t gbSavingMode;
 
 /*********************************************************************
 *
@@ -646,6 +647,11 @@ static void Overview(bool newDisp)
 // PRQA S 1505 1
 uint16_t StatusSend(void)
 {
+	if(gbSavingMode == TRUE)
+	{
+		g_bRecvAllDone = TRUE;
+		return gStatusSendEnd;
+	}
 	if(gStatusSendEnd == STATUS_SEND_ING)
 	{
 		if(gbSetTime == true)
@@ -1189,7 +1195,6 @@ void OverviewSend(void)
 	}
 	else {}
 }
-static uint16_t gbSavingMode;
 
 static void ScreenTimerInit(void)
 {
@@ -1690,6 +1695,13 @@ void MasterModbusProcess(bool bInChecking)
 						gCommStatus[gDeviceIndex] = COMM_OK;
 						gCommErrorCount[gDeviceIndex] = 0;
 					}
+					else
+					if(g_sendOwner == OWNER_SLAVE)
+					{
+						SlaveSendLength = g_modbusRxIndex;
+						memcpy(SlaveTxBuffer, g_modbusRxBuff, SlaveSendLength);
+					}
+
 					if(gDebug)
 						(void)printf("Recv Done!!!!(%d)\n",HAL_GetTick());
 					sendFlag = 0;
@@ -1877,7 +1889,7 @@ static uint8_t SlaveModbusCRCCheck(void)
 		else
 		{
 			MasterModbusBufferPut(g_modbusSlaveRxBuff, g_modbusSlaveRxIndex, OWNER_SLAVE);
-			slaveTick = HAL_GetTick();
+			last_recv = slaveTick = HAL_GetTick();
 			g_modbusSlaveRxIndex = 0;
 			bInControl = false;
 			if((g_modbusSlaveRxBuff[INDEX_1] == MODBUS_EXTEND_FUNCTION) && (g_modbusSlaveRxBuff[INDEX_2] == MODBUS_SUBFUCTION_SETTIME))
@@ -1931,7 +1943,7 @@ void SlaveModbusProcess(void)
 			g_modbusSlaveRxIndex += remainder;
 		}
 		slave_last_recv = HAL_GetTick();
-		if(gDebug == true)
+		//if(gDebug == true)
 		{
 			printf("(%d)g_modbusSlaveRxIndex : %d\n", slave_last_recv, g_modbusSlaveRxIndex);
 			(void)printf("Slave Read!!!(%u) g_modbusSlaveRxIndex:%d\n", slave_last_recv, g_modbusSlaveRxIndex);
@@ -1963,7 +1975,7 @@ void SlaveModbusProcess(void)
 	{
 		if((slave_last_recv != 0) && ((HAL_GetTick() - slave_last_recv) > 2000))
 		{
-			printf("Slave Recv Wait Time Out!!!(%d,%d)\n", slave_last_recv, HAL_GetTick());
+			// printf("Slave Recv Wait Time Out!!!(%d,%d)\n", slave_last_recv, HAL_GetTick());
 			g_modbusSlaveRxIndex = 0;
 			slave_last_recv = HAL_GetTick();
 			uart1LastNDTR = uart1NewNDTR;
