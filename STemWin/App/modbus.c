@@ -18,6 +18,7 @@
 //PRQA S 1505 EOF
 
 uint8_t ModbusRecvCheck(void);
+extern bool gFrameDisplay;
 
 /**
 * @fn CRC16
@@ -238,7 +239,7 @@ void SlaveModbusSend(void)
 	g_modbusSlaveRxDone = 0;
 	g_modbusSlaveRxError = 0;
 
-	if(gDebug)
+	if(gDebug || gFrameDisplay)
 	{
 	  (void)printf("Master To Slave Send Frame!!!(%d)\n",HAL_GetTick());
 	  for(int i = 0; i < SlaveSendLength; i++)

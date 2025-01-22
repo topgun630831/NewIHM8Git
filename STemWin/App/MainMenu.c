@@ -51,6 +51,7 @@ uint8_t KeyChanged[KEY_MAX];
 extern UART_HandleTypeDef huart6;
 
 extern bool gDisplay;
+extern bool gFrameDisplay;
 
 static uint16_t gbSavingMode;
 
@@ -1850,15 +1851,15 @@ static uint8_t SlaveModbusCRCCheck(void)
 		g_modbusSlaveRxIndex = 0;
 		return MODBUS_CRC_ERROR;
 	}
-//	if(gDebug)
-//	{
-//		(void)printf("Slave Recv Frame!!!(%d)\n", HAL_GetTick());
-//		for(int i = 0; i < g_modbusSlaveRxIndex; i++)
-//		{
-//			(void)printf("%02X ", g_modbusSlaveRxBuff[i]);
-//		}
-//		(void)printf("\n");
-//	}
+	if(gDebug || gFrameDisplay)
+	{
+		(void)printf("Slave Recv Frame!!!(%d)\n", HAL_GetTick());
+		for(int i = 0; i < g_modbusSlaveRxIndex; i++)
+		{
+			(void)printf("%02X ", g_modbusSlaveRxBuff[i]);
+		}
+		(void)printf("\n");
+	}
 	bool exception = false;
 	if(g_modbusSlaveRxBuff[1] & MASK_80)
 	{
@@ -1943,16 +1944,6 @@ void SlaveModbusProcess(void)
 			g_modbusSlaveRxIndex += remainder;
 		}
 		slave_last_recv = HAL_GetTick();
-		//if(gDebug == true)
-		{
-			printf("(%d)g_modbusSlaveRxIndex : %d\n", slave_last_recv, g_modbusSlaveRxIndex);
-			(void)printf("Slave Read!!!(%u) g_modbusSlaveRxIndex:%d\n", slave_last_recv, g_modbusSlaveRxIndex);
-			for(int i = 0; i < g_modbusSlaveRxIndex; i++)
-			{
-				  (void)printf("%02X ", g_modbusSlaveRxBuff[i]);
-			}
-			(void)printf("\n");
-		}
 
 		if(((g_modbusSlaveRxBuff[INDEX_1] == MODBUS_EXTEND_FUNCTION) && (g_modbusSlaveRxBuff[INDEX_2] == MODBUS_SUBFUCTION_SETTIME)) &&
 				g_modbusSlaveRxIndex == INDEX_14)
@@ -1967,6 +1958,16 @@ void SlaveModbusProcess(void)
 
 			if(SlaveModbusCRCCheck() == MODBUS_OK)
 			{
+				if(gDebug == true || gFrameDisplay == true)
+				{
+					printf("(%d)g_modbusSlaveRxIndex : %d\n", slave_last_recv, g_modbusSlaveRxIndex);
+					(void)printf("Slave Read!!!(%u) g_modbusSlaveRxIndex:%d\n", slave_last_recv, g_modbusSlaveRxIndex);
+					for(int i = 0; i < g_modbusSlaveRxIndex; i++)
+					{
+						  (void)printf("%02X ", g_modbusSlaveRxBuff[i]);
+					}
+					(void)printf("\n");
+				}
 			}
 		}
 		uart1LastNDTR = uart1NewNDTR;
@@ -2074,7 +2075,10 @@ E_KEY GetKey(void)
 					BacklightBrghtness(SettingValue[SETUP_BRIGHTNESS], 0);
 					LCD_OnOff(1);
 					bContinue = TRUE;
-					last_recv = HAL_GetTick();
+					gStatusSendEnd = STATUS_SEND_ING;
+					statusSendStep = 0;
+					nSendStep = 0;
+					OverviewSend();
 					gbSavingMode = FALSE;
 				}
 				ScreenTimerInit();

@@ -111,6 +111,7 @@ IWDG_HandleTypeDef hiwdg;
 static FLASH_EraseInitTypeDef EraseInitStruct;
 
 bool gDisplay;
+bool gFrameDisplay;
 #if __WATCHDOG__
 static void MX_IWDG_Init(void);
 #define RELOAD_TIME				10000		//1000;	// 5sec // 32khz /32 = 1khz = 1000hz = 1sec
@@ -253,28 +254,35 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 			gDisplay = true;
 			printf("\n\ngDisplay : %d\n", gDisplay);
 		}
+		else
+		if(rx6_data == '3')
+		{
+			gFrameDisplay = true;
+			printf("\n\gFrameDisplay : %d\n", gFrameDisplay);
+		}
 		else if(rx6_data == '0')
 		{
 			gDebug = false;
 			gDisplay = false;
+			gFrameDisplay = false;
 			printf("\n\ngDebug : %d\n", gDebug);
 		}
-		else if(rx6_data == '3')
+		else if(rx6_data == '4')
 		{
         	HAL_GPIO_WritePin(RS485_TERM_Port, RS485_TERM1, GPIO_PIN_SET);
 			printf("\n\ngUart1 Terminate ON\n");
 		}
-		else if(rx6_data == '4')
+		else if(rx6_data == '5')
 		{
         	HAL_GPIO_WritePin(RS485_TERM_Port, RS485_TERM1, GPIO_PIN_RESET);
 			printf("\n\ngUart1 Terminate OFF\n");
 		}
-		else if(rx6_data == '5')
+		else if(rx6_data == '6')
 		{
         	HAL_GPIO_WritePin(RS485_TERM_Port, RS485_TERM2, GPIO_PIN_SET);
 			printf("\n\ngUart2 Terminate ON\n");
 		}
-		else if(rx6_data == '6')
+		else if(rx6_data == '7')
 		{
         	HAL_GPIO_WritePin(RS485_TERM_Port, RS485_TERM2, GPIO_PIN_RESET);
 			printf("\n\ngUart2 Terminate OFF\n");
@@ -576,7 +584,8 @@ int main(void)
 	Pcf2129AT_init();
 	(void)printf("\n\r");
 	(void)printf("\n\r*************************");
-	(void)printf("\n\r New IHM8   2.0");
+	(void)printf("\n\r New IHM8 S/W Ver %s", _acinfo_value_text[3]);
+
 	(void)printf("\n\r Modbus Version\n\r%s\n\r", _acinfo_modebus_version);
 	(void)printf("\n\r Devie Count : %d", SettingValue[SETUP_DEVICE_COUNT]);
 	(void)printf("\n\r starting..");
@@ -1815,9 +1824,5 @@ void HAL_UART_TxCpltCallback(UART_HandleTypeDef *huart)
 	}
 }
 
-void Delay_us(uint32_t microseconds)
-{
-	OS_Delay(microseconds);
-}
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
 

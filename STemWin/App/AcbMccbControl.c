@@ -47,6 +47,9 @@
 //};
 //
 
+extern uint32_t nPasswordTick;
+extern bool 	bBeforePasswordOk;
+
 static uint8_t AcbMccbcbStatus;
 static uint8_t bUpdateFirst;
 static uint8_t TrioIocbStatus;
@@ -298,21 +301,21 @@ static void AcbMccbIoValueDisp(void)
 		GUI_DrawRectEx(&rect);
 
 //		(void)GUI_SetFont(&GUI_Font20_ASCII);
-		if(((ConnectSetting[gDeviceIndex].DeviceType == DEVICE_MCCB) &&
-		   (((i == ZSI_IN) && (gAmpareFrame[gDeviceIndex] <= AF250)) 				// 250AF
-			|| (i == ERMS)														// ERMS
-			|| (i == DO3)))) //	||													// DO #3
+		if((ConnectSetting[gDeviceIndex].DeviceType == DEVICE_MCCB) &&
+			(((i == ZSI_IN || i == ZSI_OUT) && (gAmpareFrame[gDeviceIndex] <= AF250))		// 250AF
+			|| (i == ERMS)																	// ERMS
+			|| (i == DO3))) //	||															// DO #3
 		{
-			GUI_SetBkColor(COLOR_MAIN_BG);
-			GUI_SetColor(OFF_ON_BOX_COLOR);
-			LanguageSelect(FONT20);
-			GUI_DispStringInRect(_acacbmccb_iostatus_text[i], &rectDescLocal, GUI_TA_LEFT | GUI_TA_VCENTER);
+				GUI_SetBkColor(COLOR_MAIN_BG);
+				GUI_SetColor(OFF_ON_BOX_COLOR);
+				LanguageSelect(FONT20);
+				GUI_DispStringInRect(_acacbmccb_iostatus_text[i], &rectDescLocal, GUI_TA_LEFT | GUI_TA_VCENTER);
 
-			GUI_SetColor(OFF_ON_BOX_COLOR);
-			GUI_FillRectEx(&rectOnOff);
-			GUI_SetColor(COLOR_LABEL);
-			GUI_SetBkColor(OFF_ON_BOX_COLOR);
-			GUI_DispStringInRect(disableStatus, &rectOnOff, GUI_TA_HCENTER | GUI_TA_VCENTER);
+				GUI_SetColor(OFF_ON_BOX_COLOR);
+				GUI_FillRectEx(&rectOnOff);
+				GUI_SetColor(COLOR_LABEL);
+				GUI_SetBkColor(OFF_ON_BOX_COLOR);
+				GUI_DispStringInRect(disableStatus, &rectOnOff, GUI_TA_HCENTER | GUI_TA_VCENTER);
 		}
 		else
 		{
@@ -597,11 +600,23 @@ void StuMccbIo(void)
 							address = CB_STATUS_TRIO_ADDR;
 						}
 					}
+					bool flag = false;
 					if(SettingValue[SETUP_PASSWORD_USE] == 0)
 						(void)sprintf(buf, _acacbMccbcontrol_confirm_nopassword_text[SettingValue[SETUP_LANGUAGE]], _accb_control_status[SettingValue[SETUP_LANGUAGE]][AcbMccbcbStatus]);
 					else
-						(void)sprintf(buf, _acacbMccbcontrol_confirm_text[SettingValue[SETUP_LANGUAGE]], _accb_control_status[SettingValue[SETUP_LANGUAGE]][AcbMccbcbStatus]);
-					ControlSet(status, address, 0, buf, 1);
+					{
+						uint32_t timer = HAL_GetTick();
+						if(bBeforePasswordOk == true && timer < nPasswordTick+(10*60*1000))
+						{
+							flag = true;
+							(void)sprintf(buf, _acacbMccbcontrol_confirm_nopassword_text[SettingValue[SETUP_LANGUAGE]], _accb_control_status[SettingValue[SETUP_LANGUAGE]][AcbMccbcbStatus]);
+						}
+						else
+						{
+							(void)sprintf(buf, _acacbMccbcontrol_confirm_text[SettingValue[SETUP_LANGUAGE]], _accb_control_status[SettingValue[SETUP_LANGUAGE]][AcbMccbcbStatus]);
+						}
+					}
+					ControlSet(status, address, 0, buf, 1, flag);
 				}
 				else
 				{
@@ -1150,11 +1165,24 @@ static void TrioIo(void)
 								address = CB_STATUS_TRIO_ADDR;
 							}
 						}
+						bool flag = false;
+
 						if(SettingValue[SETUP_PASSWORD_USE] == 0)
 							(void)sprintf(buf, _acacbMccbcontrol_confirm_nopassword_text[SettingValue[SETUP_LANGUAGE]], _accb_control_status[SettingValue[SETUP_LANGUAGE]][AcbMccbcbStatus]);
 						else
-							(void)sprintf(buf, _acacbMccbcontrol_confirm_text[SettingValue[SETUP_LANGUAGE]], _accb_control_status[SettingValue[SETUP_LANGUAGE]][AcbMccbcbStatus]);
-						ControlSet(status, address, 0, buf, 1);
+						{
+							uint32_t timer = HAL_GetTick();
+							if(bBeforePasswordOk == true && timer < nPasswordTick+(10*60*1000))
+							{
+								flag = true;
+								(void)sprintf(buf, _acacbMccbcontrol_confirm_nopassword_text[SettingValue[SETUP_LANGUAGE]], _accb_control_status[SettingValue[SETUP_LANGUAGE]][AcbMccbcbStatus]);
+							}
+							else
+							{
+								(void)sprintf(buf, _acacbMccbcontrol_confirm_text[SettingValue[SETUP_LANGUAGE]], _accb_control_status[SettingValue[SETUP_LANGUAGE]][AcbMccbcbStatus]);
+							}
+						}
+						ControlSet(status, address, 0, buf, 1, flag);
 					}
 					else
 					{
@@ -1181,9 +1209,19 @@ static void TrioIo(void)
 					}
 					status = OFF;			// 무조건 On으로 제어 -> Index 증가 없음
 					if(SettingValue[SETUP_PASSWORD_USE] == 0)
-						ControlSet(nPoint, address, status, _accontrol_confirm_nopassword_text[SettingValue[SETUP_LANGUAGE]][dostatus], nSBO);
+						ControlSet(nPoint, address, status, _accontrol_confirm_nopassword_text[SettingValue[SETUP_LANGUAGE]][dostatus], nSBO, false);
 					else
-						ControlSet(nPoint, address, status, _accontrol_confirm_text[SettingValue[SETUP_LANGUAGE]][dostatus], nSBO);
+					{
+						uint32_t timer = HAL_GetTick();
+						if(bBeforePasswordOk == true && timer < nPasswordTick+(10*60*1000))
+						{
+							ControlSet(nPoint, address, status, _accontrol_confirm_nopassword_text[SettingValue[SETUP_LANGUAGE]][dostatus], nSBO, true);
+						}
+						else
+						{
+							ControlSet(nPoint, address, status, _accontrol_confirm_text[SettingValue[SETUP_LANGUAGE]][dostatus], nSBO, false);
+						}
+					}
 					bUpdateFirst = TRUE;
 					DispStatus();
 					TrioIoDisp(pos);

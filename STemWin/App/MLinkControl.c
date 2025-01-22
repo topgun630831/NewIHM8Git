@@ -275,9 +275,11 @@ static void InitDisp(int pos, int cur_status, const char* msg)
 }
 
 extern uint8_t KeyChanged[KEY_MAX];
+uint32_t nPasswordTick=0;
+bool 	bBeforePasswordOk=false;
 
 // PRQA S 1505 1
-void ControlSet(const int pos, const int offset, const int cur_status, const char* msg, const uint8_t nSBO)
+void ControlSet(const int pos, const int offset, const int cur_status, const char* msg, const uint8_t nSBO, const bool noPasswordCheck)
 {
 	if(SettingValue[SETUP_PASSWORD_USE] == 0)
 	{
@@ -296,6 +298,25 @@ void ControlSet(const int pos, const int offset, const int cur_status, const cha
 		}
 		return;
 	}
+	uint32_t timer = HAL_GetTick();
+
+	if(noPasswordCheck == true)
+	{
+		if(QuestionMessageNoPassword(msg) == TRUE)
+		{
+			uint8_t controlStatus = ModbusControl(ConnectSetting[gDeviceIndex].Address, offset, pos, cur_status, nSBO);
+			if(controlStatus == CONTROL_OK)
+			{
+				ControlSucceededMessage();
+			}
+			else
+			{
+				ControlErrorMessage(_accontrol_failed_text[SettingValue[SETUP_LANGUAGE]]);
+			}
+		}
+		return;
+	}
+
 	int flagBreak = FALSE;
 	int nPos = 0;
 	char password[CONTROL_PASSWORD_DIGIT+1];
@@ -407,6 +428,9 @@ void ControlSet(const int pos, const int offset, const int cur_status, const cha
 						ControlErrorMessage(_accontrol_failed_text[SettingValue[SETUP_LANGUAGE]]);
 					}
 					flagBreak = TRUE;
+					nPasswordTick = HAL_GetTick();
+					bBeforePasswordOk = true;
+
 				}
 			}
 			else
@@ -925,10 +949,22 @@ void MLinkControl(void)
 					status = OFF;			// 무조건 On으로 제어 -> Index 증가 없음
 				}
 				else {}
+
+
 				if(SettingValue[SETUP_PASSWORD_USE] == 0)
-					ControlSet(nPoint, address, status, _accontrol_confirm_nopassword_text[SettingValue[SETUP_LANGUAGE]][dostatus], nSBO);
+					ControlSet(nPoint, address, status, _accontrol_confirm_nopassword_text[SettingValue[SETUP_LANGUAGE]][dostatus], nSBO, false);
 				else
-					ControlSet(nPoint, address, status, _accontrol_confirm_text[SettingValue[SETUP_LANGUAGE]][dostatus], nSBO);
+				{
+					uint32_t timer = HAL_GetTick();
+					if(bBeforePasswordOk == true && timer < nPasswordTick+(10*60*1000))
+					{
+						ControlSet(nPoint, address, status, _accontrol_confirm_nopassword_text[SettingValue[SETUP_LANGUAGE]][dostatus], nSBO, true);
+					}
+					else
+					{
+						ControlSet(nPoint, address, status, _accontrol_confirm_text[SettingValue[SETUP_LANGUAGE]][dostatus], nSBO, false);
+					}
+				}
 				DispMLinkStatus();
 				gCommOldStatus[gDeviceIndex] = -1;
 				MLinkControlDisp(nPointPos, 1);

@@ -907,7 +907,7 @@ void DispStatus(void);
 void DispMLinkStatus(void);
 void CountDisp(int total, int index);
 void InfoMenu(int menu, int pos, int count);
-void ControlSet(const int pos, const int offset, const int cur_status, const char* msg, const uint8_t nSBO);
+void ControlSet(const int pos, const int offset, const int cur_status, const char* msg, const uint8_t nSBO, const bool noPasswordCheck);
 void ControlErrorMessage(const char* message);
 
 void OverViewValue(int flag);
