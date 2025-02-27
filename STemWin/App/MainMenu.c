@@ -2229,7 +2229,7 @@ uint8_t ModbusRecvCheck(void)
 	while (1)
     {
 		timer = HAL_GetTick();
-		if(timer > (tick+1000))
+		if(timer > (tick+1500))
 		{
 			printf("ModbusRecvCheck Timeout.....\n");
 			return KEY_COMM_ERROR;

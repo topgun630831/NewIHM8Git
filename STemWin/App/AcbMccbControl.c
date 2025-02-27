@@ -616,7 +616,8 @@ void StuMccbIo(void)
 							(void)sprintf(buf, _acacbMccbcontrol_confirm_text[SettingValue[SETUP_LANGUAGE]], _accb_control_status[SettingValue[SETUP_LANGUAGE]][AcbMccbcbStatus]);
 						}
 					}
-					ControlSet(status, address, 0, buf, 1, flag);
+	printf("address = %d, %x\n", address, address);
+					ControlSet(0, address, status, buf, 1, flag);
 				}
 				else
 				{
@@ -1182,7 +1183,7 @@ static void TrioIo(void)
 								(void)sprintf(buf, _acacbMccbcontrol_confirm_text[SettingValue[SETUP_LANGUAGE]], _accb_control_status[SettingValue[SETUP_LANGUAGE]][AcbMccbcbStatus]);
 							}
 						}
-						ControlSet(status, address, 0, buf, 1, flag);
+						ControlSet(0, address, status, buf, 1, flag);
 					}
 					else
 					{
