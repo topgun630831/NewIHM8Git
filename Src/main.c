@@ -520,21 +520,6 @@ int main(void)
 		HAL_FLASH_OB_Lock();
 	}
 
-#if __WATCHDOG__ //[[ by kys.2018.06.17_BEGIN -- watchdog
-    MX_IWDG_Init();
-    // iwdg reset 확인
-    if (RESET != __HAL_RCC_GET_FLAG(RCC_FLAG_IWDGRST))
-    {
-        HAL_GPIO_WritePin(USER_LED_GPIO_Port, USER_LED_Pin, GPIO_PIN_SET);
-        __HAL_RCC_CLEAR_RESET_FLAGS();
-    }
-    else
-    {
-        HAL_GPIO_WritePin(USER_LED_GPIO_Port, USER_LED_Pin, GPIO_PIN_RESET);
-    }
-    // iwdg start
-    __HAL_IWDG_START(&hiwdg);
-#endif
 #ifndef COMM_TEST
 
 	HAL_GPIO_TogglePin(USER_LED_GPIO_Port, USER_LED_Pin);
@@ -582,6 +567,23 @@ int main(void)
 	OS_InitHW();                     /* Initialize Hardware for OS    */
 
 	Pcf2129AT_init();
+
+#if __WATCHDOG__ //[[ by kys.2018.06.17_BEGIN -- watchdog
+    MX_IWDG_Init();
+    // iwdg reset 확인
+    if (RESET != __HAL_RCC_GET_FLAG(RCC_FLAG_IWDGRST))
+    {
+        HAL_GPIO_WritePin(USER_LED_GPIO_Port, USER_LED_Pin, GPIO_PIN_SET);
+        __HAL_RCC_CLEAR_RESET_FLAGS();
+    }
+    else
+    {
+        HAL_GPIO_WritePin(USER_LED_GPIO_Port, USER_LED_Pin, GPIO_PIN_RESET);
+    }
+    // iwdg start
+    __HAL_IWDG_START(&hiwdg);
+#endif
+
 	(void)printf("\n\r");
 	(void)printf("\n\r*************************");
 	(void)printf("\n\r New IHM8 S/W Ver %s", _acinfo_value_text[3]);
@@ -1822,6 +1824,11 @@ void HAL_UART_TxCpltCallback(UART_HandleTypeDef *huart)
 		printf("{2,0}(%d)",HAL_GetTick());
 		HAL_GPIO_WritePin(GPIOB, GPIO_PIN_14, GPIO_PIN_RESET);
 	}
+}
+
+void SystemReset(void)
+{
+	NVIC_SystemReset();
 }
 
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

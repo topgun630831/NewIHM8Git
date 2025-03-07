@@ -51,7 +51,7 @@
 
 #define PCF2131			1			// New RTC
 
-#define __WATCHDOG__	0			// 0=wd off, 1=wd on
+#define __WATCHDOG__	1			// 0=wd off, 1=wd on
 
 /* Includes ------------------------------------------------------------------*/
 

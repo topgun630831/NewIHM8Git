@@ -50,6 +50,7 @@ uint16_t CRC16(const uint8_t puchMsg[], const uint16_t usDataLen)
 void AllRead(int port)
 {
 	uint32_t NewNDTR;
+	uint32_t watchdog =  HAL_GetTick();
 	if(port == 1)
 	{
 		g_modbusSlaveRxIndex = 0;
@@ -62,6 +63,13 @@ void AllRead(int port)
 			GUI_Delay(10);
 			uart1LastNDTR = NewNDTR;
 			printf("uart2 fush\n");
+#if __WATCHDOG__ //_BEGIN -- watchdog
+			uint32_t timer = HAL_GetTick();
+			if(timer > (watchdog+800))
+			{
+				__HAL_IWDG_RELOAD_COUNTER(&hiwdg);
+			}
+#endif //_END -- watchdog
 		}
 	}
 	else
@@ -77,6 +85,13 @@ void AllRead(int port)
 			GUI_Delay(10);
 			uart2LastNDTR = NewNDTR;
 			printf("uart2 fush\n");
+#if __WATCHDOG__ //_BEGIN -- watchdog
+			uint32_t timer = HAL_GetTick();
+			if(timer > (watchdog+1000))
+			{
+				__HAL_IWDG_RELOAD_COUNTER(&hiwdg);
+			}
+#endif //_END -- watchdog
 		}
 	}
 }

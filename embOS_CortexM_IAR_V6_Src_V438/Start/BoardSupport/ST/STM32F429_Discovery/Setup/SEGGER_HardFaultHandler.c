@@ -55,6 +55,7 @@ Additional information:
 */
 
 #include "RTOS.h"
+void SystemReset(void);
 
 /*********************************************************************
 *
@@ -213,6 +214,22 @@ static struct {
 **********************************************************************
 */
 
+#if 0
+ __STATIC_INLINE void NVIC_SystemReset(void)
+{
+  __DSB();                                                          /* Ensure all outstanding memory accesses included
+                                                                       buffered write are completed before reset */
+  SCB->AIRCR  = (uint32_t)((0x5FAUL << SCB_AIRCR_VECTKEY_Pos)    |
+                           (SCB->AIRCR & SCB_AIRCR_PRIGROUP_Msk) |
+                            SCB_AIRCR_SYSRESETREQ_Msk    );         /* Keep priority group unchanged */
+  __DSB();                                                          /* Ensure completion of memory access */
+
+  for(;;)                                                           /* wait until reset */
+  {
+    __NOP();
+  }
+}
+#endif
 /*********************************************************************
 *
 *       HardFaultHandler()
@@ -227,6 +244,9 @@ void HardFaultHandler(unsigned int* pStack) {
   // This may happen when using semihosting for printf outputs and no debugger is connected,
   // i.e. when running a "Debug" configuration in release mode.
   //
+
+	SystemReset();
+
   if (NVIC_HFSR & (1u << 31)) {
     NVIC_HFSR |=  (1u << 31);     // Reset Hard Fault status
     *(pStack + 6u) += 2u;         // PC is located on stack at SP + 24 bytes. Increment PC by 2 to skip break instruction.

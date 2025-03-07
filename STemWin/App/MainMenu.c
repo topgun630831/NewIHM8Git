@@ -1287,7 +1287,9 @@ void GuiMain(void)
 		else
 		if(key == KEY_SETUP)
 		{
-			gbInMainMenu = FALSE;
+
+		 	//void (*bad_instruction)(void) = (void (*)(void))0xFFFFFFF0;  // 존재하지 않는 주소
+    		//bad_instruction();  // 해당 주소 실			gbInMainMenu = FALSE;
 			(void)Setup();
 			gbInMainMenu = TRUE;
 			nSendStep = 0;
@@ -1987,23 +1989,23 @@ void SlaveModbusProcess(void)
 E_KEY GetKey(void)
 {
 	static  int gCommCheckStatus[DEVICE_MAX];
-	uint32_t LedTickCount = HAL_GetTick();
+	static uint32_t LedTickCount = 0;
 
 	uint32_t timer;
 	while (1)
     {
 
-#if __WATCHDOG__ //[[ by kys.2018.06.17_BEGIN -- watchdog
-            __HAL_IWDG_RELOAD_COUNTER(&hiwdg);
-#endif //]] by kys.2018.06.17_END -- watchdog
 
 		CommStatusDisp();
 		timer = HAL_GetTick();
 		uint32_t diff;
 		diff = timer-commTimer;
 
-		if((timer - LedTickCount) > 500)
+		if((timer - LedTickCount) > 800)
 		{
+#if __WATCHDOG__ //_BEGIN -- watchdog
+            __HAL_IWDG_RELOAD_COUNTER(&hiwdg);
+#endif // _END -- watchdog
 			HAL_GPIO_TogglePin(USER_LED_GPIO_Port, USER_LED_Pin);
 			LedTickCount = timer;
 		}
@@ -2213,6 +2215,7 @@ uint8_t ModbusRecvCheck(void)
 {
 	uint32_t tick = HAL_GetTick();
 
+	uint32_t watchdog = tick;
 	uint32_t timer;
 	bool 	 bSend = false;
 
@@ -2234,6 +2237,12 @@ uint8_t ModbusRecvCheck(void)
 			printf("ModbusRecvCheck Timeout.....\n");
 			return KEY_COMM_ERROR;
 		}
+#if __WATCHDOG__ //_BEGIN -- watchdog
+		if(timer > (watchdog+800))
+		{
+            __HAL_IWDG_RELOAD_COUNTER(&hiwdg);
+		}
+#endif //_END -- watchdog
 
 		MasterModbusProcess(true);
 		SlaveModbusProcess();
@@ -2312,6 +2321,9 @@ uint8_t ReadyToSend(void)
 			g_sendOwner = OWNER_MASTER;
 			gStatusSendEnd = STATUS_SEND_ING;
 			statusSendStep = 0;
+#if __WATCHDOG__ //_BEGIN -- watchdog
+            __HAL_IWDG_RELOAD_COUNTER(&hiwdg);
+#endif //_END -- watchdog
 			return KEY_COMM_ERROR;
 		}
 
