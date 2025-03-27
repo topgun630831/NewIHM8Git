@@ -895,8 +895,10 @@ static void MX_GPIO_Init(void)
 	/*Configure GPIO pin : KEY_Pin */
 //	GPIO_InitStruct.Pin = CANCEL_KEY_Pin | UP_KEY_Pin | DOWN_KEY_Pin | ENTER_KEY_Pin | SETUP_KEY_Pin | GPIO_PIN_9;
 	GPIO_InitStruct.Pin = CANCEL_KEY_Pin | UP_KEY_Pin | DOWN_KEY_Pin | ENTER_KEY_Pin | SETUP_KEY_Pin ;
-	GPIO_InitStruct.Mode = GPIO_MODE_IT_FALLING;
-	GPIO_InitStruct.Pull = GPIO_PULLUP;
+//	GPIO_InitStruct.Mode = GPIO_MODE_IT_FALLING;     //yskim
+//	GPIO_InitStruct.Pull = GPIO_PULLUP;
+	GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+	GPIO_InitStruct.Pull = GPIO_NOPULL;
 	HAL_GPIO_Init(KEY_GPIO_Port, &GPIO_InitStruct);
 
 	/*Configure GPIO pin : LCDTS_CS_Pin */
@@ -948,14 +950,13 @@ static void MX_GPIO_Init(void)
 	HAL_GPIO_WritePin(RS485_TERM_Port, RS485_TERM1, GPIO_PIN_RESET);
 	HAL_GPIO_WritePin(RS485_TERM_Port, RS485_TERM2, GPIO_PIN_RESET);
 
-
-  /* EXTI interrupt init*/
+#if 0  /* EXTI interrupt init   yskim*/
   HAL_NVIC_SetPriority(EXTI4_IRQn, 15, 0);
   HAL_NVIC_EnableIRQ(EXTI4_IRQn);
 
   HAL_NVIC_SetPriority(EXTI9_5_IRQn, 15, 0);
   HAL_NVIC_EnableIRQ(EXTI9_5_IRQn);
-
+#endif
 }
 
 /* FSMC initialization function */
