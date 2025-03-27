@@ -29,7 +29,7 @@ char const* _acinfo_value_text[LINECOUNT_CONTENTS] = {
 		"LSE",
 		"IHM8(5277 1172 570)",		// Product
 		"02.00.01",					// HW Version
-		"02.00.16",					// SW Version
+		"02.00.17",					// SW Version
 		"01.00.12",					// Comm. Version
 		"Normal"
 };
