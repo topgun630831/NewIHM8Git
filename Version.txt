@@ -315,6 +315,30 @@ SW Version 02.00.13
 SW Version 02.00.14
 1. watchdog 타임 변경
 
+2025/3/7
+SW Version 02.00.14
+1. watchdog 타임 변경
+
+2025/3/27
+SW Version 02.00.15
+1. key 입력 인터럽트->폴링방식으로 처리
+
+2025/3/27
+SW Version 02.00.16
+1. 사용하지 않은 GPIO 초기화
+
+
+2025/3/27
+SW Version 02.00.17
+1. debug port 사용안함
+
+2025/3/28
+SW Version 02.00.18
+1. Flash Write시 Watchdog Clear
+2. debug port 사용함
+
+
+
 =================================================================================
 
 Battery Test

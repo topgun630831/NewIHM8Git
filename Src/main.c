@@ -480,7 +480,7 @@ int main(void)
 	/* Initialize all configured peripherals */
 	MX_GPIO_Init();
     MX_DMA_Init();
-//	MX_USART6_UART_Init();
+	MX_USART6_UART_Init();
 	MX_NVIC_Init();
 
 	FLASH_OBProgramInitTypeDef FLASH_Handle;
@@ -1390,6 +1390,9 @@ void FlashWrite(void)
 			}
 			Address += INDEX_2;
 			printf("SettingValue[%i] : %d\n", i, SettingValue[i]);
+#if __WATCHDOG__ //_BEGIN -- watchdog
+            __HAL_IWDG_RELOAD_COUNTER(&hiwdg);
+#endif // _END -- watchdog
 		}
 		for(int i = 0; i < DEVICE_MAX; i++)
 		{
@@ -1403,6 +1406,9 @@ void FlashWrite(void)
 				(void)printf("Write Fail ConnectSetting[%d].Address\n", i);
 			}
 			Address += INDEX_2;
+#if __WATCHDOG__ //_BEGIN -- watchdog
+            __HAL_IWDG_RELOAD_COUNTER(&hiwdg);
+#endif // _END -- watchdog
 		}
 		if(HAL_FLASH_Program(FLASH_TYPEPROGRAM_HALFWORD, Address, SettingValue[SETUP_GATEWAY_USE]) != HAL_OK)
 		{
@@ -1512,6 +1518,9 @@ void FaultCountWrite(void)
 				(void)printf("Write Fail gOldFaultEventIndex[%d]\n", i);
 			}
 			Address += INDEX_2;
+#if __WATCHDOG__ //_BEGIN -- watchdog
+            __HAL_IWDG_RELOAD_COUNTER(&hiwdg);
+#endif // _END -- watchdog
 		}
 	}
 	else
@@ -1527,6 +1536,9 @@ void FaultCountWrite(void)
 		{
 			(void)printf("Write Fail _acHardwareVersion[%d]\n", i);
 		}
+#if __WATCHDOG__ //_BEGIN -- watchdog
+            __HAL_IWDG_RELOAD_COUNTER(&hiwdg);
+#endif // _END -- watchdog
 	}
 	/* Lock the Flash to disable the flash control register access (recommended
 	to protect the FLASH memory against possible unwanted operation) *********/
