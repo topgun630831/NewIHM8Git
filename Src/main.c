@@ -1885,8 +1885,8 @@ void MX_DMA_Init(void)
 static void MX_NVIC_Init(void)
 {
   /* USART6_IRQn interrupt configuration */
- HAL_NVIC_SetPriority(USART6_IRQn, 0, 0);
- HAL_NVIC_EnableIRQ(USART6_IRQn);
+ // HAL_NVIC_SetPriority(USART6_IRQn, 0, 0);
+ // HAL_NVIC_EnableIRQ(USART6_IRQn);
 }
 
 void HAL_UART_TxCpltCallback(UART_HandleTypeDef *huart)
